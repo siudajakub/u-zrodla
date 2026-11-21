@@ -14,7 +14,24 @@
     "synthetic": true,
     "contractDemo": true,
     "description": "Jak działa konto inwestycyjne? Krótki przewodnik dla początkujących.",
-    "provenance": "Fikcyjna publikacja zespołu. Polski głos syntetyczny, rzeczywisty odczyt Vosk z pliku MP4. Data publikacji stanowi część scenariusza."
+    "provenance": "Fikcyjna publikacja zespołu. Polski głos syntetyczny, rzeczywisty odczyt Vosk z pliku MP4. Data publikacji stanowi część scenariusza.",
+    "sampleFile": "studio.mp4"
+  },
+  {
+    "id": "demo-aurora-kod",
+    "title": "Od czego zacząć?",
+    "module": "M1",
+    "creatorId": "studio:pracownia",
+    "creatorName": "Pracownia rynku",
+    "platform": "Studio",
+    "url": "/media/wezwanie.mp4",
+    "mediaUrl": "/media/wezwanie.mp4",
+    "sampleFile": "wezwanie.mp4",
+    "brand": "Aurora",
+    "mode": "import",
+    "synthetic": true,
+    "description": "Krótka wskazówka dla początkujących uczestników rynku.",
+    "provenance": "Fikcyjny materiał zespołu. Polski głos syntetyczny i pojedyncza wzmianka w nagraniu. Rzeczywisty odczyt Vosk PL z dołączonego MP4."
   },
   {
     "id": "dom-xtb-etf",

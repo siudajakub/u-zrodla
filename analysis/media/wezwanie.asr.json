@@ -1,0 +1,14 @@
+{
+  "model": "vosk-model-small-pl-0.22",
+  "engine": "Vosk 0.3.45",
+  "language": "pl",
+  "sha256": "a1d84acd1f86d14b4ea1e03e6c3434f6a6e35f924dfa86fe17564ce84392d208",
+  "segments": [
+    {
+      "start": 0.33,
+      "end": 3.6,
+      "text": "pobierz aplikację aurora i otwórz rachunek",
+      "confidence": 0.991
+    }
+  ]
+}

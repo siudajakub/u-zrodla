@@ -42,6 +42,32 @@ class Findings(unittest.TestCase):
         self.assertFalse(silent["speechOnlySignal"])
         self.assertTrue(any(e["kind"] == "audio" for e in silent["evidence"]))
 
+    def test_single_spoken_brand_and_cta_without_disclosure(self):
+        clip = self.cases["demo-aurora-kod"]
+        found = analyze(clip)
+        quote = found["evidence"][0]
+        self.assertEqual(quote["text"].split().count("aurora"), 1)
+        self.assertEqual(quote["kind"], "audio")
+        self.assertEqual((quote["start"], quote["end"]), (0.33, 3.6))
+        self.assertTrue(found["possibleUndisclosedPromotion"])
+        self.assertEqual(found["signalType"], "brand_cta")
+        self.assertEqual(found["descriptionDisclosureStatus"], "not_found")
+        self.assertEqual(found["modalityComparison"], {"descriptionOnly": 12, "withAudio": 74, "delta": 62})
+        disclosed = analyze(dict(clip, description="Materiał sponsorowany."))
+        self.assertFalse(disclosed["possibleUndisclosedPromotion"])
+        self.assertEqual(disclosed["descriptionDisclosureStatus"], "observed")
+        self.assertFalse(analyze(dict(clip, description=""))["possibleUndisclosedPromotion"])
+        audio = [{"start": 0.4, "end": 1.6, "text": "W zestawieniu pojawia się Aurora."}]
+        neutral = analyze(dict(clip, segments=audio))
+        self.assertEqual(neutral["signalType"], "neutral_mention")
+        self.assertEqual(neutral["score"], 24)
+        self.assertFalse(neutral["possibleUndisclosedPromotion"])
+        self.assertEqual(analyze(dict(clip, segments=[], description="Otwórz rachunek w firmie Fikcyjna.",
+                                      brand="Fikcyjna"))["signalType"], "brand_cta")
+        other = analyze(self.cases["demo-studio-aurora"])
+        self.assertEqual(other["signalType"], "declaration")
+        self.assertFalse(other["possibleUndisclosedPromotion"])
+
     def test_negative_and_unrelated_denial(self):
         self.assertLess(relation("To nie jest reklama kursu.")[0], 35)
         self.assertLess(relation("Dziś krytykuję XTB.")[0], 35)

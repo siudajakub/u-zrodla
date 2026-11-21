@@ -122,10 +122,12 @@ def recognize(pcm):
 
 
 def replay_file(path):
-    report = json.loads((MEDIA / "studio.asr.json").read_text())
-    if digest(path) != report["sha256"]:
-        raise ValueError("Ta transkrypcja pochodzi z innego pliku. Uruchom analizę audio.")
-    return report
+    sha = digest(path)
+    for filename in ("studio.asr.json", "wezwanie.asr.json"):
+        report = json.loads((MEDIA / filename).read_text())
+        if sha == report["sha256"]:
+            return report
+    raise ValueError("Ta transkrypcja pochodzi z innego pliku. Uruchom analizę audio.")
 
 
 def main():

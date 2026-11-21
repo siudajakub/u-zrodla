@@ -45,3 +45,11 @@ Gdy wag brak, kontrolny film ma transkrypcję z poprzedniego rzeczywistego uruch
 ## Handoff
 
 Konsument otrzymał kontrakty funkcji i mapowanie zasobów. Włączenie w aplikacji oraz sprawdzenie wizualne należy do kapitana i linii analyst-desk. Zestaw 13 przypadków ma 4 obserwacje publiczne i 9 syntetycznych, etykiety autora. Niezależna ewaluacja trafności pozostaje do wykonania.
+
+## Druga próbka i prezentacja
+
+`demo-aurora-kod` zawiera jedną wzmiankę w syntetycznej wypowiedzi „pobierz aplikację aurora i otwórz rachunek”. Surowy Vosk wskazał 0,33–3,60 s. W dostępnej wypowiedzi i opisie brak deklaracji współpracy. Model przepisał rzeczywisty dźwięk, a reguły dały 12→74. Przeciwpróby obejmują neutralną wzmiankę, opis z deklaracją i brak opisu. `python3 -B -m unittest analysis.test_engine` przeszło 15/15.
+
+`presentation/InvestWatch.pdf` ma 4 strony 960×540 pkt, zweryfikowane przez `pdfinfo`, ekstrakcję tekstu i rasteryzację stron. Edycja i generowanie z `presentation/prepare.py`. Liczby odkrycia pochodzą z pierwszego runu monitora i odrębnej rzeczywistej odpowiedzi zachowanej w `fixtures/raw/discovery/2026-11-21.json`.
+
+Niezależny przegląd integracji wykrył mylenie proweniencji identycznego materiału po replay→live i link błędu kalibracji do nieistniejącej sprawy. Potwierdzono poprawki w głównym repozytorium. Kapitan otrzymał także przypadek wielokrotnego uploadu po pierwszym nieudanym rozpoznaniu.

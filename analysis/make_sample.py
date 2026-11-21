@@ -15,11 +15,11 @@ LINES = [
 ]
 
 
-def render(directory):
+def render(directory, cta=False):
     directory.mkdir(parents=True, exist_ok=True)
     sound = directory / "studio.wav"
     with wave.open(str(sound), "wb") as combined:
-        for index, line in enumerate(LINES):
+        for index, line in enumerate(["Pobierz aplikację Aurora i otwórz rachunek."] if cta else LINES):
             part = directory / f"voice-{index}.wav"
             subprocess.run(["espeak-ng", "-v", "pl", "-s", "150", "-w", str(part), line], check=True)
             with wave.open(str(part), "rb") as source:
@@ -33,9 +33,9 @@ def render(directory):
     draw = ImageDraw.Draw(img)
     def font(kind, size):
         return ImageFont.truetype(f"/usr/share/fonts/truetype/freefont/{kind}.ttf", size)
-    draw.text((64, 45), "STUDIO AURORA", font=font("FreeSansBold", 21), fill="#9edcca")
-    draw.text((64, 136), "Jak działa konto", font=font("FreeSerif", 72), fill="#fff7de")
-    draw.text((64, 212), "inwestycyjne?", font=font("FreeSerif", 72), fill="#fff7de")
+    draw.text((64, 45), "PRACOWNIA RYNKU" if cta else "STUDIO AURORA", font=font("FreeSansBold", 21), fill="#9edcca")
+    draw.text((64, 136), "Od czego" if cta else "Jak działa konto", font=font("FreeSerif", 72), fill="#fff7de")
+    draw.text((64, 212), "zacząć?" if cta else "inwestycyjne?", font=font("FreeSerif", 72), fill="#fff7de")
     for i, y in enumerate([321, 298, 333, 290, 254, 270, 232, 194]):
         x = 620 + i * 31
         draw.line((x, y-36, x, y+44), fill="#a9d3c7", width=2)
@@ -47,10 +47,12 @@ def render(directory):
     subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-loop", "1", "-framerate", "8",
                     "-i", str(still), "-i", str(sound), "-c:v", "libx264", "-threads", "1",
                     "-tune", "stillimage", "-pix_fmt", "yuv420p", "-g", "8", "-c:a", "aac",
-                    "-b:a", "64k", "-movflags", "+faststart", "-shortest", str(MEDIA / "studio.mp4")], check=True)
+                    "-b:a", "64k", "-movflags", "+faststart", "-shortest", str(MEDIA / ("wezwanie.mp4" if cta else "studio.mp4"))], check=True)
 
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--directory", type=Path, default=ROOT / ".runtime" / "media-build")
-    render(p.parse_args().directory)
+    p.add_argument("--cta", action="store_true", help="Zbuduj drugą próbkę z jedną wzmianką o firmie.")
+    args = p.parse_args()
+    render(args.directory, cta=args.cta)
