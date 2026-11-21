@@ -61,6 +61,7 @@ iw_unpack() { # $1 = archiwum; rozpakowuje do katalogu tymczasowego, weryfikuje 
 }
 
 IW_OBJECT_DIRS='uploads m2 media-cache meta-import youtube-raw youtube-cache'
+STATE_ARCHIVE_NAME=investwatch-state-$EVENT.tar.gz
 
 iw_state_dirs() { # STATE_DIR (SQL) i OBJECTS_DIR (pliki) wariantu Compose; obiekty domyślnie obok stanu
   STATE_DIR=${INVESTWATCH_STATE_DIR:-$ROOT/.runtime/demo/state}
@@ -77,6 +78,21 @@ iw_objects_layout() { # $1 = stan (SQL), $2 = obiekty. Przenosi obiekty ze stare
     mkdir -p "$1/$d" "$2/$d"
   done
   chmod 700 "$2"
+}
+
+iw_find_state_archive() {
+  [ "${INVESTWATCH_STATE_ARCHIVE:-}" != off ] || return 1
+  for c in "${INVESTWATCH_STATE_ARCHIVE:-}" "$ROOT/$STATE_ARCHIVE_NAME" "$ROOT/.runtime/dist/$STATE_ARCHIVE_NAME" "$HOME/Downloads/$STATE_ARCHIVE_NAME"; do
+    [ -n "$c" ] && [ -f "$c" ] && { printf '%s' "$c"; return 0; }
+  done
+  return 1
+}
+
+iw_restore_state() { # $1 = stan, $2 = obiekty (local: ten sam katalog). 0 = przywrócono gotowy stan; inaczej normalny bootstrap.
+  [ ! -f "$1/cases.sqlite3" ] || return 1
+  arc=$(iw_find_state_archive) || return 1
+  echo "Gotowy stan pokazu: $arc"
+  "$PY3" "$ROOT/ops/demo/state_pack.py" restore --archive "$arc" --state "$1" --objects "$2"
 }
 
 iw_need_pack() { # gwarantuje paczkę mediów albo kończy z instrukcją (kod 3). INVESTWATCH_ALLOW_NO_MEDIA=1 pomija.

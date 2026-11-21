@@ -5,13 +5,15 @@
 #   sh ops/demo/start-local.sh --live     tryb live (harmonogram co INVESTWATCH_DISCOVERY_INTERVAL s, domyślnie 14400)
 #   sh ops/demo/start-local.sh --reset    czysty stan
 #   sh ops/demo/start-local.sh --stop     zatrzymuje oba procesy
+#   sh ops/demo/start-local.sh --cold     pomija archiwum gotowego stanu (investwatch-state-2026-11-21.tar.gz)
+# Układ stanu jak w Compose, ale fizycznie w jednym katalogu: SQL w state/, obiekty w state/<uploads|m2|...>.
 # Zmienne: INVESTWATCH_PORT (8769), INVESTWATCH_LOCAL_DIR (.runtime/local), INVESTWATCH_PREVIEW=off, patrz .env.example.
 # Pierwszy start tworzy venv (.runtime/venv-local) i instaluje api/requirements.lock (potrzebna sieć tylko wtedy).
 set -eu
 ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd -P)
 cd "$ROOT"
 . "$ROOT/ops/demo/common.sh"
-RESET=${INVESTWATCH_RESET:-0}; WAIT=1; STOP=0
+RESET=${INVESTWATCH_RESET:-0}; WAIT=1; STOP=0; COLD=0
 for a in "$@"; do
   case "$a" in
     --live) INVESTWATCH_MODE=live ;;
@@ -19,7 +21,8 @@ for a in "$@"; do
     --reset) RESET=1 ;;
     --stop) STOP=1 ;;
     --no-wait) WAIT=0 ;;
-    -h|--help) sed -n '2,9p' "$0"; exit 0 ;;
+    --cold) COLD=1 ;;
+    -h|--help) sed -n '2,11p' "$0"; exit 0 ;;
     *) echo "Nieznana opcja: $a" >&2; exit 2 ;;
   esac
 done
@@ -52,6 +55,7 @@ iw_python
 stop_all
 if [ "$RESET" = 1 ]; then rm -rf "$DIR/state"; echo "Stan wyczyszczony ($DIR/state)."; fi
 mkdir -p "$DIR/state" "$ROOT/.runtime/semantic"; chmod 700 "$DIR/state"
+[ "$COLD" = 1 ] || iw_restore_state "$DIR/state" "$DIR/state" || true
 
 VENV=$ROOT/.runtime/venv-local
 if [ ! -x "$VENV/bin/python" ] || ! "$VENV/bin/python" -c 'import fastapi,huey,uvicorn' 2>/dev/null; then

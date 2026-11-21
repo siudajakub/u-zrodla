@@ -4,22 +4,26 @@
 #   sh ops/demo/start.sh --live     tryb live: harmonogram skanu co 4 h (INVESTWATCH_DISCOVERY_INTERVAL), klucz YouTube z .env
 #   sh ops/demo/start.sh --reset    czysty stan (kasuje .runtime/demo/state) i start od zera
 #   sh ops/demo/start.sh --no-wait  bez czekania na kolejkę
+#   sh ops/demo/start.sh --cold     pomija archiwum gotowego stanu (pełna analiza od zera)
 # Serwisy: web (jedyny port), api, worker; --live dokłada scheduler i wyjście do sieci dla workera (ops/compose/egress.yaml).
+# Gotowy stan: przy pustym stanie i archiwum investwatch-state-2026-11-21.tar.gz (ops/demo/pack-state.sh) o zgodnym
+# odcisku kodu start trwa kilkanaście sekund; przy niezgodnym ostrzega i liczy od zera.
 # Zmienne (także w .env, wzór: .env.example): INVESTWATCH_MODE=demo|live, INVESTWATCH_PORT, INVESTWATCH_REPLAY_MEDIA,
-# INVESTWATCH_MEDIA_ARCHIVE, INVESTWATCH_STATE_DIR, INVESTWATCH_OBJECTS_DIR,
+# INVESTWATCH_MEDIA_ARCHIVE, INVESTWATCH_STATE_DIR, INVESTWATCH_OBJECTS_DIR, INVESTWATCH_STATE_ARCHIVE (ścieżka albo off),
 # COMPOSE_PROJECT_NAME, COMPOSE_PROFILES (np. llm), OLLAMA_HOST, YOUTUBE_API_KEY, INVESTWATCH_PREVIEW=off.
 set -eu
 ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd -P)
 cd "$ROOT"
 . "$ROOT/ops/demo/common.sh"
-RESET=${INVESTWATCH_RESET:-0}; WAIT=1
+RESET=${INVESTWATCH_RESET:-0}; WAIT=1; COLD=0
 for a in "$@"; do
   case "$a" in
     --live) INVESTWATCH_MODE=live ;;
     --demo) INVESTWATCH_MODE=demo ;;
     --reset) RESET=1 ;;
     --no-wait) WAIT=0 ;;
-    -h|--help) sed -n '2,10p' "$0"; exit 0 ;;
+    --cold) COLD=1 ;;
+    -h|--help) sed -n '2,13p' "$0"; exit 0 ;;
     *) echo "Nieznana opcja: $a" >&2; exit 2 ;;
   esac
 done
@@ -49,6 +53,7 @@ INVESTWATCH_RESET=0; export INVESTWATCH_RESET INVESTWATCH_MODE="$MODE"
 [ -f .runtime/demo/compose.env ] || exec sh ops/demo/bootstrap.sh
 mkdir -p "$STATE_DIR"; chmod 700 "$STATE_DIR"
 iw_objects_layout "$STATE_DIR" "$OBJECTS_DIR"
+[ "$COLD" = 1 ] || iw_restore_state "$STATE_DIR" "$OBJECTS_DIR" || true
 case ",${COMPOSE_PROFILES:-}," in *,llm,*) mkdir -p "${INVESTWATCH_OLLAMA_DIR:-$ROOT/.runtime/ollama}" ;; esac
 WEB_IMAGE=${INVESTWATCH_WEB_IMAGE:-nginx:1.27-alpine}
 docker image inspect "$WEB_IMAGE" >/dev/null 2>&1 || docker pull "$WEB_IMAGE"
