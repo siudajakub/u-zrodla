@@ -19,14 +19,14 @@ Wymagania pochodzą z [pięciu plików konkursu](zrodla-uknf/README.md), ZIP SHA
 
 | Status | Liczba |
 |---|---:|
-| zaliczone | 41 |
-| częściowe | 77 |
-| brak | 15 |
+| zaliczone | 66 |
+| częściowe | 60 |
+| brak | 7 |
 | blokada dostępu | 0 |
 | poza obowiązkowym zakresem | 4 |
 | **razem** | **137** |
 
-W tym 92 wiersze briefu, 26 wierszy załączników tematów i 19 kryteriów M2. Wszystkie 15 wierszy „brak” jest obowiązkowych lub ma charakter definicji. Wymienia je [sekcja 6](#6-obowiązkowe-wiersze-bez-dowodu). Żaden wiersz nie ma dziś statusu „blokada dostępu”, bo w repo nie zapisano jeszcze odmowy dostępu do FB, IG ani YouTube Data API. Status zmieni się po raporcie K lub B.
+W tym 92 wiersze briefu, 26 wierszy załączników tematów i 19 kryteriów M2. Wszystkie 7 wierszy „brak” jest obowiązkowych lub ma charakter definicji. Wymienia je [sekcja 6](#6-obowiązkowe-wiersze-bez-dowodu). Żaden wiersz nie ma dziś statusu „blokada dostępu”, bo w repo nie zapisano jeszcze odmowy dostępu do FB, IG ani YouTube Data API. Status zmieni się po raporcie K lub B.
 
 ## 1. Brief §1–2: cel, silnik i moduły
 
@@ -57,9 +57,9 @@ W tym 92 wiersze briefu, 26 wierszy załączników tematów i 19 kryteriów M2. 
 | R-§2-M3-01 | Wyszukiwanie ofert wealth management, investment consulting, family office i innych doradców spoza autoryzowanych firm | s.1 M3: „wealth management, investment consulting, family offices oraz innych podmiotów doradczych” | M3 | obowiązkowe | F | częściowe | `.runtime/venv/bin/python -B -m unittest analysis.test_offers collectors.test_sites_m3 collectors.test_catalogs_m3` | 30 domen z zapisanych wyników wyszukiwania (`fixtures/raw/discovery/m3-2026-11-21/search-results.json`), 29 odczytanych, 57 stron, 96 żądań co 3 s z robots.txt (`entities.json`, `requests.jsonl`). Wyszukiwanie wykonał agent; produkt nie ma własnego dostawcy wyszukiwarki z kluczem. Katalogi pkt.pl i panoramafirm.pl odrzucone (regulamin, ochrona antybotowa). [linia F M3](lanes/2026-11-21-fable-f-m3.md) |
 | R-§2-M3-02 | Wykrywanie treści wskazujących na faktyczne doradztwo inwestycyjne w PL bez zezwolenia | s.1 M3 Analiza: „faktyczne świadczenie w Polsce usługi doradztwa inwestycyjnego” | M3 | obowiązkowe | F, D | zaliczone | `.runtime/venv/bin/python -B -m unittest analysis.test_offers collectors.test_sites_m3 collectors.test_catalogs_m3` | `analysis/offers.py`: cztery osie z cytatem i lokalizatorem. Rzeczywista przesłanka: rdmwm.pl („Na podstawie tych danych dobieramy proporcje między akcjami, obligacjami…”), trasa `refer`. Próba agenta (nie ekspertów) na 31 materiałach: reguły v1 ślepo TP 0, FP 3, FN 1; v2 po korekcie na tym samym zbiorze TP 1, FP 0, FN 0 (`fixtures/labeled/m3-agent-eval-v1.json`, `-v2.json`) |
 | R-§2-M3-03 | Ustalenie braku wymaganego zezwolenia na dzień oferty | „bez wymaganych zezwoleń” | M3 | obowiązkowe | F | częściowe | `.runtime/venv/bin/python -B -m unittest analysis.test_offers collectors.test_sites_m3 collectors.test_catalogs_m3` | Stany tożsamości: uprawniony z kodem 5/A5, inny zakres, agent, brak wpisu, brak danych podmiotu, kolizja nazw, awaria rejestru; lista ostrzeżeń KNF jako osobny sygnał. 12 wykazów z 21.11.2026, w tym pobrane jednorazowo listy osób (skróty nazwisk) i ostrzeżenia (`fixtures/raw/discovery/m3-2026-11-21/registers/`). Brak wpisu komunikowany jako „uprawnienia do ustalenia”, bez odpisu KRS |
-| R-§2-M3-04 | Raport: dane podmiotu | s.1 M3 Rezultat: „dane podmiotu” | M3 | obowiązkowe | F | częściowe | `.runtime/venv/bin/python -B -m unittest analysis.test_offers collectors.test_sites_m3 collectors.test_catalogs_m3` | Blok `identity.operator`: nazwy z oświadczenia operatora (©, NIP, KRS), NIP z sumą kontrolną, KRS, REGON, wzmianki o partnerach osobno. Przypadek `refer` (rdmwm.pl) nie podaje nazwy ani numerów — operator do ustalenia |
-| R-§2-M3-05 | Raport: treść oferty | „treść oferty” | M3 | obowiązkowe | F | zaliczone | `.runtime/venv/bin/python -B -m unittest analysis.test_offers collectors.test_sites_m3 collectors.test_catalogs_m3` | Pełny tekst 57 stron (do 60 000 znaków), czas odczytu, SHA-256 odpowiedzi i tekstu w `fixtures/raw/discovery/m3-2026-11-21/entities.json` |
-| R-§2-M3-06 | Raport: URL potencjalnego naruszenia | „lokalizację (URL) potencjalnego naruszenia” | M3 | obowiązkowe | F | zaliczone | `.runtime/venv/bin/python -B -m unittest analysis.test_offers collectors.test_sites_m3 collectors.test_catalogs_m3` | Każdy cytat osi ma URL, numer linii i zakres znaków; przypadek `refer`: https://rdmwm.pl/ (`results.json`) |
+| R-§2-M3-04 | Raport: dane podmiotu | s.1 M3 Rezultat: „dane podmiotu” | M3 | obowiązkowe | F | częściowe | `.runtime/venv/bin/python -B -m unittest analysis.test_offers collectors.test_sites_m3 collectors.test_catalogs_m3` | Blok `identity.operator`: nazwy z oświadczenia operatora (©, NIP, KRS), NIP z sumą kontrolną, KRS, REGON, wzmianki o partnerach osobno. Przypadek `refer` (rdmwm.pl) nie podaje nazwy ani numerów — operator do ustalenia Raport API `GET /v1/report?module=M3` (kolumny: podmiot, dane rejestrowe, treść oferty z cytatami osi, URL, stan uprawnień z listą przejrzanych wykazów i datą, trasa, siła sygnału, status decyzji): `tests/core/test_contract_v2_m3.py`. |
+| R-§2-M3-05 | Raport: treść oferty | „treść oferty” | M3 | obowiązkowe | F | zaliczone | `.runtime/venv/bin/python -B -m unittest analysis.test_offers collectors.test_sites_m3 collectors.test_catalogs_m3` | Pełny tekst 57 stron (do 60 000 znaków), czas odczytu, SHA-256 odpowiedzi i tekstu w `fixtures/raw/discovery/m3-2026-11-21/entities.json` Raport API `GET /v1/report?module=M3` (kolumny: podmiot, dane rejestrowe, treść oferty z cytatami osi, URL, stan uprawnień z listą przejrzanych wykazów i datą, trasa, siła sygnału, status decyzji): `tests/core/test_contract_v2_m3.py`. |
+| R-§2-M3-06 | Raport: URL potencjalnego naruszenia | „lokalizację (URL) potencjalnego naruszenia” | M3 | obowiązkowe | F | zaliczone | `.runtime/venv/bin/python -B -m unittest analysis.test_offers collectors.test_sites_m3 collectors.test_catalogs_m3` | Każdy cytat osi ma URL, numer linii i zakres znaków; przypadek `refer`: https://rdmwm.pl/ (`results.json`) Raport API `GET /v1/report?module=M3` (kolumny: podmiot, dane rejestrowe, treść oferty z cytatami osi, URL, stan uprawnień z listą przejrzanych wykazów i datą, trasa, siła sygnału, status decyzji): `tests/core/test_contract_v2_m3.py`. |
 
 ## 2. Brief §3: oczekiwany rezultat (MVP)
 
@@ -206,8 +206,6 @@ Stan na 25 rzeczywistych stronach 11 firm (21 XI, `python3 -m analysis.m2_eval`,
 | R-§3.1-06 | Brak obsługi proxy |
 | T1-03 | Brak kopii wykazu zagranicznych instytucji kredytowych; Saxo Bank nieustalony (zagraniczna firma inwestycyjna rozpoznawana, patrz T1-02) |
 | T2-02, T2-03 | Jak wyżej dla wydawcy M2 |
-| T3-03, T3-04, T3-05 | M3 nie wykrywa czynności równoważnych, rekomendacji „trzymaj” ani formy i inicjatywy rekomendacji |
-| T3-08, T3-09, T3-10 | M3 nie rozpoznaje pochodnych, CFD ani uprawnień do emisji |
 
 Najsłabsze z wierszy częściowych są nadal bez przypadku rynkowego: potencjalnego naruszenia M3 (R-§2-M3-01…06), reklamy u nowego twórcy (R-§2-M1-01), automatycznego wyzwolenia harmonogramu (R-§3.1-10) i niezależnej trafności (R-§6-02).
 
