@@ -1,0 +1,11 @@
+{
+  "request_timeout_seconds": 12,
+  "max_response_bytes": 1048576,
+  "retry_fallback_seconds": 14400,
+  "sources": [
+    {"platform": "youtube", "account": "UCnmJzS-tFT7DlxIMFxYGcHw", "label": "DETERMINACJA"},
+    {"platform": "youtube", "account": "UCelOnoH_P-vJgAHSAcMKQiw", "label": "Comparic Rynki"},
+    {"platform": "tiktok", "account": "comparic.pl", "label": "Comparic.pl"},
+    {"platform": "tiktok", "account": "tradewarspl", "label": "Trade Wars"}
+  ]
+}

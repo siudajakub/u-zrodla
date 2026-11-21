@@ -1,0 +1,338 @@
+{
+  "date_utc": "2026-11-21T15:02:59.469718+00:00",
+  "purpose": "Read-only source feasibility probes; no application or classifier was run. Text lengths and SHA-256 refer to the supplied field, not the entire video.",
+  "runs": [
+    {
+      "source": "youtube",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnmJzS-tFT7DlxIMFxYGcHw",
+      "http": 200,
+      "raw_sha256": "6540a1ac08c6940a8508831da9f0c5b00e197f7e01bcdac7ba3ca507815e2764",
+      "items": [
+        {
+          "id": "-iLEiLFxh-Y",
+          "url": "https://www.youtube.com/watch?v=-iLEiLFxh-Y",
+          "text_length": 3989,
+          "text_sha256": "58c6f3b5120f4a3af2ebd4428685b13851826f33f308c03207e71e73c4a982c5"
+        },
+        {
+          "id": "04mmNbAlHFo",
+          "url": "https://www.youtube.com/watch?v=04mmNbAlHFo",
+          "text_length": 3731,
+          "text_sha256": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716"
+        },
+        {
+          "id": "5hBMj0vlVUU",
+          "url": "https://www.youtube.com/watch?v=5hBMj0vlVUU",
+          "text_length": 3990,
+          "text_sha256": "5b19203c323df14f9da948da988c3175a0d69cc282a1af9c5ccde107d31d308b"
+        },
+        {
+          "id": "CLHLv9GVOG0",
+          "url": "https://www.youtube.com/watch?v=CLHLv9GVOG0",
+          "text_length": 3731,
+          "text_sha256": "8b88cb1dd8497367be2b58b41697dd6a24641d25639bf8576714c4c16f156022"
+        },
+        {
+          "id": "HS_dznBB4Yw",
+          "url": "https://www.youtube.com/watch?v=HS_dznBB4Yw",
+          "text_length": 3731,
+          "text_sha256": "8b88cb1dd8497367be2b58b41697dd6a24641d25639bf8576714c4c16f156022"
+        },
+        {
+          "id": "NB1HhV6EKG8",
+          "url": "https://www.youtube.com/watch?v=NB1HhV6EKG8",
+          "text_length": 4068,
+          "text_sha256": "feae9c91984aca98d53bcd177ebb4527bfb8ad375c7d7b96b50dba8ccb3610c0"
+        },
+        {
+          "id": "OGvVicgQQS4",
+          "url": "https://www.youtube.com/watch?v=OGvVicgQQS4",
+          "text_length": 3835,
+          "text_sha256": "88f2214826c99ce3f8d2d270e46cd0e161f2934014ed10701481f5062a5bd60a"
+        },
+        {
+          "id": "T5TVhOy9BUY",
+          "url": "https://www.youtube.com/watch?v=T5TVhOy9BUY",
+          "text_length": 3731,
+          "text_sha256": "8b88cb1dd8497367be2b58b41697dd6a24641d25639bf8576714c4c16f156022"
+        },
+        {
+          "id": "TrUcWDFaCdE",
+          "url": "https://www.youtube.com/watch?v=TrUcWDFaCdE",
+          "text_length": 3731,
+          "text_sha256": "8b88cb1dd8497367be2b58b41697dd6a24641d25639bf8576714c4c16f156022"
+        },
+        {
+          "id": "eali033pzb0",
+          "url": "https://www.youtube.com/watch?v=eali033pzb0",
+          "text_length": 3928,
+          "text_sha256": "b4b5cf468415b04f8ed70acc913759c39829ce2430814792d1d1903bc18ddbd6"
+        },
+        {
+          "id": "kL_wk1B6wRo",
+          "url": "https://www.youtube.com/watch?v=kL_wk1B6wRo",
+          "text_length": 3731,
+          "text_sha256": "8b88cb1dd8497367be2b58b41697dd6a24641d25639bf8576714c4c16f156022"
+        },
+        {
+          "id": "qE7gjd9Ffvo",
+          "url": "https://www.youtube.com/watch?v=qE7gjd9Ffvo",
+          "text_length": 3731,
+          "text_sha256": "ede67b951f66e0062201b827c00963a2c19a97248993e8d93731b5af94ea11ab"
+        },
+        {
+          "id": "tVxlBpTqMJc",
+          "url": "https://www.youtube.com/watch?v=tVxlBpTqMJc",
+          "text_length": 4020,
+          "text_sha256": "1e2beb9c069a2d05f0582643b36c589aef999ad647a5f00b6b31670c8b48455c"
+        },
+        {
+          "id": "wFF_CX3aRis",
+          "url": "https://www.youtube.com/watch?v=wFF_CX3aRis",
+          "text_length": 3971,
+          "text_sha256": "c8e11484c35474ac7ceef2101bd9cbcf25a054f83f90b524330076cfdde59f43"
+        },
+        {
+          "id": "xtMqKkFO-0M",
+          "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M",
+          "text_length": 3731,
+          "text_sha256": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716"
+        }
+      ]
+    },
+    {
+      "source": "tiktok",
+      "url": "https://www.tiktok.com/embed/@comparic.pl",
+      "http": 200,
+      "raw_sha256": "0a087a4033b76f149259f9d9a847bf900544b775c25c7c5056e77765f064eff6",
+      "items": [
+        {
+          "id": "7709518231387524374",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709518231387524374",
+          "text_length": 38,
+          "text_sha256": "10e4b4cba6dfd8b5b941c0cd7b977894bbca0206da78eecde3410a1d79f22835"
+        },
+        {
+          "id": "7709518236659879190",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709518236659879190",
+          "text_length": 32,
+          "text_sha256": "2e037810c6700b74ebc98452512cd52d1e247c94f9689bc93402094014af48ef"
+        },
+        {
+          "id": "7709883334934973718",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883334934973718",
+          "text_length": 25,
+          "text_sha256": "65a3a684c93ae354675e291b6b9e7837da4fbc7f10e48667b185ca04c7bc7a0f"
+        },
+        {
+          "id": "7709883336348503318",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883336348503318",
+          "text_length": 34,
+          "text_sha256": "125ec71a71f0883a9f085e53cbae492d0c5cf61325013891ca2ced51297f4669"
+        },
+        {
+          "id": "7709883339389291798",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883339389291798",
+          "text_length": 40,
+          "text_sha256": "77c5911287abe2f4743c9dfa4decee2b0172cf65045c743e811ac21c160c9bfb"
+        },
+        {
+          "id": "7709883342178536726",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883342178536726",
+          "text_length": 20,
+          "text_sha256": "0493528b213ef37d4b6dc761dc31c12acc694e6bc3f53e933841389f13ee57a9"
+        },
+        {
+          "id": "7709883342379912470",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883342379912470",
+          "text_length": 25,
+          "text_sha256": "e9d72aa68f0a90ef7a0625fb859be4b2b97cac7976e59be8181e105aa029de57"
+        },
+        {
+          "id": "7709883345731063062",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883345731063062",
+          "text_length": 37,
+          "text_sha256": "315cd4dffdfba81f58333af2bb3d066be011d88af8bb2fc265a52fede1254ef6"
+        },
+        {
+          "id": "7709883345798302998",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883345798302998",
+          "text_length": 19,
+          "text_sha256": "63dca33ae26b63431d589564412b30f850b1aad1024d2c62becfecbfd553ff9d"
+        },
+        {
+          "id": "7709883346628693270",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883346628693270",
+          "text_length": 21,
+          "text_sha256": "382e2676a6a489a6a69846162113993be919307a269d8207ea86679b27ea90da"
+        }
+      ]
+    },
+    {
+      "source": "youtube",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnmJzS-tFT7DlxIMFxYGcHw",
+      "http": 200,
+      "raw_sha256": "6540a1ac08c6940a8508831da9f0c5b00e197f7e01bcdac7ba3ca507815e2764",
+      "items": [
+        {
+          "id": "-iLEiLFxh-Y",
+          "url": "https://www.youtube.com/watch?v=-iLEiLFxh-Y",
+          "text_length": 3989,
+          "text_sha256": "58c6f3b5120f4a3af2ebd4428685b13851826f33f308c03207e71e73c4a982c5"
+        },
+        {
+          "id": "04mmNbAlHFo",
+          "url": "https://www.youtube.com/watch?v=04mmNbAlHFo",
+          "text_length": 3731,
+          "text_sha256": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716"
+        },
+        {
+          "id": "5hBMj0vlVUU",
+          "url": "https://www.youtube.com/watch?v=5hBMj0vlVUU",
+          "text_length": 3990,
+          "text_sha256": "5b19203c323df14f9da948da988c3175a0d69cc282a1af9c5ccde107d31d308b"
+        },
+        {
+          "id": "CLHLv9GVOG0",
+          "url": "https://www.youtube.com/watch?v=CLHLv9GVOG0",
+          "text_length": 3731,
+          "text_sha256": "8b88cb1dd8497367be2b58b41697dd6a24641d25639bf8576714c4c16f156022"
+        },
+        {
+          "id": "HS_dznBB4Yw",
+          "url": "https://www.youtube.com/watch?v=HS_dznBB4Yw",
+          "text_length": 3731,
+          "text_sha256": "8b88cb1dd8497367be2b58b41697dd6a24641d25639bf8576714c4c16f156022"
+        },
+        {
+          "id": "NB1HhV6EKG8",
+          "url": "https://www.youtube.com/watch?v=NB1HhV6EKG8",
+          "text_length": 4068,
+          "text_sha256": "feae9c91984aca98d53bcd177ebb4527bfb8ad375c7d7b96b50dba8ccb3610c0"
+        },
+        {
+          "id": "OGvVicgQQS4",
+          "url": "https://www.youtube.com/watch?v=OGvVicgQQS4",
+          "text_length": 3835,
+          "text_sha256": "88f2214826c99ce3f8d2d270e46cd0e161f2934014ed10701481f5062a5bd60a"
+        },
+        {
+          "id": "T5TVhOy9BUY",
+          "url": "https://www.youtube.com/watch?v=T5TVhOy9BUY",
+          "text_length": 3731,
+          "text_sha256": "8b88cb1dd8497367be2b58b41697dd6a24641d25639bf8576714c4c16f156022"
+        },
+        {
+          "id": "TrUcWDFaCdE",
+          "url": "https://www.youtube.com/watch?v=TrUcWDFaCdE",
+          "text_length": 3731,
+          "text_sha256": "8b88cb1dd8497367be2b58b41697dd6a24641d25639bf8576714c4c16f156022"
+        },
+        {
+          "id": "eali033pzb0",
+          "url": "https://www.youtube.com/watch?v=eali033pzb0",
+          "text_length": 3928,
+          "text_sha256": "b4b5cf468415b04f8ed70acc913759c39829ce2430814792d1d1903bc18ddbd6"
+        },
+        {
+          "id": "kL_wk1B6wRo",
+          "url": "https://www.youtube.com/watch?v=kL_wk1B6wRo",
+          "text_length": 3731,
+          "text_sha256": "8b88cb1dd8497367be2b58b41697dd6a24641d25639bf8576714c4c16f156022"
+        },
+        {
+          "id": "qE7gjd9Ffvo",
+          "url": "https://www.youtube.com/watch?v=qE7gjd9Ffvo",
+          "text_length": 3731,
+          "text_sha256": "ede67b951f66e0062201b827c00963a2c19a97248993e8d93731b5af94ea11ab"
+        },
+        {
+          "id": "tVxlBpTqMJc",
+          "url": "https://www.youtube.com/watch?v=tVxlBpTqMJc",
+          "text_length": 4020,
+          "text_sha256": "1e2beb9c069a2d05f0582643b36c589aef999ad647a5f00b6b31670c8b48455c"
+        },
+        {
+          "id": "wFF_CX3aRis",
+          "url": "https://www.youtube.com/watch?v=wFF_CX3aRis",
+          "text_length": 3971,
+          "text_sha256": "c8e11484c35474ac7ceef2101bd9cbcf25a054f83f90b524330076cfdde59f43"
+        },
+        {
+          "id": "xtMqKkFO-0M",
+          "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M",
+          "text_length": 3731,
+          "text_sha256": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716"
+        }
+      ]
+    },
+    {
+      "source": "tiktok",
+      "url": "https://www.tiktok.com/embed/@comparic.pl",
+      "http": 200,
+      "raw_sha256": "68485704f49d1e1fff96951b8ad5b7b5fa1d258076d808b24b70e7c02357d40a",
+      "items": [
+        {
+          "id": "7709518231387524374",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709518231387524374",
+          "text_length": 38,
+          "text_sha256": "10e4b4cba6dfd8b5b941c0cd7b977894bbca0206da78eecde3410a1d79f22835"
+        },
+        {
+          "id": "7709518236659879190",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709518236659879190",
+          "text_length": 32,
+          "text_sha256": "2e037810c6700b74ebc98452512cd52d1e247c94f9689bc93402094014af48ef"
+        },
+        {
+          "id": "7709883334934973718",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883334934973718",
+          "text_length": 25,
+          "text_sha256": "65a3a684c93ae354675e291b6b9e7837da4fbc7f10e48667b185ca04c7bc7a0f"
+        },
+        {
+          "id": "7709883336348503318",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883336348503318",
+          "text_length": 34,
+          "text_sha256": "125ec71a71f0883a9f085e53cbae492d0c5cf61325013891ca2ced51297f4669"
+        },
+        {
+          "id": "7709883339389291798",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883339389291798",
+          "text_length": 40,
+          "text_sha256": "77c5911287abe2f4743c9dfa4decee2b0172cf65045c743e811ac21c160c9bfb"
+        },
+        {
+          "id": "7709883342178536726",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883342178536726",
+          "text_length": 20,
+          "text_sha256": "0493528b213ef37d4b6dc761dc31c12acc694e6bc3f53e933841389f13ee57a9"
+        },
+        {
+          "id": "7709883342379912470",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883342379912470",
+          "text_length": 25,
+          "text_sha256": "e9d72aa68f0a90ef7a0625fb859be4b2b97cac7976e59be8181e105aa029de57"
+        },
+        {
+          "id": "7709883345731063062",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883345731063062",
+          "text_length": 37,
+          "text_sha256": "315cd4dffdfba81f58333af2bb3d066be011d88af8bb2fc265a52fede1254ef6"
+        },
+        {
+          "id": "7709883345798302998",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883345798302998",
+          "text_length": 19,
+          "text_sha256": "63dca33ae26b63431d589564412b30f850b1aad1024d2c62becfecbfd553ff9d"
+        },
+        {
+          "id": "7709883346628693270",
+          "url": "https://www.tiktok.com/@comparic.pl/video/7709883346628693270",
+          "text_length": 21,
+          "text_sha256": "382e2676a6a489a6a69846162113993be919307a269d8207ea86679b27ea90da"
+        }
+      ]
+    }
+  ]
+}

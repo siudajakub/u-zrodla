@@ -1,0 +1,104 @@
+{
+  "capturedUtc": "2026-11-21T15:11:17.321379+00:00",
+  "scope": "Public discovery and source identity only. No regulatory or suitability judgement.",
+  "discoveries": [
+    {
+      "seed": "https://www.xtb.com/pl",
+      "seedHash": "1f69b33584ebb8d54525d25dc3a3fc55dc2124944b5e8e45e61270030d231bd8",
+      "matchingUrls": 3,
+      "fetched": [
+        {
+          "url": "https://www.xtb.com/pl/akcje",
+          "resolved": "https://www.xtb.com/pl/akcje",
+          "htmlSha256": "cce593fb3493b354db0c23f4dc270f3ccc5c453c52823ef482aa830217592828",
+          "bytes": 448364
+        },
+        {
+          "url": "https://www.xtb.com/pl/etf",
+          "resolved": "https://www.xtb.com/pl/etf",
+          "htmlSha256": "29763c451e34ebdbef3f84ff0ffb5b71664b8795b37749edcd0b7780b0489532",
+          "bytes": 452868
+        },
+        {
+          "url": "https://www.xtb.com/pl/plany-inwestycyjne",
+          "resolved": "https://www.xtb.com/pl/plany-inwestycyjne",
+          "htmlSha256": "c3118eed5e74b3832142d5b585dd7701e931f5f996b74d00512aaef257985434",
+          "bytes": 354664
+        }
+      ]
+    },
+    {
+      "seed": "https://bossa.pl",
+      "seedHash": "512417a7441d4f324ea0e825329c3e4210bae3da43886bb8d9123b261afbed63",
+      "matchingUrls": 1,
+      "fetched": [
+        {
+          "url": "https://bossa.pl/oferta/rynek-zagraniczny/kid",
+          "resolved": "https://bossa.pl/oferta/rynek-zagraniczny/kid",
+          "htmlSha256": "442c216d84f55bdcc513d27f29149010f86661c3b0a8b332df5cf7217e54771f",
+          "bytes": 92648
+        }
+      ]
+    },
+    {
+      "seed": "https://financewell.pl/",
+      "seedHash": "990662f732081d59db8566bca25046ea3b4b585564f608d24d489fb03eb235e2",
+      "matchingUrls": 1,
+      "fetched": [
+        {
+          "url": "https://financewell.pl/o-nas/",
+          "resolved": "https://financewell.pl/o-nas/",
+          "htmlSha256": "1683ea83f9922edbf21be80a1e66e93f891aaebc726146f9bd70310392db04c2",
+          "bytes": 17909
+        }
+      ]
+    },
+    {
+      "seed": "https://www.ceresfo.pl/",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "youtube": [
+    {
+      "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnmJzS-tFT7DlxIMFxYGcHw",
+      "handle": "DETERMINACJA-OFFICIAL",
+      "readCount": 15,
+      "disclosures": [
+        {
+          "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M",
+          "quote": "Partnerem odcinka jest XTB",
+          "textSha256": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716",
+          "publication": "2026-11-15T12:03:48+00:00"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=04mmNbAlHFo",
+          "quote": "Partnerem odcinka jest XTB",
+          "textSha256": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716",
+          "publication": "2026-11-08T10:26:23+00:00"
+        }
+      ]
+    },
+    {
+      "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCelOnoH_P-vJgAHSAcMKQiw",
+      "handle": "ComparicRynki",
+      "readCount": 15,
+      "disclosures": []
+    }
+  ],
+  "secondTikTok": {
+    "seed": "https://www.tiktok.com/embed/@tradewarspl",
+    "postLinks": [
+      "https://www.tiktok.com/@tradewarspl/video/7655780723118411041",
+      "https://www.tiktok.com/@tradewarspl/video/7659421072713927968",
+      "https://www.tiktok.com/@tradewarspl/video/7660468866639744289",
+      "https://www.tiktok.com/@tradewarspl/video/7663536447743479072",
+      "https://www.tiktok.com/@tradewarspl/video/7678347827491163424",
+      "https://www.tiktok.com/@tradewarspl/video/7680625136273345825",
+      "https://www.tiktok.com/@tradewarspl/video/7683893905435151649",
+      "https://www.tiktok.com/@tradewarspl/video/7686164801038355744",
+      "https://www.tiktok.com/@tradewarspl/video/7687934184727334147",
+      "https://www.tiktok.com/@tradewarspl/video/7689459409965026593"
+    ],
+    "httpSha256": "2274dd4a5d33a5605345285ad37e762f496f1091429ee191544847e1bab83c0c"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "timestamp": "2026-11-21T15:09:09.745Z",
+  "scope": "Candidate text geometry in loaded DOM. Screenshot and DOM have digests. No regulatory decision.",
+  "views": [
+    {
+      "url": "https://www.xtb.com/pl/etf",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "title": "Fundusze ETF w aplikacji XTB - inwestowanie online | XTB",
+      "domHash": "a38ede5db9d6c5b792b3c21587d2e899f319371632e27d56ba94a04289d42b2b",
+      "screenshotHash": "190ea12e24765f99d47e98ff5d73ac423cdb93cb8a200d63696e920b82e72d39",
+      "measurement": [
+        {
+          "pattern": "ryzyk",
+          "tag": "P",
+          "px": "16px",
+          "bbox": [
+            198,
+            1955,
+            315,
+            120
+          ],
+          "sample": "Łatwo kupuj i sprzedawaj fundusze ETF oraz sprawdzaj wa"
+        },
+        {
+          "pattern": "inwestuj w fundusze",
+          "tag": "H1",
+          "px": "72px",
+          "bbox": [
+            88,
+            360,
+            500,
+            222
+          ],
+          "sample": "Inwestuj w fundusze ETF z prowizją 0%"
+        }
+      ]
+    },
+    {
+      "url": "https://www.xtb.com/pl/etf",
+      "width": 768,
+      "height": 1024,
+      "http": 200,
+      "title": "Fundusze ETF w aplikacji XTB - inwestowanie online | XTB",
+      "domHash": "50486ec98de91b168248d5286f40a3c26271c82a3067b8c2c4ccc1bc93c9c542",
+      "screenshotHash": "630ed1dc0634897770dd1b6b36f8f972e3e05c5289d0b58624b2aa6b3b021dc0",
+      "measurement": [
+        {
+          "pattern": "ryzyk",
+          "tag": "P",
+          "px": "14px",
+          "bbox": [
+            116,
+            1719,
+            504,
+            60
+          ],
+          "sample": "Łatwo kupuj i sprzedawaj fundusze ETF oraz sprawdzaj wa"
+        },
+        {
+          "pattern": "inwestuj w fundusze",
+          "tag": "P",
+          "px": "14px",
+          "bbox": [
+            -205,
+            3650,
+            341,
+            80
+          ],
+          "sample": "Inwestuj w fundusze z dowolnego kraju, niezależnie od w"
+        }
+      ]
+    },
+    {
+      "url": "https://www.xtb.com/pl/etf",
+      "width": 390,
+      "height": 844,
+      "http": 200,
+      "title": "Fundusze ETF w aplikacji XTB - inwestowanie online | XTB",
+      "domHash": "b1254fa828918fdc572026009912276e5f2307d561494a4aeed972d2037fe63a",
+      "screenshotHash": "303062781d14d7a5a1e493a2c1a663efb96134a2efce376cdf5b5e6e7fbfcdf4",
+      "measurement": [
+        {
+          "pattern": "ryzyk",
+          "tag": "P",
+          "px": "14px",
+          "bbox": [
+            64,
+            1935,
+            230,
+            140
+          ],
+          "sample": "Łatwo kupuj i sprzedawaj fundusze ETF oraz sprawdzaj wa"
+        },
+        {
+          "pattern": "inwestuj w fundusze",
+          "tag": "P",
+          "px": "14px",
+          "bbox": [
+            -273,
+            3830,
+            260,
+            100
+          ],
+          "sample": "Inwestuj w fundusze z dowolnego kraju, niezależnie od w"
+        }
+      ]
+    },
+    {
+      "url": "https://bossa.pl/oferta/doradztwo-inwestycyjne",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "title": "Doradztwo inwestycyjne | Dom Maklerski Banku Ochrony Środowiska",
+      "domHash": "420b405a733c31e75a0cd29a3d7218f21cca2c2f5a538fa6c28189dd80358cc0",
+      "screenshotHash": "2d8a22fe4f64c6d3de6aff5f62d18e54bab1063c8b19b02f49e126755649d00b",
+      "measurement": [
+        {
+          "pattern": "ryzyk",
+          "tag": "P",
+          "px": "16px",
+          "bbox": [
+            230,
+            1566,
+            580,
+            100
+          ],
+          "sample": "Przeprowadzenie badania pozwala na dokładne określenie "
+        },
+        {
+          "pattern": "portfel rekomendowany",
+          "tag": "P",
+          "px": "16px",
+          "bbox": [
+            230,
+            1906,
+            580,
+            75
+          ],
+          "sample": "Klienci usługi otrzymują wyselekcjonowaną listę papieró"
+        }
+      ]
+    }
+  ]
+}

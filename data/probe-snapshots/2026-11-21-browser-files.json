@@ -1,0 +1,158 @@
+{
+  "timestamp": "2026-11-21T15:17:41.787Z",
+  "scope": "Candidate text geometry in loaded DOM. Screenshot and DOM have digests. No regulatory decision.",
+  "views": [
+    {
+      "screenshotFile": "browser/xtb-1440.png",
+      "domExtractFile": "browser/xtb-1440.json",
+      "domExtractHash": "f2eb7e2c8b54eedab4f4c9ada159bc0c8b64de9298076d6b5acdbc9aad3290f3",
+      "url": "https://www.xtb.com/pl/etf",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "title": "Fundusze ETF w aplikacji XTB - inwestowanie online | XTB",
+      "domHash": "4817725396970a74a6841ded892c8eb40b9e61d2eebbd8e17eebd4f93c850e68",
+      "screenshotHash": "190ea12e24765f99d47e98ff5d73ac423cdb93cb8a200d63696e920b82e72d39",
+      "measurement": [
+        {
+          "pattern": "ryzyk",
+          "tag": "P",
+          "px": "16px",
+          "bbox": [
+            198,
+            1955,
+            315,
+            120
+          ],
+          "sample": "Łatwo kupuj i sprzedawaj fundusze ETF oraz sprawdzaj wa"
+        },
+        {
+          "pattern": "inwestuj w fundusze",
+          "tag": "H1",
+          "px": "72px",
+          "bbox": [
+            88,
+            360,
+            500,
+            222
+          ],
+          "sample": "Inwestuj w fundusze ETF z prowizją 0%"
+        }
+      ]
+    },
+    {
+      "screenshotFile": "browser/xtb-768.png",
+      "domExtractFile": "browser/xtb-768.json",
+      "domExtractHash": "9d3fdb58c64fa3ad5b260afd6e30cfa68565283dc637494a49c6828c8b696770",
+      "url": "https://www.xtb.com/pl/etf",
+      "width": 768,
+      "height": 1024,
+      "http": 200,
+      "title": "Fundusze ETF w aplikacji XTB - inwestowanie online | XTB",
+      "domHash": "1b3cb220bfda8d4cfe3c1a5f2b96d3220a00c00f77417e8354bc3e9fc938bea8",
+      "screenshotHash": "95c6c422d42899a270138e490d1db1a9e107be1e8029c284ff95da199b64b571",
+      "measurement": [
+        {
+          "pattern": "ryzyk",
+          "tag": "P",
+          "px": "14px",
+          "bbox": [
+            116,
+            1719,
+            504,
+            60
+          ],
+          "sample": "Łatwo kupuj i sprzedawaj fundusze ETF oraz sprawdzaj wa"
+        },
+        {
+          "pattern": "inwestuj w fundusze",
+          "tag": "P",
+          "px": "14px",
+          "bbox": [
+            -205,
+            3650,
+            341,
+            80
+          ],
+          "sample": "Inwestuj w fundusze z dowolnego kraju, niezależnie od w"
+        }
+      ]
+    },
+    {
+      "screenshotFile": "browser/xtb-390.png",
+      "domExtractFile": "browser/xtb-390.json",
+      "domExtractHash": "f2bafc9519c693e18aabd8d103c22051021f740e643434b953cbbf297fef1a86",
+      "url": "https://www.xtb.com/pl/etf",
+      "width": 390,
+      "height": 844,
+      "http": 200,
+      "title": "Fundusze ETF w aplikacji XTB - inwestowanie online | XTB",
+      "domHash": "b521b6d6ae7f6cb01c824bf279e0ca1afe6f2537f2e3e25decad12f480788fe0",
+      "screenshotHash": "c33ed1efdb6eefd9a5747e412f3c11b2725333e9513f1965d003bb7101438a6f",
+      "measurement": [
+        {
+          "pattern": "ryzyk",
+          "tag": "P",
+          "px": "14px",
+          "bbox": [
+            64,
+            1935,
+            230,
+            140
+          ],
+          "sample": "Łatwo kupuj i sprzedawaj fundusze ETF oraz sprawdzaj wa"
+        },
+        {
+          "pattern": "inwestuj w fundusze",
+          "tag": "P",
+          "px": "14px",
+          "bbox": [
+            -273,
+            3830,
+            260,
+            100
+          ],
+          "sample": "Inwestuj w fundusze z dowolnego kraju, niezależnie od w"
+        }
+      ]
+    },
+    {
+      "screenshotFile": "browser/bos-1440.png",
+      "domExtractFile": "browser/bos-1440.json",
+      "domExtractHash": "951ce729b6ddcfd0d5a3f39320020c898047390ff2efeb57899454a6b2d631d7",
+      "url": "https://bossa.pl/oferta/doradztwo-inwestycyjne",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "title": "Doradztwo inwestycyjne | Dom Maklerski Banku Ochrony Środowiska",
+      "domHash": "9e54f06dbc13aeb29996caaf4ef1bbabbd21a23f6467603bb399f92eb97d07a4",
+      "screenshotHash": "2d8a22fe4f64c6d3de6aff5f62d18e54bab1063c8b19b02f49e126755649d00b",
+      "measurement": [
+        {
+          "pattern": "ryzyk",
+          "tag": "P",
+          "px": "16px",
+          "bbox": [
+            230,
+            1566,
+            580,
+            100
+          ],
+          "sample": "Przeprowadzenie badania pozwala na dokładne określenie "
+        },
+        {
+          "pattern": "portfel rekomendowany",
+          "tag": "P",
+          "px": "16px",
+          "bbox": [
+            230,
+            1906,
+            580,
+            75
+          ],
+          "sample": "Klienci usługi otrzymują wyselekcjonowaną listę papieró"
+        }
+      ]
+    }
+  ]
+}

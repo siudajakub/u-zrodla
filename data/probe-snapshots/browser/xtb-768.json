@@ -1,0 +1,31 @@
+{
+  "url": "https://www.xtb.com/pl/etf",
+  "width": 768,
+  "height": 1024,
+  "measurement": [
+    {
+      "pattern": "ryzyk",
+      "tag": "P",
+      "px": "14px",
+      "bbox": [
+        116,
+        1719,
+        504,
+        60
+      ],
+      "sample": "Łatwo kupuj i sprzedawaj fundusze ETF oraz sprawdzaj wa"
+    },
+    {
+      "pattern": "inwestuj w fundusze",
+      "tag": "P",
+      "px": "14px",
+      "bbox": [
+        -205,
+        3650,
+        341,
+        80
+      ],
+      "sample": "Inwestuj w fundusze z dowolnego kraju, niezależnie od w"
+    }
+  ]
+}

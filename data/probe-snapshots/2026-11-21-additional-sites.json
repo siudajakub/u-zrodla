@@ -1,0 +1,37 @@
+{
+  "capturedUtc": "2026-11-21T15:17:35.623712+00:00",
+  "seeds": [
+    {
+      "seed": "https://www.bdm.pl",
+      "root": "https://www.bdm.pl",
+      "rootHash": "05ffaf9bc28d8cf8ce400d81c7631c7aa18d69edb85da70c9d866d01f63825d2",
+      "fetched": [
+        {
+          "url": "https://www.bdm.pl/rachunek-inwestycyjny",
+          "anchor": "Rachunek inwestycyjny",
+          "http": 200,
+          "bytes": 44783,
+          "rawHash": "708d8bbc032021f80ea8a562aa0f521331d5ccbc01ff597531965193ea53ee28"
+        },
+        {
+          "url": "https://www.bdm.pl/rachunek-emerytalny",
+          "anchor": "Rachunek emerytalny",
+          "http": 200,
+          "bytes": 73980,
+          "rawHash": "8005ad8bf70ea87a014a0ba057641e2728913cadeac999fc7f1ed4d7d40dce11"
+        },
+        {
+          "url": "https://www.bdm.pl/doradztwo-inwestycyjne",
+          "anchor": "Doradztwo inwestycyjne",
+          "http": 200,
+          "bytes": 60192,
+          "rawHash": "8603e1d7fd69d5779f52d58bf8177292d1e21a1b5ed6f6537c04fa95bb5318d4"
+        }
+      ]
+    },
+    {
+      "seed": "https://www.si-24.pl/sklep/",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

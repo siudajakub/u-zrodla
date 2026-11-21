@@ -1,0 +1,31 @@
+{
+  "url": "https://bossa.pl/oferta/doradztwo-inwestycyjne",
+  "width": 1440,
+  "height": 900,
+  "measurement": [
+    {
+      "pattern": "ryzyk",
+      "tag": "P",
+      "px": "16px",
+      "bbox": [
+        230,
+        1566,
+        580,
+        100
+      ],
+      "sample": "Przeprowadzenie badania pozwala na dokładne określenie "
+    },
+    {
+      "pattern": "portfel rekomendowany",
+      "tag": "P",
+      "px": "16px",
+      "bbox": [
+        230,
+        1906,
+        580,
+        75
+      ],
+      "sample": "Klienci usługi otrzymują wyselekcjonowaną listę papieró"
+    }
+  ]
+}

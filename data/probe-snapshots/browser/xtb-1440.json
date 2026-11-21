@@ -1,0 +1,31 @@
+{
+  "url": "https://www.xtb.com/pl/etf",
+  "width": 1440,
+  "height": 900,
+  "measurement": [
+    {
+      "pattern": "ryzyk",
+      "tag": "P",
+      "px": "16px",
+      "bbox": [
+        198,
+        1955,
+        315,
+        120
+      ],
+      "sample": "Łatwo kupuj i sprzedawaj fundusze ETF oraz sprawdzaj wa"
+    },
+    {
+      "pattern": "inwestuj w fundusze",
+      "tag": "H1",
+      "px": "72px",
+      "bbox": [
+        88,
+        360,
+        500,
+        222
+      ],
+      "sample": "Inwestuj w fundusze ETF z prowizją 0%"
+    }
+  ]
+}

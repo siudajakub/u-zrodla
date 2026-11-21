@@ -1,0 +1,11 @@
+[Unit]
+Description=Observe InvestWatch public profiles every four hours (Warsaw)
+
+[Timer]
+OnCalendar=*-*-* 00,04,08,12,16,20:10:00 Europe/Warsaw
+Persistent=true
+AccuracySec=30s
+Unit=investwatch-watch.service
+
+[Install]
+WantedBy=timers.target

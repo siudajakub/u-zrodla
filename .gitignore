@@ -1,0 +1,11 @@
+/session-logs/
+/.runtime/
+__pycache__/
+*.py[cod]
+/.worktrees/
+.env
+.env.*
+!.env.example
+node_modules/
+/data/probe-snapshots/social/*.out
+/data/probe-snapshots/knf/knf_warnings_parsed.json
