@@ -787,7 +787,7 @@ def threshold_history(db, variant):
     return [threshold_row(r) for r in db.execute("SELECT * FROM thresholds WHERE variant=? ORDER BY id", (variant,))]
 
 def set_threshold(db, variant, value, note, expected_id, restored_from=None):
-    if variant not in VARIANTS:
+    if variant not in THRESHOLD_VARIANTS:
         raise Invalid("Nieznany wariant.")
     current = threshold_current(db, variant)
     if current and expected_id != current["id"]:
@@ -1061,6 +1061,10 @@ def apply_scan(db, findings, creators, sources, mode, scan_id=None):
 
 # --- settings, decisions and queues (contract v2, steps S6 and S7) ---
 VARIANTS = ("rules_1_2", "qual_d", "qual_d_model")
+# Thresholds of the M2 card and the M3 offers: separate entries in `thresholds` (no migration; an absent row is the default).
+MODULE_VARIANT = {"M2": "m2_card", "M3": "m3_card"}
+MODULE_DEFAULT = {"m2_card": 30, "m3_card": 60}
+THRESHOLD_VARIANTS = VARIANTS + tuple(MODULE_VARIANT.values())
 QUEUES = ("review", "adRegister", "offersM2", "offersM3", "incomplete", "closed", "all", "demo")
 ROUTE_OF_SUGGESTION = {"review": "refer", "uncertain": "complete", "no_signal": "no_signal", "unavailable": "insufficient"}
 
@@ -1081,10 +1085,13 @@ def threshold_row(row):
                                      "note": row["note"], "restoredFrom": row["restored_from"]}
 
 def threshold_current(db, variant):
-    return threshold_row(db.execute("SELECT * FROM thresholds WHERE variant=? ORDER BY id DESC LIMIT 1", (variant,)).fetchone())
+    row = threshold_row(db.execute("SELECT * FROM thresholds WHERE variant=? ORDER BY id DESC LIMIT 1", (variant,)).fetchone())
+    if row is None and variant in MODULE_DEFAULT:
+        return {"id": 0, "variant": variant, "value": MODULE_DEFAULT[variant], "setAt": None, "note": "Wpis domyślny", "restoredFrom": None}
+    return row
 
 def threshold_value(db, variant):
-    return (threshold_current(db, variant) or {"value": 60})["value"]
+    return (threshold_current(db, variant) or {"value": MODULE_DEFAULT.get(variant, 60)})["value"]
 
 def last_decision(db, key):
     row = db.execute("SELECT at,note,details FROM history WHERE case_id=? AND action='decision' ORDER BY seq DESC LIMIT 1", (key,)).fetchone()
@@ -1095,8 +1102,9 @@ def last_decision(db, key):
             "revision": details.get("revision"), "route": details.get("route"), "analysisSig": details.get("analysisSig"),
             "resolution": details.get("resolution")}
 
-def variant_view(body, variant, threshold):
-    """Route, score and queue eligibility of a case under one variant."""
+def variant_view(body, variant, threshold, module_threshold=None):
+    """Route, score and queue eligibility of a case under one variant. `module_threshold` is the threshold of the
+    M2 card or the M3 offers (their own scale), default the module's stored default."""
     variants = body.get("variants") if isinstance(body.get("variants"), dict) else {}
     chosen = variants.get(variant)
     decision = body.get("reviewDecision") if isinstance(body.get("reviewDecision"), dict) else {}
@@ -1121,6 +1129,12 @@ def variant_view(body, variant, threshold):
     if module in ("M2", "M3") and chosen is None and decision:
         # The card of the module decided on its own scale (M2 card: premises from 30 points; M3: route refer).
         eligible = bool(route == "refer" and decision.get("queueEligible"))
+        if module_threshold is not None and isinstance(value, (int, float)):
+            if module == "M2":
+                premises = bool((body.get("reviewScore") or {}).get("components"))
+                eligible = bool(route in ("refer", "no_signal") and premises and value >= module_threshold)
+            else:
+                eligible = bool(route == "refer" and decision.get("queueEligible") and value >= module_threshold)
         return {"route": route, "value": value, "queueEligible": eligible, "gated": None}
     return {"route": route, "value": value, "queueEligible": eligible and module == "M1",
             "gated": (chosen or {}).get("gated")}
@@ -1166,7 +1180,7 @@ def queues_of(core, view, flags, threshold=None):
         evidence = core.get("evidenceV2") if core.get("evidenceV2") is not None else core.get("_evidenceV2")
         has_evidence = not evidence or any(e.get("available", True) for e in evidence)
         reopened = core.get("status") == "closed" and (flags["pendingReReview"] or flags["reviewStale"])
-        if module in ("M1", "M2", "M3") and view["route"] == "refer" and view["queueEligible"] and has_evidence and not core.get("needsRecalc") \
+        if module in ("M1", "M2", "M3") and (view["route"] == "refer" or module == "M2") and view["queueEligible"] and has_evidence and not core.get("needsRecalc") \
                 and (core.get("status") != "closed" or reopened):
             out.add("review")
         if (core.get("adRegistry") or {}).get("state") in ("included", "candidate"):
@@ -1201,7 +1215,8 @@ def case_core(db, row, current, settings):
     view = compat_view(body, current)
     decided = last_decision(db, key)
     variant = settings["variant"]
-    chosen = variant_view(body, variant, settings["thresholds"].get(variant, 60))
+    chosen = variant_view(body, variant, settings["thresholds"].get(variant, 60),
+                          settings["thresholds"].get(MODULE_VARIANT.get(body.get("module"))))
     pending, _ = rereview(db, key, row["status"], body, decided)
     stale = bool(decided and decided.get("route") is not None and chosen["route"] is not None and decided["route"] != chosen["route"])
     flags = {"pendingReReview": pending, "reviewStale": stale}
@@ -1216,7 +1231,7 @@ def case_core(db, row, current, settings):
 def load_settings(db):
     qualification = qualification_current(db)
     return {"variant": (qualification or {}).get("variant") or ANALYSIS_VARIANT, "qualification": qualification,
-            "thresholds": {v: threshold_value(db, v) for v in VARIANTS}}
+            "thresholds": {v: threshold_value(db, v) for v in THRESHOLD_VARIANTS}}
 
 FRAME_NAME = re.compile(r"[A-Za-z0-9_.-]{1,80}\.jpg")
 
@@ -1416,6 +1431,27 @@ def queue_effect(db, variant, threshold):
     return {"variant":variant,"storedThreshold":stored,"threshold":threshold,"reviewQueueAtStored":now,
             "reviewQueueAtThreshold":now+len(gained)-len(lost),"changed":len(gained)+len(lost),
             "gained":gained[:50],"lost":lost[:50]}
+
+def module_queue_effect(db, module, threshold):
+    """The review queue of one module (M2 card or M3 offers) at `threshold` against its stored threshold."""
+    variant = MODULE_VARIANT[module]
+    current, settings = analysis_current(), load_settings(db)
+    stored = settings["thresholds"].get(variant, MODULE_DEFAULT[variant])
+    probe = {**settings, "thresholds": {**settings["thresholds"], variant: threshold}}
+    gained, lost, now = [], [], 0
+    for row in db.execute("SELECT * FROM cases"):
+        if json.loads(row["body"]).get("module") != module:
+            continue
+        member = []
+        for setting in (settings, probe):
+            core, _, _, chosen, flags = case_core(db, row, current, setting)
+            member.append("review" in queues_of(core, chosen, flags))
+        now += member[0]
+        if member[1] and not member[0]: gained.append(row["id"])
+        if member[0] and not member[1]: lost.append(row["id"])
+    return {"module": module, "variant": variant, "storedThreshold": stored, "threshold": threshold, "reviewQueueAtStored": now,
+            "reviewQueueAtThreshold": now + len(gained) - len(lost), "changed": len(gained) + len(lost),
+            "gained": gained[:50], "lost": lost[:50]}
 
 def published_of(case):
     """Publication time; TikTok gives none, so the time derived from the video id stands in (flagged by the report)."""

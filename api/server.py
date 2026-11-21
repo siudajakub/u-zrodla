@@ -120,10 +120,14 @@ def health():
 
 @app.get("/v1/calibration")
 def calibration(threshold:int|None=Query(None,ge=0,le=100),variant:str|None=Query(None),dataset:str=Query("q-v2"),
-                coverage:str=Query("pelne")):
+                coverage:str=Query("pelne"),module:str=Query("M1"),series:int=Query(0),view:str=Query("refer")):
     """Default dataset q-v2 (M1, agent labels, both variants); `dataset=illustrative` keeps the old illustrative set.
     Without `threshold` the threshold of the variant that filters the real queue is used, and the response says
     how many cases of that queue would change under a different one."""
+    if module not in ("M1","M2","M3"):
+        raise HTTPException(422,"Nieznany moduł. Dostępne: M1, M2, M3.")
+    if module!="M1":
+        return module_calibration(module,threshold,view,bool(series))
     if variant is not None and variant not in store.VARIANTS:
         raise HTTPException(422,"Nieznany wariant.")
     if dataset not in ("q-v2","illustrative"):
@@ -145,10 +149,37 @@ def calibration(threshold:int|None=Query(None,ge=0,le=100),variant:str|None=Quer
         raise HTTPException(422,str(error)) from error
     # headline of the requested (default: active) variant, in the shape of the old calibration
     head=out["variants"].get(chosen) or out["variants"]["qual_d"]
-    return {**out,"variant":chosen,"activeVariant":active,"storedThreshold":stored,"thresholdSource":"request" if threshold is not None else "stored",
+    curve=None
+    if series:
+        curve=[]
+        for t in range(20,100,5):
+            row=(calibration_q2.compare(t,coverage)["variants"].get(chosen) or {})
+            curve.append({"threshold":t,**{k:row.get(k) for k in ("tp","fp","tn","fn","cost","precision","recall")}})
+    return {**out,**({"series":curve} if curve is not None else {}),"variant":chosen,"activeVariant":active,"storedThreshold":stored,"thresholdSource":"request" if threshold is not None else "stored",
             **{k:head[k] for k in ("tp","fp","tn","fn","cost","errors","withheld")},
             "precisionCI":{"low":head["precisionCI95"][0],"high":head["precisionCI95"][1],"method":"Wilson 95%"} if isinstance(head["precisionCI95"],list) else None,
             "groups":head["independentCampaigns"],"publicExamples":out["n"],"syntheticExamples":0,"queueEffect":effect}
+
+def module_calibration(module,threshold,view,with_series):
+    """M2 card and M3 offers: agent-labelled sets, the threshold of the module (own entry in /v1/threshold), the effect on
+    the real review queue of that module. `series=1` adds the whole curve (thresholds 20..95 step 5) in the same answer."""
+    from . import calibration_modules as modules
+    if not modules.available():
+        raise HTTPException(503,"Brak plików zbioru z etykietami w fixtures/labeled.")
+    variant=store.MODULE_VARIANT[module]
+    with store.connection() as db:
+        entry=store.threshold_current(db,variant)
+        value=entry["value"] if threshold is None else threshold
+        effect=store.module_queue_effect(db,module,value)
+    try:
+        out=modules.compare(module,value,view)
+        curve=modules.series(module,view) if with_series else None
+    except ValueError as error:
+        raise HTTPException(422,str(error)) from error
+    return {**out,"variant":variant,"storedThreshold":entry["value"],"thresholdEntry":entry,
+            "thresholdSource":"request" if threshold is not None else "stored","queueEffect":effect,
+            "groups":out["independentUnits"],"publicExamples":out["n"],"syntheticExamples":0,
+            **({"series":curve} if curve is not None else {})}
 
 def state_calibration():
     """The calibration block of /v1/state: the q-v2 comparison at the threshold of the active variant (illustrative set if absent)."""
