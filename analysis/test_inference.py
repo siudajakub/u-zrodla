@@ -131,6 +131,167 @@ class TestInferenceClient(unittest.TestCase):
         self.assertFalse(model["affectsDecision"])
 
 
+def _load_tool():
+    path = inference.Path(__file__).resolve().parent.parent / "tools" / "measure_llm_openrouter.py"
+    spec = importlib.util.spec_from_file_location("measure_llm_openrouter", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _chat_response(content, cost=0.0001, finish="stop"):
+    return {"model": "qwen/qwen3.5-9b", "provider": "DeepInfra",
+            "choices": [{"finish_reason": finish, "message": {"role": "assistant", "content": json.dumps(content)}}],
+            "usage": {"prompt_tokens": 300, "completion_tokens": 20, "cost": cost}}
+
+
+class TestRemoteBackend(unittest.TestCase):
+    """OpenAI-compatible backend: same prompt, schema and validator, reachable only through the tool's transport."""
+    env = {"INVESTWATCH_LLM": "1", "INVESTWATCH_LLM_BACKEND": "openrouter", "INVESTWATCH_LLM_MODEL": "qwen/qwen3.5-9b"}
+    answer = {"label": "edukacja", "lineId": "L1", "quote": "wyjaśniam krok po kroku, czym jest ETF"}
+
+    def setUp(self):
+        inference._cache.clear()
+        inference._digests.clear()
+        self.addCleanup(inference.use_remote, None, None)
+
+    def register(self, response):
+        seen = []
+
+        def chat(body):
+            seen.append(body)
+            return response
+
+        inference.use_remote(chat, lambda: {"digest": "openrouter:x", "quantization": "bf16"})
+        return seen
+
+    def test_default_backend_is_ollama_and_invalid_value_is_refused(self):
+        with patch.dict(os.environ, {"INVESTWATCH_LLM_BACKEND": ""}):
+            self.assertEqual(inference.backend(), "ollama")
+        with patch.dict(os.environ, {"INVESTWATCH_LLM": "1", "INVESTWATCH_LLM_BACKEND": "gpt"}):
+            result = inference.classify(CAPTURE)
+        self.assertEqual((result["engine"], result["errorCode"]), ("ollama", "backend_invalid"))
+
+    def test_product_cannot_use_openrouter_without_the_measurement_transport(self):
+        with patch.dict(os.environ, self.env):
+            result = inference.classify(CAPTURE)
+        self.assertEqual((result["status"], result["errorCode"], result["engine"]),
+                         ("unavailable", "backend_forbidden", "openrouter"))
+
+    def test_inference_module_never_touches_the_openrouter_key_or_host(self):
+        text = inference.Path(inference.__file__).read_text(encoding="utf-8")
+        self.assertNotIn("OPENROUTER_API_KEY", text)
+        self.assertNotIn("openrouter.ai", text)
+        self.assertNotIn(".env.openrouter", text)
+
+    def test_same_prompt_schema_temperature_and_validator(self):
+        seen = self.register(_chat_response(self.answer))
+        with patch.dict(os.environ, self.env):
+            result = inference.classify(CAPTURE)
+        self.assertEqual((result["status"], result["label"], result["engine"]), ("ready", "edukacja", "openrouter"))
+        self.assertEqual((result["quantization"], result["promptTokens"], result["evalTokens"]), ("bf16", 300, 20))
+        body = seen[0]
+        self.assertEqual((body["temperature"], body["seed"]), (0, inference.SEED))
+        self.assertEqual(body["messages"], inference.messages(inference.fragments(CAPTURE)))
+        self.assertEqual(body["response_format"]["json_schema"]["schema"], inference.SCHEMA)
+        self.assertTrue(body["response_format"]["json_schema"]["strict"])
+
+    def test_ungrounded_quote_and_truncation_are_not_labels(self):
+        self.register(_chat_response({**self.answer, "quote": "Załóż konto z moim kodem"}))
+        with patch.dict(os.environ, self.env):
+            self.assertEqual(inference.classify(CAPTURE)["errorCode"], "rejected:quote_not_in_line")
+        inference._cache.clear()
+        self.register(_chat_response(self.answer, finish="length"))
+        with patch.dict(os.environ, self.env):
+            self.assertEqual(inference.classify(CAPTURE)["errorCode"], "incomplete_response")
+
+
+class TestMeasurementTool(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.tool = _load_tool()
+        cls.labels, cls.rows = mc.labeled_examples()
+
+    def endpoint(self, **kw):
+        from decimal import Decimal
+        base = {"provider": "DeepInfra", "tag": "deepinfra/bf16", "quantization": "bf16", "prompt": Decimal("0.0000001"),
+                "completion": Decimal("0.0000002"), "request": Decimal(0),
+                "supported": {"max_tokens", "temperature", "seed", "response_format", "structured_outputs", "reasoning"}}
+        return {**base, **kw}
+
+    def test_endpoint_choice_needs_structured_outputs_and_price_cap(self):
+        from decimal import Decimal
+        no_schema = self.endpoint(provider="Alibaba", supported={"max_tokens", "temperature", "seed", "response_format"},
+                                  prompt=Decimal("0.00000001"))
+        dear = self.endpoint(provider="Dear", prompt=Decimal("0.000005"))
+        chosen = self.tool.choose_endpoint([no_schema, dear, self.endpoint()], 3.0)
+        self.assertEqual(chosen["provider"], "DeepInfra")
+        with self.assertRaises(SystemExit):
+            self.tool.choose_endpoint([no_schema, dear], 3.0)
+        with self.assertRaises(SystemExit):
+            self.tool.choose_endpoint([self.endpoint()], 3.0, provider="Other")
+
+    def meter(self, post, model_limit=0.30, total_limit=1.50, ledger=None, **kw):
+        meter = self.tool.Meter("qwen/qwen3.5-9b", self.endpoint(**kw), "secret-key", 3.0, model_limit, total_limit,
+                                ledger if ledger is not None else {})
+        meter.post = post
+        return meter
+
+    def test_request_body_pins_provider_price_and_privacy(self):
+        seen = []
+        meter = self.meter(lambda body, key: seen.append((body, key)) or _chat_response({}))
+        with patch.object(self.tool, "write_ledger"):
+            meter.chat({"model": "m", "messages": []})
+        body, key = seen[0]
+        self.assertEqual(body["provider"], {"allow_fallbacks": False, "require_parameters": True, "data_collection": "deny",
+                                            "only": ["DeepInfra"], "max_price": {"prompt": 3.0, "completion": 3.0, "request": 0}})
+        self.assertEqual((body["usage"], body["reasoning"], key), ({"include": True}, {"enabled": False}, "secret-key"))
+
+    def test_cost_limits_stop_before_the_next_request(self):
+        calls = []
+        meter = self.meter(lambda body, key: calls.append(1) or _chat_response({}, cost=0.2), model_limit=0.30)
+        with patch.object(self.tool, "write_ledger"):
+            meter.chat({}), meter.chat({})
+            with self.assertRaises(self.tool.Stop):
+                meter.chat({})
+        self.assertEqual(len(calls), 2)
+        meter = self.meter(lambda body, key: _chat_response({}), total_limit=1.50, ledger={"other": 1.49, "qwen/qwen3.5-9b": 0})
+        meter.cost = 0.02
+        with self.assertRaises(self.tool.Stop):
+            meter.chat({})
+
+    def test_run_summary_has_metrics_agreement_cost_and_no_key(self):
+        heldout = [r for r in self.rows if r["split"] == "heldout"]
+        by_text = {}
+        for r in heldout:
+            by_text[inference.fragments(r["capture"]).get("L0")] = r
+
+        def post(body, key):
+            row = by_text[json.loads(body["messages"][1]["content"])["L0"]]
+            fragments = json.loads(body["messages"][1]["content"])
+            if row is heldout[0]:
+                return _chat_response({"label": row["label"], "lineId": "L0", "quote": "nie ma tego w tekście"})
+            return _chat_response({"label": row["label"], "lineId": "L0", "quote": fragments["L0"][:40]})
+
+        args = type("A", (), {"split": "heldout", "limit": 5, "max_price_per_mtok": 3.0, "max_model_cost": 0.3,
+                              "max_total_cost": 1.5})()
+        endpoint = self.endpoint()
+        with patch.object(self.tool.orr, "_post", post), patch.object(self.tool, "write_ledger"), \
+                patch.object(self.tool, "read_ledger", return_value={}), patch.dict(os.environ, {}, clear=False):
+            rows, items, meter, stopped, e5_correct = self.tool.run("qwen/qwen3.5-9b", endpoint, args, "secret-key")
+            summary = self.tool.summarize("qwen/qwen3.5-9b", endpoint, args, rows, items, meter, stopped, e5_correct)
+        self.assertIsNone(inference._remote)  # transport unregistered after the run
+        self.assertEqual((summary["completed"], summary["statuses"]), (5, {"ready": 4, "rejected": 1}))
+        self.assertEqual(summary["rejectionReasons"], {"rejected:quote_not_in_line": 1})
+        self.assertAlmostEqual(summary["rejectedShare"], 0.2)
+        self.assertAlmostEqual(summary["costUsd"], 0.0005)
+        self.assertEqual(summary["metrics"]["correct"], 4)
+        self.assertEqual(summary["rawLabelAccuracy"], 1.0)
+        self.assertEqual(summary["agreementWithE5"]["answered"], 4)
+        self.assertEqual((summary["endpointProvider"], summary["quantization"]), ("DeepInfra", "bf16"))
+        self.assertNotIn("secret-key", json.dumps(summary))
+
+
 class TestPreprocessing(unittest.TestCase):
     def test_clean_text_removes_markup_urls_timestamps_and_repeats(self):
         raw = ("<p>Inwestuj&nbsp;mądrze</p>\n12:05 Rozdział drugi\nhttps://x.pl/a?b=1\n-----\n"

@@ -4,6 +4,12 @@ The model is a described feature and a second opinion. It never changes the rout
 queue: `annotate` only adds `finding["model"]`. Without the service the finding gets status
 "unavailable" and everything else stays as the rules produced it.
 
+Two backends share the prompt, the JSON schema, temperature 0, the quote validator and the result
+format. `ollama` is the product. `openrouter` (OpenAI-compatible chat completions) exists only to measure
+model choice: this file never reads an OpenRouter key and never opens a connection to it. The measurement
+tool (`tools/measure_llm_openrouter.py`) registers a transport with `use_remote`; with
+INVESTWATCH_LLM_BACKEND=openrouter and no registered transport the product refuses (`backend_forbidden`).
+
 Standard library only, so the same file runs on the Mac host without the container venv.
 """
 import argparse
@@ -31,6 +37,10 @@ MIN_QUOTE, MAX_QUOTE = 6, 300
 NUM_CTX = 4096
 SEED = 0
 
+BACKENDS = ("ollama", "openrouter")
+MAX_TOKENS = 300  # the answer is a short JSON object; OpenAI-compatible bodies need an explicit cap
+_remote = None  # transport registered by the measurement tool: {"chat": fn(body) -> response, "meta": fn() -> dict}
+
 _slot = threading.Lock()  # one request at a time: a laptop runs one model, queueing protects RAM
 _cache = {}
 _digests = {}
@@ -45,6 +55,30 @@ class InferenceError(Exception):
 def enabled():
     """Off unless switched on: the demo must not depend on a service that may be absent."""
     return os.getenv("INVESTWATCH_LLM", "").strip().lower() in {"1", "on", "true", "ollama"}
+
+
+def backend():
+    """INVESTWATCH_LLM_BACKEND: ollama (default, the product) or openrouter (measurement only)."""
+    value = os.getenv("INVESTWATCH_LLM_BACKEND", "").strip().lower() or "ollama"
+    if value not in BACKENDS:
+        raise InferenceError("backend_invalid", f"INVESTWATCH_LLM_BACKEND musi być jednym z: {', '.join(BACKENDS)}.")
+    return value
+
+
+def use_remote(chat, meta):
+    """Register the OpenAI-compatible transport (measurement tool only). `chat(body)` returns the parsed
+    response, `meta()` returns {"digest", "quantization", "provider", ...}. Pass None to unregister."""
+    global _remote
+    _remote = {"chat": chat, "meta": meta} if chat is not None else None
+    _digests.pop(("remote", configured_model()), None)
+
+
+def _backend_name():
+    """Engine name for the result; the product path never reaches a remote service."""
+    try:
+        return backend()
+    except InferenceError:
+        return "ollama"
 
 
 def configured_model():
@@ -95,6 +129,12 @@ def _http(method, path, body=None, timeout=None):
 def model_digest(model=None):
     """Digest of the installed weights from /api/tags; it identifies exactly what produced a label."""
     model = model or configured_model()
+    if backend() == "openrouter":
+        if _remote is None:
+            raise InferenceError("backend_forbidden", "Backend openrouter działa tylko z narzędzia pomiarowego.")
+        if ("remote", model) not in _digests:
+            _digests[("remote", model)] = _remote["meta"]()
+        return _digests[("remote", model)]
     if model not in _digests:
         tags = _http("GET", "/api/tags", timeout=5)
         found = [m for m in tags.get("models", []) if m.get("name") == model or m.get("model") == model]
@@ -170,7 +210,32 @@ def validate(content, source):
     return {"label": label, "quote": quote, "lineId": line_id, "charStart": start, "charEnd": start + len(quote)}
 
 
+def openai_body(source, model):
+    """The same request as the Ollama one in OpenAI-compatible form (structured output, temperature 0)."""
+    return {"model": model, "messages": messages(source), "stream": False, "temperature": 0, "seed": SEED,
+            "max_tokens": MAX_TOKENS,
+            "response_format": {"type": "json_schema",
+                                "json_schema": {"name": "material_type", "strict": True, "schema": SCHEMA}}}
+
+
+def parse_openai(payload):
+    choices = payload.get("choices") if isinstance(payload, dict) else None
+    choice = choices[0] if isinstance(choices, list) and len(choices) == 1 and isinstance(choices[0], dict) else None
+    message = choice.get("message") if choice else None
+    if not isinstance(message, dict) or not isinstance(message.get("content"), str):
+        raise InferenceError("invalid_response", "Niekompletna odpowiedź silnika.")
+    if choice.get("finish_reason") not in (None, "stop"):
+        raise InferenceError("incomplete_response", f"Odpowiedź przerwana ({choice.get('finish_reason')}).")
+    usage = payload.get("usage") if isinstance(payload.get("usage"), dict) else {}
+    return message["content"], {"eval_count": usage.get("completion_tokens"),
+                                "prompt_eval_count": usage.get("prompt_tokens")}
+
+
 def _request(source, model):
+    if backend() == "openrouter":
+        if _remote is None:
+            raise InferenceError("backend_forbidden", "Backend openrouter działa tylko z narzędzia pomiarowego.")
+        return parse_openai(_remote["chat"](openai_body(source, model)))
     body = {"model": model, "messages": messages(source), "stream": False, "format": SCHEMA, "think": False,
             "keep_alive": os.getenv("INVESTWATCH_LLM_KEEP_ALIVE", "10m"),
             "options": {"temperature": 0, "seed": SEED, "num_ctx": NUM_CTX, "num_predict": 256}}
@@ -185,7 +250,7 @@ def _request(source, model):
 
 def _base(model, meta=None):
     meta = meta or {}
-    return {"task": TASK, "engine": "ollama", "modelId": model, "digest": meta.get("digest"),
+    return {"task": TASK, "engine": _backend_name(), "modelId": model, "digest": meta.get("digest"),
             "quantization": meta.get("quantization"), "promptVersion": PROMPT_VERSION, "affectsDecision": False}
 
 
@@ -200,6 +265,7 @@ def classify(capture):
         return {**_base(model), "status": "empty", "label": None, "confidence": None, "quote": None, "latencyMs": None}
     started = time.monotonic()
     try:
+        backend()
         meta = model_digest(model)
     except InferenceError as error:
         return {**_base(model), "status": "unavailable", "label": None, "confidence": None, "quote": None,
