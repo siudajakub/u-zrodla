@@ -13,7 +13,7 @@ from .catalogs import (
 )
 from .common import safe_get, utc_now
 from .crosslinks import extend_from_posts
-from .sites import SITES, read_site
+from .sites import SITES, read_site, m3_entity_captures
 from .social import CONFIG, read_social, read_watch, social_creator
 from . import social as social_module
 
@@ -377,9 +377,127 @@ def _social_replay(ctx):
     return result
 
 
+def _enabled_when_listed(name):
+    """Off by default; INVESTWATCH_ADAPTERS must name the adapter to switch it on."""
+    def enabled():
+        return name in [x.strip() for x in (os.environ.get("INVESTWATCH_ADAPTERS") or "").split(",")]
+    return enabled
+
+
 if hasattr(social_module, "FIXTURES") and SOCIAL_REPLAY.is_file():
     register(Adapter("social-replay", _social_replay, "Social · archiwum 21 XI", modes=("replay",),
                      explicit_only=True, own_network=False))
+
+
+# --- M3: advisory offers (lane F). One case per firm: the home page is the capture, every saved page travels in m3Pages ---
+M3_REPLAY = ROOT / "fixtures/raw/discovery/m3-2026-11-21/entities.json"
+M3_NOT_A_SEARCH = ("odkrywanie z listy ziaren; wyszukiwanie wymaga dostawcy z kluczem "
+                   "(produkt nie ma własnej wyszukiwarki)")
+
+
+def m3_entity_capture(entity, adapter_id, method):
+    """One firm to one Capture (module M3): the home page record plus all read pages with their full text."""
+    creator, items = m3_entity_captures(entity)
+    if not items:
+        return creator, None
+    item = items[0]
+    item["id"] = f"web:{entity['domain']}:m3"  # one case per firm, stable when the home page redirects
+    pages = entity["pages"]
+    item["m3Pages"] = [{"url": p["url"], "observedAt": p.get("observedAt"), "sha256": p.get("sha256"), "title": p.get("title"),
+                        "role": p.get("role"), "text": p.get("text") or "", "textSha256": p.get("textSha256"),
+                        "identityText": p.get("identityText") or ""} for p in pages]
+    seed = (entity.get("seed") or {}).get("discovery") or {}
+    item["discovery"] = [{"method": method, "adapter": adapter_id, "sourceId": adapter_id, "query": seed.get("query"),
+                          "rank": seed.get("rank"), "sourceUrl": seed.get("resultUrl") or (entity.get("seed") or {}).get("url"),
+                          "observedAt": pages[0].get("observedAt"), "responseSha256": pages[0].get("sha256")}]
+    return creator, item
+
+
+def _m3_result(entities, adapter_id, label, method, scope, at, extra_status=None):
+    creators, captures, errors = [], [], []
+    for entity in entities:
+        creator, item = m3_entity_capture(entity, adapter_id, method)
+        if item is None:
+            errors.append(entity)
+            continue
+        creators.append(creator)
+        captures.append(item)
+    pages = sum(len(i["m3Pages"]) for i in captures)
+    status = {"id": adapter_id, "name": label, "url": None, "status": "ok" if captures else "empty", "count": len(captures),
+              "rawCount": len(entities), "pages": pages, "unread": len(errors), "observedAt": at, "scope": scope,
+              "message": M3_NOT_A_SEARCH, **(extra_status or {})}
+    return {"creators": creators, "captures": captures, "sources": [status]}
+
+
+def _m3_replay(ctx):
+    """The dated M3 run of 2026-11-21 (29 firms, 57 pages) from the saved pages, no network."""
+    path = Path(ctx.options.get("m3_replay") or M3_REPLAY)
+    data = json.loads(path.read_text(encoding="utf-8"))
+    result = _m3_result(data["entities"], "m3-offers-replay", "Oferty doradcze M3 · zapis 21 XI", "search_result_replay",
+                        "Tekst HTML stron firm (zapis z 21 XI)", data.get("startedAt") or ctx.clock(),
+                        {"requests": data.get("requests"), "sampleDate": "2026-11-21"})
+    for item in result["captures"]:
+        item["provenance"].setdefault("fixture", "m3-2026-11-21/entities.json")
+    return result
+
+
+def read_m3_seeds(path):
+    """Seeds from a file: recorded search results (queries[].results[]) or a plain list of {url, label}."""
+    from .catalogs import load_m3_seeds
+    data = json.loads(Path(path).read_text(encoding="utf-8"))
+    if isinstance(data, list):
+        return [{"url": s["url"], "offerUrl": s.get("offerUrl"), "label": s.get("label") or s["url"],
+                 "discoveredVia": s.get("discoveredVia") or "Lista ziaren", "discovery": s.get("discovery") or {}}
+                for s in data if isinstance(s, dict) and s.get("url")]
+    return load_m3_seeds(path)
+
+
+def _m3_live(ctx):
+    """Own transport (PoliteFetcher: robots.txt, 3 s between requests, a request budget). Disabled by default.
+    Without a seeds file it reports the empty state and sends no request."""
+    from .sites import PoliteFetcher, read_m3_firm, site_key
+    from urllib.parse import urlsplit
+    at = ctx.clock()
+    seeds_path = ctx.options.get("m3_seeds") or os.environ.get("INVESTWATCH_M3_SEEDS")
+    if not seeds_path or not Path(seeds_path).is_file():
+        return {"creators": [], "captures": [], "sources": [{
+            "id": "m3-offers", "name": "Oferty doradcze M3", "status": "empty", "count": 0, "observedAt": at,
+            "message": M3_NOT_A_SEARCH, "nextStep": "Wskaż plik z listą ziaren w INVESTWATCH_M3_SEEDS."}]}
+    seeds = read_m3_seeds(seeds_path)
+    budget = int(ctx.budget) if ctx.budget is not None else 60
+    fetcher = ctx.options.get("m3_fetcher") or PoliteFetcher(budget=budget)
+    entities = []
+    for seed in seeds:
+        ctx.heartbeat()
+        domain = site_key(urlsplit(seed["url"]).hostname)
+        if fetcher.used + 3 > fetcher.budget:
+            entities.append({"id": f"m3:{domain}", "domain": domain, "label": seed.get("label"), "seed": seed, "pages": [],
+                             "discoveredVia": seed.get("discoveredVia"), "errors": [{"url": seed["url"], "error": "pominięty: budżet żądań"}]})
+            continue
+        entities.append(read_m3_firm(seed, fetcher, ctx.clock, subpages=1))
+    return _m3_result(entities, "m3-offers", "Oferty doradcze M3", "seed_list", "Tekst HTML stron firm (odczyt na żywo)", at,
+                      {"requests": fetcher.used, "budget": fetcher.budget})
+
+
+def m3_domain(item):
+    from urllib.parse import urlsplit
+    host = urlsplit(item.get("url") or "").hostname or ""
+    return host[4:] if host.startswith("www.") else host
+
+
+def drop_legacy_duplicates(captures):
+    """A firm that an older source already holds as a case (bossa.pl: id web:bossa.pl/...) is not added a second time
+    by the entity reader: the older case keeps its id and decisions."""
+    legacy = {m3_domain(c) for c in captures if c.get("module") == "M3" and not c.get("m3Entity")}
+    return [c for c in captures if not (c.get("m3Entity") and m3_domain(c) in legacy)]
+
+
+M3_FILES_OK = M3_REPLAY.is_file()
+if M3_FILES_OK:
+    register(Adapter("m3-offers-replay", _m3_replay, "Oferty doradcze M3 · archiwum 21 XI", modes=("replay",),
+                     explicit_only=True, own_network=False))
+register(Adapter("m3-offers", _m3_live, "Oferty doradcze M3 · lista ziaren", enabled=_enabled_when_listed("m3-offers"),
+                 run_units_env="INVESTWATCH_M3_RUN_REQUESTS", run_units_default=60, own_network=True))
 
 
 def _run(mode, previous, known_ids, fetch, clock, runner, options, only=None):
@@ -409,7 +527,8 @@ def _run(mode, previous, known_ids, fetch, clock, runner, options, only=None):
     statuses = {}
     for source in merge_source_rows(rows):
         statuses[source.get("id") or source["name"]] = source
-    return {"creators": list(creators.values()), "captures": list(captures.values()), "sources": list(statuses.values())}
+    return {"creators": list(creators.values()), "captures": drop_legacy_duplicates(list(captures.values())),
+            "sources": list(statuses.values())}
 
 
 def discover(mode, known_ids, *, known_creators=(), fetch=safe_get, clock=utc_now, runner=None, options=None, only=None):
