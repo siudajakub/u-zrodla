@@ -169,7 +169,9 @@ def once(root, dest, port, index):
         report, review = both["state"], both["review"]
         result["secondsToCases"] = round(time.monotonic()-start, 2)
         review_ids = {i["id"].split(":", 1)[-1] for i in review["items"]}
-        assert review["total"] == 4 and review_ids == KNOWN_REVIEW, (review["total"], sorted(review_ids))
+        # Cztery znane filmy muszą być w kolejce; obok nich mogą stać oferty M2/M3 (kolejka review łączy moduły).
+        assert KNOWN_REVIEW.issubset(review_ids), (review["total"], sorted(review_ids))
+        result["reviewTotal"] = review["total"]
         assert report["semantic"]["status"] == "ready", report["semantic"]
         pack_source = next(x for x in report["sources"] if x["id"] == "replay-media")
         assert pack_source["status"] == "ok" and pack_source["count"] == 17, pack_source

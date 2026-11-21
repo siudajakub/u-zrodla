@@ -1,6 +1,6 @@
 """Stan startu pokazu z API: skany, kolejka review, E5. Tylko biblioteka standardowa (Python 3.8+).
 
-    python3 ops/demo/queue_status.py --port 8769 [--expect-count 4] [--expect-ids ID,ID,...] [--json]
+    python3 ops/demo/queue_status.py --port 8769 [--expect-count 4] [--expect-ids ID,ID,...] [--require-ids ID,...] [--json]
 
 Kod wyjścia: 0 = skany bootstrapu zakończone i kolejka zgodna z oczekiwaniem, 1 = jeszcze trwa lub niezgodna,
 2 = API nie odpowiada.
@@ -24,6 +24,8 @@ def main():
     parser.add_argument("--min-scans", type=int, default=2, help="ile skanów bootstrapu musi istnieć (m2 + youtube replay)")
     parser.add_argument("--expect-count", type=int)
     parser.add_argument("--expect-ids", default=None, help="po przecinku; domyślnie cztery znane filmy, gdy podano --expect-count")
+    parser.add_argument("--require-ids", default=None,
+                        help="po przecinku; te pozycje muszą być w kolejce (inne mogą być obok, np. oferty M2/M3); 'known' = cztery filmy")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
     base = f"http://127.0.0.1:{args.port}"
@@ -47,6 +49,9 @@ def main():
     if args.expect_count is not None:
         want = sorted((args.expect_ids or KNOWN).split(","))
         ok = ready and queue.get("total") == args.expect_count and ids == want
+    if args.require_ids:
+        need = set((KNOWN if args.require_ids == "known" else args.require_ids).split(","))
+        ok = ok and need.issubset(ids)
     if args.json:
         print(json.dumps(report, ensure_ascii=False))
     else:

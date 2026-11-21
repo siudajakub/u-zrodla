@@ -1,12 +1,16 @@
 #!/bin/sh
 # Pierwszy start liczy ok. 1300 materiałów z replay YouTube (minuty, zależnie od CPU). Czeka, aż skany bootstrapu (m2 + youtube replay) się zakończą, i sprawdza kolejkę "Co wymaga sprawdzenia".
-# Użycie: sh ops/demo/wait-ready.sh PORT [demo|live] [SEKUNDY]. W trybie demo oczekuje 4 znanych filmów (kod 4 przy niezgodności).
+# Użycie: sh ops/demo/wait-ready.sh PORT [demo|live] [SEKUNDY]. W trybie demo kolejka musi zawierać 4 znane filmy
+# (obok nich mogą być oferty M2/M3; kod 4 przy braku). INVESTWATCH_EXPECT_EXACT=1 wymaga dokładnie tych 4 pozycji.
 set -eu
 ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd -P)
 . "$ROOT/ops/demo/common.sh"
 iw_python || exit 1
 port=${1:-8769}; mode=${2:-demo}; max=${3:-900}
-extra=; [ "$mode" != demo ] || extra="--expect-count 4"
+extra=
+if [ "$mode" = demo ]; then
+  if [ "${INVESTWATCH_EXPECT_EXACT:-0}" = 1 ]; then extra="--expect-count 4"; else extra="--require-ids known"; fi
+fi
 t0=$(date +%s)
 while :; do
   rc=0; line=$("$PY3" "$ROOT/ops/demo/queue_status.py" --port "$port" $extra) || rc=$?
