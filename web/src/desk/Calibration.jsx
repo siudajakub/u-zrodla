@@ -1,5 +1,6 @@
-// Kalibracja: suwak progu z natychmiastowym podglądem TP/FP/TN/FN z /v1/calibration, wykres FP i FN w funkcji progu,
-// skutek dla kolejki (queueEffect), porównanie wariantów, historia progu i wariantu z przywracaniem. Zapis progu robi API.
+// Kalibracja: suwak progu z natychmiastowym podglądem z /v1/calibration (M1, M2 i M3), FP i FN jako duże liczby z różnicą,
+// macierz 2×2, wykres FP i FN w funkcji progu (krzywa z `series`), skutek dla kolejki, zastrzeżenie „oceny agentów” w jednej linii.
+// Historia ustawień, porównanie reguł i zbiór etykiet są pod „Więcej”. Zapis progu M1 robi API.
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Banner } from "@astryxdesign/core/Banner";
 import { Button } from "@astryxdesign/core/Button";
@@ -15,17 +16,20 @@ import { Table, pixel, proportional } from "@astryxdesign/core/Table";
 import { StatusDot } from "@astryxdesign/core/StatusDot";
 import { Token } from "@astryxdesign/core/Token";
 import { api } from "./api.js";
-import { MODULE_NAME, VARIANTS, fmtDate, fmtDateTime } from "./labels.js";
+import { MODULE_NAME, fmtDate, fmtDateTime } from "./labels.js";
 import { Chart } from "./charts.jsx";
 import { ExternalLink, Loading } from "./parts.jsx";
 
 const pct = (v) => (v == null || Number.isNaN(v) ? null : `${Math.round(v * 100)}%`);
 const Meta = ({ label, children }) => <MetadataListItem label={label}>{children}</MetadataListItem>;
+const plural = (n, one, few, many) => (n === 1 ? one : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? few : many);
+const cases = (n) => `${n} ${plural(n, "sprawa", "sprawy", "spraw")}`;
+const PREVIOUS = { rules_1_2: "Poprzednie reguły" };
 
 function Tile({ title, children, aside }) {
   return (
-    <Card padding={3}>
-      <VStack gap={2}>
+    <Card padding={2}>
+      <VStack gap={1.5}>
         <HStack gap={2} hAlign="between" vAlign="center"><Heading level={2}>{title}</Heading>{aside}</HStack>
         {children}
       </VStack>
@@ -46,21 +50,14 @@ function useHistory(load, rev) {
   return state;
 }
 
-const GRID = [30, 50, 60, 70, 80, 90, 100];
-
-const rates = (x) => {
-  const referred = x.tp + x.fp;
-  return { precision: referred ? x.tp / referred : null, recall: x.tp + x.fn ? x.tp / (x.tp + x.fn) : null };
-};
-
-/** Odpowiedzi kalibracji z pamięcią podręczną na czas pobytu w zakładce (klucz: wariant, wpis kwalifikacji, próg). */
+/** Odpowiedzi kalibracji z pamięcią podręczną na czas pobytu w zakładce (klucz: moduł, wariant, wpis kwalifikacji, próg). */
 function useCalibrationCache(variant, qualId, module) {
   const cache = useRef(new Map());
   useEffect(() => {
     cache.current = new Map();
   }, [variant, qualId, module]);
   return (t) => {
-    const key = `${module}|${variant}|${qualId}|${t}`;
+    const key = `${module}|${variant}|${qualId}|${t ?? "stored"}`;
     if (!cache.current.has(key)) {
       const p = api.calibration(t, module === "M1" ? variant : undefined, module);
       cache.current.set(key, p);
@@ -70,15 +67,16 @@ function useCalibrationCache(variant, qualId, module) {
   };
 }
 
-function Kpi({ label, value, delta, tone, hint }) {
+/** Duża liczba z różnicą względem obowiązującego progu (zielona poprawa, czerwone pogorszenie). */
+function Big({ label, value, delta, hint }) {
   const d = delta == null || delta === 0 ? null : delta > 0 ? `+${delta}` : String(delta);
   return (
-    <Card padding={2} aria-label={`${label}: ${value}`}>
+    <Card padding={2} aria-label={`${label}: ${value}`} data-kpi={label}>
       <VStack gap={0.5}>
         <Text type="supporting" color="secondary">{label}</Text>
         <HStack gap={1} vAlign="baseline">
           <Heading level={2}>{value}</Heading>
-          {d && <Token size="sm" color={tone === "bad-up" ? (delta > 0 ? "red" : "green") : "gray"} label={`${d} względem obowiązującego`} />}
+          {d && <Token size="sm" color={delta > 0 ? "red" : "green"} label={`${d} względem obowiązującego`} />}
         </HStack>
         {hint && <Text type="supporting" color="secondary">{hint}</Text>}
       </VStack>
@@ -86,24 +84,23 @@ function Kpi({ label, value, delta, tone, hint }) {
   );
 }
 
-const cases = (n) => `${n} ${n === 1 ? "sprawa" : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? "sprawy" : "spraw"}`;
-
 function effectSentence(e, threshold) {
   if (!e) return null;
   const lost = e.lost?.length || 0;
   const gained = e.gained?.length || 0;
-  if (!lost && !gained) return `Przy progu ${threshold} pkt kolejka „Co wymaga sprawdzenia” się nie zmienia (${cases(e.reviewQueueAtStored)}).`;
+  if (!lost && !gained) return `Przy progu ${threshold} pkt kolejka „Do sprawdzenia” się nie zmienia (${cases(e.reviewQueueAtStored)}).`;
   const part = [lost ? `zniknie ${cases(lost)}` : null, gained ? `przybędzie ${cases(gained)}` : null].filter(Boolean).join(", ");
-  return `Przy progu ${threshold} pkt z kolejki „Co wymaga sprawdzenia”: ${part} (${e.reviewQueueAtStored} → ${e.reviewQueueAtThreshold}).`;
+  return `Przy progu ${threshold} pkt z kolejki „Do sprawdzenia”: ${part} (${e.reviewQueueAtStored} → ${e.reviewQueueAtThreshold}).`;
 }
+
+const groupsText = (g) => (typeof g === "number" ? `${g} ${plural(g, "kampania", "kampanie", "kampanii")}` : g?.firms ? `${g.firms} ${plural(g.firms, "firma", "firmy", "firm")}` : null);
+const splitText = (cal) => (cal.split === "holdout" ? "próba odłożona" : cal.split === "tuning" || cal.evaluationStatus === "agent_labels_tuning_set" ? "zbiór strojenia" : null);
 
 export function Calibration({ data, rev, onChanged }) {
   const variant = data.qualification?.variant || data.threshold?.variant || "rules_1_2";
-  const applied = data.threshold?.value ?? 60;
-  const [threshold, setThreshold] = useState(applied);
   const [module, setModule] = useState("M1");
+  const [threshold, setThreshold] = useState(null);
   const [state, setState] = useState({ status: "loading" });
-  const [curve, setCurve] = useState({});
   const [nonce, setNonce] = useState(0);
   const [confirm, setConfirm] = useState(false);
   const [notice, setNotice] = useState(null);
@@ -111,46 +108,27 @@ export function Calibration({ data, rev, onChanged }) {
   const thresholds = useHistory(() => api.thresholdHistory(), `${rev}-${nonce}`);
   const variants = useHistory(() => api.qualificationHistory(), `${rev}-${nonce}`);
   const getCal = useCalibrationCache(variant, data.qualification?.id, module);
-  useEffect(() => setThreshold(applied), [applied]);
+  useEffect(() => setThreshold(null), [module, data.threshold?.value]);
   useEffect(() => {
     let cancelled = false;
     setState((s) => (s.cal ? { ...s, status: "refreshing" } : { status: "loading" }));
-    const t = setTimeout(() => {
-      Promise.all([getCal(threshold), getCal(applied)]).then(
-        ([cal, base]) => !cancelled && setState(cal.module && cal.module !== module ? { status: "unsupported", got: cal.module } : { status: "ready", cal, base }),
-        (e) => !cancelled && setState({ status: "error", error: e.message }),
-      );
+    const t = setTimeout(async () => {
+      try {
+        const first = await getCal(null);
+        const stored = first.storedThreshold ?? first.threshold;
+        const cal = threshold == null || threshold === stored ? first : await getCal(threshold);
+        if (cancelled) return;
+        setState(first.module && first.module !== module ? { status: "unsupported", got: first.module } : { status: "ready", cal, base: first, stored });
+      } catch (e) {
+        if (!cancelled) setState({ status: "error", error: e.message });
+      }
     }, 120);
     return () => {
       cancelled = true;
       clearTimeout(t);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [threshold, applied, variant, nonce, data.qualification?.id, module]);
-  const points = useMemo(() => [...new Set([...GRID, applied, threshold])].sort((a, b) => a - b), [applied, threshold]);
-  useEffect(() => {
-    let cancelled = false;
-    if (state.status === "unsupported") return undefined;
-    const todo = points.filter((p) => !(p in curve));
-    let next = 0;
-    const worker = async () => {
-      while (!cancelled && next < todo.length) {
-        const p = todo[next++];
-        try {
-          const c = await getCal(p);
-          if (!cancelled) setCurve((m) => ({ ...m, [p]: { fp: c.fp, fn: c.fn, tp: c.tp } }));
-        } catch {
-          /* punkt wykresu pominięty */
-        }
-      }
-    };
-    Promise.all([worker(), worker(), worker()]);
-    return () => {
-      cancelled = true;
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [points.join(","), variant, data.qualification?.id, module, state.status === "unsupported"]);
-  useEffect(() => setCurve({}), [variant, data.qualification?.id, module]);
+  }, [threshold, variant, nonce, data.qualification?.id, module]);
 
   async function act(fn, ok) {
     if (busy) return;
@@ -172,159 +150,167 @@ export function Calibration({ data, rev, onChanged }) {
 
   const cal = state.cal;
   const base = state.base || cal;
+  const applied = state.stored ?? data.threshold?.value ?? 60;
+  const shown = threshold ?? applied;
+  const series = base?.series;
   const chart = useMemo(() => {
-    const xs = points.filter((p) => p in curve);
+    const rows = (series || []).filter((r) => r.threshold >= 20);
     return {
       type: "line",
-      labels: xs.map(String),
+      labels: rows.map((r) => String(r.threshold)),
       datasets: [
-        { label: "Fałszywe alarmy (FP)", data: xs.map((p) => curve[p].fp), color: "orange" },
-        { label: "Przeoczenia (FN)", data: xs.map((p) => curve[p].fn), color: "red" },
+        { label: "Fałszywe alarmy (FP)", data: rows.map((r) => r.fp), color: "orange" },
+        { label: "Przeoczenia (FN)", data: rows.map((r) => r.fn), color: "red" },
       ],
       yTitle: "liczba materiałów",
     };
-  }, [curve, points.join(",")]);
+  }, [series]);
   if (state.status === "error") {
     return <VStack padding={4}><Banner status="error" title="Nie można pobrać wyników kalibracji" description={state.error} endContent={<Button label="Spróbuj ponownie" onClick={() => setNonce((n) => n + 1)} />} /></VStack>;
   }
   const moduleSwitch = (
     <SegmentedControl label="Moduł kalibracji" size="sm" value={module} onChange={(v) => { setState({ status: "loading" }); setModule(v); }}>
-      {Object.keys(MODULE_NAME).map((m) => <SegmentedControlItem key={m} value={m} label={`${m} ${MODULE_NAME[m]}`} />)}
+      {Object.keys(MODULE_NAME).map((m) => <SegmentedControlItem key={m} value={m} label={MODULE_NAME[m]} />)}
     </SegmentedControl>
   );
+  const head = <HStack gap={2} vAlign="center" wrap="wrap"><Heading level={1}>Kalibracja</Heading>{moduleSwitch}</HStack>;
   if (state.status === "unsupported") {
     return (
       <VStack gap={3} padding={3}>
-        <HStack gap={2} vAlign="center" wrap="wrap"><Heading level={1}>Kalibracja</Heading>{moduleSwitch}</HStack>
-        <Banner status="info" title={`Brak kalibracji dla ${module} (${MODULE_NAME[module]})`} description={`API zwraca kalibrację tylko dla ${state.got}. Pulpit niczego nie liczy sam; próg i etykiety dla ${module} pojawią się po stronie API.`} />
+        {head}
+        <Banner status="info" title={`Brak kalibracji dla ${MODULE_NAME[module]}`} description={`API zwraca kalibrację tylko dla ${MODULE_NAME[state.got] || state.got}. Pulpit niczego nie liczy sam.`} />
       </VStack>
     );
   }
-  if (!cal) return <Loading rows={4} label="Pobieranie wyników kalibracji…" />;
-  const { precision, recall } = rates(cal);
-  const ci = cal.precisionCI;
-  const q = data.qualification;
+  if (!cal) return <VStack gap={3} padding={3}>{head}<Loading rows={4} label="Pobieranie wyników kalibracji…" /></VStack>;
   const measured = state.status === "ready";
   const effect = cal.queueEffect;
-  const compare = Object.entries(cal.variants || {}).map(([id, x]) => ({ id, ...x, ...rates(x) }));
+  const isM1 = module === "M1";
+  const previous = Object.entries(cal.variants || {}).filter(([id]) => id !== (cal.variant || variant) && PREVIOUS[id]).map(([id, x]) => `${PREVIOUS[id]} przy tym progu: FP ${x.fp}, FN ${x.fn}`)[0];
+  const ci = cal.precisionCI;
+  const lowN = cal.tp + cal.fp < 20;
+  const split = splitText(cal);
+  const banner = `Oceny agentów, nie walidacja ekspercka · ${cal.n} ${plural(cal.n, "materiał", "materiały", "materiałów")}${groupsText(cal.groups) ? ` · ${groupsText(cal.groups)}` : ""}${split ? ` · ${split}` : ""}`;
+  const compare = Object.entries(cal.variants || {}).map(([id, x]) => ({ id, ...x }));
+  const q = data.qualification;
   return (
-    <VStack gap={3} padding={3}>
-      <HStack gap={2} vAlign="center" wrap="wrap">
-        <Heading level={1}>Kalibracja</Heading>
-        {moduleSwitch}
-        <Text type="supporting" color="secondary">Jak próg i wariant reguł zgadzają się z ręcznymi etykietami.</Text>
-      </HStack>
-      <Banner status="warning" title="Oceny agentów, nie walidacja ekspercka" description={`${cal.disclaimer || "Wyniki opierają się na etykietach zespołu i agentów, na małej próbie."} Punkty to siła przesłanki do kontroli, nie prawdopodobieństwo.`} />
+    <VStack gap={2} padding={3}>
+      {head}
+      <Banner status="warning" title={banner} />
       {notice && <Banner status={notice.status} title={notice.title} isDismissable onDismiss={() => setNotice(null)} />}
-      <Card padding={3}>
+      <Card padding={2}>
         <VStack gap={2}>
-          <HStack gap={2} hAlign="between" vAlign="center" wrap="wrap">
-            <Heading level={2}>Próg: podgląd na zbiorze etykiet</Heading>
-            <HStack gap={1} wrap="wrap">
-              <Token size="sm" color="blue" label={VARIANTS[variant] || variant} />
-              <Token size="sm" color="gray" label={`obowiązuje ${applied} pkt`} />
-            </HStack>
-          </HStack>
-          <Slider label={`Próg ${threshold} punktów`} value={threshold} min={0} max={100} step={5} valueDisplay="text" onChange={setThreshold}
+          <Slider label={`Próg ${shown} punktów`} value={shown} min={0} max={100} step={5} valueDisplay="text" onChange={setThreshold}
             marks={[{ value: 0, label: "0" }, { value: applied, label: `obowiązuje ${applied}` }, { value: 100, label: "100" }]}
-            description="Przesuń suwak: liczby poniżej liczą się od razu na tym samym zbiorze. Zapis zmienia kolejkę dopiero po potwierdzeniu." />
-          <Grid columns={{ minWidth: 150, max: 7 }} gap={2}>
-            <Kpi label="Trafienia (TP)" value={cal.tp} delta={cal.tp - base.tp} tone="good-up" />
-            <Kpi label="Fałszywe alarmy (FP)" value={cal.fp} delta={cal.fp - base.fp} tone="bad-up" />
-            <Kpi label="Poprawnie odrzucone (TN)" value={cal.tn} delta={cal.tn - base.tn} tone="good-up" />
-            <Kpi label="Przeoczenia (FN)" value={cal.fn} delta={cal.fn - base.fn} tone="bad-up" />
-            <Kpi label="Precyzja" value={precision == null ? "—" : pct(precision)} hint={ci ? `95%: ${pct(ci.low)}–${pct(ci.high)}` : "bez przedziału"} />
-            <Kpi label="Pełność" value={recall == null ? "—" : pct(recall)} />
-            <Kpi label="Koszt (2×FN + FP)" value={cal.cost} delta={cal.cost - base.cost} tone="bad-up" />
+            description="Przesuń suwak: liczby poniżej liczą się od razu na tym samym zbiorze." />
+          <Grid columns={{ minWidth: 200, max: 4 }} gap={2}>
+            <Big label="Fałszywe alarmy (FP)" value={cal.fp} delta={cal.fp - base.fp} />
+            <Big label="Przeoczenia (FN)" value={cal.fn} delta={cal.fn - base.fn} />
+            <Card padding={2} data-kpi="Wynik">
+              <VStack gap={0.5}>
+                <Text type="supporting" color="secondary">Wynik na zbiorze</Text>
+                <Text weight="semibold">{cal.tp} {plural(cal.tp, "trafienie", "trafienia", "trafień")}, {cal.fp} {cal.fp === 1 ? "fałszywy alarm" : "fałszywych alarmów"} na {cal.n} {plural(cal.n, "materiale", "materiałach", "materiałach")}</Text>
+                <Text type="supporting" color="secondary">{ci ? `Skierowano ${cal.tp + cal.fp}, przedział trafności ${pct(ci.low)}–${pct(ci.high)}. ` : ""}Koszt (2×FN + FP): {cal.cost}.{lowN ? " Za mało skierowań do oceny precyzji: wynik orientacyjny." : ""}</Text>
+              </VStack>
+            </Card>
+            <Table idKey="row" density="compact" aria-label="Macierz pomyłek" data={[
+              { row: "Skierowane", yes: `${cal.tp} trafnych`, no: `${cal.fp} fałszywych` },
+              { row: "Nie skierowane", yes: `${cal.fn} przeoczonych`, no: `${cal.tn} poprawnie` },
+            ]} columns={[
+              { key: "row", header: "", width: proportional(2, { minWidth: 90 }), renderCell: (r) => <Text weight="medium">{r.row}</Text> },
+              { key: "yes", header: "Agent: przesłanka", width: proportional(2, { minWidth: 90 }), renderCell: (r) => r.yes },
+              { key: "no", header: "Agent: brak", width: proportional(2, { minWidth: 90 }), renderCell: (r) => r.no },
+            ]} />
           </Grid>
-          <HStack gap={1} vAlign="center" wrap="wrap">
-            <StatusDot variant={measured ? "success" : "neutral"} label={measured ? "Podgląd aktualny" : "Liczenie…"} />
-            <Text role="status" aria-live="polite" data-testid="queue-effect">{effectSentence(effect, threshold) || "Skutek dla kolejki: brak danych."}</Text>
-          </HStack>
-          <HStack gap={2} wrap="wrap" vAlign="center">
-            {threshold !== applied && !confirm && <Button label={`Zastosuj ${threshold} pkt`} variant="primary" size="sm" onClick={() => setConfirm(true)} />}
-            {confirm && (
-              <>
-                <Text type="supporting">Zmiana progu zmienia kolejkę „Co wymaga sprawdzenia”. Zapisze się w historii.</Text>
-                <Button label="Potwierdź zmianę progu" variant="primary" size="sm" isLoading={busy} onClick={() => act(() => api.setThreshold({ value: threshold, expectedId: data.threshold.id, variant, note: "Ustawiono z pulpitu" }), `Próg ustawiony na ${threshold} pkt.`)} />
-                <Button label="Anuluj" variant="ghost" size="sm" onClick={() => setConfirm(false)} />
-              </>
-            )}
-            {threshold !== applied && !confirm && <Button label="Wróć do obowiązującego" variant="ghost" size="sm" onClick={() => setThreshold(applied)} />}
-          </HStack>
-          {referredNote(cal)}
+          <VStack gap={0.5}>
+            <HStack gap={1} vAlign="center" wrap="wrap">
+              <StatusDot variant={measured ? "success" : "neutral"} label={measured ? "Podgląd aktualny" : "Liczenie…"} />
+              <Text role="status" aria-live="polite" data-testid="queue-effect">{effectSentence(effect, shown) || "Skutek dla kolejki: brak danych."}</Text>
+            </HStack>
+            {previous && <Text type="supporting" color="secondary">{previous}.</Text>}
+          </VStack>
+          {isM1 && (
+            <HStack gap={2} wrap="wrap" vAlign="center">
+              {shown !== applied && !confirm && <Button label={`Zastosuj ${shown} pkt`} variant="primary" size="sm" onClick={() => setConfirm(true)} />}
+              {confirm && (
+                <>
+                  <Text type="supporting">Zmiana progu zmienia kolejkę „Do sprawdzenia”. Zapisze się w historii.</Text>
+                  <Button label="Potwierdź zmianę progu" variant="primary" size="sm" isLoading={busy} onClick={() => act(() => api.setThreshold({ value: shown, expectedId: data.threshold.id, variant, note: "Ustawiono z pulpitu" }), `Próg ustawiony na ${shown} pkt.`)} />
+                  <Button label="Anuluj" variant="ghost" size="sm" onClick={() => setConfirm(false)} />
+                </>
+              )}
+              {shown !== applied && !confirm && <Button label="Wróć do obowiązującego" variant="ghost" size="sm" onClick={() => setThreshold(null)} />}
+            </HStack>
+          )}
+          {!isM1 && shown !== applied && <HStack><Button label="Wróć do obowiązującego" variant="ghost" size="sm" onClick={() => setThreshold(null)} /></HStack>}
         </VStack>
       </Card>
-      <Grid columns={{ minWidth: 340, max: 2 }} gap={3}>
-        <Tile title="Fałszywe alarmy i przeoczenia a próg">
-          {chart.labels.length < 2 ? <Text color="secondary" role="status">Liczenie punktów wykresu…</Text> : (
-            <Chart spec={chart} height={240} label={`Wykres: fałszywe alarmy i przeoczenia w funkcji progu. ${chart.labels.map((l, i) => `próg ${l}: FP ${chart.datasets[0].data[i]}, FN ${chart.datasets[1].data[i]}`).join("; ")}`} />
-          )}
-          <Text type="supporting" color="secondary">Wyższy próg zwykle zmniejsza liczbę fałszywych alarmów i zwiększa liczbę przeoczeń. Wykres liczy ten sam zbiór dla kilku progów.</Text>
-        </Tile>
-        <Tile title="Wariant reguł: porównanie przy progu" aside={<Token size="sm" color="gray" label={`${threshold} pkt`} />}>
-          <Table idKey="id" density="compact" data={compare} columns={[
-            { key: "v", header: "Wariant", width: proportional(3, { minWidth: 120 }), renderCell: (x) => <Text weight={x.id === variant ? "semibold" : undefined}>{VARIANTS[x.id] || x.id}{x.id === variant ? " (aktywny)" : ""}</Text> },
-            { key: "tp", header: "TP", align: "end", width: pixel(44), renderCell: (x) => x.tp },
-            { key: "fp", header: "FP", align: "end", width: pixel(44), renderCell: (x) => x.fp },
-            { key: "tn", header: "TN", align: "end", width: pixel(44), renderCell: (x) => x.tn },
-            { key: "fn", header: "FN", align: "end", width: pixel(44), renderCell: (x) => x.fn },
-            { key: "cost", header: "Koszt", align: "end", width: pixel(60), renderCell: (x) => x.cost },
-            { key: "p", header: "Precyzja", align: "end", width: pixel(80), renderCell: (x) => (x.precision == null ? "—" : pct(x.precision)) },
-            { key: "r", header: "Pełność", align: "end", width: pixel(72), renderCell: (x) => (x.recall == null ? "—" : pct(x.recall)) },
-          ]} />
-          <Text type="supporting" color="secondary">Koszt = 2 × przeoczenia + fałszywe alarmy. Zbiór: {cal.n} przykładów z {cal.groups ?? "?"} niezależnych kampanii.</Text>
-        </Tile>
-        <Tile title="Aktywny wariant" aside={<Token size="sm" color="blue" label={VARIANTS[variant] || variant} />}>
-          <MetadataList>
-            <Meta label="Od">{fmtDateTime(q?.setAt)}</Meta>
-            <Meta label="Uwaga">{q?.note || "—"}</Meta>
-            <Meta label="Pomiar">{q?.validationRef ? <Text type="supporting">{q.validationRef}</Text> : "brak odnośnika do pomiaru"}</Meta>
-            <Meta label="Zatwierdził">{q?.validatedBy || "—"}</Meta>
-          </MetadataList>
-          <Collapsible defaultIsOpen={false} trigger={<Text type="supporting">Historia wariantu ({variants.items.length})</Text>}>
-            <Table idKey="id" density="compact" verticalAlign="top" data={[...variants.items].reverse()} columns={[
-              { key: "v", header: "Wariant", width: proportional(2, { minWidth: 110 }), renderCell: (h) => <Text>{VARIANTS[h.variant] || h.variant}{h.id === q?.id ? " (aktywny)" : ""}</Text> },
-              { key: "at", header: "Od", width: pixel(100), renderCell: (h) => <Text type="supporting">{fmtDate(h.setAt)}</Text> },
-              { key: "ref", header: "Pomiar", width: proportional(3, { minWidth: 120 }), renderCell: (h) => <Text type="supporting" maxLines={2}>{h.validationRef || "bez pomiaru"}</Text> },
-              { key: "do", header: "", width: pixel(104), renderCell: (h) => (h.id === q?.id ? null : <Button size="sm" label="Przywróć" isDisabled={busy} onClick={() => act(() => api.restoreQualification({ id: h.id, expectedId: q.id, note: "Przywrócono z pulpitu" }), "Przywrócono wariant. Trwa przeliczenie materiałów.")} />) },
-            ]} />
-          </Collapsible>
-        </Tile>
-        <Tile title="Historia progu" aside={<Token size="sm" color="gray" label={`${thresholds.items.length} wpisów`} />}>
-          {thresholds.status === "error" ? <Text color="secondary">Nie można pobrać historii: {thresholds.error}</Text> : (
-            <Table idKey="id" density="compact" verticalAlign="top" data={[...thresholds.items].reverse()} columns={[
-              { key: "v", header: "Próg", width: pixel(110), renderCell: (h) => <Text>{h.value} pkt{h.id === data.threshold?.id ? " (aktywny)" : ""}</Text> },
-              { key: "at", header: "Od", width: pixel(100), renderCell: (h) => <Text type="supporting">{fmtDate(h.setAt)}</Text> },
-              { key: "note", header: "Uwaga", width: proportional(3, { minWidth: 100 }), renderCell: (h) => <Text type="supporting" maxLines={2}>{h.note || "—"}</Text> },
-              { key: "do", header: "", width: pixel(104), renderCell: (h) => (h.id === data.threshold?.id ? null : <Button size="sm" label="Przywróć" isDisabled={busy} onClick={() => act(() => api.restoreThreshold({ id: h.id, expectedId: data.threshold.id, note: "Przywrócono z pulpitu" }), `Przywrócono próg ${h.value} pkt.`)} />) },
-            ]} />
-          )}
-        </Tile>
-        <Tile title="Zbiór etykiet">
-          <MetadataList>
-            <Meta label="Cel etykiety">{cal.labelTarget || <Token size="sm" color="yellow" label="nieopisany" />}</Meta>
-            <Meta label="Liczebność">{cal.n} przykładów ({cal.publicExamples ?? "?"} publicznych, {cal.syntheticExamples ?? "?"} syntetycznych)</Meta>
-            <Meta label="Niezależne kampanie">{cal.groups != null ? cal.groups : "nieznane"}</Meta>
-            <Meta label="Podział">{cal.split === "holdout" ? "próba odłożona" : cal.split === "tuning" ? "zbiór strojenia" : "bez podziału"}{cal.frozenAt ? `, zamrożono ${fmtDate(cal.frozenAt)}` : ""}</Meta>
-            {cal.gate?.status && <Meta label="Bramka">{cal.gate.status}{cal.gate.reason ? `: ${cal.gate.reason}` : ""}</Meta>}
-          </MetadataList>
-        </Tile>
-      </Grid>
+      <Tile title="Fałszywe alarmy i przeoczenia a próg">
+        {chart.labels.length < 2 ? <Text color="secondary" role="status">Liczenie punktów wykresu…</Text> : (
+          <Chart spec={chart} height={220} label={`Wykres: fałszywe alarmy i przeoczenia w funkcji progu. ${chart.labels.map((l, i) => `próg ${l}: FP ${chart.datasets[0].data[i]}, FN ${chart.datasets[1].data[i]}`).join("; ")}`} />
+        )}
+      </Tile>
       {(cal.errors || []).length > 0 && (
         <Tile title="Przeoczenia i fałszywe alarmy przy tym progu">
           <Table idKey="id" density="compact" verticalAlign="top" data={cal.errors} columns={[
-            { key: "t", header: "Przykład", width: proportional(3, { minWidth: 150 }), renderCell: (e) => <VStack gap={0.5}><Text weight="medium" maxLines={2}>{e.title || e.id}</Text>{e.text && <Text type="supporting" color="secondary" maxLines={2}>{e.text}</Text>}</VStack> },
+            { key: "t", header: "Przykład", width: proportional(3, { minWidth: 150 }), renderCell: (e) => <VStack gap={0.5}><Text weight="medium" maxLines={2}>{e.firm && e.title === e.id ? e.firm : e.title || e.id}</Text>{e.text && <Text type="supporting" color="secondary" maxLines={2}>{e.text.replace(/trasa (\w+)/, (_, r) => `trasa: ${({ no_signal: "bez przesłanki", refer: "do sprawdzenia", complete: "niepełne", insufficient: "niepełne" })[r] || r}`).replace(/wynik reguł/, "siła")}</Text>}</VStack> },
             { key: "o", header: "Wynik", width: pixel(130), renderCell: (e) => <Text>{e.outcome === "fp" ? "fałszywy alarm" : "przeoczenie"}</Text> },
-            { key: "s", header: "Punkty", align: "end", width: pixel(80), renderCell: (e) => e.score },
+            { key: "s", header: "Siła", align: "end", width: pixel(80), renderCell: (e) => e.score },
             { key: "u", header: "", width: pixel(80), renderCell: (e) => <ExternalLink url={e.url}>Źródło ↗</ExternalLink> },
           ]} />
         </Tile>
       )}
+      <Collapsible defaultIsOpen={false} trigger={<Text weight="semibold">Więcej: historia ustawień, porównanie reguł, zbiór etykiet</Text>}>
+        <Grid columns={{ minWidth: 340, max: 2 }} gap={3} padding={2}>
+          {compare.length > 0 && (
+            <Tile title="Porównanie reguł przy progu" aside={<Token size="sm" color="gray" label={`${shown} pkt`} />}>
+              <Table idKey="id" density="compact" data={compare} columns={[
+                { key: "v", header: "Reguły", width: proportional(3, { minWidth: 120 }), renderCell: (x) => <Text weight={x.id === (cal.variant || variant) ? "semibold" : undefined}>{PREVIOUS[x.id] || "Obowiązujące reguły"}{x.id === (cal.variant || variant) ? " (aktywne)" : ""}</Text> },
+                { key: "tp", header: "TP", align: "end", width: pixel(44), renderCell: (x) => x.tp },
+                { key: "fp", header: "FP", align: "end", width: pixel(44), renderCell: (x) => x.fp },
+                { key: "tn", header: "TN", align: "end", width: pixel(44), renderCell: (x) => x.tn },
+                { key: "fn", header: "FN", align: "end", width: pixel(44), renderCell: (x) => x.fn },
+                { key: "cost", header: "Koszt", align: "end", width: pixel(60), renderCell: (x) => x.cost },
+              ]} />
+              <Text type="supporting" color="secondary">Koszt = 2 × przeoczenia + fałszywe alarmy.</Text>
+            </Tile>
+          )}
+          {isM1 && (
+            <Tile title="Historia progu" aside={<Token size="sm" color="gray" label={`${thresholds.items.length} wpisów`} />}>
+              {thresholds.status === "error" ? <Text color="secondary">Nie można pobrać historii: {thresholds.error}</Text> : (
+                <Table idKey="id" density="compact" verticalAlign="top" data={[...thresholds.items].reverse()} columns={[
+                  { key: "v", header: "Próg", width: pixel(110), renderCell: (h) => <Text>{h.value} pkt{h.id === data.threshold?.id ? " (aktywny)" : ""}</Text> },
+                  { key: "at", header: "Od", width: pixel(100), renderCell: (h) => <Text type="supporting">{fmtDate(h.setAt)}</Text> },
+                  { key: "note", header: "Uwaga", width: proportional(3, { minWidth: 100 }), renderCell: (h) => <Text type="supporting" maxLines={2}>{h.note || "—"}</Text> },
+                  { key: "do", header: "", width: pixel(104), renderCell: (h) => (h.id === data.threshold?.id ? null : <Button size="sm" label="Przywróć" isDisabled={busy} onClick={() => act(() => api.restoreThreshold({ id: h.id, expectedId: data.threshold.id, note: "Przywrócono z pulpitu" }), `Przywrócono próg ${h.value} pkt.`)} />) },
+                ]} />
+              )}
+            </Tile>
+          )}
+          {isM1 && (
+            <Tile title="Obowiązujące reguły">
+              <MetadataList>
+                <Meta label="Od">{fmtDateTime(q?.setAt)}</Meta>
+                <Meta label="Uwaga">{q?.note || "—"}</Meta>
+              </MetadataList>
+              <Table idKey="id" density="compact" verticalAlign="top" data={[...variants.items].reverse()} columns={[
+                { key: "at", header: "Od", width: pixel(100), renderCell: (h) => <Text type="supporting">{fmtDate(h.setAt)}{h.id === q?.id ? " (aktywne)" : ""}</Text> },
+                { key: "note", header: "Uwaga", width: proportional(3, { minWidth: 120 }), renderCell: (h) => <Text type="supporting" maxLines={2}>{h.note || "—"}</Text> },
+                { key: "do", header: "", width: pixel(104), renderCell: (h) => (h.id === q?.id ? null : <Button size="sm" label="Przywróć" isDisabled={busy} onClick={() => act(() => api.restoreQualification({ id: h.id, expectedId: q.id, note: "Przywrócono z pulpitu" }), "Przywrócono reguły. Trwa przeliczenie materiałów.")} />) },
+              ]} />
+            </Tile>
+          )}
+          <Tile title="Zbiór etykiet">
+            <MetadataList>
+              <Meta label="Cel etykiety">{cal.labelTarget || "nieopisany"}</Meta>
+              <Meta label="Liczebność">{cal.n} przykładów ({cal.publicExamples ?? "?"} publicznych, {cal.syntheticExamples ?? "?"} syntetycznych)</Meta>
+              <Meta label="Niezależne jednostki">{groupsText(cal.groups) || "nieznane"}</Meta>
+              <Meta label="Etykietowali">{typeof cal.labelers === "string" ? cal.labelers : cal.labelers && typeof cal.labelers === "object" ? `${Object.keys(cal.labelers).length} niezależnych oceniających` : "—"}</Meta>
+              <Meta label="Podział">{split || "bez podziału"}{cal.frozenAt ? `, zamrożono ${fmtDate(cal.frozenAt)}` : ""}</Meta>
+            </MetadataList>
+          </Tile>
+        </Grid>
+      </Collapsible>
     </VStack>
   );
-}
-
-function referredNote(cal) {
-  return cal.tp + cal.fp < 20 ? <Text type="supporting" color="secondary">Za mało skierowań do oceny precyzji (potrzeba 20 z różnych kampanii); wynik orientacyjny.</Text> : null;
 }

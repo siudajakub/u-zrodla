@@ -137,8 +137,15 @@ export const api = {
   },
   restoreQualification: ({ id, expectedId, note }) => request("/v1/qualification/restore", json("POST", { id, expectedId, note: note || "" })),
 
-  /** Kalibracja progu. `module` (M1 domyślnie): serwer, który nie zna modułu, zwraca M1; widok porównuje pole `module` odpowiedzi. */
-  calibration: (threshold, variant, module = "M1") => request(`/v1/calibration?threshold=${encodeURIComponent(threshold)}${variant ? `&variant=${encodeURIComponent(variant)}` : ""}${module && module !== "M1" ? `&module=${encodeURIComponent(module)}` : ""}`),
+  /** Kalibracja progu. `threshold` null = próg obowiązujący; `module` M1|M2|M3; `series` dokłada krzywą FP/FN dla progów 20–100. Wynik ma pole `module`. */
+  calibration: (threshold, variant, module = "M1") => {
+    const p = new URLSearchParams();
+    if (threshold != null) p.set("threshold", String(threshold));
+    if (variant) p.set("variant", variant);
+    if (module && module !== "M1") p.set("module", module);
+    p.set("series", "1");
+    return request(`/v1/calibration?${p.toString()}`);
+  },
 
   uploadEvidence(file, title, description) {
     const params = new URLSearchParams({ title: title || file.name, description: description || "", filename: file.name });
