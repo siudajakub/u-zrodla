@@ -1,64 +1,45 @@
-# Analiza dowodów InvestWatch
+# analysis — reguły M1/M2/M3, modele, ASR
 
-## Odsłuch własnego nagrania
+Zamienia Capture z `collectors/` w Finding: wynik, dowody, `reviewDecision`. Wejście: `engine.analyze(capture, semantic=...)`. Bez werdyktu prawnego.
 
-Wymagane są Python 3.11+, ffmpeg oraz Linux x86-64 lub ARM64. Na stanowisku pokazowym sprawdzono Linux x86-64. Pierwsze polecenie pobiera model i bibliotekę. Weryfikuje SHA-256 z `analysis/asr-lock.json` i instaluje pliki w ignorowanym katalogu `.runtime/asr`. Ponowne rozpoznawanie działa offline, na CPU.
+## Potok i co decyduje
 
-```sh
-python3 -m analysis.setup_asr
-python3 -m analysis.transcribe /ścieżka/do/nagrania.mp4
-python3 -B -m unittest analysis.test_engine
-```
+1. Preprocessing: `material_classifier.clean_text`, `dedupe` (HTML, NFKC, URL, znaczniki czasu, powtórzone linie, duplikaty).
+2. Embedding: E5 `multilingual-e5-small`, ONNX int8, CPU, 384 wymiary, SHA-256 w `semantic-lock.json`. `semantic.suggest` (woła `api/jobs.py`) wskazuje fragment źródła.
+3. Reguły (DECYDUJĄ o trasie): M1 `qualification.qualify` (wariant `qual_d`, domyślny w `api/store.py`) albo `rules_1_2` (`engine.m1` + regułowy `semantic.review_suggestion`); wariant ustawia `api/jobs.py` w `engine.ACTIVE_VARIANT`. Bramki `engine._gate` (mowa) i `_caption_gate`, próg 60 (`DEFAULT_THRESHOLD`) daje `queueEligible`. M2: `m2_card.card` → `m2_rules.evaluate` dla stron rynku, inaczej `checks.marketing` + `m2_evidence.marketing_review_suggestion`. M3: `offers.analyze_entity` → `offers.route`.
+4. Typ materiału (OPISUJE): `material_classifier.classify`, regresja logistyczna na E5, 4 klasy, poniżej 0,5 „nieustalone”. Woła go `inference.annotate`, który dodaje `finding.model` z `affectsDecision: false`; włącza `INVESTWATCH_MODEL_ANNOTATE=1`.
+5. Drugi głos LLM (OPISUJE): `second_opinion` (M1 ujawnienie, M2 K-03/K-09, M3 oferta) z walidowanym dosłownym cytatem. Rozbieżność ustawia tylko `needsReview`, `affectsRoute: false`. `qualification.priority` też ma `affectsDecision: false`.
 
-`analysis.transcribe.transcribe_file(path)` obsługuje lokalny MP4/M4A, WAV, WebM, MP3, FLAC, AIFF, AAC lub Ogg. Dekoder konwertuje pierwszą ścieżkę audio na mono PCM 16 kHz. Limit całego nagrania wynosi 120 sekund. Funkcja zwraca surowe wypowiedzi z początkiem i końcem w sekundach oraz średnią pewnością słów ASR. Cisza daje pustą listę. Błąd dekodowania i brak modelu mają odrębne komunikaty. `transcribe_excerpt(path, seconds=45)` analizuje początek pliku, także zapisane kompletne ramki częściowego MP3 z RSS. Przy montowaniu własnych wag można ustawić `INVESTWATCH_VOSK_MODEL` i `INVESTWATCH_VOSK_LIBRARY`. Do środowiska wykonawczego wystarczą katalog modelu, biblioteka oraz ffmpeg. Na tej maszynie zajmują odpowiednio 92 i 25 MiB przed doliczeniem ffmpeg.
+| Plik | Odpowiedzialność | Główne wejścia | Testy |
+|---|---|---|---|
+| `engine.py` | Wejście analizy, M1/M2/M3, warianty, bramki, kalibracja | `analyze`, `calibration`, `module_rules`, `permanent_gap` | `test_engine` |
+| `qualification.py` | M1 `qual_d`: relacja reklamowa, przesłanki, siła, pokrycie | `qualify`, `priority` | `test_qualification` |
+| `firm_index.py`, `firm-index.json` | Aliasy firm M1 z datowanych rejestrów KNF | CLI `[--check]` | `test_qualification` |
+| `m2_rules.py`, `m2_readability.py` | 19 kryteriów M2 na blokach renderu; czytelność ostrzeżeń (kryt. 9) | `evaluate`, `measure` | `test_m2_rules` |
+| `m2_card.py` | Karta M2: 19 wierszy, wynik, 3 powody | `card`, `build` | `test_m2_rules`, `collectors/test_m2_market` |
+| `checks.py`, `m2_evidence.py` | M2 poza rynkiem: 19 sprawdzeń; pomiary Chromium jako obserwacje | `marketing`, `show_checks`, `marketing_review_suggestion` | `test_engine` |
+| `m2_eval.py`, `m2_fixture.py` | Ocena M2 na etykietach agenta (`api/calibration_modules.py`); syntetyczne strony do testów | CLI `[--write]`; `block`, `material` | `test_m2_rules` |
+| `offers.py` | M3: 4 osie oferty, dopasowanie do list KNF, trasa | `analyze_entity`; CLI `registers\|analyze\|evaluate` | `test_offers` |
+| `semantic.py`, `setup_semantic.py`, `semantic-lock.json`, `semantic-requirements.txt` | E5: fragment źródła; instalacja wag | `suggest`, `review_suggestion`; CLI | `test_semantic` |
+| `material_classifier.py`, `material-type-weights.json` | Typ materiału | `classify`; CLI `sample\|train\|evaluate\|classify` | `test_inference` |
+| `inference.py` | Klient Ollama, adnotacja modelu | `annotate`; CLI `status\|evaluate\|classify` | `test_inference` |
+| `second_opinion.py` | Drugi głos po regułach | `review_m1`, `review_m2_k09`, `review_m3`, `attach` | `test_second_opinion` |
+| `openrouter_review.py`, `ollama_review.py` | Porównanie przeglądu dowodów: OpenRouter, lokalna Ollama (pomiar, poza produktem) | CLI; `ops/review/openrouter.sh`, `ops/mac/check.sh` | `test_openrouter_review`, `test_ollama_review` |
+| `transcribe.py`, `setup_asr.py`, `asr-lock.json` | ASR Vosk PL, CPU, offline, do 120 s; instalacja z SHA-256 do `.runtime/asr` | `transcribe_file`, `transcribe_excerpt`, `replay_file`; CLI `[--replay]` | `test_engine` |
+| `make_sample.py`, `media/*.mp4`, `media/*.asr.json` | Fikcyjne klipy `studio` i `wezwanie` (eSpeak-NG) z zapisanym ASR | CLI `[--cta]` | `test_engine` |
+| `__init__.py` | Pakiet | — | — |
 
-Model języka polskiego to `vosk-model-small-pl-0.22`, a natywny silnik pochodzi z oficjalnego pakietu Vosk 0.3.45. Oba udostępniono na Apache 2.0. [Katalog modeli](https://alphacephei.com/vosk/models) · [Pakiet i dystrybucje](https://pypi.org/project/vosk/0.3.45/) · [Licencja silnika](https://github.com/alphacep/vosk-api/blob/master/COPYING)
+Kto woła: `api/jobs.py` (`analyze`, `semantic`, `transcribe_file`; wołany przez `api/worker.py`), `api/store.py` (`qualification`, `semantic`, `setup_semantic`, `module_rules`), `api/server.py` (`calibration`, `second_opinion`), `api/enrich.py`, `api/listen.py`, `api/calibration_modules.py`, `collectors/media.py` (`transcribe_excerpt`), `tools/measure_*.py`, `ops/demo/bootstrap.sh`, `ops/mac/*.sh`.
 
-## Próbka do odtworzenia
-
-Zespół napisał scenariusz i wygenerował głos w eSpeak-NG 1.51 oraz planszę poglądową. Autor, firma, data publikacji i umowa w tym przykładzie są fikcyjne. Plik `analysis/media/studio.mp4` zawiera obraz H.264 i dźwięk AAC. Model rozpoznał trzy wypowiedzi. Przy 4,35–7,26 s rozpoznaje „partnerem programu jest firma aurora”. Przy 8,61–12,51 s rozpoznaje „ten materiał powstał we współpracy z firmą aurora”. Opis zawiera jedynie zapowiedź przewodnika. Wynik określa priorytet przeglądu i pozwala odsłuchać oba fragmenty. Potwierdzenie płatności wymaga dodatkowego dowodu.
-
-```sh
-python3 -m analysis.transcribe --replay analysis/media/studio.mp4
-```
-
-Replay wymaga identycznego SHA-256. Nowy plik trafia do modelu poleceniem bez `--replay`. Przy odtwarzaniu próbki wystarczają dołączone media i zachowany JSON. Aby zbudować ją ponownie, użyj `python3 -m analysis.make_sample` z eSpeak-NG, Pillow, fontami FreeFont i ffmpeg/libx264 w środowisku deweloperskim. Następnie zapisz świeży wynik CLI z nowego pliku. Głos i wartość confidence odnoszą się do rozpoznania słów. Reguły wskazujące reklamę mają własny wynik punktowy.
-
-Drugi klip to fikcyjna publikacja „Od czego zacząć?”. Zawiera jedną wypowiedź, którą Vosk odczytał od 0,33 do 3,60 s jako „pobierz aplikację aurora i otwórz rachunek”. Marka pojawia się raz. Reguła łączy ją z zachętą do otwarcia rachunku i podnosi priorytet z 12 do 74. W dostępnym opisie nie wykryto etykiety reklamy. Karta pozostawia pytanie o charakter relacji analitykowi. Ten sam tekst z oznaczonym opisem, neutralna wzmianka i deklaracja partnerstwa stanowią odrębne kontrole.
-
-```sh
-python3 -m analysis.transcribe analysis/media/wezwanie.mp4
-python3 -m analysis.transcribe --replay analysis/media/wezwanie.mp4
-```
-
-Generator ze znacznikiem `--cta` odtwarza drugą próbkę.
-
-## Potok AI: preprocessing, embedding, scoring, silnik inferencji
-
-1. **Preprocessing** (`analysis/material_classifier.py`, `clean_text`, `dedupe`). Usuwa tagi HTML i encje, normalizuje Unicode (NFKC), odrzuca URL-e, e-maile, znaczniki czasu rozdziałów, separatory i powtórzone linie. Materiały o identycznym tekście po czyszczeniu są deduplikowane.
-2. **Reprezentacja wektorowa.** Tokenizer i model `multilingual-e5-small` (MIT, ONNX int8, CPU, SHA-256 w `semantic-lock.json`) zamieniają do 256 tokenów tekstu na wektor 384-wymiarowy. Ten sam model wskazuje fragmenty w `semantic.py`.
-3. **Scoring.** Warstwa softmax (regresja logistyczna, wagi w `material-type-weights.json`, wersja `mt-e5lr-1-…`) przypisuje typ materiału: promocja, edukacja, informacja albo opinia. Wynik ma pewność, a poniżej 0,5 brzmi „nieustalone”. Na 57 odłożonych materiałach YouTube trafność wynosi 30/57. Reguły słownikowe trafiają 13/57, stała najczęstsza klasa 23/57 ([pomiar](../docs/lanes/2026-11-21-fable-ai-inferencja.md)). Typ jest cechą opisową i nie zmienia skierowania.
-4. **Silnik inferencji** (`analysis/inference.py`). Klient Ollama działa jako osobna usługa (`OLLAMA_HOST`, model `INVESTWATCH_LLM_MODEL`, domyślnie `qwen3.5:4b-q4_K_M`, Apache-2.0, bez pomiaru). Daje drugi głos w tym samym zadaniu, z dosłownym cytatem sprawdzanym przez walidator. Parametry: temperatura 0, schemat JSON, jedno żądanie naraz, twardy limit czasu, cache po skrócie wejścia, wersji promptu i digestu wag. Domyślnie wyłączony (`INVESTWATCH_LLM=1` włącza). Bez usługi wynik ma status `unavailable`, a reguły działają bez zmian. Drugi backend (`INVESTWATCH_LLM_BACKEND=openrouter`, API zgodne z OpenAI) służy wyłącznie do pomiaru wyboru modelu i działa tylko z `tools/measure_llm_openrouter.py`; kod silnika nie czyta klucza OpenRouter, a produkt używa Ollamy. Pomiar 6 modeli na 57 odłożonych materiałach: próg (≥30/57, ≤10% odrzuceń) spełniają Gemma 3 12B (36/57, licencja nie permisywna), Ministral 3 8B (35/57), Qwen3.5 9B (32/57) i Ministral 3 3B (31/57). Różnice względem E5 (30/57) mieszczą się w szumie n = 57, więc LLM zostaje domyślnie wyłączony do pomiaru Q4 na Macu. Zalecenia: 16 GB `ministral-3:8b-instruct-2512-q4_K_M`, 8 GB `ministral-3:3b-instruct-2512-q4_K_M`.
-5. **Agregacja.** `inference.annotate(finding, capture)` dodaje `finding.model` z wersją, digestem i `affectsDecision: false`. Decyzję o skierowaniu podejmują reguły modułów M1–M3.
-6. **Drugi głos po regułach** (`analysis/second_opinion.py`, domyślnie wyłączony: `INVESTWATCH_SECOND_OPINION=1`). Model sprawdza jedną decyzję reguł na pełnym kontekście i zwraca `{verdict, quote, locator, confidence, explanation}` z dosłownym cytatem. Cytat spoza wejścia jest odrzucany. W M1 pytanie brzmi: czy w opisie lub transkrypcji jest ujawnienie współpracy z firmą X. Model czyta wszystkie okna, a brak ujawnienia stwierdza dopiero po przeczytaniu całości. M2 dostaje pytania K-03 i K-09. W M3 pytanie brzmi: oferta rekomendacji czy informacja. Wynik trafia do `finding.secondOpinion`, a rozbieżność daje tylko `needsReview` („rozbieżność — do przeglądu”), nigdy zmianę trasy. Pomiar 10 modeli z otwartymi wagami przez OpenRouter: w M3 jako weto koszt 2×FN+FP spada z 10 do 1 (`qwen3.8:27b-q4_K_M`). W M1 model potwierdza domyślne reguły 17/17. W M2 drugi głos nic nie poprawia. Tryb pokazowy przez API: `INVESTWATCH_LLM_DEMO_API=1`, z dobowym limitem kosztu i etykietą `runtime: "api-demo"`. Szczegóły: [rekord linii](../docs/lanes/2026-11-21-fable-ai-drugi-glos.md).
+Flagi (domyślnie wyłączone): `INVESTWATCH_LLM=1` (Ollama, `OLLAMA_HOST`, `INVESTWATCH_LLM_MODEL`), `INVESTWATCH_SECOND_OPINION=1`, `INVESTWATCH_LLM_DEMO_API=1` (limit `INVESTWATCH_LLM_DEMO_DAILY_USD`). Własne wagi ASR: `INVESTWATCH_VOSK_MODEL`, `INVESTWATCH_VOSK_LIBRARY`. Bez usługi LLM status `unavailable`, reguły działają bez zmian.
 
 ```sh
+python3 -m analysis.setup_asr && python3 -m analysis.transcribe --replay analysis/media/studio.mp4
 python3 -m analysis.material_classifier evaluate          # E5, zbiór odłożony
 python3 -m analysis.inference status                      # silnik i digest wag
 sh ops/mac/measure-llm.sh --pull                          # trafność LLM na Macu
-python3 tools/measure_second_opinion.py report            # drugi głos: metryki z zapisanych pomiarów
+python3 tools/measure_second_opinion.py report            # drugi głos z zapisanych pomiarów
+python3 -B -m unittest discover -s analysis -t . -p 'test_*.py'
 ```
 
-## Pochodzenie i zakres wyników
-
-M1 porównuje wynik tego samego zestawu reguł dla opisu i dla opisu rozszerzonego o wypowiedzi. Dla przykładowego klipu to odpowiednio 12 i 94 punkty. Pole `speechOnlySignal` wymaga dostępnego opisu bez sygnału na poziomie 60 punktów oraz sygnału w nagraniu. Materiał z sygnałem w obu kanałach ma to pole wyłączone.
-
-## Od wskazania do dowodu
-
-Kolejka oznacza sprawę, gdy analiza zwraca `reviewSuggestion.state=review`. Karta pokazuje powód, źródło wskazania i dokładny fragment. Przy wskazaniu semantycznym pokazuje nazwę oraz wersję modelu, jeśli są w zapisie. Stan niepewny pozostaje widoczny w szczegółach. Reguły mają osobny wynik punktowy. Brak sygnału i brak wyniku modelu mają osobne stany.
-
-M2 zwraca 19 wierszy, tryb i uzasadnienie każdego sprawdzenia. Dla przechwyconych widoków kliknięcie w kryterium odsłania zrzut i odpowiadający mu DOM. Odcisk i data wiążą wniosek z wersją materiału. Karta pokazuje dostępne współrzędne, wielkość pisma, widoczność, kontrast i odległość między elementami. W starszej migawce XTB zachowano kandydata wykrytego po słowie „ryzyk” przy 1440, 768 i 390 px. Kandydat był poza pierwszym ekranem. Dokładny kontrast i dopasowanie ostrzeżenia wymagają właściwego pomiaru. Materiał o prowizji i twierdzenie o potencjalnym zysku mają osobne znaczenie. [Oferta ETF](https://www.xtb.com/pl/etf)
-
-M3 przedstawia literalny fragment, operatora strony i datowane ustalenia z rejestrów. Oferta DM BOŚ jest rzeczywistą kontrolą pozytywną dla rozpoznania usługi i kontrolą fałszywego alarmu o braku uprawnienia. W starszym zapisie FinanceWell wyszukiwanie nazwy zwraca dwie pozycje z wykazu agentów oraz wspólnego mocodawcę. Przypisanie sprawy do konkretnego wiersza wymaga pewnej tożsamości i zakresu. [Oferta DM BOŚ](https://bossa.pl/oferta/doradztwo-inwestycyjne) · [FinanceWell](https://financewell.pl/o-nas/)
-
-Kalibracja mierzy koszt kierowania materiału do przeglądu. Zapisuje liczebność próbki, odcisk zbioru, macierz TP/FP/TN/FN i błędy z treścią oraz oczekiwaniem. Koszt to `2 × FN + FP`. Historyczna próbka zawierała 4 publiczne przykłady i 9 syntetycznych kontroli z etykietami autora. Przy progu 60 dawała TP 5, FP 1, TN 4 i FN 3. Próba ilustruje decyzję progową. Odrębny, wcześniej oznaczony zbiór kampanii pozwala ocenić skuteczność na nowym ruchu. [Próby odbiorowe](../docs/DEMO-ODBIOR.md)
+Pomiary i decyzje: [inferencja i typ materiału](../docs/lanes/2026-11-21-fable-ai-inferencja.md), [drugi głos](../docs/lanes/2026-11-21-fable-ai-drugi-glos.md).
