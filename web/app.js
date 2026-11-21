@@ -480,6 +480,83 @@
         ),
     );
   }
+  function HistoricalEvidence({ caseId, version }) {
+    const [state, setState] = useState({ status: "idle" });
+    async function loadVersion() {
+      setState({ status: "loading" });
+      try {
+        const data = await request(
+          `/v1/cases/${encodeURIComponent(
+            caseId,
+          )}/versions/${encodeURIComponent(version)}`,
+        );
+        setState({ status: "ready", data });
+      } catch (error) {
+        setState({ status: "error", error: error.message });
+      }
+    }
+    const historical = state.data;
+    const evidence = list(historical?.finding?.evidence);
+    return El(
+      "div",
+      { className: "historical-evidence" },
+      El(
+        Button,
+        { disabled: state.status === "loading", onClick: loadVersion },
+        state.status === "loading"
+          ? "Pobieranie dowodu…"
+          : `Dowód z wersji ${version}`,
+      ),
+      state.status === "error" &&
+        El(
+          Notice,
+          { error: true },
+          `Nie można pobrać wersji: ${state.error}. Spróbuj ponownie.`,
+        ),
+      historical &&
+        El(
+          "div",
+          { className: "evidence" },
+          El(
+            "div",
+            { className: "eyebrow" },
+            `Zachowana wersja ${text(historical.version, version)}`,
+          ),
+          El(
+            "p",
+            { className: "subtle" },
+            `Data zapisu: ${date(
+              historical.observedAt,
+            )} · SHA-256 wersji: ${text(historical.sha256)}`,
+          ),
+          evidence.length
+            ? evidence.map((e, i) =>
+                El(
+                  "div",
+                  { key: i, style: { marginTop: 12 } },
+                  El(
+                    "strong",
+                    null,
+                    kindLabel(e.kind),
+                    e.start != null ? ` · ${clock(e.start)}` : "",
+                  ),
+                  El("p", null, "„", text(e.text, "Brak tekstu"), "”"),
+                  (e.url || historical.capture?.url) &&
+                    El(
+                      "p",
+                      null,
+                      El(
+                        Link,
+                        { url: e.url || historical.capture.url },
+                        "Historyczny adres źródła ↗",
+                      ),
+                    ),
+                ),
+              )
+            : El("p", null, "Brak cytatu w zachowanej wersji."),
+        ),
+    );
+  }
   function Decision({ finding, save, busy }) {
     const [value, setValue] = useState(finding.status || "reviewing");
     const [note, setNote] = useState("");
@@ -528,13 +605,19 @@
       list(finding.history).length
         ? finding.history.map((item, i) =>
             El(
-              "p",
+              "div",
               { className: "history", key: i },
               El("strong", null, status(item.status || item.action)),
               " · ",
               date(item.at || item.createdAt),
               El("br"),
               text(item.note, ""),
+              item.action === "capture" &&
+                item.version != null &&
+                El(HistoricalEvidence, {
+                  caseId: finding.id,
+                  version: item.version,
+                }),
             ),
           )
         : El("p", { className: "subtle" }, "Brak zapisanych decyzji."),
@@ -752,7 +835,7 @@
       history.length
         ? history.map((item, i) =>
             El(
-              "p",
+              "div",
               { className: "history", key: i },
               El(
                 "strong",
@@ -765,6 +848,12 @@
               text(item.note || item.text, ""),
               item.reply &&
                 El("span", null, El("br"), "Odpowiedź: ", text(item.reply)),
+              item.action === "capture" &&
+                item.version != null &&
+                El(HistoricalEvidence, {
+                  caseId: finding.id,
+                  version: item.version,
+                }),
             ),
           )
         : El("p", { className: "subtle" }, "Brak zapisanej historii."),
@@ -803,7 +892,9 @@
         El(
           Badge,
           { high: Number(finding.score) >= 60 },
-          finding.score != null ? `${finding.score} / 100` : "Brak oceny",
+          finding.score != null
+            ? `Wynik reguł: ${finding.score} / 100`
+            : "Brak oceny",
         ),
       ),
       El(
