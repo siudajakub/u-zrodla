@@ -96,5 +96,23 @@ class ReadFirm(unittest.TestCase):
         self.assertIn("budżet", summary["entities"][0]["errors"][0]["error"])
 
 
+class Replay(unittest.TestCase):
+    def test_saved_run_becomes_shared_captures(self):
+        import json
+        from pathlib import Path
+        entity = {"id": "m3:a.pl", "domain": "a.pl", "label": "a.pl", "discoveredVia": "Wynik wyszukiwania · x",
+                  "seed": {"discovery": {"resultUrl": "https://a.pl/oferta"}},
+                  "pages": [{"url": "https://a.pl/oferta", "observedAt": "T", "sha256": "h" * 64, "text": "Oferta doradcza.", "title": "Oferta", "role": "offer"}]}
+        with tempfile.TemporaryDirectory() as out:
+            path = Path(out) / "entities.json"
+            path.write_text(json.dumps({"startedAt": "T", "entities": [entity, {"id": "m3:b.pl", "domain": "b.pl", "pages": []}]}), encoding="utf-8")
+            creators, captures, status = sites.read_m3_replay(path)
+        self.assertEqual(len(creators), 1)
+        self.assertEqual(captures[0]["module"], "M3")
+        self.assertEqual(captures[0]["provenance"]["responseSha256"], "h" * 64)
+        self.assertEqual(captures[0]["m3Entity"], "m3:a.pl")
+        self.assertEqual(status["count"], 1)
+
+
 if __name__ == "__main__":
     unittest.main()

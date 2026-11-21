@@ -371,5 +371,41 @@ def _main(argv=None):
     print(f"{len(summary['entities'])} podmiotów, {pages} stron, {summary['requests']} żądań")
 
 
+def m3_creator(entity):
+    return {"id": f"www:{entity['domain']}:m3", "name": entity.get("label") or entity["domain"], "platform": "web",
+            "url": f"https://{entity['domain']}/", "discoveredVia": entity.get("discoveredVia") or "Odkrywanie ofert M3",
+            "isSeed": False}
+
+
+def m3_entity_captures(entity):
+    """Turn one crawled firm into shared Captures (module M3), one per saved page, with the raw entity attached."""
+    creator = m3_creator(entity)
+    out = []
+    for page in entity.get("pages", []):
+        item = capture(
+            f"web:{entity['domain']}{urlsplit(page['url']).path.rstrip('/')}:m3", creator, page.get("title") or creator["name"],
+            page["url"], page["text"], observed_at=page["observedAt"], source_url=page["url"],
+            response_hash=page["sha256"], scope="public_html_text", module="M3", brand=creator["name"],
+        )
+        item["provenance"].update(discoveredFrom=(entity.get("seed") or {}).get("discovery", {}).get("resultUrl"), role=page.get("role"))
+        item["m3Entity"] = entity["id"]
+        out.append(item)
+    return creator, out
+
+
+def read_m3_replay(path):
+    """Offline: the saved M3 discovery run as creators, Captures and one source status."""
+    data = _json.loads(_Path(path).read_text(encoding="utf-8"))
+    creators, captures = [], []
+    for entity in data["entities"]:
+        if entity.get("pages"):
+            creator, items = m3_entity_captures(entity)
+            creators.append(creator)
+            captures.extend(items)
+    status = source_result("m3-offers-replay", "Oferty doradcze M3 · zapis 21 XI", str(path), data.get("startedAt") or utc_now(),
+                           count=len(captures), raw_count=len(data["entities"]), scope="Tekst HTML stron firm (zapis)")
+    return creators, captures, status
+
+
 if __name__ == "__main__":
     _main()
