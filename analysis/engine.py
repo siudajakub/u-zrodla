@@ -10,12 +10,15 @@ from .transcribe import MEDIA, ROOT, replay_file
 
 SNAPSHOTS = ROOT / "data" / "probe-snapshots"
 FIXTURES = ROOT / "fixtures" / "labeled"
-RULESET = "investwatch-rules-pl-1.0"
+RULESET = "investwatch-rules-pl-1.1"
 PARTNER = (r"\bpartner(?:em)? (?:tego |naszego )?(?:programu|odcinka|materiału|kanału|filmu)\b"
            r"|\b(?:we współpracy z|płatna współpraca|współpraca reklamowa|materiał sponsorowany|"
            r"film sponsoruje|sponsorem (?:jest|odcinka)|naszym partnerem jest|reklama)\b")
 REFERRAL = r"\bkod(?:em|u)? (?:rabatow\w*|polecaj\w*|promocyjn\w*)|link\w* (?:afiliacyjn\w*|partnersk\w*)"
 BRANDS = r"\b(?:XTB|Aurora|eToro|Trading 212|BDM|DM BOŚ)\b"
+CTA = (r"\b(?:pobierz (?:aplikację|program)|otwórz (?:konto|rachunek)|załóż (?:konto|rachunek)"
+       r"|zarejestruj się|wybierz ofertę|kup teraz|odbierz bonus|skorzystaj z oferty)\b")
+SIGNALS = {94: "declaration", 74: "brand_cta", 66: "affiliate_code", 24: "neutral_mention"}
 DENIAL = r"\b(?:nie jest|nie była|bez|żadnej|brak) (?:to |żadnej )?(?:reklam\w*|współprac\w*|partner\w*|sponsor\w*)|\bnie (?:reklamuję|współpracuję)"
 ADVICE = (r"portfel rekomendowany|rekomendacj\w* (?:dla ciebie|dla klienta|dopasowan\w*)|"
           r"dobior\w* (?:ci |dla ciebie |Państwu )?(?:konkretn\w* )?(?:akcj\w*|portfel|instrument\w*)|"
@@ -51,11 +54,11 @@ def registry_snapshot(stem, ids):
 
 
 def demo_captures():
-    report = replay_file(MEDIA / "studio.mp4")
     captures = [dict(item) for item in read_json(FIXTURES / "showcase.json")]
-    film = captures[0]
-    film.update(segments=report["segments"], mediaSha256=report["sha256"], asrModel=report["model"])
     for cap in captures:
+        if "sampleFile" in cap:
+            report = replay_file(MEDIA / cap.pop("sampleFile"))
+            cap.update(segments=report["segments"], mediaSha256=report["sha256"], asrModel=report["model"])
         if "registrySnapshot" in cap:
             cap["registry"] = registry_snapshot(cap.pop("registrySnapshot"), cap.pop("registryIds"))
         if cap.pop("archivedDom", False):
@@ -63,32 +66,41 @@ def demo_captures():
     return captures
 
 
-def clause_relation(text):
+def clause_relation(text, brand=None):
     if re.search(DENIAL, text, re.I):
         return 12, "Autor zaprzecza współpracy", excerpt(text, DENIAL)
-    for score, desc, pattern in [
-        (94, "Deklaracja reklamy lub partnerstwa", PARTNER),
-        (66, "Kod lub link polecający", REFERRAL),
-        (24, "Wzmianka o marce", BRANDS),
-    ]:
-        quote = excerpt(text, pattern)
-        if quote:
-            return score, desc, quote
+    sponsor = excerpt(text, PARTNER)
+    if sponsor:
+        return 94, "Deklaracja reklamy lub partnerstwa", sponsor
+    brand_pattern = BRANDS
+    if brand and isinstance(brand, str):
+        brand_pattern += r"|(?<!\w)" + re.escape(brand) + r"(?!\w)"
+    brand_match = re.search(brand_pattern, text, re.I)
+    cta = re.search(CTA, text, re.I)
+    if brand_match and cta and abs(brand_match.start() - cta.start()) <= 90:
+        start = min(brand_match.start(), cta.start())
+        end = max(brand_match.end(), cta.end())
+        return 74, "Zachęta do działania przy wzmiance o marce", text[max(0,start-15):end+60]
+    code = excerpt(text, REFERRAL)
+    if code:
+        return 66, "Kod lub link polecający", code
+    if brand_match:
+        return 24, "Wzmianka o marce", excerpt(text, brand_pattern)
     return (12, "Brak jednoznacznego sygnału współpracy", text[:150]) if text else (0, "Brak treści do oceny", "")
 
 
-def relation(text):
+def relation(text, brand=None):
     clauses = re.split(r"(?<=[!?])\s+|(?<=\.)\s+(?=[A-ZĄĆĘŁŃÓŚŹŻ])|\n+|\bale\b", text)
-    return max((clause_relation(clause) for clause in clauses), key=lambda result: result[0])
+    return max((clause_relation(clause, brand) for clause in clauses), key=lambda result: result[0])
 
 
 def m1(cap):
     text = cap.get("description") or ""
-    ds, reason, quote = relation(text)
+    ds, reason, quote = relation(text, cap.get("brand"))
     evidence = []
     best = ds
     segments = cap.get("segments") or []
-    audio_scores = [(seg, *relation(seg["text"])[:2]) for seg in segments]
+    audio_scores = [(seg, *relation(seg["text"], cap.get("brand"))[:2]) for seg in segments]
     strong = [s for s in audio_scores if s[1] >= 60]
     displayed = strong or sorted(audio_scores, key=lambda s: s[1], reverse=True)[:1]
     for seg, score, label in displayed:
@@ -111,6 +123,13 @@ def m1(cap):
     else:
         reason += " w zbadanym zakresie."
     extra = {"descriptionScore": ds, "speechOnlySignal": audio_only}
+    extra["signalType"] = SIGNALS.get(best, "none")
+    extra["descriptionDisclosureStatus"] = "unavailable" if not text.strip() else "observed" if ds == 94 else "not_found"
+    extra["possibleUndisclosedPromotion"] = best in (74, 66) and extra["descriptionDisclosureStatus"] == "not_found"
+    if extra["possibleUndisclosedPromotion"]:
+        reason = ("Zachęta do działania przy wzmiance o marce" if best == 74 else "Kod lub link polecający")
+        reason += " w nagraniu." if audio_only else "."
+        reason += " W zbadanym opisie nie wykryto oznaczenia. Sprawdź charakter relacji."
     if segments:
         extra["modalityComparison"] = {"descriptionOnly": ds, "withAudio": best, "delta": best - ds}
     if not cap.get("brand"):

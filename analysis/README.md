@@ -24,6 +24,15 @@ python3 -m analysis.transcribe --replay analysis/media/studio.mp4
 
 Replay wymaga identycznego SHA-256. Nowy plik trafia do modelu poleceniem bez `--replay`. Przy odtwarzaniu próbki wystarczają dołączone media i zachowany JSON. Aby zbudować ją ponownie, użyj `python3 -m analysis.make_sample` z eSpeak-NG, Pillow, fontami FreeFont i ffmpeg/libx264 w środowisku deweloperskim. Następnie zapisz świeży wynik CLI z nowego pliku. Głos i wartość confidence odnoszą się do rozpoznania słów. Reguły wskazujące reklamę mają własny wynik punktowy.
 
+Drugi klip to fikcyjna publikacja „Od czego zacząć?”. Zawiera jedną wypowiedź, którą Vosk odczytał od 0,33 do 3,60 s jako „pobierz aplikację aurora i otwórz rachunek”. Marka pojawia się raz. Reguła łączy ją z zachętą do otwarcia rachunku i podnosi priorytet z 12 do 74. W dostępnym opisie nie wykryto etykiety reklamy. Karta pozostawia pytanie o charakter relacji analitykowi. Ten sam tekst z oznaczonym opisem, neutralna wzmianka i deklaracja partnerstwa stanowią odrębne kontrole.
+
+```sh
+python3 -m analysis.transcribe analysis/media/wezwanie.mp4
+python3 -m analysis.transcribe --replay analysis/media/wezwanie.mp4
+```
+
+Generator ze znacznikiem `--cta` odtwarza drugą próbkę.
+
 ## Pochodzenie i zakres wyników
 
 M1 porównuje wynik tego samego zestawu reguł dla opisu i dla opisu rozszerzonego o wypowiedzi. Dla przykładowego klipu to odpowiednio 12 i 94 punkty. Pole `speechOnlySignal` wymaga dostępnego opisu bez sygnału na poziomie 60 punktów oraz sygnału w nagraniu. Materiał z sygnałem w obu kanałach ma to pole wyłączone.
