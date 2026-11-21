@@ -10,6 +10,7 @@ from huey import SqliteHuey
 from huey.exceptions import HueyException
 from collectors.adapter import LeaseLost, MemoryRunner, with_quota
 from . import store
+from .import_meta import qualify_import
 
 ROOT=store.ROOT
 
@@ -80,8 +81,8 @@ class ScanRunner(MemoryRunner):
             body=store.record_adapter(db,adapter.id,result,at,self.scan_id,adapter)
         return with_quota(result,body.get("quota"))
 
-def submit(mode, request_id, payload=None):
-    scan,created=store.create_scan(mode,request_id,payload,retry_failed=mode=="upload")
+def submit(mode, request_id, payload=None, retry_failed=None):
+    scan,created=store.create_scan(mode,request_id,payload,retry_failed=mode=="upload" if retry_failed is None else retry_failed)
     if created:
         enqueue(scan["id"])
     return scan
@@ -133,6 +134,7 @@ def evaluate(cap, previous=None):
     from analysis.semantic import suggest, review_suggestion
     finding=analyze(cap)
     finding["semantic"]=(previous or {}).get("semantic") or suggest(cap)
+    qualify_import(cap,finding)
     if "reviewSuggestion" not in finding:
         finding["reviewSuggestion"]=review_suggestion(cap,finding["semantic"],finding)
     return cap,finding
@@ -190,6 +192,7 @@ def build(row, owner=None):
         runner.heartbeat()
         finding=analyze(cap)
         finding["semantic"]=suggest(cap)
+        qualify_import(cap,finding)
         if "reviewSuggestion" not in finding:
             finding["reviewSuggestion"]=review_suggestion(cap, finding["semantic"], finding)
         return cap,finding
@@ -246,6 +249,8 @@ def build(row, owner=None):
     only=(json.loads(row.get("payload") or "{}") or {}).get("adapters") if isinstance(row,dict) else None
     runner.plan([*planned_steps(mode,only),"enrich","analyze","apply"])
     options={"youtube":youtube_options()}
+    if not os.environ.get("INVESTWATCH_META_IMPORT_DIR"):
+        options["meta_import_dir"]=store.STATE/"meta-import"  # the folder POST /v1/import/meta writes to
     discovery=discover(mode,{x["id"] for x in known},known_creators=known,runner=runner,options=options,only=only)
     runner.mark("enrich","running")
     if mode=="live":
@@ -324,6 +329,8 @@ def work():
         submit("replay","bootstrap-youtube-replay-v1",{"adapters":["youtube-replay"]})
     if "social-replay" in ADAPTERS and (ROOT/"fixtures/raw/discovery/social-2026-11-21/replay.json.gz").is_file():
         submit("replay","bootstrap-social-replay-v1",{"adapters":["social-replay"]})
+    if "meta-import-replay" in ADAPTERS and (ROOT/"fixtures/raw/discovery/social-2026-11-21/replay-meta.json.gz").is_file():
+        submit("replay","bootstrap-meta-import-replay-v1",{"adapters":["meta-import-replay"]})
     next_check=0
     interval=int(os.environ.get("INVESTWATCH_DISCOVERY_INTERVAL","14400"))
     while True:

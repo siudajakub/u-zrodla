@@ -16,7 +16,7 @@ from pydantic import BaseModel, Field
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 from starlette.responses import FileResponse, Response
 from starlette.staticfiles import StaticFiles
-from . import jobs, store
+from . import import_meta, jobs, store
 
 @asynccontextmanager
 async def lifespan(app):
@@ -512,6 +512,37 @@ async def upload(request:Request,title:str=Query(min_length=1,max_length=180),
         return jobs.submit("upload",request_id,payload)
     finally:
         temp.unlink(missing_ok=True)
+
+@app.post("/v1/import/meta",status_code=202)
+async def import_meta_file(request:Request,response:Response,filename:str=Query("meta.txt",max_length=300)):
+    """A saved Meta page (Ad Library results as .html or copied .txt, Instagram profile or post embed), as the raw body
+    or the first file of a multipart form. Text types only, 25 MiB at most. The file is parsed, kept under
+    STATE/meta-import as `<sha256 prefix>-<safe name>` and read by a scan of the `meta_import` adapter alone; a small
+    file is imported inside the request when no worker takes the scan. Unrecognised content gives 422, nothing stored."""
+    from starlette.concurrency import run_in_threadpool
+    content_type=request.headers.get("content-type","")
+    try:
+        import_meta.check_type(filename,content_type)
+        body=bytearray()
+        async for chunk in request.stream():
+            body.extend(chunk)
+            if len(body)>25*1024*1024+65536:
+                raise import_meta.ImportRejected(413,"Plik jest większy niż 25 MiB.")
+        data=bytes(body)
+        if content_type.lower().startswith("multipart/form-data"):
+            filename,data=import_meta.split_multipart(data,content_type)
+            import_meta.check_type(filename,None)
+        summary,digest=await run_in_threadpool(import_meta.accept,data,filename)
+    except import_meta.ImportRejected as error:
+        raise HTTPException(error.status,error.message) from error
+    scan=jobs.submit("live","meta-import-"+digest,{"adapters":["meta_import"]},retry_failed=True)
+    if scan.get("status")=="queued" and len(data)<=import_meta.INLINE_MAX:
+        await run_in_threadpool(jobs.run_inline,scan["id"])  # the claim keeps a live worker from running it twice
+        with store.connection() as db:
+            scan=store.scan_detail(db,scan["id"]) or scan
+    if scan.get("status")=="done":
+        response.status_code=200
+    return {**summary,"scan":scan}
 
 @app.websocket("/v1/events")
 async def events(ws:WebSocket):
