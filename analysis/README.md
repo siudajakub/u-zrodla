@@ -33,6 +33,20 @@ python3 -m analysis.transcribe --replay analysis/media/wezwanie.mp4
 
 Generator ze znacznikiem `--cta` odtwarza drugą próbkę.
 
+## Potok AI: preprocessing, embedding, scoring, silnik inferencji
+
+1. **Preprocessing** (`analysis/material_classifier.py`, `clean_text`, `dedupe`). Usuwa tagi HTML i encje, normalizuje Unicode (NFKC), odrzuca URL-e, e-maile, znaczniki czasu rozdziałów, separatory i powtórzone linie. Materiały o identycznym tekście po czyszczeniu są deduplikowane.
+2. **Reprezentacja wektorowa.** Tokenizer i model `multilingual-e5-small` (MIT, ONNX int8, CPU, SHA-256 w `semantic-lock.json`) zamieniają do 256 tokenów tekstu na wektor 384-wymiarowy. Ten sam model wskazuje fragmenty w `semantic.py`.
+3. **Scoring.** Warstwa softmax (regresja logistyczna, wagi w `material-type-weights.json`, wersja `mt-e5lr-1-…`) przypisuje typ materiału: promocja, edukacja, informacja albo opinia. Wynik ma pewność, a poniżej 0,5 brzmi „nieustalone”. Na 57 odłożonych materiałach YouTube trafność wynosi 30/57. Reguły słownikowe trafiają 13/57, stała najczęstsza klasa 23/57 ([pomiar](../docs/lanes/2026-11-21-fable-ai-inferencja.md)). Typ jest cechą opisową i nie zmienia skierowania.
+4. **Silnik inferencji** (`analysis/inference.py`). Klient Ollama działa jako osobna usługa (`OLLAMA_HOST`, model `INVESTWATCH_LLM_MODEL`, domyślnie `qwen3.5:4b-q4_K_M`, Apache-2.0). Daje drugi głos w tym samym zadaniu, z dosłownym cytatem sprawdzanym przez walidator. Parametry: temperatura 0, schemat JSON, jedno żądanie naraz, twardy limit czasu, cache po skrócie wejścia, wersji promptu i digestu wag. Domyślnie wyłączony (`INVESTWATCH_LLM=1` włącza). Bez usługi wynik ma status `unavailable`, a reguły działają bez zmian.
+5. **Agregacja.** `inference.annotate(finding, capture)` dodaje `finding.model` z wersją, digestem i `affectsDecision: false`. Decyzję o skierowaniu podejmują reguły modułów M1–M3.
+
+```sh
+python3 -m analysis.material_classifier evaluate          # E5, zbiór odłożony
+python3 -m analysis.inference status                      # silnik i digest wag
+sh ops/mac/measure-llm.sh --pull                          # trafność LLM na Macu
+```
+
 ## Pochodzenie i zakres wyników
 
 M1 porównuje wynik tego samego zestawu reguł dla opisu i dla opisu rozszerzonego o wypowiedzi. Dla przykładowego klipu to odpowiednio 12 i 94 punkty. Pole `speechOnlySignal` wymaga dostępnego opisu bez sygnału na poziomie 60 punktów oraz sygnału w nagraniu. Materiał z sygnałem w obu kanałach ma to pole wyłączone.
