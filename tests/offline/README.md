@@ -12,7 +12,7 @@ Każda próba tworzy osobny projekt Compose, kontenery API i workera oraz puste 
 
 W trzeciej próbie skrypt czeka na atomowe przejęcie zadania, wysyła SIGKILL do własnego workera, przyspiesza wygaśnięcie wyłącznie tej dzierżawy na bazie testowej i wznawia kontener. Drugi właściciel ukończył ten sam identyfikator zadania. Baza miała jeden zakończony skan, dwie próby przetworzenia i 17 różnych identyfikatorów spraw. Szczyt pamięci trzeciego przebiegu dotyczy wznowionego kontenera.
 
-Wyniki maszynowe zawiera [raport](proof-2026-11-21.json). HEAD podczas próby zawierał dodatkowe robocze poprawki rejestracji zadań Huey. Pole `codeSha256` obejmuje rzeczywiste pliki montowanych modułów i Compose, również nowe pliki spoza indeksu. Skrót zgadzał się przed i po trzech próbach. Aby porównać zawartość przyszłej rewizji:
+Wyniki maszynowe zawiera [raport](proof-2026-11-21.json). Raport wskazuje lokalny commit użyty do pomiaru; zawiera on poprawkę wspólnej rejestracji zadań w API i workerze Huey. Pole `codeSha256` obejmuje rzeczywiste pliki montowanych modułów i Compose, również nowe pliki spoza indeksu. Skrót zgadzał się przed i po trzech próbach. Aby porównać zawartość przyszłej rewizji:
 
 ```sh
 python3 tests/offline/verify.py --root "$PWD" --fingerprint-only
