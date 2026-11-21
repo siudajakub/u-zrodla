@@ -24,7 +24,8 @@ import { ErrorBlock, Loading, NoResults } from "./parts.jsx";
 import { TABS, TAB_BY_ID, useRoute } from "./route.js";
 import { ScanBanner, Sources, isActive, scanLine, useScanProgress } from "./Sources.jsx";
 import { dataScanOf, lastScanOf } from "./model.js";
-import { useCase, useCases, useDeskData, usePendingTranscripts, useQueue } from "./store.js";
+import { useCase, useDeskData, useQueue } from "./store.js";
+import { Sparkline } from "./charts.jsx";
 
 const plural = (n, one, few, many) => (n === 1 ? one : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? few : many);
 
@@ -47,6 +48,23 @@ const SENTENCE = {
   closed: "Sprawy z zapisaną decyzją. Nowa wersja materiału po decyzji wraca do kolejki.",
   demo: "Materiały syntetyczne i pliki operatora; nie wchodzą do rzeczywistych kolejek.",
 };
+
+/** Raport CSV/JSON (GET /v1/report) dla zakładek, w których ma sens: moduł i kolejka. */
+const REPORT = { review: { module: "M1", queue: "review" }, register: { module: "M1", queue: "adRegister" }, m2: { module: "M2", queue: "offersM2" }, m3: { module: "M3", queue: "offersM3" } };
+
+function TrendGlance({ trend, go }) {
+  const scans = (trend?.byScan || []).filter((s) => s.mode !== "recompute");
+  if (!scans.length) return null;
+  const total = trend.byDay?.reduce((n, d) => n + (d.captures || 0), 0) ?? 0;
+  const referred = trend.byDay?.reduce((n, d) => n + (d.referred || 0), 0) ?? 0;
+  const label = `Trend: ${scans.length} ${plural(scans.length, "skan", "skany", "skanów")}, ${total} przejrzanych materiałów, ${referred} skierowań`;
+  return (
+    <HStack gap={2} vAlign="center" wrap="wrap">
+      <Sparkline values={scans.map((s) => s.captures || 0)} label={`Przejrzane materiały w kolejnych skanach: ${scans.map((s) => s.captures).join(", ")}`} />
+      <Link type="supporting" href={hashFor("sources")} onClick={(e) => { e.preventDefault(); go("sources"); }}>{label}</Link>
+    </HStack>
+  );
+}
 
 function emptyFor(tab, counts, scan) {
   const reviewed = scan?.captures != null ? `Przejrzano ${scan.captures} materiałów. ` : "";
@@ -75,7 +93,7 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
   const filters = route.filters;
   const queue = useQueue(meta.queue, filters, data, rev);
   const scan = dataScanOf(data);
-  const waiting = usePendingTranscripts(tab === "review" || tab === "incomplete" ? data : null, rev);
+  const waiting = counts.transcriptPending ?? null;
   const [panelClosed, setPanelClosed] = useState(false);
   const [reload, setReload] = useState(0);
   const headingRef = useRef(null);
@@ -83,12 +101,10 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
   const pane = useResizable({ defaultSize: "60%", minSize: "44%", maxSize: "72%", isReversed: true });
   const ready = queue.status === "ready" || queue.status === "refreshing";
   const items = ready ? queue.items : [];
-  const platforms = [...new Set([...data.creatorMap.values()].map((c) => c.platform).filter(Boolean))].sort();
   const split = meta.mode === "split";
   const autoId = split && !narrow && !route.caseId && !panelClosed && items[0] ? items[0].id : null;
   const shownId = route.caseId || autoId;
   const current = useCase(shownId, data, rev, reload);
-  const details = useCases(["review", "register", "m2", "m3"].includes(tab) ? items.map((c) => c.id) : [], data, rev);
   const update = (name) => (value) => go(tab, { filters: { ...filters, [name]: value ?? EMPTY_FILTERS[name] }, caseId: route.caseId }, { replace: true });
   const reset = () => go(tab, { caseId: route.caseId }, { replace: true });
   const open = useCallback((id) => {
@@ -147,11 +163,11 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
     : <ErrorBlock message={queue.error} retry={refresh} />;
   else if (!ready) list = <Loading label="Pobieranie listy…" />;
   else if (meta.mode === "table" && !narrow) {
-    list = items.length === 0 ? empty : tab === "register" ? <RegisterTable items={items} filters={filters} details={details} onOpen={open} emptyState={empty} /> : <OffersTable items={items} module={tab === "m2" ? "M2" : "M3"} filters={filters} details={details} onOpen={open} emptyState={empty} />;
+    list = items.length === 0 ? empty : tab === "register" ? <RegisterTable items={items} filters={filters} onOpen={open} emptyState={empty} /> : <OffersTable items={items} module={tab === "m2" ? "M2" : "M3"} filters={filters} onOpen={open} emptyState={empty} />;
   } else if (meta.mode === "table") {
-    list = items.length === 0 ? empty : tab === "register" ? <RegisterList items={items} tab={tab} filters={filters} details={details} /> : <OffersList items={items} tab={tab} filters={filters} details={details} />;
+    list = items.length === 0 ? empty : tab === "register" ? <RegisterList items={items} tab={tab} filters={filters} /> : <OffersList items={items} tab={tab} filters={filters} />;
   } else {
-    list = <CaseList items={items} tab={tab} narrow={narrow} selectedId={shownId} filters={filters} onOpen={open} details={details} emptyState={empty} />;
+    list = <CaseList items={items} tab={tab} narrow={narrow} selectedId={shownId} filters={filters} onOpen={open} emptyState={empty} />;
   }
 
   const recalc = ready ? items.filter((c) => c.needsRecalc).length : 0;
@@ -166,6 +182,7 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
         </HStack>
         {narrow && <Text type="supporting" color="secondary">{SENTENCE[tab]}</Text>}
         <Text type="supporting" color="secondary" maxLines={narrow ? 3 : 1}>{scanLine(scan)}</Text>
+        {tab === "review" && <TrendGlance trend={data.trend} go={go} />}
         {(tab === "review" || tab === "incomplete") && (
           <HStack gap={2} wrap="wrap" vAlign="center">
             <Text type="supporting" color="secondary">Reguły: {variantName}{data.qualification?.setAt ? `, od ${fmtDayRoman(data.qualification.setAt)} ${fmtTime(data.qualification.setAt)}` : ""}.</Text>
@@ -184,7 +201,7 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
         <Banner status="warning" title={`${recalc} ${plural(recalc, "wiersz ma", "wiersze mają", "wierszy ma")} wynik ze starszych reguł`}
           endContent={<Button label="Przelicz materiały" size="sm" isDisabled={actions.busy || actions.scanning} onClick={() => actions.scan("recompute")} />} />
       )}
-      <Filters filters={filters} sources={platforms} update={update} reset={reset} showSection={tab === "register"} />
+      <Filters filters={filters} update={update} reset={reset} showSection={tab === "register"} report={REPORT[tab]} />
       {list}
       {ready && <MoreFooter shown={items.length} total={total} hasMore={!!queue.nextCursor} loading={queue.loadingMore} onMore={queue.more} />}
     </VStack>

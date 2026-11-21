@@ -36,12 +36,14 @@ export function normalizeEvidence(e, caseUrl) {
   };
 }
 
-export function normalizeReach(r) {
+export function normalizeReach(r, platform) {
   if (!r) return null;
   if (r.metrics) {
-    const m = r.metrics.viewCount || r.metrics.subscriberCount || Object.values(r.metrics)[0];
+    const key = ["viewCount", "euTotalReach", "subscriberCount"].find((k) => r.metrics[k] && num(r.metrics[k].value) != null) || ["viewCount", "euTotalReach", "subscriberCount"].find((k) => r.metrics[k]) || Object.keys(r.metrics)[0];
+    const m = r.metrics[key];
     if (!m) return null;
-    return { metric: r.metrics.viewCount ? "views" : "subscribers", value: num(m.value), hidden: m.state === "hidden", observedAt: m.observedAt || r.asOf || null, source: m.source || r.source || null };
+    const metric = key === "euTotalReach" ? "eu_reach" : key === "subscriberCount" ? "subscribers" : platform === "tiktok" ? "plays" : "views";
+    return { metric, value: num(m.value), hidden: m.state === "hidden", observedAt: m.observedAt || r.asOf || null, source: m.source || r.source || null };
   }
   return { metric: r.metric || "views", value: num(r.value), hidden: !!r.hidden, observedAt: r.observedAt || null, source: r.source || null };
 }
@@ -112,6 +114,7 @@ export function normalizeCase(raw, creators = new Map()) {
     creator,
     creatorName: raw.creatorName || creator?.name || raw.author || raw.brand || raw.publisher || "",
     publishedAt: raw.publishedAt || null,
+    publishedAtDerived: obj(raw.publishedAtDerived),
     observedAt: raw.observedAt || null,
     isV2,
     route,
@@ -158,7 +161,7 @@ export function normalizeCase(raw, creators = new Map()) {
     history: arr(raw.history).map((h) => ({ ...h, details: parseDetails(h.details) })),
     versions: arr(raw.versions),
     discovery: normalizeDiscovery(raw.discovery),
-    reach: normalizeReach(raw.reach),
+    reach: normalizeReach(raw.reach, raw.platform),
     firstScanId: raw.firstScanId || null,
     lastScanId: raw.lastScanId || null,
     summary: raw.summary || null,
@@ -192,12 +195,12 @@ export function normalizeCreator(raw) {
   return {
     ...raw,
     discoveries: normalizeDiscovery(raw.discoveries || list, list ? null : raw.discovery),
-    reach: normalizeReach(raw.reach),
+    reach: normalizeReach(raw.reach, raw.platform),
     isNewInScan: raw.isNew === true,
   };
 }
 
-/** Stan z GET /v1/state?compact=1 bez spraw: twórcy, źródła, skany, liczniki, próg, wariant i trend. Sprawy czytają kolejki. */
+/** Stan z GET /v1/overview (to samo co /v1/state?findings=0): twórcy, źródła, skany, liczniki, próg, wariant i trend. Sprawy czytają kolejki. */
 export function normalizeState(state) {
   const creators = new Map(arr(state?.creators).map((c) => [c.id, normalizeCreator(c)]));
   const { findings, ...rest } = state || {};
@@ -223,9 +226,15 @@ export function normalizeRow(item, creators = new Map()) {
     revision: item.revision ?? 1,
     version: item.version ?? 1,
     route: item.route || null,
-    score: value == null ? null : { value, band: bandOfValue(value), state: "computed" },
+    score: value == null ? null : { value, band: item.band || bandOfValue(value), state: "computed" },
+    band: item.band || null,
     queueEligible: item.queueEligible ?? null,
     registry: item.adRegistry || null,
+    registryInfo: obj(item.adRegistryInfo),
+    disclosure: obj(item.disclosure),
+    firstReason: item.firstReason || null,
+    completeReason: item.completeReason || null,
+    transcriptState: item.transcriptState || null,
     reason: item.reason || null,
     firstMoment: obj(item.firstMoment),
     lastDecision: obj(item.lastDecision),
@@ -237,8 +246,9 @@ export function normalizeRow(item, creators = new Map()) {
   };
 }
 
-/** Tekst „powód” w wierszu: pierwszy punkt uzasadnienia, a gdy go brak, skrót `reason`. */
+/** Tekst „powód” w wierszu: `firstReason` z API, potem skrót `reason`. */
 export function rowReason(c) {
+  if (c.firstReason) return c.firstReason;
   if (c.reasons?.length) return c.reasons[0];
   if (c.reason) return c.reason;
   if (c.needsRecalc) return c.needsRecalcReason;

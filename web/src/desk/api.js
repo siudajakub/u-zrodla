@@ -37,27 +37,47 @@ async function request(path, options = {}) {
 
 const json = (method, payload) => ({ method, headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
 
-/** Parametry zapytania kolejki z filtrów widoku (adres #). Siła: „co najmniej średnia” = 60 pkt, „mocna” = 75 pkt. */
-export function queueQuery(filters = {}, { limit = 50, cursor = null } = {}) {
-  const p = new URLSearchParams({ limit: String(limit) });
+/** Parametry zapytania kolejki z filtrów widoku (adres #). Platforma, moduł, pasmo, kanał (q) i data filtrują serwer. */
+export function queueQuery(filters = {}, { limit = 50, cursor = null, queue = null, report = false } = {}) {
+  const p = new URLSearchParams();
+  if (!report) p.set("limit", String(limit));
   if (cursor) p.set("cursor", cursor);
   if (filters.q?.trim()) p.set("q", filters.q.trim());
   if (filters.module && filters.module !== "all") p.set("module", filters.module);
-  if (filters.source && filters.source !== "all") p.set("platform", filters.source);
-  if (filters.risk === "strong") p.set("minScore", "75");
-  if (filters.risk === "moderate") p.set("minScore", "60");
+  if (filters.source && filters.source !== "all") {
+    // M3 trzyma platformę jako „WWW”, M2 jako „web” (to samo źródło, dwa zapisy w danych).
+    p.set("platform", filters.source === "web" && queue === "offersM3" ? "WWW" : filters.source);
+  }
+  if (filters.band && filters.band !== "all") p.set("band", filters.band);
+  if (filters.from || filters.to) p.set("dateField", filters.dateField === "publishedAt" ? "publishedAt" : "observedAt");
   if (filters.from) p.set("since", `${filters.from}T00:00:00+00:00`);
   if (filters.to) p.set("until", `${filters.to}T23:59:59+00:00`);
   if (filters.section && filters.section !== "all") p.set("section", filters.section);
   return p.toString();
 }
 
+/** Adres raportu CSV/JSON z aktualnymi filtrami: GET /v1/report?module=…&format=… */
+export function reportUrl({ module, format = "csv", filters = {}, queue = null }) {
+  const query = queueQuery(filters, { report: true, queue });
+  const p = new URLSearchParams(query);
+  p.delete("module");
+  p.set("module", module);
+  if (queue) p.set("queue", queue);
+  p.set("format", format);
+  return `${base()}/v1/report?${p.toString()}`;
+}
+
 const caseCache = new Map();
 
 export const api = {
-  /** Jednorazowy odczyt: GET /v1/state?compact=1. Sprawy z tego stanu są odrzucane; listy i karty idą przez kolejki i /v1/cases. */
+  /** Odczyt stanu: GET /v1/overview (lekki, bez spraw; starsze API bez tej trasy: /v1/state?compact=1). Listy i karty idą przez kolejki i /v1/cases. */
   async state() {
-    return normalizeState(await request("/v1/state?compact=1"));
+    try {
+      return normalizeState(await request("/v1/overview"));
+    } catch (e) {
+      if (e.status !== 404) throw e;
+      return normalizeState(await request("/v1/state?compact=1"));
+    }
   },
 
   /** Lekki odczyt do odświeżania w tle: liczniki, próg i ostatni skan z nagłówka najkrótszej kolejki. */
@@ -69,7 +89,7 @@ export const api = {
   /** Jedna strona kolejki. Zwraca wiersze (podsumowania), łączną liczbę i kursor następnej strony. */
   async queue(name, filters, { cursor = null, limit = 50, creators } = {}) {
     try {
-      const body = await request(`/v1/queues/${encodeURIComponent(name)}?${queueQuery(filters, { limit, cursor })}`);
+      const body = await request(`/v1/queues/${encodeURIComponent(name)}?${queueQuery(filters, { limit, cursor, queue: name })}`);
       return { items: (body.items || []).map((i) => normalizeRow(i, creators)), total: body.total ?? 0, nextCursor: body.nextCursor || null, counts: body.counts || null, threshold: body.threshold || null, lastScan: body.lastScan || null, asOf: body.asOf || null };
     } catch (e) {
       if (e.status === 404) throw new ApiError(404, "Ten serwer nie ma jeszcze kolejek (GET /v1/queues). Pulpit wymaga nowszego API.", e.body);

@@ -116,7 +116,7 @@ export function reachText(reach) {
   if (reach.hidden) return `Statystyka ukryta przez autora${reach.observedAt ? ` (sprawdzono ${fmtDateTime(reach.observedAt)})` : ""}`;
   const n = fmtNumber(reach.value);
   if (n == null) return "Zasięg nieznany";
-  const unit = reach.metric === "subscribers" ? "subskrybentów kanału" : reach.metric === "plays" ? "odtworzeń" : "wyświetleń";
+  const unit = reach.metric === "subscribers" ? "obserwujących kanał" : reach.metric === "plays" ? "odtworzeń" : reach.metric === "eu_reach" ? "osób w UE (zasięg reklamy)" : "wyświetleń";
   return `${n} ${unit}${reach.observedAt ? `, stan z ${fmtDateTime(reach.observedAt)}` : ""}${reach.source ? ` (${reach.source})` : ""}`;
 }
 

@@ -1,4 +1,4 @@
-// Stan pulpitu: jednorazowy odczyt /v1/state?compact=1, lekkie odświeżanie w tle, zdarzenia WebSocket i alerty.
+// Stan pulpitu: odczyt /v1/overview, lekkie odświeżanie w tle, zdarzenia WebSocket i alerty.
 // Listy i karty spraw czytają kolejki i /v1/cases; tutaj są tylko liczniki, skany, źródła, próg i wariant.
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { api } from "./api.js";
@@ -147,53 +147,4 @@ export function useCase(id, data, rev, reload = 0) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, rev, reload, !!data]);
   return state;
-}
-
-/** Szczegóły wielu spraw na potrzeby wierszy (powód, typ ujawnienia): po 4 naraz, z pamięcią podręczną. */
-export function useCases(ids, data, rev) {
-  const [map, setMap] = useState(() => new Map());
-  const creators = data?.creatorMap;
-  const key = ids.join("|");
-  useEffect(() => {
-    let cancelled = false;
-    const todo = ids.filter((id) => !map.has(id));
-    if (!todo.length) return undefined;
-    let next = 0;
-    const worker = async () => {
-      while (!cancelled && next < todo.length) {
-        const id = todo[next++];
-        try {
-          const c = await api.case(id, creators);
-          if (!cancelled) setMap((m) => new Map(m).set(id, c));
-        } catch {
-          /* wiersz zostaje z podsumowaniem */
-        }
-      }
-    };
-    Promise.all([worker(), worker(), worker(), worker()]);
-    return () => {
-      cancelled = true;
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [key, rev]);
-  useEffect(() => setMap(new Map()), [rev]);
-  return map;
-}
-
-/** Ile materiałów czeka na transkrypcję: wiersze „Niepełnych danych”, których powód mówi o niezbadanej mowie. */
-export function usePendingTranscripts(data, rev) {
-  const [n, setN] = useState(null);
-  useEffect(() => {
-    if (!data) return undefined;
-    let cancelled = false;
-    api.queue("incomplete", {}, { limit: 500, creators: data.creatorMap }).then(
-      (r) => !cancelled && setN(r.items.filter((c) => /mowy[^.]*nie zbadano|transkrypcj/i.test(c.reason || "")).length),
-      () => !cancelled && setN(null),
-    );
-    return () => {
-      cancelled = true;
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [rev, !!data]);
-  return n;
 }
