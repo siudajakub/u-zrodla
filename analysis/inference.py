@@ -27,7 +27,7 @@ from analysis.material_classifier import CLASSES, TASK, labeled_examples, materi
 
 DEFAULT_MODEL = "qwen3.5:4b-q4_K_M"
 DEFAULT_HOST, DEFAULT_PORT = "127.0.0.1", 11434
-PROMPT_VERSION = "mt-llm-1"
+PROMPT_VERSION = "mt-llm-2"
 ABSTAIN = "nieustalone"
 TIMEOUT_SECONDS = float(os.getenv("INVESTWATCH_LLM_TIMEOUT", "60"))  # hard limit for one request
 QUEUE_SECONDS = float(os.getenv("INVESTWATCH_LLM_QUEUE", "5"))  # waiting for the single slot
@@ -175,7 +175,7 @@ INSTRUCTION = (
     "także rozrywka i vlog bez tezy.\n"
     "- opinia: teza, ocena, prognoza lub osobiste decyzje autora (analiza techniczna, komentarz rynkowy, "
     "ranking subiektywny, mój portfel, recenzja produktu).\n"
-    f"Zwróć JSON z polami label, lineId i quote. quote to dosłowny, ciągły cytat ({MIN_QUOTE}–{MAX_QUOTE} znaków) "
+    "Zwróć JSON z polami label, lineId i quote. lineId to klucz linii z danych (np. \"L0\"), nigdy jej treść. quote to dosłowny, ciągły cytat ({MIN_QUOTE}–{MAX_QUOTE} znaków) "
     "z linii lineId, który najlepiej uzasadnia typ. Gdy nie da się ustalić typu, zwróć label "
     f"\"{ABSTAIN}\", pusty lineId i pusty quote."
 )

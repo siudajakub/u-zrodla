@@ -21,7 +21,7 @@ Odczyt 2026-11-21 ze stron bibliotek ollama.com, kart Hugging Face i GitHub. Roz
 | Bielik 11B v3.1 | `SpeakLeash/bielik-11b-v3.1-instruct:Q4_K_M` (przestrzeń społeczności) | 6,7 GB | Apache-2.0 ([karta](https://huggingface.co/speakleash/Bielik-11B-v3.1-Instruct)) | polski model, alternatywa przy 16 GB, poza oficjalną biblioteką |
 | Gemma 4 E2B | `gemma4:e2b-it-qat` | 4,3 GB | Apache 2.0 ([karta E4B](https://huggingface.co/google/gemma-4-E4B-it)) | dopuszczalna, ale większa od Qwen 4B |
 
-Dla Qwen3.5 i Gemma 4 nie znalazłem polskiego benchmarku. Bielik 4.5B ma oficjalnie tylko Q8_0 (5,1 GB). Wybór Qwen 4B ma uzasadnienie praktyczne: licencja, rozmiar i ten sam rodzaj modelu co w porównaniu D. Nie wynika z pomiaru jakości po polsku. Ten pomiar wykona `measure-llm.sh` na Macu. Ollama: najnowsze wydanie v0.40.17, `/api/chat` przyjmuje `format` jako schemat JSON, `think: false`, `options.temperature/seed/num_ctx`, `keep_alive`.
+Tabela wyżej to stan przed pomiarem; wynik i rekomendacja w sekcji „Pomiar LLM przez OpenRouter”. Dla Qwen3.5 i Gemma 4 nie znalazłem polskiego benchmarku. Bielik 4.5B ma oficjalnie tylko Q8_0 (5,1 GB). Wybór Qwen 4B ma uzasadnienie praktyczne: licencja, rozmiar i ten sam rodzaj modelu co w porównaniu D. Nie wynika z pomiaru jakości po polsku. Ten pomiar wykona `measure-llm.sh` na Macu. Ollama: najnowsze wydanie v0.40.17, `/api/chat` przyjmuje `format` jako schemat JSON, `think: false`, `options.temperature/seed/num_ctx`, `keep_alive`.
 
 ## Pomiar
 
@@ -48,7 +48,43 @@ Macierz pomyłek E5 (wiersz to etykieta, kolumna to predykcja; kolejność promo
 
 Precyzja i czułość: edukacja 0,64 i 0,64, informacja 0,50 i 0,71, opinia 0,73 i 0,35, promocja 0,12 i 0,33. Czas: 3,0 s na materiał na tym devboxie (CPU współdzielony z innymi agentami, onnxruntime na 1 wątku, 256 tokenów). Przy trenowaniu na tym samym hoście wyszło około 0,3 s na materiał, więc wynik 3,0 s odzwierciedla obciążenie hosta. Na Macu pomiaru nie było.
 
-**LLM: niezmierzony.** Na devboxie było 3,0–3,7 GB dostępnej pamięci, a warunek startu to co najmniej 6 GB. Ollamy nie instalowałem. `ops/mac/measure-llm.sh` przeszedł od początku do końca tylko przeciw atrapie serwera Ollama, więc to dowód działania potoku, nie trafności. Odsetek odrzuceń walidatora i czas LLM czekają na Maca.
+**LLM: zmierzony przez API, nie lokalnie.** Decyzja J: na devboxie nie instalujemy modeli ani Ollamy, wybór modelu mierzymy przez OpenRouter, a produkt działa lokalnie. Szczegóły w sekcji „Pomiar LLM przez OpenRouter” niżej. Trafność i odrzucenia walidatora pochodzą z wag w BF16 u dostawcy API, więc kwantyzacja Q4 i czas na Macu nadal wymagają `ops/mac/measure-llm.sh`.
+
+## Pomiar LLM przez OpenRouter
+
+Narzędzie: `tools/measure_llm_openrouter.py` (transport z `analysis/openrouter_review.py`, backend `INVESTWATCH_LLM_BACKEND=openrouter` w `analysis/inference.py`). Te same 57 materiałów odłożonych, te same wejścia co E5, ten sam prompt, schemat JSON (strict), temperatura 0, seed 0, walidator cytatów. Backend openrouter działa tylko przez transport rejestrowany przez narzędzie pomiarowe. `inference.py` nie czyta klucza, więc worker produktu go nie dostaje. Limity: lokalna kontrola cennika przed pierwszym żądaniem, `--max-price-per-mtok 3`, 0,30 USD na model i 1,50 USD łącznie wg `usage.cost`, jedno żądanie naraz, `data_collection: deny`, endpoint wybierany wśród tych ze `structured_outputs` (najtańszy). Łączny koszt całego pomiaru (dwie serie po 6 modeli i próba na 3 materiałach): około 0,10 USD.
+
+**Prompt.** Seria 1 (`mt-llm-1`) pokazała, że Gemma 3 4B wpisywała w `lineId` treść linii zamiast klucza `L0` (38 z 57 odpowiedzi odrzuconych jako `line_missing`). Dodałem do promptu jedno zdanie (`lineId` to klucz linii, nigdy jej treść) i powtórzyłem całą serię jako `mt-llm-2`. Zmiana dotyczy formatu, nie etykiet, ale **zbiór odłożony oceniono przez to dwukrotnie**: przy wyborze modelu traktuj wynik jako optymistyczny. Wyniki serii 1 zostały w `ai-material-type-result-<model>-mt-llm-1.json`.
+
+**Wyniki `mt-llm-2`, zbiór odłożony n = 57** (`fixtures/labeled/ai-material-type-result-<model>.json`; E5 to 30/57, macro-F1 0,47):
+
+| Model (OpenRouter) | Dostawca, kwant. | Trafne /57 | Macro-F1 | Odrzucone walidatorem | Zgodność z E5 | Koszt | Q4 (Ollama) | Licencja | Tag Ollama |
+|---|---|---|---|---|---|---|---|---|---|
+| gemma-3-12b-it | DeepInfra, bf16 | **36** | 0,60 | 0/57 (0%) | 0,46 | 0,0029 | 8,2 GB | Gemma Terms of Use (nie permisywna) | `gemma3:12b-it-q4_K_M` |
+| ministral-8b-2512 | Mistral, brak danych | 35 | **0,64** | 5/57 (8,8%) | 0,52 | 0,0065 | 6,0 GB | Apache-2.0 (karta HF) | `ministral-3:8b-instruct-2512-q4_K_M` |
+| qwen3.5-9b | DeepInfra, bf16 | 32 | 0,58 | 3/57 (5,3%) | 0,51 | 0,0056 | 6,6 GB | Apache-2.0 | `qwen3.5:9b-q4_K_M` |
+| ministral-3b-2512 | Mistral, brak danych | 31 | 0,53 | 5/57 (8,8%) | 0,53 | 0,0043 | 3,0 GB | Apache-2.0 | `ministral-3:3b-instruct-2512-q4_K_M` |
+| granite-4.2-8b | CoreWeave, bf16 | 24 | 0,42 | 6/57 (10,5%) | 0,37 | 0,0029 | brak potwierdzonego tagu 4.2 (w bibliotece jest `granite4:*`) | Apache-2.0 (karta HF) | – |
+| gemma-3-4b-it | Parasail, bf16 | 25 | 0,56 | 22/57 (38,6%) + 1 błąd dostawcy | 0,56 | 0,0021 | 3,4 GB | Gemma Terms of Use | `gemma3:4b-it-q4_K_M` |
+
+Zgodność z E5 liczona wśród odpowiedzi modelu z przyjętym cytatem. Kolumna „Q4” to rozmiar pobrania z biblioteki Ollama; RAM podczas pracy to rozmiar plus KV-cache dla `num_ctx` 4096, czyli orientacyjnie +1 GB (nie mierzono). Mediany czasu z API (0,6–3,4 s) to opóźnienie sieci i dostawcy, nie czas na Macu.
+
+Czego nie ma w katalogu OpenRouter: Qwen3.5 2B i 4B, Bielik (w żadnym rozmiarze), Gemma 4 E2B/E4B (jest tylko 26B-A4B i 31B, za duże na 16 GB), Phi-4-mini. Dlatego dotychczasowy domyślny `qwen3.5:4b-q4_K_M` i awaryjny 2B **nie mają żadnego pomiaru**. Gemma 3 4B/12B to nie obecna generacja Gemmy, tylko najmniejsze warianty dostępne przez API. Llama odrzucona z powodu licencji.
+
+### Wnioski z pomiaru
+
+- **Próg przyjęcia (≥30/57 i ≤10% odrzuceń) spełniają cztery modele**: Gemma 3 12B, Ministral 8B, Qwen3.5 9B i Ministral 3B. Granite (10,5%) i Gemma 3 4B nie.
+- **Czy bijają E5? Nie da się tego powiedzieć.** Najlepszy wynik to 36/57 wobec 30/57, czyli +6 trafień. Przy n = 57 przedział ufności wynosi ±0,13 (±7 trafień), a etykiety pochodzą od jednego agenta. Różnica jest w granicach szumu, a Ministral 3B i Qwen 9B mają +1 i +2. Macro-F1 jest wyraźniej wyższe (0,53–0,64 wobec 0,47), głównie dzięki klasie „promocja” (3 przykłady), więc to też niepewne.
+- Przy zadaniu z wyraźną dwuznacznością etykiet (opinia kontra informacja) żaden model nie schodzi z 36–40% błędów. Zgodność z E5 to tylko 0,46–0,56, więc **drugi głos LLM ma realną wartość jako niezależny sygnał**, nawet bez dowodu na wyższą trafność.
+- Odrzucenia walidatora u modeli ≥8B wynikają głównie z cytatów spoza linii lub o złej długości, nie ze złamania schematu. Strict `json_schema` respektowali wszyscy wybrani dostawcy (DeepInfra, Parasail, CoreWeave, Mistral). Endpoint Alibaba pominięto (łamał schemat 20/20 w wcześniejszym pomiarze); wybór jest wymuszony przez filtr `structured_outputs` i `provider.only`.
+
+### Rekomendacja
+
+- **16 GB: Ministral 3 8B** (`ministral-3:8b-instruct-2512-q4_K_M`, 6,0 GB, Apache-2.0): 35/57, najwyższe macro-F1 (0,64) spośród modeli na permisywnej licencji. Odrzucenia 8,8% są blisko progu 10%. Zapas daje Qwen3.5 9B (32/57, 5,3%, 6,6 GB, Apache-2.0). Gemma 3 12B jest najlepsza (36/57, 0% odrzuceń), ale licencja Gemma Terms of Use nie jest permisywna, a brief wymaga modeli otwartych; wykluczona z produktu, zostaje punktem odniesienia.
+- **8 GB awaryjnie: Ministral 3 3B** (`ministral-3:3b-instruct-2512-q4_K_M`, 3,0 GB, Apache-2.0): 31/57, odrzucenia 8,8%, najszybszy w API. Margines nad progiem to 1 trafienie, więc to „działa na styk”.
+- **Status w produkcie bez zmian: LLM wyłączony domyślnie** (`INVESTWATCH_LLM`), a E5 pozostaje klasyfikatorem. Dowód jest tylko po stronie API w BF16, bez zbioru potwierdzającego (zbiór odłożony zużyty dwa razy) i bez pomiaru na Macu. Włączenie drugiego głosu wymaga `sh ops/mac/measure-llm.sh --pull --model ministral-3:8b-instruct-2512-q4_K_M` i spełnienia progu na kwantyzacji Q4. Ollama musi też obsłużyć `format` ze schematem dla architektury Ministral 3 (niesprawdzone; przy braku wsparcia pozostaje Qwen3.5 9B). `DEFAULT_MODEL` w kodzie nie zmieniono, bo żaden z zalecanych modeli nie ma jeszcze pomiaru lokalnego. Ograniczenie wyboru: pomiar obejmuje 6 modeli z tych, które OpenRouter ma w katalogu.
+
+Powtórzenie: `.runtime/venv/bin/python -B tools/measure_llm_openrouter.py --model mistralai/ministral-8b-2512 --public-source` (klucz z `.env.openrouter`, koszt około 0,01 USD).
 
 ### Co to znaczy
 
@@ -70,7 +106,7 @@ Precyzja i czułość: edukacja 0,64 i 0,64, informacja 0,50 i 0,71, opinia 0,73
   "secondOpinion": {"task": "material_type", "engine": "ollama", "status": "disabled|ready|abstained|rejected|busy|unavailable|empty",
                     "label": "opinia", "quote": "dosłowny cytat", "evidence": {"field": "description", "lineId": "L2", "text": "…", "charStart": 0, "charEnd": 31},
                     "modelId": "qwen3.5:4b-q4_K_M", "digest": "sha256:…", "quantization": "Q4_K_M",
-                    "promptVersion": "mt-llm-1", "latencyMs": 900.0, "affectsDecision": false},
+                    "promptVersion": "mt-llm-2", "latencyMs": 900.0, "affectsDecision": false},
   "agreement": true, "meaning": "Typ materiału opisuje treść dla analityka; nie zmienia skierowania ani punktów."
 }
 ```
