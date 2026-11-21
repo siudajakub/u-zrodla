@@ -277,7 +277,7 @@ BENEFIT = re.compile(
     r"bez\s+prowizji|0\s?%\s+prowizji|\d+(?:[.,]\d+)?\s?%\s+(?:w\s+skali\s+roku|rocznie|odsetek|zwrotu)|stop\w+\s+zwrotu|dochód|dochod\w*|"
     r"wzrost\w*\s+wartości|\bprofits?\b|\bearn\w*|bonus\w*|akcj\w+\s+za\s+darmo|darmow\w+\s+akcj\w+", re.I)
 WARNING = re.compile(
-    r"ryzyk\w*|\bstrat(?:a|y|ę|ą|ami|om|ach)\b|\bstraci\w*|\bCFD\b|utrat\w+\s+(?:całości|kapitału|pieniędzy)|nie\s+gwarantuj\w*|wyniki\s+z\s+przeszłości|"
+    r"ryzyk\w*|także\s+ujemn\w*|wynik\s+może\s+być\s+inny|\bstrat(?:a|y|ę|ą|ami|om|ach)\b|\bstraci\w*|\bCFD\b|utrat\w+\s+(?:całości|kapitału|pieniędzy)|nie\s+gwarantuj\w*|wyniki\s+z\s+przeszłości|"
     r"wartość\s+inwestycji\s+może|rachunków\s+.{0,40}odnotowuje|\brisk\w*|capital\s+at\s+risk", re.I)
 TEMPLATE = re.compile(r"\{\{[^}]+\}\}")
 

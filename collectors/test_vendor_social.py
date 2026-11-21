@@ -392,6 +392,7 @@ class SignalTests(unittest.TestCase):
         self.assertFalse(vs.text_signals("Strategie szachowe w biznesie")["riskWarningInText"])
         self.assertTrue(vs.text_signals("Inwestowanie wiąże się z ryzykiem utraty kapitału")["riskWarningInText"])
         self.assertTrue(vs.text_signals("79% rachunków detalicznych CFD odnotowuje straty")["riskWarningInText"])
+        self.assertTrue(vs.text_signals("Rzeczywisty wynik może być inny, także ujemny.")["riskWarningInText"])
         labelled = vs.disclosure_of("#współpracareklamowa #Freedom24", None)
         self.assertTrue(labelled["labelled"])
         self.assertIsNone(labelled["platformFlag"])
