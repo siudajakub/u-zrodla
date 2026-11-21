@@ -134,8 +134,10 @@ def evaluate(cap, previous=None):
     from analysis.semantic import suggest, review_suggestion
     finding=analyze(cap)
     stored=(previous or {}).get("semantic")
-    # A stored "unavailable" (no packages at that time) is computed again; a ready suggestion is kept as it was.
-    finding["semantic"]=stored if isinstance(stored,dict) and stored.get("status")=="ready" else suggest(cap)
+    # A stored "unavailable" (no packages at that time) is computed again for the human queues of M2 and M3 only (E5 costs
+    # CPU; 1680 videos stay as stored); a ready suggestion is kept as it was.
+    keep=isinstance(stored,dict) and (stored.get("status")=="ready" or cap.get("module","M1")=="M1")
+    finding["semantic"]=stored if keep else suggest(cap)
     qualify_import(cap,finding)
     if "reviewSuggestion" not in finding:
         finding["reviewSuggestion"]=review_suggestion(cap,finding["semantic"],finding)
