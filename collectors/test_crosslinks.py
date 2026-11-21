@@ -1,5 +1,6 @@
 from collections import Counter
 import unittest
+import json
 from urllib.parse import urlsplit
 
 from collectors.common import SourceError
@@ -58,6 +59,34 @@ class CrosslinkTests(unittest.TestCase):
         self.assertEqual(len(items), 1)
         self.assertEqual(statuses[-1]["status"], "partial")
         self.assertTrue(any(s.get("httpStatus") == 403 for s in statuses))
+
+    def test_video_oembed_produces_candidate_and_remembers_reference(self):
+        post = {"id":"rss:one", "creatorId":"podcast:one", "url":"https://example.org/ep",
+                "description":"https://youtu.be/gPv19SFBprA"}
+        calls = Counter()
+        def fetch(url, allowed):
+            calls[url] += 1
+            self.assertEqual(allowed, {"www.youtube.com"})
+            return json.dumps({"author_name":"Zainwestowani", "author_url":"https://www.youtube.com/@zainwestowani"}).encode()
+        creators, items, statuses = extend_from_posts([post], [], fetch, lambda: NOW)
+        self.assertEqual(len(creators), 1)
+        self.assertEqual(creators[0]["status"], "candidate")
+        self.assertFalse(creators[0]["profileVerified"])
+        self.assertEqual(creators[0]["crosslinkDiscovery"]["references"][0]["creatorId"], "podcast:one")
+        self.assertEqual(items, [])
+        self.assertEqual(statuses[-1]["status"], "partial")
+        second, _, _ = extend_from_posts([], creators, fetch, lambda: NOW)
+        self.assertEqual(second[0]["id"], creators[0]["id"])
+        self.assertEqual(sum(calls.values()), 1)
+
+    def test_oembed_error_reports_status_without_fake_creator(self):
+        post = {"description":"https://www.youtube.com/watch?v=xc9tTBL5Y_U"}
+        def forbidden(*_):
+            raise SourceError("HTTP 403", 403)
+        creators, _, statuses = extend_from_posts([post], [], forbidden, lambda: NOW)
+        self.assertFalse(creators)
+        self.assertEqual(statuses[-1]["status"], "error")
+        self.assertTrue(any(item.get("httpStatus") == 403 for item in statuses))
 
     def test_recommendations_do_not_determine_channel(self):
         parser = ChannelMetadata()
