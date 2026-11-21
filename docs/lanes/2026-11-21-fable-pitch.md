@@ -25,7 +25,7 @@ Brief §4, §6 i §8 ([BRIEF](../zrodla-uknf/BRIEF.md)) oraz ustalenia koordynat
 ## Current State
 
 Model: claude-opus-5-5 (podagent PITCH zlecony przez Fable). Ustalenia:
-- Drugi głos LLM (`be18904`, `fb17d18`) nie jest wpięty w `analysis/engine.py`. Produkt odmawia backendu OpenRouter (`backend_forbidden`), więc przełącznika „drugi głos przez API” nie ma. Zdanie przygotowano warunkowo, a rekomendacją jest Ollama lokalnie albo zapisany pomiar.
+- Drugi głos LLM (`be18904`, `fb17d18`, `6f62815`) ma wyłączony domyślnie tryb pokazowy przez API (`INVESTWATCH_LLM_DEMO_API`, limit 1 USD dziennie). W repo nie ma jednak launchera rejestrującego transport, a drugi głos nie jest wpięty w `analysis/engine.py` ani w API, więc na ekranie go nie widać. Zdanie o przełączniku przygotowano warunkowo. Rekomendacja: Ollama lokalnie, tryb API jako zapas z etykietą.
 - W bazie podglądu `semantic.status = unavailable` i `analysisVersion.model = null`. E5 nie jest dziś widoczny w kartach.
 - Nagłówek pulpitu pokazuje „na żywo” przy danych z odtworzenia (zrzuty r3).
 - Karta Comparic w bazie pokazu ma obalenie mową (10:14), ale nie ma kadru 614 s (`coverage.gaps`: frames `not_collected`).
