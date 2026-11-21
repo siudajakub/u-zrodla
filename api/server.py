@@ -214,8 +214,20 @@ def state(schema:int|None=Query(None,ge=1,le=2),compact:int=Query(0),findings:in
     the recompute state. `compact=1` keeps the cases but drops their heavy fields."""
     chosen=wanted_schema(request,schema)
     jobs.recover_recompute()
-    return {**store.state(chosen,bool(compact) if isinstance(compact,(bool,int)) else False,bool(findings)),
-            "calibration":state_calibration()}
+    out=store.state(chosen,bool(compact) if isinstance(compact,(bool,int)) else False,bool(findings))
+    return {**out,"calibration":state_calibration(),"models":models_block(out.get("semantic"))}
+
+def models_block(semantic):
+    """The AI layers of the desk: E5 material type (status, 30/57) and the second opinion (recorded measurement or local)."""
+    import os
+    from . import second_opinion_recorded as recorded
+    try:
+        from analysis import second_opinion as so
+        live=so.enabled()
+    except Exception:
+        live=False
+    annotate=os.getenv("INVESTWATCH_MODEL_ANNOTATE","").strip().lower() in {"1","on","true"}
+    return recorded.models_block(semantic,annotate,live)
 
 @app.get("/v1/overview")
 def overview(schema:int|None=Query(None,ge=1,le=2),request:Request=None):
