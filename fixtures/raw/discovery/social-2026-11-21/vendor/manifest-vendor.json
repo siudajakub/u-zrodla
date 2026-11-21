@@ -1,0 +1,1116 @@
+{
+ "api": "https://api.scrapecreators.com",
+ "collectedOn": "2026-11-21",
+ "creditsRemaining": 26,
+ "creditsSpent": 74,
+ "failedRequests": 3,
+ "files": [
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 99,
+   "file": "raw/001-ig_profile-xtb_polska.json.gz",
+   "gzSha256": "422a6ec0e2227e1e358fd938d591a02b4c7dfead9a41cf906daaccd3aa4bf000",
+   "observedAt": "2026-11-21T21:28:00+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "xtb_polska"
+   },
+   "responseBodySha256": "eeb66524bc2782f20357c28b284c01ccdbd76782e39f242c8a34309ba4bf231a",
+   "storedJsonSha256": "f746bc44ff2db2730137e7e32b9421a07a831e82bf9e3bacb7c04afd5def7e9b"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 98,
+   "file": "raw/002-fb_company_search-XTB.json.gz",
+   "gzSha256": "1178108dd70f35f4db653ed340551e63582bb2cad6feed14109edf6271970be6",
+   "observedAt": "2026-11-21T21:29:27.408832+00:00",
+   "op": "fb_company_search",
+   "query": {
+    "query": "XTB"
+   },
+   "responseBodySha256": "5161c71a30da5a140f69b3aa7429284059b1461ce820d7b28ee0b74022f959d5",
+   "storedJsonSha256": "6b72f4907bfd1274420630d49abbfc49accc473e3ef17a9c917810b575f5e0f8"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 97,
+   "file": "raw/003-fb_company_search-Trading-212.json.gz",
+   "gzSha256": "5f1d0ea5fad476189d6e4b00e823a77c1c31068944b4c362ff8891af872a49f1",
+   "observedAt": "2026-11-21T21:29:30.616417+00:00",
+   "op": "fb_company_search",
+   "query": {
+    "query": "Trading 212"
+   },
+   "responseBodySha256": "71b82c404c61045d3b1206a4c457257bddbd324bf9d90962fba08df6f3cb9fe7",
+   "storedJsonSha256": "db6a91341fcad96cc5edbd5f59f376ec5fdcce39a42974abc411d2b4363a7f39"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 96,
+   "file": "raw/004-fb_company_search-eToro.json.gz",
+   "gzSha256": "5cba1147e3fc74fa51d2fcd0cb07b991911b24320d7ab3551ba718a7e6bee253",
+   "observedAt": "2026-11-21T21:29:34.346750+00:00",
+   "op": "fb_company_search",
+   "query": {
+    "query": "eToro"
+   },
+   "responseBodySha256": "fab82db87e0e6ac3eb881ae9d0167a6e7ede0aa22a540ffe1ef645f6c30421fc",
+   "storedJsonSha256": "de1ede738c2c4736111249cdf34bfcc690fc8f3ba0d1922b9c381a6609d7a5ea"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 95,
+   "file": "raw/005-fb_company_search-Freedom24.json.gz",
+   "gzSha256": "058677d41f300f1cf4c89f32d04ffd75b75396bcb101eff164a9e4ed720ef8f8",
+   "observedAt": "2026-11-21T21:29:37.979231+00:00",
+   "op": "fb_company_search",
+   "query": {
+    "query": "Freedom24"
+   },
+   "responseBodySha256": "ca1d6259191196325023369248e073bd4fee0d181f454ab4cdb6e10b8b7f202c",
+   "storedJsonSha256": "21bb0984e8f2a8ae61b127b7b30fd3ab2ec397ed88b87f1bf1330798a54cd1fc"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 94,
+   "file": "raw/006-fb_company_search-Lightyear.json.gz",
+   "gzSha256": "a219c2be36aece498bfe571eb67cd30527609eaa6983d96dd767510705c349b1",
+   "observedAt": "2026-11-21T21:29:41.214055+00:00",
+   "op": "fb_company_search",
+   "query": {
+    "query": "Lightyear"
+   },
+   "responseBodySha256": "e377c40ff88977b814619ed058e38cf5cfa02cec6df24108597709411f5328be",
+   "storedJsonSha256": "849f1b9ae5d46b9d2b84951075bc6b61b4109dc471ca312fe8bc7c3c25a921ef"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 93,
+   "file": "raw/007-fb_company_search-DM-BO.json.gz",
+   "gzSha256": "27564eb17f09ce9e1b8e742fc10e66ff286bc0e5ee10744b995a9154358280fd",
+   "observedAt": "2026-11-21T21:29:44.469506+00:00",
+   "op": "fb_company_search",
+   "query": {
+    "query": "DM BOŚ"
+   },
+   "responseBodySha256": "e0395b01a98436ec54c4f83d675ae34fb1ee432ece5f347083ee4f0fcf450bcf",
+   "storedJsonSha256": "0707596ff2acf693f45f8ef8b45e0059bae26436f996917dcc9ab2a056c0b0f0"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 92,
+   "file": "raw/008-fb_company_search-mBank.json.gz",
+   "gzSha256": "7455b8292e3b681f81dd44de5aca5b98f612da21583b1c317f1c77b68a59f4d2",
+   "observedAt": "2026-11-21T21:29:47.529301+00:00",
+   "op": "fb_company_search",
+   "query": {
+    "query": "mBank"
+   },
+   "responseBodySha256": "d3f1f311e91cbaf537491b6631e51c777e09703e29eacefe33944868b08dc802",
+   "storedJsonSha256": "f6c2d94104cc7cadc64a87eab5c93f08f2a4c2b2c435754bc86b89efbb098f28"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 91,
+   "file": "raw/009-fb_company_search-Saxo-Bank.json.gz",
+   "gzSha256": "d8c67409432806451fad4f489d4a48e0257d6576496e11d64936e587075ec3dd",
+   "observedAt": "2026-11-21T21:29:50.848940+00:00",
+   "op": "fb_company_search",
+   "query": {
+    "query": "Saxo Bank"
+   },
+   "responseBodySha256": "6441b5ea89210522784af6cf339623b564c400c90651424cbbc0243781a888e0",
+   "storedJsonSha256": "6dbcadf91583bf0c8859edea63a3b04cd954af431a53703ea67e2693b377e91f"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 90,
+   "file": "raw/010-ig_profile-comparic-pl.json.gz",
+   "gzSha256": "da7f90d79a8a49ce7dadc9e35cc33868a2d2872b7f16e100f752e605d5ee63dd",
+   "observedAt": "2026-11-21T21:29:57.918230+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "comparic.pl"
+   },
+   "responseBodySha256": "2814ef661ef70425141b128397048dce309d3cc2b7f24e5d7260052e31b63018",
+   "storedJsonSha256": "f6c326e9b9439f6380b7956e1bef54763c9cce405fa8fd85ef2a564019f02343"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 89,
+   "file": "raw/011-ig_profile-kacper-snela.json.gz",
+   "gzSha256": "94d411038d33efff169f34b42748f92b492862a8c5066810af0b0291637105ea",
+   "observedAt": "2026-11-21T21:30:06.463458+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "kacper.snela"
+   },
+   "responseBodySha256": "7c25a7f3bf521913757fe6281d6675d313076dc475a74efb3f4fa13bf858170a",
+   "storedJsonSha256": "a4627ee3323466f0b5ca418931d82185a9e13a2167c2df628bdf1551a9f6ebe6"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 88,
+   "file": "raw/012-ig_profile-gieldainwestycjetrading.json.gz",
+   "gzSha256": "c03eef113e907080fbe98eaaaa2c5145dc08677e6b4d546f77e766d4feca84fb",
+   "observedAt": "2026-11-21T21:30:21.626536+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "gieldainwestycjetrading"
+   },
+   "responseBodySha256": "11f1d9cb0a80d3d30abaf138ef27040efba963ac34969d88f59cc1bdfb67f8be",
+   "storedJsonSha256": "95e2fd979c5fb30bd34eca66a8cc97235a26f299425f95bda065e46529e7ec53"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 87,
+   "file": "raw/013-ig_profile-acemarketu.json.gz",
+   "gzSha256": "7f43c202b123cc5b2adce1647a2d70fff8128afe7094402f3f039cfc46151965",
+   "observedAt": "2026-11-21T21:30:31.783293+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "acemarketu"
+   },
+   "responseBodySha256": "60fef221f753188fe9251a5bfc5891e47ed03a0d352ee0ecc7ed029f9a2a12b6",
+   "storedJsonSha256": "186c40f62648c5fcd8506e1c1502dbb0fb97bab469af68034f365f7d9a65cd66"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 86,
+   "file": "raw/014-ig_profile-globalista-yt.json.gz",
+   "gzSha256": "0a80680110f69342f507677d47eb83b8df4b393cc446f7020bd215fcdc5dcdb8",
+   "observedAt": "2026-11-21T21:30:44.871485+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "globalista_yt"
+   },
+   "responseBodySha256": "34e0fbdbac8f551ee0d53fd578126f2548823250c23301b2f27e545dae5179db",
+   "storedJsonSha256": "77ea1de4817598c27af9b2536ab9bef39d09c1cde363c6c66204ca6320a1aefa"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 85,
+   "file": "raw/015-ig_profile-wszystkofinansach.json.gz",
+   "gzSha256": "b450337cccd8edc2e46ea366367ad5826ee3b11b00fc348ed1d016d484c115f8",
+   "observedAt": "2026-11-21T21:30:56.262094+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "wszystkofinansach"
+   },
+   "responseBodySha256": "e29cb77a5a16968cbf884289939068c67f1eb5e1f0bbe3724081c7776c8ede94",
+   "storedJsonSha256": "6bfc71639f0f67317a0a2ba8a38fb8ab1df8850fe969f93f7ce28fc6a689f4ec"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 84,
+   "file": "raw/016-ig_profile-fellasfinance.json.gz",
+   "gzSha256": "c478e70f085ce040987c5ce39ccd6ea71df4d3dfdd3a9b7ffbeda111abce5a67",
+   "observedAt": "2026-11-21T21:31:04.740913+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "fellasfinance"
+   },
+   "responseBodySha256": "ab59ce1850b8a24397ef0fabcbf34c866d394128d5fd9f1f53c9d3438dc5c959",
+   "storedJsonSha256": "dfa067153b2fbb46dc704e7201438253b5dff9bf74d0d2c5f818732290fc95c8"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 83,
+   "file": "raw/017-ig_profile-piotr-zajac-finsite.json.gz",
+   "gzSha256": "968991a07fd006c7aac70203aa7cec096bd14dc1ef7a6f08c619564b662be8a2",
+   "observedAt": "2026-11-21T21:31:11.600633+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "piotr.zajac.finsite"
+   },
+   "responseBodySha256": "0fc65a6f855f8b39b4a41d204e90dd7af12715e1228b6fefd1a88934c161e376",
+   "storedJsonSha256": "603cdff65b3b4863d580236fb35673f694ca9753ce64042b4ed1bdaa039e634e"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 82,
+   "file": "raw/018-ig_profile-zawodinwestor.json.gz",
+   "gzSha256": "3cfe77e26b71bee5b0c30957db93046d3c5539596bd8efc7f9fefa61c85a4e04",
+   "observedAt": "2026-11-21T21:31:20.984229+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "zawodinwestor"
+   },
+   "responseBodySha256": "9ab908618637e07673904493f9e3cda1a4a208de99617772ac19c57737728e2e",
+   "storedJsonSha256": "b3dc30700d0026bb753956fd307d2da6fe04b73ff3b5ed5f1cfa98bc6c9dcace"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 81,
+   "file": "raw/019-ig_profile-holi-inwestuje.json.gz",
+   "gzSha256": "5206cdf94fb8f495c26d613498b229f759eed68c5fd0e061653eee040376a7ef",
+   "observedAt": "2026-11-21T21:31:31.455867+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "holi.inwestuje"
+   },
+   "responseBodySha256": "3bac048c0152c23054d5ad28cc298575be112721ea12d0dbd39b2c8b358c3a90",
+   "storedJsonSha256": "5123181233867ee1c06f9f65be4839244f692fb1eac0263568c2ade7709e61fc"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 80,
+   "file": "raw/020-ig_profile-patryk-slowik.json.gz",
+   "gzSha256": "27bfca6c9e5d4b13da9757bce2dc7ad52ab972eba128f5a64f220c47cb621dd1",
+   "observedAt": "2026-11-21T21:31:42.799520+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "patryk.slowik__"
+   },
+   "responseBodySha256": "45150e39934b03f0b569cbf5c7a8e6123e79e63a89443324a68c458f1242103c",
+   "storedJsonSha256": "4136ccb98302a2211b04056988e61d1c9c0a9ad9e61aec8747851742b4e7d2a0"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 79,
+   "file": "raw/021-ig_profile-maciekpielok.json.gz",
+   "gzSha256": "71a2166c3390b6e99c34b18f7df66c451ffa2f55d6ddbf76c6e0c0a0c02d788d",
+   "observedAt": "2026-11-21T21:31:52.223273+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "maciekpielok"
+   },
+   "responseBodySha256": "bbe706c6ac6341dd1fd151cad3cd280eba5929e7d0e3e6a39e38166b65c3a4ca",
+   "storedJsonSha256": "b189cdcc69702ab691302e9d5de90c88298b8615669fb30c78aaa7b8abb12af9"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 78,
+   "file": "raw/022-ig_profile-konopskyy.json.gz",
+   "gzSha256": "46aeea3f1c53ff03d4de659f5bd1926a299cb4ac9d732c71a6689eb60e280f11",
+   "observedAt": "2026-11-21T21:32:00.108347+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "konopskyy_"
+   },
+   "responseBodySha256": "15125c8ff090457bc60218cef062582b3ac263e4bb4c1d41ac15f5bd61bbd2a4",
+   "storedJsonSha256": "99adf46d6bb6a0627814a86ca23830c3184c1420834bbcd1ae908d3afed46cc5"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 77,
+   "file": "raw/023-ig_profile-gosiaohme.json.gz",
+   "gzSha256": "8589c5ac230d67576c79dbdfdcd6ce6e4ea8474a8465a81558be5427db9f1617",
+   "observedAt": "2026-11-21T21:32:07.809025+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "gosiaohme"
+   },
+   "responseBodySha256": "94ae1dc6810fa892b4842677951450b4ecb8f37030a4e0c9c13c72108f405ff1",
+   "storedJsonSha256": "ee18b41a3c1669f52e6a4fef6116a8f87b9f8718a6da9d53a82154703dc203d7"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 76,
+   "file": "raw/024-ig_profile-michalkanarkiewicz.json.gz",
+   "gzSha256": "ba66cd256fd571ef5627f3945584b57b47e7620e82a82ea46b73078b368064d7",
+   "observedAt": "2026-11-21T21:32:15.170526+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "michalkanarkiewicz"
+   },
+   "responseBodySha256": "6c64f0bcf67dc5c4279ae7e9ec283096753a94b0a84f52afc424585cb3bf463b",
+   "storedJsonSha256": "3e2ba8ec1aa29e8567865a77468cc7c02f4f2eeff5cd59518a21dd2f0de85ca7"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 74,
+   "file": "raw/026-fb_posts-https-www-facebook-com-ComparicPL.json.gz",
+   "gzSha256": "9e422ea757ddf32a9d475696cfe703b638b616524647d9c61de3aca6121592aa",
+   "observedAt": "2026-11-21T21:33:10.230730+00:00",
+   "op": "fb_posts",
+   "query": {
+    "url": "https://www.facebook.com/ComparicPL"
+   },
+   "responseBodySha256": "ead356a81aaceaf02b42de41a59c8f7dcf57cc8e0d4010048f8a6e912d944a02",
+   "storedJsonSha256": "7fc103644eadd8bd51297a6133303fb75ac2664c22029f10a57e26141ede0600"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 73,
+   "file": "raw/027-fb_posts-155747967133.json.gz",
+   "gzSha256": "e86bf6e4ef8d69b2d72f17c42dab160800d0f32e92e52002c261ba6836366b46",
+   "observedAt": "2026-11-21T21:33:13.482030+00:00",
+   "op": "fb_posts",
+   "query": {
+    "pageId": "155747967133"
+   },
+   "responseBodySha256": "c1c8fa0044156c39e7d46218f52c84c21c0ac9da63bded4dfdade4d1842e33ce",
+   "storedJsonSha256": "b392a497a3cb1238341b8d2bc7b661dc4162446715b28162c639ee4d1f4794f2"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 72,
+   "file": "raw/028-fb_company_ads-155747967133.json.gz",
+   "gzSha256": "02888dc5cfadb4633c88f233060a4ca1ad10761c865b69f45b61ce5d2dc76325",
+   "observedAt": "2026-11-21T21:33:37.170408+00:00",
+   "op": "fb_company_ads",
+   "query": {
+    "country": "PL",
+    "pageId": "155747967133",
+    "status": "ALL"
+   },
+   "responseBodySha256": "2a4dbfbcd3af8f1c09f91304f6e84599e91357c575c0e25eaad5ae36e623621b",
+   "storedJsonSha256": "3a7c2659ac443d35a0109f2255ab1003b7eec52bf58afe901121bc381fda0176"
+  },
+  {
+   "creditsCharged": 0,
+   "creditsRemaining": 72,
+   "file": "raw/029-fb_company_ads-440091156053861.json.gz",
+   "gzSha256": "396081071e33df8be885133340e49a222b37e7b251ace5792879dd7f3cb587b5",
+   "observedAt": "2026-11-21T21:33:51.390000+00:00",
+   "op": "fb_company_ads",
+   "query": {
+    "country": "PL",
+    "pageId": "440091156053861",
+    "status": "ALL"
+   },
+   "responseBodySha256": "fe7fac2276569f95a6d8e034d6426ecc1d7bbd9eeb7cd9f0c5feba8a952eb816",
+   "storedJsonSha256": "2327b8c64cefa7224342f190691b158e15f2c4b8193bdf78b76294d170c9031f"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 71,
+   "file": "raw/030-fb_company_ads-193863317737.json.gz",
+   "gzSha256": "e34cd1aa74eef8881502f5fdd4f8e272f45744968fa881195bf9b534135e74f6",
+   "observedAt": "2026-11-21T21:34:07.621272+00:00",
+   "op": "fb_company_ads",
+   "query": {
+    "country": "PL",
+    "pageId": "193863317737",
+    "status": "ALL"
+   },
+   "responseBodySha256": "5ddd04fc8ed8ec34ad5b0e89013f7da8b21c6a35433498260bfc97d86a07d000",
+   "storedJsonSha256": "b2e66abaa89d0cd4479b75c87820aedfbdefa14cce169db6c4aed245056da679"
+  },
+  {
+   "creditsCharged": 0,
+   "creditsRemaining": 71,
+   "file": "raw/031-fb_company_ads-101136612092263.json.gz",
+   "gzSha256": "ea45615a506c2407ae6fa4a021093bbe7a44654b694b151dc288abfcee0484b7",
+   "observedAt": "2026-11-21T21:34:12.009542+00:00",
+   "op": "fb_company_ads",
+   "query": {
+    "country": "PL",
+    "pageId": "101136612092263",
+    "status": "ALL"
+   },
+   "responseBodySha256": "d954dc3783c66d6dec656e330a61b37fad0ee32ba4e1a94a6261cee91654a0fb",
+   "storedJsonSha256": "245aa23383c056676452dc9d3e0543208cf3f1c948970223a5c7423ff20a24ef"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 70,
+   "file": "raw/032-fb_company_ads-198422827124.json.gz",
+   "gzSha256": "1a1598a482d500d1d59a97efc5d04759fb763b23be5c4936613c4a9e3cb8e45c",
+   "observedAt": "2026-11-21T21:34:19.817935+00:00",
+   "op": "fb_company_ads",
+   "query": {
+    "country": "PL",
+    "pageId": "198422827124",
+    "status": "ALL"
+   },
+   "responseBodySha256": "75b23a4648798aad6d72667ccdf2370a00778cf72e04b8efae568bef70aadb5c",
+   "storedJsonSha256": "1a1983eb53ab23f56b0a862d5e195e977a5c08c0a983443a065d704ae04689e3"
+  },
+  {
+   "creditsCharged": 0,
+   "creditsRemaining": 70,
+   "file": "raw/033-fb_company_ads-mBank.json.gz",
+   "gzSha256": "713b28ca8c4279bf5ce56fd441c1331705985ea2127f78a0d8c55f6957557dda",
+   "observedAt": "2026-11-21T21:34:27.695522+00:00",
+   "op": "fb_company_ads",
+   "query": {
+    "companyName": "mBank",
+    "country": "PL",
+    "status": "ALL"
+   },
+   "responseBodySha256": "5c5e0cc600105dbd6464f4bfdb7aa4073d173c6399a16d18a7413acbe0871418",
+   "storedJsonSha256": "d72e6549ae1b52975ae95cd0e39fe9b8269e5f53d10d3fd6365df521dcc52b43"
+  },
+  {
+   "creditsCharged": 0,
+   "creditsRemaining": 70,
+   "file": "raw/034-fb_company_ads-Freedom24.json.gz",
+   "gzSha256": "713b28ca8c4279bf5ce56fd441c1331705985ea2127f78a0d8c55f6957557dda",
+   "observedAt": "2026-11-21T21:34:33.756444+00:00",
+   "op": "fb_company_ads",
+   "query": {
+    "companyName": "Freedom24",
+    "country": "PL",
+    "status": "ALL"
+   },
+   "responseBodySha256": "5c5e0cc600105dbd6464f4bfdb7aa4073d173c6399a16d18a7413acbe0871418",
+   "storedJsonSha256": "d72e6549ae1b52975ae95cd0e39fe9b8269e5f53d10d3fd6365df521dcc52b43"
+  },
+  {
+   "creditsCharged": 0,
+   "creditsRemaining": 70,
+   "file": "raw/035-fb_company_ads-DM-BO.json.gz",
+   "gzSha256": "713b28ca8c4279bf5ce56fd441c1331705985ea2127f78a0d8c55f6957557dda",
+   "observedAt": "2026-11-21T21:34:38.330916+00:00",
+   "op": "fb_company_ads",
+   "query": {
+    "companyName": "DM BOŚ",
+    "country": "PL",
+    "status": "ALL"
+   },
+   "responseBodySha256": "5c5e0cc600105dbd6464f4bfdb7aa4073d173c6399a16d18a7413acbe0871418",
+   "storedJsonSha256": "d72e6549ae1b52975ae95cd0e39fe9b8269e5f53d10d3fd6365df521dcc52b43"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 69,
+   "file": "raw/036-ig_profile-trading212.json.gz",
+   "gzSha256": "7039c32fb2d565738389d4396fb94d8facaebefaf38afe3854cd51b6da354f4f",
+   "observedAt": "2026-11-21T21:34:49.416361+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "trading212"
+   },
+   "responseBodySha256": "f0f78dc3c556b1f4ca7d4c0b5fc5813b8948400f86fcbccbbefa515b77f85ef6",
+   "storedJsonSha256": "fe39a4a0a4ce986996a6645c01dfa4b89d52d2388c27c2cbe8899a47ab9e5583"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 68,
+   "file": "raw/037-ig_profile-etoro-official.json.gz",
+   "gzSha256": "df5d44792982f269be3fd1c5118212d25a34fe2b208c98e038efd304302c9b4a",
+   "observedAt": "2026-11-21T21:34:59.363491+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "etoro_official"
+   },
+   "responseBodySha256": "157f47c747ef0648f9ca62521ccdbb85b0e04aad96a3c20ce988665bb6d3b06f",
+   "storedJsonSha256": "ce44c086f907f841b491891f5bb8d48dc363f78634b1da1a610f93e255115d70"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 67,
+   "file": "raw/038-ig_profile-golightyear.json.gz",
+   "gzSha256": "7ce33d58fe0c0aa27711b950c21895758696ee3be73ee12f1d3724b2ba539ea0",
+   "observedAt": "2026-11-21T21:35:08.170480+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "golightyear"
+   },
+   "responseBodySha256": "94b0ec72119eb32233adc56ec7c92eb545537d1b14ee190815f3d62cbc96a70a",
+   "storedJsonSha256": "e390e9bf403da55ea3e1102cb342f7e9d37bed5c363f765cb8a1b0c3a3c4da9d"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 66,
+   "file": "raw/039-ig_profile-saxobank.json.gz",
+   "gzSha256": "6974acdebf29d6b789d87d74613308f7a0cba59d42d14763b5f4016f2d23297e",
+   "observedAt": "2026-11-21T21:35:17.118130+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "saxobank"
+   },
+   "responseBodySha256": "5509687da5657879e2d3b1fd2e4381c3c428a4425564d443f4037140a3d67a33",
+   "storedJsonSha256": "69ba0293adc0b70a7d275e80d15a3d433bc9ae9e5566cec88a50836eccaa42de"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 65,
+   "file": "raw/040-fb_posts-440091156053861.json.gz",
+   "gzSha256": "bcca871e88298c92c1cf27a059d4b59b3d2fefa324373d20da90fce0251ab0b4",
+   "observedAt": "2026-11-21T21:35:20.536526+00:00",
+   "op": "fb_posts",
+   "query": {
+    "pageId": "440091156053861"
+   },
+   "responseBodySha256": "d239625aeec6129f2fef4d88f4247a125a250c23e32a960877410f290e07cfb7",
+   "storedJsonSha256": "8db00b734961d2d6b29cf9b062bf970dbbfe44678f84eff5267c8da9e92b9205"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 64,
+   "file": "raw/041-fb_posts-193863317737.json.gz",
+   "gzSha256": "2d9dd05919fc71c6c6ff3ca81a092d97c2f10cec35efaf926746b8bf87d0282c",
+   "observedAt": "2026-11-21T21:35:24.180540+00:00",
+   "op": "fb_posts",
+   "query": {
+    "pageId": "193863317737"
+   },
+   "responseBodySha256": "01f4ae86a11b96707ec65999cb6a97b9336c0052d048fc8bffe98d1b1583f371",
+   "storedJsonSha256": "e3fc1eccd1c957b63cfbf57266cc8d856a0255c799c5b7bf7be3eba90cfad3ca"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 63,
+   "file": "raw/042-fb_posts-101136612092263.json.gz",
+   "gzSha256": "c704519f8eca73edff244f844d55b42991425372c58b3833f23ecfcf4228ec8f",
+   "observedAt": "2026-11-21T21:35:27.413399+00:00",
+   "op": "fb_posts",
+   "query": {
+    "pageId": "101136612092263"
+   },
+   "responseBodySha256": "d7e81779b02f5f343888abc2a56384290bf24438a7d9fac0e68bf60894ef01eb",
+   "storedJsonSha256": "e50817db8c50014b4349fb6a8c8d538c70581605418fdb19edef735e4e9eb8f5"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 62,
+   "file": "raw/043-fb_posts-198422827124.json.gz",
+   "gzSha256": "c63d06487ebc206644f19f38468b35559e2f5137588154c72bf61717d7931976",
+   "observedAt": "2026-11-21T21:35:30.445045+00:00",
+   "op": "fb_posts",
+   "query": {
+    "pageId": "198422827124"
+   },
+   "responseBodySha256": "a15d8244676832a5adf435516a1d71f158ef0155cb48c26a78be5ae85bd39ca3",
+   "storedJsonSha256": "55eb4ed29966d458e1cac20dbdddfb70bc83239c13b49758b8ba4701c9be4357"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 61,
+   "file": "raw/044-fb_posts-https-www-facebook-com-dnarynkow.json.gz",
+   "gzSha256": "521fd16c60972cb560da496c5cf465fa3d44fcf597670946da1af09f714ee8b9",
+   "observedAt": "2026-11-21T21:35:38.469180+00:00",
+   "op": "fb_posts",
+   "query": {
+    "url": "https://www.facebook.com/dnarynkow"
+   },
+   "responseBodySha256": "96e56a45b35352592346082a5ba6101265db61e41eb2def1368ff433acb5aa56",
+   "storedJsonSha256": "52b3ed96f6702a47b75c77da97d2e7d074e6ba382e342a73c387150018681911"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 60,
+   "file": "raw/045-fb_posts-https-www-facebook-com-gieldainwestycjet.json.gz",
+   "gzSha256": "b03735baf4496e139c922d3239ea5f2b08b0b18b3008e4f82cbfe5d6c95287d5",
+   "observedAt": "2026-11-21T21:35:46.748629+00:00",
+   "op": "fb_posts",
+   "query": {
+    "url": "https://www.facebook.com/gieldainwestycjetrading"
+   },
+   "responseBodySha256": "eca5eeee1bf758feb31527cf755f50292bb8cf73d29fb5af74aa54b517143fcd",
+   "storedJsonSha256": "7ebde59fb1e996dff6c845b6aec7f56aff20ca6285cba08832ad4cea8ebb046b"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 59,
+   "file": "raw/046-fb_posts-https-www-facebook-com-inwestordywidendo.json.gz",
+   "gzSha256": "152eecf837fa04af973d271e748ebd6dbbcbe70415ec2a127fb423c049bef4d1",
+   "observedAt": "2026-11-21T21:35:51.855321+00:00",
+   "op": "fb_posts",
+   "query": {
+    "url": "https://www.facebook.com/inwestordywidendowy"
+   },
+   "responseBodySha256": "76e8150e847b427251bfbbaeaa65f5fba15052cb0010baa09d3fdd681ab3c64d",
+   "storedJsonSha256": "2d5e80c9404494a1c45c9e591fd47a0d6a7d3ccdd81061ae6fa99079bb4d7eb4"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 58,
+   "file": "raw/047-fb_posts-https-www-facebook-com-marcin-tuszkiewic.json.gz",
+   "gzSha256": "5fcc495046c557cb4c601d56fd3eb4892249eb232dca115c806dfed93d1c4d03",
+   "observedAt": "2026-11-21T21:35:59.368711+00:00",
+   "op": "fb_posts",
+   "query": {
+    "url": "https://www.facebook.com/marcin.tuszkiewicz"
+   },
+   "responseBodySha256": "c660705d4d2e68fb34b564bd2fbe9f7d5d34fbccc29cdcfca4a3456317d462cf",
+   "storedJsonSha256": "848f88e3af2d280f9718fabb758b9f2062f3a1510d3b604ec4cc8276d97c2b12"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 57,
+   "file": "raw/048-fb_posts-https-www-facebook-com-wszystkofinansach.json.gz",
+   "gzSha256": "6806555783cd9ab4f83fb45852dbd077579cb71329bc9ea45fcabb4b0772fade",
+   "observedAt": "2026-11-21T21:36:05.995197+00:00",
+   "op": "fb_posts",
+   "query": {
+    "url": "https://www.facebook.com/wszystkofinansach"
+   },
+   "responseBodySha256": "dc421ae90ec0328198645f1da76e2f4998a7fbf3d895902b4acb09d2a9c1bf38",
+   "storedJsonSha256": "cb580c2bbfaea8016bbdc360bef0b266fd55b7c385d5a4f33ec3e02adb96cf0d"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 56,
+   "file": "raw/049-ig_profile-biznes24pl.json.gz",
+   "gzSha256": "855bd03255dea999980ce83994337460f3a764a45eeb69f4da358e84d5bc6b91",
+   "observedAt": "2026-11-21T21:36:14.034199+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "biznes24pl"
+   },
+   "responseBodySha256": "6a13e04f2d92f6fe0798d1712ca2a0d358068ccc8fe46ad11aefb3ce6a0461eb",
+   "storedJsonSha256": "5b963bf797fbf832fc4fa994e27fa36ed3aa7ec57bcbee5fd9e326b2c8f37eda"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 55,
+   "file": "raw/050-ig_profile-maciejwieczorekpl.json.gz",
+   "gzSha256": "965b192e4ab11c34796080971cd1c4a6600083694e3e3ac5bbd4fc7edf33a8d0",
+   "observedAt": "2026-11-21T21:36:31.269390+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "maciejwieczorekpl"
+   },
+   "responseBodySha256": "68441a48c4cef21062d6d4c712c84a9abdfd4249c233b2fa9f4b45cef0397e7f",
+   "storedJsonSha256": "82c313aecd96a3c3a09edcd57e694220b91ae752ba6d0e831b068e4973ab36a3"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 54,
+   "file": "raw/051-ig_profile-piotr-piasecki.json.gz",
+   "gzSha256": "1230af15d24dc20b88ec06c39480540ec1382431c2b754984eede22ce88541a9",
+   "observedAt": "2026-11-21T21:36:42.884977+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "piotr_piasecki_"
+   },
+   "responseBodySha256": "88ae13e473f17ebc43f5d6812541695e5117e1c6e6b9e81363fa016d90648ef6",
+   "storedJsonSha256": "61a055a578c7b376a3b271c1999707c5f2f4464c6299f832201e5f78db40dddc"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 53,
+   "file": "raw/052-ig_profile-arleta-bojke.json.gz",
+   "gzSha256": "d0adc9d7b8ae102f2535b4bf93f4e27357336960d873fb954258b81f9fcef213",
+   "observedAt": "2026-11-21T21:36:54.867189+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "arleta.bojke"
+   },
+   "responseBodySha256": "a5c9576c8ae3268580c0645b3911b022e29e8dadfd25f9da76df1effc6fcc137",
+   "storedJsonSha256": "a5ef9050837f67f9cebab194c8d5c4a92e1d0509ee9c4d0fdf9d2361c05e30c3"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 52,
+   "file": "raw/053-fb_posts-https-www-facebook-com-xtbpl.json.gz",
+   "gzSha256": "3e12df71b6e8d98b3dbe9c7b550fb5b96d2115ec47a0419bdb9092e268485c3f",
+   "observedAt": "2026-11-21T21:37:25.328722+00:00",
+   "op": "fb_posts",
+   "query": {
+    "url": "https://www.facebook.com/xtbpl"
+   },
+   "responseBodySha256": "5442e24964d640d6b7d8fe865f90586390af29718ff625399aa97c9baba6c646",
+   "storedJsonSha256": "2187b8e19e839bfd4e49becd030882e7f6b2188c09c54702c0ca1272ad312bcf"
+  },
+  {
+   "creditsCharged": 0,
+   "creditsRemaining": 52,
+   "file": "raw/054-fb_posts-https-www-facebook-com-Trading212.json.gz",
+   "gzSha256": "a552c2610942c266c6accada685bcfcb9375ee4325e220519501f64d4b896598",
+   "observedAt": "2026-11-21T21:37:30.032158+00:00",
+   "op": "fb_posts",
+   "query": {
+    "url": "https://www.facebook.com/Trading212"
+   },
+   "responseBodySha256": "bd331f1dd563418f584e1f8982b2f65269049175cf8dc05975db69ac863fbc5a",
+   "storedJsonSha256": "13662e1654ca234d82ddd5571e101594be93d336b11e98d26ab23f1590c84607"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 51,
+   "file": "raw/055-fb_posts-https-www-facebook-com-eToro.json.gz",
+   "gzSha256": "e5d53c13f465cdf0cc77ac129b5be57ddec462df811254c231d8827786a293ce",
+   "observedAt": "2026-11-21T21:37:36.776598+00:00",
+   "op": "fb_posts",
+   "query": {
+    "url": "https://www.facebook.com/eToro"
+   },
+   "responseBodySha256": "5d8d20b020ccb6038e8cbbffb3798f84483552474b4bd8da6ed47f0f330eda15",
+   "storedJsonSha256": "82f7d7a8ed602757fd0cc4fd2f40ad8cf70ca1dd897243c9545480593f865b2a"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 50,
+   "file": "raw/056-fb_posts-https-www-facebook-com-golightyear.json.gz",
+   "gzSha256": "7bd5805f50fa0b60f21e6970e2e48c1b3e171e494404deacb36d2dc45dc20204",
+   "observedAt": "2026-11-21T21:37:43.949431+00:00",
+   "op": "fb_posts",
+   "query": {
+    "url": "https://www.facebook.com/golightyear"
+   },
+   "responseBodySha256": "d75f3e4b533240c97ec2bd2f7c44f8f6068c8570e79302e7eb51a280a167a2dc",
+   "storedJsonSha256": "837f16d04ef4f9c56a53a44adbfbb9bc17f4a83afff2cc330ed11da91064bc25"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 49,
+   "file": "raw/057-fb_posts-https-www-facebook-com-saxobank.json.gz",
+   "gzSha256": "3a0976ab70a75689aa8279aba48241e4a37897f4d4957f2b115d1c56600cd61d",
+   "observedAt": "2026-11-21T21:37:54.886893+00:00",
+   "op": "fb_posts",
+   "query": {
+    "url": "https://www.facebook.com/saxobank"
+   },
+   "responseBodySha256": "142912a9a643eb9338baf9d19992fa767727e7dc2b260d205dab4965b7f7a0b3",
+   "storedJsonSha256": "2efc72fc4bcbe53f73904c700971b493b78aa9deffdc3988fcd007dc4ec179b4"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 48,
+   "file": "raw/059-fb_company_ads-193863317737.json.gz",
+   "gzSha256": "02a547ca184bc88b2efa9085b1937a519f770428b5f2ef8d4b16e94a41868fed",
+   "observedAt": "2026-11-21T21:38:08.552869+00:00",
+   "op": "fb_company_ads",
+   "query": {
+    "country": "PL",
+    "cursor": "AQHTWBUH8hood27Dn2fUK9X8bITFrSWL0OHTXGyzCMcwLmNqW1brDnsY-ZUvGCR5vZ-S",
+    "pageId": "193863317737",
+    "status": "ALL"
+   },
+   "responseBodySha256": "8867cbad0cd494b59db85df3a975effb7d4abc54fa9dda7c94ae3d5275ee34c2",
+   "storedJsonSha256": "d44a65e0da01f423445f1fbcee389bb4c9fb30a69d09481fbfdc54e72a282e99"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 47,
+   "file": "raw/060-fb_company_ads-198422827124.json.gz",
+   "gzSha256": "8157f50285b3dd471387626b06e50c8fb99e7c0018f38a4866c4f1bd241f1db2",
+   "observedAt": "2026-11-21T21:38:14.836056+00:00",
+   "op": "fb_company_ads",
+   "query": {
+    "country": "PL",
+    "cursor": "AQHTDZd-1HRh5fCFqUeWXYV0TyY6YXgmlY636wT454_xoXGYPKBRh7ZJ1c9FQ9O7w2X3",
+    "pageId": "198422827124",
+    "status": "ALL"
+   },
+   "responseBodySha256": "9423a5be4d11474255bfdd12bea0b0ec089a74919b75fae2378ba50bc0661acb",
+   "storedJsonSha256": "2c438b9d7e109c8f1c7af8b137066e450bbd76057826334699330f7e8bc9a850"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 46,
+   "file": "raw/061-fb_ads_search-XTB.json.gz",
+   "gzSha256": "c382b53376e6ea6978a0b7c7a6a8003a0183ec0f736c4d54541b79c01c553193",
+   "observedAt": "2026-11-21T21:38:21.932658+00:00",
+   "op": "fb_ads_search",
+   "query": {
+    "country": "PL",
+    "query": "XTB",
+    "status": "ALL"
+   },
+   "responseBodySha256": "a9af37e3db33d4d08b12d23291e95184bd2f2644d6867d3caff9f6fcdc8c5f06",
+   "storedJsonSha256": "6cb310bd790329d600fa1e783c3658127e7fa26b60e98c74eeb2bab090c7da6a"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 45,
+   "file": "raw/062-fb_ads_search-Trading-212.json.gz",
+   "gzSha256": "5cc310bd3c5323d01123449d4109b417332319eef764aba068faafba9de104c8",
+   "observedAt": "2026-11-21T21:38:28.314774+00:00",
+   "op": "fb_ads_search",
+   "query": {
+    "country": "PL",
+    "query": "Trading 212",
+    "status": "ALL"
+   },
+   "responseBodySha256": "741e6a3efdaf0a8d94989b1da1989bc6595d8e12b7d855c54c2b1dfbcae4b18a",
+   "storedJsonSha256": "e239eb10f78aa641779ca4fdd3d527f0cbc45e80aa87ae3c2d8e56142f81cebf"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 44,
+   "file": "raw/063-fb_ads_search-eToro.json.gz",
+   "gzSha256": "61aca3f12e3701656aec1c05f16d04037346eacf5143b306ac5efc6214f9e758",
+   "observedAt": "2026-11-21T21:38:34.995820+00:00",
+   "op": "fb_ads_search",
+   "query": {
+    "country": "PL",
+    "query": "eToro",
+    "status": "ALL"
+   },
+   "responseBodySha256": "01b24dc1cbff163a58c4f5472158988d1ad3783457cf1514d1e98239ee68168d",
+   "storedJsonSha256": "f08b881efda752bd3524003b91b7dfe1c8a010f6f887c35bcb42f3c0a9e1ce65"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 43,
+   "file": "raw/064-fb_ads_search-kod-polecaj-cy-broker.json.gz",
+   "gzSha256": "9088ff9292f1281e6036d8970a66d2529f55ebb2ae74d3269db919ed0f57295b",
+   "observedAt": "2026-11-21T21:38:40.831644+00:00",
+   "op": "fb_ads_search",
+   "query": {
+    "country": "PL",
+    "query": "kod polecający broker",
+    "status": "ALL"
+   },
+   "responseBodySha256": "c73c793f9d99f0a83e10aca331ed404cbce0ad5bf20f8483fbd1ae6e3a5fda6f",
+   "storedJsonSha256": "7e03f47922083db4d86dc68e7143964500c73fb67b6285db4574db2cc26486f7"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 42,
+   "file": "raw/065-fb_ad_detail-1421543096020676.json.gz",
+   "gzSha256": "6b66aee0820342f59a5cc6c040c88a61a236ca8448404ebde729b78ae0438484",
+   "observedAt": "2026-11-21T21:39:06.972856+00:00",
+   "op": "fb_ad_detail",
+   "query": {
+    "id": "1421543096020676"
+   },
+   "responseBodySha256": "2495b3e72fbc9858be65a3d3a5e8724c9d3696c7b435d2a3a339b52657649636",
+   "storedJsonSha256": "db8d32d0905a361261a247f4b1c6e9d22efe79288bb281a09b730d0f6427deec"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 41,
+   "file": "raw/066-fb_ad_detail-3672200766256534.json.gz",
+   "gzSha256": "ac0f5a3f81d11b12d1f9b5c2e32169925b0dccf88e40ac7d09c5ae6327a8141d",
+   "observedAt": "2026-11-21T21:39:12.295183+00:00",
+   "op": "fb_ad_detail",
+   "query": {
+    "id": "3672200766256534"
+   },
+   "responseBodySha256": "46414005424084a7990872d321116b80cce9eb739dd17fbe6e1237e162beb95f",
+   "storedJsonSha256": "8b1b6c8cc5644a659ca7f513d20fc70d0fb9006aeca85baa56fbc15fd3ac86c8"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 40,
+   "file": "raw/067-fb_ad_detail-1426347765576294.json.gz",
+   "gzSha256": "7e14dba2544526619ecf345bc3c7d36723fa80e155c9984caaef1d7252d7cec7",
+   "observedAt": "2026-11-21T21:39:17.831751+00:00",
+   "op": "fb_ad_detail",
+   "query": {
+    "id": "1426347765576294"
+   },
+   "responseBodySha256": "6d073718e787b84524abc71f4252a3fbd5a3b0b1ce9aeb6a3a8f6c371d77aea5",
+   "storedJsonSha256": "6f9b767a7aadb2a68c814fe4a2bfdd6c900f6b695bc60c98c7f1ee5e30a8f700"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 39,
+   "file": "raw/068-fb_ad_detail-1214447470707227.json.gz",
+   "gzSha256": "1ea311de4a9f44b1d68b06716240c746aaffc5eaec27294d5e54bafd0b306958",
+   "observedAt": "2026-11-21T21:39:24.188611+00:00",
+   "op": "fb_ad_detail",
+   "query": {
+    "id": "1214447470707227"
+   },
+   "responseBodySha256": "4db78ec3d6fe07789ee9bfe9ae72de59b166a88ad7eed3c24210a1f052d2d22d",
+   "storedJsonSha256": "3c41a0a1da7bec82bf70c900a8d0e21b92b92b6737ca5c812ed4dcd5bbba9adc"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 38,
+   "file": "raw/069-fb_ad_detail-1674381353537403.json.gz",
+   "gzSha256": "4f279947a169fb4f88051640dd0191c86085b92af8a76b9caf892b2f72e8a98d",
+   "observedAt": "2026-11-21T21:39:28.768123+00:00",
+   "op": "fb_ad_detail",
+   "query": {
+    "id": "1674381353537403"
+   },
+   "responseBodySha256": "26df5631c5feca4ed0b7b7ab1c3ae352d995c7b75a4add265fd3f387b051bab5",
+   "storedJsonSha256": "226793704301d5dbb1eba8a044119f12c13ae7da99d64308c4de2b1e2be24287"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 37,
+   "file": "raw/070-fb_ads_search-Freedom24.json.gz",
+   "gzSha256": "a3f74c2fcca841550840d1ca1a307068b10da213524801865c23c1e40946c133",
+   "observedAt": "2026-11-21T21:39:37.678888+00:00",
+   "op": "fb_ads_search",
+   "query": {
+    "country": "PL",
+    "query": "Freedom24",
+    "status": "ALL"
+   },
+   "responseBodySha256": "1aca5d33321215bfa07a11c99c5f11f0f5abaf3fd1ac0cb7a856dddacca05b0f",
+   "storedJsonSha256": "59b9dbc86fba88a7b7a551ab90aefb0627a72dde32837896325d7429d3a5644a"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 36,
+   "file": "raw/071-fb_ads_search-Lightyear.json.gz",
+   "gzSha256": "f2a19cd8363118f6de50393098fbda4d8a16de3480b44758691041be125733aa",
+   "observedAt": "2026-11-21T21:39:45.770324+00:00",
+   "op": "fb_ads_search",
+   "query": {
+    "country": "PL",
+    "query": "Lightyear",
+    "status": "ALL"
+   },
+   "responseBodySha256": "29472f3b4f43dc04483d8c1ae39c670078c6f839151d8b28e4c1aef96b560362",
+   "storedJsonSha256": "71a63ae182f2e5a55d30219b699664e2ba615ff6646c5567e62eecc8e3808173"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 35,
+   "file": "raw/072-fb_ads_search-kod-promocyjny-XTB.json.gz",
+   "gzSha256": "200b8712b0ecf3e6d933ea27b4ad0f57f2fc130430c2855ee7ad1f6efe720f3b",
+   "observedAt": "2026-11-21T21:39:49.925984+00:00",
+   "op": "fb_ads_search",
+   "query": {
+    "country": "PL",
+    "query": "kod promocyjny XTB",
+    "status": "ALL"
+   },
+   "responseBodySha256": "5331c7ed25d26a65b3253094d91364fa5a2c12a6071f58c14856c21d3aa4e315",
+   "storedJsonSha256": "7dfa72cb42b6e50ce84adfe388700ff325550685c4eda99dc3eda322a32f3a35"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 34,
+   "file": "raw/074-fb_ad_detail-846978505145299.json.gz",
+   "gzSha256": "5e3d52e47c8c57c89673a79386e65e39e4c37e3bd1a5a477bfffd1f8ae1745a3",
+   "observedAt": "2026-11-21T21:40:59.759181+00:00",
+   "op": "fb_ad_detail",
+   "query": {
+    "id": "846978505145299"
+   },
+   "responseBodySha256": "04df9aa55deb856c219546bdd143a1e500d05126cfc05f3e087b4602cdcb28da",
+   "storedJsonSha256": "e44164ecb2660437bc18fa352daab2a2c7190ffdf520308401ee3eb9153b903d"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 33,
+   "file": "raw/075-fb_ad_detail-1269830924657531.json.gz",
+   "gzSha256": "533d3abb9bffecbbe34e067234a0862475d31def111ff43d59510cbb7e58de4f",
+   "observedAt": "2026-11-21T21:41:04.896637+00:00",
+   "op": "fb_ad_detail",
+   "query": {
+    "id": "1269830924657531"
+   },
+   "responseBodySha256": "523ef2391c2cbe89a95529ccecf1806ac571a348020b774bd245364b27458260",
+   "storedJsonSha256": "e36610ad25e0252bba7b8e3c3becb88d956c58d5d8b0822d909c9418a608fb8f"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 32,
+   "file": "raw/076-ig_profile-kozaczek-poland.json.gz",
+   "gzSha256": "e486712959fc119225fe52f3d2f8b12215aaa958759d13da080aba1c9b08d0da",
+   "observedAt": "2026-11-21T21:41:28.901087+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "kozaczek.poland"
+   },
+   "responseBodySha256": "49ea206bfa9e27d48a65b1b635c93a95263ed49e8082369f88893bdb776cf097",
+   "storedJsonSha256": "dbedae41ae1d3630747b3825df23da50ed684a3394b228f497d3a745d126b7c7"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 31,
+   "file": "raw/077-ig_profile-mr-pankracy.json.gz",
+   "gzSha256": "b8a41f803ca222d97cf4517dbc80f2e1b4a3392cbdd0814eb3fe44b6e65e09a0",
+   "observedAt": "2026-11-21T21:41:36.121033+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "mr_pankracy"
+   },
+   "responseBodySha256": "25a4eb5e96b82d84ca55b5d2f3a06ad5b72b3430c92a3b4f0fde5df88e143b6a",
+   "storedJsonSha256": "14f33c4d431f88477b45fe8f25a8d3852b85b49d037d721946990557dbbeaa63"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 30,
+   "file": "raw/078-ig_profile-swiat-krypto.json.gz",
+   "gzSha256": "080d3e240949f4e60707e97ec0642d9c371a824af8bd716c9f84093979c1e951",
+   "observedAt": "2026-11-21T21:41:47.036830+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "swiat.krypto"
+   },
+   "responseBodySha256": "ef8d39a4bf6c399fd3f4a5fd35fbe3c27865a51cb8540ac6a8a7f2fc4f172492",
+   "storedJsonSha256": "7951a252f676e8a95583281dfcebe012cbaf803f18d1b61f16cd8d6e27194f90"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 29,
+   "file": "raw/079-ig_profile-subiektywnie-o-finansach.json.gz",
+   "gzSha256": "4728e36c07ff49db808dd891f2ba2656d89012caa9268870f797bacc7dd85e83",
+   "observedAt": "2026-11-21T21:41:56.439067+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "subiektywnie.o.finansach"
+   },
+   "responseBodySha256": "225780b894eeffeeef735c022a42a5b8c2d1cda93fb9c4d00cf0d4d8937846de",
+   "storedJsonSha256": "1e759451240ef6796bd8da3e21124ba97d4e187d85a59c8a9a61f3173db1eaf9"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 28,
+   "file": "raw/080-ig_profile-prostefinanse.json.gz",
+   "gzSha256": "cb4a6c31b33864e45907c11217a48bc930b1a6f64a8fe841bac8539c34327947",
+   "observedAt": "2026-11-21T21:42:11.649762+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "prostefinanse"
+   },
+   "responseBodySha256": "a09e29c1ed195f96758c6efc4a99b2f1f801337999756e1a7e718bd121cae8ef",
+   "storedJsonSha256": "bd7c102f5b31eb66418b51b87a0de523dd8c97b87ae05b0b8d2d80f15e8e0b77"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 27,
+   "file": "raw/081-ig_profile-inteligentny-portfel.json.gz",
+   "gzSha256": "e8cef48948a41afa93f8be8cc30c47702eb2f9cee6b111aaa8fab7b5f9eecb32",
+   "observedAt": "2026-11-21T21:42:20.868621+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "inteligentny.portfel"
+   },
+   "responseBodySha256": "bcb49ffe233c2d8504aff113b5dc81139baf4ec083b9e63dd5ec24488c2eea43",
+   "storedJsonSha256": "16a615bdcf23277ad7f0541b44a43e5cbb551fd93d692db6ba8878a042d5fbbb"
+  },
+  {
+   "creditsCharged": 1,
+   "creditsRemaining": 26,
+   "file": "raw/082-ig_profile-milionpogodzinach-yt.json.gz",
+   "gzSha256": "4a329ebcb4fcc0158be16342597756079d1e4824b5fd61540d8adc3b110b6d99",
+   "observedAt": "2026-11-21T21:42:32.876396+00:00",
+   "op": "ig_profile",
+   "query": {
+    "handle": "milionpogodzinach_yt"
+   },
+   "responseBodySha256": "5d0dff25ba6d2f254b7e0a34df4f2f60d779a2b04004aa4ed5e6da096242d0d3",
+   "storedJsonSha256": "eaf239a1e76d4488e7cc7238e68e4e0e2d8c5b7300fc8bc9c6f747728c72a036"
+  }
+ ],
+ "keyHeader": "x-api-key: REDACTED",
+ "parser": "vendor-social-1",
+ "replay": {
+  "captures": 494,
+  "creators": 48,
+  "file": "replay-vendor.json.gz",
+  "gzSha256": "473fd6efe021054e21c49c0f1492210c5a6b6320e734612909d36d3ec3543dfa"
+ },
+ "requests": 82,
+ "sample": {
+  "ads": {
+   "advertisers": 7,
+   "count": 114,
+   "withEuReach": 7
+  },
+  "collectedOn": "2026-11-21",
+  "creditsRemaining": 26,
+  "creditsSpent": 74,
+  "facebook": {
+   "pages": 10,
+   "posts": 30
+  },
+  "firmsWithMaterial": [
+   "bos",
+   "etoro",
+   "freedom24",
+   "lightyear",
+   "mbank",
+   "pkobp",
+   "saxo",
+   "trading212",
+   "xtb"
+  ],
+  "instagram": {
+   "accounts": 31,
+   "posts": 350
+  },
+  "m1": 311,
+  "m2": 183,
+  "vendor": "scrapecreators"
+ },
+ "sanitization": "Z odpowiedzi usunięto komentarze użytkowników, listy obserwujących, podpisane adresy mediów i profilowych; zostały publiczne nazwy kont, treść postów i reklam oraz liczby.",
+ "stopped": null,
+ "vendor": "scrapecreators"
+}
