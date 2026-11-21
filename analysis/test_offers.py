@@ -267,6 +267,13 @@ class SavedOffers(unittest.TestCase):
             with self.subTest(entity=key):
                 self.assertEqual(self.results[key]["route"], "complete")
 
+    def test_shared_captures_give_the_same_route(self):
+        from collectors.sites import read_m3_replay
+        _, captures, _ = read_m3_replay(RUN / "entities.json")
+        mine = [c for c in captures if c["m3Entity"] == "m3:rdmwm.pl"]
+        result = offers.analyze_entity(offers.entity_from_m3_captures(mine), INDEX)
+        self.assertEqual(result["route"], self.results["m3:rdmwm.pl"]["route"])
+
     def test_notified_firm_without_advice_code(self):
         result = self.results["m3:deriv.com"]
         self.assertEqual(result["identity"]["state"], "authorized_other_scope")

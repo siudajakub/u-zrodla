@@ -389,6 +389,7 @@ def m3_entity_captures(entity):
         )
         item["provenance"].update(discoveredFrom=(entity.get("seed") or {}).get("discovery", {}).get("resultUrl"), role=page.get("role"))
         item["m3Entity"] = entity["id"]
+        item["identityText"] = page.get("identityText", "")
         out.append(item)
     return creator, out
 

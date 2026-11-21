@@ -647,6 +647,16 @@ def entity_from_capture(capture):
                        "text": text, "textSha256": sha256(text.encode()).hexdigest(), "identityText": footer, "role": "offer"}]}
 
 
+def entity_from_m3_captures(captures):
+    """Rebuild one firm from the Captures of collectors.sites.m3_entity_captures (same m3Entity)."""
+    first = captures[0]
+    return {"id": first["m3Entity"], "domain": first["m3Entity"].removeprefix("m3:"), "label": first.get("brand"),
+            "discoveredVia": (first.get("provenance") or {}).get("discoveredFrom"),
+            "pages": [{"url": c["url"], "observedAt": c.get("observedAt"), "sha256": (c.get("provenance") or {}).get("responseSha256"),
+                       "text": c.get("description") or "", "textSha256": c.get("contentHash"), "identityText": c.get("identityText", "")}
+                      for c in captures]}
+
+
 def analyze_run(raw_dir, index=None, controls=CONTROL_CAPTURES):
     index = index or load_registers()
     entities = json.loads((Path(raw_dir) / "entities.json").read_text(encoding="utf-8"))["entities"]
