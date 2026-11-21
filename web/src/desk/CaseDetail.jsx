@@ -17,7 +17,7 @@ import { Thumbnail } from "@astryxdesign/core/Thumbnail";
 import { Heading, Text } from "@astryxdesign/core/Text";
 import { Token } from "@astryxdesign/core/Token";
 import { api } from "./api.js";
-import { BANDS, HISTORY_KIND, RESOLUTIONS, RESOLUTION_LABEL, STATUS, VARIANTS, clock, fmtDate, fmtDateTime, fmtDayRoman, isYoutube, safeUrl } from "./labels.js";
+import { BANDS, HISTORY_KIND, RESOLUTIONS, ROUTES, RESOLUTION_LABEL, STATUS, VARIANTS, clock, fmtDate, fmtDateTime, fmtDayRoman, isYoutube, safeUrl } from "./labels.js";
 import { ExternalLink, OriginToken, RecalcToken, ReReviewToken, SCALE_NOTE, discoveryLines, originLabel, proofOf, reachText } from "./parts.jsx";
 
 function Tile({ title, id, children, aside }) {
@@ -49,7 +49,7 @@ function WhyTile({ c }) {
     </VStack>
   );
   return (
-    <Tile title="Dlaczego tutaj" aside={c.route === "refer" ? <Token size="sm" color="blue" label="do sprawdzenia" /> : <Token size="sm" color="gray" label={c.route || "bez oceny"} />}>
+    <Tile title="Dlaczego tutaj" aside={c.route === "refer" ? <Token size="sm" color="blue" label="do sprawdzenia" /> : <Token size="sm" color="gray" label={ROUTES[c.route] || c.route || "bez oceny"} />}>
       {c.needsRecalc && !c.isV2 ? (
         <Text color="secondary">Wynik ze starszej wersji analizy. Przelicz materiały, aby zobaczyć uzasadnienie.</Text>
       ) : reasons.length ? (
@@ -94,7 +94,7 @@ function MomentsTile({ c }) {
               {r.text && <Text type="supporting" color="secondary" maxLines={2}>„{r.text}”</Text>}
             </VStack>
           ) },
-          { key: "open", header: "Otwórz", width: pixel(96), renderCell: (r) => (r.link ? <ExternalLink url={r.link}>{r.inDescription ? "Film ↗" : `od ${clock(r.start)} ↗`}</ExternalLink> : <Text type="supporting" color="secondary">—</Text>) },
+          { key: "open", header: "Otwórz", width: pixel(96), renderCell: (r) => (r.link ? <ExternalLink url={r.link}>{r.inDescription ? (isYoutube(r.link) ? "Film ↗" : "Źródło ↗") : `od ${clock(r.start)} ↗`}</ExternalLink> : <Text type="supporting" color="secondary">—</Text>) },
         ]} />
       )}
       {frames.length > 0 && (
@@ -134,7 +134,7 @@ function coverageRows(c) {
   }
   if (m.platformFlags) {
     const p = m.platformFlags;
-    rows.push({ key: "p", name: "Oznaczenie YouTube", ok: p.paidPromotion != null, text: p.paidPromotion == null ? "nie sprawdzono" : p.paidPromotion ? "płatna promocja: tak" : "brak" });
+    rows.push({ key: "p", name: c.platform === "youtube" ? "Oznaczenie YouTube" : "Oznaczenie platformy", ok: p.paidPromotion != null, text: p.paidPromotion == null ? "nie sprawdzono" : p.paidPromotion ? "płatna promocja: tak" : "brak" });
   }
   return rows;
 }
@@ -144,6 +144,9 @@ function ScopeTile({ c }) {
   const gaps = (c.coverage?.gaps || []).map((g) => g.reason).filter(Boolean);
   return (
     <Tile title="Co zbadano">
+      {c.coverage?.label && <Text weight="medium">{c.coverage.label}</Text>}
+      {c.platform === "tiktok" && <Text type="supporting">Zbadano tylko podpis pod filmem. Mowy i obrazu nie badano, więc brak oznaczenia w podpisie nie jest wnioskiem.</Text>}
+      {(c.platform === "facebook" || c.platform === "instagram") && <Text type="supporting">Zbadano tylko tekst reklamy. Obrazu i strony docelowej nie badano.</Text>}
       <Table idKey="key" density="compact" verticalAlign="top" data={rows} columns={[
         { key: "n", header: "Zakres", width: proportional(2, { minWidth: 100 }), renderCell: (r) => <Text weight="medium">{r.name}</Text> },
         { key: "s", header: "Stan", width: pixel(84), renderCell: (r) => <Token size="sm" color={r.ok ? "green" : "yellow"} label={r.ok ? "zbadano" : "luka"} /> },
@@ -184,6 +187,8 @@ function FirmTile({ c }) {
 }
 
 /* 5. Twórca i zasięg. */
+const REACH_LABEL = { plays: "Odtworzenia", eu_reach: "Zasięg w UE", views: "Zasięg filmu", subscribers: "Zasięg filmu" };
+
 function CreatorTile({ c }) {
   const known = c.creator?.isSeed || c.creator?.seed ? "znany (monitorowany)" : c.creator?.isNewInScan ? "nowy w skanie" : "znany";
   const disc = c.discovery[0] || c.creator?.discoveries?.[0];
@@ -191,10 +196,10 @@ function CreatorTile({ c }) {
     <Tile title="Twórca i zasięg">
       <MetadataList>
         <MetadataListItem label="Kanał">{c.creatorName || "—"} · {known}</MetadataListItem>
-        <MetadataListItem label="Zasięg filmu">{reachText(c.reach)}</MetadataListItem>
+        <MetadataListItem label={REACH_LABEL[c.reach?.metric] || "Zasięg filmu"}>{reachText(c.reach)}</MetadataListItem>
         {c.creator?.reach && <MetadataListItem label="Zasięg kanału">{reachText(c.creator.reach)}</MetadataListItem>}
         <MetadataListItem label="Jak odkryto">{disc ? discoveryLines([disc])[0] : "Droga odkrycia sprzed rozszerzenia kontraktu"}</MetadataListItem>
-        <MetadataListItem label="Opublikowano">{fmtDate(c.publishedAt)}</MetadataListItem>
+        <MetadataListItem label="Opublikowano">{c.publishedAt ? fmtDate(c.publishedAt) : c.publishedAtDerived?.value ? <HStack gap={1} vAlign="center" wrap="wrap"><Text>≈ {fmtDate(c.publishedAtDerived.value)}</Text><Token size="sm" color="yellow" label="data szacowana" description={c.publishedAtDerived.note || undefined} /><Text type="supporting" color="secondary">{c.publishedAtDerived.note || "Szacunek, nie data z platformy."}</Text></HStack> : "—"}</MetadataListItem>
       </MetadataList>
     </Tile>
   );
@@ -308,7 +313,7 @@ function MoreTabs({ c }) {
           {c.discovery.map((d, i) => <MetadataListItem key={i} label={i === 0 ? "Droga odkrycia" : ""}>{discoveryLines([d])[0]}</MetadataListItem>)}
         </MetadataList>
         {c.raw.description && (
-          <Collapsible defaultIsOpen={false} trigger={<Text type="supporting">Pełny opis filmu</Text>}>
+          <Collapsible defaultIsOpen={false} trigger={<Text type="supporting">{c.platform === "youtube" ? "Pełny opis filmu" : "Pełny podpis lub tekst"}</Text>}>
             <Blockquote>{c.raw.description}</Blockquote>
           </Collapsible>
         )}
@@ -365,7 +370,7 @@ export function CaseDetail({ c, headingRef, onBack, onSaved, narrow }) {
         <Heading level={2} ref={headingRef} tabIndex={-1}>{c.title}</Heading>
         <Text type="supporting" color="secondary" maxLines={1}>{[c.creatorName, firm].filter(Boolean).join(" · ")}</Text>
         <HStack gap={2} wrap="wrap">
-          {proof?.url && <Button label={proof.start != null ? `Otwórz w filmie od ${clock(proof.start)}` : isYoutube(proof.url) ? "Otwórz w filmie" : "Otwórz źródło"} size="sm" variant="primary" href={proof.url} target="_blank" />}
+          {proof?.url && <Button label={!isYoutube(proof.url) ? "Otwórz źródło" : proof.start != null ? `Otwórz w filmie od ${clock(proof.start)}` : "Otwórz w filmie"} size="sm" variant="primary" href={proof.url} target="_blank" />}
           {!narrow && <Button label="Decyzja" size="sm" onClick={jump("sekcja-decyzja")} />}
         </HStack>
       </VStack>
