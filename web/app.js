@@ -400,7 +400,9 @@
             ? text(finding.coverage)
             : "dostępne segmenty mowy i opis",
           finding.asrScope
-            ? ` · zakres transkrypcji: ${text(finding.asrScope)}`
+            ? ` · transkrypcja: od ${clock(
+                finding.asrScope.start || 0,
+              )} do maks. ${text(finding.asrScope.maxSeconds)} s`
             : "",
           ". Obecność segmentów nie potwierdza kompletnej analizy całej ścieżki dźwiękowej.",
         ),
