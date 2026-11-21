@@ -160,11 +160,23 @@ class PlanCases(Invariants, unittest.TestCase):
         self.assertEqual(result["adRelationship"]["language"]["value"], "pl")
 
     def test_13_unknown_broker_without_register_entry_is_completed_not_referred(self):
-        result = self.run_case(cap("Partnerem odcinka jest broker FikcyjnyTrade. Inwestuj w akcje."))
+        # An undisclosed relation (link without a disclosure) to a firm missing from the copies waits for the identity.
+        result = self.run_case(cap("Otwórz konto w Saxo: https://www.home.saxo/pl-pl/open-account?cid=1234\nInwestuj w akcje."))
         premise = next(p for p in result["premises"] if p["type"] == "U3")
         self.assertEqual(premise["status"], "conditional")
         self.assertEqual(result["reviewDecision"]["route"], "complete")
         self.assertEqual(result["reviewDecision"]["completeReason"], "identity_unresolved")
+
+    def test_13b_disclosed_cooperation_with_unresolved_identity_goes_to_the_register_not_to_incomplete(self):
+        result = self.run_case(cap("Partnerem odcinka jest broker FikcyjnyTrade. Inwestuj w akcje.",
+                                   [{"start": 0, "end": 5, "text": "Dzień dobry, o rynku ropy."}], True))
+        self.assertFalse(any(p["type"] == "U3" for p in result["premises"]))
+        self.assertEqual(result["reviewDecision"]["route"], "no_signal")
+        registry = result["adRegistry"]
+        self.assertEqual((registry["state"], registry["identityStatus"]), ("included", "no_registry_entry"))
+        self.assertIn("kopie z 21.11.2026", registry["identityNote"])
+        self.assertIn("domy maklerskie", registry["identityNote"])
+        self.assertEqual(result["adRelationship"]["firm"]["entityType"], "unresolved")
 
     def test_14_tracking_link_and_code_without_disclosure_full_transcript(self):
         description = "💰 Sprawdź XTB\n👉 https://link-pso.xtb.com/pso/ABC12\nKod „KANAL” przy rejestracji = darmowy kurs."
@@ -255,6 +267,64 @@ class PlanCases(Invariants, unittest.TestCase):
 
     def test_firm_index_is_current(self):
         self.assertEqual(firm_index.main(["--check"]), 0)
+
+
+class EntityTypes(unittest.TestCase):
+    """Temat 1 definitions applied to the register copies (T1-02, T1-03): type, home country, passporting."""
+
+    def candidates(self, key):
+        index = json.loads(firm_index.OUTPUT.read_text(encoding="utf-8"))
+        return {c["name"]: c for f in index["firms"] if f["key"] == key for c in f["candidates"]}
+
+    def test_every_candidate_is_typed_from_the_register_it_came_from(self):
+        xtb = self.candidates("xtb")
+        self.assertEqual((xtb["XTB S.A."]["entityType"], xtb["XTB S.A."]["homeCountry"], xtb["XTB S.A."]["passporting"]),
+                         ("domestic_investment_firm", "Polska", None))
+        self.assertEqual((xtb["XTB Ltd"]["entityType"], xtb["XTB Ltd"]["passporting"]), ("foreign_investment_firm", "cross_border"))
+        mbank, = self.candidates("mbank").values()
+        self.assertEqual((mbank["entityType"], mbank["homeCountry"]), ("domestic_bank", "Polska"))
+        index = json.loads(firm_index.OUTPUT.read_text(encoding="utf-8"))
+        for firm in index["firms"]:
+            for c in firm["candidates"]:
+                self.assertIn(c["entityType"], ("domestic_investment_firm", "domestic_bank", "foreign_investment_firm"), c["name"])
+                self.assertTrue(c["homeCountry"], c["name"])
+
+    def test_mixed_candidates_stay_unresolved_and_branch_is_distinguished(self):
+        from analysis import qualification
+        mixed = qualification._entity_view(list(self.candidates("xtb").values()))
+        self.assertEqual((mixed["entityType"], mixed["passporting"]), ("unresolved", "unresolved"))
+        self.assertEqual(mixed["entityTypes"], ["domestic_investment_firm", "foreign_investment_firm"])
+        branch = {"name": "IG Europe GmbH", "entityType": "foreign_investment_firm", "homeCountry": "Niemcy", "passporting": "branch"}
+        self.assertEqual(qualification._entity_view([branch])["passporting"], "branch")
+        self.assertIn("działa przez oddział w Polsce", qualification._candidate_phrase(branch))
+
+    def test_trading212_with_three_foreign_rows_is_a_candidate_set_not_a_guess(self):
+        result = qualify(cap("Partnerem odcinka jest Trading 212. Inwestuj w akcje."))
+        firm = result["adRelationship"]["firm"]
+        self.assertEqual((firm["identityStatus"], len(firm["candidates"]), firm["entityType"]), ("candidates", 3, "foreign_investment_firm"))
+        self.assertEqual(firm["homeCountry"], "unresolved")
+
+
+class PolishText(unittest.TestCase):
+    def test_quote_is_cut_at_a_sentence_or_word_not_on_a_dangling_letter(self):
+        from analysis.qualification import _quote
+        text = ("Dzisiaj opowiem wam o tym, jak działa platforma i dlaczego warto ją znać w pracy na kanale. "
+                "W kolejnych odcinkach pokażę więcej, a także zaprezentuję rzeczy dodatkowe.")
+        self.assertEqual(_quote(text), "„Dzisiaj opowiem wam o tym, jak działa platforma i dlaczego warto ją znać w pracy na kanale”")
+        tail = _quote("a" * 5 + " " + " ".join(["słowo"] * 19) + " w kolejnym")
+        self.assertTrue(tail.endswith("słowo…”"), tail)
+        self.assertNotRegex(_quote("x " + "abc " * 28 + "W dalszej części"), r"\sW…”$")
+
+    def test_innocent_explanation_matches_the_examined_scope(self):
+        from analysis.qualification import _explanations, coverage
+        full = coverage(cap("Opis.", [{"start": 0, "end": 5, "text": "Mowa."}], True))
+        self.assertEqual(full["gaps"][0]["modality"], "frames")
+        text = _explanations("U1", full)[0]
+        self.assertNotIn("w miejscu, którego nie zbadano", text)
+        self.assertIn("kadry", text)
+        self.assertNotIn("mowa", text)
+        none = coverage(cap("Opis."))
+        self.assertIn("mowa", _explanations("U1", none)[0])
 
 
 class RealMaterials(Invariants, unittest.TestCase):
@@ -526,7 +596,7 @@ EXPECTED_C2 = {
     "7M0rC6-Rueo": "refer", "OIyPE0z2mng": "refer", "ZJrT-X08Xwc": "refer", "AqXHkxDzSDI": "refer",
     "yIbtMnfP25Q": "no_signal", "O5YmmKadQQw": "no_signal", "eQYmvRfHtr8": "no_signal", "YQH4FEP9exI": "no_signal",
     "ePfzHQVf-lc": "no_signal", "o2GfnmVVkO8": "no_signal", "p_ui_fqLdV0": "no_signal", "i3QxMqyRlks": "no_signal",
-    "_aqCM37gK1U": "complete",
+    "_aqCM37gK1U": "no_signal",  # Saxo Bank: openly disclosed; identity not in the register copies, noted in the ad register
 }
 
 
@@ -557,8 +627,36 @@ class MediaPackage2(Invariants, unittest.TestCase):
                 if route == "no_signal":
                     self.assertEqual(result["adRegistry"]["state"], "included")
                 if vid == "_aqCM37gK1U":
-                    self.assertEqual(result["reviewDecision"]["completeReason"], "identity_unresolved")
                     self.assertEqual(result["adRelationship"]["disclosure"]["state"], "in_description")
+                    self.assertNotEqual(result["reviewDecision"].get("completeReason"), "identity_unresolved")
+
+    def entity(self, vid):
+        result = qualify(media_capture(vid))
+        return result, result["adRelationship"]["firm"]
+
+    def test_saxo_bank_is_not_guessed_and_is_in_the_ad_register(self):
+        result, firm = self.entity("_aqCM37gK1U")
+        self.assertEqual((firm["identityStatus"], firm["candidates"], firm["entityType"]), ("no_registry_entry", [], "unresolved"))
+        self.assertIn("kopie z 21.11.2026", firm["reason"])
+        self.assertIn("notyfikacje zagranicznych firm inwestycyjnych", firm["entitySentence"])
+        self.assertEqual(result["reviewDecision"]["route"], "no_signal")
+        registry = result["adRegistry"]
+        self.assertEqual((registry["state"], registry["identityStatus"]), ("included", "no_registry_entry"))
+        self.assertIn("nie dowodzi", registry["identityNote"])
+        self.assertFalse(any(p["type"] == "U3" for p in result["premises"]))
+
+    def test_freedom24_and_etoro_are_foreign_firms_operating_cross_border(self):
+        for vid, name, country in (("9Fcwo1jlwe4", "Freedom Finance Europe Ltd", "Cypr"), ("O5YmmKadQQw", "Etoro (Europe) Ltd", "Cypr")):
+            with self.subTest(video=vid):
+                result, firm = self.entity(vid)
+                self.assertEqual([c["name"] for c in firm["candidates"]], [name])
+                self.assertEqual((firm["entityType"], firm["homeCountry"], firm["passporting"], firm["crossBorder"]),
+                                 ("foreign_investment_firm", country, "cross_border", True))
+                self.assertIn("zagraniczna firma inwestycyjna", firm["entitySentence"])
+                self.assertIn("transgranicznie", firm["entitySentence"])
+                self.assertIn("kopia z 21.11.2026", firm["entitySentence"])
+                self.assertEqual(result["adRegistry"]["entityType"], "foreign_investment_firm")
+                self.assertEqual(result["adRegistry"]["state"], "included")
 
     def test_routes_do_not_depend_on_segment_boundaries(self):
         import analysis.qualification as q

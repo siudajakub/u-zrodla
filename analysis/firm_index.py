@@ -22,6 +22,16 @@ SOURCES = (
     "knf_notyfikacje_zagr_FI.json", "knf_oddzialy_zagr_FI.json",
 )
 CROSS_BORDER = {"knf_notyfikacje_zagr_FI.json", "knf_oddzialy_zagr_FI.json"}
+# What each copied register says about the entity (Temat 1 definitions; the copies do not split foreign credit
+# institutions from other foreign investment firms, so no row is typed as one on its name).
+REGISTERS = {
+    "knf_domy_maklerskie.json": {"name": "domy maklerskie", "entityType": "domestic_investment_firm", "passporting": None},
+    "knf_banki_maklerskie.json": {"name": "banki prowadzące działalność maklerską", "entityType": "domestic_bank", "passporting": None},
+    "knf_oddzialy_zagr_FI.json": {"name": "oddziały zagranicznych firm inwestycyjnych", "entityType": "foreign_investment_firm",
+                                  "passporting": "branch"},
+    "knf_notyfikacje_zagr_FI.json": {"name": "notyfikacje zagranicznych firm inwestycyjnych (bez oddziału)",
+                                     "entityType": "foreign_investment_firm", "passporting": "cross_border"},
+}
 
 # key, brand pattern (case-insensitive unless noted), register ids, firm domains,
 # legal-name patterns that select one of several ids.
@@ -71,19 +81,30 @@ def _clean(name):
     return re.sub(r"\s+", " ", name).strip()
 
 
+def _home_country(row, domestic):
+    if domestic:
+        return "Polska"
+    for attribute in row.get("attributes") or []:
+        if attribute.get("name") == "Państwo macierzyste" and attribute.get("value"):
+            return _clean(attribute["value"])
+    return None
+
+
 def _rows():
-    rows, files = {}, {}
+    rows, files, counts = {}, {}, {}
     for name in SOURCES:
         path = SNAPSHOTS / name
         data = path.read_bytes()
         files[name] = sha256(data).hexdigest()
-        for row in json.loads(data):
+        parsed = json.loads(data)
+        counts[name] = len(parsed)
+        for row in parsed:
             rows.setdefault(row["id"], (name, row))
-    return rows, files
+    return rows, files, counts
 
 
 def build():
-    rows, files = _rows()
+    rows, files, counts = _rows()
     firms, missing = [], []
     for alias in ALIASES:
         candidates = []
@@ -92,12 +113,17 @@ def build():
                 missing.append(registry_id)
                 continue
             source, row = rows[registry_id]
+            kind = REGISTERS[source]
             candidates.append({"registryId": registry_id, "name": _clean(row["name"]),
                                "category": row.get("subcategoryName"), "sourceFile": f"data/probe-snapshots/knf/{source}",
-                               "checkedAt": CHECKED_AT, "crossBorder": source in CROSS_BORDER})
+                               "checkedAt": CHECKED_AT, "crossBorder": source in CROSS_BORDER,
+                               "entityType": kind["entityType"], "homeCountry": _home_country(row, kind["passporting"] is None),
+                               "passporting": kind["passporting"]})
         firms.append({**{k: alias[k] for k in ("key", "label", "pattern", "domains")},
                       "legal": alias.get("legal", {}), "candidates": candidates, "inScope": True})
-    return {"generatedBy": "analysis/firm_index.py", "checkedAt": CHECKED_AT, "sourceFiles": files,
+    registers = [{"file": f"data/probe-snapshots/knf/{name}", "name": REGISTERS[name]["name"], "rows": counts[name]}
+                 for name in SOURCES]
+    return {"generatedBy": "analysis/firm_index.py", "checkedAt": CHECKED_AT, "sourceFiles": files, "registers": registers,
             "firms": firms, "outOfScope": OUT_OF_SCOPE, "missingIds": missing}
 
 

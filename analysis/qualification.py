@@ -131,6 +131,27 @@ EXPLANATIONS = {
     "U6": ["neutralna informacja o nadzorze nie jest jeszcze sugestią, że organ coś zaaprobował"],
     "U7": ["to może być materiał edukacyjny albo zaprzeczenie, że udziela się doradztwa"],
 }
+UNEXAMINED = {"description": "opis", "transcript": "mowa", "frames": "kadry", "platformFlags": "flaga YouTube"}
+
+
+def _explanations(ptype, cov):
+    """Innocent explanations fitted to what was actually examined (no hint that something could have been said
+    where the speech was examined in full)."""
+    base = list(EXPLANATIONS[ptype])
+    if ptype not in ("U1", "U4") or cov is None:
+        return base
+    places = [UNEXAMINED[g["modality"]] for g in cov["gaps"] if g["modality"] in UNEXAMINED]
+    thing, other = ("oznaczenie reklamy", "albo być wyrażone inaczej, niż szukano") if ptype == "U1" \
+        else ("ostrzeżenie o ryzyku", "")
+    if ptype == "U1":
+        first = f"{thing} mogło paść w niezbadanym zakresie ({', '.join(places)}) {other}" if places \
+            else f"{thing} mogło być wyrażone inaczej, niż szukano"
+        return [first, *base[1:]]
+    if places:
+        return [base[0], f"{thing} mogło paść w niezbadanym zakresie ({', '.join(places)})"]
+    return base[:1]
+
+
 BASE_LABELS = {"U1": "podstawa: relacja z firmą bez oznaczenia reklamy", "U3": "podstawa: brak wpisu firmy w wykazie",
                "U4": "podstawa: twierdzenie o zysku", "U5": "podstawa: obietnica pewnego zysku",
                "U6": "podstawa: sugestia aprobaty nadzoru"}
@@ -140,6 +161,11 @@ KIND_NAMES = {"tracking_link": "link polecający", "short_link": "skrócony link
 CATEGORY_NAMES = {"Firmy inwestycyjne - Domy maklerskie": "dom maklerski",
                   "Firmy inwestycyjne - Banki prowadzące działalność maklerską": "bank prowadzący działalność maklerską",
                   "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP": "notyfikacja"}
+ENTITY_NAMES = {"domestic_investment_firm": "krajowa firma inwestycyjna (dom maklerski)",
+                "domestic_bank": "bank krajowy prowadzący działalność maklerską",
+                "foreign_investment_firm": "zagraniczna firma inwestycyjna",
+                "foreign_credit_institution": "zagraniczna instytucja kredytowa"}
+PASSPORTING_NAMES = {"branch": "działa przez oddział w Polsce", "cross_border": "działa transgranicznie, na podstawie notyfikacji (bez oddziału)"}
 DISCLOSURE_KIND_NAMES = {"explicit_ad": "oznaczenie reklamy lub współpracy", "platform_flag": "oznaczenie płatnej promocji przez YouTube",
                          "affiliate_link_mention": "wzmianka o linku partnerskim", "partner_mention": "wzmianka o partnerze materiału"}
 
@@ -154,11 +180,24 @@ def _clock(seconds):
     return f"{hours}:{minutes:02d}:{secs:02d}" if hours else f"{minutes}:{secs:02d}"
 
 
+SHORT_TAIL = re.compile(r"\s+(?:\w{1,2}|oraz|albo|lub|czy|że|się|nie|dla|przez|jak|ale)$", re.I)
+
+
 def _quote(text, limit=120):
+    """A quote shortened at a sentence end, else at a word (never on a dangling one- or two-letter word)."""
     text = " ".join((text or "").split())
-    if len(text) > limit:
-        text = text[:limit].rsplit(" ", 1)[0].rstrip(" ,;:.") + "…"
-    return f"„{text}”"
+    if len(text) <= limit:
+        return f"„{text}”"
+    head = text[:limit]
+    ends = [m.end() for m in re.finditer(r"[.!?](?=\s)", head)]
+    if ends and ends[-1] >= limit * 0.4:
+        return f"„{head[:ends[-1]].rstrip('.')}”"
+    if text[limit] != " ":
+        head = head.rsplit(" ", 1)[0] if " " in head else head
+    head = head.rstrip(" ,;:.")
+    while SHORT_TAIL.search(head):
+        head = SHORT_TAIL.sub("", head).rstrip(" ,;:.")
+    return f"„{head}…”"
 
 
 def _stamp(value):
@@ -707,30 +746,84 @@ def _searched(cov):
     return found
 
 
-def _firm_block(entry):
+def _checked_registers(index):
+    names = [r["name"] for r in index.get("registers") or []]
+    stamp = _stamp(index.get("checkedAt", "")).split(" ")[0]
+    return names, stamp
+
+
+def _entity_view(candidates):
+    """Entity type, home country and passporting of the candidate rows, or 'unresolved' where they differ."""
+    def one(values):
+        values = {v for v in values if v is not None}
+        return values.pop() if len(values) == 1 else "unresolved"
+    if not candidates:
+        return {"entityType": "unresolved", "entityTypes": [], "homeCountry": None, "passporting": None}
+    types = [c.get("entityType") for c in candidates]
+    domestic = [t in ("domestic_investment_firm", "domestic_bank") for t in types]
+    return {"entityType": one(types) if all(types) else "unresolved", "entityTypes": sorted({t for t in types if t}),
+            "homeCountry": one(c.get("homeCountry") for c in candidates),
+            "passporting": None if all(domestic) else one(c.get("passporting") or "domestic" for c in candidates)}
+
+
+def _candidate_phrase(c):
+    kind = ENTITY_NAMES.get(c.get("entityType"), CATEGORY_NAMES.get(c.get("category"), c.get("category")))
+    parts = [kind]
+    if c.get("homeCountry") and c.get("entityType", "").startswith("foreign"):
+        parts.append(f"siedziba: {c['homeCountry']}")
+    if c.get("passporting"):
+        parts.append(PASSPORTING_NAMES[c["passporting"]])
+    return f"{c['name']} ({', '.join(parts)})"
+
+
+def _entity_sentence(mention, status, candidates, view, index):
+    registers, stamp = _checked_registers(index)
+    if status == "no_registry_entry" or not candidates:
+        listed = _join(registers) if registers else "wykazy KNF"
+        return (f"{mention}: nie ustalono typu podmiotu, bo nie ma go w przejrzanych wykazach ({listed}; kopie z {stamp}). "
+                "To nie dowodzi, że firma działa bez uprawnień: zagraniczna instytucja kredytowa może być notyfikowana "
+                "w wykazie, którego kopii nie ma.")
+    phrases = [_candidate_phrase(c) for c in candidates]
+    if len(phrases) == 1:
+        return f"{mention}: w wykazie KNF (kopia z {stamp}) jest jeden pasujący podmiot, {phrases[0]}."
+    return (f"{mention}: w wykazie KNF (kopia z {stamp}) pasuje {len(phrases)} podmiotów ({'; '.join(phrases)}); "
+            "materiał nie rozstrzyga, który z nich jest stroną.")
+
+
+def _firm_block(entry, index=None):
+    index = index or {}
     if entry["kind"] == "firm":
         firm = entry["ref"]
-        candidates = [{k: c[k] for k in ("registryId", "name", "category", "sourceFile", "checkedAt")} for c in firm["candidates"]]
+        candidates = [{k: c[k] for k in ("registryId", "name", "category", "sourceFile", "checkedAt", "entityType",
+                                         "homeCountry", "passporting") if k in c} for c in firm["candidates"]]
         if entry["legalHits"]:
             narrowed = [c for c in candidates if c["registryId"] in entry["legalHits"]]
             candidates = narrowed or candidates
         cross = {c["registryId"]: c["crossBorder"] for c in firm["candidates"]}
+        registers, stamp = _checked_registers(index)
         if not candidates:
-            status, reason = "no_registry_entry", "Brak wpisu w przejrzanych kopiach wykazów KNF (stan z 21.11.2026)."
+            status = "no_registry_entry"
+            reason = "Nie ustalono w przejrzanych wykazach" + (f" ({_join(registers)}; kopie z {stamp})." if registers
+                                                              else f" (kopie z {stamp}).")
         elif len(candidates) == 1:
             status, reason = "established", "Jeden pasujący wpis w wykazie KNF." if not entry["legalHits"] else "Nazwa prawna z materiału wskazuje jeden wpis w wykazie KNF."
         else:
             status, reason = "candidates", "Nazwa marki pasuje do kilku wpisów w wykazie KNF; materiał nie rozstrzyga, który podmiot ją prowadzi."
         flags = {cross[c["registryId"]] for c in candidates}
+        view = _entity_view(candidates)
         return {"mention": firm["label"], "identityStatus": status, "candidates": candidates,
-                "crossBorder": flags.pop() if len(flags) == 1 else "unresolved", "reason": reason, "inScope": True}
+                "crossBorder": flags.pop() if len(flags) == 1 else "unresolved", "reason": reason, "inScope": True,
+                **view, "entitySentence": _entity_sentence(firm["label"], status, candidates, view, index),
+                "registersChecked": {"registers": registers, "copiesFrom": index.get("checkedAt")}}
     if entry["kind"] == "outside":
         return {"mention": entry["ref"]["label"], "identityStatus": "unresolved", "candidates": [], "crossBorder": "unresolved",
+                **_entity_view([]), "entitySentence": f"{entry['ref']['label']}: podmiot spoza zakresu M1 ({entry['ref']['reason']}).",
                 "reason": "Podmiot spoza zakresu M1: " + entry["ref"]["reason"] + ".", "inScope": False,
                 "outOfScopeReason": entry["ref"]["reason"]}
     name = entry["ref"] if isinstance(entry["ref"], str) else str(entry["ref"])
     return {"mention": name, "identityStatus": "unresolved", "candidates": [], "crossBorder": "unresolved",
-            "reason": "Nazwy nie dopasowano do żadnej firmy z używanego zestawu.", "inScope": None}
+            "reason": "Nazwy nie dopasowano do żadnej firmy z używanego zestawu.", "inScope": None, **_entity_view([]),
+            "entitySentence": f"{name}: nie ustalono typu podmiotu (nazwy nie dopasowano do żadnej firmy z używanego zestawu)."}
 
 
 def _point_components(premise_type, unit_modality, method, confidence, cov, extras):
@@ -779,14 +872,19 @@ def qualify(capture, finding=None, semantic=None, context=None):
     relations = []
     for key, entry in acc.data.items():
         named = [d for d in entry["disclosures"]]
-        firm_block = _firm_block(entry) if entry["kind"] != "generic" else {
+        firm_block = _firm_block(entry, index) if entry["kind"] != "generic" else {
             "mention": entry["ref"], "identityStatus": "unresolved", "candidates": [], "crossBorder": "unresolved",
+            **_entity_view([]), "entitySentence": "Materiał wskazuje firmę inwestycyjną bez podania nazwy; nie ustalono typu podmiotu.",
             "reason": "Materiał wskazuje firmę inwestycyjną bez podania nazwy.", "inScope": True}
         if entry["kind"] == "unknown":
             texts = " ".join(ev.get(d["evidenceId"])["text"] for d in entry["disclosures"])
             if INVESTMENT_CONTEXT.search(texts):
+                registers, stamp = _checked_registers(index)
                 firm_block.update(identityStatus="no_registry_entry", inScope=True,
-                                  reason="Nazwy nie ma w używanym zestawie firm, a kontekst dotyczy usług inwestycyjnych; brak wpisu w przejrzanych wykazach KNF.")
+                                  reason="Nazwy nie ma w używanym zestawie firm, a kontekst dotyczy usług inwestycyjnych; "
+                                         f"nie ustalono w przejrzanych wykazach (kopie z {stamp}).",
+                                  entitySentence=_entity_sentence(firm_block["mention"], "no_registry_entry", [], _entity_view([]), index),
+                                  registersChecked={"registers": registers, "copiesFrom": index.get("checkedAt")})
             else:
                 firm_block.update(inScope=False, outOfScopeReason="nierozpoznany reklamodawca bez kontekstu inwestycyjnego",
                                   reason="Podmiot spoza zakresu M1: nierozpoznany reklamodawca bez kontekstu inwestycyjnego.")
@@ -849,12 +947,14 @@ def qualify(capture, finding=None, semantic=None, context=None):
             quote_item, status, components, points,
             requires=["ślad relacji handlowej (link polecający, kod twórcy lub wynagrodzenie)", "brak oznaczenia reklamy w opisie, w mowie i w kadrach"],
             satisfied=status == "documented", searched=searched,
-            found=[ev.get(d["evidenceId"])["text"] for d in found], firm=firm, commercial=entry["commercial"]))
+            found=[ev.get(d["evidenceId"])["text"] for d in found], firm=firm, commercial=entry["commercial"], cov=cov))
 
     # U3: in-scope relation with a firm missing from the reviewed registers.
     for rel in relations:
         firm = rel["firm"]
-        if rel["status"] in ("declared", "documented", "probable") and firm.get("inScope") \
+        # An openly disclosed cooperation goes to the ad register with a note on the identity; only an undisclosed
+        # relation (link, code, compensation) waits for the identity before the analyst can judge it.
+        if rel["status"] in ("documented", "probable") and firm.get("inScope") \
                 and firm.get("identityStatus") == "no_registry_entry":
             named_first = sorted(rel["entry"]["disclosures"], key=lambda d: not d["named"])
             refs = named_first or rel["entry"]["commercial"] or [{"evidenceId": e} for e in rel["entry"]["cta"]]
@@ -922,7 +1022,7 @@ def qualify(capture, finding=None, semantic=None, context=None):
                 counter.append({**ev.get(w), "effect": "Obok twierdzenia jest ostrzeżenie o ryzyku, więc nie ma przesłanki do kontroli.", "counterKind": "risk_warning"})
             premises.append(_premise(premise_type, LABELS[premise_type] + f" ({rel['firm']['mention']}).", item, status, components,
                                      points, requires=BASIS[premise_type]["transfer"].split("; "), satisfied=status == "documented",
-                                     searched=[cov["label"]], found=[ev.get(w)["text"] for w in warnings], firm=rel["firm"]))
+                                     searched=[cov["label"]], found=[ev.get(w)["text"] for w in warnings], firm=rel["firm"], cov=cov))
 
     # U7: personalised advice cue, handed to M3.
     for unit in dunits + sunits:
@@ -966,10 +1066,11 @@ def _nearby_warnings(unit, dunits, sunits, ev):
     return found
 
 
-def _premise(ptype, claim, item, status, components, points, *, requires, satisfied, searched, found, firm, commercial=None):
+def _premise(ptype, claim, item, status, components, points, *, requires, satisfied, searched, found, firm, commercial=None,
+             cov=None):
     premise = {"id": f"pr-{ptype}-{item['id']}", "type": ptype, "claim": claim, "quote": item["text"], "evidenceRef": item["id"],
                "basis": BASIS[ptype], "scope": {"requires": requires, "satisfied": satisfied},
-               "counterEvidence": {"searched": searched, "found": found, "possibleExplanations": EXPLANATIONS[ptype]},
+               "counterEvidence": {"searched": searched, "found": found, "possibleExplanations": _explanations(ptype, cov)},
                "status": status, "strength": {"points": points, "components": components}, "legalStatus": "review_premise"}
     if firm:
         premise["firm"] = {"mention": firm["mention"], "identityStatus": firm["identityStatus"],
@@ -1052,8 +1153,13 @@ def _registry(capture, rel, ev=None, disclosures=()):
     state = {"declared": "included", "documented": "included", "probable": "candidate"}.get(rel["status"], "none")
     if state == "none":
         return {"state": "none"}
-    registry = {"state": state, "campaignKey": f"{capture.get('creatorId')}|{rel['firm']['mention']}",
-                "firstObservedAt": capture.get("observedAt")}
+    firm = rel["firm"]
+    registry = {"state": state, "campaignKey": f"{capture.get('creatorId')}|{firm['mention']}",
+                "firstObservedAt": capture.get("observedAt"), "identityStatus": firm.get("identityStatus"),
+                "entityType": firm.get("entityType"), "homeCountry": firm.get("homeCountry"),
+                "passporting": firm.get("passporting")}
+    if firm.get("identityStatus") in ("no_registry_entry", "unresolved", "candidates"):
+        registry["identityNote"] = firm.get("entitySentence")
     own = rel["entry"]["disclosures"] or list(disclosures)
     if ev is not None and own:
         kinds = [disclosure_kind(ev.get(d["evidenceId"])["text"], d["modality"]) for d in own]
@@ -1174,7 +1280,7 @@ def _relation_sentence(lead, ev):
 def _firm_sentence(firm, relation_kinds):
     mention = firm.get("mention")
     status, candidates = firm.get("identityStatus"), firm.get("candidates") or []
-    names = [f"{c['name']} ({CATEGORY_NAMES.get(c['category'], c['category'])})" for c in candidates]
+    names = [_candidate_phrase(c) for c in candidates]
     if status == "established" and names:
         return f"{mention} — w wykazie KNF jest jeden pasujący podmiot: {names[0]}."
     if status == "candidates" and names:
@@ -1183,7 +1289,7 @@ def _firm_sentence(firm, relation_kinds):
         head = f"są {count[0]} pasujące podmioty" if count[0] else f"jest {count[1]} pasujących podmiotów"
         return f"{mention} — w wykazie KNF {head}: {_join(names)}; nie ustalono, którego dotyczy {subject}."
     if status == "no_registry_entry":
-        return f"{mention} — nie znaleziono pasującego wpisu w przejrzanych wykazach KNF; to nie dowodzi, że firma działa bez uprawnień."
+        return f"{mention} — nie ustalono w przejrzanych wykazach KNF; to nie dowodzi, że firma działa bez uprawnień."
     return f"{mention} — nie ustalono, o jaki podmiot z wykazu chodzi."
 
 

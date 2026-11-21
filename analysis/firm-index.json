@@ -7,6 +7,28 @@
   "knf_notyfikacje_zagr_FI.json": "b39b74327db56fc31a41dd4bbaa98c94792b6a6682656e3471e7e44e8ac43553",
   "knf_oddzialy_zagr_FI.json": "24cd10f19aa46e3c62291da3fd6450f2ad361d06023465f1196f05bfabb4b317"
  },
+ "registers": [
+  {
+   "file": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+   "name": "domy maklerskie",
+   "rows": 28
+  },
+  {
+   "file": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+   "name": "banki prowadzące działalność maklerską",
+   "rows": 10
+  },
+  {
+   "file": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+   "name": "notyfikacje zagranicznych firm inwestycyjnych (bez oddziału)",
+   "rows": 712
+  },
+  {
+   "file": "data/probe-snapshots/knf/knf_oddzialy_zagr_FI.json",
+   "name": "oddziały zagranicznych firm inwestycyjnych",
+   "rows": 10
+  }
+ ],
  "firms": [
   {
    "key": "xtb",
@@ -27,7 +49,10 @@
      "category": "Firmy inwestycyjne - Domy maklerskie",
      "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": false
+     "crossBorder": false,
+     "entityType": "domestic_investment_firm",
+     "homeCountry": "Polska",
+     "passporting": null
     },
     {
      "registryId": 9439233,
@@ -35,7 +60,10 @@
      "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
      "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": true
+     "crossBorder": true,
+     "entityType": "foreign_investment_firm",
+     "homeCountry": "Cypr",
+     "passporting": "cross_border"
     }
    ],
    "inScope": true
@@ -55,7 +83,10 @@
      "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
      "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": false
+     "crossBorder": false,
+     "entityType": "domestic_bank",
+     "homeCountry": "Polska",
+     "passporting": null
     }
    ],
    "inScope": true
@@ -78,7 +109,10 @@
      "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
      "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": false
+     "crossBorder": false,
+     "entityType": "domestic_bank",
+     "homeCountry": "Polska",
+     "passporting": null
     },
     {
      "registryId": 6884978,
@@ -86,7 +120,10 @@
      "category": "Firmy inwestycyjne - Domy maklerskie",
      "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": false
+     "crossBorder": false,
+     "entityType": "domestic_investment_firm",
+     "homeCountry": "Polska",
+     "passporting": null
     }
    ],
    "inScope": true
@@ -106,7 +143,10 @@
      "category": "Firmy inwestycyjne - Domy maklerskie",
      "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": false
+     "crossBorder": false,
+     "entityType": "domestic_investment_firm",
+     "homeCountry": "Polska",
+     "passporting": null
     }
    ],
    "inScope": true
@@ -126,7 +166,10 @@
      "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
      "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": false
+     "crossBorder": false,
+     "entityType": "domestic_bank",
+     "homeCountry": "Polska",
+     "passporting": null
     }
    ],
    "inScope": true
@@ -146,7 +189,10 @@
      "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
      "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": false
+     "crossBorder": false,
+     "entityType": "domestic_bank",
+     "homeCountry": "Polska",
+     "passporting": null
     }
    ],
    "inScope": true
@@ -166,7 +212,10 @@
      "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
      "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": false
+     "crossBorder": false,
+     "entityType": "domestic_bank",
+     "homeCountry": "Polska",
+     "passporting": null
     }
    ],
    "inScope": true
@@ -186,7 +235,10 @@
      "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
      "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": false
+     "crossBorder": false,
+     "entityType": "domestic_bank",
+     "homeCountry": "Polska",
+     "passporting": null
     }
    ],
    "inScope": true
@@ -206,7 +258,10 @@
      "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
      "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": false
+     "crossBorder": false,
+     "entityType": "domestic_bank",
+     "homeCountry": "Polska",
+     "passporting": null
     }
    ],
    "inScope": true
@@ -227,7 +282,10 @@
      "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
      "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": true
+     "crossBorder": true,
+     "entityType": "foreign_investment_firm",
+     "homeCountry": "Cypr",
+     "passporting": "cross_border"
     }
    ],
    "inScope": true
@@ -247,7 +305,10 @@
      "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
      "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": true
+     "crossBorder": true,
+     "entityType": "foreign_investment_firm",
+     "homeCountry": "Niemcy",
+     "passporting": "cross_border"
     },
     {
      "registryId": 9439202,
@@ -255,7 +316,10 @@
      "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
      "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": true
+     "crossBorder": true,
+     "entityType": "foreign_investment_firm",
+     "homeCountry": "Bułgaria",
+     "passporting": "cross_border"
     },
     {
      "registryId": 9439209,
@@ -263,7 +327,10 @@
      "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
      "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": true
+     "crossBorder": true,
+     "entityType": "foreign_investment_firm",
+     "homeCountry": "Cypr",
+     "passporting": "cross_border"
     }
    ],
    "inScope": true
@@ -283,7 +350,10 @@
      "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
      "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": true
+     "crossBorder": true,
+     "entityType": "foreign_investment_firm",
+     "homeCountry": "Cypr",
+     "passporting": "cross_border"
     }
    ],
    "inScope": true
@@ -304,7 +374,10 @@
      "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
      "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": true
+     "crossBorder": true,
+     "entityType": "foreign_investment_firm",
+     "homeCountry": "Irlandia",
+     "passporting": "cross_border"
     }
    ],
    "inScope": true
@@ -324,7 +397,10 @@
      "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
      "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": true
+     "crossBorder": true,
+     "entityType": "foreign_investment_firm",
+     "homeCountry": "Litwa",
+     "passporting": "cross_border"
     }
    ],
    "inScope": true
@@ -344,7 +420,10 @@
      "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
      "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
      "checkedAt": "2026-11-21",
-     "crossBorder": true
+     "crossBorder": true,
+     "entityType": "foreign_investment_firm",
+     "homeCountry": "Estonia",
+     "passporting": "cross_border"
     }
    ],
    "inScope": true
