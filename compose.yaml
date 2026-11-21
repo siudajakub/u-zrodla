@@ -1,0 +1,32 @@
+name: investwatch
+x-app: &app
+  build: .
+  image: investwatch-demo:local
+  init: true
+  restart: unless-stopped
+  volumes:
+    - state:/state
+  security_opt: [no-new-privileges:true]
+  cap_drop: [ALL]
+services:
+  api:
+    <<: *app
+    ports:
+      - "127.0.0.1:${INVESTWATCH_PORT:-8769}:8769"
+    healthcheck:
+      test: ["CMD","python","-c","import urllib.request; urllib.request.urlopen('http://127.0.0.1:8769/v1/health',timeout=3)"]
+      interval: 10s
+      timeout: 4s
+      retries: 5
+  worker:
+    <<: *app
+    command: ["python","-m","api.jobs"]
+    environment:
+      INVESTWATCH_DISCOVERY_INTERVAL: "${INVESTWATCH_DISCOVERY_INTERVAL:-14400}"
+      INVESTWATCH_WATCH_DB: /watch/watch.sqlite3
+    volumes:
+      - state:/state
+      - ${INVESTWATCH_WATCH_DIR:-./.runtime/watch}:/watch:ro
+      - ${INVESTWATCH_ASR_DIR:-./.runtime/asr}:/app/.runtime/asr:ro
+volumes:
+  state:
