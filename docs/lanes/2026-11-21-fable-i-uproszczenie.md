@@ -21,7 +21,7 @@ Obserwowalny cel po wdrożeniu: na 390 px pierwsza sprawa jest widoczna bez prze
 ## Contracts And Dependencies
 
 - Produces: listę zmian dla J1 (§5), listę poprawek API dla H (§2.3), słownik etykiet (§3.4).
-- Consumes: API podglądu `http://127.0.0.1:18801` (schemat 2, odczyt 21 XI ok. 22:15 UTC), kod `web/src/desk/*` (stan roboczy hack/integration z niezacommitowanymi zmianami J1), zrzuty `tests/ui/screens/2026-11-21-r3/` (36 plików, r4 jeszcze nie było), kontrakt H §3.4 i §3.16, brief §3.3 i §6, `docs/hackathon/demo.md`. `docs/PITCH.md` nie istniał w chwili pisania.
+- Consumes: API podglądu `http://127.0.0.1:18801` (schemat 2, odczyt 21 XI ok. 22:15 UTC), kod `web/src/desk/*` (stan roboczy hack/integration z niezacommitowanymi zmianami J1), zrzuty `tests/ui/screens/2026-11-21-r3/` (36 plików, r4 jeszcze nie było), kontrakt H §3.4 i §3.16, brief §3.3 i §6, `docs/hackathon/demo.md`. `docs/PITCH.md` §11 (pojawił się w trakcie, zob. §5a).
 - Shared-file coordination: brak. Nie zmieniono żadnego pliku w web/ ani tests/.
 
 ## Current State
@@ -516,6 +516,26 @@ Kolejność wdrażania. Pierwsze 10 daje największe uproszczenie. „Musi” oz
 3. Przycisk „Otwórz w filmie od m:ss” i miniatury kadrów oraz zrzutów z powiększeniem. To najmocniejszy dowód na pokazie i w decyzji.
 4. Cztery rodzaje decyzji z wymaganym uzasadnieniem i obsługą konfliktu 409 (zmiana statusu z briefu, rewizja).
 5. Filtry w adresie (`#…?module=…`), stronicowanie po stronie API, uczciwe puste stany i żółty baner „oceny agentów”. Te elementy działają i chronią przed fałszywym wrażeniem.
+
+### 5a. Zgodność z `docs/PITCH.md` §11 (plik pojawił się po napisaniu §1–5)
+
+| PITCH §11 | Stanowisko audytu | Zmiana w liście §5 |
+|---|---|---|
+| 1 Ekran startowy „Przegląd” z lejkiem 3 liczb | Zgoda co do lejka, ale bez nowej zakładki. Lejek „1 923 zebrane → 290 rejestr → 15 do sprawdzenia” trafia do linii stanu danych w nagłówku (§3.5) i jest klikalny | Poz. 1: linia stanu = lejek |
+| 2 Pasek „Droga dowodu” z krokiem Odkrycie | Zgoda (§4). Dodać krok „Odkrycie” na początku (`discovery[0]`: „Wyszukiwanie YouTube „jak zacząć inwestować”, poz. 37”) i stan „obaliło” dla mowy w rejestrze | Poz. 4 |
+| 3 Nie pokazywać „na żywo” przy danych z replay | Zgoda. Kropka zostaje jako stan WebSocket, ale z napisem „połączono”. Tryb danych („replay 21 XI”) stoi osobno w linii stanu. Element 2 inwentarza zmienia się na POŁĄCZ | Poz. 1 i 17 |
+| 4 Licznik „wyjaśnione automatycznie” w rejestrze | Zgoda. To 3 klikalne liczniki nad tabelą rejestru zamiast przełącznika sekcji: „w mowie 8 · flaga YouTube 50 · czeka na mowę 120” (z `disclosure.state` i `completeReason`, najlepiej z pola API) | Nowa poz. 24 |
+| 7 Kalibracja bez samego „100%” | Zgoda, zgodne z poz. 12: precyzja zawsze z n i przedziałem | Poz. 12 |
+| 8 Nazwy 7 zakładek | Rozbieżność: audyt proponuje 4 zakładki. Nazwy PITCH obowiązują tylko w wariancie awaryjnym 9 → 6 („Strony firm (M2)”, „Oferty doradcze (M3)”, „Czeka na dane” jako stan). Decyzja należy do J | Poz. 3 |
+| 9 Ukryć Zamknięte, Demo i linię „częściowy…” | Zgoda, realizują to poz. 1 i 3 | — |
+| 10 Karta M2 na telefonie z odległością od ostrzeżenia | Zgoda. Zdanie przesłanki 3 podaje odległość, a pełna tabela 19 kryteriów jest pod „Więcej” | Poz. 7 |
+| 6 i 13 Typ materiału E5 i drugi głos | Krok „Model” w drodze dowodu tylko przy obecnym polu, szary „wyłączony” albo wcale | Poz. 21 |
+
+Dodatkowa pozycja listy zmian:
+
+| # | Plik / komponent | Zmiana | Kryterium akceptacji na zrzucie | Szac. | Prior. |
+|---|---|---|---|---|---|
+| 24 | `Lists.jsx` `RegisterTable` + `Desk.jsx` | Nad tabelą rejestru 3 klikalne liczniki („w mowie · flaga YouTube · czeka na mowę”), które filtrują listę. „Do potwierdzenia” jako czwarty licznik zamiast przełącznika sekcji | Rejestr 1440: liczniki w 1 linii nad tabelą, kliknięcie zawęża listę | S (UI z licznikami z API) / M (bez pola API) | Musi (pitch) |
 
 ### 6. Makiety
 
