@@ -238,6 +238,30 @@ def m1(cap):
     return best, reason, evidence, extra
 
 
+INSTRUMENT_WORDS = re.compile(
+    r"(?i)\b(pieniąd\w*|akcj\w*|etf\w*|obligacj\w*|fundusz\w*|cfd\w*|forex|fx|kryptowalut\w*|krypto|bitcoin\w*|inwest\w*|giełd\w*|maklersk\w*|"
+    r"indeks\w*|surowc\w*|złot\w*|dywidend\w*|portfel\w*|lokat\w*|oszczędz\w*|zysk\w*|stop\w* zwrotu|rachunk\w* (?:inwestycyjn|maklersk)\w*|"
+    r"trading\w*|handel\w*|dźwigni\w*|kapita\w*|emerytur\w*|ike|ikze|ppk|walut\w*|instrument\w*|papier\w* wartościow\w*)\b")
+
+
+def m2_scope(cap):
+    """Membership of a social post or ad of M2 in the Polish queues (decision of 21 XI): the author is a firm of the
+    register (a), the text is Polish (b, the language heuristic of the YouTube adapter) and it concerns an instrument or
+    a service of the offer, or carries a claim of benefit or a risk warning (c). Anything else is `no_signal`, only in `all`."""
+    text = " ".join(str(cap.get(k) or "") for k in ("title", "description", "adBody"))
+    signals = cap.get("textSignals") if isinstance(cap.get("textSignals"), dict) else {}
+    if not (cap.get("firmRelation") or cap.get("firmMentions")):
+        return {"belongs": False, "code": "no_registry_firm", "label": "autor spoza rejestru firm"}
+    from collectors.youtube import detect_language
+    language, _ = detect_language([], cap.get("title"), cap.get("description") or cap.get("adBody"))
+    if language == "other":
+        return {"belongs": False, "code": "other_market", "label": "inny rynek lub język: poza kolejkami PL", "language": language}
+    if not (INSTRUMENT_WORDS.search(text) or signals.get("benefitClaim") or signals.get("riskWarningInText")):
+        return {"belongs": False, "code": "not_investment", "label": "post firmy bez treści o instrumentach lub usłudze inwestycyjnej",
+                "language": language}
+    return {"belongs": True, "code": "in_scope", "label": "polski materiał firmy z rejestru o instrumencie lub usłudze", "language": language}
+
+
 def m2(cap):
     if cap.get("m2Market"):  # a rendered market page (lane E): 19 criteria, card, reasons and screenshots
         from .m2_card import card
@@ -271,6 +295,11 @@ def m2(cap):
                              "render": {"state": "not_collected"}, "media": {"state": "not_collected"}},
                              "gaps": [{"modality": "render", "code": "not_collected", "reason": "obrazu, wideo i układu reklamy nie analizowano"}],
                              "blocksConclusion": False, "label": "Zbadano: tylko tekst reklamy, bez renderu"}
+    if cap.get("platform") not in (None, "web"):
+        scope = m2_scope(cap)
+        extra["m2Scope"] = scope
+        if not scope["belongs"]:
+            extra["reviewSuggestion"] = {"source": "rules", "criterionId": None, "state": "no_signal", "reason": scope["label"].capitalize() + "."}
     return score, f"Katalog 19 kontroli. Obserwacje do przeglądu: {counts[OBS]}. Brak danych: {counts[UNKNOWN]}.", evidence, extra
 
 

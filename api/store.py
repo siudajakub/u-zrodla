@@ -1187,7 +1187,8 @@ def queues_of(core, view, flags, threshold=None):
             out.add("adRegister")
         decision = core.get("reviewDecision") if isinstance(core.get("reviewDecision"), dict) else {}
         if module == "M2":
-            out.add("offersM2")
+            if (core.get("m2Scope") or {}).get("belongs") is not False:
+                out.add("offersM2")
             # incomplete: only a concrete gap (too few measurable criteria), never the mere wait for a recompute.
             if decision and view["route"] == "insufficient":
                 out.add("incomplete")
