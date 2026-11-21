@@ -879,12 +879,14 @@
  "files": {
   "etykiety-agentow.jsonl": "a3ee25d1aea295bfa052831ef6f93dd00492b638af6e2ba919096e7c9e5f8a1f",
   "oceny-agentow.jsonl": "1cd13f1c25e06793589ecd35a97321ed73eff8baaa2d9492b3b72bdff5b1fbc2",
-  "predykcje-rules_1_2-pelne.jsonl": "e82e64a7dad4b4ab3f455cff3b952f441297f63f026355c44dad56838dbcb0ec",
-  "predykcje-qual_d-pelne.jsonl": "8e0dc2fbbbd0e0fcfc3ddcf4f513da4a8356c16410cff105ab9d569abf93d6d4",
-  "predykcje-rules_1_2-opis.jsonl": "c5464b69c557bc58b4652499e2a7705da2ada05d4c892df2e17d0957efa5da9c",
-  "predykcje-qual_d-opis.jsonl": "5db39a3c0bd987d6ec4ec12efbcc74c622f97fd9e0bb67c13b2a1136ac9106d4",
+  "predykcje-rules_1_2-pelne.jsonl": "0690be72b90cc60eea11afd2b06506b0a21e851ae568305a5278d5bf2ea907b4",
+  "predykcje-qual_d-pelne.jsonl": "87b58cd6352f71eee22311989f7df20d374b2d1363bea56878950d2f63540ccd",
+  "predykcje-rules_1_2-opis.jsonl": "2bd7b38b70d5e208550f0810beb002917d3c9088c122931e26f2d9bc76361870",
+  "predykcje-qual_d-opis.jsonl": "9538f55972f425aaf841c210e1394c0486d583f6be26144af56cc967cd3b14ef",
   "losowa-proba-etykiety.jsonl": "6439e8669fbfa2380b9641ccf567a27ad75e3083e49dd60953f25958fb2c22cb",
   "losowa-proba-losowanie.json": "78e1978f691ad98bfa7717add549462c543164f95d0a203dbb6501e921a01ae5",
-  "uruchom_warianty.py": "17eda392b8ab8b07d14513bca91217242b36cf5b6f14935d2d6fe28a7dd09359"
- }
+  "uruchom_warianty.py": "da1754831c363030e6f005af3f1aefce4e0590404ec12b91a73b7e227185e632",
+  "WYNIK-M1-2026-11-21.md": null
+ },
+ "codeCommit": "463ccebf161f7ebad1b94ccfe1473e5858cd5e92 (analysis/, collectors/, api/ bez zmian względem HEAD w chwili przebiegu; predykcje identyczne z pierwszym przebiegiem na drzewie roboczym przed checkpointem)"
 }

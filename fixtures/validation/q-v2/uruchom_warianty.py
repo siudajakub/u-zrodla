@@ -103,7 +103,7 @@ def predict(capture, variant):
 def run_record(variant, state, started, finished, commit):
     return {"type": "run", "variant": variant, "coverageState": state,
             "rulesVersion": engine.RULESET if variant == "rules_1_2" else qualification.RULES_VERSION,
-            "codeCommit": commit + " + niezacommitowane zmiany drzewa roboczego (analysis/engine.py, analysis/qualification.py)",
+            "codeCommit": commit,
             "modelId": None, "provider": None, "weightsDigest": None, "quantization": None,
             "parameters": {"semantic": "None (E5 nie uruchomiony)", "asr": "nie (Vosk pominięty; auto-napisy YouTube z cache)",
                            "defaultThreshold": engine.DEFAULT_THRESHOLD},
@@ -121,6 +121,9 @@ def main():
     flags = api_flags()
     try:
         commit = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+        dirty = subprocess.run(["git", "-C", str(ROOT), "status", "--porcelain", "--", "analysis", "collectors", "api"],
+                               capture_output=True, text=True).stdout.strip()
+        commit += (" + niezacommitowane zmiany: " + dirty.replace("\n", "; ")[:300]) if dirty else " (analysis/, collectors/, api/ bez zmian względem HEAD)"
     except OSError:
         commit = "nieznany"
     inputs = {"pelne": {}, "opis": {}}

@@ -55,6 +55,18 @@
         "q-v2/losowa-proba-etykiety.jsonl": "6439e8669fbfa2380b9641ccf567a27ad75e3083e49dd60953f25958fb2c22cb"
       },
       "consequence": "Wynik dokumentuje strojenie. Odłożony test M1 nadal liczy 0 kampanii."
+    },
+    {
+      "at": "2026-11-21T20:14:26+00:00",
+      "set": "q-v2",
+      "by": "agent G (claude-opus-5-5)",
+      "use": "Ponowny przebieg predykcji na commicie 463cceb (checkpoint powstał w trakcie pomiaru); predykcje identyczne z pierwszym przebiegiem, zmieniły się tylko rekordy przebiegu.",
+      "hashes": {
+        "q-v2/wynik-M1-2026-11-21.json": "ff475c27f2e027f96c166e650e53c7ac9be78a57970a10ee08e28cb3d19759be",
+        "q-v2/predykcje-qual_d-pelne.jsonl": "87b58cd6352f71eee22311989f7df20d374b2d1363bea56878950d2f63540ccd",
+        "q-v2/predykcje-rules_1_2-pelne.jsonl": "0690be72b90cc60eea11afd2b06506b0a21e851ae568305a5278d5bf2ea907b4"
+      },
+      "consequence": "Bez zmiany wyniku."
     }
   ],
   "notes": [
