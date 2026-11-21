@@ -392,12 +392,13 @@ def meta_blocked_result(platform, label, clock, probes):
         what = "przekierowanie do logowania (HTTP 302 → /accounts/login/)"
     else:
         what = "strona profilu zwraca tylko metadane (nazwa, liczba obserwujących, opis), bez wpisów"
-    message = (f"{label}: brak publicznego dostępu do wpisów bez logowania: {what}. "
+    message = (f"{label}: wpisy organiczne niedostępne bez logowania: {what}. Reklamy pobiera osobne źródło (Biblioteka Reklam Meta). "
                f"Właściwa ścieżka: {META_PATH['name']} ({META_PATH['audience']}).")
     last = {"code": "access_blocked", "message": message[:300], "at": at, "nextStep": META_NEXT_STEP}
-    source = {"id": platform, "name": f"{label} · dostęp do wpisów", "url": f"https://www.{platform}.com/",
+    source = {"id": platform, "name": f"{label} · wpisy organiczne", "url": f"https://www.{platform}.com/",
               "status": "access_blocked", "count": 0, "observedAt": at, "error": message[:300], "lastError": last,
-              "scope": "Publiczne profile bez logowania; bez obchodzenia ściany logowania",
+              "scope": "Wpisy organiczne z publicznych profili bez logowania; reklamy to osobne źródło (Biblioteka Reklam Meta)",
+              "blockedScope": "organic_posts",
               "accessPath": META_PATH, "probe": {"attempts": probes, "loginRedirects": logins, "metadataOnly": meta}}
     return {"creators": [], "captures": [], "sources": [source], "status": "access_blocked"}
 

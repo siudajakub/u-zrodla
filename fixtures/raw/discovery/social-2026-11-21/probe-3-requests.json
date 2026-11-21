@@ -1,0 +1,38 @@
+[
+ {
+  "name": "metaadlib-page-no-login",
+  "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=PL&q=XTB",
+  "at": "2026-11-21T20:45:52+00:00",
+  "status": 403,
+  "headers": {
+   "Cache-Control": "no-cache",
+   "Content-Type": "text/html; charset=utf-8",
+   "Date": "Sat, 21 Nov 2026 20:45:52 GMT",
+   "Content-Length": "481"
+  },
+  "bytes": 481,
+  "sha256": "15f9718ea3dd1b9d62a3858ac6d9730f375f016c31bd93061ede54f1b792ce74",
+  "userAgent": "InvestWatch-SourceMonitor/1.1 (Linux; public-source research monitor)",
+  "route": "direct",
+  "result": "js_challenge_403"
+ },
+ {
+  "name": "metaadlib-api-ads-archive-no-token",
+  "url": "https://graph.facebook.com/v19.0/ads_archive?ad_type=ALL&ad_reached_countries=%5B%22PL%22%5D&search_terms=XTB&fields=id%2Cpage_name",
+  "at": "2026-11-21T20:45:55+00:00",
+  "status": 500,
+  "headers": {
+   "Content-Type": "text/javascript; charset=UTF-8",
+   "www-authenticate": "OAuth \"Facebook Platform\" \"unknown_error\" \"An unknown error has occurred.\"",
+   "Cache-Control": "no-store",
+   "X-FB-Debug": "O1Erl8uYMOk9yeKcfUdNqRVfpHK2KTmPdGqOPuILOZECqR/kprvP/WlqMiv3i7no7LN9tJNWrS4eIN7DoDsHww==",
+   "Date": "Sat, 21 Nov 2026 20:45:56 GMT",
+   "Content-Length": "126"
+  },
+  "bytes": 126,
+  "sha256": "50a64ddcad0fad08e08a7fcdfd0266acb9a9a791c5c723e2ac0fefe0fe68c21f",
+  "userAgent": "InvestWatch-SourceMonitor/1.1 (X11; Linux x86_64; UKNF InvestWatch discovery)",
+  "route": "direct",
+  "result": "graph_error_code_1_no_token"
+ }
+]

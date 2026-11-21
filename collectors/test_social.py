@@ -121,7 +121,7 @@ class ReplayTests(unittest.TestCase):
         self.assertNotIn("brokerchampionofficial", {c["id"].split(":")[1] for c in stored["creators"]})
 
     def test_raw_probe_logs_are_dated_and_complete(self):
-        rows = [r for name in ("probe-1-requests.json", "probe-2-requests.json")
+        rows = [r for name in ("probe-1-requests.json", "probe-2-requests.json", "probe-3-requests.json")
                 for r in json.loads((FIXTURES / name).read_text(encoding="utf-8"))]
         self.assertLessEqual(len(rows), 40)
         self.assertTrue(all(r["at"].startswith("2026-11-21") and r["result"] for r in rows))
