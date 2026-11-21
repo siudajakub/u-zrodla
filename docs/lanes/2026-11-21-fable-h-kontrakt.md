@@ -524,3 +524,15 @@ Wcześniej 1405 spraw, `needsRecalc` miały wszystkie M2 (31) i M3 (3). Po repla
 ### Ograniczenia
 
 Zapisana w bazie sprawa `public-bos-profil` (stare demo, bossa.pl) zostaje obok `web:bossa.pl/oferta/doradztwo`, bo skan niczego nie usuwa; świeża baza jej nie ma. Cytaty osi bywają nietrafne (patrz rekord linii F). Trasa `refer` M3 zależy od kopii wykazów z 21 XI. Post M1 z IG/FB czytany tylko jako podpis nie trafi do `review` bez mocnego dowodu relacji; wiele oznaczonych postów ląduje w `incomplete` z powodem „mowy nie zbadano”, bo kwalifikacja M1 nie rozróżnia tu wideo od obrazu.
+
+## Uzupełnienie 21 XI, noc: kalibracja M2 i M3, odszumienie M2, pola dla pitchu, alert pokazowy (§3.17)
+
+### 3.17 Co dodano w API (agent H, po drugiej ocenie)
+
+- `GET /v1/calibration?module=M1|M2|M3&threshold=N&view=refer|refer_or_complete&series=1`. M1 bez zmian (plus `series`). M2: 25 stron z etykietami agenta zapisanymi przed regułami (`fixtures/labeled/m2-agent-labels.jsonl`), predykcja to wynik karty liczony bieżącym kodem na zapisanych ujęciach (bez przeglądarki). M3: 31 podmiotów, reguły uruchamiane na zapisanych stronach i wykazach. Odpowiedź: `tp/fp/tn/fn`, `precision`, `recall`, `cost` (2×FN+FP), `errors[]` z firmą i adresem, `labelTarget`, `labelers` („1 agent, etykiety przed regułami”), `disclaimer`, `independentUnits`, `queueEffect`, `series[]` (progi 20…95 co 5).
+- Próg modułu: osobne wpisy `m2_card` (domyślnie 30) i `m3_card` (domyślnie 60) w `/v1/threshold` (historia i przywracanie jak dla wariantów), stosowane do kolejki `review` tego modułu. Bez migracji: brak wiersza oznacza wartość domyślną.
+- Zakres M2 dla postów i reklam social (`analysis.engine.m2_scope`): firma z rejestru, tekst po polsku (heurystyka adaptera YouTube), treść o instrumencie lub usłudze albo twierdzenie o korzyści i ostrzeżenie w tekście. Pozostałe: trasa `no_signal`, kolejka tylko `all`, pole `m2Scope` z powodem.
+- Kryterium 2 M2 („oznaczenie reklamy”) to stan `obserwacja`: widoczne w karcie, 0 punktów, bez wpływu na trasę. Na 25 stronach: próg 30 FP 1 → 0, próg 50 bez zmiany.
+- `funnel`, `scanMode`, `scanLabel` w `/v1/overview`; `proofPath[]` w karcie widoku 2; `models` w `/v1/overview`; `secondOpinion` (zapisany wynik pomiaru, `runtime: "recorded"`) przy sprawach M1 (17 filmów) i M3 z pomiaru; kadry próby, w których oznaczenie jest widoczne, jako dowód `kind=frame` (Comparic, 614 s).
+- Alert pokazowy: `POST /v1/demo/alert/reset` (uzbraja; usuwa jedną zapisaną stronę M2) i `POST /v1/scans {mode:"replay", adapters:["demo-alert"]}` (wczytuje ją z archiwum, `high_risk` dokładnie raz). `GET /v1/demo/alert` podaje stan.
+- Widok 2 karty: pola v1 (`score`, `reviewSuggestion`, `summary`, `signalType`) pod `legacy`, `humanText` przy pomiarach, krótkie różne `moments[].label`, `disclosure.kinds`. Wiersze listy: `firmShort`, `firmLegal`, `licensed` (M3), pasmo siły skalą modułu.
