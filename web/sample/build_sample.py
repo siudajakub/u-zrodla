@@ -23,7 +23,7 @@ except ImportError:  # bez Pillow zrzuty zostają w pełnej rozdzielczości
 
 OUT = Path(__file__).resolve().parent
 parser = argparse.ArgumentParser()
-parser.add_argument("--api", default="http://127.0.0.1:18801")
+parser.add_argument("--api", default="http://127.0.0.1:18801", help="API do odczytu (do próby: kopia bazy na 18802)")
 parser.add_argument("--registry-cards", type=int, default=12)
 parser.add_argument("--incomplete-cards", type=int, default=12)
 parser.add_argument("--m2-cards", type=int, default=12, help="karty stron M2 z renderu (poza kartami z kolejki review)")
@@ -123,7 +123,12 @@ export = {
     "qualificationHistory": get("/v1/qualification/history"),
     "trend": get("/v1/trend?days=30"),
     "scans": {s["id"]: get(f"/v1/scans/{s['id']}") for s in state["scans"][:5]},
-    "calibration": {str(t): get(f"/v1/calibration?threshold={t}&variant={variant}") for t in range(0, 105, 5)},
+    # kalibracja per moduł (M1 z wariantem), każda odpowiedź z krzywą `series`
+    "calibration": {
+        "M1": {str(t): get(f"/v1/calibration?threshold={t}&variant={variant}&series=1") for t in range(0, 105, 5)},
+        "M2": {str(t): get(f"/v1/calibration?module=M2&threshold={t}&series=1") for t in range(0, 105, 5)},
+        "M3": {str(t): get(f"/v1/calibration?module=M3&threshold={t}&series=1") for t in range(0, 105, 5)},
+    },
     "platformTotals": {p: get(f"/v1/queues/all?platform={p}&limit=1")["total"] for p in ("youtube", "tiktok", "instagram", "facebook", "web")},
 }
 (OUT / "export.json").write_text(json.dumps(export, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

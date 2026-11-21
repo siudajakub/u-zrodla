@@ -43,7 +43,12 @@ function emit(kind, ref, message) {
   return event;
 }
 
-const counts = () => Object.fromEntries(Object.entries(state.queues).map(([k, v]) => [k, queues[k] ? queues[k].length : v]));
+// „all” z eksportu nie ma pełnej listy: składamy ją z pozostałych kolejek (bez powtórzeń); licznik „all” zostaje z API.
+if (!queues.all) {
+  const seenAll = new Set();
+  queues.all = Object.values(queues).flat().filter((i) => !seenAll.has(i.id) && seenAll.add(i.id));
+}
+const counts = () => Object.fromEntries(Object.entries(state.queues).map(([k, v]) => [k, k === "all" || !queues[k] ? v : queues[k].length]));
 
 /** Odpowiedź kolejki: filtry i kursor jak w API (q, module, platform, since, until, minScore, section, limit, cursor). */
 function queuePage(name, params) {
@@ -66,10 +71,12 @@ function queuePage(name, params) {
   return { items: page, total: items.length, nextCursor: start + limit < items.length ? String(start + limit) : null, counts: counts(), threshold, asOf: new Date().toISOString(), lastScan: { id: last.id, status: last.status, updatedAt: last.updatedAt } };
 }
 
-function calibration(value) {
-  const keys = Object.keys(exported.calibration).map(Number);
+function calibration(value, module = "M1") {
+  const table = exported.calibration[module] || exported.calibration.M1 || exported.calibration;
+  const keys = Object.keys(table).map(Number);
+  if (value == null) value = table[String(keys[0])]?.storedThreshold ?? 60;
   const nearest = keys.reduce((a, b) => (Math.abs(b - value) < Math.abs(a - value) ? b : a));
-  return { ...exported.calibration[String(nearest)], threshold: value };
+  return { ...table[String(nearest)], threshold: value };
 }
 
 let fakeScan = null;
@@ -130,7 +137,7 @@ const server = createServer(async (req, res) => {
       return send(res, 200, queuePage(name, url.searchParams));
     }
     if (path === "/v1/trend") return send(res, 200, exported.trend);
-    if (path === "/v1/calibration") return send(res, 200, calibration(Number(url.searchParams.get("threshold") ?? 60)));
+    if (path === "/v1/calibration") return send(res, 200, calibration(url.searchParams.has("threshold") ? Number(url.searchParams.get("threshold")) : null, url.searchParams.get("module") || "M1"));
     if (path === "/v1/threshold") {
       if (req.method === "PUT") {
         const body = JSON.parse(await readBody(req));

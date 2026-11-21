@@ -22,11 +22,16 @@ export function shotsOf(check) {
 
 /** Zdanie pomiaru po ludzku: widoki po polsku, liczby zaokrąglone, bez „y=”. Pole `summary` z API ma pierwszeństwo. */
 export function plainEvidence(r) {
-  if (r.summary) return r.summary;
-  return String(r.evidence || "")
-    .replace(/\(desktop\)/g, "(komputer)").replace(/\(phone\)/g, "(telefon)")
+  const human = (r.measurements || []).map((m) => m.humanText).find(Boolean);
+  return plainText(human || r.summary || r.evidence);
+}
+
+export function plainText(text) {
+  return String(text || "")
+    .replace(/\s*\(y=[^)]*\)/g, "").replace(/\s*\b(?:desktop|phone) \d+×\d+: kontrast[^.]*\./g, "")
+    .replace(/\bdesktop\b/g, "komputer").replace(/\bphone\b/g, "telefon")
     .replace(/(\d+)\.(\d+) px/g, (_, a) => `${Number(a).toLocaleString("pl-PL").replace(/ /g, " ")} px`)
-    .replace(/,?\s*y=[\d.]+( px)?/g, "")
+    .replace(/,?\s*y=[\d.]+( z [\d.]+)?( px)?/g, "")
     .replace(/\s*\(próg: [^)]*\)/g, "")
     .replace(/Takich twierdzeń: \d+\./, "")
     .replace(/FOG-PL [\d,]+/g, "indeks czytelności")

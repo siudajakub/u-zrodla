@@ -17,7 +17,7 @@ import { TextInput } from "@astryxdesign/core/TextInput";
 import { ToggleButton } from "@astryxdesign/core/ToggleButton";
 import { Token } from "@astryxdesign/core/Token";
 import { reportUrl } from "./api.js";
-import { PLATFORMS, activeCount } from "./filters.js";
+import { PLATFORMS, activeCount, queueFor } from "./filters.js";
 import { COMPLETE_REASON, DISCLOSURE_WHERE, MODULE_NAME, STATES, clock, fmtDay, fmtInt, platformLabel, strengthLabel } from "./labels.js";
 import { Lines, ModuleToken, OriginToken, RecalcToken, ReReviewToken, Strength } from "./parts.jsx";
 import { hashFor } from "./route.js";
@@ -37,8 +37,9 @@ const noCount = (label) => String(label).replace(/ \d+$/, "");
 export function Filters({ filters, update, reset, tab, narrow, report, moduleCounts = null, stateCounts = {}, platforms = PLATFORMS }) {
   const count = activeCount(filters);
   const isReview = tab === "review";
+  const allCount = stateCounts[queueFor(filters.state, "all")] ?? null;
   const moduleOptions = [
-    { value: "all", label: moduleCounts ? `Wszystkie ${Object.values(moduleCounts).reduce((a, b) => a + b, 0)}` : "Wszystkie" },
+    { value: "all", label: allCount != null ? `Wszystkie ${allCount}` : moduleCounts ? `Wszystkie ${Object.values(moduleCounts).reduce((a, b) => a + b, 0)}` : "Wszystkie" },
     ...Object.keys(MODULE_NAME).map((id) => ({ value: id, label: moduleCounts ? `${MODULE_NAME[id]} ${moduleCounts[id]}` : MODULE_NAME[id] })),
   ];
   const stateOptions = STATES.map((s) => ({ value: s.value, label: stateCounts[s.queue] != null && s.value !== "all" ? `${s.label} ${stateCounts[s.queue]}` : s.label }));

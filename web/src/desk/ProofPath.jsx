@@ -10,7 +10,7 @@ import { Text } from "@astryxdesign/core/Text";
 import { Token } from "@astryxdesign/core/Token";
 import { Tooltip } from "@astryxdesign/core/Tooltip";
 import { DISCOVERY_METHOD, ROUTES, clock, safeUrl, strengthLabel, timeLink } from "./labels.js";
-import { shotsOf } from "./CardM2.jsx";
+import { plainText, shotsOf } from "./CardM2.jsx";
 
 const SHORT = {
   discovery: "Odkrycie", description: "Opis", platformFlag: "Flaga YouTube", speech: "Mowa", frames: "Kadry", firm: "Firma", model: "Typ materiału",
@@ -153,7 +153,7 @@ export function buildProofPath(c) {
   return api.map((s) => {
     const own = byId.get(s.id);
     const detail = s.detail && (s.detail.length <= LONG || !own?.detail) ? s.detail : own.detail;
-    return { ...s, label: s.id === "decision" ? "Wynik" : SHORT[s.id] || s.label, detail: s.id === "decision" && own ? own.detail : detail || "", deepLink: safeUrl(s.deepLink) };
+    return { ...s, label: s.id === "decision" ? "Wynik" : SHORT[s.id] || s.label, detail: s.id === "decision" && own ? own.detail : plainText(detail), deepLink: safeUrl(s.deepLink) };
   });
 }
 

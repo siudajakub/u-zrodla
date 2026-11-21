@@ -5,11 +5,12 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { Theme } from "@astryxdesign/core/theme";
 import { themes, defaultThemeSlug } from "../../web/src/astryx-themes.js";
 import { CaseDetail } from "../../web/src/desk/CaseDetail.jsx";
-import { CaseList, OffersTable, RegisterTable } from "../../web/src/desk/Lists.jsx";
+import { CaseList, RegisterCounters, RegisterTable } from "../../web/src/desk/Lists.jsx";
 import { Sources } from "../../web/src/desk/Sources.jsx";
 import { normalizeCase, normalizeRow, normalizeState } from "../../web/src/desk/model.js";
 import { queueQuery } from "../../web/src/desk/api.js";
-import { EMPTY_FILTERS } from "../../web/src/desk/filters.js";
+import { EMPTY_FILTERS, queueFor } from "../../web/src/desk/filters.js";
+import { parseHash } from "../../web/src/desk/route.js";
 import { safeUrl, timeLink } from "../../web/src/desk/labels.js";
 
 const wrap = (node) => renderToStaticMarkup(<Theme theme={themes[defaultThemeSlug]} mode="light">{node}</Theme>);
@@ -34,12 +35,16 @@ export function run(exported) {
     reviewListNarrow: wrap(<CaseList items={review} tab="review" narrow filters={EMPTY_FILTERS} onOpen={noop} emptyState={null} />),
     emptyList: wrap(<CaseList items={[]} tab="review" narrow={false} filters={EMPTY_FILTERS} onOpen={noop} emptyState={<p>PUSTO</p>} />),
     registerTable: wrap(<RegisterTable items={register} filters={EMPTY_FILTERS} onOpen={noop} emptyState={null} />),
-    offers: wrap(<OffersTable items={rows("offersM2")} module="M2" filters={EMPTY_FILTERS} onOpen={noop} emptyState={null} />),
+    offers: wrap(<CaseList items={rows("offersM2")} tab="review" kind="all" narrow={false} filters={{ ...EMPTY_FILTERS, state: "all", module: "M2" }} onOpen={noop} emptyState={null} />),
+    counters: wrap(<RegisterCounters funnel={state.funnel} filters={EMPTY_FILTERS} update={() => noop} go={noop} />),
+    funnel: state.funnel || null,
+    queueFor: [queueFor("review", "all"), queueFor("incomplete", "M2"), queueFor("all", "M2"), queueFor("all", "M3"), queueFor("all", "all"), queueFor("closed", "all"), queueFor("demo", "all")],
+    legacyHashes: ["#m2", "#m3", "#niepelne", "#incomplete", "#zamkniete", "#closed", "#demo", "#evidence", "#review", "#sources"].map((h) => { const r = parseHash(h); return [h, r.tab, r.filters.state, r.filters.module, r.add]; }),
     detailM2: wrap(<CaseDetail c={caseOf("web:noblesecurities.pl/klient-indywidualny/rachunek-ike")} onSaved={noop} onBack={null} />),
     detailM2Narrow: wrap(<CaseDetail c={caseOf("web:noblesecurities.pl/klient-indywidualny/rachunek-ike")} onSaved={noop} onBack={null} narrow />),
     detailM3: wrap(<CaseDetail c={caseOf("web:rdmwm.pl:m3")} onSaved={noop} onBack={null} />),
     detailM3Licensed: wrap(<CaseDetail c={caseOf("web:erste.pl:m3")} onSaved={noop} onBack={null} />),
-    offersM3: wrap(<OffersTable items={rows("offersM3")} module="M3" filters={EMPTY_FILTERS} onOpen={noop} emptyState={null} />),
+    offersM3: wrap(<CaseList items={rows("offersM3")} tab="review" kind="all" narrow={false} filters={{ ...EMPTY_FILTERS, state: "all", module: "M3" }} onOpen={noop} emptyState={null} />),
     tiktokDetail: wrap(<CaseDetail c={caseOf(Object.keys(exported.cases).find((id) => id.startsWith("tiktok:")))} onSaved={noop} onBack={null} />),
     sources: wrap(<Sources data={state} busy={false} scanning={false} onScan={noop} rev={0} />),
     legacyDetail: legacy && exported.cases[legacy.id] ? wrap(<CaseDetail c={caseOf(legacy.id)} onSaved={noop} onBack={null} />) : null,

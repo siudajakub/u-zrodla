@@ -241,7 +241,7 @@ export function CaseDetail({ c, headingRef, onBack, onSaved, narrow }) {
   const strength = c.score?.value != null ? strengthLabel(c.score.band, c.score.value) : null;
   const header = (
     <LayoutHeader padding={0} hasDivider>
-      <VStack gap={1} padding={narrow ? 2 : 2}>
+      <VStack gap={0.5} padding={narrow ? 2 : 2}>
         <HStack gap={2} hAlign="between" vAlign="center" wrap="wrap">
           <HStack gap={1} wrap="wrap" vAlign="center">
             {strength && c.score.value > 0 && <Token size="sm" color={BAND_COLOR[c.score.band] || "gray"} label={strength} />}
@@ -262,7 +262,7 @@ export function CaseDetail({ c, headingRef, onBack, onSaved, narrow }) {
   );
   const proofTile = kind === "m2" ? <ProofM2 c={c} /> : kind === "m3" ? <ProofM3 c={c} /> : kind === "ad" ? <ProofAd c={c} /> : kind === "text" ? <ProofText c={c} /> : <ProofM1 c={c} />;
   const body = (
-    <VStack gap={2} padding={narrow ? 2 : 2}>
+    <VStack gap={1.5} padding={narrow ? 2 : 2}>
       {c.origin === "synthetic" || c.origin === "upload" ? (
         <Banner status="info" title={c.origin === "upload" ? "Plik operatora" : "Materiał demonstracyjny"} description="Nie pochodzi z bieżącego rynku." />
       ) : null}

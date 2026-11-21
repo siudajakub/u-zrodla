@@ -121,6 +121,11 @@ export const api = {
   startScan(mode) {
     return request("/v1/scans", json("POST", { mode, requestId: globalThis.crypto?.randomUUID?.() || String(Date.now()) }));
   },
+  /** Alert pokazowy (tryb odtworzenia): uzbrój i wczytaj jedną zapisaną stronę M2, co daje jedno zdarzenie high_risk. */
+  async demoAlert() {
+    await request("/v1/demo/alert/reset", json("POST", {}));
+    return request("/v1/scans", json("POST", { mode: "replay", adapters: ["demo-alert"], requestId: globalThis.crypto?.randomUUID?.() || String(Date.now()) }));
+  },
   scan: (id) => request(`/v1/scans/${encodeURIComponent(id)}`),
   trend: (days = 30) => request(`/v1/trend?days=${days}`),
 

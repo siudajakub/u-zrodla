@@ -246,7 +246,8 @@ export function Desk() {
   async function startScan(mode) {
     setBusy(true);
     try {
-      await api.startScan(mode);
+      if (mode === "demo-alert") await api.demoAlert();
+      else await api.startScan(mode);
       setNotice({ status: "info", title: mode === "recompute" ? "Przeliczanie uruchomione." : "Skan uruchomiony. Wyniki pojawią się w kolejkach." });
       [400, 1500, 4000, 9000].forEach((ms) => setTimeout(schedule, ms));
     } catch (e) {

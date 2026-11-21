@@ -68,6 +68,7 @@ export const CHECK_STATE = {
   "brak danych": ["yellow", "brak danych"],
   "częściowo": ["yellow", "częściowo"],
   "poza katalogiem": ["gray", "poza katalogiem"],
+  "obserwacja": ["gray", "obserwacja"],
 };
 /** Uprawnienia M3 (identity.state z API): [kolor, etykieta]. Nieznany kod: etykieta z API. */
 export const IDENTITY_STATE = {

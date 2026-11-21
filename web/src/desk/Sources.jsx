@@ -438,6 +438,7 @@ export function Sources({ data, busy, scanning, onScan, rev, onRefresh, openAdd,
           <Button label="Skanuj na żywo" variant="primary" isDisabled={disabled} tooltip={why} onClick={() => onScan("live")} />
           <Button label="Odtwórz skan" isDisabled={disabled} tooltip={why} onClick={() => onScan("replay")} />
           <Button label="Przelicz materiały" isDisabled={disabled} tooltip={why} onClick={() => onScan("recompute")} />
+          {(data.scanMode || dataScan?.mode) === "replay" && <Button label="Pokaż alert (pokaz)" variant="ghost" isDisabled={disabled} tooltip="Wczytuje jedną zapisaną stronę i wysyła alert o nowej sprawie" onClick={() => onScan("demo-alert")} />}
         </HStack>
         {progress && <ProgressBar label="Postęp skanu" value={progress.done} max={progress.total || 1} />}
       </VStack>
