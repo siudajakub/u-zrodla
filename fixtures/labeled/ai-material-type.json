@@ -1,0 +1,1162 @@
+{
+ "task": "material_type",
+ "classes": [
+  "promocja",
+  "edukacja",
+  "informacja",
+  "opinia"
+ ],
+ "source": "fixtures/raw/discovery/youtube-api-2026-11-21/replay.json.gz (tytuł + opis po preprocessingu pp-1, pierwsze 1200 znaków; oznaczający widział pierwsze ok. 380 znaków)",
+ "sampling": "python3 -m analysis.material_classifier sample --size 160: materiały z polskimi znakami, >=80 znaków, deduplikacja po tekście, losowanie seed 20261121, max 3 na twórcę",
+ "split": "po twórcy (sha256 'ai-material-type:'+creatorId mod 5 < 2 -> heldout); żaden kanał nie występuje w obu zbiorach",
+ "labeler": {
+  "kind": "agent",
+  "model": "claude-opus-5-5",
+  "independent": false,
+  "note": "jeden oznaczający, bez drugiej oceny; etykiety zapisane przed pierwszym uruchomieniem klasyfikatora i modelu LLM"
+ },
+ "labeledAt": "2026-11-21T20:50:12+00:00",
+ "guidelines": {
+  "zasada": "Typ to główny cel materiału wynikający z tytułu i opisu. Linki afiliacyjne lub sponsor pod materiałem merytorycznym nie zmieniają typu treści głównej.",
+  "promocja": "Materiał jest reklamą lub ofertą: spot, zapowiedź własnego wydarzenia lub produktu, prezentacja produktu emitenta, recenzja brokera zbudowana wokół linku rejestracyjnego, krótki film z #współpraca bez innej treści.",
+  "edukacja": "Wyjaśnia pojęcia, mechanizmy lub kroki (jak zacząć, czym jest, porównanie zasad, kalkulacje przykładowe), także popularnonaukowe.",
+  "informacja": "Relacjonuje fakty: wiadomości, wyniki spółek, wywiad, transmisja, przegląd sesji, a także rozrywka i vlog bez tezy (klasa zbiorcza).",
+  "opinia": "Teza, ocena, prognoza lub osobiste decyzje autora: analiza techniczna, komentarz rynkowy, ranking subiektywny, mój portfel, recenzja produktu."
+ },
+ "counts": {
+  "tuning": {
+   "opinia": 28,
+   "promocja": 15,
+   "edukacja": 36,
+   "informacja": 24
+  },
+  "heldout": {
+   "promocja": 3,
+   "informacja": 17,
+   "edukacja": 14,
+   "opinia": 23
+  }
+ },
+ "items": [
+  {
+   "id": "youtube:r1vgQtAwu1U",
+   "creatorId": "youtube:UCtTpDSRTegHewCxP9GTUaXQ",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "b0197fdc22999521f97df9d12e8bef7c218fb8fbb029047400a1454008c9a8e5"
+  },
+  {
+   "id": "youtube:XmHicDjHtjU",
+   "creatorId": "youtube:UCFiObcDqkjNjNsvA6M0xLzQ",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "327e89300c6c8a6973dc7fdc176e93c9b9dce8cd20e151d45c110fa23960175d"
+  },
+  {
+   "id": "youtube:oZPrbO5by48",
+   "creatorId": "youtube:UC3JgUN78v4RX3saWqmCEV1g",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "af19d0aa222eb037455ff809c2594ccc2424f725a4bda776003c6b10a71bd8c9"
+  },
+  {
+   "id": "youtube:ohP5Que8Syc",
+   "creatorId": "youtube:UCXB1StgfveHUAsLZ8hUr5RQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "71fe0a6d38f0166cf5cdba32ca85241b1ca35184dff44791104a6b768b07c12d"
+  },
+  {
+   "id": "youtube:fBs3HCH1qpM",
+   "creatorId": "youtube:UCh9IhKUDYhf0-IyJII0VClg",
+   "split": "heldout",
+   "label": "promocja",
+   "textSha256": "ca11e45f68e6b9a93d6d5890f3752654404dbd3fbe1bf64269efc620ffe8e370"
+  },
+  {
+   "id": "youtube:PLMVXqvYI1c",
+   "creatorId": "youtube:UCBohPqQw-Ffm8_G2IuaW2UA",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "008159c113a7206d953341394effa630299c012bd4a619b8defd85421ea4f148"
+  },
+  {
+   "id": "youtube:3x9VNTJSksg",
+   "creatorId": "youtube:UCtZrrtNmk2RlJVI51vutd-g",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "3519073f3088f4abb6b32bf5e3f98c43456336749fdfc9136eeaf3b36550640f"
+  },
+  {
+   "id": "youtube:88yGNbSk4hE",
+   "creatorId": "youtube:UC8Ymbs8znOAFmcCvWeHxZHQ",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "d64aae12640e84d36112c44992d89308b6621071b1c7783adedce0b79369e743"
+  },
+  {
+   "id": "youtube:MSXs8PXVWVA",
+   "creatorId": "youtube:UC16y5xkzIplJDo5rsZ6d6HQ",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "f698543c49650cbb3ade9e15aa90e7eae498896aa525150090ebe1fd0eeb92f3"
+  },
+  {
+   "id": "youtube:YLupxyhsUVQ",
+   "creatorId": "youtube:UCYsZvmJGPzTMSBXES06-2lg",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "09241b3c1eaa21af976a079187f670791880f7040c465346193c9f2f2efca3fb"
+  },
+  {
+   "id": "youtube:o6gRs1ZtzMM",
+   "creatorId": "youtube:UCbcGARiE4aPFIDTkwQmWMCQ",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "26a177fb3096c62e00e84d2d044de2dce0884c2f22670960d208721ef036ded8"
+  },
+  {
+   "id": "youtube:3TdtwBe7WxU",
+   "creatorId": "youtube:UCCJJbk-s8G0HM-3IK9CnzEg",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "ae1a5dac3c0c52919aceb440cfc8cb852adb3092defdc6a198b6f4d3eeccb444"
+  },
+  {
+   "id": "youtube:UAoDJU0NzMc",
+   "creatorId": "youtube:UCHv11ztykFWf_0dhTEMLO6A",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "9750789cb0f2487188b7658342265c806b3dec89bc15a092632a6927008bb02b"
+  },
+  {
+   "id": "youtube:Sj77XUOvTnI",
+   "creatorId": "youtube:UCBohPqQw-Ffm8_G2IuaW2UA",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "aad2bd0bec6289e4d3fbd192bfeecf41d01ed72d48c272a221966cd8857de984"
+  },
+  {
+   "id": "youtube:0IEJOwlrOTc",
+   "creatorId": "youtube:UCR7uLtPuXsDpN8N6ocFQyeg",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "3a861d440796688b6243f09735b1eb6662f855da325ac5163eaa37bcbe52d3b1"
+  },
+  {
+   "id": "youtube:xYJRWZKDaA8",
+   "creatorId": "youtube:UCoPYlABqb3uQGqVH2Cjl8ww",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "ed2800721654b13d92e1674aeea32e07696d6c8328774d78bcf20b5926ed7b7d"
+  },
+  {
+   "id": "youtube:q6gH6l_MxTE",
+   "creatorId": "youtube:UCv6mTV4iQMOeixAWz47bP4Q",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "9d0a849f7cb9494214b22124662886b26fa441289c9cbaef187733deb5b6dd72"
+  },
+  {
+   "id": "youtube:E3lhP8UL7wg",
+   "creatorId": "youtube:UCcJq-5bSAMp2ZCOR8kacfmA",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "3f0fbff8b3a4a1a95dcce6a4bdbf9b7dac8f880b458732c23626da3a2b0b8140"
+  },
+  {
+   "id": "youtube:2Hrga7ATLUk",
+   "creatorId": "youtube:UC65BgRPz27OfaozBf_NtAdg",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "11748eb5e47de5063e0c4acf4882dfba60983986b7707a5b741032e593914f9b"
+  },
+  {
+   "id": "youtube:W1WMMKLnmOA",
+   "creatorId": "youtube:UCCJJbk-s8G0HM-3IK9CnzEg",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "350e33bb1027b1a259cf499bbe99af1790abe87de874e7fd1a44ba5cb915d80e"
+  },
+  {
+   "id": "youtube:IAy3G7-yHv0",
+   "creatorId": "youtube:UCYsZvmJGPzTMSBXES06-2lg",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "8c4920dba049044ab2722ef9eb60aa75d59e85bc70d44f10c1be199aab9998b2"
+  },
+  {
+   "id": "youtube:sXSRnStiRrw",
+   "creatorId": "youtube:UClhEl4bMD8_escGCCTmRAYg",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "a787da5e8a3252e5f7f1309fbd0196ec0d3b7f7c233f9b440df8084bc084151d"
+  },
+  {
+   "id": "youtube:PIf8aGW3fEE",
+   "creatorId": "youtube:UC16y5xkzIplJDo5rsZ6d6HQ",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "b98528af63320ab5a0865f49df84dbe54bc24fd908b5f1f78d9b7e991ecec8c9"
+  },
+  {
+   "id": "youtube:UN_tqoj8MzQ",
+   "creatorId": "youtube:UCCT_JGIn9I9FS6OTzzqWEew",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "c31ecb017ad8b4d0afe9347f4a2bbc82a1461f771157995869f45263086f78ba"
+  },
+  {
+   "id": "youtube:kuYFTfE2GtI",
+   "creatorId": "youtube:UCTyt5JYXghR3TNJjspt8diw",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "a453e532722a834d101345bb0ebb6b63c7a0d591cf92a6f3286c09f8fc11ce1d"
+  },
+  {
+   "id": "youtube:sRepv9NVQUQ",
+   "creatorId": "youtube:UCi6PZ5-aXuMKFTnQPeMVeNw",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "18b8333cf1f08ae91f13b322436daef019236f20b5871b70606027f3e0b6ecc5"
+  },
+  {
+   "id": "youtube:-qv7qdAiUek",
+   "creatorId": "youtube:UCYsZvmJGPzTMSBXES06-2lg",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "d8649943ff7975532a733082d0b2c9a68879c37809c3279530af839aa6b67048"
+  },
+  {
+   "id": "youtube:IV0Fk2xSagI",
+   "creatorId": "youtube:UC16y5xkzIplJDo5rsZ6d6HQ",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "50b9c6bb97eeacd025fd6cad9ba668f866c77eae61d6fedae3ad9e9846eb2fb0"
+  },
+  {
+   "id": "youtube:22CXxZvr7B4",
+   "creatorId": "youtube:UC_Oky4xRnC0KflyUH3zbVXg",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "fcaa519a9ed97a79155c6c688c27663bc89c82a1e17091f4b60c89769283e96a"
+  },
+  {
+   "id": "youtube:tS4WVQr_Vbg",
+   "creatorId": "youtube:UCbcGARiE4aPFIDTkwQmWMCQ",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "fb7165d2b227b3b069bdb3370f58451fa7cc63806e92f5b20a5a73f353606239"
+  },
+  {
+   "id": "youtube:t28-88nM7oI",
+   "creatorId": "youtube:UClhEl4bMD8_escGCCTmRAYg",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "b417296036dc44065195c9107f55784eb162f789770b018f67494575b9defa16"
+  },
+  {
+   "id": "youtube:BaDo7u2Hve0",
+   "creatorId": "youtube:UCgw_3Epv7swquSZyMDjYHTg",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "a079c66e9fe3bf8e86da2f2b86ab60f1b6d6234bf43d827d6c4279a8d9d0a645"
+  },
+  {
+   "id": "youtube:DEkZR_JmMFI",
+   "creatorId": "youtube:UC9SqKQ22YCmbR3kw6eIeU8w",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "2f9a4efdcbccc65e7770d6ffda82dcf1a2145cff0d027a1c0db2e136ea84df7f"
+  },
+  {
+   "id": "youtube:Ck2pV5YVIak",
+   "creatorId": "youtube:UCILwajCs145hxNvB4nckALg",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "481b324ee8f7a372dbdf19a8543a7b89fa0880d883cf8a6c8a81a6617609db42"
+  },
+  {
+   "id": "youtube:DW_dwRXYQnY",
+   "creatorId": "youtube:UCG4bnFHQ57omG3vIITyFbjg",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "17a0a429fb5d33c34d88fb1138aaa64e08be518783ce5c8fded7a2c9e43fd9ef"
+  },
+  {
+   "id": "youtube:eINo3nbh9-I",
+   "creatorId": "youtube:UCAH85XhPoXCxSXUKdwsm0Ig",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "5f7bff26ff70a84b6f56cd21ef400ceea8dd7517ff07a13c68fc035f20a69b6f"
+  },
+  {
+   "id": "youtube:P1SgAG8j0g0",
+   "creatorId": "youtube:UClhEl4bMD8_escGCCTmRAYg",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "598743e53e595961e76c52c483080698d0cad62526674031b6a5d1570f47e42e"
+  },
+  {
+   "id": "youtube:LNZ71zMTEXk",
+   "creatorId": "youtube:UCzp2jP1x_wVQfp1-rdpzWeg",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "ba215557b557ad783538657e9305975c5dbd05abeb5fb0328fa48ef83eea86ff"
+  },
+  {
+   "id": "youtube:LYt7BDSUn6g",
+   "creatorId": "youtube:UCzHeCFkVN2IOWjc57uOuvSw",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "b5e14069fcb8054dd5af52c4d0e27939e3846cdc1dab568bcb96def3bff67930"
+  },
+  {
+   "id": "youtube:Z8DlKae_d2Y",
+   "creatorId": "youtube:UCjde5S2ruiZh-t6ndYB68Iw",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "0782501e460d4b6f3f4343d697018af6b365f5accddf813d7a359153282e8180"
+  },
+  {
+   "id": "youtube:OhBJ--Myyiw",
+   "creatorId": "youtube:UCiUU_F5HTWrJi8dabWHg9eA",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "44259e806c817a8d589fd9420cf317ef259952cdeb2961764e03294740b53bfc"
+  },
+  {
+   "id": "youtube:UuXWJIK0VMk",
+   "creatorId": "youtube:UCv_fwQqff6zEFDxfJh_03fg",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "de3888966d4b15ecc064d88760c32d4de7a350a2e5ac3320a4cf83fdc9944366"
+  },
+  {
+   "id": "youtube:Lj-2TcNU-F4",
+   "creatorId": "youtube:UCHv11ztykFWf_0dhTEMLO6A",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "107883002a35b6030df74a490db55ed22dfb6245aae66ad5d83e319409099e21"
+  },
+  {
+   "id": "youtube:-mb8hWvwx7Y",
+   "creatorId": "youtube:UCuAOJnMr905iKjURUsffDgA",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "70dec75828192002ffc3aea103333b416fbbf9a539606d21c75e639cc9a6e451"
+  },
+  {
+   "id": "youtube:MAIPMPtah0c",
+   "creatorId": "youtube:UCRT4nqdvE5Q_uKah3LDONCQ",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "6230f2a88a6fb4d243f84f889bc9169cffe6dca5ef0488eb4c0edee3393adfdd"
+  },
+  {
+   "id": "youtube:NtF3D7rLnlo",
+   "creatorId": "youtube:UCw6m0T0_F5DLfPzJHumplDw",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "25dddaacc835a4056b32f87db76197fa30c50e9c8ec7083e762d2b6e88376fe2"
+  },
+  {
+   "id": "youtube:PJ_TxPmZUHE",
+   "creatorId": "youtube:UCH5UB8PulkZ75fOHgcSGt2g",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "d108547d8f2f2f6c96f781f071c245665a9c70e4ed52c776410216fd0d4de1a8"
+  },
+  {
+   "id": "youtube:42CV4iJOAUw",
+   "creatorId": "youtube:UCh9IhKUDYhf0-IyJII0VClg",
+   "split": "heldout",
+   "label": "promocja",
+   "textSha256": "4b71920d2569ee92c5c5f0a87df5011ad25b7b9c536b1bc878391d4a682aaac0"
+  },
+  {
+   "id": "youtube:UoTDKOmhfy8",
+   "creatorId": "youtube:UCBohPqQw-Ffm8_G2IuaW2UA",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "4f4198b3a8a5386a505b719aaf5e8f37863ab504cf59b35fc0218e74d2a6594d"
+  },
+  {
+   "id": "youtube:74S9gSnDiT0",
+   "creatorId": "youtube:UCh9IhKUDYhf0-IyJII0VClg",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "304c45b87d285edb3752f3caca68f9e5c9a9d3551381f2cf159ed7dc0db9686c"
+  },
+  {
+   "id": "youtube:V6wcqUf9fWQ",
+   "creatorId": "youtube:UCLmFjtUdzo1eMvSnF8xFJYg",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "7ec66537b624661fd4d41521d0448a0ed23d556f7aaae8ec511880ebaa31412f"
+  },
+  {
+   "id": "youtube:_WQ1hi1QFBo",
+   "creatorId": "youtube:UCjde5S2ruiZh-t6ndYB68Iw",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "2fd0c927c1710762f52ddbd732a98a49b519225d140bd436238f35ded753e5c5"
+  },
+  {
+   "id": "youtube:BJm2BDDCO6U",
+   "creatorId": "youtube:UCR7uLtPuXsDpN8N6ocFQyeg",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "3668c3bf73788b108d66267bf07722d01da5225cdf2201ab18040b6339ac8445"
+  },
+  {
+   "id": "youtube:tTqCiWJPO9I",
+   "creatorId": "youtube:UCCuQBWkyDFLq1VOpfUS1NlA",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "cb0f6d17c3cd2959d9332264d999b4f3f88babafa89a3d92bdbc61aaf2806bb2"
+  },
+  {
+   "id": "youtube:GxugMTFSb9Y",
+   "creatorId": "youtube:UCR7uLtPuXsDpN8N6ocFQyeg",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "60c3b0bcb0a9bb1d4fd171d46eaaaaacd0f86c0c7e2b035631b881af16508d92"
+  },
+  {
+   "id": "youtube:cuy22iXIGxU",
+   "creatorId": "youtube:UCmodyDWBnEMvu7uLASNQNvg",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "a02c13c158babe6d01b0c810bdfc87a2088c373ef020e0ea203e38fbabfd2fad"
+  },
+  {
+   "id": "youtube:WpQVvHIWSBs",
+   "creatorId": "youtube:UC8SBeyJCWWi0rgBuRJmG9iw",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "ccba4d3c9677c877dadd6c4b2fc2d5f81464251674867df5cb9692f31b3fc85a"
+  },
+  {
+   "id": "youtube:lOd3-syqBOE",
+   "creatorId": "youtube:UCAH85XhPoXCxSXUKdwsm0Ig",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "8cefe67781ece4f03ebbd89e7a6d2982da15b718daf46dc269e966f6d71009f1"
+  },
+  {
+   "id": "youtube:zadEHNr8LfA",
+   "creatorId": "youtube:UCXB1StgfveHUAsLZ8hUr5RQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "5c9593e77713bb85718fd070f59e3780c2bd80674e47f1bf4bb26dddd3cd55b8"
+  },
+  {
+   "id": "youtube:VZcFnXz8EZ0",
+   "creatorId": "youtube:UC5SCWle5EgiN7vzMMwPOpug",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "40f968d85500a207ea93018c26c441478550bd4436e21d379d9309fe2cb834d2"
+  },
+  {
+   "id": "youtube:V0jw7g74Zp4",
+   "creatorId": "youtube:UC8Ymbs8znOAFmcCvWeHxZHQ",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "d201f0fcbef8d24b0613407d6551961f4025ec86e182edc694a8b4439626afcb"
+  },
+  {
+   "id": "youtube:01exA_htW2Q",
+   "creatorId": "youtube:UCzHUL45GdSbPVt11WP5jKyQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "b0b63a0f2b6fcf8a69272e316d49fd8d9ba8ab38ffda1df3882837569bc0cf38"
+  },
+  {
+   "id": "youtube:q8Qd2E2wD3c",
+   "creatorId": "youtube:UCILwajCs145hxNvB4nckALg",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "5611cded5db693fac12c8354107a8983e7f598b2b813935266ac2bd112aa3cda"
+  },
+  {
+   "id": "youtube:qdpR3RXuOZo",
+   "creatorId": "youtube:UCv_fwQqff6zEFDxfJh_03fg",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "9221c7c9bb50b32cfe9ad474b38ac14c28c8e11e6c8e1b4a2f7282c7af3f762d"
+  },
+  {
+   "id": "youtube:ce14bW_Cq7o",
+   "creatorId": "youtube:UCIaJlmP7LuENMtTiQ47Dc0g",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "a6bd2c2155b731d6dbe47e6e2e878f67019b6fb38eb3f3b3f765c1921f8aaad8"
+  },
+  {
+   "id": "youtube:QuE-v8Zpgjo",
+   "creatorId": "youtube:UCv6mTV4iQMOeixAWz47bP4Q",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "cf40d406142e2c88e83e48635e48ddc8ecbe833b0e5d02e4b6b46478f8959f85"
+  },
+  {
+   "id": "youtube:AQaGrQ7Dp90",
+   "creatorId": "youtube:UCe8VykA_qDCBmg_08eIA8iQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "47ede72e11fba28ded0feadaa9b40e82492608b699a1befe154de4069726b23d"
+  },
+  {
+   "id": "youtube:giQd4SFkeU0",
+   "creatorId": "youtube:UChFr0plZ7_23KlTMFEKlMlA",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "76c3c72e31be273a3ca54c61b4c18d368ca5bf3d4239289f01c20a63538a2ff9"
+  },
+  {
+   "id": "youtube:A3aX1vkkWAk",
+   "creatorId": "youtube:UCYjxwFqTUwO5cja6xi5mvUg",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "b7d42c8127ab7b4c904949889d204e76d521811d725343b0788219a838c73fe1"
+  },
+  {
+   "id": "youtube:8xks7QUG6Xk",
+   "creatorId": "youtube:UCb4KZzyxv9-PL_BcKOrpFyQ",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "db78ad701c4376817ed6172af817eabd7b130f76bd2966d1257419d3f483358a"
+  },
+  {
+   "id": "youtube:H3-3D4bWQos",
+   "creatorId": "youtube:UCv6mTV4iQMOeixAWz47bP4Q",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "41f2f0edca5c418e046f10e0a7e55350a2a55f691b41004a6429b2d2a1a0b780"
+  },
+  {
+   "id": "youtube:APeulQ2zna0",
+   "creatorId": "youtube:UCO77Kyuf6Ai-S2qgd8UnxNw",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "d245b42066d28f9d34c1709152848975dcba84961f70c69cb8bb6b603be075d3"
+  },
+  {
+   "id": "youtube:BpGQfk3zPcs",
+   "creatorId": "youtube:UCqvkwZLk3L3BE8KR1-n9Ffg",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "03600579bb906ed8ef0dcef962cfc4388c0a54e4940120c2ee43be061b990aed"
+  },
+  {
+   "id": "youtube:YSSw-NzFOzM",
+   "creatorId": "youtube:UCQdae3gqmjZTBqqAgX5gbrg",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "dee1e0bb12791ecd8f051ba7fea99811a50f98163dc372e8c1bc98fc4cb8eff8"
+  },
+  {
+   "id": "youtube:wqz5IE_1Cpw",
+   "creatorId": "youtube:UC816J_EZEICUYOhjTnk3o7Q",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "153f72a12c6f8413cde77319d3c702876e0f5644edd638d29ea9d136929ffe3e"
+  },
+  {
+   "id": "youtube:6a0YbVL3CO0",
+   "creatorId": "youtube:UCNvSk-U6X9mOJHr7wz_xCWw",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "43b1b1eec836e03add7f048a7de37ff72b56e2b03516b01f341e815d3da3b1eb"
+  },
+  {
+   "id": "youtube:ELB56PZm-mQ",
+   "creatorId": "youtube:UCaW25etEU4Dkir2RbIzSzUw",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "2cb4eed8493bc3b80e3978ac41e2e641c46c7dbcefbd2b215c9f06029800786d"
+  },
+  {
+   "id": "youtube:veedof3XKpY",
+   "creatorId": "youtube:UC8SBeyJCWWi0rgBuRJmG9iw",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "09fed81077f5e19f54989447aedaefd907bc6fab756f0f927d9d9f5db8ce3d04"
+  },
+  {
+   "id": "youtube:QiSq_iPcfaU",
+   "creatorId": "youtube:UC_7EBLV1_TS0NFv5D6VipRg",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "778ed9bfa1c861ad4ad99c17fcb09e64111fa3688e1d1ab01014487db928700b"
+  },
+  {
+   "id": "youtube:YH0E7yShugQ",
+   "creatorId": "youtube:UCrdOfDuBviZgwr5MZfsHVEw",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "8dab450ac67303358a709d2411e735810871ba4c1b94de3933c4eb8272e35634"
+  },
+  {
+   "id": "youtube:IIIA7rNyHBs",
+   "creatorId": "youtube:UCBVtwXexpD1rsM9t3xpvlHQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "170d979c7ab252af762fe15ccb1127d777c57e261b7dff9ba703039873607c50"
+  },
+  {
+   "id": "youtube:gmsKX4KEZk4",
+   "creatorId": "youtube:UC7qOKiLD-O0RTezqBpsvScg",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "52710bc9d0032a7b24be9f511d0b4e99661df563b746fe6a9872faff9dd7fbe8"
+  },
+  {
+   "id": "youtube:1l9Srb5noRc",
+   "creatorId": "youtube:UC6uAnzt1BKhf6lyRWqEBgTQ",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "88ee90ca0d98a3df06c8f287b4434f14a6be055d762ea3f0fc49f565acf3997b"
+  },
+  {
+   "id": "youtube:0QzSssZp3v4",
+   "creatorId": "youtube:UC65BgRPz27OfaozBf_NtAdg",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "e3c3e78f9e2587e96544054abf2b4a296d9de19fdaabeb48e0a482d2586983a7"
+  },
+  {
+   "id": "youtube:12vswqZ64zs",
+   "creatorId": "youtube:UCfvR4QTLT5GAtrWtCR5WgSA",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "8b4e97ff67d9ee0ca7e0f460fd90926924df84800eb788d7a42b1d000e20d5ca"
+  },
+  {
+   "id": "youtube:reaI2uNoGSk",
+   "creatorId": "youtube:UCETeJFNlN5uBTIjVLf25T2g",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "4326e85cc9bc1623ef17c36dc0b2a0cc5ae4a58c465457b98934576b2d7bd02e"
+  },
+  {
+   "id": "youtube:oSS50IHBxQg",
+   "creatorId": "youtube:UCBOfbGnvyr2LjD9SDyhTUJQ",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "26876203465d1aa6e2ceb7b6632c4a839d4b0d3a5354c1a403ce7a67235ee132"
+  },
+  {
+   "id": "youtube:gB3cMg56mRU",
+   "creatorId": "youtube:UCL8l0qKn8uO0Pea-yBbZDQA",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "6fcca8346305b5f16bf3033e05251aa090d8b18d00e81547ae03c8eb78f3dd86"
+  },
+  {
+   "id": "youtube:n_AcdrPYWaY",
+   "creatorId": "youtube:UCNgqbCJr4JPDwahd45OZ0OQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "ffe2a322f4fea7a03ffc1eeb2d928c40741a8f62577ab5d071355b3a75c29dd6"
+  },
+  {
+   "id": "youtube:82eLPTaKEe8",
+   "creatorId": "youtube:UC8SBeyJCWWi0rgBuRJmG9iw",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "6e71c6676f319bbaf6f6558af07145fbfa7068ea3c80ab38fa05b1917ebd9413"
+  },
+  {
+   "id": "youtube:b0nf9c6o6bk",
+   "creatorId": "youtube:UCuAOJnMr905iKjURUsffDgA",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "fe2e21a5f54a16fa33eeee641f401abb81de5ebda06f0319a8cc3567f662fa9e"
+  },
+  {
+   "id": "youtube:aoqG3hrPSls",
+   "creatorId": "youtube:UC816J_EZEICUYOhjTnk3o7Q",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "c4e08da1d0abbdf502e57f9e63818172e49722fca7cb3b1b3a3b3079dac56ab3"
+  },
+  {
+   "id": "youtube:9q8_nxNMAm8",
+   "creatorId": "youtube:UCOPE-XjHCHeCdHz-asfqcxw",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "4b3d3f43a04e401abe0feb0dc3a5595459bd9d392c88d3aceb68cea317af293d"
+  },
+  {
+   "id": "youtube:RYqozKbEyNY",
+   "creatorId": "youtube:UC_7EBLV1_TS0NFv5D6VipRg",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "fd380f3ba4205f67352f493c298f76af50ec1c7ae90eb91921ed3110a78e5bcd"
+  },
+  {
+   "id": "youtube:Cf1lWTW8w50",
+   "creatorId": "youtube:UC6SinQiw2eDU6k9tEXpZv9g",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "7938a2d994541797dd8b27389d9701129a2306a72b905f019175c9a31614ca28"
+  },
+  {
+   "id": "youtube:sYIp2P9EXqI",
+   "creatorId": "youtube:UCMp_zLzI5_PkhndV6fXNcoQ",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "be86038543fa33ddab68354e0573e676ecfc82ee7ca0a1ca102e928699bf299e"
+  },
+  {
+   "id": "youtube:dNrw_AikSPQ",
+   "creatorId": "youtube:UChLwJNFJURZxzAAPEsrnxfQ",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "04e1c0fa1423d9e61a4ed3737fdb4c47e328af9e41f397705386bb3b640aea52"
+  },
+  {
+   "id": "youtube:SHkkqWVWAoM",
+   "creatorId": "youtube:UCAH85XhPoXCxSXUKdwsm0Ig",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "d8dd7360a9301e6ed16077485929f3cdb8daa73458963077ec92492242479268"
+  },
+  {
+   "id": "youtube:819j5QHP1Ps",
+   "creatorId": "youtube:UCxReMzw4vJ9ZlTkkgIue00w",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "ecc0628931082f758010a2e49e565063580bcf3ed83dd5b47cbe2262c7b993f6"
+  },
+  {
+   "id": "youtube:JEHSwjM-_Zo",
+   "creatorId": "youtube:UCG4T6bLDq2TdAdRAp2GDOCw",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "96048bacdd08844acdf45e03aa73b146bbc31a64e24c4758bdb82328af3f95ae"
+  },
+  {
+   "id": "youtube:cfZnDiM2DOA",
+   "creatorId": "youtube:UCXumRsXVGTYQNH7l9hlPpkA",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "fcccfb8224f3292992e7137bbf92c498d792d9488d25180a8e2a2fc46e1b1723"
+  },
+  {
+   "id": "youtube:BljdXvMnNYw",
+   "creatorId": "youtube:UC7MTGFfIn1Hht3ZMQxnZBhA",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "69489b5dcb9edefd74b7af773d8304195924846ee340aa589d4f3e70d5a04934"
+  },
+  {
+   "id": "youtube:DTzsaJqWN_Q",
+   "creatorId": "youtube:UCqRcpPTUqX75WwCV0TFxi1A",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "8df5c1263ae76e68a89946f193e5ec304b9ff3cdcae25cb8cc73eb2541ab49b2"
+  },
+  {
+   "id": "youtube:26vfFWeHXYU",
+   "creatorId": "youtube:UCteUEV5xcY2ZbQUJy5ibgoQ",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "b3f7d49a68df0d110d6195f97ad3e00cf4bec5be9646480ce8d4b450165a8811"
+  },
+  {
+   "id": "youtube:oH3fGjm-zsg",
+   "creatorId": "youtube:UCFsnIQ3q3GCEh0vE8rHhGzw",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "a8b38af92daddfb0723146762a5d657fa011e477f18e5195317441607388e459"
+  },
+  {
+   "id": "youtube:PgKeY1sT98Y",
+   "creatorId": "youtube:UCtUy3kJHoj6vmOdSoqluS6g",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "84e00f5de1798b12cfacdf48ad21dbb550c7e3e735ca6af87fff8ba670418c6f"
+  },
+  {
+   "id": "youtube:2oGyvQWUXHY",
+   "creatorId": "youtube:UCLx02k7FZINgaN-QR8bdYDw",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "759105e994f5e78b096c3ce9bfe46c1c304132d709704b3b2b0215a539642450"
+  },
+  {
+   "id": "youtube:O-4GyB8G0lw",
+   "creatorId": "youtube:UCILwajCs145hxNvB4nckALg",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "e03b247e4ebeabce65574278226f7688c82abbeb8e540913427aa131dc8fc81e"
+  },
+  {
+   "id": "youtube:DkDhwg31SoI",
+   "creatorId": "youtube:UCtTpDSRTegHewCxP9GTUaXQ",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "9017d473fa0147ef9c66dab6a2dc7c909f3a0f33f90a30243efcdfeee60f4b2a"
+  },
+  {
+   "id": "youtube:jRuOzv6YL1A",
+   "creatorId": "youtube:UC816J_EZEICUYOhjTnk3o7Q",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "64e0330f2bad0a60501a353dfe4bfdb50d7f663231437474303834e24e965256"
+  },
+  {
+   "id": "youtube:URW1Nt3qU4I",
+   "creatorId": "youtube:UCoVF7lPMKO2HYXfdkcHqEpQ",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "ee5ebd8ebf269f5839527ecfa74f3b367b861288cebaf80430f600846bee7800"
+  },
+  {
+   "id": "youtube:cdOooH6jysw",
+   "creatorId": "youtube:UCKdTKO1gT8uWWNpYuu7a_GA",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "c04661ddb1ec8ebbdf5325b942b2244ee411b6011436ff100d4e068951d1c413"
+  },
+  {
+   "id": "youtube:RmAicEi2XM0",
+   "creatorId": "youtube:UC6SinQiw2eDU6k9tEXpZv9g",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "3cd564cd1ad64ef8dfa12c857473b62e618a6c19d85ccfc327e5328ff417b3d3"
+  },
+  {
+   "id": "youtube:BUlIHYaiLh8",
+   "creatorId": "youtube:UCiGVJJ7EDNotVINyepRBPQg",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "46f0c9e3e2ea2e84328ecbf46a35095f87bb6baa036a85728fcb65a7ccebdf8c"
+  },
+  {
+   "id": "youtube:OENj7HSzQAE",
+   "creatorId": "youtube:UCk1qY09hkqTworXLBKd5M-w",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "ca16440605caa6a271bcc712bf7bea2be5bc465ba8f2819962f4778bd81c688c"
+  },
+  {
+   "id": "youtube:v-yHR7kOeVs",
+   "creatorId": "youtube:UCG4T6bLDq2TdAdRAp2GDOCw",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "ada9ebb2809c8723221e14bf6e562b970aa9d831d65d4394d1c995e525d9002f"
+  },
+  {
+   "id": "youtube:2VGzRX12RXM",
+   "creatorId": "youtube:UCgw_3Epv7swquSZyMDjYHTg",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "ab41b18fa2760056a3aba2e4cfb4103afe6e6c98b5cc2eae9fb498ed1ced9a97"
+  },
+  {
+   "id": "youtube:nEJdzJaWCSQ",
+   "creatorId": "youtube:UCYEV_X4SoChOoSgdk_1EzFw",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "e1b6cadd638347b0df024eb9e8b270199a7647cf720c80cf6ecff88a99977572"
+  },
+  {
+   "id": "youtube:pdtszKyKGKs",
+   "creatorId": "youtube:UCe0HPbE-Dod3lRRb-JHUuEA",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "bc914b705bba49a6199b3bb3d864292829b56a78c8691948889c20779a399cf5"
+  },
+  {
+   "id": "youtube:OIyPE0z2mng",
+   "creatorId": "youtube:UCA1ZDXtJGtWpQYpP_sPZNAQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "3ed063d782e0b39c6bd27357be4e24793b5e8ed4b6d10caaeca1e189cfbf661b"
+  },
+  {
+   "id": "youtube:RVOwoPXLAYM",
+   "creatorId": "youtube:UCypyS1WrEyNu8Z7w0sER8ZA",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "eb00398954dde7b49b500e165ad263cbff910a01340889629934c55ab5e24613"
+  },
+  {
+   "id": "youtube:WfICJP0LOV0",
+   "creatorId": "youtube:UCXB1StgfveHUAsLZ8hUr5RQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "a2466cf5aa61451b95ceb4f4deafca6698c4f4de4633581783ae06141aa9a684"
+  },
+  {
+   "id": "youtube:f2qptRtGZV8",
+   "creatorId": "youtube:UCarSdldjMo1Cq_Xgy4kOoOQ",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "205d7156f1b9ead27e1cd17d97be977fde3c7c38acebf80431a7b44357f66bfe"
+  },
+  {
+   "id": "youtube:OU2q33IkV2w",
+   "creatorId": "youtube:UC9SqKQ22YCmbR3kw6eIeU8w",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "c52b8aebca9924220c3db5619222cfbdc7be9d88060c0adfbaebd4cca4765e2e"
+  },
+  {
+   "id": "youtube:U4jaBR_yK0M",
+   "creatorId": "youtube:UC3JgUN78v4RX3saWqmCEV1g",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "13c067890c67829c11a90cc9ef8f8f7dfbc2252eee9cd978f5c92f8df112b46e"
+  },
+  {
+   "id": "youtube:y7WZsdG1TfQ",
+   "creatorId": "youtube:UC0jssgYBZNjM0AulF4afXXw",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "5e3d454b197b26d3a0b10b5858ddc15453e8baf7c6d46c176572cb0d172a10ef"
+  },
+  {
+   "id": "youtube:hW4-Siltmo4",
+   "creatorId": "youtube:UCA1ZDXtJGtWpQYpP_sPZNAQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "130ec05cbf78e0628db582ae6e1363a85f2273cde9a33e60e7478a0a3bc35379"
+  },
+  {
+   "id": "youtube:n-kDas_Fhwk",
+   "creatorId": "youtube:UCmcV2iOk4C9nzox3jzGR_Og",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "37ade02f09de2844cb562a0cc13c3717a0099ad19102992efbb38f27776b1f4c"
+  },
+  {
+   "id": "youtube:ZvpG9Sd7NWU",
+   "creatorId": "youtube:UC2MQ1TRVmCnslmwlgqayVrw",
+   "split": "heldout",
+   "label": "edukacja",
+   "textSha256": "c541e74faa2ee0101a282a1dc657c602ec9e69c06be080814b280b003b1debc2"
+  },
+  {
+   "id": "youtube:HbieU1aGvAM",
+   "creatorId": "youtube:UCAl0XDWVK5_dNrrwl4da3jA",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "44732c5d049ab4922ccf103feb0697f5c6210d28a3a59f1a7b7a61bc9b24dcdc"
+  },
+  {
+   "id": "youtube:DiLMZZpkFQk",
+   "creatorId": "youtube:UC6uAnzt1BKhf6lyRWqEBgTQ",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "c3d2db34344a432bf4c732379b34755275f4b8aa48a7f66bffd754a8d9226b35"
+  },
+  {
+   "id": "youtube:bwz0v9Fy9ek",
+   "creatorId": "youtube:UCOiMJpkQSXDspWRMoI2B6CQ",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "713bcd97f88f631688b91adc7d27b7c16bdeb8b7094cf2021db368a82617c3da"
+  },
+  {
+   "id": "youtube:pGf4QqBbzOw",
+   "creatorId": "youtube:UChLwJNFJURZxzAAPEsrnxfQ",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "5e1a03469a38f25584e96e3299e9aebbdea835022b0a11ec084ac5fa31ab4394"
+  },
+  {
+   "id": "youtube:XEa1ptozEYQ",
+   "creatorId": "youtube:UCFsnIQ3q3GCEh0vE8rHhGzw",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "a72ce120e76963b36dc135dd1157ab4e9ca2f86503f5a65f274628e5787eabd6"
+  },
+  {
+   "id": "youtube:ZEyd-n5GWH8",
+   "creatorId": "youtube:UCKdTKO1gT8uWWNpYuu7a_GA",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "a5616230da82e16a4a5328ebad5a1ae990c072f9f507c328b9d22e5636ddb0d2"
+  },
+  {
+   "id": "youtube:AqXHkxDzSDI",
+   "creatorId": "youtube:UCvnev1jh6O7_br__QC0OU2g",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "582a1a0d563530ac6b63e04070685869060955964bc8a7c1b3342a9411143452"
+  },
+  {
+   "id": "youtube:tZd4TNKyF48",
+   "creatorId": "youtube:UCLmFjtUdzo1eMvSnF8xFJYg",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "7aedd2b5f2091b9bcbdf714ea8a23bcaf2600fbb40a2f9bc1e8d979941ce0bd3"
+  },
+  {
+   "id": "youtube:4ZZ_7roFtVc",
+   "creatorId": "youtube:UCJqcmTSaILgcaYXqgnuzbbg",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "e4a743982a75b5d197ef017d387d1051592ba1aa994bde4ba289a77c4fbf98e1"
+  },
+  {
+   "id": "youtube:hAUek_uWZfw",
+   "creatorId": "youtube:UCzHUL45GdSbPVt11WP5jKyQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "e344ab8ac56fa95471d11fbe767a27ddeed820f49106533b502760f502b5d5d5"
+  },
+  {
+   "id": "youtube:nQ_ONVFGZzM",
+   "creatorId": "youtube:UC8Ymbs8znOAFmcCvWeHxZHQ",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "d76c834441f10a66a2ee43f6d2e7e34730a0bbce1193dfe64c9fbb173757dba0"
+  },
+  {
+   "id": "youtube:684MExgF5_c",
+   "creatorId": "youtube:UCcJq-5bSAMp2ZCOR8kacfmA",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "fc45f6463a7366bf7220a7151bbabcd0f3646ba20be12a52c93efb0f99351a85"
+  },
+  {
+   "id": "youtube:4Ui8pfWxYxo",
+   "creatorId": "youtube:UChLwJNFJURZxzAAPEsrnxfQ",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "a7d3c1c4f2bd6113cfe92551f66d4683222118ebc29ee613d3a144aec02d3a9c"
+  },
+  {
+   "id": "youtube:z5OXriaEF4M",
+   "creatorId": "youtube:UCblCfbJ9YCBU11ngfsZKlWg",
+   "split": "heldout",
+   "label": "informacja",
+   "textSha256": "a5f01d321a579b6973558ebb5d2e7690a0edcc9ab3d98629a96e1565f2271c5d"
+  },
+  {
+   "id": "youtube:6Jnqi-cw_dk",
+   "creatorId": "youtube:UCuAOJnMr905iKjURUsffDgA",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "49deeba6a9a98063c214298c65d9c5b7d7a3bb98c5de4a845d476cef9aa5183d"
+  },
+  {
+   "id": "youtube:4R9bvKWTIIg",
+   "creatorId": "youtube:UCiYZEcMWrBNAKzaJpbKrZUA",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "5a531885256e3264508b8f68eda068aa10cc967a73e3b62565f804f8bc230bb6"
+  },
+  {
+   "id": "youtube:NARkExNId80",
+   "creatorId": "youtube:UCbcGARiE4aPFIDTkwQmWMCQ",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "b19f5534a431e0f832ef296737d8417e97a9cdac6200c2e2850bdeb85890de45"
+  },
+  {
+   "id": "youtube:Yeam8ug1_5Q",
+   "creatorId": "youtube:UC6uAnzt1BKhf6lyRWqEBgTQ",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "64101fedb924f469da9a41a1e1d7b063cf678d266d17010e7f7336772ab34b9a"
+  },
+  {
+   "id": "youtube:U0eXKz_zcMs",
+   "creatorId": "youtube:UCwqOMcszSYhCG-7zarIniuQ",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "d16aad4a62dfc2239b111c8f984beb5c2337a5898acfefca51490e88a823793f"
+  },
+  {
+   "id": "youtube:ryZCguUDZeI",
+   "creatorId": "youtube:UC7MTGFfIn1Hht3ZMQxnZBhA",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "f79fdc8c1f65c5942074b802fd1ce7a082d9af1bd5df2121ab7fe15b7b185317"
+  },
+  {
+   "id": "youtube:EjM_IlCXSog",
+   "creatorId": "youtube:UCe8VykA_qDCBmg_08eIA8iQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "ae1ced2237b91bb80d836dec8b173e40259e1545a3384010a1e05d3e062aacdc"
+  },
+  {
+   "id": "youtube:_1tqHpAGWtk",
+   "creatorId": "youtube:UCDFfsEchxoi_FeaoJePjzLw",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "2ad6134e10653a1c2e29d7bf4200837dcf84e3aa21433597d54c5cf034360c63"
+  },
+  {
+   "id": "youtube:pLRBbf_TaDk",
+   "creatorId": "youtube:UCqvkwZLk3L3BE8KR1-n9Ffg",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "772e96d2d755cb4c9f17445980d1c8162f9bef46de729a9613195290f62b8099"
+  },
+  {
+   "id": "youtube:tKxXgKQgavE",
+   "creatorId": "youtube:UCzHeCFkVN2IOWjc57uOuvSw",
+   "split": "tuning",
+   "label": "promocja",
+   "textSha256": "68bf2e1ba413caa4f6a90359060792e11300d366f8200d7732332b04c85730bd"
+  },
+  {
+   "id": "youtube:zc26Ip44U0A",
+   "creatorId": "youtube:UCA1ZDXtJGtWpQYpP_sPZNAQ",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "7e9372469b03d7586ceb4662543452ac85bd88405f974b3a7b913e4f29622e20"
+  },
+  {
+   "id": "youtube:133DSh6e4xg",
+   "creatorId": "youtube:UCYjxwFqTUwO5cja6xi5mvUg",
+   "split": "tuning",
+   "label": "informacja",
+   "textSha256": "bdefd43c921a92a1220454dab9987e378efbc9f7703c3f45290bb60ea6ba0976"
+  },
+  {
+   "id": "youtube:wrQugn7vi-Y",
+   "creatorId": "youtube:UCz8a1NE7jDQQYnL-ByH4W4w",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "72c860b6e5c6cf9424207b5e17c37fd385c948ad5a6984796909c12f73f287ca"
+  },
+  {
+   "id": "youtube:Gfwp6ZML-bQ",
+   "creatorId": "youtube:UCarSdldjMo1Cq_Xgy4kOoOQ",
+   "split": "tuning",
+   "label": "opinia",
+   "textSha256": "ab6b5a9ab7f2d95742f08f17c1fd30cde743917c3b2318bcf4daa24d119e629b"
+  },
+  {
+   "id": "youtube:W31QOacOtM8",
+   "creatorId": "youtube:UCCzIDb-T3Dc5RL_XbWlLzKg",
+   "split": "heldout",
+   "label": "opinia",
+   "textSha256": "a871f0d2e01dac5395c6ffc9938e46a45d8b17749d65735ad488c20c16c3ed04"
+  },
+  {
+   "id": "youtube:P_-4ZWcUgEI",
+   "creatorId": "youtube:UCmsxFRm1zRgueucG2Pc9Kzg",
+   "split": "heldout",
+   "label": "promocja",
+   "textSha256": "7d9cb7d04c0c3348c27c04fff9dd24e8c65bba00ec4b1f952a5435293e580e1d"
+  },
+  {
+   "id": "youtube:fP3slV4ma1c",
+   "creatorId": "youtube:UCKdTKO1gT8uWWNpYuu7a_GA",
+   "split": "tuning",
+   "label": "edukacja",
+   "textSha256": "37f57df4cf91b8dc5720f2b9831bae3e3ff4065c7f69a5d3aba8f9edadf5fe52"
+  }
+ ]
+}
