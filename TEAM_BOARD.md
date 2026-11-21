@@ -19,7 +19,7 @@ Baza 491094d, główny checkout, rozłączne pliki, bez commitów. Model i wysi�
 
 | Data | Pozycja | Zgoda J | Wydano | Uwagi |
 |---|---|---|---|---|
-| 21 XI | OpenRouter, eksperyment porównawczy oceny reklam | do 10 USD łącznie (21 XI, potwierdzone ponownie przez J) | 0,0417 USD łącznie: 0,0086 USD za 32 wywołania Qwen3.5-9B i 0,0331 USD za 30 wywołań Qwen3.5-27B. Eksperyment zamknięty. Licznik klucza rośnie także bez naszych wywołań, więc miarą jest koszt z odpowiedzi dostawcy. | Klucz działa od 19:00 UTC. Limit na kluczu to 100 USD, zużycie startowe 18,525 USD, więc budżetu 10 USD pilnuje Fable przez odczyt zużycia przed i po każdej turze. Pierwsza tura D: najwyżej 0,50 USD i 30 wywołań. Produkt i demo pozostają lokalne. |
+| 21 XI | OpenRouter, eksperyment porównawczy oceny reklam | do 10 USD łącznie (21 XI, potwierdzone ponownie przez J) | ok. 0,14 USD łącznie: 0,0417 USD za porównanie Qwen w M1 oraz ok. 0,10 USD za pomiar sześciu małych modeli w zadaniu typu materiału (dwie serie). Licznik klucza rośnie także bez naszych wywołań, więc miarą jest koszt z odpowiedzi dostawcy. | Klucz działa od 19:00 UTC. Limit na kluczu to 100 USD, zużycie startowe 18,525 USD, więc budżetu 10 USD pilnuje Fable przez odczyt zużycia przed i po każdej turze. Pierwsza tura D: najwyżej 0,50 USD i 30 wywołań. Produkt i demo pozostają lokalne. |
 | 21 XI | YouTube Data API v3 | bezpłatne, klucz po stronie J | 0 | Limit 10 000 jednostek dziennie. |
 
 ### Decyzje produktowe J z 21 XI
