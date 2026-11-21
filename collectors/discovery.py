@@ -15,6 +15,7 @@ from .common import safe_get, utc_now
 from .crosslinks import extend_from_posts
 from .sites import SITES, read_site
 from .social import CONFIG, read_social, read_watch, social_creator
+from . import social as social_module
 
 ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT = ROOT / "fixtures/raw/discovery/2026-11-21.json"
@@ -278,15 +279,25 @@ def _on_unless_listed(name):
     return enabled
 
 
+def _youtube_creators(previous):
+    """The adapter reads only YouTube channels (youtube:UC...); creators of other platforms are not its base."""
+    return tuple(c for c in previous.values()
+                 if str(c.get("id", "")).startswith("youtube:UC") and str(c.get("platform") or "youtube").split(":")[0] == "youtube")
+
+
 def _youtube(ctx):
     """Entry point for collectors/youtube.py (agent B). B's own Context carries the Data API settings;
-    tests and tools override them through ctx.options["youtube"]."""
+    tests and tools override them through ctx.options["youtube"]. With `state_dir` the channel base is kept in
+    state_dir/channels.json by the adapter, so the result's `cursor` (hundreds of kB) is not persisted a second time."""
     from . import youtube
-    settings = {"mode": ctx.mode, "state": ctx.state, "known_creators": tuple(ctx.previous.values()),
+    settings = {"mode": ctx.mode, "state": ctx.state, "known_creators": _youtube_creators(ctx.previous),
                 **({"budget": ctx.budget} if ctx.budget is not None else {}), **ctx.options.get("youtube", {})}
     yctx = youtube.Context(**settings)
     yctx.heartbeat = ctx.heartbeat
-    return youtube.discover(yctx)
+    result = youtube.discover(yctx)
+    if settings.get("state_dir") and isinstance(result, dict):
+        result = {k: v for k, v in result.items() if k != "cursor"}
+    return result
 
 
 _LEGACY = dict(legacy=True)
@@ -319,6 +330,45 @@ if importlib.util.find_spec("collectors.youtube") is not None:
             result["creators"].extend(item for item in added.get("creators", []) if item["id"] not in known)
         return result
     register(Adapter("youtube-replay", _youtube_replay, "YouTube · archiwum 21 XI", modes=("replay",),
+                     explicit_only=True, own_network=False))
+
+
+# --- Social sources of lane K (TikTok after the YouTube stage, Facebook and Instagram, Meta Ad Library) ---
+# TikTok reads the profiles linked in YouTube descriptions, so it runs in the second stage with ctx.captures.
+# Facebook and Instagram report access_blocked (a known state, not an error). Every one of them can be left out
+# through INVESTWATCH_ADAPTERS, and a missing function or module only means that the adapter is not registered.
+if hasattr(social_module, "discover_tiktok"):
+    register(Adapter("tiktok", social_module.discover_tiktok, "TikTok · profile z odnośników", after=("youtube",),
+                     enabled=_on_unless_listed("tiktok"), run_units_default=8))
+for _platform, _label in (("facebook", "Facebook · dostęp do wpisów"), ("instagram", "Instagram · dostęp do wpisów")):
+    if hasattr(social_module, "discover_" + _platform):
+        register(Adapter(_platform, getattr(social_module, "discover_" + _platform), _label,
+                         enabled=_on_unless_listed(_platform)))
+if importlib.util.find_spec("collectors.meta_ads") is not None:
+    from .meta_ads import discover as discover_meta_ads
+    # Own transport (it needs the Graph API error bodies). Without a token file it reports needs_key and sends no request.
+    register(Adapter("meta_ads", discover_meta_ads, "Meta · Biblioteka Reklam (FB i IG)", enabled=_on_unless_listed("meta_ads"),
+                     run_units_env="INVESTWATCH_META_RUN_REQUESTS", run_units_default=30,
+                     daily_units_env="INVESTWATCH_META_DAILY_REQUESTS", daily_units_default=300, own_network=True))
+
+SOCIAL_REPLAY = social_module.FIXTURES / "replay.json.gz"
+
+
+def _social_replay(ctx):
+    """The dated social event of 2026-11-21 (fixture of lane K), no network. TikTok captures, the language filter
+    outcome of every profile and the Facebook and Instagram access probe."""
+    import gzip
+    result = json.loads(gzip.decompress(SOCIAL_REPLAY.read_bytes()))
+    for capture in result.get("captures", []):
+        capture["mode"] = "replay"
+        if isinstance(capture.get("provenance"), dict):
+            capture["provenance"].setdefault("fixture", "social-2026-11-21/replay.json.gz")
+    result.pop("fixtureNote", None)
+    return result
+
+
+if hasattr(social_module, "FIXTURES") and SOCIAL_REPLAY.is_file():
+    register(Adapter("social-replay", _social_replay, "Social · archiwum 21 XI", modes=("replay",),
                      explicit_only=True, own_network=False))
 
 

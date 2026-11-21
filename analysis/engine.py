@@ -258,6 +258,12 @@ def m2(cap):
         "checks": checks, "checkCounts": dict(counts), "rulesVersion": "investwatch-m2-rendered-1",
         "reviewSuggestion": marketing_review_suggestion(checks),
     }
+    if cap.get("adId") or (cap["provenance"].get("scope") if isinstance(cap.get("provenance"), dict) else None) == "meta_ad_library_text":
+        # An ad of the Meta Ad Library is read as text: no render, no geometry, no image or video.
+        extra["coverage"] = {"scope": "ad_text", "state": "partial", "modalities": {"adText": {"state": "full"},
+                             "render": {"state": "not_collected"}, "media": {"state": "not_collected"}},
+                             "gaps": [{"modality": "render", "code": "not_collected", "reason": "obrazu, wideo i układu reklamy nie analizowano"}],
+                             "blocksConclusion": False, "label": "Zbadano: tylko tekst reklamy, bez renderu"}
     return score, f"Katalog 19 kontroli. Obserwacje do przeglądu: {counts[OBS]}. Brak danych: {counts[UNKNOWN]}.", evidence, extra
 
 
@@ -476,9 +482,30 @@ def _qualification_failed(exc):
             "premises": [], "evidence": [], "counterEvidence": [], "coverage": None}
 
 
+BRACKET_TAG_START = re.compile(r"\s*\[\s*współprac\w*\s+z\s+", re.I)
+BRACKET_COLLABORATION = r"|\[\s*współprac\w*\s+z\s+(?:firmą\s+)?(?P<name_tag>[^\]\n]{2,60})\]"
+
+
+def _caption_vocabulary(qualification):
+    """Short-form captions (TikTok) label a paid collaboration as "[współpraca z XTB]". Teach the qualification's
+    named-disclosure pattern that bracket form, once, without changing any quoted text. The qualification module
+    belongs to lane D: when its own pattern already reads the form, nothing is changed."""
+    pattern = qualification.NAMED_DECLARATION
+    if not pattern.search("[współpraca z XTB] Złoto"):
+        qualification.NAMED_DECLARATION = re.compile(pattern.pattern + BRACKET_COLLABORATION, pattern.flags)
+    skip = qualification._skip_clause
+    if not getattr(skip, "bracket_aware", False):
+        def bracket_aware(text):
+            # A caption that opens with the label is not a question to skip, even if its first sentence ends with "?".
+            return False if BRACKET_TAG_START.match(text) else skip(text)
+        bracket_aware.bracket_aware = True
+        qualification._skip_clause = bracket_aware
+
+
 def _shadow(capture, finding, semantic, variant=None):
     """Single call site of qualify (contract R5). Adds the v2 fields to an M1 finding."""
     from . import qualification
+    _caption_vocabulary(qualification)
     from .semantic import review_suggestion
     phase = transcript_phase(capture)
     try:

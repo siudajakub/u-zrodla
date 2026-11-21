@@ -38,9 +38,14 @@ def leaks(value):
 
 
 def health_of(status):
-    """The four source states the desk shows: ok, needs_key, quota_exhausted, error."""
+    """The source states the desk shows: ok, needs_key, access_blocked, quota_exhausted, error.
+
+    access_blocked is a known, documented state (the platform offers no public access without a login or a research
+    licence). It is neither an error nor an exhausted quota, so a scan that meets it is not `partial` because of it."""
     if status == "needs_key":
         return "needs_key"
+    if status == "access_blocked":
+        return "access_blocked"
     if status in QUOTA_STATUSES:
         return "quota_exhausted"
     if status in ERROR_STATUSES:
@@ -158,9 +163,10 @@ def result_status(result, sources):
     if isinstance(declared, str) and declared:
         return declared
     states = [health_of(s.get("status")) for s in sources]
-    bad = [s for s in states if s != "ok"]
+    blocked = [s for s in states if s == "access_blocked"]
+    bad = [s for s in states if s not in ("ok", "access_blocked")]
     if not states or not bad:
-        return "ok"
+        return "access_blocked" if blocked and len(blocked) == len(states) else "ok"
     return "error" if len(bad) == len(states) else "partial"
 
 
@@ -254,6 +260,8 @@ def with_quota(result, quota):
     if not quota:
         return result
     view = {k: quota.get(k) for k in ("used", "limit", "resetAt")}
+    if isinstance(quota.get("keys"), list):
+        view["keys"] = quota["keys"]
     return {**result, "quota": view,
             "sources": [{**s, "quota": view} if "quota" in s else s for s in result["sources"]]}
 
