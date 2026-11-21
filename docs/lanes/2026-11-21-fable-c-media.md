@@ -104,3 +104,61 @@ Wnioski o `qualify` (do D, bez edycji analysis/):
 - O5YmmKadQQw (eToro) i AqXHkxDzSDI (XTB, kod TRADEXTB i skrócony link bit.ly): `no_signal` „wzmianka o firmie bez relacji reklamowej” już w wariancie A, mimo linku i kodu w opisie bez oznaczenia. Linki tinyurl/bit.ly i kod w nawiasie nie liczą się jako dowód relacji. Do decyzji D/J.
 - eQYmvRfHtr8, YQH4FEP9exI, ePfzHQVf-lc: wariant A `refer`, wariant B `no_signal` (oznaczenie „partner odcinka” w mowie). Zgodne z intencją.
 - Kadry: etykiet „REKLAMA”/„współpraca” nie znaleziono w żadnym z 20 obejrzanych kadrów 6 filmów bez oznaczenia w opisie i mowie (wcześniejsza próba: etykieta była na Comparic 614 s i Freedom24 195 s). Kadry Shortów mają tylko 101x180 (storyboard) lub 144x256 (stream), drobny druk byłby nieczytelny.
+
+## Poprawka 21 XI wieczorem: 429 na napisach tłumaczonych (diagnoza i naprawa)
+
+Model agenta: Sonnet 5.5 (claude-sonnet-5-5).
+
+**Przyczyna.** Pętla `mode=enrich` (od 19:58 UTC) zawsze zaczynała od `leL3mVvucy0`, angielskiego filmu bez polskich napisów oryginalnych. Poprzedni wzorzec `--sub-langs "pl.*"` dopasowywał do niego pięć ścieżek będących maszynowymi tłumaczeniami: `pl-zh`, `pl`, `pl-hi`, `pl-ru`, `pl-es`. Pierwszy pobór (`pl-zh`) kończył się `HTTP Error 429`, co adapter uznawał za blokadę hosta, a `enrich` przerywał cały krok. Dowód (21:03 UTC, ten sam host, jedno wywołanie, bez cookies i proxy): `yt-dlp --skip-download --write-subs --write-auto-subs --sub-langs "pl.*" ... leL3mVvucy0` → `Downloading subtitles: pl-zh, pl, pl-hi, pl-ru, pl-es` → `ERROR: Unable to download video subtitles for 'pl-zh': HTTP Error 429: Too Many Requests`. Kilka sekund później te same adresy hosta dały bez błędu `pl-orig` filmu `J5DqR1DZrFw` (226 KiB) oraz listy ścieżek innych filmów, więc blokady na adres nie było: hipoteza (a) i (b) potwierdzone, (c) odrzucona. Endpoint tłumaczeń (`timedtext` z `tlang=`) jest limitowany ostrzej niż oryginalny; ścieżka z `tlang` to tłumaczenie, więc i tak nie mogła być dowodem.
+
+**Fakt o yt-dlp 2026.10.26.** `extractor-args youtube:skip=translated_subs` pomija tylko tłumaczenia napisów AUTORA (`pl-zh` z ręcznych napisów chińskich). Tłumaczenia auto-napisów (`pl` filmu niepolskiego) powstają zawsze i mają w adresie `tlang=`, a oryginał ma etykietę `-orig` bez `tlang`. Dlatego wybór ścieżki odbywa się po `info.json`, nie flagą.
+
+**Zmiana w `collectors/media.py`.**
+
+- Dwa kroki: ekstrakcja z `--write-info-json` bez flag napisów, potem `--load-info-json` z jedną ścieżką (`--write-subs --sub-langs pl` dla autora, `--write-auto-subs --sub-langs pl-orig` dla oryginału), bez ponownej ekstrakcji. Ścieżki tłumaczone nie są nigdy żądane (`select_tracks`: autor `pl`/`pl-PL`, auto `pl-orig` albo `pl` bez `tlang`).
+- Film bez polskiej ścieżki oryginalnej: status `no_transcript`, kod `no_captions`, powód „Brak napisów po polsku (autora ani oryginalnych automatycznych); tłumaczenia maszynowe nie są dosłownym cytatem”. `permanent_gap` rozpoznaje go jako trwały (nie pending), a `meta.json` zapamiętuje to bez kolejnych żądań. `meta.translatedCaptions` zapisuje, co pominięto.
+- `rate_limited` ma `error.scope`: `video` (domyślnie) albo `host`, gdy 429 padło na `HOST_DENIALS`=3 RÓŻNYCH filmach z rzędu w tym procesie (`INVESTWATCH_MEDIA_HOST_DENIALS`); każde udane żądanie zeruje serię.
+- Łańcuch: `author_captions` → `auto_captions` → `transcript_api` (`youtube-transcript-api`, tylko prawdziwa ścieżka `pl`/`pl-PL` przez `find_transcript`, bez tłumaczeń; `method:"transcript_api"`, `trackKind: manual|generated`, ten sam format segmentów i `deepLink`). Włączany po błędzie pobrania ścieżki, która istnieje. Niedostępny w kliencie z wstrzykniętym `run` (replay, offline).
+- Błąd pobrania (429, sieć) przy istniejącej ścieżce nie jest trwały: `error.status` ustawione, powód bez „brak napisów”, `info.json` zostaje w `raw/` do ponowienia bez nowej ekstrakcji.
+- Odstęp między filmami: `VIDEO_GAP`=6 s plus do 50% losowego rozrzutu (`INVESTWATCH_MEDIA_VIDEO_GAP`), tylko dla klienta live; w obrębie filmu nadal `MIN_GAP`=2 s.
+- Stare cache bez `captionsVersion` bez gotowego `transcript.json` są ekstrahowane ponownie; stare listy ścieżek są filtrowane do `pl-orig`.
+
+**Fragment dla H (`api/enrich.py`, gotowy do wklejenia w `enrich_media`).** Zakres `video`: film dostaje licznik prób i pending, pętla idzie dalej; zakres `host`: dopiero wtedy przerwanie. Rotacja: film z nieudaną próbą w tym przebiegu idzie na koniec kolejki.
+
+```python
+# po obliczeniu `ranked`: najmniej prób najpierw, w obrębie tego dotychczasowy ranking
+order = sorted(ranked, key=lambda pair: (int((known.get(pair[1]["id"]) or {}).get("attempts") or 0), pair[0]))
+...
+                status = (result.get("error") or {}).get("status")
+                scope = (result.get("error") or {}).get("scope", "host")
+                if status == "login_required" or (status == "rate_limited" and scope == "host"):
+                    blocked = summary["blocked"] = status
+                    done[cap["id"]] = _pending(cap, f"YouTube zablokował pobieranie ({status})")
+                    summary["deferred"] += 1
+                    continue
+                if status == "rate_limited":  # tylko ten film: licznik prób, dalej
+                    summary["videoLimited"] = summary.get("videoLimited", 0) + 1
+                    done[cap["id"]] = {**_pending(cap, "YouTube odmówił napisów tego filmu (429); ponowienie w kolejnym skanie"),
+                                       "mediaAttempts": tries + 1}
+                    summary["deferred"] += 1
+                    continue
+```
+
+`for _, cap in sorted(ranked, ...)` zastąpić pętlą po `order`. `media_outcome` ma klasyfikować pending z `mediaAttempts` jako `failed`, żeby licznik rósł. Po 3 próbach istniejąca reguła „trzecia porażka jest ostateczna” działa tylko dla statusów nie-pending; dla 429 `video` zostaje pending (nie ostateczne), bo to limit, nie brak napisów. Nowa wartość `mediaCoverage.transcript.source` to `transcript_api` (do uzgodnienia w UI).
+
+**Pomiar po poprawce (21 XI ok. 21:08 UTC, cache `.runtime/media-cache`, 8 s między filmami, 10 filmów z czoła kolejki, bez 429).**
+
+| Film | Wynik | Ścieżka | Segmenty | Żądania |
+|---|---|---|---|---|
+| leL3mVvucy0 (EN) | trwały „brak napisów po polsku” | brak | 0 | 1 |
+| pdsN6vcT7to (EN) | trwały „brak napisów po polsku” | brak | 0 | 1 |
+| J5DqR1DZrFw | ok, auto_captions | pl-orig (ścieżka polskiego dubbingu) | 692 | 2 |
+| 2VGzRX12RXM | ok, auto_captions | pl-orig | 551 | 2 |
+| ePfzHQVf-lc | z cache | pl-orig | 706 | 0 |
+| 5OuFrlmcQ5E | ok, auto_captions | pl-orig | 446 | 2 |
+| 5e0D6XJUF84 | ok, author_captions | pl | 333 | 2 |
+| S9qs08XVlh0 | ok, auto_captions | pl-orig | 353 | 2 |
+| ToDbSFwhAeM | ok, auto_captions | pl-orig | 688 | 2 |
+| 0Nbc_JdL9Ec | ok, auto_captions | pl-orig | 807 | 2 |
+
+Ograniczenie: `J5DqR1DZrFw` ma angielski język filmu, a polski `pl-orig` pochodzi z dubbingu; to oryginalne rozpoznanie mowy tej ścieżki audio, ale nie napisy w języku filmu. Ścieżka `transcript_api` przebadana ręcznie (`find_transcript(['pl'])`: 692 segmenty dla J5DqR1DZrFw, `NoTranscriptFound` dla dwóch angielskich), w pętli live nie była potrzebna. Testy: `collectors.test_media` 33 testy OK (13 nowych), pełne `collectors` 133 OK.

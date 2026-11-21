@@ -3,7 +3,10 @@
 Decision of the product owner (21 Nov 2026): transcript and frames of public
 videos may be fetched for the demo. Cheapest route first:
 
-1. author or automatic Polish captions (yt-dlp ``--skip-download``, no media);
+1. author captions or ORIGINAL automatic Polish captions (yt-dlp ``--skip-download``, no media),
+   then ``youtube-transcript-api`` as a fallback. Machine translations into Polish (tracks
+   ``pl-xx``, ``pl`` of a foreign-language video) are never fetched: a translated text is not
+   a literal quote and cannot be evidence;
 2. only without captions and on explicit request: the first <=120 s of the lowest
    quality audio plus the local Vosk model (heavy: one at a time);
 3. unavailable (private, removed, age limit, rate limit, login wall): a status and
@@ -26,6 +29,7 @@ import json
 import math
 import os
 from pathlib import Path
+import random
 import re
 import shutil
 import subprocess
@@ -36,7 +40,9 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_DIR = ROOT / ".runtime" / "media-cache"
 YTDLP = ROOT / ".runtime" / "venv" / "bin" / "yt-dlp"
-MIN_GAP = 2.0  # seconds between two network requests
+MIN_GAP = 2.0  # seconds between two network requests of one video
+VIDEO_GAP = 6.0  # seconds between two videos (plus up to 50% random spread); live client only
+HOST_DENIALS = 3  # HTTP 429 on this many DIFFERENT videos in a row = the host is blocked, not one video
 MAX_SECONDS = 120.0  # wall-clock budget per video
 ASR_SECONDS = 120  # limit of analysis.transcribe
 SB_MAX_INTERVAL = 5.0  # auto: storyboard only when tiles are at most this far apart
@@ -204,7 +210,9 @@ class Client:
     """Network access with spacing between requests, a deadline and a request/byte ledger."""
 
     def __init__(self, *, run=None, fetch=None, sleep=time.sleep, clock=time.monotonic,
-                 ytdlp=None, min_gap=MIN_GAP, max_seconds=MAX_SECONDS):
+                 ytdlp=None, min_gap=MIN_GAP, max_seconds=MAX_SECONDS, video_gap=None, rand=random.random,
+                 transcripts=None, host_denials=None):
+        live = run is None  # an injected runner (replay, tests) makes no live request: no film spacing, no fallback
         self.run, self.fetch = run or self._run, fetch or self._fetch
         self.sleep, self.clock, self.min_gap = sleep, clock, min_gap
         self.ytdlp = str(ytdlp or os.environ.get("INVESTWATCH_YTDLP") or
@@ -213,7 +221,24 @@ class Client:
         self.deadline = self.started + max_seconds
         self.requests = 0
         self.bytes = 0
+        if video_gap is None:
+            video_gap = _env_float("INVESTWATCH_MEDIA_VIDEO_GAP", VIDEO_GAP) if live else 0.0
+        self.pause = video_gap * (1 + 0.5 * rand())  # one random spread per film
+        self.first = True
+        self.transcripts = transcripts if transcripts is not None else (_transcripts if live else None)
+        self.host_denials = host_denials or int(_env_float("INVESTWATCH_MEDIA_HOST_DENIALS", HOST_DENIALS))
         _STATE.setdefault("last", None)
+        _STATE.setdefault("denied", [])
+
+    def denied(self, vid):
+        """Record an HTTP 429 for one video; the scope is `host` only after several different videos in a row."""
+        if vid not in _STATE["denied"]:
+            _STATE["denied"].append(vid)
+        return "host" if len(_STATE["denied"]) >= self.host_denials else "video"
+
+    @staticmethod
+    def accepted():
+        _STATE["denied"] = []
 
     def remaining(self):
         return self.deadline - self.clock()
@@ -221,9 +246,10 @@ class Client:
     def gap(self):
         last = _STATE["last"]
         if last is not None:
-            wait = self.min_gap - (self.clock() - last)
+            wait = (self.pause if self.first else self.min_gap) - (self.clock() - last)
             if wait > 0:
                 self.sleep(wait)
+        self.first = False
         _STATE["last"] = self.clock()
         self.requests += 1
 
@@ -264,7 +290,14 @@ class Client:
             return response.read(4 * 1024 * 1024)
 
 
-_STATE = {"last": None}
+_STATE = {"last": None, "denied": []}
+
+
+def _env_float(name, default):
+    try:
+        return float(os.environ.get(name, default))
+    except ValueError:
+        return default
 
 
 # ---------------------------------------------------------------- cache
@@ -284,7 +317,32 @@ def _write_json(path, value):
     os.replace(staged, path)
 
 
+def _translated(entries):
+    """True when the caption URLs ask YouTube to translate (``tlang=``): machine translation, not a transcript."""
+    return any("tlang=" in str((e or {}).get("url") or "") for e in entries or [])
+
+
+def select_tracks(info):
+    """(author, automatic, translated) Polish caption tracks of one extraction.
+
+    Only a track of the author (`pl`) or the ORIGINAL automatic recognition (`pl-orig`, or `pl` without
+    ``tlang`` when the audio is Polish) is usable. Everything else Polish (``pl-zh``, ``pl`` of a film in
+    another language) is a machine translation and is listed only for the record."""
+    subs = info.get("subtitles") or {}
+    autos = info.get("automatic_captions") or {}
+    author = [k for k in subs if k.lower() in ("pl", "pl-pl") and not _translated(subs[k])]
+    auto = []
+    if "pl-orig" in autos and not _translated(autos["pl-orig"]):
+        auto = ["pl-orig"]
+    elif autos.get("pl") and not _translated(autos["pl"]):
+        auto = ["pl"]
+    chosen = set(author) | set(auto)
+    translated = sorted(k for k in list(subs) + list(autos) if k.startswith("pl") and k not in chosen)
+    return author, auto, translated
+
+
 def _trim_info(info, version):
+    author, auto, translated = select_tracks(info)
     boards = []
     for item in info.get("formats") or []:
         if item.get("format_note") == "storyboard" and item.get("fragments"):
@@ -297,33 +355,65 @@ def _trim_info(info, version):
         "language": info.get("language"), "availability": info.get("availability"),
         "ageLimit": info.get("age_limit"), "liveStatus": info.get("live_status"),
         "description": info.get("description") or "",
-        "subtitles": sorted((info.get("subtitles") or {}).keys()),
-        "automaticCaptions": sorted(k for k in (info.get("automatic_captions") or {}) if k.startswith("pl")),
+        "subtitles": author, "automaticCaptions": auto, "translatedCaptions": translated, "captionsVersion": 2,
         "storyboards": boards, "fetchedAt": now_iso(), "ytDlpVersion": version, "status": "ok",
     }
 
 
+def _ytdlp_failure(vid, client, err, code):
+    """(status, reason, scope) of a failed yt-dlp call; an HTTP 429 is first of all about THIS video."""
+    status, reason = classify_error(err, code)
+    if code == 124:
+        status, reason = "timeout", "Przekroczony limit czasu na film."
+    scope = client.denied(vid) if status == "rate_limited" else None
+    return status, reason, scope
+
+
+def _fetch_track(vid, kind, lang, client, cache):
+    """Download ONE caption track of a known extraction (``--load-info-json``: no new extraction).
+
+    Returns (path, error); error is {status, reason, scope?} or None when the file simply cannot be tried."""
+    raw = cache / vid / "raw"
+    path = raw / f"{vid}.{lang}.vtt"
+    if path.is_file():
+        return path, None
+    info_json = raw / f"{vid}.info.json"
+    if not info_json.is_file():
+        return None, None
+    flag = "--write-subs" if kind == "author_captions" else "--write-auto-subs"
+    code, _, err = client.command([
+        client.ytdlp, "--load-info-json", str(info_json), "--skip-download", flag, "--sub-langs", lang,
+        "--sub-format", "vtt", "--no-warnings", "--socket-timeout", "15", "--retries", "1",
+        "-o", str(raw / "%(id)s")], 60)
+    if code == 0 and path.is_file():
+        client.accepted()
+        client.bytes += path.stat().st_size
+        return path, None
+    status, reason, scope = _ytdlp_failure(vid, client, err, code)
+    return None, {"status": status if code else "error", "reason": reason or "napisy nie zostały zapisane",
+                  **({"scope": scope} if scope else {})}
+
+
 def load_meta(vid, client, cache, *, refresh=False):
-    """Return (meta, error). One yt-dlp extraction yields metadata, caption files and storyboards."""
+    """Return (meta, error). One yt-dlp extraction yields metadata, storyboards and the caption track list;
+    the single usable Polish track (author's, else original automatic) is then fetched on its own."""
     folder = cache / vid
     meta = _read_json(folder / "meta.json")
-    if meta and not refresh and (meta.get("status") in TERMINAL or meta.get("status") == "ok"):
+    stale = bool(meta) and meta.get("status") == "ok" and meta.get("captionsVersion") != 2 and not (folder / "transcript.json").is_file()
+    if meta and not refresh and not stale and (meta.get("status") in TERMINAL or meta.get("status") == "ok"):
         return meta, None
     raw = folder / "raw"
     raw.mkdir(parents=True, exist_ok=True)
     code, out, err = client.command([
-        client.ytdlp, "--skip-download", "--write-subs", "--write-auto-subs", "--sub-langs", "pl.*",
-        "--sub-format", "vtt", "--write-info-json", "--no-playlist", "--no-warnings", "--socket-timeout", "15",
+        client.ytdlp, "--skip-download", "--write-info-json", "--no-playlist", "--no-warnings", "--socket-timeout", "15",
         "--retries", "1", "-o", str(raw / "%(id)s"), f"https://www.youtube.com/watch?v={vid}"], 60)
     info = _read_json(raw / f"{vid}.info.json")
     if code != 0 or info is None:
-        status, reason = classify_error(err, code)
-        if code == 124:
-            status, reason = "timeout", "Przekroczony limit czasu na film."
+        status, reason, scope = _ytdlp_failure(vid, client, err, code)
         if status in TERMINAL:
             _write_json(folder / "meta.json", {"videoId": vid, "status": status, "reason": reason, "fetchedAt": now_iso()})
-        return None, {"status": status, "reason": reason}
-    client.bytes += sum(p.stat().st_size for p in raw.glob(f"{vid}.*.vtt"))  # caption files; extractor traffic not counted
+        return None, {"status": status, "reason": reason, **({"scope": scope} if scope else {})}
+    client.accepted()
     version = None
     try:
         code, out, _ = client.run([client.ytdlp, "--version"], 10)
@@ -331,7 +421,12 @@ def load_meta(vid, client, cache, *, refresh=False):
     except Exception:  # version is informational only
         pass
     meta = _trim_info(info, version)
-    (raw / f"{vid}.info.json").unlink(missing_ok=True)
+    wanted = [("author_captions", x) for x in meta["subtitles"]] + [("auto_captions", x) for x in meta["automaticCaptions"]]
+    got = None
+    for kind, lang in wanted[:1]:  # one request for the track we would use; the rest only on demand
+        got, _ = _fetch_track(vid, kind, lang, client, cache)
+    if got or not wanted:
+        (raw / f"{vid}.info.json").unlink(missing_ok=True)  # 10 MB of formats; kept only while a track is still to fetch
     _write_json(folder / "meta.json", meta)
     return meta, None
 
@@ -344,27 +439,103 @@ def _failure_coverage(status, reason, duration=None):
             "frames": {"state": "not_collected", "moments": [], "intervalSec": None}}
 
 
-def captions(vid, meta, cache, *, now=None):
-    """Segments from cached caption files of one extraction. Manual captions beat automatic ones."""
-    raw = cache / vid / "raw"
-    manual = [x for x in meta.get("subtitles", []) if x.startswith("pl")]
-    auto = sorted(meta.get("automaticCaptions", []), key=lambda x: (not x.endswith("-orig"), x))
-    for lang, kind in [(x, "author_captions") for x in manual] + [(x, "auto_captions") for x in auto]:
-        path = raw / f"{vid}.{lang}.vtt"
-        if not path.is_file():
+def _finish_segments(vid, segments, kind):
+    for segment in segments:
+        segment.update({"modality": "speech", "method": kind, "language": "pl", "lang": "pl",
+                        "windowId": "w0", "deepLink": deep_link(vid, segment["start"])})
+    return segments
+
+
+def caption_candidates(meta):
+    """Usable Polish tracks in order of trust. Old caches (no ``captionsVersion``) are filtered to `pl`/`pl-orig`."""
+    manual = [x for x in meta.get("subtitles", []) if x.lower() in ("pl", "pl-pl")]
+    auto = list(meta.get("automaticCaptions", []))
+    if meta.get("captionsVersion") != 2:
+        auto = [x for x in auto if x == "pl-orig"]
+    return [(x, "author_captions") for x in manual] + [(x, "auto_captions") for x in auto]
+
+
+def captions(vid, meta, cache, *, client=None):
+    """Segments of the best track: author's, original automatic, then youtube-transcript-api.
+
+    Returns (transcript, problem). ``problem`` is None for a plain absence of Polish captions and
+    {status, reason, scope?} when YouTube refused or failed, so that the caller does not mark the film permanent."""
+    problem = None
+    for lang, kind in caption_candidates(meta):
+        path = cache / vid / "raw" / f"{vid}.{lang}.vtt"
+        if not path.is_file() and client is not None and problem is None:
+            path, problem = _fetch_track(vid, kind, lang, client, cache)
+        if not path or not path.is_file():
             continue
         text = path.read_text(errors="replace")
         segments = parse_vtt(text, rolling=kind == "auto_captions")
         if not segments:
             continue
-        translated = kind == "auto_captions" and not lang.endswith("-orig") and (meta.get("language") or "pl")[:2] != "pl"
-        language = "pl"
-        for number, segment in enumerate(segments):
-            segment.update({"modality": "speech", "method": kind, "language": language,
-                            "lang": language, "windowId": "w0", "deepLink": deep_link(vid, segment["start"])})
-        return {"method": kind, "track": lang, "segments": segments, "captionsSha256": digest(text),
-                "translated": translated}
-    return None
+        (cache / vid / "raw" / f"{vid}.info.json").unlink(missing_ok=True)
+        return {"method": kind, "track": lang, "segments": _finish_segments(vid, segments, kind),
+                "captionsSha256": digest(text), "translated": False}, None
+    if client is not None and client.transcripts is not None and (caption_candidates(meta) or problem):
+        found, fallback = transcript_api(vid, client)
+        if found:
+            return found, None
+        problem = fallback or problem
+    return None, problem
+
+
+def _transcripts(vid, timeout):
+    """youtube-transcript-api: the real Polish track only (find_transcript never translates).
+
+    Returns {generated, language, snippets} or None; raises RuntimeError("rate_limited: ...") when blocked."""
+    try:
+        import requests
+        from youtube_transcript_api import (YouTubeTranscriptApi, NoTranscriptFound, TranscriptsDisabled,
+                                            IpBlocked, RequestBlocked, VideoUnavailable)
+    except ImportError as exc:
+        raise RuntimeError(f"error: {exc}")
+    session = requests.Session()
+    request = session.request
+    session.request = lambda *a, **kw: request(*a, **{"timeout": timeout, **kw})
+    try:
+        listing = YouTubeTranscriptApi(http_client=session).list(vid)
+        track = listing.find_transcript(["pl", "pl-PL"])
+        fetched = track.fetch()
+    except (NoTranscriptFound, TranscriptsDisabled):
+        return None
+    except (IpBlocked, RequestBlocked) as exc:
+        raise RuntimeError(f"rate_limited: {type(exc).__name__}")
+    except VideoUnavailable as exc:
+        raise RuntimeError(f"unavailable: {type(exc).__name__}")
+    except Exception as exc:
+        text = f"{type(exc).__name__}: {exc}"
+        raise RuntimeError(("rate_limited: " if "429" in text else "error: ") + text[:200])
+    return {"generated": bool(track.is_generated), "language": track.language_code,
+            "snippets": [{"text": x.text, "start": x.start, "duration": x.duration} for x in fetched]}
+
+
+def transcript_api(vid, client):
+    """Fallback method: (transcript, problem) in the same segment format, ``method`` = `transcript_api`."""
+    try:
+        client.gap()
+        found = client.transcripts(vid, min(20, max(1.0, client.remaining())))
+    except RuntimeError as exc:
+        status, _, reason = str(exc).partition(": ")
+        scope = client.denied(vid) if status == "rate_limited" else None
+        return None, {"status": status, "reason": reason[:240], **({"scope": scope} if scope else {})}
+    except Exception as exc:  # the fallback must not break the chain
+        return None, {"status": "error", "reason": f"{type(exc).__name__}: {exc}"[:240]}
+    client.accepted()
+    segments = []
+    for item in (found or {}).get("snippets") or []:
+        text = " ".join(unescape(str(item.get("text") or "")).split())
+        if text:
+            start = round(float(item.get("start") or 0), 3)
+            segments.append({"start": start, "end": round(start + float(item.get("duration") or 0), 3), "text": text})
+    if not segments:
+        return None, None
+    body = json.dumps(segments, ensure_ascii=False)
+    return {"method": "transcript_api", "track": found.get("language") or "pl", "trackKind":
+            "generated" if found.get("generated") else "manual", "segments": _finish_segments(vid, segments, "transcript_api"),
+            "captionsSha256": digest(body), "translated": False}, None
 
 
 def _jpeg_size(data):
@@ -626,8 +797,9 @@ def enrich(capture, ctx=None, *, frames_at=None, frame_method=None, allow_asr=No
     result["meta"] = {k: meta.get(k) for k in ("title", "duration", "channel", "uploadDate", "language", "availability")}
     transcript = None if allow_asr == "force" else _read_json(cache / vid / "transcript.json")
     gaps = []
+    problem = None
     if allow_asr != "force" and (not transcript or refresh):
-        transcript = captions(vid, meta, cache)
+        transcript, problem = captions(vid, meta, cache, client=client)
         if transcript:
             _write_json(cache / vid / "transcript.json", transcript)
     if not transcript and allow_asr:
@@ -639,9 +811,13 @@ def enrich(capture, ctx=None, *, frames_at=None, frame_method=None, allow_asr=No
                 _write_json(cache / vid / "asr.json", transcript)
             else:
                 gaps.append({"modality": "transcript", "code": problem["status"], "reason": problem["reason"]})
+    elif not transcript and problem:  # YouTube refused or failed: a retry later, never a permanent gap
+        gaps.append({"modality": "transcript", "code": problem["status"], "reason": problem["reason"]})
+        result["error"] = problem
     elif not transcript:
         gaps.append({"modality": "transcript", "code": "no_captions",
-                     "reason": "Brak napisów po polsku; ASR nie został zażądany (ciężki przebieg)."})
+                     "reason": "Brak napisów po polsku (autora ani oryginalnych automatycznych); tłumaczenia maszynowe "
+                               "nie są dosłownym cytatem. ASR nie został zażądany (ciężki przebieg)."})
     version = {"videoId": vid, "readAt": result["observedAt"], "source": SOURCE,
                "captionsSha256": (transcript or {}).get("captionsSha256") or (transcript or {}).get("audioSha256"),
                "descriptionSha256": digest(meta.get("description") or ""), "ytDlpVersion": meta.get("ytDlpVersion")}
@@ -673,7 +849,7 @@ def enrich(capture, ctx=None, *, frames_at=None, frame_method=None, allow_asr=No
     reason = (frame_problem or {}).get("reason") if frames_at else "nie zażądano"
     coverage, media_coverage = _coverage(meta, transcript, frame_items, gaps, state, reason)
     result.update(coverage=coverage, mediaCoverage=media_coverage)
-    return done("ok" if transcript else "no_transcript")
+    return done("ok" if transcript else (problem["status"] if result.get("error") else "no_transcript"))
 
 
 def main():

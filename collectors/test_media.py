@@ -41,10 +41,12 @@ class Clock:
         self.now += seconds
 
 
-def info(duration=60, subtitles=(), auto=("pl", "pl-orig"), boards=True, language="pl"):
+def info(duration=60, subtitles=(), auto=("pl", "pl-orig"), boards=True, language="pl", translated=()):
+    """``translated``: automatic keys whose URLs carry ``tlang=`` (YouTube machine translation)."""
     data = {"id": VID, "title": "T", "duration": duration, "channel": "K", "upload_date": "20261101",
             "language": language, "availability": "public", "age_limit": 0, "description": "Opis: kod XTB123",
-            "subtitles": {k: [] for k in subtitles}, "automatic_captions": {k: [] for k in auto}, "formats": []}
+            "subtitles": {k: [] for k in subtitles}, "automatic_captions": {k: ([{"url": f"https://www.youtube.com/api/timedtext?v={VID}&tlang={k}"}]
+                                       if k in translated else []) for k in auto}, "formats": []}
     if boards:
         data["formats"].append({"format_id": "sb0", "format_note": "storyboard", "width": 64, "height": 36,
                                 "rows": 2, "columns": 2, "fragments": [
@@ -54,12 +56,15 @@ def info(duration=60, subtitles=(), auto=("pl", "pl-orig"), boards=True, languag
 
 
 class FakeYtDlp:
-    """Records every command and writes the files the real yt-dlp would write."""
+    """Records every command and writes the files the real yt-dlp would write.
 
-    def __init__(self, data=None, files=None, stderr="", code=0):
+    The extraction (``--write-info-json``) writes only the info file; a caption track is written by the second call
+    (``--load-info-json``) and only for the language asked with ``--sub-langs``. ``sub_error`` fails that second call."""
+
+    def __init__(self, data=None, files=None, stderr="", code=0, sub_error=None):
         self.data = data if data is not None else info()
         self.files = files if files is not None else {"pl-orig": AUTO, "pl": AUTO}
-        self.stderr, self.code, self.calls = stderr, code, []
+        self.stderr, self.code, self.calls, self.sub_error = stderr, code, [], sub_error
 
     def __call__(self, args, timeout):
         self.calls.append(list(args))
@@ -71,14 +76,24 @@ class FakeYtDlp:
             base = Path(args[args.index("-o") + 1].replace("%(id)s", VID))
             base.parent.mkdir(parents=True, exist_ok=True)
             Path(f"{base}.info.json").write_text(json.dumps(self.data))
-            for lang, text in self.files.items():
-                Path(f"{base}.{lang}.vtt").write_text(text)
+            return 0, "", ""
+        if "--load-info-json" in args:
+            if self.sub_error:
+                return 1, "", self.sub_error
+            lang = args[args.index("--sub-langs") + 1]
+            base = Path(args[args.index("-o") + 1].replace("%(id)s", VID))
+            if lang not in self.files:
+                return 1, "", "ERROR: no such track"
+            Path(f"{base}.{lang}.vtt").write_text(self.files[lang])
             return 0, "", ""
         if "worstaudio[ext=m4a]/worstaudio" in args:
             target = Path(args[args.index("-o") + 1].replace("%(ext)s", "m4a"))
             target.write_bytes(b"audio-bytes")
             return 0, "", ""
         return 1, "", "ERROR: unexpected"
+
+    def subtitle_calls(self):
+        return [c for c in self.calls if "--load-info-json" in c]
 
 
 class MediaTests(unittest.TestCase):
@@ -87,8 +102,10 @@ class MediaTests(unittest.TestCase):
         self.addCleanup(shutil.rmtree, self.tmp, True)
         self.clock = Clock()
         media._STATE["last"] = None
+        media._STATE["denied"] = []
 
     def client(self, run, fetch=None, **kw):
+        kw.setdefault("video_gap", 0)
         return media.Client(run=run, fetch=fetch, sleep=self.clock.sleep, clock=self.clock, ytdlp="yt-dlp", **kw)
 
     def run_enrich(self, run, **kw):
@@ -246,6 +263,151 @@ class MediaTests(unittest.TestCase):
         client.command(["b"])
         self.assertEqual(len(self.clock.sleeps), 1)
         self.assertGreaterEqual(self.clock.sleeps[0], 2.0 - 1e-9)
+
+    # translated tracks, 429 scope, transcript-api chain, film gap
+    def test_translated_tracks_are_never_requested(self):
+        # foreign film: `pl` and `pl-zh` exist only as machine translations; the original is `en-orig`
+        data = info(subtitles=(), auto=("en-orig", "pl", "pl-zh"), translated=("pl", "pl-zh"), language="en")
+        fake = FakeYtDlp(data=data, files={"pl": AUTO, "pl-zh": AUTO})
+        result = self.run_enrich(fake)
+        self.assertEqual(result["status"], "no_transcript")
+        self.assertEqual(result["coverage"]["gaps"][0]["code"], "no_captions")
+        self.assertIn("Brak napisów", result["mediaCoverage"]["transcript"]["reason"])
+        self.assertEqual(fake.subtitle_calls(), [])  # not one request for a translated track
+        flat = " ".join(" ".join(c) for c in fake.calls)
+        self.assertNotIn("pl.*", flat)
+        meta = json.loads((self.tmp / VID / "meta.json").read_text())
+        self.assertEqual((meta["subtitles"], meta["automaticCaptions"]), ([], []))
+        self.assertEqual(meta["translatedCaptions"], ["pl", "pl-zh"])
+        calls = len(fake.calls)
+        again = self.run_enrich(fake)  # permanent: no pending, no new request
+        self.assertEqual(len(fake.calls), calls)
+        self.assertEqual(again["status"], "no_transcript")
+        from analysis.engine import permanent_gap
+        self.assertTrue(permanent_gap(again["mediaCoverage"]["transcript"]["reason"]))
+
+    def test_select_tracks_original_only(self):
+        self.assertEqual(media.select_tracks(info(subtitles=("pl",), auto=("pl", "pl-orig"))), (["pl"], ["pl-orig"], []))
+        poly = info(subtitles=("zh",), auto=("pl", "pl-zh", "en-orig"), translated=("pl", "pl-zh"))
+        self.assertEqual(media.select_tracks(poly), ([], [], ["pl", "pl-zh"]))
+        plain = info(subtitles=(), auto=("pl",))  # Polish audio that is not translatable: `pl` is the original
+        plain["automatic_captions"]["pl"] = [{"url": "https://www.youtube.com/api/timedtext?v=x&caps=asr"}]
+        self.assertEqual(media.select_tracks(plain), ([], ["pl"], []))
+
+    def test_polish_original_fetched_with_one_subtitle_call(self):
+        fake = FakeYtDlp(data=info(auto=("pl", "pl-orig", "pl-zh"), translated=("pl-zh",)))
+        result = self.run_enrich(fake)
+        self.assertEqual(result["transcript"]["track"], "pl-orig")
+        calls = fake.subtitle_calls()
+        self.assertEqual(len(calls), 1)
+        self.assertEqual(calls[0][calls[0].index("--sub-langs") + 1], "pl-orig")
+        self.assertIn("--write-auto-subs", calls[0])
+        self.assertNotIn("--write-subs", calls[0])
+
+    def test_author_captions_use_write_subs(self):
+        fake = FakeYtDlp(data=info(subtitles=("pl",)), files={"pl": MANUAL})
+        self.run_enrich(fake)
+        call = fake.subtitle_calls()[0]
+        self.assertIn("--write-subs", call)
+        self.assertNotIn("--write-auto-subs", call)
+
+    @staticmethod
+    def api_found(text="Partnerem jest XTB", generated=True):
+        return lambda vid, timeout: {"generated": generated, "language": "pl", "snippets": [
+            {"text": text, "start": 2.0, "duration": 3.5}, {"text": "  ", "start": 6, "duration": 1}]}
+
+    def test_429_on_one_video_is_scope_video_and_does_not_poison_the_next(self):
+        limited = FakeYtDlp(stderr="ERROR: Unable to download video subtitles for 'pl': HTTP Error 429: Too Many Requests",
+                            code=1)
+        first = self.run_enrich(limited)
+        self.assertEqual((first["status"], first["error"]["status"], first["error"]["scope"]),
+                         ("rate_limited", "rate_limited", "video"))
+        ok = media.enrich({"url": f"https://www.youtube.com/watch?v={VID}"}, None, cache_dir=self.tmp / "other",
+                          client=self.client(FakeYtDlp()))
+        self.assertEqual(ok["status"], "ok")
+        self.assertEqual(media._STATE["denied"], [])  # success clears the streak
+
+    def test_429_on_three_different_videos_means_host(self):
+        scopes = []
+        for number in range(3):
+            vid = f"vid{number}ABCDEFG"[:11]
+            result = media.enrich({"url": f"https://youtu.be/{vid}"}, None, cache_dir=self.tmp / vid,
+                                  client=self.client(FakeYtDlp(stderr="ERROR: HTTP Error 429", code=1)))
+            scopes.append(result["error"]["scope"])
+        self.assertEqual(scopes, ["video", "video", "host"])
+        again = media.enrich({"url": f"https://youtu.be/vid0ABCDEFG"}, None, cache_dir=self.tmp / "vid0ABCDEFG",
+                             client=self.client(FakeYtDlp(stderr="ERROR: HTTP Error 429", code=1)))
+        self.assertEqual(again["error"]["scope"], "host")  # the same video does not count twice, the streak stays
+
+    def test_subtitle_429_falls_back_to_transcript_api(self):
+        fake = FakeYtDlp(sub_error="ERROR: Unable to download video subtitles for 'pl-orig': HTTP Error 429: Too Many Requests")
+        result = self.run_enrich(fake, client=self.client(fake, transcripts=self.api_found()))
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual(result["transcript"]["method"], "transcript_api")
+        self.assertEqual(result["transcript"]["trackKind"], "generated")
+        segment = result["segments"][0]
+        self.assertEqual((segment["text"], segment["start"], segment["end"]), ("Partnerem jest XTB", 2.0, 5.5))
+        self.assertEqual((segment["modality"], segment["method"], segment["language"]),
+                         ("speech", "transcript_api", "pl"))
+        self.assertEqual(segment["deepLink"], f"https://www.youtube.com/watch?v={VID}&t=2s")
+        self.assertEqual(len(result["segments"]), 1)  # blank snippet dropped
+        self.assertEqual(result["mediaCoverage"]["transcript"]["state"], "full")
+        self.assertEqual(result["mediaCoverage"]["transcript"]["source"], "transcript_api")
+        self.assertEqual(media._STATE["denied"], [])
+        self.assertTrue((self.tmp / VID / "transcript.json").is_file())
+
+    def test_subtitle_429_and_api_blocked_is_retryable_not_permanent(self):
+        def blocked(vid, timeout):
+            raise RuntimeError("rate_limited: IpBlocked")
+
+        fake = FakeYtDlp(sub_error="ERROR: HTTP Error 429: Too Many Requests")
+        result = self.run_enrich(fake, client=self.client(fake, transcripts=blocked))
+        self.assertEqual(result["status"], "rate_limited")
+        self.assertEqual(result["error"]["scope"], "video")
+        self.assertEqual(result["segments"], [])
+        from analysis.engine import permanent_gap
+        self.assertFalse(permanent_gap(result["mediaCoverage"]["transcript"]["reason"]))
+        self.assertFalse((self.tmp / VID / "transcript.json").exists())
+        # the next attempt retries the track from the saved extraction (no new extraction)
+        good = FakeYtDlp()
+        retry = self.run_enrich(good)
+        self.assertEqual(retry["status"], "ok")
+        self.assertEqual([c for c in good.calls if "--write-info-json" in c], [])
+
+    def test_transcript_api_with_no_polish_track_is_no_captions(self):
+        fake = FakeYtDlp(sub_error="ERROR: HTTP Error 500")
+        result = self.run_enrich(fake, client=self.client(fake, transcripts=lambda vid, timeout: None))
+        self.assertEqual(result["status"], "error")  # yt-dlp failed and the API has nothing: a retry, not a verdict
+        self.assertEqual(result["error"]["status"], "error")
+
+    def test_transcript_api_not_used_for_a_film_without_polish_original(self):
+        asked = []
+        data = info(auto=("en-orig", "pl"), translated=("pl",), language="en")
+        result = self.run_enrich(FakeYtDlp(data=data), client=self.client(
+            FakeYtDlp(data=data), transcripts=lambda v, t: asked.append(v)))
+        self.assertEqual((result["status"], asked), ("no_transcript", []))
+
+    def test_transcripts_disabled_when_runner_is_injected(self):
+        self.assertIsNone(media.Client(run=lambda a, t: (1, "", "")).transcripts)
+        self.assertEqual(media.Client(run=lambda a, t: (1, "", "")).pause, 0)
+
+    def test_video_gap_with_random_spread_between_films(self):
+        fake = FakeYtDlp()
+        first = self.client(fake, video_gap=6.0, rand=lambda: 0.0)
+        first.command(["a"])
+        second = self.client(fake, video_gap=6.0, rand=lambda: 1.0)  # pause 9 s
+        second.command(["b"])
+        second.command(["c"])  # same film: only the short gap
+        self.assertEqual([round(x, 3) for x in self.clock.sleeps], [9.0, 2.0])
+
+    def test_old_cache_without_version_ignores_translated_tracks(self):
+        folder = self.tmp / VID
+        (folder / "raw").mkdir(parents=True)
+        (folder / "raw" / f"{VID}.pl-zh.vtt").write_text(AUTO)
+        old = {"videoId": VID, "status": "ok", "subtitles": [], "automaticCaptions": ["pl", "pl-zh"], "duration": 10,
+               "description": "", "language": "en"}
+        self.assertEqual(media.caption_candidates(old), [])
+        self.assertEqual(media.captions(VID, old, self.tmp), (None, None))
 
     # frames
     @unittest.skipUnless(shutil.which("ffmpeg"), "ffmpeg required")
