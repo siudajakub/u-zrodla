@@ -21,6 +21,8 @@
     reviewing: "W analizie",
     closed: "Zamknięta",
     ok: "Dostępne",
+    empty: "Brak nowych materiałów",
+    skipped: "Pominięto",
     success: "Zakończono",
     done: "Zakończono",
     failed: "Błąd",
@@ -65,6 +67,49 @@
       return "";
     }
   };
+  const comparisonField = (value) =>
+    ({
+      date: "Data publikacji",
+      channel: "Kanał",
+      label: "Oznaczenie",
+      disclosure: "Oznaczenie",
+      scope: "Zakres materiału",
+    })[value] || text(value);
+  function provenanceText(value, fallbackMode) {
+    if (!value) return modeLabel(fallbackMode);
+    if (typeof value !== "object") return text(value);
+    const scopes = {
+      publisher_link: "link wydawcy",
+      podcast_rss_title_description: "tytuł i opis odcinka RSS",
+      peertube_index_description: "opis w indeksie PeerTube",
+      public_html_text: "publiczny tekst strony HTML",
+      description: "opis",
+      audio: "mowa",
+      metadata: "metadane",
+      profile: "profil",
+      episode: "odcinek",
+      page: "strona",
+      post: "publikacja",
+    };
+    const pieces = [];
+    if (value.mode || fallbackMode)
+      pieces.push(modeLabel(value.mode || fallbackMode));
+    if (value.scope)
+      pieces.push(`zakres: ${scopes[value.scope] || text(value.scope)}`);
+    if (value.storage)
+      pieces.push(
+        value.storage === "watch_sqlite"
+          ? "zapis monitoringu"
+          : `zapis: ${text(value.storage)}`,
+      );
+    if (value.sourceVersion != null)
+      pieces.push(`wersja źródła: ${text(value.sourceVersion)}`);
+    if (value.fixture)
+      pieces.push(`zestaw odtworzenia: ${text(value.fixture)}`);
+    if (value.responseSha256)
+      pieces.push(`skrót odpowiedzi: ${text(value.responseSha256)}`);
+    return pieces.join(" · ") || "Pochodzenie zapisane w metadanych";
+  }
   const El = (tag, props, ...children) => h(tag, props, ...children.flat());
   const Button = ({ children, primary, ...props }) =>
     El(
@@ -495,10 +540,45 @@
         : El("p", { className: "subtle" }, "Brak zapisanych decyzji."),
     );
   }
-  function Contract({ finding, save }) {
+  const inquiryLabels = {
+    draft: "Szkic pytania",
+    waiting: "Oczekujemy na odpowiedź",
+    denied: "Firma zaprzecza",
+    confirmed: "Firma potwierdza",
+    documents: "Otrzymano dokumenty",
+  };
+  function Contract({ finding, save, inquiry, busy }) {
     const [endDate, setDate] = useState("");
     const [label, setLabel] = useState("Umowa");
+    const [channel, setChannel] = useState("");
+    const [requiredLabel, setRequiredLabel] = useState("");
     const [result, setResult] = useState(null);
+    const [answer, setAnswer] = useState(null);
+    const [reply, setReply] = useState("");
+    const history = list(finding.history);
+    const previous = [...history]
+      .reverse()
+      .find((item) => item.action === "inquiry" || item.stage);
+    const question = previous || finding.inquiry || answer;
+    const comparison =
+      result ||
+      [...history].reverse().find((item) => item.action === "contract");
+    const available =
+      {
+        draft: ["waiting"],
+        waiting: ["denied", "confirmed", "documents"],
+        confirmed: ["documents"],
+        denied: ["draft"],
+        documents: ["documents", "draft"],
+      }[question?.stage] || [];
+    const questionText =
+      question?.text ||
+      question?.question ||
+      (question?.action === "inquiry" ? question?.note : "");
+    const runInquiry = async (action) => {
+      const response = await inquiry(finding, action, reply);
+      if (response) setAnswer(response);
+    };
     return El(
       React.Fragment,
       null,
@@ -507,24 +587,83 @@
         null,
         "Przykład demonstracyjny. Dokument i aneks nie są przypisane do rzeczywistej firmy.",
       ),
+      El("hr", { className: "rule" }),
+      El(SectionTitle, null, "Pytanie do firmy"),
       El(
         "p",
-        { className: "subtle", style: { marginTop: 14 } },
-        "Porównaj datę zakończenia umowy z datą publikacji. Dodanie aneksu zapisuje nowe porównanie.",
+        { className: "subtle", style: { margin: "8px 0 14px" } },
+        "Przygotuj lokalny szkic, a następnie zapisz odpowiedź i otrzymane dokumenty.",
+      ),
+      !question &&
+        El(
+          Button,
+          { primary: true, disabled: busy, onClick: () => runInquiry("draft") },
+          "Przygotuj pytanie",
+        ),
+      question &&
+        El(
+          "div",
+          { className: "evidence" },
+          El(
+            "div",
+            { className: "eyebrow" },
+            inquiryLabels[question.stage] || text(question.stage, "Szkic"),
+          ),
+          El("p", null, text(questionText, "Brak zapisanej treści pytania.")),
+        ),
+      question &&
+        El(
+          Field,
+          {
+            id: "inquiry-reply",
+            label: "Treść odpowiedzi lub uwaga (opcjonalnie)",
+          },
+          El("textarea", {
+            id: "inquiry-reply",
+            value: reply,
+            onChange: (e) => setReply(e.target.value),
+          }),
+        ),
+      question &&
+        El(
+          "div",
+          { className: "actions", style: { marginTop: 12 } },
+          [
+            ["draft", "Przygotuj ponownie"],
+            ["waiting", "Oczekujemy"],
+            ["denied", "Zaprzecza"],
+            ["confirmed", "Potwierdza"],
+            ["documents", "Dokumenty otrzymane"],
+          ]
+            .filter(([action]) => available.includes(action))
+            .map(([action, title]) =>
+              El(
+                Button,
+                {
+                  key: action,
+                  disabled: busy,
+                  onClick: () => runInquiry(action),
+                },
+                title,
+              ),
+            ),
+        ),
+      El("hr", { className: "rule" }),
+      El(SectionTitle, null, "Porównanie dokumentu"),
+      El(
+        "p",
+        { className: "subtle", style: { marginTop: 10 } },
+        "Porównaj datę, kanał i oznaczenie publikacji. Niepełny zakres materiału wymaga wyjaśnienia.",
       ),
       El(
         Field,
-        { id: "contract-label", label: "Dokument" },
-        El(
-          "select",
-          {
-            id: "contract-label",
-            value: label,
-            onChange: (e) => setLabel(e.target.value),
-          },
-          El(Option, { value: "Umowa" }, "Umowa"),
-          El(Option, { value: "Aneks" }, "Aneks"),
-        ),
+        { id: "contract-label", label: "Nazwa dokumentu" },
+        El("input", {
+          id: "contract-label",
+          value: label,
+          onChange: (e) => setLabel(e.target.value),
+          placeholder: "Umowa lub aneks",
+        }),
       ),
       El(
         Field,
@@ -537,33 +676,101 @@
         }),
       ),
       El(
+        Field,
+        {
+          id: "contract-channel",
+          label: "Kanał wskazany w dokumencie (opcjonalnie)",
+        },
+        El("input", {
+          id: "contract-channel",
+          value: channel,
+          onChange: (e) => setChannel(e.target.value),
+          placeholder: "Np. YouTube",
+        }),
+      ),
+      El(
+        Field,
+        {
+          id: "contract-required-label",
+          label: "Wymagane oznaczenie (opcjonalnie)",
+        },
+        El("input", {
+          id: "contract-required-label",
+          value: requiredLabel,
+          onChange: (e) => setRequiredLabel(e.target.value),
+          placeholder: "Np. współpraca reklamowa",
+        }),
+      ),
+      El(
         Button,
         {
           primary: true,
+          disabled: busy,
           onClick: async () => {
-            const r = await save(finding, endDate, label);
+            const r = await save(
+              finding,
+              endDate,
+              label,
+              channel,
+              requiredLabel,
+            );
             if (r) setResult(r);
           },
         },
         "Porównaj i zapisz",
       ),
-      result &&
+      comparison &&
         El(
           "div",
           { className: "evidence" },
           El("div", { className: "eyebrow" }, "Wynik porównania"),
-          El("p", null, text(result.result)),
+          comparison.result && El("p", null, text(comparison.result)),
           El(
             "p",
             { className: "subtle" },
-            `Publikacja: ${text(result.publishedAt)} · ${text(
-              result.label,
-            )} do ${text(result.endDate)}`,
+            `Publikacja: ${text(comparison.publishedAt)} · ${text(
+              comparison.label,
+            )} do ${text(comparison.endDate)}`,
+          ),
+          list(comparison.comparisons).map((item, i) =>
+            El(
+              "div",
+              { className: "check", key: item.field || i },
+              El(
+                "span",
+                null,
+                comparisonField(item.field),
+                item.note &&
+                  El("div", { className: "subtle" }, text(item.note)),
+              ),
+              El(Badge, null, status(item.state)),
+            ),
           ),
         ),
+      El("hr", { className: "rule" }),
+      El(SectionTitle, null, "Historia sprawy"),
+      history.length
+        ? history.map((item, i) =>
+            El(
+              "p",
+              { className: "history", key: i },
+              El(
+                "strong",
+                null,
+                inquiryLabels[item.stage] || status(item.status || item.action),
+              ),
+              " · ",
+              date(item.at || item.createdAt),
+              El("br"),
+              text(item.note || item.text, ""),
+              item.reply &&
+                El("span", null, El("br"), "Odpowiedź: ", text(item.reply)),
+            ),
+          )
+        : El("p", { className: "subtle" }, "Brak zapisanej historii."),
     );
   }
-  function Detail({ finding, creator, save, saveContract, busy }) {
+  function Detail({ finding, creator, save, saveContract, inquiry, busy }) {
     const [tab, setTab] = useState("evidence");
     if (!finding)
       return El(
@@ -624,9 +831,7 @@
           { label: "Data / pochodzenie" },
           date(finding.publishedAt || finding.observedAt || finding.createdAt),
           " · ",
-          finding.provenance
-            ? text(finding.provenance)
-            : modeLabel(finding.mode),
+          provenanceText(finding.provenance, finding.mode),
         ),
       ),
       El(
@@ -652,7 +857,7 @@
           ? El(Evidence, { finding })
           : tab === "decision"
             ? El(Decision, { finding, save, busy })
-            : El(Contract, { finding, save: saveContract }),
+            : El(Contract, { finding, save: saveContract, inquiry, busy }),
       ),
     );
   }
@@ -717,6 +922,7 @@
     openExample,
     save,
     saveContract,
+    inquiry,
     busy,
     refresh,
     scan,
@@ -734,25 +940,27 @@
       to: "",
     });
     const creator = (f) => creators.find((c) => c.id === f.creatorId);
-    const filtered = findings.filter((f) => {
-      const c = creator(f),
-        hay = [f.title, f.summary, f.platform, c?.name, f.url]
-          .join(" ")
-          .toLowerCase();
-      const day = String(f.publishedAt || f.observedAt || "").slice(0, 10);
-      return (
-        (!filters.q || hay.includes(filters.q.toLowerCase())) &&
-        (!filters.module || f.module === filters.module) &&
-        (!filters.platform || f.platform === filters.platform) &&
-        (!filters.status || f.status === filters.status) &&
-        (!filters.risk ||
-          (filters.risk === "high"
-            ? Number(f.score) >= 60
-            : Number(f.score) < 60)) &&
-        (!filters.from || (day && day >= filters.from)) &&
-        (!filters.to || (day && day <= filters.to))
-      );
-    });
+    const filtered = [...findings]
+      .sort((a, b) => (Number(b.score) || 0) - (Number(a.score) || 0))
+      .filter((f) => {
+        const c = creator(f),
+          hay = [f.title, f.summary, f.platform, c?.name, f.url]
+            .join(" ")
+            .toLowerCase();
+        const day = String(f.publishedAt || f.observedAt || "").slice(0, 10);
+        return (
+          (!filters.q || hay.includes(filters.q.toLowerCase())) &&
+          (!filters.module || f.module === filters.module) &&
+          (!filters.platform || f.platform === filters.platform) &&
+          (!filters.status || f.status === filters.status) &&
+          (!filters.risk ||
+            (filters.risk === "high"
+              ? Number(f.score) >= 60
+              : Number(f.score) < 60)) &&
+          (!filters.from || (day && day >= filters.from)) &&
+          (!filters.to || (day && day <= filters.to))
+        );
+      });
     const current =
       findings.find((f) => String(f.id) === String(selected)) ||
       (!selected ? filtered[0] : null);
@@ -1002,6 +1210,7 @@
             creator: current && creator(current),
             save,
             saveContract,
+            inquiry,
             busy,
           }),
         ),
@@ -1044,6 +1253,8 @@
                     s.lastSuccessAt || s.lastSuccess || s.last_success,
                   )}`,
                 ),
+                El("p", null, provenanceText({ scope: s.scope, mode: s.mode })),
+                s.url && El("p", null, El(Link, { url: s.url })),
                 s.error && El(Notice, { error: true }, text(s.error)),
               ),
             )
@@ -1467,7 +1678,13 @@
         setBusy(false);
       }
     }
-    async function saveContract(finding, endDate, label) {
+    async function saveContract(
+      finding,
+      endDate,
+      label,
+      channel,
+      requiredLabel,
+    ) {
       if (!endDate) {
         notify("Podaj datę końca współpracy.");
         return null;
@@ -1475,7 +1692,13 @@
       try {
         const result = await request(
           `/v1/cases/${encodeURIComponent(finding.id)}/contract`,
-          bodyJson({ endDate, label, expectedRevision: finding.revision }),
+          bodyJson({
+            endDate,
+            label,
+            channel: channel || undefined,
+            requiredLabel: requiredLabel || undefined,
+            expectedRevision: finding.revision,
+          }),
         );
         notify("Porównanie zostało zapisane.");
         refresh();
@@ -1486,6 +1709,26 @@
           notify("Sprawa została zmieniona. Pobrano aktualną wersję.");
         } else notify(`Nie zapisano porównania: ${e.message}`);
         return null;
+      }
+    }
+    async function inquiry(finding, action, note) {
+      setBusy(true);
+      try {
+        const result = await request(
+          `/v1/cases/${encodeURIComponent(finding.id)}/inquiry`,
+          bodyJson({ action, note, expectedRevision: finding.revision }),
+        );
+        notify("Zapisano etap sprawy.");
+        await refresh();
+        return result;
+      } catch (e) {
+        if (e.status === 409) {
+          await refresh();
+          notify("Sprawa została zmieniona. Pobrano aktualną wersję.");
+        } else notify(`Nie zapisano etapu sprawy: ${e.message}`);
+        return null;
+      } finally {
+        setBusy(false);
       }
     }
     async function upload(file, title, description) {
@@ -1559,6 +1802,7 @@
       },
       save,
       saveContract,
+      inquiry,
       busy,
       refresh,
       scan,
