@@ -1,0 +1,97 @@
+[
+ {
+  "name": "facebook-profile-comparicpl-canonical",
+  "url": "https://www.facebook.com/ComparicPL/",
+  "at": "2026-11-21T20:38:30+00:00",
+  "status": 200,
+  "headers": {
+   "Cache-Control": "private, no-cache, no-store, must-revalidate",
+   "Strict-Transport-Security": "max-age=15552000; preload",
+   "Content-Type": "text/html; charset=\"utf-8\"",
+   "X-FB-Debug": "zMLoG1zAhN3lElHpHv02hR8TY/+InnLJrFY9+0qvyzt9F8nLo4l9NxwItKZ2iMly6n7EKMhqxOiQhTm5hNdALw==",
+   "Date": "Sat, 21 Nov 2026 20:38:30 GMT"
+  },
+  "bytes": 527763,
+  "sha256": "b13fbc48b6aefb2876d137193abf709cae661bb340fca70753e19ca095c07485",
+  "userAgent": "InvestWatch-SourceMonitor/1.1 (Linux; public-source research monitor)",
+  "route": "direct",
+  "result": "metadata_only"
+ },
+ {
+  "name": "facebook-profile-etoro-canonical",
+  "url": "https://www.facebook.com/eToro/",
+  "at": "2026-11-21T20:38:34+00:00",
+  "status": 200,
+  "headers": {
+   "Cache-Control": "private, no-cache, no-store, must-revalidate",
+   "Strict-Transport-Security": "max-age=15552000; preload",
+   "Content-Type": "text/html; charset=\"utf-8\"",
+   "X-FB-Debug": "gFoAO/wF/T3vo/s+XtH1LNhTS5cqPk/c7fwSBuOBCktN7Bwvyl549ODXgdA9etWqsxN2Z/8Xl3k147BP5IV5RQ==",
+   "Date": "Sat, 21 Nov 2026 20:38:34 GMT"
+  },
+  "bytes": 527468,
+  "sha256": "78c5f002743b117872197c23dcf877dcb76e909d22f8f2d3c93fb4ae2efee0da",
+  "userAgent": "InvestWatch-SourceMonitor/1.1 (Linux; public-source research monitor)",
+  "route": "direct",
+  "result": "metadata_only"
+ },
+ {
+  "name": "facebook-oembed-page-no-token",
+  "url": "https://graph.facebook.com/v19.0/oembed_page?url=https%3A%2F%2Fwww.facebook.com%2FComparicPL%2F&format=json",
+  "at": "2026-11-21T20:38:37+00:00",
+  "status": 200,
+  "headers": {
+   "Content-Type": "text/javascript; charset=UTF-8",
+   "facebook-api-version": "v21.0",
+   "Strict-Transport-Security": "max-age=15552000; preload",
+   "Cache-Control": "private, no-cache, no-store, must-revalidate",
+   "X-FB-Debug": "HLHxvZkEoRSPBiaCLepaJn9QBneQgOaBZfyHDS7i8GlhOdZVhGb7BkZtAuoXfIavKxYLqvuWBzPllC25XrCvtA==",
+   "Date": "Sat, 21 Nov 2026 20:38:38 GMT",
+   "Content-Length": "750"
+  },
+  "bytes": 750,
+  "sha256": "829be77e93a72015aa7e42d5a3a8bd83e6265915de26bed15c2404a6a7891007",
+  "userAgent": "InvestWatch-SourceMonitor/1.1 (X11; Linux x86_64; UKNF InvestWatch discovery)",
+  "route": "direct",
+  "result": "oembed_embed_html_only"
+ },
+ {
+  "name": "instagram-oembed-no-token",
+  "url": "https://graph.facebook.com/v19.0/instagram_oembed?url=https%3A%2F%2Fwww.instagram.com%2Fp%2FCkruS2OIMLt%2F&format=json",
+  "at": "2026-11-21T20:38:41+00:00",
+  "status": 400,
+  "headers": {
+   "Content-Type": "text/javascript; charset=UTF-8",
+   "www-authenticate": "OAuth \"Facebook Platform\" \"invalid_request\" \"The requested resource does not exist\"",
+   "facebook-api-version": "v21.0",
+   "Strict-Transport-Security": "max-age=15552000; preload",
+   "Cache-Control": "no-store",
+   "X-FB-Debug": "hAxESZgXJFb8jQZni01joF4LPria57GKzZrQU0cx76HW3AHV54OX0ZW6Oe/4yPCHv3dBCjZjPdeVUhLcb0O+Yg==",
+   "Date": "Sat, 21 Nov 2026 20:38:41 GMT",
+   "Content-Length": "352"
+  },
+  "bytes": 352,
+  "sha256": "c9321390167f991f5cbc5c149418539bd000f1de1349e34069d03a289adb8fd4",
+  "userAgent": "InvestWatch-SourceMonitor/1.1 (X11; Linux x86_64; UKNF InvestWatch discovery)",
+  "route": "direct",
+  "result": "oembed_error_code_24_media_not_embeddable"
+ },
+ {
+  "name": "tiktok-oembed-comparic",
+  "url": "https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40comparic.pl%2Fvideo%2F7709883339389291798",
+  "at": "2026-11-21T20:38:45+00:00",
+  "status": 200,
+  "headers": {
+   "Server": "nginx",
+   "Content-Type": "application/json; charset=utf-8",
+   "Cache-Control": "max-age=0, no-cache, no-store",
+   "Date": "Sat, 21 Nov 2026 20:38:45 GMT",
+   "Content-Length": "542"
+  },
+  "bytes": 542,
+  "sha256": "2ebbee34032d153843f636b360518b29d79d597f01df3263fb4636c75e513838",
+  "userAgent": "InvestWatch-SourceMonitor/1.1",
+  "route": "direct",
+  "result": "oembed_embed_html_only"
+ }
+]

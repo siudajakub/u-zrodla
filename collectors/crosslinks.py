@@ -88,20 +88,14 @@ class ChannelMetadata(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.ids = set()
-        self.in_head = False
-
-    def handle_endtag(self, tag):
-        if tag == "head":
-            self.in_head = False
 
     def handle_starttag(self, tag, attributes):
-        if tag == "head":
-            self.in_head = True
-            return
-        if not self.in_head:
+        if tag not in ("meta", "link"):
             return
         attrs = dict(attributes)
-        # Restrict identity extraction to document-level identity metadata.
+        # Identity comes only from meta/link elements (itemprop, canonical, og:url, feed alternate).
+        # YouTube emits them after </head> as well, so the position in the document does not matter;
+        # IDs in scripts, text and recommendation links are never read.
         if tag == "meta" and (attrs.get("itemprop") or "").lower() == "channelid":
             self._id(attrs.get("content", ""))
         if tag == "link" and "canonical" in (attrs.get("rel") or "").lower().split():

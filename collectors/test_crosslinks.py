@@ -107,3 +107,21 @@ class CrosslinkTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class ChannelMetadataPositionTests(unittest.TestCase):
+    def test_etoro_probe_page_resolves_id_outside_head(self):
+        import gzip
+        from pathlib import Path
+        path = Path(__file__).resolve().parents[1] / "fixtures/raw/discovery/youtube-probe-2026-11-21/023-profile-etoro.html.gz"
+        parser = ChannelMetadata()
+        parser.feed(gzip.decompress(path.read_bytes()).decode("utf-8"))
+        self.assertEqual(parser.ids, {"UCaQbkbbr35GXYsJTjeI-Ahg"})
+
+    def test_metadata_after_head_but_not_ids_in_script_or_links(self):
+        other = "UC" + "Q" * 22
+        page = (f'<html><head></head><body><link rel="canonical" href="https://www.youtube.com/channel/{CHANNEL_ID}">'
+                f'<script>"channelId":"{other}"</script><a href="https://www.youtube.com/channel/{other}">x</a></body></html>')
+        parser = ChannelMetadata()
+        parser.feed(page)
+        self.assertEqual(parser.ids, {CHANNEL_ID})
