@@ -9,7 +9,7 @@ from pathlib import Path
 import unittest
 
 from analysis.m2_card import card
-from analysis.m2_rules import NA, OK, PREMISE, evaluate
+from analysis.m2_rules import NA, OBSERVATION, OK, PREMISE, evaluate
 from collectors.common import SourceError
 from collectors.m2_discovery import FIRMS, anchors, locale_prefix, offer_score, product_family, rank_links, register_row
 from collectors.m2_market import MARKET, market_captures, material, read_manifest
@@ -111,7 +111,7 @@ class RealCriteria(unittest.TestCase):
 
     def test_content_rows(self):
         self.check("bdm-obligacje", "1", OK)
-        self.check("cmc-pl-pl-akcje", "2", PREMISE)
+        self.check("cmc-pl-pl-akcje", "2", OBSERVATION)
         self.check("ing-indywidualni-oferta-emerytalna-ike-funduszowe", "2", OK, "marketingowy")
         self.check("tms-fundusze-etf", "11", PREMISE)
         self.check("xtb-pl-edukacja", "11", OK)
