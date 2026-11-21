@@ -664,6 +664,7 @@ def signature_parts(capture, finding, raw=None):
     partial = capture.get("contentCompleteness") == "partial"
     analysis = [finding.get("summary"), finding.get("score"), checks, finding.get("evidence"), finding.get("semantic"),
                 finding.get("modalityComparison"), finding.get("reviewSuggestion")]
+    v1_analysis = list(analysis)  # the v1-style fingerprint ("legacy") never counts the second opinion
     if finding.get("secondOpinion"):  # only when present: a case without it keeps the fingerprint it always had
         analysis.append(finding["secondOpinion"])
     payload = [[_hash_view(capture, k) for k in content_keys], *analysis]
@@ -672,7 +673,7 @@ def signature_parts(capture, finding, raw=None):
     plain = [k for k in content_keys if k not in EVIDENCE_KEYS]
     legacy = None
     if raw is not None and not partial:
-        legacy = sha256(dump([[raw.get(k) for k in content_keys], *analysis]).encode()).hexdigest()
+        legacy = sha256(dump([[raw.get(k) for k in content_keys], *v1_analysis]).encode()).hexdigest()
     return {
         "signature": sha256(dump(payload).encode()).hexdigest(),
         "legacy": legacy,
