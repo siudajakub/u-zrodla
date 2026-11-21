@@ -16,15 +16,15 @@ import { api } from "./api.js";
 import { CaseDetail } from "./CaseDetail.jsx";
 import { Calibration } from "./Calibration.jsx";
 import { EvidenceForm } from "./EvidenceForm.jsx";
-import { activeCount, describeFilters, EMPTY_FILTERS } from "./filters.js";
+import { activeCount, describeFilters, EMPTY_FILTERS, PLATFORMS } from "./filters.js";
 import { CaseList, Filters, MoreFooter, OffersList, OffersTable, RegisterList, RegisterTable } from "./Lists.jsx";
 import { VARIANTS, fmtDayRoman, fmtTime } from "./labels.js";
 import { hashFor } from "./route.js";
 import { ErrorBlock, Loading, NoResults } from "./parts.jsx";
 import { TABS, TAB_BY_ID, useRoute } from "./route.js";
 import { ScanBanner, Sources, isActive, scanLine, useScanProgress } from "./Sources.jsx";
-import { dataScanOf, lastScanOf } from "./model.js";
-import { useCase, useDeskData, useQueue } from "./store.js";
+import { byStrengthThenDate, dataScanOf, lastScanOf } from "./model.js";
+import { useCase, useDeskData, useModuleCounts, useQueue } from "./store.js";
 import { Sparkline } from "./charts.jsx";
 
 const plural = (n, one, few, many) => (n === 1 ? one : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? few : many);
@@ -40,7 +40,7 @@ const TITLES = {
 };
 
 const SENTENCE = {
-  review: "Poprawna współpraca trafia do rejestru; brak oznaczenia w opisie, mowie i kadrach trafia tutaj.",
+  review: "Finfluencerzy, reklamy firm i doradztwo w jednej kolejce, od najsilniejszej przesłanki. Poprawna współpraca trafia do rejestru.",
   register: "Jawna współpraca nie jest uchybieniem. Do kontroli trafia dopiero osobna przesłanka.",
   m2: "Zrzuty ofert na stronach firm i ocena 19 kryteriów; „brak danych” jest widoczny.",
   m3: "Oferty doradztwa; status uprawnień z wykazu KNF na dzień odczytu.",
@@ -98,9 +98,11 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
   const [reload, setReload] = useState(0);
   const headingRef = useRef(null);
   const lastRow = useRef(null);
-  const pane = useResizable({ defaultSize: "60%", minSize: "44%", maxSize: "72%", isReversed: true });
+  const pane = useResizable({ defaultSize: "54%", minSize: "40%", maxSize: "72%", isReversed: true });
   const ready = queue.status === "ready" || queue.status === "refreshing";
-  const items = ready ? queue.items : [];
+  const items = ready ? (tab === "review" ? [...queue.items].sort(byStrengthThenDate) : queue.items) : [];
+  const withModules = tab === "review" || tab === "incomplete" || tab === "closed";
+  const moduleCounts = useModuleCounts(meta.queue, filters, rev, withModules);
   const split = meta.mode === "split";
   const autoId = split && !narrow && !route.caseId && !panelClosed && items[0] ? items[0].id : null;
   const shownId = route.caseId || autoId;
@@ -129,7 +131,7 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
   useEffect(() => {
     const onKey = (event) => {
       if (event.key !== "Escape" || event.defaultPrevented || !route.caseId) return;
-      const open = [...document.querySelectorAll("[role=listbox], [role=dialog], [role=menu]")].some((e) => e.getClientRects().length > 0);
+      const open = [...document.querySelectorAll("[role=listbox], [role=dialog], [role=menu], dialog[open]")].some((e) => e.getClientRects().length > 0);
       if (open) return;
       close();
     };
@@ -201,7 +203,7 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
         <Banner status="warning" title={`${recalc} ${plural(recalc, "wiersz ma", "wiersze mają", "wierszy ma")} wynik ze starszych reguł`}
           endContent={<Button label="Przelicz materiały" size="sm" isDisabled={actions.busy || actions.scanning} onClick={() => actions.scan("recompute")} />} />
       )}
-      <Filters filters={filters} update={update} reset={reset} showSection={tab === "register"} report={REPORT[tab]} />
+      <Filters filters={filters} update={update} reset={reset} showSection={tab === "register"} report={tab === "review" && filters.module !== "all" ? { module: filters.module, queue: "review" } : REPORT[tab]} showModule={withModules} moduleCounts={moduleCounts} platforms={tab === "register" ? PLATFORMS.filter((p) => p.value !== "web") : PLATFORMS} />
       {list}
       {ready && <MoreFooter shown={items.length} total={total} hasMore={!!queue.nextCursor} loading={queue.loadingMore} onMore={queue.more} />}
     </VStack>

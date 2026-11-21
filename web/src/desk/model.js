@@ -235,6 +235,8 @@ export function normalizeRow(item, creators = new Map()) {
     registryInfo: obj(item.adRegistryInfo),
     disclosure: obj(item.disclosure),
     firstReason: item.firstReason || null,
+    firm: item.firm || null,
+    publishedAtDerived: obj(item.publishedAtDerived),
     completeReason: item.completeReason || null,
     transcriptState: item.transcriptState || null,
     reason: item.reason || null,
@@ -255,6 +257,22 @@ export function rowReason(c) {
   if (c.reason) return c.reason;
   if (c.needsRecalc) return c.needsRecalcReason;
   return "Powód nieopisany";
+}
+
+/** Powód do listy: bez stałego wstępu „Przesłanka do sprawdzenia:” (plakietka i nagłówek już to mówią). */
+export function shortReason(text) {
+  const t = String(text || "").replace(/^Przesłanka do sprawdzenia:\s*/i, "");
+  return t ? t.charAt(0).toUpperCase() + t.slice(1) : t;
+}
+
+/** Kolejność listy „Co wymaga sprawdzenia”: siła malejąco, potem data (publikacji, inaczej odczytu) malejąco. */
+export function byStrengthThenDate(a, b) {
+  const va = a.score?.value ?? -1;
+  const vb = b.score?.value ?? -1;
+  if (va !== vb) return vb - va;
+  const da = Date.parse(a.publishedAt || a.observedAt || 0) || 0;
+  const db = Date.parse(b.publishedAt || b.observedAt || 0) || 0;
+  return db - da;
 }
 
 export function scanOf(state, id) {

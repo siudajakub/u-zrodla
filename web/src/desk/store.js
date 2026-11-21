@@ -126,6 +126,31 @@ export function useQueue(name, filters, data, rev) {
   return { ...state, more };
 }
 
+/** Liczba pozycji kolejki w podziale na moduł (te same filtry poza modułem): małe zapytania o samą liczność. */
+export function useModuleCounts(name, filters, rev, enabled) {
+  const [counts, setCounts] = useState(null);
+  const key = useMemo(() => JSON.stringify([name, { ...filters, module: "all" }]), [name, filters]);
+  useEffect(() => {
+    if (!enabled || !name) {
+      setCounts(null);
+      return undefined;
+    }
+    let off = false;
+    const t = setTimeout(() => {
+      Promise.all(["M1", "M2", "M3"].map((m) => api.queue(name, { ...filters, module: m }, { limit: 1 }).then((r) => [m, r.total]))).then(
+        (pairs) => !off && setCounts(Object.fromEntries(pairs)),
+        () => !off && setCounts(null),
+      );
+    }, filters?.q ? 250 : 0);
+    return () => {
+      off = true;
+      clearTimeout(t);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key, rev, enabled]);
+  return counts;
+}
+
 /** Pełna sprawa z /v1/cases/{id} (z pamięcią podręczną do następnej zmiany danych). */
 export function useCase(id, data, rev, reload = 0) {
   const [state, setState] = useState({ status: id ? "loading" : "idle", c: null, error: null });

@@ -7,7 +7,7 @@ import { Link } from "@astryxdesign/core/Link";
 import { Skeleton } from "@astryxdesign/core/Skeleton";
 import { Text } from "@astryxdesign/core/Text";
 import { Token } from "@astryxdesign/core/Token";
-import { BANDS, DISCLOSURE, ORIGINS, clock, describeDiscovery, fmtDateTime, fmtDayRoman, fmtNumber, safeUrl } from "./labels.js";
+import { BANDS, DISCLOSURE, ORIGINS, clock, moduleName, describeDiscovery, fmtDateTime, fmtDayRoman, fmtNumber, safeUrl } from "./labels.js";
 
 export const SCALE_NOTE = "Siła przesłanki to punkty 0–100 z jawnych składników reguł. To nie jest prawdopodobieństwo naruszenia ani ocena prawna.";
 
@@ -17,6 +17,12 @@ export function OriginToken({ origin, at }) {
   if (!origin || origin === "live") return null;
   const synthetic = origin === "synthetic" || origin === "upload";
   return <Token size="sm" color={synthetic ? "orange" : "gray"} label={originLabel(origin, at)} />;
+}
+
+const MODULE_COLOR = { M1: "blue", M2: "purple", M3: "green" };
+/** Plakietka modułu: Finfluencer, Reklama firmy, Doradztwo. */
+export function ModuleToken({ module }) {
+  return module ? <Token size="sm" color={MODULE_COLOR[module] || "gray"} label={moduleName(module)} /> : null;
 }
 
 export function ImportToken({ c }) {
@@ -75,7 +81,7 @@ export function proofOf(c) {
 export function ProofLink({ c }) {
   const proof = proofOf(c);
   if (!proof?.url) return <Text type="supporting" color="secondary">brak wskazanego fragmentu</Text>;
-  const label = proof.start != null ? `od ${clock(proof.start)} ↗` : "opis ↗";
+  const label = proof.start != null ? `od ${clock(proof.start)} ↗` : c.module && c.module !== "M1" ? "strona ↗" : "opis ↗";
   return <Link href={proof.url} target="_blank" hasUnderline>{label}</Link>;
 }
 

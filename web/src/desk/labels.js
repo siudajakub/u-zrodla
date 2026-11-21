@@ -1,6 +1,9 @@
 // Polskie nazwy i formaty pulpitu. Bez żargonu: „przesłanka do sprawdzenia”, nigdy „naruszenie”.
 
 export const MODULES = { M1: "Materiały twórców", M2: "Oferty WWW", M3: "Doradztwo WWW" };
+/** Nazwa modułu dla kontrolera (plakietka w kolejce i filtr). */
+export const MODULE_NAME = { M1: "Finfluencer", M2: "Reklama firmy", M3: "Doradztwo" };
+export const moduleName = (m) => MODULE_NAME[m] || m || "";
 export const STATUS = { new: "Nowa", reviewing: "W kontroli", closed: "Zamknięta" };
 export const ROUTES = {
   refer: "Do sprawdzenia",
@@ -43,7 +46,31 @@ export const COMPLETE_REASON = {
   transcript_pending: "Mowa czeka na transkrypcję.",
   transcript_unavailable: "Mowy nie zbadano: brak transkrypcji (np. TikTok: tylko podpis).",
   identity_unresolved: "Nie ustalono, która firma jest stroną współpracy.",
+  visual_unexamined: "Obrazu i wideo nie zbadano: podpis bez oznaczenia nie jest wnioskiem.",
+  market_unknown: "Nie ustalono, czy oferta jest kierowana do klientów w Polsce.",
+  axes_incomplete: "Brakuje którejś z czterech cech rekomendacji.",
 };
+/** Stan kryterium M2 i cechy M3: [kolor plakietki, etykieta]. */
+export const CHECK_STATE = {
+  "przesłanka": ["orange", "przesłanka"],
+  "spełnione": ["green", "spełnione"],
+  "nie dotyczy": ["gray", "nie dotyczy"],
+  "brak danych": ["yellow", "brak danych"],
+  "częściowo": ["yellow", "częściowo"],
+  "poza katalogiem": ["gray", "poza katalogiem"],
+};
+/** Uprawnienia M3 (identity.state z API): [kolor, etykieta]. Nieznany kod: etykieta z API. */
+export const IDENTITY_STATE = {
+  authorized_advice: ["green", "uprawniony"],
+  investment_firm_agent: ["green", "agent firmy inwestycyjnej"],
+  authorized_other_scope: ["yellow", "uprawniony w innym zakresie"],
+  not_found: ["orange", "brak wpisu w przejrzanych wykazach"],
+  no_identity: ["gray", "brak danych podmiotu na stronie"],
+  name_collision: ["orange", "kolizja nazw"],
+  register_failure: ["red", "awaria rejestru"],
+  registry_failure: ["red", "awaria rejestru"],
+};
+export const ENTITY_ROW = { name: "nazwa", krs: "KRS", nip: "NIP", regon: "REGON" };
 export const DISCLOSURE_ROW = {
   explicit_ad: "oznaczona reklama",
   platform_flag: "flaga płatnej promocji",
@@ -203,3 +230,7 @@ export function describeDiscovery(entry) {
   if (at) parts.push(fmtDateTime(at));
   return parts.join(" · ");
 }
+
+const VIEW_LABEL = { desktop: "komputer", phone: "telefon", tablet: "tablet" };
+/** „desktop 1440×900” z API → „komputer 1440×900”. */
+export const viewLabel = (viewport) => String(viewport || "").replace(/^(desktop|phone|tablet)/, (m) => VIEW_LABEL[m]);

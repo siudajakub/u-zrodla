@@ -17,12 +17,16 @@ import { ToggleButton } from "@astryxdesign/core/ToggleButton";
 import { Token } from "@astryxdesign/core/Token";
 import { reportUrl } from "./api.js";
 import { PLATFORMS, activeCount } from "./filters.js";
-import { BANDS, COMPLETE_REASON, DISCLOSURE_ROW, DISCLOSURE_WHERE, MODULES, clock, fmtDay, platformLabel, safeUrl } from "./labels.js";
-import { ExternalLink, ImportToken, Lines, OriginToken, ProofLink, RecalcToken, ReReviewToken, Strength } from "./parts.jsx";
+import { BANDS, COMPLETE_REASON, DISCLOSURE_ROW, DISCLOSURE_WHERE, MODULE_NAME, clock, fmtDay, moduleName, platformLabel, safeUrl } from "./labels.js";
+import { ExternalLink, ImportToken, Lines, ModuleToken, OriginToken, ProofLink, RecalcToken, ReReviewToken, Strength } from "./parts.jsx";
 import { hashFor } from "./route.js";
-import { rowReason } from "./model.js";
+import { rowReason, shortReason } from "./model.js";
 
-const MODULE_ROW = [{ value: "all", label: "Wszystkie" }, ...Object.keys(MODULES).map((id) => ({ value: id, label: id }))];
+/** Przełącznik modułu z licznikami (puste liczniki, gdy API jeszcze nie odpowiedziało). */
+const moduleRow = (counts) => [
+  { value: "all", label: counts ? `Wszystkie ${Object.values(counts).reduce((a, b) => a + b, 0)}` : "Wszystkie" },
+  ...Object.keys(MODULE_NAME).map((id) => ({ value: id, label: counts ? `${MODULE_NAME[id]} ${counts[id]}` : MODULE_NAME[id] })),
+];
 
 function Toggles({ label, value, options, onChange }) {
   return (
@@ -36,7 +40,7 @@ function Toggles({ label, value, options, onChange }) {
 }
 
 /** Filtry nad listą. `report` = { module, queue }: przycisk „Pobierz raport” z aktualnymi filtrami. */
-export function Filters({ filters, update, reset, showSection, report }) {
+export function Filters({ filters, update, reset, showSection, report, showModule = false, moduleCounts = null, platforms = PLATFORMS }) {
   const count = activeCount(filters);
   const hasDates = !!(filters.from || filters.to);
   const more = (
@@ -63,8 +67,8 @@ export function Filters({ filters, update, reset, showSection, report }) {
         )}
       </HStack>
       <Toggles label="Platforma" value={filters.source} onChange={(v) => update("source")(v === filters.source ? "all" : v)}
-        options={[{ value: "all", label: "Wszystkie" }, ...PLATFORMS]} />
-      <Toggles label="Moduł" value={filters.module} onChange={update("module")} options={MODULE_ROW} />
+        options={[{ value: "all", label: "Wszystkie" }, ...platforms]} />
+      {showModule && <Toggles label="Moduł" value={filters.module} onChange={(v) => update("module")(v === filters.module ? "all" : v)} options={moduleRow(moduleCounts)} />}
       <HStack gap={2} vAlign="center" wrap="wrap">
         <Collapsible defaultIsOpen={hasDates || filters.band !== "all" || filters.section !== "all"} trigger={<Text type="supporting">Data, siła{showSection ? ", rejestr" : ""}</Text>}>
           <VStack padding={2}>{more}</VStack>
@@ -103,9 +107,9 @@ const sub = (c) => [c.creatorName, platformLabel(c.platform), c.publishedAt && f
 
 /** Data w wierszu: opublikowano, a gdy platforma jej nie podaje (np. TikTok), data odczytu z oznaczeniem. */
 function When({ c }) {
-  return c.publishedAt
-    ? <Text type="supporting">{fmtDay(c.publishedAt)}</Text>
-    : <VStack gap={0}><Text type="supporting">{fmtDay(c.observedAt)}</Text><Text type="supporting" color="secondary">odczyt</Text></VStack>;
+  if (c.publishedAt) return <Text type="supporting">{fmtDay(c.publishedAt)}</Text>;
+  if (c.publishedAtDerived?.value) return <VStack gap={0.5}><Text type="supporting">≈ {fmtDay(c.publishedAtDerived.value)}</Text><Token size="sm" color="yellow" label="data szacowana" description={c.publishedAtDerived.note || undefined} /></VStack>;
+  return <VStack gap={0}><Text type="supporting">{fmtDay(c.observedAt)}</Text><Text type="supporting" color="secondary">odczyt</Text></VStack>;
 }
 
 function incompleteReason(c) {
@@ -131,7 +135,24 @@ export function disclosureLine(d) {
   return { title: `${kind}${where ? `, ${where}` : ""}`, text: d.text || null };
 }
 
-/** Wiersz zwarty: film i kanał | powód w jednej linii | siła | dowód. */
+/** Pierwsza kolumna: tytuł, plakietka modułu, źródło (platforma) i kanał. */
+function Material({ c, props, selectedId }) {
+  const where = [platformLabel(c.platform), c.module === "M1" ? c.creatorName : null, c.publishedAt && fmtDay(c.publishedAt)].filter(Boolean).join(" · ");
+  return (
+    <VStack gap={0.5}>
+      <TitleLink c={c} {...props} active={c.id === selectedId} />
+      <HStack gap={1} wrap="wrap" vAlign="center">
+        <ModuleToken module={c.module} />
+        <Text type="supporting" color="secondary" maxLines={1}>{where}</Text>
+      </HStack>
+      {(c.origin !== "replay" || c.importLabel || c.needsRecalc || c.pendingReReview || c.reviewStale) && (
+        <HStack gap={1} wrap="wrap">{c.origin !== "replay" && <OriginToken origin={c.origin} at={c.observedAt} />}<ImportToken c={c} /><RecalcToken c={c} /><ReReviewToken c={c} /></HStack>
+      )}
+    </VStack>
+  );
+}
+
+/** Wiersz zwarty: materiał (moduł, źródło) | firma | powód w jednej linii | siła | dowód. */
 export function CaseList({ items, tab, narrow, selectedId, filters, onOpen, emptyState }) {
   const kind = tab === "review" || tab === "incomplete" || tab === "closed" || tab === "demo" ? tab : "review";
   const props = { route: tab, filters, selectedId, onOpen };
@@ -139,25 +160,20 @@ export function CaseList({ items, tab, narrow, selectedId, filters, onOpen, empt
     return (
       <List density="spacious" hasDividers>
         {items.length === 0 ? emptyState : items.map((c) => (
-          <Item key={c.id} density="spacious" isSelected={c.id === selectedId} labelLines={2} descriptionLines={3}
+          <Item key={c.id} density="spacious" isSelected={c.id === selectedId} labelLines={2} descriptionLines={4}
             href={hashFor(tab, { caseId: c.id, filters })}
             label={c.title}
-            description={<Lines lines={[c.score?.value != null ? `Siła: ${BANDS[c.score.band] || ""} · ${c.score.value}/100` : null, sub(c), reasonFor(kind, c)]} />} />
+            description={<Lines lines={[`${moduleName(c.module)} · ${platformLabel(c.platform)}${c.firm ? ` · ${c.firm}` : ""}`, c.score?.value != null ? `Siła: ${BANDS[c.score.band] || ""} · ${c.score.value}/100` : null, shortReason(reasonFor(kind, c))]} />} />
         ))}
       </List>
     );
   }
   const columns = [
-    { key: "title", header: "Materiał i kanał", width: proportional(3, { minWidth: 170 }), renderCell: (c) => (
-      <VStack gap={0.5}>
-        <TitleLink c={c} {...props} active={c.id === selectedId} />
-        <Text type="supporting" color="secondary" maxLines={1}>{sub(c)}</Text>
-        <HStack gap={1} wrap="wrap">{c.origin !== "replay" && <OriginToken origin={c.origin} at={c.observedAt} />}<ImportToken c={c} /><RecalcToken c={c} /><ReReviewToken c={c} /></HStack>
-      </VStack>
-    ) },
-    { key: "reason", header: REASON_HEADER[kind], width: proportional(3, { minWidth: 150 }), renderCell: (c) => <Text maxLines={1} type="supporting">{reasonFor(kind, c)}</Text> },
-    ...(kind === "review" || kind === "closed" ? [{ key: "strength", header: "Siła", width: pixel(104), renderCell: (c) => <Strength c={c} /> }] : []),
-    ...(kind === "review" ? [{ key: "proof", header: "Dowód", width: pixel(104), renderCell: (c) => <ProofLink c={c} /> }] : []),
+    { key: "title", header: "Materiał", width: proportional(3, { minWidth: 170 }), renderCell: (c) => <Material c={c} props={props} selectedId={selectedId} /> },
+    { key: "firm", header: "Firma", width: proportional(2, { minWidth: 96 }), renderCell: (c) => <Text type="supporting" maxLines={2}>{c.firm || "—"}</Text> },
+    { key: "reason", header: REASON_HEADER[kind], width: proportional(3, { minWidth: 150 }), renderCell: (c) => <Text maxLines={2} type="supporting">{shortReason(reasonFor(kind, c))}</Text> },
+    ...(kind === "review" || kind === "closed" ? [{ key: "strength", header: "Siła", width: pixel(96), renderCell: (c) => <Strength c={c} /> }] : []),
+    ...(kind === "review" ? [{ key: "proof", header: "Dowód", width: pixel(84), renderCell: (c) => <ProofLink c={c} /> }] : []),
   ];
   return <Table idKey="id" columns={columns} data={items} density="compact" hasHover verticalAlign="top" emptyState={emptyState} />;
 }
@@ -165,28 +181,25 @@ export function CaseList({ items, tab, narrow, selectedId, filters, onOpen, empt
 /** Rejestr reklam: materiał | jak ujawniono (rodzaj, miejsce, cytat) | podstawa wpisu | kiedy. Wszystko z podsumowania API. */
 export function RegisterTable({ items, filters, onOpen, emptyState }) {
   const columns = [
-    { key: "title", header: "Materiał i kanał", width: proportional(3, { minWidth: 170 }), renderCell: (c) => (
+    { key: "title", header: "Materiał", width: proportional(3, { minWidth: 170 }), renderCell: (c) => (
       <VStack gap={0.5}>
         <TitleLink c={c} route="register" filters={filters} onOpen={onOpen} />
-        <Text type="supporting" color="secondary" maxLines={1}>{[c.creatorName, platformLabel(c.platform)].filter(Boolean).join(" · ")}</Text>
+        {c.creatorName && <Text type="supporting" color="secondary" maxLines={1}>{c.creatorName}</Text>}
       </VStack>
     ) },
-    { key: "disclosure", header: "Jak ujawniono", width: proportional(3, { minWidth: 200 }), renderCell: (c) => {
+    { key: "firm", header: "Firma", width: proportional(2, { minWidth: 100 }), renderCell: (c) => <Text type="supporting" maxLines={2}>{c.firm || "nie ustalono"}</Text> },
+    { key: "platform", header: "Platforma", width: pixel(96), renderCell: (c) => <Text type="supporting">{platformLabel(c.platform)}</Text> },
+    { key: "disclosure", header: "Typ ujawnienia", width: proportional(3, { minWidth: 180 }), renderCell: (c) => {
       const d = disclosureLine(c.disclosure);
       return d ? (
         <VStack gap={0.5}>
           <Text weight="medium">{d.title}</Text>
           {d.text && <Text type="supporting" color="secondary" maxLines={2}>„{d.text}”</Text>}
+          {c.registry === "candidate" && <Token size="sm" color="yellow" label="do potwierdzenia" />}
         </VStack>
       ) : <Text type="supporting" color="secondary">—</Text>;
     } },
-    { key: "basis", header: "Podstawa wpisu", width: proportional(3, { minWidth: 180 }), renderCell: (c) => (
-      <VStack gap={0.5}>
-        <Text type="supporting" maxLines={2}>{c.registryInfo?.summary || c.reason || "—"}</Text>
-        {c.registry === "candidate" && <Token size="sm" color="yellow" label="do potwierdzenia" />}
-      </VStack>
-    ) },
-    { key: "date", header: "Kiedy", width: pixel(84), renderCell: (c) => <When c={c} /> },
+    { key: "date", header: "Kiedy", width: pixel(140), renderCell: (c) => <When c={c} /> },
   ];
   return <Table idKey="id" columns={columns} data={items} density="compact" hasHover verticalAlign="top" emptyState={emptyState} />;
 }
@@ -206,6 +219,9 @@ export function RegisterList({ items, filters, tab }) {
   );
 }
 
+/** Kontrola ujemna M3: podmiot z wykazu KNF (wiersz kolejki niesie tylko zdanie o uprawnieniach). */
+const licensedControl = (c) => c.module === "M3" && c.route === "no_signal" && /uprawnion|agent firmy inwestycyjnej|kontrola ujemna/i.test(c.reason || "");
+
 export function OffersTable({ items, module, filters, onOpen, emptyState }) {
   const isM2 = module === "M2";
   const tab = isM2 ? "m2" : "m3";
@@ -213,13 +229,18 @@ export function OffersTable({ items, module, filters, onOpen, emptyState }) {
     { key: "page", header: isM2 ? "Strona" : "Oferta", width: proportional(3, { minWidth: 170 }), renderCell: (c) => (
       <VStack gap={0.5}>
         <TitleLink c={c} route={tab} filters={filters} onOpen={onOpen} />
-        <HStack gap={1} wrap="wrap" vAlign="center">{safeUrl(c.url) && <ExternalLink url={c.url}>{new URL(c.url, "http://x/").host}</ExternalLink>}<ImportToken c={c} /></HStack>
-        {c.reason && <Text type="supporting" color="secondary" maxLines={2}>{c.reason}</Text>}
+        <HStack gap={1} wrap="wrap" vAlign="center">
+          {safeUrl(c.url) && <ExternalLink url={c.url}>{new URL(c.url, "http://x/").host}</ExternalLink>}
+          <ImportToken c={c} />
+          {licensedControl(c) && <Token size="sm" color="green" label="kontrola: podmiot uprawniony" />}
+          {c.platform && c.platform !== "web" && <Text type="supporting" color="secondary">{platformLabel(c.platform)}</Text>}
+        </HStack>
       </VStack>
     ) },
-    { key: "firm", header: isM2 ? "Firma" : "Podmiot", width: proportional(2, { minWidth: 110 }), renderCell: (c) => <Text maxLines={1}>{c.creatorName || "—"}</Text> },
+    { key: "firm", header: isM2 ? "Firma" : "Podmiot", width: proportional(2, { minWidth: 110 }), renderCell: (c) => <Text maxLines={2}>{c.firm || c.creatorName || "—"}</Text> },
+    { key: "reason", header: isM2 ? "Przesłanka" : "Powód", width: proportional(3, { minWidth: 150 }), renderCell: (c) => <Text type="supporting" color="secondary" maxLines={2}>{c.reason || c.firstReason ? shortReason(licensedControl(c) ? c.reason : c.firstReason || c.reason) : "—"}</Text> },
     { key: "strength", header: "Siła", width: pixel(104), renderCell: (c) => <Strength c={c} /> },
-    { key: "state", header: "Stan", width: pixel(150), renderCell: (c) => (c.needsRecalc && !c.reason ? <RecalcToken c={c} /> : <Text type="supporting">{c.route ? ({ refer: "do sprawdzenia", complete: "uzupełnij dane", no_signal: "bez przesłanki", insufficient: "za mało danych" })[c.route] || c.route : "—"}</Text>) },
+    { key: "state", header: "Stan", width: pixel(130), renderCell: (c) => (c.needsRecalc && !c.reason ? <RecalcToken c={c} /> : <Text type="supporting">{c.route ? ({ refer: "do sprawdzenia", complete: "uzupełnij dane", no_signal: licensedControl(c) ? "bez przesłanki" : "bez przesłanki", insufficient: "za mało danych" })[c.route] || c.route : "—"}</Text>) },
   ];
   return <Table idKey="id" columns={columns} data={items} density="compact" hasHover verticalAlign="top" emptyState={emptyState} />;
 }
