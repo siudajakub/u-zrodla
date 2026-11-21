@@ -20,7 +20,8 @@ import time
 from . import replay_pack, store
 
 PROMO_KINDS = {"reklama", "wspolpraca", "partner", "sponsor", "link_w_opisie", "kod", "promocja"}
-BLOCKING = {"rate_limited", "login_required"}  # YouTube refuses us: stop, do not hammer
+BLOCKING = {"rate_limited", "login_required"}  # host-wide refusal stops the step; a 429 of one video (scope video) does not
+MAX_TRIES = 3  # failed attempts after which a video is permanently unavailable, with the reason
 
 
 def cache_dir():
@@ -208,7 +209,10 @@ def enrich_media(captures, mode, runner=None, *, media=None, analyze=None, heart
             ranked.append((_rank(cap, signal), cap))
     done = {}
     blocked = None
-    for _, cap in sorted(ranked, key=lambda pair: pair[0]):
+    # fewest attempts first (rotation: a video that was refused yesterday does not block the head of the queue),
+    # within one count the earlier ranking
+    order = sorted(ranked, key=lambda pair: (int((known.get(pair[1]["id"]) or {}).get("attempts") or 0), pair[0]))
+    for _, cap in order:
         summary["examined"] += 1
         if heartbeat:
             heartbeat()
@@ -240,17 +244,28 @@ def enrich_media(captures, mode, runner=None, *, media=None, analyze=None, heart
                 else:
                     summary["gaps"] += 1
                 status = (result.get("error") or {}).get("status")
-                if status in BLOCKING:
+                scope = (result.get("error") or {}).get("scope", "host")
+                if status == "login_required" or (status == "rate_limited" and scope == "host"):
                     blocked = summary["blocked"] = status
                     done[cap["id"]] = _pending(cap, f"YouTube zablokował pobieranie ({status})")
                     summary["deferred"] += 1
                     continue
-                if status and not result.get("segments") and tries >= 2:  # the third failure is final
-                    merged = {**_gap(cap, f"unavailable: nieudane 3 próby ({merged['mediaCoverage']['transcript']['reason']})"[:240]),
+                if status == "rate_limited" and not result.get("segments"):  # this video only: count the try, go on
+                    summary["videoLimited"] = summary.get("videoLimited", 0) + 1
+                    if tries + 1 >= MAX_TRIES:  # persistent refusal of one video: permanently unavailable, with the reason
+                        done[cap["id"]] = {**_gap(cap, f"unavailable: nieudane {MAX_TRIES} próby (YouTube odmawia napisów tego filmu: 429)"),
+                                           "mediaAttempts": tries + 1}
+                    else:
+                        done[cap["id"]] = {**_pending(cap, "YouTube odmówił napisów tego filmu (429); ponowienie w kolejnym skanie"),
+                                           "mediaAttempts": tries + 1}
+                        summary["deferred"] += 1
+                    continue
+                if status and not result.get("segments") and tries + 1 >= MAX_TRIES:  # the last failure is final
+                    merged = {**_gap(cap, f"unavailable: nieudane {MAX_TRIES} próby ({merged['mediaCoverage']['transcript']['reason']})"[:240]),
                               "mediaAttempts": tries + 1}
             except Exception as exc:  # media failure is a coverage gap, not a scan failure
                 reason = f"media: {type(exc).__name__}: {exc}"[:200]
-                done[cap["id"]] = {**_gap(cap, f"unavailable: nieudane 3 próby ({reason})" if tries >= 2 else reason),
+                done[cap["id"]] = {**_gap(cap, f"unavailable: nieudane {MAX_TRIES} próby ({reason})" if tries + 1 >= MAX_TRIES else reason),
                                    "mediaAttempts": tries + 1}
                 summary["gaps"] += 1
                 continue
@@ -267,8 +282,9 @@ def enrich_media(captures, mode, runner=None, *, media=None, analyze=None, heart
                     summary["requests"] += stats.get("requests", 0) or 0
                     summary["frameFetches"] = summary.get("frameFetches", 0) + 1
                     budget -= 1
-                    if (framed.get("error") or {}).get("status") in BLOCKING:
-                        blocked = summary["blocked"] = framed["error"]["status"]
+                    ferr = framed.get("error") or {}
+                    if ferr.get("status") == "login_required" or (ferr.get("status") == "rate_limited" and ferr.get("scope", "host") == "host"):
+                        blocked = summary["blocked"] = ferr["status"]
                     else:
                         coverage = merged.get("mediaCoverage")
                         merged = {**_merge(merged, framed), "framesAttempted": True}

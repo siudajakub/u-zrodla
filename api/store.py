@@ -879,6 +879,8 @@ def media_outcome(capture):
         return "done"
     if transcript.get("state") == "unavailable":
         return "unavailable" if permanent_gap(transcript.get("reason")) else "failed"
+    if transcript.get("state") == "pending" and capture.get("mediaAttempts"):
+        return "failed"  # a pending video with tries (429 of this video only): counts as an attempt, retried later
     return None
 
 def save_media(db, key, capture):
