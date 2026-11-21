@@ -1,0 +1,77 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "lynx-rachunek-inwestycyjny",
+ "kind": "offer",
+ "url": "https://www.lynxbroker.pl/rachunek-inwestycyjny/",
+ "finalUrl": "https://www.lynxbroker.pl/rachunek-inwestycyjny/",
+ "firm": {
+  "key": "lynx",
+  "brand": "LYNX",
+  "home": "https://www.lynxbroker.pl/",
+  "registryId": 9328617,
+  "name": "LYNX B.V.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP poprzez oddział",
+  "entityType": "foreign_investment_firm_branch",
+  "entityLabel": "oddział zagranicznej firmy inwestycyjnej",
+  "sourceFile": "data/probe-snapshots/knf/knf_oddzialy_zagr_FI.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.lynxbroker.pl/",
+  "anchor": "Rachunek inwestycyjny",
+  "score": 5,
+  "reasons": [
+   "rachun (?:inwest"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:18:48.091847+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "0336e0ef53a45c805d595b99ee9f50a42e470c03fb16a8cac8cb4234a1a75be9",
+ "htmlBytes": 339706,
+ "htmlStored": "runtime",
+ "title": "Rachunek inwestycyjny poprzez LYNX",
+ "lang": "pl-PL",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "a561bb8377de7307979b06df266114c1e4efcd676ed4a592613d49fef4fbbc5a.jpg",
+   "screenshotBeforeConsent": "57e1a02a9a393b1e19baf9ea37dbe29e85dec6b7fa426a82b7549b920d39fb5e.jpg",
+   "dom": "6b333fe7b6cdab5a9bb56a007139fddc464ac5bf1ee4cf244ce09be355400019.json.gz",
+   "fullPage": "0cdf73973559c3c21e860397b340f746848426a0eb51d1ecff833be09eeff926.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 8202,
+   "scrollWidth": 1440,
+   "blocks": 214,
+   "requests": 87
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "be2b61d100b9c5c78a9de0f3478d6726b95256eff7c925eafda1af5ba5c418f8.jpg",
+   "screenshotBeforeConsent": "887df343975be7d54d68bdf738d7d201cef26f9e7c5753ffed05a289f17fb9b1.jpg",
+   "dom": "95f19195520f996f2f4d6498162032088febeece0705fe1ccfa8a44a6294970c.json.gz",
+   "fullPage": "d2eae05711c381d9611cedaebcc6c634048927a4937ba5e853180f103a04d7c6.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 12844,
+   "scrollWidth": 390,
+   "blocks": 200,
+   "requests": 85
+  }
+ ]
+}

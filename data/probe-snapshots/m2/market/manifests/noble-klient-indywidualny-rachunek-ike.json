@@ -1,0 +1,77 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "noble-klient-indywidualny-rachunek-ike",
+ "kind": "offer",
+ "url": "https://noblesecurities.pl/klient-indywidualny/rachunek-ike/",
+ "finalUrl": "https://noblesecurities.pl/klient-indywidualny/rachunek-ike/",
+ "firm": {
+  "key": "noble",
+  "brand": "Noble Securities",
+  "home": "https://noblesecurities.pl/",
+  "registryId": 6884971,
+  "name": "NOBLE Securities S.A.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Domy maklerskie",
+  "entityType": "domestic_investment_firm",
+  "entityLabel": "dom maklerski",
+  "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://noblesecurities.pl/",
+  "anchor": "Czytaj więcej Czytaj więcej",
+  "score": 5,
+  "reasons": [
+   "ike"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:09:15.787754+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "047d5054cab08bcc15f908542339e6e48d77d49bc9a11e46e3c63354fe6e107a",
+ "htmlBytes": 173122,
+ "htmlStored": "runtime",
+ "title": "Rachunek IKE -",
+ "lang": "pl-PL",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "ccfa7fe667d98f897514d17a9973bc71418bbba758bba084cbabe8f5f65d8d24.jpg",
+   "screenshotBeforeConsent": "aa83367fa3e56c64db9ae26811d182d72ffb77682f98031306519e0c3e1b4a6d.jpg",
+   "dom": "1005d828eb580945a724c49a404ebbbc071001437b8b02862337990df053f84c.json.gz",
+   "fullPage": "9b57fe9cbac14eb3405ccca8843f16be049bf2ea79a19c2ab8d280b5e30553d1.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 12282,
+   "scrollWidth": 1572,
+   "blocks": 318,
+   "requests": 66
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "ec77fb68accc38028a20c82eadff172ba8cff539c3cf00bfb99eecdecfac8294.jpg",
+   "screenshotBeforeConsent": "9324e5f2f420bc0b8bd95331238ea7f6ad15286f88939fe6a7659aa4fc4abc41.jpg",
+   "dom": "147da85db8da930339cf26240f6864c087d3ea8d2e40754a0016ca85f399f677.json.gz",
+   "fullPage": "8e55b0b7a3f19712dc3a707165daf172cc60eb79e92d85c4565c9e37d63ebf6b.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 17600,
+   "scrollWidth": 390,
+   "blocks": 318,
+   "requests": 60
+  }
+ ]
+}

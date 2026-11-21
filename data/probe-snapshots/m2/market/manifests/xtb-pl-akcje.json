@@ -1,0 +1,79 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "xtb-pl-akcje",
+ "kind": "offer",
+ "url": "https://www.xtb.com/pl/akcje",
+ "finalUrl": "https://www.xtb.com/pl/akcje",
+ "firm": {
+  "key": "xtb",
+  "brand": "XTB",
+  "home": "https://www.xtb.com/pl",
+  "registryId": 6884980,
+  "name": "XTB S.A.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Domy maklerskie",
+  "entityType": "domestic_investment_firm",
+  "entityLabel": "dom maklerski",
+  "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.xtb.com/pl",
+  "anchor": "Akcje i fundusze ETF - Dowiedz się więcej Dowiedz się więcej",
+  "score": 14,
+  "reasons": [
+   "etf",
+   "akcj",
+   "fundusz"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:04:49.252248+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "cce593fb3493b354db0c23f4dc270f3ccc5c453c52823ef482aa830217592828",
+ "htmlBytes": 448364,
+ "htmlStored": "runtime",
+ "title": "Akcje – kupno i handel akcjami w aplikacji XTB | XTB",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "ffedded19e5a64f63d543d1e4f86baa9fa90101d8675fd6c2db1804bb0b8c14a.jpg",
+   "screenshotBeforeConsent": "81e09b25ac1b2d02976e2eec9106990a524bde9dcd11c4eac7526ac88502aa17.jpg",
+   "dom": "034dcf89c83fd600e8d37c2c2e07a0622024613f4774534e7a87c8c73db6a9ef.json.gz",
+   "fullPage": "4e9beae8d637bc87f66c607691e96f69f948dc5db06807ed12e1ca97eedd3521.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 10968,
+   "scrollWidth": 1440,
+   "blocks": 597,
+   "requests": 232
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "caab1f3563d5a8211757172bf3a17e00e7e2ea5acc70a0030c7c4e4520c9a427.jpg",
+   "screenshotBeforeConsent": "b0e89875bda3c9f36d6be28ca209ae444c6fa668647d6bb74640d17c608011b8.jpg",
+   "dom": "63d96c9effed732af3c1347f4461f637cc74381f6965cd3e9ab069c39c9a158b.json.gz",
+   "fullPage": "1e002b8158b15cdf29997657a52b0431e23cd0dae5f948e9dc4930160a219b32.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 14323,
+   "scrollWidth": 390,
+   "blocks": 607,
+   "requests": 228
+  }
+ ]
+}

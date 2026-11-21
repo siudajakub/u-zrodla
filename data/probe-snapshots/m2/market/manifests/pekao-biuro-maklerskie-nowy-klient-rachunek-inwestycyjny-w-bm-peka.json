@@ -1,0 +1,77 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "pekao-biuro-maklerskie-nowy-klient-rachunek-inwestycyjny-w-bm-peka",
+ "kind": "offer",
+ "url": "https://www.pekao.com.pl/biuro-maklerskie/nowy-klient/rachunek-inwestycyjny-w-bm-pekao.html",
+ "finalUrl": "https://www.pekao.com.pl/biuro-maklerskie/nowy-klient/rachunek-inwestycyjny-w-bm-pekao.html",
+ "firm": {
+  "key": "pekao",
+  "brand": "Bank Pekao",
+  "home": "https://www.pekao.com.pl/",
+  "registryId": 7976968,
+  "name": "BANK PEKAO S.A. (BANK POLSKA KASA OPIEKI S.A.) iuro Maklerskie PEKAO",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+  "entityType": "domestic_bank",
+  "entityLabel": "bank prowadzący działalność maklerską",
+  "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.pekao.com.pl/biuro-maklerskie/klient-indywidualny.html",
+  "anchor": "Sprawdź",
+  "score": 5,
+  "reasons": [
+   "rachun (?:inwest"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:10:47.228360+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "bd93614bc30678c27d6053e7c84a5a77bb6688d7f5feeafa266bc9c48755b8a8",
+ "htmlBytes": 94944,
+ "htmlStored": "runtime",
+ "title": "Rachunek inwestycyjny w BM Pekao - Nowy Klient - Biuro Maklerskie - Bank Pekao S.A. - Strona główna - Biuro Maklerskie - Bank Pekao S.A.",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "8d2394a6e39cde9569823a0a2b44598f6c5c5f719ddedeae122a483d3094e47a.jpg",
+   "screenshotBeforeConsent": "37472f9d29c2a3c65a5f7be10f16e7a1a4ec5c87e6998eb24dc2b33ec2ef026f.jpg",
+   "dom": "8bef18d77f8f8181c6465aedf964ff4cbd155f1a0bbff8d315e944b1190d1865.json.gz",
+   "fullPage": "e67f4699a33be4870221b794a1363ac02ad3dbe8cb08c98ff1b0fa9759886439.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 4321,
+   "scrollWidth": 1440,
+   "blocks": 365,
+   "requests": 96
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "6e7137d969cfe85b32c5f466e6e35364cf231fe1b03bc055af5353888133775d.jpg",
+   "screenshotBeforeConsent": "7f4c8b5d727f77708ef31927ec50a83725791582f7e356e5fcdea714fa68a46a.jpg",
+   "dom": "fe13c836e30abbd4e5b3cb6f4fcb9f137eae8702873b5a39828b4d34fb2a7ba6.json.gz",
+   "fullPage": "4c8674f2adecaba7987e617e6f6aea7095c1cf439d9d3c0a0dc21d68dcf48f39.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 8197,
+   "scrollWidth": 391,
+   "blocks": 366,
+   "requests": 95
+  }
+ ]
+}

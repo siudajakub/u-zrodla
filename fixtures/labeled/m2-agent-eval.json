@@ -1,0 +1,573 @@
+{
+ "labelsBy": "agent (claude-opus-5-5), blind to rule output, written before the first rule run on real pages",
+ "pages": 25,
+ "thresholds": {
+  "30": {
+   "tp": 9,
+   "fp": 1,
+   "tn": 12,
+   "fn": 3,
+   "cost_2FN_plus_FP": 7
+  },
+  "50": {
+   "tp": 7,
+   "fp": 0,
+   "tn": 13,
+   "fn": 5,
+   "cost_2FN_plus_FP": 10
+  }
+ },
+ "perCriterion": {
+  "1": {
+   "spełnione": 25
+  },
+  "2": {
+   "przesłanka": 18,
+   "spełnione": 6,
+   "nie dotyczy": 1
+  },
+  "3": {
+   "nie dotyczy": 12,
+   "przesłanka": 8,
+   "spełnione": 5
+  },
+  "4": {
+   "nie dotyczy": 4,
+   "spełnione": 18,
+   "przesłanka": 1,
+   "brak danych": 2
+  },
+  "5": {
+   "nie dotyczy": 4,
+   "przesłanka": 3,
+   "spełnione": 16,
+   "brak danych": 2
+  },
+  "6": {
+   "nie dotyczy": 3,
+   "przesłanka": 5,
+   "spełnione": 15,
+   "brak danych": 2
+  },
+  "7": {
+   "nie dotyczy": 2,
+   "spełnione": 19,
+   "przesłanka": 4
+  },
+  "8": {
+   "przesłanka": 2,
+   "spełnione": 18,
+   "nie dotyczy": 3,
+   "brak danych": 2
+  },
+  "9": {
+   "nie dotyczy": 4,
+   "przesłanka": 9,
+   "spełnione": 10,
+   "brak danych": 2
+  },
+  "10": {
+   "nie dotyczy": 4,
+   "spełnione": 16,
+   "brak danych": 5
+  },
+  "11": {
+   "nie dotyczy": 19,
+   "przesłanka": 5,
+   "spełnione": 1
+  },
+  "12a": {
+   "nie dotyczy": 25
+  },
+  "12b": {
+   "nie dotyczy": 25
+  },
+  "13": {
+   "nie dotyczy": 25
+  },
+  "14": {
+   "nie dotyczy": 25
+  },
+  "15": {
+   "nie dotyczy": 24,
+   "przesłanka": 1
+  },
+  "16": {
+   "nie dotyczy": 20,
+   "przesłanka": 5
+  },
+  "17": {
+   "nie dotyczy": 12,
+   "spełnione": 13
+  },
+  "18": {
+   "nie dotyczy": 12,
+   "spełnione": 12,
+   "przesłanka": 1
+  }
+ },
+ "items": [
+  {
+   "id": "bdm-obligacje",
+   "url": "https://www.bdm.pl/obligacje",
+   "firm": "Dom Maklerski BDM",
+   "entity": "dom maklerski",
+   "kind": "offer",
+   "score": 10,
+   "premises": [
+    "2",
+    "8"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy.",
+    "Przesłanka do sprawdzenia: na telefonie informacja o ryzyku jest ucięta, zbyt drobna albo niewidoczna.",
+    "Pozostałe kryteria: spełnione 1, nie dotyczy 16, bez danych 0; przy nich nie znaleziono przesłanek."
+   ]
+  },
+  {
+   "id": "bdm-rachunek-emerytalny",
+   "url": "https://www.bdm.pl/rachunek-emerytalny",
+   "firm": "Dom Maklerski BDM",
+   "entity": "dom maklerski",
+   "kind": "offer",
+   "score": 95,
+   "premises": [
+    "2",
+    "3",
+    "5",
+    "6",
+    "9",
+    "15",
+    "16"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: obietnica zysku („Przy rocznym oprocentowaniu 3,5% przez 15 lat .”) nie ma obok siebie informacji o ryzyku tego samego produktu.",
+    "Przesłanka do sprawdzenia: strona podaje prognozę („Kalkulator procentu składanego”) bez zastrzeżenia, że nie jest ona pewnym wskaźnikiem.",
+    "Przesłanka do sprawdzenia: wzmianka o podatkach („zwolnienie z podatku od zysków kapitałowych (IKE)”) nie mówi, że korzyść zależy od sytuacji klienta i przepisy mogą się zmienić."
+   ]
+  },
+  {
+   "id": "bossa-oferta-akcje-obligacje",
+   "url": "https://bossa.pl/oferta/akcje-obligacje",
+   "firm": "DM BOŚ (bossa)",
+   "entity": "dom maklerski",
+   "kind": "offer",
+   "score": 5,
+   "premises": [
+    "9"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: ostrzeżenie jest napisane trudnym językiem: długie zdania i terminy fachowe.",
+    "Pozostałe kryteria: spełnione 10, nie dotyczy 8, bez danych 0; przy nich nie znaleziono przesłanek.",
+    "Stronę odczytano w przeglądarce na ekranach: komputer 1440×900, telefon 390×844; tekst ukryty w zwiniętych elementach też sprawdzono."
+   ]
+  },
+  {
+   "id": "bossa-oferta-kontrakty",
+   "url": "https://bossa.pl/oferta/kontrakty",
+   "firm": "DM BOŚ (bossa)",
+   "entity": "dom maklerski",
+   "kind": "offer",
+   "score": 5,
+   "premises": [
+    "9"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: ostrzeżenie jest napisane trudnym językiem: długie zdania i terminy fachowe.",
+    "Pozostałe kryteria: spełnione 9, nie dotyczy 8, bez danych 1; przy nich nie znaleziono przesłanek.",
+    "Stronę odczytano w przeglądarce na ekranach: komputer 1440×900, telefon 390×844; tekst ukryty w zwiniętych elementach też sprawdzono."
+   ]
+  },
+  {
+   "id": "cmc-pl-pl-akcje",
+   "url": "https://www.cmcmarkets.com/pl-pl/akcje",
+   "firm": "CMC Markets",
+   "entity": "oddział zagranicznej firmy inwestycyjnej",
+   "kind": "offer",
+   "score": 55,
+   "premises": [
+    "2",
+    "3",
+    "9",
+    "11"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: obietnica zysku („Dowiedz się jak działa przeprowadzanie transakcji CFD na akcjach i jak możesz zarabiać na wzrostach i…”) nie ma obok siebie informacji o ryzyku tego samego produktu.",
+    "Przesłanka do sprawdzenia: strona porównuje się z innymi („Najlepsza mobilna platforma transakcyjna”), ale nie podaje źródła ani założeń.",
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy."
+   ]
+  },
+  {
+   "id": "cmc-pl-pl-kryptowaluty",
+   "url": "https://www.cmcmarkets.com/pl-pl/kryptowaluty",
+   "firm": "CMC Markets",
+   "entity": "oddział zagranicznej firmy inwestycyjnej",
+   "kind": "offer",
+   "score": 20,
+   "premises": [
+    "2",
+    "9",
+    "11"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: strona porównuje się z innymi („Najlepsza mobilna platforma transakcyjna”), ale nie podaje źródła ani założeń.",
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy.",
+    "Przesłanka do sprawdzenia: ostrzeżenie jest napisane trudnym językiem: długie zdania i terminy fachowe."
+   ]
+  },
+  {
+   "id": "finax-pl-produkty-inwestowanie-w-etf",
+   "url": "https://www.finax.eu/pl/produkty/inwestowanie-w-etf",
+   "firm": "Finax",
+   "entity": "oddział zagranicznej firmy inwestycyjnej",
+   "kind": "offer",
+   "score": 75,
+   "premises": [
+    "2",
+    "3",
+    "5",
+    "6",
+    "16"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: obietnica zysku („Pomnażaj swoje pieniądze inwestując w ETF-y”) nie ma obok siebie informacji o ryzyku tego samego produktu.",
+    "Przesłanka do sprawdzenia: wzmianka o podatkach („Ulgi podatkowe”) nie mówi, że korzyść zależy od sytuacji klienta i przepisy mogą się zmienić.",
+    "Przesłanka do sprawdzenia: informację o ryzyku słabo widać: jest blada, zasłonięta albo pojawia się dopiero po przewinięciu, gdy korzyść widać od razu."
+   ]
+  },
+  {
+   "id": "finax-pl-produkty-zloty-portfel",
+   "url": "https://www.finax.eu/pl/produkty/zloty-portfel",
+   "firm": "Finax",
+   "entity": "oddział zagranicznej firmy inwestycyjnej",
+   "kind": "offer",
+   "score": 10,
+   "premises": [
+    "6"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: informacja o ryzyku jest schowana w stopce, przypisie albo na samym dole strony.",
+    "Pozostałe kryteria: spełnione 7, nie dotyczy 11, bez danych 0; przy nich nie znaleziono przesłanek.",
+    "Stronę odczytano w przeglądarce na ekranach: komputer 1440×900, telefon 390×844; tekst ukryty w zwiniętych elementach też sprawdzono."
+   ]
+  },
+  {
+   "id": "ing-indywidualni-inwestycje-i-oszczednosci-smart-saver",
+   "url": "https://www.ing.pl/indywidualni/inwestycje-i-oszczednosci/smart-saver",
+   "firm": "ING Bank Śląski",
+   "entity": "bank prowadzący działalność maklerską",
+   "kind": "offer",
+   "score": 5,
+   "premises": [
+    "2"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy.",
+    "Pozostałe kryteria: spełnione 1, nie dotyczy 17, bez danych 0; przy nich nie znaleziono przesłanek.",
+    "Stronę odczytano w przeglądarce na ekranach: komputer 1440×900, telefon 390×844; tekst ukryty w zwiniętych elementach też sprawdzono."
+   ]
+  },
+  {
+   "id": "ing-indywidualni-oferta-emerytalna-ike-funduszowe",
+   "url": "https://www.ing.pl/indywidualni/oferta-emerytalna/ike-funduszowe",
+   "firm": "ING Bank Śląski",
+   "entity": "bank prowadzący działalność maklerską",
+   "kind": "offer",
+   "score": 15,
+   "premises": [
+    "16"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: wzmianka o podatkach („Nie płacisz podatku Belki - po spełnieniu warunków do wypłaty”) nie mówi, że korzyść zależy od sytuacji klienta i przepisy mogą się zmienić.",
+    "Pozostałe kryteria: spełnione 9, nie dotyczy 8, bez danych 1; przy nich nie znaleziono przesłanek.",
+    "Stronę odczytano w przeglądarce na ekranach: komputer 1440×900, telefon 390×844; tekst ukryty w zwiniętych elementach też sprawdzono."
+   ]
+  },
+  {
+   "id": "lynx-online-broker-cfd-broker",
+   "url": "https://www.lynxbroker.pl/online-broker/cfd-broker/",
+   "firm": "LYNX",
+   "entity": "oddział zagranicznej firmy inwestycyjnej",
+   "kind": "offer",
+   "score": 15,
+   "premises": [
+    "2",
+    "11"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: strona porównuje się z innymi („W przeciwieństwie do akcji, inwestor nabywający CFD nie uzyskuje udziału w spółce, a jedynie spekuluje na…”), ale nie podaje źródła ani założeń.",
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy.",
+    "Pozostałe kryteria: spełnione 9, nie dotyczy 8, bez danych 0; przy nich nie znaleziono przesłanek."
+   ]
+  },
+  {
+   "id": "lynx-rachunek-inwestycyjny",
+   "url": "https://www.lynxbroker.pl/rachunek-inwestycyjny/",
+   "firm": "LYNX",
+   "entity": "oddział zagranicznej firmy inwestycyjnej",
+   "kind": "offer",
+   "score": 5,
+   "premises": [
+    "2"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy.",
+    "Pozostałe kryteria: spełnione 8, nie dotyczy 10, bez danych 0; przy nich nie znaleziono przesłanek.",
+    "Stronę odczytano w przeglądarce na ekranach: komputer 1440×900, telefon 390×844; tekst ukryty w zwiniętych elementach też sprawdzono."
+   ]
+  },
+  {
+   "id": "millennium-klienci-indywidualni-inwestycje-fundusze-inwestycyjne-produk",
+   "url": "https://www.bankmillennium.pl/klienci-indywidualni/inwestycje/fundusze-inwestycyjne/produkty-oszczednosciowe/indywidualne-konto-emerytalne",
+   "firm": "Bank Millennium",
+   "entity": "bank prowadzący działalność maklerską",
+   "kind": "offer",
+   "score": 60,
+   "premises": [
+    "2",
+    "3",
+    "9",
+    "16"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: obietnica zysku („Wyższe zyski”) nie ma obok siebie informacji o ryzyku tego samego produktu.",
+    "Przesłanka do sprawdzenia: wzmianka o podatkach („Korzyści podatkowe”) nie mówi, że korzyść zależy od sytuacji klienta i przepisy mogą się zmienić.",
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy."
+   ]
+  },
+  {
+   "id": "millennium-klienci-indywidualni-oszczednosci-i-inwestycje-plan-inwestyc",
+   "url": "https://www.bankmillennium.pl/klienci-indywidualni/oszczednosci-i-inwestycje/plan-inwestycyjny-millennium",
+   "firm": "Bank Millennium",
+   "entity": "bank prowadzący działalność maklerską",
+   "kind": "offer",
+   "score": 0,
+   "premises": [],
+   "label": false,
+   "reasons": [
+    "Pozostałe kryteria: spełnione 9, nie dotyczy 9, bez danych 1; przy nich nie znaleziono przesłanek.",
+    "Stronę odczytano w przeglądarce na ekranach: komputer 1440×900, telefon 390×844; tekst ukryty w zwiniętych elementach też sprawdzono.",
+    "Wynik pochodzi z reguł; przy każdym kryterium jest cytat i zrzut ekranu do samodzielnej oceny analityka."
+   ]
+  },
+  {
+   "id": "noble-klient-indywidualny-rachunek-ike",
+   "url": "https://noblesecurities.pl/klient-indywidualny/rachunek-ike/",
+   "firm": "Noble Securities",
+   "entity": "dom maklerski",
+   "kind": "offer",
+   "score": 95,
+   "premises": [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "16"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: obietnica zysku („Zyskaj więcej na przyszłość, inwestując w akcje, obligacje i ETF-y bez podatku od zysków kapitałowych.”) nie ma obok siebie informacji o ryzyku tego samego produktu.",
+    "Przesłanka do sprawdzenia: wzmianka o podatkach („Rachunek IKE – oszczędzanie na emeryturę bez podatku Belki”) nie mówi, że korzyść zależy od sytuacji klienta i przepisy mogą się zmienić.",
+    "Przesłanka do sprawdzenia: informacja o ryzyku jest pisana wyraźnie mniejszą czcionką niż reszta strony."
+   ]
+  },
+  {
+   "id": "noble-oferta-best-s-a-obligacje-serii-af4",
+   "url": "https://noblesecurities.pl/oferta/best-s-a-obligacje-serii-af4/",
+   "firm": "Noble Securities",
+   "entity": "dom maklerski",
+   "kind": "offer",
+   "score": 5,
+   "premises": [
+    "9"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: ostrzeżenie jest napisane trudnym językiem: długie zdania i terminy fachowe.",
+    "Pozostałe kryteria: spełnione 10, nie dotyczy 8, bez danych 0; przy nich nie znaleziono przesłanek.",
+    "Stronę odczytano w przeglądarce na ekranach: komputer 1440×900, telefon 390×844; tekst ukryty w zwiniętych elementach też sprawdzono."
+   ]
+  },
+  {
+   "id": "pekao-biuro-maklerskie-nowy-klient-rachunek-inwestycyjny-w-bm-peka",
+   "url": "https://www.pekao.com.pl/biuro-maklerskie/nowy-klient/rachunek-inwestycyjny-w-bm-pekao.html",
+   "firm": "Bank Pekao",
+   "entity": "bank prowadzący działalność maklerską",
+   "kind": "offer",
+   "score": 30,
+   "premises": [
+    "2",
+    "6",
+    "7"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: informację o ryzyku widać dopiero po rozwinięciu elementu albo kliknięciu odsyłacza.",
+    "Przesłanka do sprawdzenia: informacja o ryzyku jest schowana w stopce, przypisie albo na samym dole strony.",
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy."
+   ]
+  },
+  {
+   "id": "pekao-obligacje-skarbowe",
+   "url": "https://www.pekao.com.pl/obligacje-skarbowe",
+   "firm": "Bank Pekao",
+   "entity": "bank prowadzący działalność maklerską",
+   "kind": "offer",
+   "score": 55,
+   "premises": [
+    "2",
+    "3",
+    "7"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: obietnica zysku („o stałym oprocentowaniu: 2,00%”) nie ma obok siebie informacji o ryzyku tego samego produktu.",
+    "Przesłanka do sprawdzenia: informację o ryzyku widać dopiero po rozwinięciu elementu albo kliknięciu odsyłacza.",
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy."
+   ]
+  },
+  {
+   "id": "tms-fundusze-etf",
+   "url": "https://www.tms.pl/fundusze-etf",
+   "firm": "OANDA TMS Brokers",
+   "entity": "dom maklerski",
+   "kind": "offer",
+   "score": 20,
+   "premises": [
+    "2",
+    "9",
+    "11"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: strona porównuje się z innymi („Ponad 20 lat na rynku, najlepsze analizy, nowoczesne narzędzia i tysiące zadowolonych klientów.”), ale nie podaje źródła ani założeń.",
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy.",
+    "Przesłanka do sprawdzenia: ostrzeżenie jest napisane trudnym językiem: długie zdania i terminy fachowe."
+   ]
+  },
+  {
+   "id": "tms-oferta-kryptowaluty",
+   "url": "https://www.tms.pl/oferta/kryptowaluty",
+   "firm": "OANDA TMS Brokers",
+   "entity": "dom maklerski",
+   "kind": "offer",
+   "score": 40,
+   "premises": [
+    "11",
+    "18"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: bezpieczeństwo oferty uzasadniono nadzorem („Aby maksymalnie zmniejszyć wysokie ryzyko utraty pieniędzy, korzystaj z usług doświadczonego domu…”).",
+    "Przesłanka do sprawdzenia: strona porównuje się z innymi („Ponad 20 lat na rynku, najlepsze analizy, nowoczesne narzędzia i tysiące zadowolonych klientów.”), ale nie podaje źródła ani założeń.",
+    "Pozostałe kryteria: spełnione 11, nie dotyczy 6, bez danych 0; przy nich nie znaleziono przesłanek."
+   ]
+  },
+  {
+   "id": "xtb-pl-akcje",
+   "url": "https://www.xtb.com/pl/akcje",
+   "firm": "XTB",
+   "entity": "dom maklerski",
+   "kind": "offer",
+   "score": 55,
+   "premises": [
+    "2",
+    "3",
+    "7"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: obietnica zysku („Otrzymuj dywidendy”) nie ma obok siebie informacji o ryzyku tego samego produktu.",
+    "Przesłanka do sprawdzenia: informację o ryzyku widać dopiero po rozwinięciu elementu albo kliknięciu odsyłacza.",
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy."
+   ]
+  },
+  {
+   "id": "xtb-pl-edukacja",
+   "url": "https://www.xtb.com/pl/edukacja",
+   "firm": "XTB",
+   "entity": "dom maklerski",
+   "kind": "education",
+   "score": 20,
+   "premises": [
+    "2",
+    "7"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: informację o ryzyku widać dopiero po rozwinięciu elementu albo kliknięciu odsyłacza.",
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy.",
+    "Pozostałe kryteria: spełnione 4, nie dotyczy 13, bez danych 0; przy nich nie znaleziono przesłanek."
+   ]
+  },
+  {
+   "id": "xtb-pl-etf",
+   "url": "https://www.xtb.com/pl/etf",
+   "firm": "XTB",
+   "entity": "dom maklerski",
+   "kind": "archive",
+   "score": 40,
+   "premises": [
+    "2",
+    "3"
+   ],
+   "label": true,
+   "reasons": [
+    "Przesłanka do sprawdzenia: obietnica zysku („Otrzymuj dywidendy”) nie ma obok siebie informacji o ryzyku tego samego produktu.",
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy.",
+    "Pozostałe kryteria: spełnione 10, nie dotyczy 7, bez danych 0; przy nich nie znaleziono przesłanek."
+   ]
+  },
+  {
+   "id": "xtb-pl-forex",
+   "url": "https://www.xtb.com/pl/forex",
+   "firm": "XTB",
+   "entity": "dom maklerski",
+   "kind": "offer",
+   "score": 5,
+   "premises": [
+    "2"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy.",
+    "Pozostałe kryteria: spełnione 10, nie dotyczy 8, bez danych 0; przy nich nie znaleziono przesłanek.",
+    "Stronę odczytano w przeglądarce na ekranach: komputer 1440×900, telefon 390×844; tekst ukryty w zwiniętych elementach też sprawdzono."
+   ]
+  },
+  {
+   "id": "xtb-pl-surowce",
+   "url": "https://www.xtb.com/pl/surowce",
+   "firm": "XTB",
+   "entity": "dom maklerski",
+   "kind": "offer",
+   "score": 5,
+   "premises": [
+    "2"
+   ],
+   "label": false,
+   "reasons": [
+    "Przesłanka do sprawdzenia: strona zachęca do skorzystania z oferty, ale nie oznaczono jej jako reklamy.",
+    "Pozostałe kryteria: spełnione 10, nie dotyczy 8, bez danych 0; przy nich nie znaleziono przesłanek.",
+    "Stronę odczytano w przeglądarce na ekranach: komputer 1440×900, telefon 390×844; tekst ukryty w zwiniętych elementach też sprawdzono."
+   ]
+  }
+ ],
+ "sourceErrors": []
+}

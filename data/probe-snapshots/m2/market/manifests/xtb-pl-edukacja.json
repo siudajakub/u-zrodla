@@ -1,0 +1,77 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "xtb-pl-edukacja",
+ "kind": "education",
+ "url": "https://www.xtb.com/pl/edukacja",
+ "finalUrl": "https://www.xtb.com/pl/edukacja",
+ "firm": {
+  "key": "xtb",
+  "brand": "XTB",
+  "home": "https://www.xtb.com/pl",
+  "registryId": 6884980,
+  "name": "XTB S.A.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Domy maklerskie",
+  "entityType": "domestic_investment_firm",
+  "entityLabel": "dom maklerski",
+  "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.xtb.com/pl",
+  "anchor": "Artykuły edukacyjne Kompleksowa baza wiedzy",
+  "score": 0,
+  "reasons": [
+   "strona edukacyjna (kontrola)"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:07:00.076793+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "d6185cfef7748c1d0e56ef3133eb3bfd6827654fb78e94798d86673fc61a5600",
+ "htmlBytes": 345582,
+ "htmlStored": "runtime",
+ "title": "Nauka inwestowania – baza wiedzy | XTB",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "48e485b82de9b0bcfe6f2ed040fcd8138472984a760aaf0f5d92a58f44f5c16c.jpg",
+   "screenshotBeforeConsent": "179b295401bf3e9111a4dc7df80d9dc2505842d680e3c2f4407c374cd9e0bca3.jpg",
+   "dom": "9aa95778e3d797ca8d16a9de8eab67abf92ae9d99f97fbd7b5e8e1ddff93db2c.json.gz",
+   "fullPage": "033d3d7afe01b4d5e6e8cbce831b329c554cc09d20d9b25006fee99dc59fc60a.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 12748,
+   "scrollWidth": 1440,
+   "blocks": 462,
+   "requests": 192
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "ef0576370417af601fbb551b25cb29d38b89d3f642cd5a7b854ae5d6b18fa8e0.jpg",
+   "screenshotBeforeConsent": "c418a2db272c73060760a485367215834ddb8e6c1e1dd4a445b65adabb6d41e6.jpg",
+   "dom": "6edb774243e152cb8b35220ba4de5de8e12d54844f57ebdc93cbbdf13829f258.json.gz",
+   "fullPage": "2dd8b835be884c3db50ff0512e7af4fb2b9d45955cc6b224326b80c26af023cd.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 13037,
+   "scrollWidth": 390,
+   "blocks": 383,
+   "requests": 180
+  }
+ ]
+}

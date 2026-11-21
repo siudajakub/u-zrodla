@@ -1,0 +1,77 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "bdm-rachunek-emerytalny",
+ "kind": "offer",
+ "url": "https://www.bdm.pl/rachunek-emerytalny",
+ "finalUrl": "https://www.bdm.pl/rachunek-emerytalny",
+ "firm": {
+  "key": "bdm",
+  "brand": "Dom Maklerski BDM",
+  "home": "https://www.bdm.pl/",
+  "registryId": 6884964,
+  "name": "DOM MAKLERSKI BDM S.A.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Domy maklerskie",
+  "entityType": "domestic_investment_firm",
+  "entityLabel": "dom maklerski",
+  "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.bdm.pl/",
+  "anchor": "Rachunek emerytalny Rachunek emerytalny",
+  "score": 5,
+  "reasons": [
+   "ike"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:08:28.624990+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "8005ad8bf70ea87a014a0ba057641e2728913cadeac999fc7f1ed4d7d40dce11",
+ "htmlBytes": 73980,
+ "htmlStored": "runtime",
+ "title": "Rachunek emerytalny - BDM",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "cb3c7e04f36c4c0331a4dc5f4280ce37e0d3c0f69a527ab2bcc1e619bdbf3bbe.jpg",
+   "screenshotBeforeConsent": "c0d2dc7e10ea7675d5397330260b7cb16563e935f51eafbbd2a4a69d34308c39.jpg",
+   "dom": "281de1f0af2bff712643be7ab8c61124e852bab0ef4fa99cf1e511eccef6a71a.json.gz",
+   "fullPage": "0c286bf8ba051078f2c1001affba8c71f583c3746d3023c54120ab18696c05ed.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 4668,
+   "scrollWidth": 1440,
+   "blocks": 444,
+   "requests": 118
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "f7d6c462ec7c3c6d86087594e16f19a673124535576ccaf77f7d6ffc23c88c7a.jpg",
+   "screenshotBeforeConsent": "e377e71f7d0e56f16d9809364cb655f6736b62b587234a935ec6da3107139160.jpg",
+   "dom": "f2f085b0a6e77bdfc7b28fd17e4c612c11f6b7c4e93391bf0261f733b39ee14d.json.gz",
+   "fullPage": "1f3d9b1efdc363c1057444d1bcab8711960e1f0963fb5410ab1e951c19bd3cd6.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 8945,
+   "scrollWidth": 390,
+   "blocks": 444,
+   "requests": 114
+  }
+ ]
+}

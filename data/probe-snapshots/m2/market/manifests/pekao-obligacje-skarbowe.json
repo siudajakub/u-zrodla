@@ -1,0 +1,77 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "pekao-obligacje-skarbowe",
+ "kind": "offer",
+ "url": "https://www.pekao.com.pl/obligacje-skarbowe",
+ "finalUrl": "https://www.pekao.com.pl/obligacje-skarbowe",
+ "firm": {
+  "key": "pekao",
+  "brand": "Bank Pekao",
+  "home": "https://www.pekao.com.pl/",
+  "registryId": 7976968,
+  "name": "BANK PEKAO S.A. (BANK POLSKA KASA OPIEKI S.A.) iuro Maklerskie PEKAO",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+  "entityType": "domestic_bank",
+  "entityLabel": "bank prowadzący działalność maklerską",
+  "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.pekao.com.pl/biuro-maklerskie/klient-indywidualny.html",
+  "anchor": "Obligacje Skarbowe",
+  "score": 5,
+  "reasons": [
+   "obligacj"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:10:25.548607+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "20dd7bee8d9c0a3f8c8daf906cd6434d06b3f4f6a622f2173eadd40ed0135eae",
+ "htmlBytes": 29354,
+ "htmlStored": "runtime",
+ "title": "Obligacje skarbowe - Bank Pekao S.A.",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "47d78c589af2dd45972123171c14467196e47f7ee2323136c37a8f03076bd51e.jpg",
+   "screenshotBeforeConsent": "c21db3ea91e9ea2d4839cfb8a9a679a074bbc0179405b3f9885588d327076c6e.jpg",
+   "dom": "40ad4426ab5d8c2fab8af2836161aec34344de5f757fceea733c15511e240e67.json.gz",
+   "fullPage": "a939c7c928ff9610125eed93f068512dc9bf91516f2622a75603e5dd0d987fd4.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 2228,
+   "scrollWidth": 1440,
+   "blocks": 146,
+   "requests": 79
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "2bac627a83d9d7c76afb9865c6d7639e2f90086d17c62cc319ca37a5df3301b1.jpg",
+   "screenshotBeforeConsent": "1ad115e05d83bb11d29665c0c5e6ec80812020ed2c3a894574eace0bf9520c5d.jpg",
+   "dom": "1035e0ad7676a9f8e52d6b6b53ff6acd78e389306c7ae0ee4c1c8c420399e981.json.gz",
+   "fullPage": "a1e14257bbb77f77ccc77cc1f92a2a7637cabfc232c54dbbb41dc84fdf509ed4.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 4147,
+   "scrollWidth": 390,
+   "blocks": 148,
+   "requests": 79
+  }
+ ]
+}

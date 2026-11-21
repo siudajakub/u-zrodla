@@ -1,0 +1,78 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "cmc-pl-pl-kryptowaluty",
+ "kind": "offer",
+ "url": "https://www.cmcmarkets.com/pl-pl/kryptowaluty",
+ "finalUrl": "https://www.cmcmarkets.com/pl-pl/kryptowaluty",
+ "firm": {
+  "key": "cmc",
+  "brand": "CMC Markets",
+  "home": "https://www.cmcmarkets.com/pl-pl/",
+  "registryId": 9378948,
+  "name": "CMC Markets Germany GmbH",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP poprzez oddział",
+  "entityType": "foreign_investment_firm_branch",
+  "entityLabel": "oddział zagranicznej firmy inwestycyjnej",
+  "sourceFile": "data/probe-snapshots/knf/knf_oddzialy_zagr_FI.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.cmcmarkets.com/pl-pl",
+  "anchor": "Kryptowaluty",
+  "score": 8,
+  "reasons": [
+   "forex",
+   "kryptowalut"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:20:36.847886+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "eb261f28cf85e105027c17954e7b6251db98c9c391c807e5a6db24fe55463c4d",
+ "htmlBytes": 670400,
+ "htmlStored": "runtime",
+ "title": "Kryptowaluty – handel i inwestowanie na rynku krypto | CMC Markets | CMC Markets",
+ "lang": "pl-pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "ab382df5146d81881b47ed83dcd0be802306bbfc918d730337ee24e519006cd6.jpg",
+   "screenshotBeforeConsent": "ecb417205c0a70991b680aae98737ec90b18e2371ab80aa941543ce2fb03dbc3.jpg",
+   "dom": "359e416ddf0b2d201b26eaf8046d7b678a4bb927d266c7bd569d567194c4ddba.json.gz",
+   "fullPage": "aafe462dbcb9289516d5ed1871e2ec13dd4c99bfff36c6dc6883e860a161cd06.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 10137,
+   "scrollWidth": 1440,
+   "blocks": 337,
+   "requests": 309
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "71bf0fc5912f74534fb7e82f96a857985a0ac90698a7bb67b86c4b4998de9893.jpg",
+   "screenshotBeforeConsent": "bff307089e27cafa6412952cea9da85b704568e2b5676fda2d407622e1de1aae.jpg",
+   "dom": "269d95cf5225ad306927cbc4a809884841f3a0543200794c9cb8585906dff33d.json.gz",
+   "fullPage": "0f929868a80de5583bf5ef41076926d77374207e39d823a3076d57e180fba30d.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 16178,
+   "scrollWidth": 390,
+   "blocks": 331,
+   "requests": 286
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "lynx-online-broker-cfd-broker",
+ "kind": "offer",
+ "url": "https://www.lynxbroker.pl/online-broker/cfd-broker/",
+ "finalUrl": "https://www.lynxbroker.pl/online-broker/cfd-broker/",
+ "firm": {
+  "key": "lynx",
+  "brand": "LYNX",
+  "home": "https://www.lynxbroker.pl/",
+  "registryId": 9328617,
+  "name": "LYNX B.V.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP poprzez oddział",
+  "entityType": "foreign_investment_firm_branch",
+  "entityLabel": "oddział zagranicznej firmy inwestycyjnej",
+  "sourceFile": "data/probe-snapshots/knf/knf_oddzialy_zagr_FI.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.lynxbroker.pl/",
+  "anchor": "CFD",
+  "score": 5,
+  "reasons": [
+   "cfd"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:19:10.625926+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "7b7b435249f8420dfe4e2888337947e036af116340a01168427bf60f2477d892",
+ "htmlBytes": 390287,
+ "htmlStored": "runtime",
+ "title": "Broker CFD LYNX ▷ Handel CFD bez sztucznych spreadów",
+ "lang": "pl-PL",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "7e4cb60305017d1cd307d0cc74d5b7e28bf901b99eebb328a22198f6ffac09ce.jpg",
+   "screenshotBeforeConsent": "67cd6c0b5de9fedfa17c70100d7172854268675e2efe74dd298a65c15ec64cd3.jpg",
+   "dom": "f0a1d16814d52a699cd120a75fcb64dce0a8dcf878802d3c9da9620bdcfef462.json.gz",
+   "fullPage": "8e4d4e2b4273ccc1a82d9d943290fb30f40d3faba9764b0f2408a001fbabb1ff.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 9545,
+   "scrollWidth": 1440,
+   "blocks": 249,
+   "requests": 80
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "3aa08fb96d9d189e58b11fa753474ef6ebf3a5789d9a8685fb04408a22ce1ccd.jpg",
+   "screenshotBeforeConsent": "ec2eb4b311c4f110c9d0c7965b78286bae09395b8accbd6c42c826bb72016df9.jpg",
+   "dom": "877e39e6e69cfb902f72884358ac2ee754bb37d8b5efdb5fb080d9741eadbdea.json.gz",
+   "fullPage": "bcf9bc1385aa364744f1ecb40a8117d829b9698b5f19f098b37746eaae52fb55.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 14674,
+   "scrollWidth": 390,
+   "blocks": 235,
+   "requests": 79
+  }
+ ]
+}

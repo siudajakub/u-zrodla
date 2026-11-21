@@ -1,0 +1,79 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "bossa-oferta-kontrakty",
+ "kind": "offer",
+ "url": "https://bossa.pl/oferta/kontrakty",
+ "finalUrl": "https://bossa.pl/oferta/kontrakty",
+ "firm": {
+  "key": "bossa",
+  "brand": "DM BOŚ (bossa)",
+  "home": "https://bossa.pl/",
+  "registryId": 8353437,
+  "name": "DOM MAKLERSKI BANKU OCHRONY ŚRODOWISKA S.A.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Domy maklerskie",
+  "entityType": "domestic_investment_firm",
+  "entityLabel": "dom maklerski",
+  "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://bossa.pl/oferta",
+  "anchor": "Kontrakty i opcje",
+  "score": 8,
+  "reasons": [
+   "opcj",
+   "kontrakt",
+   "oferta"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:17:34.143407+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "dabcac9f73ff70ea4057dffdd38a422c2c50c7e09bed9b2793b26ce2996ec9a9",
+ "htmlBytes": 127810,
+ "htmlStored": "runtime",
+ "title": "Kontrakty i opcje w DM BOŚ S.A.",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "2f272121f73e6769eaca921f12e807fbea31539a00b4210d2e8e7f8186f61bac.jpg",
+   "screenshotBeforeConsent": "6bfedda26161db7473f808250e215a07f255c1fa5bc4670dbff65cda6b176bf5.jpg",
+   "dom": "357ddc1f96ddfdeafd2abe4d287a762bc7fc7e7ef372b668ac93451b1ee0e41f.json.gz",
+   "fullPage": "e18b1e12d306523a6b6c39e86a66877539b9a26488b57748b461d3f9ee21fff9.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 6146,
+   "scrollWidth": 1440,
+   "blocks": 155,
+   "requests": 60
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "20fc1354f95b13eeb8ec0f662a2e0df8511a1638dc22ca6e7d8a7e0ba079c4ee.jpg",
+   "screenshotBeforeConsent": "95fb293fd4cf43a5da1437b0777f40847858cafaf6945576fe18588f859289ac.jpg",
+   "dom": "766408769be180aaba25dfb9fed06c885eb75eaa2cd7d0c953879590655e38d3.json.gz",
+   "fullPage": "e628b5af47cc398ee21e7a939381bc255017b298f39541e88a3a701eaab21a60.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 11581,
+   "scrollWidth": 390,
+   "blocks": 149,
+   "requests": 58
+  }
+ ]
+}
