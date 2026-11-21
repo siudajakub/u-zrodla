@@ -11,10 +11,12 @@ import { StatusDot } from "@astryxdesign/core/StatusDot";
 import { EmptyState } from "@astryxdesign/core/EmptyState";
 import { Item } from "@astryxdesign/core/Item";
 import { List } from "@astryxdesign/core/List";
+import { Collapsible } from "@astryxdesign/core/Collapsible";
 import { Table, pixel, proportional } from "@astryxdesign/core/Table";
 import { Token } from "@astryxdesign/core/Token";
 import { api } from "./api.js";
-import { SCAN_MODE, SCAN_STATUS, SOURCE_STATE, describeDiscovery, fmtDateTime, fmtDay, fmtDayRoman } from "./labels.js";
+import { PLATFORM_LABEL, SCAN_MODE, SCAN_STATUS, SOURCE_STATE, describeDiscovery, fmtDateTime, fmtDay, fmtDayRoman, fmtTime } from "./labels.js";
+import { Chart } from "./charts.jsx";
 import { ExternalLink, reachText } from "./parts.jsx";
 import { dataScanOf, lastScanOf } from "./model.js";
 
@@ -85,147 +87,307 @@ export function ScanBanner({ scan, detail }) {
   );
 }
 
-function sourceRows(data) {
+
+const SEVERITY = { error: 0, unavailable: 0, limit: 1, needs_key: 1, access_blocked: 2, partial: 2, candidate: 3, stale: 4, empty: 5, ok: 6 };
+const worst = (list) => list.reduce((a, s) => ((SEVERITY[s.status] ?? 9) < (SEVERITY[a] ?? 9) ? s.status : a), "ok");
+const errorOf = (s) => s.lastError || s.health?.lastError || null;
+
+/** Połączenie wiersza źródła z jego szczegółem zdrowia (lastAttemptAt, lastError, quota.keys). */
+function withHealth(data) {
   const detail = data.sourceHealthDetail || {};
-  return [...(data.sources || [])].map((s) => {
+  return (data.sources || []).map((s) => {
     const key = s.id || s.name;
-    const status = s.status in SOURCE_STATE ? s.status : "ok";
-    return { ...s, key, status, health: detail[key], err: s.lastError || detail[key]?.lastError || null };
-  }).sort((a, b) => (RANK[a.status] ?? 9) - (RANK[b.status] ?? 9) || String(a.name).localeCompare(String(b.name), "pl"));
+    return { ...s, key, status: s.status in SOURCE_STATE ? s.status : "ok", health: detail[key] || null };
+  });
 }
 
-function sourceName(s) {
-  if (s.name && s.name !== "Odkrywanie profilu") return s.name;
-  return s.target || s.url || s.name || s.key;
+const ok = (n, one, few, many) => `${n} ${n === 1 ? one : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? few : many}`;
+
+/** Definicje kafelków platform: które wiersze źródeł do nich należą i co o nich powiedzieć po ludzku. */
+function platformTiles(data, sources, counts) {
+  const creators = data.creatorCounts?.byPlatform || {};
+  const pick = (test) => sources.filter((s) => test(s.key));
+  const yt = pick((k) => k === "youtube" || k.startsWith("youtube"));
+  const tt = pick((k) => k.startsWith("tiktok"));
+  const ig = pick((k) => k === "instagram");
+  const fb = pick((k) => k === "facebook");
+  const m2 = pick((k) => k.startsWith("m2:"));
+  const m3 = pick((k) => k.startsWith("m3"));
+  const meta = pick((k) => k === "meta_ads" || k === "facebook-ads" || k === "instagram-ads");
+  const sum = (list) => list.reduce((n, s) => n + (s.count || 0), 0);
+  const dataScan = dataScanOf(data);
+  const lastOk = (list) => list.map((s) => s.lastSuccessAt).filter(Boolean).sort().pop() || null;
+  const organic = (list, name) => {
+    const s = list[0];
+    if (!s) return { id: name.toLowerCase(), title: name, status: "needs_key", state: "brak tokenu", rows: [["Stan", "nie uruchomiono w tym skanie"]], next: "Uruchom skan; bez dostępu platforma pokaże blokadę i następny krok." };
+    const err = errorOf(s);
+    const blocked = s.status === "access_blocked";
+    return {
+      id: name.toLowerCase(), title: name, status: s.status,
+      state: blocked ? "dostęp zablokowany" : s.status === "needs_key" ? "brak tokenu" : s.mode === "replay" && s.status === "ok" ? "próbka datowana" : null,
+      rows: [
+        ["Ostatnia próba", fmtDateTime(s.health?.lastAttemptAt || s.checkedAt || s.observedAt)],
+        ["Materiały", s.count != null ? String(s.count) : "0"],
+        ["Zakres", blocked ? "wpisy organiczne niedostępne bez logowania" : s.scope || "—"],
+        ...(blocked && err?.message ? [["Co się stało", err.message.length > 170 ? `${err.message.slice(0, 167)}…` : err.message]] : []),
+        ...(s.accessPath?.name ? [["Właściwa ścieżka", s.accessPath.name]] : []),
+      ],
+      next: err?.nextStep || (blocked ? "Wystąp o dostęp badawczy; do tego czasu wpisy tej platformy dodaje się oznaczonym importem ręcznym." : s.status === "needs_key" ? "Uzupełnij token dostępu." : "Nic do zrobienia."),
+      url: s.url || s.target,
+    };
+  };
+  const ytRow = yt.find((s) => s.key === "youtube");
+  const keys = ytRow?.quota?.keys || ytRow?.health?.quota?.keys || [];
+  const tiles = [
+    {
+      id: "youtube", title: "YouTube", status: yt.length ? worst(yt) : "empty", state: null,
+      rows: [
+        ["Kanały w bazie", String(creators.youtube ?? "—")],
+        ["Materiały", String(sum(yt))],
+        ...(keys.length
+          ? keys.map((k, i) => [`Klucz ${i + 1} (${k.keyId})`, `${k.used} z ${k.limit} jednostek${k.exhaustedAt ? ", wyczerpany" : ""}`])
+          : ytRow?.quota?.limit != null ? [["Kwota", `${ytRow.quota.used} z ${ytRow.quota.limit} jednostek${ytRow.quota.resetAt ? `, odnowienie ${fmtDateTime(ytRow.quota.resetAt)}` : ""}`]] : []),
+        ["Ostatni skan", dataScan ? fmtDateTime(dataScan.createdAt) : "brak"],
+      ],
+      next: yt.some((s) => s.status === "limit") ? "Kwota odnowi się po resecie dobowym; drugi klucz działa dalej." : "Nic do zrobienia.",
+      url: "https://www.youtube.com/",
+    },
+    {
+      id: "tiktok", title: "TikTok", status: tt.length ? worst(tt.filter((s) => s.status !== "skipped")) : "empty", state: null,
+      rows: [
+        ["Profile", `${tt.length} (z odnośników w opisach YouTube)`],
+        ["Materiały", String(sum(tt))],
+        ["Ograniczenia", "tylko podpis i zasięg odtworzeń; mowy i kadrów nie ma; data szacowana z identyfikatora"],
+        ["Ostatni sukces", lastOk(tt) ? fmtDateTime(lastOk(tt)) : "brak udanego odczytu"],
+      ],
+      next: tt.length ? "Transkrypcje TikToka wymagają osobnego kroku (niedostępne w tej wersji)." : "Uruchom skan, aby odkryć profile z odnośników.",
+      url: "https://www.tiktok.com/",
+    },
+    organic(ig, "Instagram"),
+    organic(fb, "Facebook"),
+    {
+      id: "m2", title: "WWW firm (M2)", status: m2.length ? worst(m2) : "empty", state: m2.length ? null : "brak stron",
+      rows: [["Strony", String(m2.length)], ["Zrzuty ofert", String(sum(m2) || counts.offersM2 || 0)], ["Ostatni sukces", lastOk(m2) ? fmtDateTime(lastOk(m2)) : "brak"]],
+      next: "Nic do zrobienia.", url: m2[0]?.url || m2[0]?.target,
+    },
+    {
+      id: "m3", title: "WWW doradców (M3)", status: m3.length ? worst(m3) : "empty", state: m3.length ? null : "próbka",
+      rows: [["Oferty w bazie", String(counts.offersM3 ?? 0)], ["Źródło", m3.length ? `${m3.length} stron` : "próbka publiczna, bez odczytu na żywo"], ["Model semantyczny", data.semantic?.status === "unavailable" ? "niedostępny: M3 działa tylko regułami" : "dostępny"]],
+      next: data.semantic?.status === "unavailable" ? "Opcjonalnie: wskaż katalog modelu E5 (INVESTWATCH_SEMANTIC_DIR)." : "Nic do zrobienia.",
+    },
+    (() => {
+      const s = meta[0];
+      const err = s && errorOf(s);
+      return {
+        id: "meta", title: "Biblioteka Reklam Meta", status: s ? worst(meta) : "needs_key", state: s ? null : "brak tokenu",
+        rows: [
+          ["Zakres", "reklamy firm na Facebooku i Instagramie, zasięg w UE"],
+          ["Ostatnia próba", s ? fmtDateTime(s.health?.lastAttemptAt || s.checkedAt || s.observedAt) : "nie uruchomiono w tym skanie"],
+          ["Materiały", s ? String(sum(meta)) : "0"],
+        ],
+        next: err?.nextStep || "Potwierdź tożsamość w Meta, wygeneruj token użytkownika i zapisz go w ~/.config/investwatch/meta.token (kroki: docs/lanes/2026-11-21-fable-k-social.md).",
+        url: "https://www.facebook.com/ads/library/",
+      };
+    })(),
+  ];
+  return tiles;
 }
 
-function errorText(s) {
-  const raw = s.err ? `${s.err.code || ""} ${s.err.message || ""}`.trim() : s.error;
-  if (!raw) return null;
-  const hint = Object.entries(ERROR_HINT).find(([k]) => raw.includes(k));
-  return hint ? `${raw}: ${hint[1]}` : raw;
-}
-
-function nextStep(s) {
-  if (s.err?.nextStep) return s.err.nextStep;
-  if (s.retryAt) return `Ponowna próba: ${fmtDateTime(s.retryAt)}`;
-  if (s.status === "limit") return s.quota?.resetAt ? `Kwota odnowi się ${fmtDateTime(s.quota.resetAt)}` : "Poczekaj na odnowienie kwoty";
-  if (s.status === "needs_key") return "Uzupełnij klucz dostępu";
-  if (s.status === "ok" || s.status === "empty") return "Nic do zrobienia";
-  return "Sprawdź źródło lub uruchom skan ponownie";
-}
-
-function SourceTile({ s }) {
-  const [variant, label] = SOURCE_STATE[s.status] || ["neutral", s.status];
-  const err = errorText(s);
+function PlatformTile({ t }) {
+  const [variant, label] = SOURCE_STATE[t.status] || ["neutral", t.status];
+  const shown = t.state || label;
   return (
-    <Card padding={3}>
+    <Card padding={3} aria-label={`Źródło: ${t.title}`} data-tile={t.id}>
       <VStack gap={1.5}>
         <HStack gap={2} hAlign="between" vAlign="start">
-          <Text weight="semibold" maxLines={2}>{sourceName(s)}</Text>
-          <HStack gap={1} vAlign="center"><StatusDot variant={variant} label={label} /><Text type="supporting">{label}</Text></HStack>
+          <Heading level={3}>{t.title}</Heading>
+          <HStack gap={1} vAlign="center"><StatusDot variant={variant} label={shown} /><Text type="supporting">{shown}</Text></HStack>
         </HStack>
         <MetadataList>
-          <Meta label="Ostatni sukces">{s.lastSuccessAt ? fmtDateTime(s.lastSuccessAt) : "brak udanego odczytu"}</Meta>
-          {s.quota?.limit != null && <Meta label="Kwota">{s.quota.used} z {s.quota.limit}{s.quota.resetAt ? `, odnowienie ${fmtDateTime(s.quota.resetAt)}` : ""}</Meta>}
-          {s.count != null && <Meta label="Materiały">{s.count}</Meta>}
-          {err && <Meta label="Ostatnia awaria">{err}</Meta>}
-          <Meta label="Następny krok">{nextStep(s)}</Meta>
+          {t.rows.map(([k, v]) => <Meta key={k} label={k}>{v}</Meta>)}
+          <Meta label="Następny krok">{t.next}</Meta>
         </MetadataList>
-        <ExternalLink url={s.url || s.target}>Otwórz źródło ↗</ExternalLink>
+        {t.url && <ExternalLink url={t.url}>Otwórz źródło ↗</ExternalLink>}
       </VStack>
     </Card>
   );
 }
 
 const HEALTH = { ok: ["success", "Wszystkie źródła działają"], degraded: ["warning", "Część źródeł ma problem"], failed: ["error", "Żadne źródło nie działa"] };
+const MODE_SHORT = { live: "na żywo", replay: "odtworzenie", recompute: "przeliczenie", enrich: "transkrypcje", upload: "plik" };
 
-function TrendTable({ trend }) {
-  const days = [...(trend?.byDay || [])].reverse();
-  const max = Math.max(1, ...days.map((d) => d.referred || 0));
+/** Materiały i skierowania w czasie: słupki per skan przy jednym dniu danych, linie per dzień przy kilku. */
+export function TrendTile({ trend }) {
+  const days = trend?.byDay || [];
+  const scans = (trend?.byScan || []).filter((s) => s.mode !== "recompute" || s.referred);
+  const perScan = days.length < 2;
+  const rows = perScan ? scans : days;
+  const spec = React.useMemo(() => ({
+    type: perScan ? "bar" : "line",
+    labels: rows.map((r) => (perScan ? `${MODE_SHORT[r.mode] || r.mode} ${fmtTime(r.at)}` : fmtDay(r.day))),
+    datasets: [
+      { label: "Materiały przejrzane", data: rows.map((r) => (perScan ? r.captures : r.captures) || 0), axis: "y", color: "blue" },
+      { label: "Skierowania do sprawdzenia", data: rows.map((r) => r.referred || 0), axis: "y2", color: "orange" },
+    ],
+    yTitle: "materiały",
+    y2Title: "skierowania",
+  }), [trend]);
+  if (!rows.length) return <EmptyState isCompact title="Brak danych o skanach" description="Wykres pojawi się po pierwszym skanie." />;
+  const summary = rows.map((r) => `${perScan ? `${MODE_SHORT[r.mode] || r.mode} ${fmtTime(r.at)}` : fmtDay(r.day)}: ${r.captures} materiałów, ${r.referredKnown === false ? "?" : r.referred || 0} skierowań`).join("; ");
   return (
-    <VStack gap={2}>
-      <Heading level={2}>Trend skanów</Heading>
-      <Table idKey="day" density="compact" data={days} emptyState={<EmptyState isCompact title="Brak danych o skanach" />} columns={[
-        { key: "day", header: "Dzień", width: pixel(96), renderCell: (d) => <Text>{fmtDay(d.day)}</Text> },
-        { key: "scans", header: "Skany", align: "end", width: pixel(64), renderCell: (d) => d.scans },
-        { key: "captures", header: "Przejrzane", align: "end", width: pixel(96), renderCell: (d) => d.captures },
-        { key: "newMaterials", header: "Nowe materiały", align: "end", width: pixel(120), renderCell: (d) => d.newMaterials },
-        { key: "referred", header: "Do sprawdzenia", width: proportional(2, { minWidth: 140 }), renderCell: (d) => (
-          <HStack gap={2} vAlign="center"><Text hasTabularNumbers>{d.referredKnown === false ? "?" : d.referred}</Text><ProgressBar label="Do sprawdzenia" isLabelHidden value={d.referred || 0} max={max} /></HStack>
-        ) },
-      ]} />
+    <VStack gap={1.5}>
+      <Chart spec={spec} label={`Wykres: materiały i skierowania w czasie. ${summary}`} height={230} />
+      <Text type="supporting" color="secondary">{perScan ? "Jeden dzień danych: słupki pokazują kolejne skany." : `Dni: ${rows.length}.`} Skierowania to nowe sprawy w kolejce „Co wymaga sprawdzenia” po skanie.</Text>
+      <Collapsible defaultIsOpen={false} trigger={<Text type="supporting">Dane wykresu (tabela)</Text>}>
+        <Table idKey="k" density="compact" data={rows.map((r, i) => ({ k: i, ...r }))} columns={[
+          { key: "when", header: perScan ? "Skan" : "Dzień", width: proportional(2, { minWidth: 120 }), renderCell: (r) => <Text>{perScan ? `${MODE_SHORT[r.mode] || r.mode}, ${fmtDateTime(r.at)}` : fmtDay(r.day)}</Text> },
+          { key: "captures", header: "Materiały", align: "end", width: pixel(96), renderCell: (r) => r.captures },
+          { key: "referred", header: "Skierowania", align: "end", width: pixel(104), renderCell: (r) => (r.referredKnown === false ? "?" : r.referred || 0) },
+          { key: "new", header: perScan ? "Nowi twórcy" : "Nowe materiały", align: "end", width: pixel(120), renderCell: (r) => (perScan ? r.newCreators : r.newMaterials) ?? "—" },
+        ]} />
+      </Collapsible>
     </VStack>
   );
 }
 
-export function Sources({ data, busy, scanning, onScan }) {
-  const scan = lastScanOf(data);
-  const dataScan = dataScanOf(data);
-  const rows = sourceRows(data);
-  const creators = [...data.creatorMap.values()];
-  const [allCreators, setAllCreators] = useState(false);
-  const detail = useScanProgress(scan);
-  const [steps, setSteps] = useState(null);
+const PLATFORM_ORDER = ["youtube", "tiktok", "instagram", "facebook", "web"];
+
+/** Liczba materiałów per platforma z kolejki „wszystkie” (limit=1, ważna jest liczność). */
+function usePlatformTotals(rev) {
+  const [totals, setTotals] = useState(null);
   useEffect(() => {
-    if (!dataScan?.id) return undefined;
     let off = false;
-    api.scan(dataScan.id).then((d) => !off && setSteps(d.steps || []), () => !off && setSteps(null));
+    Promise.all([
+      ...PLATFORM_ORDER.map((p) => api.queue("all", { source: p }, { limit: 1 }).then((r) => [p, r.total])),
+      api.queue("offersM3", { source: "web" }, { limit: 1 }).then((r) => ["web", r.total]),
+    ]).then((pairs) => {
+      if (off) return;
+      const t = {};
+      for (const [p, n] of pairs) t[p] = (t[p] || 0) + n;
+      setTotals(t);
+    }, () => !off && setTotals(null));
     return () => {
       off = true;
     };
-  }, [dataScan?.id]);
+  }, [rev]);
+  return totals;
+}
+
+function PlatformChart({ totals }) {
+  const spec = React.useMemo(() => totals && ({
+    type: "bar",
+    labels: PLATFORM_ORDER.map((p) => PLATFORM_LABEL[p]),
+    datasets: [{ label: "Materiały", data: PLATFORM_ORDER.map((p) => totals[p] || 0), color: "blue" }],
+    yTitle: "materiały",
+  }), [totals]);
+  if (!totals) return <Text color="secondary" role="status">Liczenie materiałów…</Text>;
+  const summary = PLATFORM_ORDER.map((p) => `${PLATFORM_LABEL[p]} ${totals[p] || 0}`).join(", ");
+  return <Chart spec={spec} label={`Wykres: materiały per platforma. ${summary}`} height={230} />;
+}
+
+function stepRows(detail) {
+  return (detail?.steps || []).map((x) => ({ ...x, label: x.name || x.sourceId || x.id }));
+}
+
+const STEP_STATE = { done: "zakończony", running: "w toku", queued: "w kolejce", failed: "błąd", skipped: "pominięty" };
+
+export function Sources({ data, busy, scanning, onScan, rev }) {
+  const scan = lastScanOf(data);
+  const dataScan = dataScanOf(data);
+  const sources = withHealth(data);
+  const counts = data.counts || {};
+  const tiles = platformTiles(data, sources, counts);
+  const creators = [...data.creatorMap.values()];
+  const [allCreators, setAllCreators] = useState(false);
+  const detail = useScanProgress(scan);
+  const [lastSteps, setLastSteps] = useState(null);
+  const totals = usePlatformTotals(rev);
+  useEffect(() => {
+    if (!dataScan?.id) return undefined;
+    let off = false;
+    api.scan(dataScan.id).then((d) => !off && setLastSteps(d), () => !off && setLastSteps(null));
+    return () => {
+      off = true;
+    };
+  }, [dataScan?.id, scan?.status]);
   const summary = data.sourceHealthSummary;
   const [hv, hl] = HEALTH[summary?.status] || ["neutral", "Stan źródeł nieznany"];
   const disabled = busy || scanning;
   const why = scanning ? "Skan w toku." : undefined;
   const shown = allCreators ? creators : creators.slice(0, 25);
+  const active = scanning ? detail : lastSteps;
+  const steps = stepRows(active);
+  const progress = (scanning ? detail?.progress || scan?.progress : null) || (steps.length ? { done: steps.filter((s) => s.status === "done" || s.status === "skipped").length, total: steps.length } : null);
+  const blocked = dataScan?.accessBlocked || [];
   return (
     <VStack gap={4} padding={3}>
       <HStack gap={2} vAlign="center" wrap="wrap">
         <Heading level={1}>Źródła i droga odkrycia</Heading>
-        {summary && <HStack gap={1} vAlign="center"><StatusDot variant={hv} label={hl} /><Text type="supporting">{hl}{summary.problems ? ` (${summary.problems} z ${summary.total})` : ` (${summary.total})`}</Text></HStack>}
+        {summary && <HStack gap={1} vAlign="center"><StatusDot variant={hv} label={hl} /><Text type="supporting">{hl}{summary.problems ? ` (${summary.problems} z ${summary.total})` : ` (${summary.total})`}{summary.accessBlocked ? `, ${ok(summary.accessBlocked, "zablokowany dostęp", "zablokowane dostępy", "zablokowanych dostępów")}` : ""}</Text></HStack>}
       </HStack>
       <ScanBanner scan={scan} detail={detail} />
       <Card padding={3}>
         <VStack gap={2}>
-          <Heading level={2}>Ostatni skan materiałów</Heading>
-          <Text>{scanLine(dataScan)}</Text>
-          {dataScan && (
-            <MetadataList columns="multi">
-              <Meta label="Początek">{fmtDateTime(dataScan.createdAt)}</Meta>
-              <Meta label="Koniec">{fmtDateTime(dataScan.updatedAt)}</Meta>
-              <Meta label="Źródła">{dataScan.sources ? `${dataScan.sources.ok} działa, ${dataScan.sources.empty} bez nowych, ${dataScan.sources.partial} częściowo, ${dataScan.sources.failed} z błędem` : "—"}</Meta>
-              <Meta label="Do sprawdzenia">{dataScan.referred ?? "brak danych"}</Meta>
-            </MetadataList>
-          )}
-          {steps?.length > 0 && (
-            <Table idKey="id" density="compact" data={steps} columns={[
-              { key: "name", header: "Krok skanu", width: proportional(3, { minWidth: 140 }), renderCell: (x) => x.name || x.sourceId },
-              { key: "status", header: "Stan", width: pixel(110), renderCell: (x) => <Text type="supporting">{({ done: "zakończony", running: "w toku", queued: "w kolejce", failed: "błąd", skipped: "pominięty" })[x.status] || x.status}</Text> },
-            ]} />
-          )}
-          <HStack gap={2} wrap="wrap">
-            <Button label="Skanuj na żywo" isDisabled={disabled} tooltip={why} onClick={() => onScan("live")} />
-            <Button label="Odtwórz skan" isDisabled={disabled} tooltip={why} onClick={() => onScan("replay")} />
-            <Button label="Przelicz materiały" variant="primary" isDisabled={disabled} tooltip={why} onClick={() => onScan("recompute")} />
-          </HStack>
+          <Heading level={2}>Materiały i skierowania w czasie</Heading>
+          <TrendTile trend={data.trend} />
         </VStack>
       </Card>
       <VStack gap={2}>
-        <Heading level={2}>Stan źródeł ({rows.length})</Heading>
-        {rows.length === 0 ? <EmptyState isCompact title="Brak źródeł" description="Źródła pojawią się po pierwszym skanie." /> : (
-          <Grid columns={{ minWidth: 300, max: 3 }} gap={3}>{rows.map((s) => <SourceTile key={s.key} s={s} />)}</Grid>
-        )}
+        <Heading level={2}>Platformy ({tiles.length})</Heading>
+        <Grid columns={{ minWidth: 300, max: 3 }} gap={3}>{tiles.map((t) => <PlatformTile key={t.id} t={t} />)}</Grid>
       </VStack>
-      <TrendTable trend={data.trend} />
+      <Grid columns={{ minWidth: 340, max: 2 }} gap={3}>
+        <Card padding={3}>
+          <VStack gap={2}>
+            <Heading level={2}>Źródła: materiały per platforma</Heading>
+            <PlatformChart totals={totals} />
+          </VStack>
+        </Card>
+        <Card padding={3}>
+          <VStack gap={2}>
+            <Heading level={2}>Skan materiałów</Heading>
+            <Text>{scanLine(dataScan)}</Text>
+            {dataScan && (
+              <MetadataList columns="multi">
+                <Meta label="Początek">{fmtDateTime(dataScan.createdAt)}</Meta>
+                <Meta label="Koniec">{fmtDateTime(dataScan.updatedAt)}</Meta>
+                <Meta label="Źródła">{dataScan.sources ? `${dataScan.sources.ok} działa, ${dataScan.sources.empty} bez nowych, ${dataScan.sources.partial} częściowo, ${dataScan.sources.failed} z błędem${dataScan.sources.accessBlocked ? `, ${dataScan.sources.accessBlocked} z zablokowanym dostępem` : ""}` : "—"}</Meta>
+                <Meta label="Do sprawdzenia">{dataScan.referred ?? "brak danych"}</Meta>
+              </MetadataList>
+            )}
+            {blocked.length > 0 && (
+              <VStack gap={1} role="region" aria-label="Zablokowane dostępy">
+                <Text weight="semibold">Zablokowane dostępy ({blocked.length})</Text>
+                <List density="compact" hasDividers>
+                  {blocked.map((b) => <Item key={b.id} label={b.name} labelLines={2} description={b.nextStep} descriptionLines={3} endContent={<Text type="supporting" color="secondary">próba {fmtDateTime(b.attemptedAt)}</Text>} />)}
+                </List>
+              </VStack>
+            )}
+            {progress && <ProgressBar label={scanning ? "Postęp skanu" : "Kroki ostatniego skanu"} value={progress.done} max={progress.total || 1} />}
+            {steps.length > 0 && (
+              <Collapsible defaultIsOpen={scanning} trigger={<Text type="supporting">Kroki skanu ({progress ? `${progress.done} z ${progress.total}` : steps.length})</Text>}>
+                <Table idKey="id" density="compact" data={steps} columns={[
+                  { key: "name", header: "Krok skanu", width: proportional(3, { minWidth: 140 }), renderCell: (x) => x.label },
+                  { key: "status", header: "Stan", width: pixel(110), renderCell: (x) => <Text type="supporting">{STEP_STATE[x.status] || x.status}</Text> },
+                ]} />
+              </Collapsible>
+            )}
+            <HStack gap={2} wrap="wrap">
+              <Button label="Skanuj na żywo" isDisabled={disabled} tooltip={why} onClick={() => onScan("live")} />
+              <Button label="Odtwórz skan" isDisabled={disabled} tooltip={why} onClick={() => onScan("replay")} />
+              <Button label="Przelicz materiały" variant="primary" isDisabled={disabled} tooltip={why} onClick={() => onScan("recompute")} />
+            </HStack>
+          </VStack>
+        </Card>
+      </Grid>
       <VStack gap={2}>
-        <Heading level={2}>Twórcy i droga odkrycia ({creators.length})</Heading>
+        <Heading level={2}>Twórcy i droga odkrycia ({data.creatorCounts?.total ?? creators.length})</Heading>
         <Table idKey="id" data={shown} density="compact" verticalAlign="top" emptyState={<EmptyState isCompact title="Brak odkrytych twórców" />} columns={[
           { key: "name", header: "Twórca", width: proportional(3, { minWidth: 170 }), renderCell: (c) => (
             <VStack gap={0.5}>
               <HStack gap={1} wrap="wrap" vAlign="center">
                 <Text weight="semibold" maxLines={1}>{c.name}</Text>
+                <Token size="sm" color="gray" label={PLATFORM_LABEL[c.platform] || c.platform || "?"} />
                 {c.isNewInScan && <Token size="sm" color="green" label="nowy" />}
                 {(c.seed || c.isSeed || c.status === "seed") && <Token size="sm" color="gray" label="monitorowany" />}
               </HStack>

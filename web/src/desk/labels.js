@@ -37,7 +37,23 @@ export const ORIGINS = {
   upload: "plik operatora",
   import: "import",
 };
+export const PLATFORM_LABEL = { youtube: "YouTube", tiktok: "TikTok", instagram: "Instagram", facebook: "Facebook", web: "WWW", WWW: "WWW", Studio: "Studio" };
+export const platformLabel = (p) => PLATFORM_LABEL[p] || p || "";
+export const COMPLETE_REASON = {
+  transcript_pending: "Mowa czeka na transkrypcję.",
+  transcript_unavailable: "Mowy nie zbadano: brak transkrypcji (np. TikTok: tylko podpis).",
+  identity_unresolved: "Nie ustalono, która firma jest stroną współpracy.",
+};
+export const DISCLOSURE_ROW = {
+  explicit_ad: "oznaczona reklama",
+  platform_flag: "flaga płatnej promocji",
+  partner_mention: "wzmianka o współpracy",
+  affiliate_link_mention: "link afiliacyjny",
+};
+export const DISCLOSURE_WHERE = { in_description: "w opisie", in_speech: "w mowie", in_frame: "w kadrze", platform_flag: "flaga platformy", description: "w opisie" };
 export const SOURCE_STATE = {
+  skipped: ["neutral", "pominięty"],
+  access_blocked: ["warning", "dostęp zablokowany"],
   ok: ["success", "działa"],
   empty: ["neutral", "działa, bez nowych materiałów"],
   partial: ["warning", "częściowo"],
