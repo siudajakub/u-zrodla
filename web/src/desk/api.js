@@ -45,8 +45,8 @@ export function queueQuery(filters = {}, { limit = 50, cursor = null, queue = nu
   if (filters.q?.trim()) p.set("q", filters.q.trim());
   if (filters.module && filters.module !== "all") p.set("module", filters.module);
   if (filters.source && filters.source !== "all") {
-    // M3 trzyma platformę jako „WWW”, M2 jako „web” (to samo źródło, dwa zapisy w danych).
-    p.set("platform", filters.source === "web" && queue === "offersM3" ? "WWW" : filters.source);
+    // API ma jedną platformę kanoniczną „web” (WWW i Studio to aliasy przy odczycie).
+    p.set("platform", filters.source);
   }
   if (filters.band && filters.band !== "all") p.set("band", filters.band);
   if (filters.from || filters.to) p.set("dateField", filters.dateField === "publishedAt" ? "publishedAt" : "observedAt");
@@ -66,6 +66,9 @@ export function reportUrl({ module, format = "csv", filters = {}, queue = null }
   p.set("format", format);
   return `${base()}/v1/report?${p.toString()}`;
 }
+
+/** Adres zasobu serwowanego przez API (np. zrzuty dowodów /evidence/…) z prefiksem bazy. */
+export const assetUrl = (path) => (typeof path === "string" && path.startsWith("/") ? base() + path : path || null);
 
 const caseCache = new Map();
 
@@ -134,7 +137,8 @@ export const api = {
   },
   restoreQualification: ({ id, expectedId, note }) => request("/v1/qualification/restore", json("POST", { id, expectedId, note: note || "" })),
 
-  calibration: (threshold, variant) => request(`/v1/calibration?threshold=${encodeURIComponent(threshold)}${variant ? `&variant=${encodeURIComponent(variant)}` : ""}`),
+  /** Kalibracja progu. `module` (M1 domyślnie): serwer, który nie zna modułu, zwraca M1; widok porównuje pole `module` odpowiedzi. */
+  calibration: (threshold, variant, module = "M1") => request(`/v1/calibration?threshold=${encodeURIComponent(threshold)}${variant ? `&variant=${encodeURIComponent(variant)}` : ""}${module && module !== "M1" ? `&module=${encodeURIComponent(module)}` : ""}`),
 
   uploadEvidence(file, title, description) {
     const params = new URLSearchParams({ title: title || file.name, description: description || "", filename: file.name });
