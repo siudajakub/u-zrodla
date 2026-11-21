@@ -1,4 +1,5 @@
 """Durable case data. Each transaction gets its own SQLite connection."""
+from collections import Counter
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from functools import lru_cache
@@ -1313,7 +1314,11 @@ def case_dict(db,row,current=None,schema=2,settings=None,full=True):
         if versions:
             layer["versions"]=versions
         layer["history"]=history(db,key)
-    return apply_schema({**out,**layer},renamed,legacy_coverage,schema)
+    result=apply_schema({**out,**layer},renamed,legacy_coverage,schema)
+    if schema>=2 and full:
+        from .proof_path import proof_path
+        result["proofPath"]=proof_path(result)
+    return result
 
 def band_of(value, threshold):
     """Strength band relative to the threshold of the active variant: strong from max(80, threshold), moderate from the
@@ -1778,18 +1783,63 @@ def recompute_status(db, now=None):
 
 _COUNTS = {}
 
-def counts_of(db, cases=None):
-    """Queue counters, cached per database state: the light overview must not classify every case on each request."""
+def counts_key(db):
     current = analysis_current()
     settings = load_settings(db)
     parts = [db.execute(f"SELECT count(*),max({col}) FROM {table}").fetchone()[:] for table, col in
              (("cases", "updated"), ("qualification_results", "updated"), ("media_state", "updated"))]
-    key = json.dumps([[tuple(p) for p in parts], settings["variant"], settings["thresholds"], (settings["qualification"] or {}).get("id"), current,
-                      str(STATE)], sort_keys=True, default=str)
+    return json.dumps([[tuple(p) for p in parts], settings["variant"], settings["thresholds"], (settings["qualification"] or {}).get("id"), current,
+                       str(STATE)], sort_keys=True, default=str)
+
+def counts_of(db, cases=None):
+    """Queue counters, cached per database state: the light overview must not classify every case on each request."""
+    key = counts_key(db)
     if key not in _COUNTS:
         _COUNTS.clear()
         _COUNTS[key] = queue_counts(cases if cases is not None else all_cases(db)[0])
     return dict(_COUNTS[key])
+
+_FUNNEL = {}
+
+def funnel_of(cases, settings, counts):
+    """The path from material to alert for the pitch: how many materials, how many in the ad register, how many are
+    explained automatically (and by what), how many wait for speech, how many reach the review queue."""
+    live = [c for c in cases if c.get("origin") in ("live", "replay")]
+    disclosed = Counter()
+    for c in live:
+        if "adRegister" in c["queues"]:
+            where = (((c.get("adRelationship") or {}).get("disclosure")) or {}).get("where")
+            disclosed[{"transcript": "bySpeech", "platform": "byPlatformFlag", "frame": "byFrame", "description": "byDescription"}.get(where, "none")] += 1
+    variant = settings["variant"]
+    held = sum(1 for c in live if c.get("module", "M1") == "M1" and variant_view(c, variant, settings["thresholds"].get(variant, 60)).get("gated"))
+    return {"materials": len(live), "adRegister": counts.get("adRegister", 0), "review": counts.get("review", 0),
+            "explainedAutomatically": {k: disclosed.get(k, 0) for k in ("bySpeech", "byPlatformFlag", "byFrame", "byDescription")},
+            "adRegisterUnexplained": disclosed.get("none", 0), "heldBySpeechGate": held,
+            "byModule": {m: sum(1 for c in live if c.get("module", "M1") == m) for m in ("M1", "M2", "M3")},
+            "byPlatform": dict(Counter(canonical_platform(str(c.get("platform") or "").split(":")[0]) for c in live))}
+
+def funnel_cached(db, counts):
+    key = counts_key(db)
+    if key not in _FUNNEL:
+        _FUNNEL.clear()
+        cases, settings = all_cases(db)
+        _FUNNEL[key] = funnel_of(cases, settings, counts)
+    return dict(_FUNNEL[key])
+
+SCAN_LABEL_DATE = ("stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października",
+                   "listopada", "grudnia")
+
+def scan_mode(db):
+    """`scanMode` and `scanLabel` of the last scan that read sources (a recompute only analyses what is stored)."""
+    row = db.execute("SELECT mode,created,updated FROM scans WHERE status IN ('done','partial') AND mode IN ('live','replay') "
+                     "ORDER BY created DESC LIMIT 1").fetchone()
+    if row is None:
+        return {"scanMode": None, "scanLabel": "brak skanu"}
+    moment = parse_time(row["created"])
+    day = f"{moment.day} {SCAN_LABEL_DATE[moment.month - 1]} {moment.year}" if moment else ""
+    if row["mode"] == "replay":
+        return {"scanMode": "replay", "scanLabel": f"odtworzenie skanu z {day}".strip()}
+    return {"scanMode": "live", "scanLabel": f"skan na żywo z {day}".strip()}
 
 CREATOR_LIGHT = ("id", "name", "platform", "url", "handle", "isSeed", "isNew", "status", "persistentId", "firstSeen", "lastSeen",
                  "discoveredVia", "mode")
@@ -1847,10 +1897,12 @@ def state(schema=2, compact=False, findings=True):
                    "problems":sum(problem(v) for v in detail.values()),
                    "accessBlocked":len(blocked),"accessBlockedSources":blocked}}
         active=settings["variant"]
-        return {"creators":creators,"sources":sources,"sourceHealth":health,"sourceState":[{k:v for k,v in x.items() if k!="cursor"} for x in states.values()],"findings":cases,"scans":scans,
+        queue_numbers=queue_counts(cases) if findings else counts_of(db)
+        funnel=funnel_of(cases,settings,queue_numbers) if findings else funnel_cached(db,queue_numbers)
+        return {"creators":creators,"funnel":funnel,"sources":sources,"sourceHealth":health,"sourceState":[{k:v for k,v in x.items() if k!="cursor"} for x in states.values()],"findings":cases,"scans":scans,
                 "events":events,"schema":{**schema_info(db),"views":[1,2],"served":schema},"analysisCurrent":{**current,"variant":active},
-                "queues":queue_counts(cases) if findings else counts_of(db),"threshold":{"variant":active,**(threshold_current(db,active) or {})},
-                "qualification":settings["qualification"],"recompute":recompute_status(db),"semantic":semantic_status(),**extra}
+                "queues":queue_numbers,"threshold":{"variant":active,**(threshold_current(db,active) or {})},
+                "qualification":settings["qualification"],"recompute":recompute_status(db),"semantic":semantic_status(),**scan_mode(db),**extra}
 
 def scan_detail(db,key):
     row=db.execute("SELECT * FROM scans WHERE id=?",(key,)).fetchone()

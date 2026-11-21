@@ -13,8 +13,11 @@ failed scan. Replay makes no request: it reads the replay media pack (`api.repla
 transcripts and frames of the dated event. Without the pack the transcript is a gap ("brak paczki") and the scan
 reports it as a source status, not as an error.
 """
+from hashlib import sha256
+import json
 import os
 from pathlib import Path
+import re
 import time
 
 from . import replay_pack, store
@@ -163,6 +166,50 @@ def _framed(capture):
     return bool(capture.get("frames") or capture.get("framesAttempted"))
 
 
+PROBE_DIR = Path(__file__).resolve().parents[1] / "fixtures/raw/media" / "2026-11-21"
+CONFIRMS_LABEL = re.compile(r"WIDOCZN", re.I)
+
+
+def probe_frames(video, cache):
+    """Frames of the analyst's probe (fixtures/raw/media/<event>/<id>.json) in which the observation CONFIRMS a disclosure
+    in the picture, and whose file is in the replay pack with the SHA-256 the probe recorded. Read only: no network."""
+    path = PROBE_DIR / f"{video}.json"
+    if not path.is_file() or cache is None:
+        return []
+    try:
+        listed = json.loads(path.read_text(encoding="utf-8")).get("frames") or []
+    except ValueError:
+        return []
+    out = []
+    for frame in listed:
+        note = str(frame.get("observation") or "")
+        if not isinstance(frame, dict) or not CONFIRMS_LABEL.search(note) or re.search(r"NIEWIDOCZN", note):
+            continue
+        name = Path(str(frame.get("path") or "")).name
+        target = Path(cache) / video / "frames" / name
+        if not name or not target.is_file() or (frame.get("sha256") and sha256(target.read_bytes()).hexdigest() != frame["sha256"]):
+            continue
+        t = frame.get("time")
+        out.append({**{k: frame.get(k) for k in ("time", "requestedTime", "method", "sha256", "width", "height", "deepLink", "observation")},
+                    "kind": "frame", "path": f"{video}/frames/{name}", "id": f"frame-{video}-{int(t or 0)}-probe",
+                    "observedAt": frame.get("observedAt") or "2026-11-21T18:52:52+00:00", "probe": True})
+    return out
+
+
+def with_probe_frames(captures, cache):
+    """Attach the confirming probe frames to registered-material videos that carry no frames yet."""
+    out = []
+    for cap in captures:
+        if _is_video(cap) and not cap.get("frames") and cap.get("id", "").startswith("youtube:"):
+            frames = probe_frames(cap["id"].split(":", 1)[1], cache)
+            if frames:
+                coverage = dict(cap.get("mediaCoverage") or {})
+                coverage["frames"] = {"state": "selected_moments", "moments": [f["time"] for f in frames], "intervalSec": None}
+                cap = {**cap, "frames": frames, "mediaCoverage": coverage}
+        out.append(cap)
+    return out
+
+
 def enrich_media(captures, mode, runner=None, *, media=None, analyze=None, heartbeat=None, known=None, backlog=False,
                  clock=time.monotonic):
     """Return (captures with transcript, coverage and optional frames, summary). Never raises.
@@ -296,6 +343,8 @@ def enrich_media(captures, mode, runner=None, *, media=None, analyze=None, heart
                 summary["gaps"] += 1
         done[cap["id"]] = merged
     summary["seconds"] = round(clock() - began, 1)
+    if pack and pack["state"] == "present" and not backlog:
+        done = {c["id"]: c for c in with_probe_frames([done.get(c["id"], c) for c in captures], cache)}
     if backlog:
         return [done[c["id"]] for c in captures if c["id"] in done], summary
     return [done.get(c["id"], c) for c in captures], summary

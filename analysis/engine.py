@@ -650,7 +650,8 @@ def _frame_evidence(capture, result):
         link = frame.get("sourceUrlAtTime") or frame.get("deepLink") or frame.get("url") or capture.get("url")
         item = {"id": frame.get("id") or f"frame-{number}", "kind": "frame", "role": "context", "modality": "frame",
                 "method": frame.get("method"), "start": t, "end": t,
-                "text": f"Kadr z {_clock(t)}; tekst z obrazu nieodczytany automatycznie.",
+                "text": (f"Kadr z {_clock(t)} (obserwacja z próby, nie odczyt automatyczny): {frame['observation']}" if frame.get("observation")
+                         else f"Kadr z {_clock(t)}; tekst z obrazu nieodczytany automatycznie."),
                 "url": frame.get("url") or capture.get("url"), "sourceUrlAtTime": link,
                 "frameSha256": frame.get("sha256") or frame.get("frameSha256"), "framePath": frame.get("path"),
                 "observedAt": frame.get("observedAt") or capture.get("observedAt"), "available": bool(link)}

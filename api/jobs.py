@@ -164,7 +164,13 @@ def recompute_pairs_raw(modules=("M1",)):
 def recompute_pairs(runner):
     """Stored captures of M1, M2 and M3 analysed again with the current rules. Observations are not replayed."""
     out=[]
-    for cap,old in recompute_pairs_raw(("M1","M2","M3")):
+    pairs=recompute_pairs_raw(("M1","M2","M3"))
+    from . import enrich, replay_pack
+    pack=replay_pack.inspect()
+    if pack and pack["state"]=="present":  # frames of the probe that confirm a disclosure in the picture (read from the pack)
+        framed={c["id"]:c for c in enrich.with_probe_frames([cap for cap,_ in pairs],Path(pack["pack"]))}
+        pairs=[(framed[cap["id"]],old) for cap,old in pairs]
+    for cap,old in pairs:
         runner.heartbeat()
         out.append(evaluate(cap,old))
     return out
