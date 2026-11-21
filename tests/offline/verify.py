@@ -1,4 +1,4 @@
-"""Three cold Compose starts and a worker-loss drill in private, throwaway state.
+"""Three cold Compose starts (web -> api -> worker) and a worker-loss drill in private, throwaway state.
 
 Run on the host with prepared demo dependencies and the Docker daemon:
 python3 tests/offline/verify.py --root /absolute/path/to/integration
@@ -15,6 +15,8 @@ import sqlite3
 from subprocess import check_output, run, PIPE
 import tempfile
 import time
+from urllib.error import URLError
+from urllib.request import Request, urlopen
 from uuid import uuid4
 
 
@@ -27,7 +29,7 @@ def command(args, **kwargs):
 
 def code_hash(root):
     files = check_output(["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard", "--", "api", "analysis", "collectors",
-                          "fixtures", "data/probe-snapshots", "web", "tools", "compose.yaml"], cwd=root)
+                          "fixtures", "data/probe-snapshots", "web", "tools", "compose.yaml", "ops/web"], cwd=root)
     digest = hashlib.sha256()
     for name in sorted(os.fsdecode(n) for n in files.split(b"\0") if n):
         if not (root/name).is_file():
@@ -37,6 +39,7 @@ def code_hash(root):
     return digest.hexdigest()
 
 
+OBJECT_DIRS = ("uploads", "m2", "media-cache", "meta-import", "youtube-raw", "youtube-cache")  # compose.yaml: objects
 KNOWN_REVIEW = {"7M0rC6-Rueo", "AqXHkxDzSDI", "OIyPE0z2mng", "ZJrT-X08Xwc"}
 BOOTSTRAP_SCANS = 2  # co najmniej bootstrap-m2-rendered-v1 i bootstrap-youtube-replay-v1; worker (api/jobs.py: work) może zlecić więcej
 
@@ -65,14 +68,18 @@ def db_read(path, query, args=()):
 
 def once(root, dest, port, index):
     project = "investwatch-proof-" + uuid4().hex[:14]
-    state, watch = dest/"state", dest/"watch"
+    state, watch, objects = dest/"state", dest/"watch", dest/"objects"
     state.mkdir(parents=True, mode=0o700)
     watch.mkdir(mode=0o700)
+    for sub in OBJECT_DIRS:  # punkty montowania i katalogi obiektów zakłada właściciel, nie demon Dockera (root)
+        (state/sub).mkdir()
+        (objects/sub).mkdir(parents=True)
     db = state/"cases.sqlite3"
     env = {**os.environ, "INVESTWATCH_PORT": str(port), "INVESTWATCH_UID": str(os.getuid()),
            "INVESTWATCH_GID": str(os.getgid()), "INVESTWATCH_DISCOVERY_INTERVAL": "0",
            "INVESTWATCH_MEDIA_PACK": str(Path(os.environ.get("INVESTWATCH_REPLAY_MEDIA") or root/".runtime/replay-media/2026-11-21")),
-           "INVESTWATCH_PROOF_STATE": str(state), "INVESTWATCH_PROOF_WATCH": str(watch)}
+           "INVESTWATCH_PROOF_STATE": str(state), "INVESTWATCH_PROOF_WATCH": str(watch),
+           "INVESTWATCH_OBJECTS_DIR": str(objects)}
     base = ["docker", "compose", "--project-directory", str(root), "-p", project,
             "-f", str(root/"compose.yaml"), "-f", str(Path(__file__).with_name("compose.yaml"))]
 
@@ -80,13 +87,24 @@ def once(root, dest, port, index):
         return command([*base, *args], cwd=root, env=env, timeout=90)
 
     config = json.loads(dc("config", "--format", "json"))
-    assert config["name"] == project and set(config["services"]) == {"api", "worker"}
-    network = config["networks"]["default"]
-    assert network["internal"] and network["name"] == project+"_default"
-    for service in config["services"].values():
+    assert config["name"] == project and set(config["services"]) == {"web", "api", "worker"}
+    network = config["networks"]["backend"]
+    assert network["internal"] and network["name"] == project+"_backend"
+    assert not config["networks"]["edge"].get("internal")
+    web = config["services"]["web"]
+    assert set(web["networks"]) == {"edge", "backend"} and web["read_only"] and web["cap_drop"] == ["ALL"]
+    assert all(v.get("read_only") for v in web["volumes"])
+    writable = {"/data"} | {"/data/"+sub for sub in OBJECT_DIRS}
+    for name, service in config["services"].items():
+        if name == "web":
+            continue
+        assert set(service["networks"]) == {"backend"} and "ports" not in service, name
+        assert service["read_only"] and service["cap_drop"] == ["ALL"]
         volumes = {v["target"]: v for v in service["volumes"]}
         assert volumes["/data"]["source"] == str(state)
-        assert all(v["target"] == "/data" or v.get("read_only") for v in volumes.values())
+        assert all(volumes["/data/"+sub]["source"] == str(objects/sub) for sub in OBJECT_DIRS)
+        assert all(v["target"] in writable or v.get("read_only") for v in volumes.values())
+        assert "/app/web" not in volumes, "api i worker nie dostają plików frontu"
         assert volumes["/app/.runtime/watch"]["source"] == str(watch)
         assert all(Path(v["source"]).exists() for v in volumes.values())
         pack = volumes["/replay-media"]
@@ -94,25 +112,17 @@ def once(root, dest, port, index):
         assert service["environment"]["INVESTWATCH_REPLAY_MEDIA"] == "/replay-media"
         assert service["environment"]["INVESTWATCH_DISCOVERY_INTERVAL"] == "0"
         assert float(service["cpus"]) == 1 and service["restart"] == "no"
-    ports = config["services"]["api"]["ports"]
+    ports = web["ports"]
     assert len(ports) == 1 and ports[0]["host_ip"] == "127.0.0.1" and ports[0]["published"] == str(port)
-    # An internal Docker bridge may deliberately omit host port forwarding.
-    # Reach the actual HTTP server over loopback inside its network namespace.
-    client = """import json, sys
-from urllib.request import Request, urlopen
-body = sys.stdin.buffer.read()
-request = Request("http://127.0.0.1:8769" + sys.argv[1], data=body or None,
-                  headers={"Content-Type": sys.argv[2]})
-with urlopen(request, timeout=6) as response:
-    sys.stdout.buffer.write(response.read())
-"""
+    # Every HTTP read goes the user's way: host loopback -> web (nginx) -> api on the internal network.
 
     def api(path, body=None, content_type="application/json"):
-        r = run([*base, "exec", "-T", "api", "python", "-c", client, path, content_type],
-                input=body or b"", stdout=PIPE, stderr=PIPE, env=env, cwd=root, timeout=12)
-        if r.returncode:
-            raise ConnectionError(r.stderr.decode(errors="replace")[-500:])
-        return json.loads(r.stdout)
+        request = Request(f"http://127.0.0.1:{port}{path}", data=body or None, headers={"Content-Type": content_type})
+        try:
+            with urlopen(request, timeout=12) as response:
+                return json.loads(response.read())
+        except (URLError, OSError) as err:
+            raise ConnectionError(str(err)) from err
 
     def cards():
         # Skany czytamy wprost z bazy (lekko); kolejkę i stan dopiero po zakończeniu obu skanów bootstrapu.
@@ -129,7 +139,7 @@ with urlopen(request, timeout=6) as response:
         inspected = json.loads(command(["docker", "inspect", cid]))[0]
         assert inspected["Config"]["Labels"]["com.docker.compose.project"] == project
         networks = inspected["NetworkSettings"]["Networks"]
-        assert list(networks) == [network["name"]]
+        assert list(networks) == [network["name"]], networks
         stats = dc("exec", "-T", service, "python", "-c",
             "from pathlib import Path; p=Path('/sys/fs/cgroup'); print((p/'memory.peak').read_text().strip() "
             "if (p/'memory.peak').is_file() else 0)")
@@ -226,7 +236,7 @@ def main():
     before = code_hash(root)
     report = {"gitAtStart": command(["git", "rev-parse", "HEAD"], cwd=root), "codeSha256": before,
               "timeBasis": "monotonic, docker compose up to obu skanów bootstrapu zakończonych i kolejki review z 4 filmami (HTTP)",
-              "network": "Docker internal; HTTP probe over loopback inside the API container", "trials": []}
+              "network": "api/worker on an internal Docker network; HTTP probe from the host through the web proxy", "trials": []}
     for i in (1, 2, 3):
         record = once(root, dest/f"trial-{i}", args.port, i)
         report["trials"].append(record)

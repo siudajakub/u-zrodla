@@ -60,6 +60,25 @@ iw_unpack() { # $1 = archiwum; rozpakowuje do katalogu tymczasowego, weryfikuje 
   rm -rf "$tmp"
 }
 
+IW_OBJECT_DIRS='uploads m2 media-cache meta-import youtube-raw youtube-cache'
+
+iw_state_dirs() { # STATE_DIR (SQL) i OBJECTS_DIR (pliki) wariantu Compose; obiekty domyślnie obok stanu
+  STATE_DIR=${INVESTWATCH_STATE_DIR:-$ROOT/.runtime/demo/state}
+  OBJECTS_DIR=${INVESTWATCH_OBJECTS_DIR:-$(dirname -- "$STATE_DIR")/objects}
+  INVESTWATCH_STATE_DIR=$STATE_DIR; INVESTWATCH_OBJECTS_DIR=$OBJECTS_DIR
+  export INVESTWATCH_STATE_DIR INVESTWATCH_OBJECTS_DIR
+}
+
+iw_objects_layout() { # $1 = stan (SQL), $2 = obiekty. Przenosi obiekty ze starego układu (wszystko w stanie) i tworzy punkty montowania.
+  for d in $IW_OBJECT_DIRS; do
+    if [ -d "$1/$d" ] && [ -n "$(ls -A "$1/$d" 2>/dev/null)" ] && [ -z "$(ls -A "$2/$d" 2>/dev/null)" ]; then
+      mkdir -p "$2"; rm -rf "$2/$d"; mv "$1/$d" "$2/$d"; echo "Przeniesiono $d do magazynu obiektów ($2)."
+    fi
+    mkdir -p "$1/$d" "$2/$d"
+  done
+  chmod 700 "$2"
+}
+
 iw_need_pack() { # gwarantuje paczkę mediów albo kończy z instrukcją (kod 3). INVESTWATCH_ALLOW_NO_MEDIA=1 pomija.
   iw_python || exit 1
   IW_LOG="$ROOT/.runtime/pack-verify.log"; mkdir -p "$ROOT/.runtime"

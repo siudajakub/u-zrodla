@@ -1,4 +1,5 @@
-# Overlay for the isolated offline verification project.
+# Overlay for the isolated offline verification project. Objects: INVESTWATCH_OBJECTS_DIR (set by verify.py).
+# The backend network of compose.yaml is already internal; only the web proxy publishes a loopback port.
 x-proof: &proof
   restart: "no"
   cpus: 1
@@ -8,10 +9,9 @@ x-proof: &proof
   environment:
     INVESTWATCH_DISCOVERY_INTERVAL: "0"
 services:
+  web:
+    restart: "no"
   api:
     <<: *proof
   worker:
     <<: *proof
-networks:
-  default:
-    internal: true

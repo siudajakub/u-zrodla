@@ -38,6 +38,7 @@ OUT_DIR = ROOT / "fixtures" / "labeled"
 SUMMARY = OUT_DIR / "ai-second-opinion-summary.json"
 MODULES = ("m1", "m2k03", "m2k09", "m3")
 MAX_MODEL_COST, MAX_TOTAL_COST = 0.60, 2.40
+REGISTRY_STATES = ("authorized_advice", "investment_firm_agent")
 RATE_LIMIT_BACKOFF = (5, 15, 30, 60, None)  # seconds before the next try; None = give up
 Q_V2 = ROOT / "fixtures" / "validation" / "q-v2"
 M3_DIR = ROOT / "fixtures" / "raw" / "discovery" / "m3-2026-11-21"
@@ -337,6 +338,10 @@ def metrics(module, items, cases):
     by_id = {c["id"]: c for c in cases}
     n = len(items)
     ready = [i for i in items if i["status"] == "ready"]
+    registry = []
+    if module == "m3":  # registry-decided entities: the label follows the register, not the content question
+        registry = [i["id"] for i in ready if by_id[i["id"]]["identityState"] in REGISTRY_STATES]
+        ready = [i for i in ready if i["id"] not in registry]
     fixes = [i["id"] for i in ready if i["rulesPositive"] != i["truthPositive"] and i["modelPositive"] == i["truthPositive"]]
     breaks = [i["id"] for i in ready if i["rulesPositive"] == i["truthPositive"] and i["modelPositive"] != i["truthPositive"]]
     rejected = [i for i in items if i["status"] == "rejected"]
@@ -348,7 +353,7 @@ def metrics(module, items, cases):
     escalate = [r or (i["status"] == "ready" and i["modelPositive"] is True) for r, i in zip(rules, items)]
     if module == "m3":  # registry decisions are not content questions; the model never escalates them
         escalate = [r or (i["status"] == "ready" and i["modelPositive"] is True
-                          and by_id[i["id"]]["identityState"] not in ("authorized_advice", "investment_firm_agent"))
+                          and by_id[i["id"]]["identityState"] not in REGISTRY_STATES)
                     for r, i in zip(rules, items)]
     out = {"n": n, "ready": len(ready), "abstained": sum(i["status"] == "abstained" for i in items),
            "rejected": len(rejected), "unavailable": sum(i["status"] == "unavailable" for i in items),
@@ -356,6 +361,7 @@ def metrics(module, items, cases):
            "modelCorrect": sum(i["modelPositive"] == i["truthPositive"] for i in ready),
            "agreementWithRules": sum(i["modelPositive"] == i["rulesPositive"] for i in ready),
            "rulesErrors": sum(r != t for r, t in zip(rules, truth)),
+           "registryDecidedExcluded": registry,
            "fixed": len(fixes), "broken": len(breaks), "fixedIds": fixes, "brokenIds": breaks,
            "policy": {"rules": cost_2fn_fp(truth, rules), "veto": cost_2fn_fp(truth, veto), "escalation": cost_2fn_fp(truth, escalate)},
            "costUsd": round(sum(i["cost"] for i in items), 6),
@@ -426,6 +432,15 @@ def command_run(args):
     return code
 
 
+def held_extra(h):
+    extra = h.get("vsRules12") or h.get("pageLevel") or {}
+    p = extra.get("policy", extra)
+    if not p:
+        return ""
+    fixed = f"naprawione {extra['fixed']}, zepsute {extra['broken']}, " if "fixed" in extra else ""
+    return f"; odłożone (n={h['n']}): {fixed}2FN+FP {p['rules']['cost']}/{p['veto']['cost']}/{p['escalation']['cost']}"
+
+
 def command_report(args):
     cases = {m: load_cases(m) for m in MODULES}
     report = {"promptVersion": args.prompt_version, "labels": "etykiety agentów (Claude), nie ekspertów", "modules": {}}
@@ -457,6 +472,19 @@ def command_report(args):
             print(f"| {model}{'' if entry['complete'] else ' (niepełny)'} | {m['n']} | {m['modelCorrect']}/{m['ready']} | {m['fixed']} | {m['broken']} | "
                   f"{m['rejected']} / {m['rejectedCalls']} z {m['calls']} | {m['agreementWithRules']}/{m['ready']} | "
                   f"{p['rules']['cost']} / {p['veto']['cost']} / {p['escalation']['cost']} | {m['costUsd']:.4f} | {m['latencyMsMedianPerItem']} |")
+        for model, entry in sorted(models.items()):
+            m = entry["all"]
+            extra = m.get("vsRules12") or m.get("pageLevel")
+            if extra:
+                p = extra["policy"] if "policy" in extra else extra
+                label = (f"względem rules_1_2: błędy reguł {extra['rulesErrors']}, naprawione {extra['fixed']}, zepsute {extra['broken']}; "
+                         if "rulesErrors" in extra else "poziom strony: ")
+                print(f"- {model}: {label}2FN+FP reguły/weto/eskalacja {p['rules']['cost']}/{p['veto']['cost']}/{p['escalation']['cost']}"
+                      + held_extra(entry["heldout"]))
+            else:
+                h = entry["heldout"]
+                print(f"- {model}: odłożone (n={h['n']}): naprawione {h['fixed']}, zepsute {h['broken']}, "
+                      f"2FN+FP {h['policy']['rules']['cost']}/{h['policy']['veto']['cost']}/{h['policy']['escalation']['cost']}")
     print(f"\nSeria łącznie: {spent_total():.4f} USD. Zapisano {SUMMARY}")
     return 0
 

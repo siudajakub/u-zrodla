@@ -1,0 +1,9 @@
+# Nakładka: wyjście sieciowe tylko dla workera. Dokłada ją ops/demo/start.sh w trybie --live (źródła publiczne,
+# klucz YouTube) oraz gdy OLLAMA_HOST wskazuje Ollamę na hoście (host.docker.internal, Mac).
+# W trybie pokazu nakładki nie ma: api, worker i scheduler działają w sieci wewnętrznej bez Internetu.
+services:
+  worker:
+    networks: [backend, egress]
+    extra_hosts: ['host.docker.internal:host-gateway']
+networks:
+  egress: {}

@@ -18,12 +18,22 @@ input line rejects the answer. A verdict that differs from the rules sets ``need
 Off by default (INVESTWATCH_SECOND_OPINION). The product backend is Ollama through ``analysis.inference``.
 The OpenRouter backend works only when the measurement tool (tools/measure_second_opinion.py) has registered
 a transport with ``inference.use_remote``; this file never reads a key and never opens a remote connection.
+
+DEMO MODE (``INVESTWATCH_LLM_DEMO_API=1``, off by default): for the demo stand one allow-listed open-weights
+model may answer through an OpenAI-compatible API (UKNF can host the same weights locally). The transport is
+registered by a separate launcher with ``register_demo_transport(chat, meta)``; this file still holds no key.
+Here: the allow-list, a daily cost ledger that switches the mode off at once when INVESTWATCH_LLM_DEMO_DAILY_USD
+(default 1.0) is reached, the result cache, and the dashboard fields (``runtime: "api-demo" | "local"``, weights
+licence, local size and Ollama tag). Without the flag, or without a registered transport, the demo path refuses.
 Standard library only.
 """
+from datetime import datetime, timezone
 from hashlib import sha256
 import json
 import os
+from pathlib import Path
 import re
+import threading
 import time
 import unicodedata
 
@@ -129,7 +139,128 @@ def enabled():
 
 
 def configured_model():
+    if demo_requested():
+        return demo_model()
     return os.getenv("INVESTWATCH_SECOND_OPINION_MODEL", "").strip() or DEFAULT_MODEL
+
+
+# --- Model cards (what the dashboard shows) and the demo mode -----------------------------------------
+
+# OpenRouter id -> open weights, licence (HF card, read 2026-11-21), local equivalent and Q4 download size
+# (Ollama library, read 2026-11-21). memoryGb: Q4 weights + KV cache for num_ctx 8192, an estimate.
+MODEL_CARDS = {
+    "qwen/qwen3.5-397b-a17b": {"name": "Qwen3.5 397B-A17B", "license": "Apache-2.0", "ollama": None, "q4Gb": 230, "memoryGb": 250,
+                               "localNote": "brak tagu w bibliotece Ollama; wagi HF przez vLLM lub llama.cpp na serwerze GPU"},
+    "deepseek/deepseek-v4-pro": {"name": "DeepSeek V4 Pro", "license": "MIT", "ollama": None, "q4Gb": 900, "memoryGb": 950,
+                                 "localNote": "brak tagu w bibliotece Ollama; klaster GPU"},
+    "google/gemma-4-31b-it": {"name": "Gemma 4 31B", "license": "Apache-2.0", "ollama": "gemma4:31b-it-q4_K_M", "q4Gb": 20, "memoryGb": 24},
+    "google/gemma-4-26b-a4b-it": {"name": "Gemma 4 26B-A4B", "license": "Apache-2.0", "ollama": "gemma4:26b-a4b-it-q4_K_M", "q4Gb": 18, "memoryGb": 21},
+    "qwen/qwen3.8-27b": {"name": "Qwen3.8 27B", "license": "Apache-2.0", "ollama": "qwen3.8:27b-q4_K_M", "q4Gb": 18, "memoryGb": 22},
+    "qwen/qwen3.5-27b": {"name": "Qwen3.5 27B", "license": "Apache-2.0", "ollama": "qwen3.5:27b-q4_K_M", "q4Gb": 17, "memoryGb": 21},
+    "mistralai/mistral-small-3.2-24b-instruct": {"name": "Mistral Small 3.2 24B", "license": "Apache-2.0",
+                                                 "ollama": "mistral-small3.2:24b-instruct-2506-q4_K_M", "q4Gb": 15, "memoryGb": 18},
+    "mistralai/ministral-14b-2512": {"name": "Ministral 3 14B", "license": "Apache-2.0", "ollama": "ministral-3:14b-instruct-2512-q4_K_M", "q4Gb": 9.1, "memoryGb": 11},
+    "qwen/qwen3.5-9b": {"name": "Qwen3.5 9B", "license": "Apache-2.0", "ollama": "qwen3.5:9b-q4_K_M", "q4Gb": 6.6, "memoryGb": 8},
+    "mistralai/ministral-8b-2512": {"name": "Ministral 3 8B", "license": "Apache-2.0", "ollama": "ministral-3:8b-instruct-2512-q4_K_M", "q4Gb": 6.0, "memoryGb": 7.5},
+    "mistralai/ministral-3b-2512": {"name": "Ministral 3 3B", "license": "Apache-2.0", "ollama": "ministral-3:3b-instruct-2512-q4_K_M", "q4Gb": 3.0, "memoryGb": 4},
+}
+DEMO_DEFAULT_MODEL = "google/gemma-4-31b-it"   # recommendation from the measurement, see the lane record
+LEDGER = Path(__file__).resolve().parents[1] / ".runtime" / "second-opinion" / "demo-ledger.json"
+_demo_lock = threading.Lock()
+_demo = {"chat": None, "meta": None, "stopped": None}
+
+
+def demo_requested():
+    return os.getenv("INVESTWATCH_LLM_DEMO_API", "").strip().lower() in {"1", "on", "true"}
+
+
+def demo_model():
+    return os.getenv("INVESTWATCH_LLM_DEMO_MODEL", "").strip() or DEMO_DEFAULT_MODEL
+
+
+def daily_limit():
+    try:
+        return max(0.0, float(os.getenv("INVESTWATCH_LLM_DEMO_DAILY_USD", "1.0")))
+    except ValueError:
+        return 0.0
+
+
+def register_demo_transport(chat, meta=None):
+    """Launcher-only: `chat(body)` returns an OpenAI-compatible response with usage.cost. None unregisters."""
+    _demo.update(chat=chat, meta=meta)
+
+
+def runtime():
+    return "api-demo" if demo_requested() else "local"
+
+
+def model_card(model, runtime_name):
+    """Fields for the dashboard: licence, local size and a plain-language label."""
+    card = MODEL_CARDS.get(model) or next((c for c in MODEL_CARDS.values() if c.get("ollama") == model), None) or {}
+    name, licence = card.get("name") or model, card.get("license") or "licencja nieustalona"
+    local = f"ollama pull {card['ollama']}" if card.get("ollama") else card.get("localNote") or "odpowiednik lokalny nieustalony"
+    how = "uruchomiony przez API (pokaz)" if runtime_name == "api-demo" else "uruchomiony lokalnie (Ollama)"
+    return {"modelId": model, "weightsLicense": licence, "localQ4Gb": card.get("q4Gb"), "localMemoryGb": card.get("memoryGb"),
+            "localModel": card.get("ollama"), "runtime": runtime_name,
+            "displayLabel": f"model {name} · {licence} · {how}; lokalnie: {local}"}
+
+
+def _today():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def _ledger_read():
+    try:
+        return json.loads(LEDGER.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def demo_spent(day=None):
+    return float((_ledger_read().get(day or _today()) or {}).get("costUsd", 0.0))
+
+
+def _ledger_add(cost):
+    data = _ledger_read()
+    day = data.setdefault(_today(), {"costUsd": 0.0, "requests": 0})
+    day["costUsd"] = round(day["costUsd"] + float(cost or 0.0), 6)
+    day["requests"] += 1
+    LEDGER.parent.mkdir(parents=True, exist_ok=True)
+    LEDGER.write_text(json.dumps(data, indent=1), encoding="utf-8")
+    return day["costUsd"]
+
+
+def _demo_check(model):
+    if model not in MODEL_CARDS:
+        raise inference.InferenceError("demo_model_not_allowed", f"Tryb pokazowy: model {model} spoza listy modeli z otwartymi wagami.")
+    if _demo["chat"] is None:
+        raise inference.InferenceError("demo_no_transport", "Tryb pokazowy: brak zarejestrowanego zaplecza API.")
+    with _demo_lock:
+        if _demo["stopped"] == _today() or demo_spent() >= daily_limit():
+            _demo["stopped"] = _today()
+            raise inference.InferenceError("demo_budget_exceeded",
+                                           f"Tryb pokazowy wyłączony do końca doby: limit {daily_limit():.2f} USD osiągnięty.")
+
+
+def _demo_request(task, msgs, model):
+    """One request of the demo mode; the daily ledger is checked before and updated after it."""
+    _demo_check(model)
+    body = {"model": model, "messages": msgs, "stream": False, "temperature": 0, "seed": inference.SEED, "max_tokens": MAX_TOKENS,
+            "response_format": {"type": "json_schema", "json_schema": {"name": task, "strict": True, "schema": schema(task)}},
+            "usage": {"include": True}}
+    response = _demo["chat"](body)
+    cost = ((response.get("usage") or {}) if isinstance(response, dict) else {}).get("cost")
+    with _demo_lock:
+        if _ledger_add(cost if isinstance(cost, (int, float)) else 0.0) >= daily_limit():
+            _demo["stopped"] = _today()
+    return inference.parse_openai(response)
+
+
+def _meta(model):
+    if demo_requested():
+        _demo_check(model)
+        return (_demo["meta"] or (lambda: {"digest": f"api:{model}", "quantization": None}))()
+    return inference.model_digest(model)
 
 
 def schema(task):
@@ -322,6 +453,8 @@ def validate(task, content, lines):
 
 
 def _request(task, msgs, model):
+    if demo_requested():
+        return _demo_request(task, msgs, model)
     if inference.backend() == "openrouter":
         if inference._remote is None:
             raise inference.InferenceError("backend_forbidden", "Backend openrouter działa tylko z narzędzia pomiarowego.")
@@ -351,7 +484,7 @@ def ask(task, context, lines, model=None):
         return {"status": "empty", "verdict": None}
     started = time.monotonic()
     try:
-        meta = inference.model_digest(model)
+        meta = _meta(model)
     except inference.InferenceError as error:
         return {"status": "unavailable", "verdict": None, "errorCode": error.code, "reason": error.message}
     msgs = messages(task, context, lines)
@@ -384,7 +517,8 @@ def _envelope(task, rules_verdict, model, answer, locator, extra=None):
     agreement = None
     if verdict is not None and rules_verdict is not None:
         agreement = (verdict == POSITIVE[task]) == (rules_verdict == POSITIVE[task])
-    return {"task": task, "engine": inference._backend_name(), "modelId": model, "promptVersion": PROMPT_VERSION,
+    return {"task": task, "engine": "api-demo" if demo_requested() else inference._backend_name(),
+            **model_card(model, runtime()), "promptVersion": PROMPT_VERSION,
             "digest": answer.get("digest"), "quantization": answer.get("quantization"),
             "status": answer.get("status"), "verdict": verdict, "quote": answer.get("quote") if verdict else None,
             "locator": locator if verdict else None, "confidence": answer.get("confidence") if verdict else None,
@@ -474,8 +608,8 @@ def review_m3(pages, evidence, rules_verdict=None, model=None):
 
 
 def disabled(task):
-    return {"task": task, "engine": inference._backend_name(), "modelId": configured_model(), "promptVersion": PROMPT_VERSION,
-            "status": "disabled", "verdict": None, "needsReview": False, "affectsRoute": False,
+    return {"task": task, "engine": inference._backend_name(), **model_card(configured_model(), runtime()),
+            "promptVersion": PROMPT_VERSION, "status": "disabled", "verdict": None, "needsReview": False, "affectsRoute": False,
             "reason": "drugi głos wyłączony (INVESTWATCH_SECOND_OPINION)"}
 
 

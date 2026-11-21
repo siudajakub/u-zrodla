@@ -225,5 +225,77 @@ class Reviews(Base):
             self.assertNotIn(forbidden, source)
 
 
+class DemoMode(Base):
+    """INVESTWATCH_LLM_DEMO_API: off by default, allow-listed open weights, daily cost cap, labelled result."""
+
+    def setUp(self):
+        super().setUp()
+        import tempfile
+        self.tmp = tempfile.TemporaryDirectory()
+        self.ledger = patch.object(so, "LEDGER", Path(self.tmp.name) / "demo-ledger.json")
+        self.ledger.start()
+        so._demo.update(chat=None, meta=None, stopped=None)
+        self.bodies = []
+
+    def tearDown(self):
+        so.register_demo_transport(None)
+        so._demo["stopped"] = None
+        self.ledger.stop()
+        self.tmp.cleanup()
+        super().tearDown()
+
+    def chat(self, body):
+        self.bodies.append(body)
+        content = answer("niezrozumiale", "W0", "Instrumenty pochodne")
+        return {"choices": [{"message": {"content": content}, "finish_reason": "stop"}],
+                "usage": {"prompt_tokens": 10, "completion_tokens": 5, "cost": 0.004}}
+
+    def test_without_flag_registered_transport_is_not_used(self):
+        so.register_demo_transport(self.chat)
+        with patch.object(inference, "_http", FakeOllama(lambda body: answer("zrozumiale", "W0", "Instrumenty pochodne"))):
+            result = so.review_m2_k09("Instrumenty pochodne są złożone.", "zrozumiale")
+        self.assertEqual(self.bodies, [])
+        self.assertEqual((result["runtime"], result["verdict"]), ("local", "zrozumiale"))
+        self.assertIn("uruchomiony lokalnie", result["displayLabel"])
+
+    def test_flag_uses_api_and_labels_the_result(self):
+        so.register_demo_transport(self.chat)
+        with patch.dict(os.environ, {"INVESTWATCH_LLM_DEMO_API": "1", "INVESTWATCH_LLM_DEMO_MODEL": "google/gemma-4-31b-it"}):
+            result = so.review_m2_k09("Instrumenty pochodne są złożone.", "zrozumiale")
+        self.assertEqual(len(self.bodies), 1)
+        self.assertEqual(self.bodies[0]["model"], "google/gemma-4-31b-it")
+        self.assertEqual((result["runtime"], result["engine"], result["weightsLicense"]), ("api-demo", "api-demo", "Apache-2.0"))
+        self.assertIn("uruchomiony przez API (pokaz)", result["displayLabel"])
+        self.assertIn("ollama pull gemma4:31b-it-q4_K_M", result["displayLabel"])
+        self.assertEqual(result["localQ4Gb"], 20)
+        self.assertFalse(result["affectsRoute"])
+        self.assertAlmostEqual(so.demo_spent(), 0.004)
+
+    def test_daily_cap_switches_the_mode_off(self):
+        so.register_demo_transport(self.chat)
+        env = {"INVESTWATCH_LLM_DEMO_API": "1", "INVESTWATCH_LLM_DEMO_DAILY_USD": "0.005"}
+        with patch.dict(os.environ, env):
+            first = so.review_m2_k09("Instrumenty pochodne są złożone.", "zrozumiale")
+            second = so.review_m2_k09("Instrumenty pochodne są złożone. Druga wersja.", "zrozumiale")
+            third = so.review_m2_k09("Instrumenty pochodne są złożone. Trzecia wersja.", "zrozumiale")
+        self.assertEqual(first["status"], "ready")
+        self.assertEqual(second["status"], "ready")  # spent 0.004 < 0.005 before this call; 0.008 after it
+        self.assertEqual((third["status"], third["errorCode"]), ("unavailable", "demo_budget_exceeded"))
+        self.assertEqual(len(self.bodies), 2)
+
+    def test_refusals_and_cache(self):
+        with patch.dict(os.environ, {"INVESTWATCH_LLM_DEMO_API": "1"}):
+            missing = so.review_m2_k09("Instrumenty pochodne są złożone.", "zrozumiale")
+            so.register_demo_transport(self.chat)
+            with patch.dict(os.environ, {"INVESTWATCH_LLM_DEMO_MODEL": "meta-llama/llama-4-maverick"}):
+                closed = so.review_m2_k09("Instrumenty pochodne są złożone.", "zrozumiale")
+            so.review_m2_k09("Instrumenty pochodne są złożone.", "zrozumiale")
+            cached = so.review_m2_k09("Instrumenty pochodne są złożone.", "zrozumiale")
+        self.assertEqual(missing["errorCode"], "demo_no_transport")
+        self.assertEqual(closed["errorCode"], "demo_model_not_allowed")
+        self.assertEqual(cached["status"], "ready")
+        self.assertEqual(len(self.bodies), 1)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,3 +1,11 @@
+# InvestWatch: lekkie serwisy on-premise (opis: docs/ARCHITEKTURA.md). Start jedną komendą: sh ops/demo/start.sh
+#   web        nginx: statyczny pulpit + reverse proxy REST/WebSocket do api; JEDYNY port na hoście
+#   api        FastAPI: REST + WebSocket /v1/events (sieć wewnętrzna, bez plików frontu)
+#   worker     kolektory + analiza; kolejka Huey/SQLite z dzierżawą zadań (można powielić: --scale worker=N)
+#   scheduler  profil `live`: cykliczne zlecanie skanu (rola CronJob); w trybie pokazu nie startuje
+#   inference  profil `llm`: Ollama (drugi głos LLM), tylko sieć wewnętrzna, wagi w osobnym katalogu
+# Dane: state (SQL: metadane + treść) -> /data, objects (pliki adresowane skrótem) -> /data/<podkatalog>,
+# replay-media (paczka mediów 21 XI, tylko do odczytu) -> /replay-media.
 name: investwatch-demo
 x-code: &code
   - ./api:/app/api:ro
@@ -5,52 +13,159 @@ x-code: &code
   - ./analysis:/app/analysis:ro
   - ./fixtures:/app/fixtures:ro
   - ./data/probe-snapshots:/app/data/probe-snapshots:ro
-  - ./web:/app/web:ro
   - ./tools:/app/tools:ro
   - ./.runtime/demo/deps:/opt/investwatch/deps:ro
   - ./.runtime/demo/ffmpeg:/opt/investwatch/ffmpeg:ro
-  - ${INVESTWATCH_STATE_DIR:-./.runtime/demo/state}:/data
   - ./.runtime/asr:/app/.runtime/asr:ro
   - ./.runtime/semantic:/app/.runtime/semantic:ro
   - ./.runtime/watch:/app/.runtime/watch:ro
-  # Paczka mediów replay (transkrypcje i kadry 21 XI, poza Gitem), tylko do odczytu. Ścieżkę hosta ustawia ops/demo/start.sh.
+  # state: bazy SQLite (cases.sqlite3 = metadane, treść i dziennik skanów; queue.sqlite3 = kolejka).
+  - ${INVESTWATCH_STATE_DIR:-./.runtime/demo/state}:/data
+  # objects: magazyn plików na dysku, montowany w miejscach, których oczekuje kod (bez zmian w aplikacji).
+  - ${INVESTWATCH_OBJECTS_DIR:-./.runtime/demo/objects}/uploads:/data/uploads
+  - ${INVESTWATCH_OBJECTS_DIR:-./.runtime/demo/objects}/m2:/data/m2
+  - ${INVESTWATCH_OBJECTS_DIR:-./.runtime/demo/objects}/media-cache:/data/media-cache
+  - ${INVESTWATCH_OBJECTS_DIR:-./.runtime/demo/objects}/meta-import:/data/meta-import
+  - ${INVESTWATCH_OBJECTS_DIR:-./.runtime/demo/objects}/youtube-raw:/data/youtube-raw
+  - ${INVESTWATCH_OBJECTS_DIR:-./.runtime/demo/objects}/youtube-cache:/data/youtube-cache
+  # replay-media: paczka mediów replay (transkrypcje i kadry 21 XI, poza Gitem). Ścieżkę hosta ustawia ops/demo/start.sh.
   - ${INVESTWATCH_MEDIA_PACK:-./.runtime/replay-media/2026-11-21}:/replay-media:ro
-x-common: &common
-  image: python:3.12-bookworm
+x-hardening: &hardening
   pull_policy: never
   user: '${INVESTWATCH_UID:?Uruchom ops/demo/start.sh}:${INVESTWATCH_GID:?Uruchom ops/demo/start.sh}'
-  working_dir: /app
   read_only: true
   init: true
-  cpus: 1.5
-  mem_limit: 1200m
   cap_drop: [ALL]
   security_opt: [no-new-privileges:true]
-  tmpfs: ['/tmp:size=16m,mode=1777']
-  environment:
+  restart: unless-stopped
+x-common: &common
+  <<: *hardening
+  image: python:3.12-bookworm
+  working_dir: /app
+  cpus: 1.5
+  mem_limit: 1200m
+  # SQLite sortuje duże zapytania (np. /v1/state przy ~2 tys. spraw) w plikach tymczasowych w /tmp.
+  tmpfs: ['/tmp:size=256m,mode=1777']
+  networks: [backend]
+  environment: &env
     PYTHONPATH: /app:/opt/investwatch/deps:/app/.runtime/semantic/deps
     PYTHONDONTWRITEBYTECODE: '1'
     PYTHONUNBUFFERED: '1'
     PATH: /opt/investwatch/ffmpeg/bin:/usr/local/bin:/usr/bin:/bin
     INVESTWATCH_STATE: /data
-    INVESTWATCH_DISCOVERY_INTERVAL: '${INVESTWATCH_DISCOVERY_INTERVAL:-0}'
+    # Harmonogram należy do serwisu scheduler; worker go nie uruchamia.
+    INVESTWATCH_DISCOVERY_INTERVAL: '0'
     INVESTWATCH_REPLAY_MEDIA: /replay-media
     YOUTUBE_API_KEY: '${YOUTUBE_API_KEY:-}'
+    # Drugi głos LLM (domyślnie wyłączony). Serwis inference (profil llm) albo Ollama na hoście Maca:
+    # OLLAMA_HOST=host.docker.internal:11434 (start.sh dokłada wtedy ops/compose/egress.yaml).
+    OLLAMA_HOST: '${OLLAMA_HOST:-inference:11434}'
+    INVESTWATCH_LLM: '${INVESTWATCH_LLM:-0}'
+    INVESTWATCH_LLM_MODEL: '${INVESTWATCH_LLM_MODEL:-}'
+    INVESTWATCH_MODEL_ANNOTATE: '${INVESTWATCH_MODEL_ANNOTATE:-0}'
     OPENBLAS_NUM_THREADS: '1'
     OMP_NUM_THREADS: '1'
   volumes: *code
-  restart: unless-stopped
 services:
+  web:
+    <<: *hardening
+    image: ${INVESTWATCH_WEB_IMAGE:-nginx:1.27-alpine}
+    entrypoint: [nginx, -c, /etc/investwatch/nginx.conf, -g, 'daemon off;']
+    cpus: 0.5
+    mem_limit: 64m
+    tmpfs: ['/tmp:size=32m,mode=1777']
+    networks: [edge, backend]
+    ports:
+      - '127.0.0.1:${INVESTWATCH_PORT:-8769}:8080'
+    volumes:
+      - ./ops/web/nginx.conf:/etc/investwatch/nginx.conf:ro
+      - ./web:/srv/web:ro
+    depends_on:
+      api: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, 'http://127.0.0.1:8080/healthz']
+      interval: 10s
+      timeout: 3s
+      retries: 3
   api:
     <<: *common
-    command: [python, -m, uvicorn, 'api.server:app', --host, 0.0.0.0, --port, '8769']
-    ports:
-      - '127.0.0.1:${INVESTWATCH_PORT:-8769}:8769'
+    command: [python, -m, uvicorn, 'api.server:app', --host, 0.0.0.0, --port, '8769', --forwarded-allow-ips, '*']
+    environment:
+      <<: *env
+      # Front serwuje web; po łatce docs/lanes/2026-11-21-fable-arch-api.diff api pomija też montowanie "/".
+      INVESTWATCH_SERVE_WEB: '0'
+    expose: ['8769']
     healthcheck:
       test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8769/v1/health',timeout=3)"]
       interval: 10s
       timeout: 4s
       retries: 5
+      start_period: 20s
   worker:
     <<: *common
     command: [python, -m, api.worker]
+    depends_on:
+      inference: {condition: service_started, required: false}
+    healthcheck:
+      test: [CMD, python, -c, "import sqlite3; sqlite3.connect('file:/data/cases.sqlite3?mode=ro',uri=True,timeout=3).execute('select count(*) from scans')"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+  scheduler:
+    <<: *common
+    profiles: [live]
+    command: [python, /app/ops/scheduler/scheduler.py]
+    cpus: 0.25
+    mem_limit: 256m
+    environment:
+      <<: *env
+      INVESTWATCH_SCHEDULE_INTERVAL: '${INVESTWATCH_DISCOVERY_INTERVAL:-14400}'
+    volumes:
+      - ./api:/app/api:ro
+      - ./collectors:/app/collectors:ro
+      - ./analysis:/app/analysis:ro
+      - ./ops/scheduler:/app/ops/scheduler:ro
+      - ./.runtime/demo/deps:/opt/investwatch/deps:ro
+      - ${INVESTWATCH_STATE_DIR:-./.runtime/demo/state}:/data
+    depends_on:
+      worker: {condition: service_started}
+    healthcheck:
+      test: [CMD, python, -c, "import os,time,sys; sys.exit(time.time()-os.stat('/tmp/scheduler.beat').st_mtime>120)"]
+      interval: 30s
+      timeout: 4s
+      retries: 3
+      start_period: 20s
+  inference:
+    <<: *hardening
+    profiles: [llm]
+    # Obraz bez wag. Tag z odczytu w docs/lanes/2026-11-21-fable-ai-inferencja.md; po pierwszym pobraniu przypnij digest.
+    image: ${INVESTWATCH_OLLAMA_IMAGE:-ollama/ollama:0.40.17}
+    command: [serve]
+    cpus: ${INVESTWATCH_LLM_CPUS:-4}
+    mem_limit: ${INVESTWATCH_LLM_MEM:-6g}
+    tmpfs: ['/tmp:size=64m,mode=1777']
+    networks: [backend]
+    expose: ['11434']
+    environment:
+      HOME: /models
+      OLLAMA_MODELS: /models/models
+      OLLAMA_HOST: 0.0.0.0:11434
+      OLLAMA_CONTEXT_LENGTH: '4096'
+      OLLAMA_NUM_PARALLEL: '1'
+      OLLAMA_MAX_LOADED_MODELS: '1'
+      OLLAMA_KEEP_ALIVE: 10m
+    volumes:
+      # Wagi poza Gitem; jednorazowe pobranie: sh ops/inference/pull-model.sh MODEL
+      - ${INVESTWATCH_OLLAMA_DIR:-./.runtime/ollama}:/models
+    healthcheck:
+      test: [CMD, ollama, list]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+networks:
+  # Tylko web ma wyjście na hosta; api, worker, scheduler i inference nie mają drogi do Internetu.
+  edge: {}
+  backend:
+    internal: true

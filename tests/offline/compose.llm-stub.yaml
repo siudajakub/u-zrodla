@@ -1,0 +1,12 @@
+# Nakładka testowa: serwis inference (profil llm) zastąpiony atrapą API Ollamy bez modelu (tests/offline/llm_stub.py).
+# docker compose -f compose.yaml -f tests/offline/compose.llm-stub.yaml --profile llm up -d inference worker
+services:
+  inference:
+    image: python:3.12-bookworm
+    command: [python, /stub/llm_stub.py]
+    mem_limit: 64m
+    cpus: 0.25
+    volumes:
+      - ./tests/offline:/stub:ro
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:11434/api/version',timeout=3)"]

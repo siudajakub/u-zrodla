@@ -30,7 +30,11 @@ if [ -f analysis/semantic-requirements.txt ]; then
   "$venv/bin/pip" install --no-index --find-links .runtime/semantic/wheels --target .runtime/semantic/deps -r analysis/semantic-requirements.txt
   "$venv/bin/python" -m analysis.setup_semantic
 fi
-if [ "$mode" = host ]; then docker image inspect python:3.12-bookworm >/dev/null 2>&1 || docker pull python:3.12-bookworm; fi
+if [ "$mode" = host ]; then
+  docker image inspect python:3.12-bookworm >/dev/null 2>&1 || docker pull python:3.12-bookworm
+  web_image=${INVESTWATCH_WEB_IMAGE:-nginx:1.27-alpine}  # serwis web (statyczny pulpit + reverse proxy)
+  docker image inspect "$web_image" >/dev/null 2>&1 || docker pull "$web_image"
+fi
 sh ops/demo/prepare.sh
 [ "$mode" = host ] || exit 0
 fi

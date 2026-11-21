@@ -13,6 +13,9 @@ if [ "$arch" != arm64 ]; then
   arch=$(docker image inspect "$image" --format '{{.Architecture}}' 2>/dev/null || true)
 fi
 [ "$arch" = arm64 ] || { echo "Obraz $image ma architekture '$arch', potrzebna arm64." >&2; exit 1; }
+web_image=${INVESTWATCH_WEB_IMAGE:-nginx:1.27-alpine}  # serwis web Compose (wieloarchitekturowy)
+[ "$(docker image inspect "$web_image" --format '{{.Architecture}}' 2>/dev/null || true)" = arm64 ] ||
+  docker pull --platform linux/arm64 "$web_image"
 mkdir -p .runtime/build/tmp .runtime/build/cache .runtime/build/wheels .runtime/watch .runtime/semantic .runtime/asr
 docker run --rm --platform linux/arm64 --pull never \
   -e PREPARE_UID="$(id -u)" -e PREPARE_GID="$(id -g)" \
