@@ -82,6 +82,19 @@ def submit(mode, request_id, payload=None):
         enqueue(scan["id"])
     return scan
 
+INLINE_RECOMPUTE_MAX=int(os.environ.get("INVESTWATCH_INLINE_RECOMPUTE_MAX","60"))
+
+def small_enough_for_inline():
+    with store.connection() as db:
+        return db.execute("SELECT count(*) FROM cases").fetchone()[0]<=INLINE_RECOMPUTE_MAX
+
+def run_inline(key):
+    """Run a queued scan in the calling thread. The claim keeps a worker that picks the same message from running it twice."""
+    try:
+        process.call_local(key)
+    except Exception:
+        logger.exception("Inline run of %s failed; the durable job stays recoverable",key)
+
 def enqueue(key):
     try:
         process(key)

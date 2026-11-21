@@ -62,14 +62,26 @@ def load_v1_store(state_dir):
 
 
 class StateCase(unittest.TestCase):
-    """A fresh migrated database per test."""
+    """A fresh migrated database per test.
+
+    A new database starts on the product default (qual_d). Most contract tests describe the legacy rules, so they
+    pin the baseline `rules_1_2` unless the class sets BASELINE = None (see DefaultVariant in test_contract_v2_qualification).
+    """
+    BASELINE = "rules_1_2"
 
     def setUp(self):
         self.temp = self.enterContext(TemporaryDirectory())
         self.enterContext(patch.object(store, "STATE", Path(self.temp)))
         # Replay must not pick up the real replay media pack of this host (it lives in .runtime, outside Git).
         self.enterContext(patch.dict(os.environ, {"INVESTWATCH_REPLAY_MEDIA": str(Path(self.temp) / "replay-media-absent")}))
+        from analysis import engine
+        # The worker sets the engine's active variant from the database; a test must not leak it into the next one.
+        self.enterContext(patch.object(engine, "ACTIVE_VARIANT", self.BASELINE or store.DEFAULT_VARIANT))
         store.init()
+        if self.BASELINE:
+            with store.connection(True) as db:
+                db.execute("UPDATE qualification_settings SET variant=?, validation_ref=NULL, approved_by=NULL, note='Wariant domyślny'"
+                           " WHERE id=1", (self.BASELINE,))
 
     def scan(self, pairs, mode="live", creators=(), sources=()):
         with store.connection(True) as db:

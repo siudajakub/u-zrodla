@@ -68,6 +68,12 @@ class LegacyDatabase(unittest.TestCase):
         self.assertEqual(found["score"], 94)
         self.assertEqual(found["reviewSuggestion"]["state"], "review")
 
+    def test_existing_database_keeps_rules_1_2_when_the_default_changes(self):
+        store.init()
+        with store.connection() as db:
+            self.assertEqual(store.active_variant(db), "rules_1_2")
+            self.assertEqual(len(store.qualification_history(db)), 1)
+
     def test_t11_second_start_changes_nothing(self):
         store.init()
         first = dump_v1_tables(self.dir / "cases.sqlite3")

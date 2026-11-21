@@ -119,10 +119,46 @@ def health():
     return {"status":"ok","schema":schema}
 
 @app.get("/v1/calibration")
-def calibration(threshold:int=Query(60,ge=0,le=100),variant:str=Query("rules_1_2")):
-    if variant not in store.VARIANTS:
+def calibration(threshold:int|None=Query(None,ge=0,le=100),variant:str|None=Query(None),dataset:str=Query("q-v2"),
+                coverage:str=Query("pelne")):
+    """Default dataset q-v2 (M1, agent labels, both variants); `dataset=illustrative` keeps the old illustrative set.
+    Without `threshold` the threshold of the variant that filters the real queue is used, and the response says
+    how many cases of that queue would change under a different one."""
+    if variant is not None and variant not in store.VARIANTS:
         raise HTTPException(422,"Nieznany wariant.")
-    return calculate_cached(threshold,variant)
+    if dataset not in ("q-v2","illustrative"):
+        raise HTTPException(422,"Nieznany zbiór. Dostępne: q-v2, illustrative.")
+    with store.connection() as db:
+        active=store.active_variant(db)
+        chosen=variant or active
+        stored=store.threshold_value(db,chosen)
+        value=stored if threshold is None else threshold
+        effect=store.queue_effect(db,chosen,value) if dataset=="q-v2" else None
+    if dataset=="illustrative":
+        return calculate_cached(value,chosen)
+    from . import calibration_q2
+    if not calibration_q2.available():
+        raise HTTPException(503,"Brak plików zbioru q-v2 w fixtures/validation/q-v2.")
+    try:
+        out=calibration_q2.compare(value,coverage)
+    except ValueError as error:
+        raise HTTPException(422,str(error)) from error
+    # headline of the requested (default: active) variant, in the shape of the old calibration
+    head=out["variants"].get(chosen) or out["variants"]["qual_d"]
+    return {**out,"variant":chosen,"activeVariant":active,"storedThreshold":stored,"thresholdSource":"request" if threshold is not None else "stored",
+            **{k:head[k] for k in ("tp","fp","tn","fn","cost","errors","withheld")},
+            "precisionCI":{"low":head["precisionCI95"][0],"high":head["precisionCI95"][1],"method":"Wilson 95%"} if isinstance(head["precisionCI95"],list) else None,
+            "groups":head["independentCampaigns"],"publicExamples":out["n"],"syntheticExamples":0,"queueEffect":effect}
+
+def state_calibration():
+    """The calibration block of /v1/state: the q-v2 comparison at the threshold of the active variant (illustrative set if absent)."""
+    from . import calibration_q2
+    with store.connection() as db:
+        variant=store.active_variant(db)
+        value=store.threshold_value(db,variant)
+    if not calibration_q2.available():
+        return calculate_cached(60,"rules_1_2")
+    return calibration_q2.compare(value)
 
 @lru_cache(maxsize=303)
 def calculate_cached(threshold,variant="rules_1_2"):
@@ -133,7 +169,7 @@ def calculate_cached(threshold,variant="rules_1_2"):
 def state(schema:int|None=Query(None,ge=1,le=2),compact:int=Query(0),request:Request=None):
     chosen=wanted_schema(request,schema)
     return {**store.state(chosen,bool(compact) if isinstance(compact,(bool,int)) else False),
-            "calibration":calibration(60,"rules_1_2")}
+            "calibration":state_calibration()}
 
 @app.get("/v1/trend")
 def trend(days:int=Query(30,ge=1,le=365)):
@@ -179,9 +215,13 @@ def recompute_for(entry):
     import hashlib
     key=hashlib.sha256(f"{entry['variant']}|{entry.get('rulesVersion')}|{entry.get('modelId')}".encode()).hexdigest()[:12]
     try:
-        jobs.submit("recompute",f"recompute-{entry['id']}-{key}")
+        scan=jobs.submit("recompute",f"recompute-{entry['id']}-{key}")
     except ValueError:
-        pass
+        return
+    # Without a worker a queued recompute would wait forever: a small database is recomputed inside the request,
+    # a large one stays queued and /v1/state.recompute says that it is waiting for the worker.
+    if scan.get("status")=="queued" and jobs.small_enough_for_inline():
+        jobs.run_inline(scan["id"])
 
 @app.get("/v1/threshold")
 def threshold(variant:str|None=None):

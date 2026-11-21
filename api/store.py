@@ -118,7 +118,19 @@ def _migration_6(db):
         for variant in ("rules_1_2", "qual_d", "qual_d_model"):
             db.execute("INSERT INTO thresholds(variant,value,note,at) VALUES(?,60,'Wpis domyślny',?)", (variant, utc()))
     if not db.execute("SELECT 1 FROM qualification_settings").fetchone():
-        db.execute("INSERT INTO qualification_settings(variant,note,at) VALUES('rules_1_2','Wariant domyślny',?)", (utc(),))
+        if db.execute("SELECT 1 FROM cases LIMIT 1").fetchone():
+            # An existing database never switches variant by itself: it keeps the rules that produced its cases.
+            db.execute("INSERT INTO qualification_settings(variant,note,at) VALUES('rules_1_2','Wariant domyślny',?)", (utc(),))
+        else:
+            # A new, empty database starts on the approved default (M1 measurement of 21 XI 2026, threshold 60).
+            rules = "investwatch-qual-d"
+            try:
+                from analysis import qualification
+                rules = qualification.RULES_VERSION
+            except Exception:
+                pass
+            db.execute("INSERT INTO qualification_settings(variant,note,validation_ref,approved_by,at,rules_version) VALUES(?,?,?,?,?,?)",
+                       (DEFAULT_VARIANT, DEFAULT_NOTE, DEFAULT_VALIDATION_REF, DEFAULT_APPROVED_BY, utc(), rules))
 
 def _migration_7(db):
     # Media backlog of the speech gate: what was fetched for a video (transcript, frames) and what is still to do.
@@ -187,6 +199,12 @@ def schema_info(db):
 # Analysis generation that new code writes. A record without analysisVersion predates it.
 ANALYSIS_SCHEMA = 2
 ANALYSIS_VARIANT = "rules_1_2"
+# Default of a new, empty database (orchestrator decision of 21 XI 2026); the way back to rules_1_2 stays open.
+DEFAULT_VARIANT = "qual_d"
+DEFAULT_VALIDATION_REF = "fixtures/validation/q-v2/WYNIK-M1-2026-11-21.md@463cceb"
+DEFAULT_APPROVED_BY = "Fable (orkiestrator)"
+DEFAULT_NOTE = ("Domyślny wariant produktu, próg 60. Pomiar na 17 filmach: koszt 2×FN+FP 15 → 0 względem rules_1_2. "
+                "To oceny agentów, nie walidacja ekspercka.")
 # Mirrors the literal in analysis.engine.m2 until the engine exposes its own versions (step S5).
 M2_RULES = "investwatch-m2-rendered-1"
 
@@ -1143,10 +1161,27 @@ def summary_of_case(case):
             "needsRecalc":case.get("needsRecalc"),"priority":case.get("priority"),"reason":reason,
             "firstMoment":moment,"lastDecision":case.get("lastDecision"),"url":case.get("url")}
 
+def creator_names(db):
+    """creatorId to display name from the creators table (replay and older captures carry no creatorName)."""
+    names={}
+    for row in db.execute("SELECT id,body FROM creators"):
+        try:
+            name=(json.loads(row[1]) or {}).get("name")
+        except ValueError:
+            continue
+        if name:
+            names[row[0]]=name
+    return names
+
 def all_cases(db,schema=2,full=False):
     current=analysis_current()
     settings=load_settings(db)
-    return [case_dict(db,r,current,schema,settings,full) for r in db.execute("SELECT * FROM cases ORDER BY updated DESC,id")],settings
+    names=creator_names(db)
+    cases=[case_dict(db,r,current,schema,settings,full) for r in db.execute("SELECT * FROM cases ORDER BY updated DESC,id")]
+    for case in cases:
+        if not case.get("creatorName") and names.get(case.get("creatorId")):
+            case["creatorName"]=names[case["creatorId"]]
+    return cases,settings
 
 def queue_counts(cases):
     counts=dict.fromkeys(QUEUES,0)
@@ -1157,6 +1192,28 @@ def queue_counts(cases):
 
 def _moment_of(value):
     return parse_time(value) or datetime.min.replace(tzinfo=timezone.utc)
+
+def queue_effect(db, variant, threshold):
+    """How many cases of the real review queue change if `variant` used `threshold` instead of its stored threshold."""
+    current=analysis_current()
+    settings=load_settings(db)
+    stored=settings["thresholds"].get(variant,60)
+    probe={**settings,"variant":variant,"thresholds":{**settings["thresholds"],variant:threshold}}
+    base={**settings,"variant":variant}
+    gained,lost,now=[],[],0
+    for row in db.execute("SELECT * FROM cases"):
+        in_now=in_then=False
+        for setting,box in ((base,"now"),(probe,"then")):
+            core,_,_,chosen,flags=case_core(db,row,current,setting)
+            member="review" in queues_of(core,chosen,flags)
+            if box=="now": in_now=member
+            else: in_then=member
+        now+=in_now
+        if in_then and not in_now: gained.append(row["id"])
+        if in_now and not in_then: lost.append(row["id"])
+    return {"variant":variant,"storedThreshold":stored,"threshold":threshold,"reviewQueueAtStored":now,
+            "reviewQueueAtThreshold":now+len(gained)-len(lost),"changed":len(gained)+len(lost),
+            "gained":gained[:50],"lost":lost[:50]}
 
 def queue_list(db, name, *, limit=50, cursor=None, module=None, creator=None, since=None, until=None, min_score=None,
                q=None, section=None, platform=None):
@@ -1276,6 +1333,53 @@ def trend(db, days=30):
     points = [{"newMaterials": 0, **by_day[d]} for d in sorted(by_day)][-max(1, days):]
     return {"byScan": by_scan[-200:], "byDay": points}
 
+def semantic_status():
+    """Why the local E5 model is (not) available, without loading it: env var, weight files, Python packages."""
+    import importlib.util, os
+    from analysis import setup_semantic as setup
+    configured = os.environ.get(setup.MODEL_DIR_ENV)
+    directory = Path(configured or setup.DEFAULT_DIR)
+    missing_files = [name for name in setup.LOCK["files"] if not (directory / name).is_file()]
+    missing_packages = [name for name in ("numpy", "onnxruntime", "tokenizers") if importlib.util.find_spec(name) is None]
+    reasons = []
+    if not configured:
+        reasons.append(f"nie ustawiono {setup.MODEL_DIR_ENV}")
+    if missing_files:
+        reasons.append(f"brak wag modelu E5 w {directory} ({len(missing_files)} z {len(setup.LOCK['files'])} plików)")
+    if missing_packages:
+        reasons.append("brak pakietów Pythona: " + ", ".join(missing_packages))
+    ready = not missing_files and not missing_packages
+    return {"status": "ready" if ready else "unavailable", "model": setup.LOCK["repository"], "directory": str(directory),
+            "directoryConfigured": bool(configured), "missingFiles": missing_files, "missingPackages": missing_packages,
+            "reasons": reasons if not ready else [],
+            "m3Mode": "rules_and_model" if ready else "rules_only",
+            "message": ("Lokalny model semantyczny jest dostępny." if ready else
+                        "Lokalny model semantyczny jest niedostępny: " + "; ".join(reasons) +
+                        ". M3 działa wtedy wyłącznie na regułach, a podobieństwo semantyczne nie jest liczone. To poprawny stan.")}
+
+WORKER_WAIT_SECONDS = 10  # a live worker takes a queued scan within a second; longer means nobody is working
+
+def recompute_status(db, now=None):
+    """What the last recompute (after a variant, rules or model change) is doing, for /v1/state."""
+    row = db.execute("SELECT * FROM scans WHERE mode='recompute' ORDER BY created DESC LIMIT 1").fetchone()
+    if row is None:
+        return {"state": "none", "scanId": None, "message": "Nie było przeliczenia."}
+    status = row["status"]
+    cases = db.execute("SELECT count(*) FROM cases").fetchone()[0]
+    out = {"scanId": row["id"], "status": status, "since": row["created"], "updatedAt": row["updated"], "cases": cases}
+    if status == "queued":
+        queued = datetime.fromisoformat(row["created"].replace("Z", "+00:00"))
+        age = ((now or datetime.now(timezone.utc)) - queued).total_seconds()
+        waiting = age >= WORKER_WAIT_SECONDS
+        return {**out, "state": "waiting_for_worker" if waiting else "queued", "ageSec": round(age),
+                "message": ("Przeliczenie czeka na worker (nie podjął zadania od " + str(round(age)) + " s). "
+                            "Uruchom worker albo wykonaj przeliczenie ręcznie.") if waiting else "Przeliczenie w kolejce."}
+    if status == "running":
+        return {**out, "state": "running", "message": "Przeliczenie trwa."}
+    if status == "failed":
+        return {**out, "state": "failed", "message": "Przeliczenie nie powiodło się; ponów je."}
+    return {**out, "state": "done", "message": "Przeliczenie zakończone."}
+
 def state(schema=2, compact=False):
     schema = schema if isinstance(schema, int) else 1
     compact = compact if isinstance(compact, (bool, int)) else False
@@ -1306,7 +1410,7 @@ def state(schema=2, compact=False):
         return {"creators":creators,"sources":sources,"sourceHealth":health,"sourceState":list(states.values()),"findings":cases,"scans":scans,
                 "events":events,"schema":{**schema_info(db),"views":[1,2],"served":schema},"analysisCurrent":{**current,"variant":active},
                 "queues":queue_counts(cases),"threshold":{"variant":active,**(threshold_current(db,active) or {})},
-                "qualification":settings["qualification"],**extra}
+                "qualification":settings["qualification"],"recompute":recompute_status(db),"semantic":semantic_status(),**extra}
 
 def scan_detail(db,key):
     row=db.execute("SELECT * FROM scans WHERE id=?",(key,)).fetchone()
