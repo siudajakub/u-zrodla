@@ -3,8 +3,8 @@
 - Owner: astra
 - Branch: hack/astra/analysis-evidence
 - Worktree: /home/codexdev/projects/hacknation/uknf-investwatch/.worktrees/analysis
-- State: ACTIVE
-- Updated: 2026-11-21 16:03 UTC
+- State: READY
+- Updated: 2026-11-21 16:21 UTC
 - PR / issue: brak
 
 ## Acceptance
