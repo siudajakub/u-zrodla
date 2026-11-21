@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Buduje web/sample/export.json: przykładowy stan pulpitu jako eksport prawdziwego API (schemat 2).
 
-Czyta tylko GET z działającego API (domyślnie http://127.0.0.1:18801, baza odtworzonego skanu YouTube z 21 XI) i zapisuje:
-stan skompresowany (bez spraw), kolejki ze wszystkimi stronami, pełne karty spraw (wszystkie z kolejek review, demo, M2, M3,
+Czyta tylko GET z działającego API (domyślnie http://127.0.0.1:18801, baza odtworzonego skanu YouTube i TikTok z 21 XI) i zapisuje:
+lekki stan /v1/overview (bez spraw), kolejki ze wszystkimi stronami, pełne karty spraw (wszystkie z kolejek review, demo, M2, M3,
 zamknięte oraz pierwsze z rejestru i niepełnych), historie progu i wariantu, kalibrację dla kilku progów oraz miniatury kadrów.
 Dev-server (web/dev-server.mjs) i test renderowania serwują dokładnie te kształty, więc pulpit pokazuje to samo co backend.
 
@@ -30,11 +30,12 @@ def get(path, raw=False):
     return data if raw else json.loads(data)
 
 
-state = get("/v1/state?compact=1")
+state = get("/v1/overview")
 state.pop("findings", None)
 state.pop("calibration", None)
 queues = {}
 for name in ("review", "adRegister", "offersM2", "offersM3", "incomplete", "closed", "demo"):
+    # kolejki z podsumowaniami z nowymi polami (band, firstReason, disclosure, completeReason, transcriptState, adRegistryInfo)
     items, cursor = [], None
     while True:
         page = get(f"/v1/queues/{name}?limit=500" + (f"&cursor={cursor}" if cursor else ""))
@@ -51,6 +52,9 @@ for name, limit in (("review", None), ("demo", None), ("offersM2", None), ("offe
     for item in queues[name][:limit]:
         if item["id"] not in want:
             want.append(item["id"])
+for item in [i for i in queues["adRegister"] if i["platform"] == "tiktok"][:2]:  # karta TikToka z rejestru
+    if item["id"] not in want:
+        want.append(item["id"])
 cases = {i: get(f"/v1/cases/{urllib.parse.quote(i, safe=':')}") for i in want}
 
 frames = OUT / "frames"
@@ -75,7 +79,8 @@ export = {
     "qualificationHistory": get("/v1/qualification/history"),
     "trend": get("/v1/trend?days=30"),
     "scans": {s["id"]: get(f"/v1/scans/{s['id']}") for s in state["scans"][:5]},
-    "calibration": {str(t): get(f"/v1/calibration?threshold={t}&variant={variant}") for t in range(40, 95, 5)},
+    "calibration": {str(t): get(f"/v1/calibration?threshold={t}&variant={variant}") for t in range(0, 105, 5)},
+    "platformTotals": {p: get(f"/v1/queues/all?platform={p}&limit=1")["total"] for p in ("youtube", "tiktok", "instagram", "facebook", "web", "WWW")},
 }
 (OUT / "export.json").write_text(json.dumps(export, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 print("zapisano export.json:", (OUT / "export.json").stat().st_size // 1024, "kB; kart:", len(cases))

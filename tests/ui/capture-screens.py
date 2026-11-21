@@ -14,7 +14,7 @@ from playwright.sync_api import sync_playwright
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--base", required=True)
-parser.add_argument("--out", default=str(Path(__file__).parent / "screens" / "2026-11-21-r2"))
+parser.add_argument("--out", default=str(Path(__file__).parent / "screens" / "2026-11-21-r3"))
 parser.add_argument("--only", default="")
 parser.add_argument("--widths", default="1440,390")
 parser.add_argument("--chromium", default="")
@@ -35,12 +35,18 @@ def check(name, ok, detail=""):
 
 SCREENS = [
     ("1-kolejka", "#review", None),
-    ("2-karta-7M0rC6-Rueo", "#review?case=youtube%3A7M0rC6-Rueo", None),
-    ("3-karta-AqXHkxDzSDI", "#review?case=youtube%3AAqXHkxDzSDI", "momenty"),
+    ("2-karta-flagi", "#review?case=youtube%3AAqXHkxDzSDI", "momenty"),
+    ("3-karta-tiktok", "#register?case=tiktok%3A7707284619103718689", None),
     ("4-rejestr-reklam", "#register", None),
-    ("5-niepelne", "#incomplete", None),
-    ("6-zrodla", "#sources", None),
-    ("7-kalibracja", "#calibration", None),
+    ("5-rejestr-tiktok", "#register?source=tiktok", None),
+    ("6-zrodla", "#sources", "wykresy"),
+    ("7-kalibracja", "#calibration", "suwak"),
+    ("8-niepelne", "#incomplete", None),
+    ("9-oferty-m2", "#m2", None),
+    ("10-oferty-m3", "#m3", None),
+    ("11-zamkniete", "#closed", None),
+    ("12-demo", "#demo", None),
+    ("13-dodaj-dowod", "#evidence", None),
 ]
 with sync_playwright() as p:
     binary = args.chromium or next(iter(sorted(Path.home().glob(".cache/ms-playwright/chromium-*/chrome-linux64/chrome"))), None)
@@ -60,7 +66,20 @@ with sync_playwright() as p:
             page.goto(f"{base}/{hash_}", wait_until="networkidle")
             page.wait_for_selector("h1, h2", timeout=90000)
             page.wait_for_timeout(2500)
+            if extra == "suwak":
+                page.wait_for_selector("canvas[data-chart=line]", timeout=30000)
+                page.get_by_role("slider").focus()
+                for _ in range(4):
+                    page.keyboard.press("ArrowRight")
+                page.wait_for_timeout(2500)
+            if extra == "wykresy":
+                page.wait_for_function("document.querySelectorAll('canvas[data-chart]').length >= 2", timeout=30000)
+                page.wait_for_timeout(800)
             page.screenshot(path=str(out / f"{label}-{name}.png"), full_page=False)
+            if label == "390" or name.startswith("7") or name.startswith("6"):
+                # poziome przewijanie: strona nie może być szersza niż okno
+                wide = page.evaluate("document.documentElement.scrollWidth > window.innerWidth + 1")
+                check(f"{label} {name}: bez poziomego przewijania", not wide, str(page.evaluate("document.documentElement.scrollWidth")))
             if "karta" in name:
                 # drugi zrzut: przewinięcie karty do momentów i kadrów
                 page.evaluate("document.getElementById('sekcja-momenty')?.scrollIntoView({block:'start'})")
@@ -71,6 +90,7 @@ with sync_playwright() as p:
 
 expected = ("favicon",)
 noise = [c for c in console if "Failed to load resource" not in c[2] and "favicon" not in c[2]]
+print(f"komunikaty konsoli (błędy i ostrzeżenia): {len(console)}")
 unexpected = sorted({u for u in failed if not any(e in u for e in expected)})
 check("odpowiedzi 4xx tylko z tras jeszcze nieistniejących", not unexpected, ", ".join(unexpected))
 check("konsola bez błędów", not noise, json.dumps(noise, ensure_ascii=False)[:600])

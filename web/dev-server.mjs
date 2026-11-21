@@ -1,4 +1,4 @@
-// Serwer deweloperski bez backendu: pliki z web/ oraz API schematu 2 zbudowane z web/sample/export.json
+// Serwer deweloperski bez backendu: pliki z web/ oraz API schematu 2 (w tym GET /v1/overview i GET /v1/report) zbudowane z web/sample/export.json
 // (eksport prawdziwego API, patrz web/sample/build_sample.py). Kolejki mają kursor i filtry jak GET /v1/queues/{name}.
 // Uruchomienie:  node web/dev-server.mjs [--port 18790] [--legacy]
 // --legacy: GET /v1/queues/{name} zwraca 404, żeby zobaczyć stan „starsze API”.
@@ -49,14 +49,16 @@ const counts = () => Object.fromEntries(Object.entries(state.queues).map(([k, v]
 function queuePage(name, params) {
   let items = [...queues[name]];
   const q = params.get("q")?.toLocaleLowerCase("pl-PL");
+  const field = params.get("dateField") === "publishedAt" ? "publishedAt" : "observedAt";
   if (params.get("module")) items = items.filter((i) => i.module === params.get("module"));
   if (params.get("platform")) items = items.filter((i) => i.platform === params.get("platform"));
-  if (params.get("since")) items = items.filter((i) => Date.parse(i.observedAt) >= Date.parse(params.get("since")));
-  if (params.get("until")) items = items.filter((i) => Date.parse(i.observedAt) <= Date.parse(params.get("until")));
+  if (params.get("band")) items = items.filter((i) => i.band === params.get("band"));
+  if (params.get("since")) items = items.filter((i) => Date.parse(i[field]) >= Date.parse(params.get("since")));
+  if (params.get("until")) items = items.filter((i) => Date.parse(i[field]) <= Date.parse(params.get("until")));
   if (params.get("minScore")) items = items.filter((i) => (i.reviewScore ?? -1) >= Number(params.get("minScore")));
   if (params.get("section") === "confirmed") items = items.filter((i) => i.adRegistry === "included");
   if (params.get("section") === "candidate") items = items.filter((i) => i.adRegistry === "candidate");
-  if (q) items = items.filter((i) => (i.title || "").toLocaleLowerCase("pl-PL").includes(q));
+  if (q) items = items.filter((i) => `${i.title || ""} ${i.creatorName || ""}`.toLocaleLowerCase("pl-PL").includes(q));
   const limit = Math.min(500, Math.max(1, Number(params.get("limit")) || 50));
   const start = Number(params.get("cursor") || 0);
   const page = items.slice(start, start + limit);
@@ -106,7 +108,21 @@ const server = createServer(async (req, res) => {
   const path = decodeURIComponent(url.pathname);
   try {
     if (path === "/v1/health") return send(res, 200, { status: "ok", schema: 7 });
-    if (path === "/v1/state") return send(res, 200, { ...state, queues: counts(), findings: [], threshold, qualification, events: events.concat(state.events).slice(0, 50) });
+    if (path === "/v1/report") {
+      const module = url.searchParams.get("module") || "M1";
+      const names = { M1: ["review", "adRegister"], M2: ["offersM2"], M3: ["offersM3"] }[module] || ["all"];
+      const seen = new Set();
+      const params = new URLSearchParams([...url.searchParams].filter(([k]) => k !== "limit" && k !== "cursor" && k !== "module"));
+      params.set("limit", "500");
+      const rows = names.flatMap((n) => queuePage(n, params).items).filter((i) => !seen.has(i.id) && seen.add(i.id));
+      const cell = (v) => `"${String(v ?? "").replace(/"/g, '""').replace(/^([=+\-@\t\r])/, "'$1")}"`;
+      const head = ["firma", "tresc", "url", "platforma", "dataPublikacji", "dataOdczytu", "trasa", "silaSygnalu", "statusDecyzji", "id"];
+      const lines = rows.map((i) => [i.creatorName, i.title, i.url, i.platform, i.publishedAt, i.observedAt, i.route, i.reviewScore, i.status, i.id].map(cell).join(","));
+      if (url.searchParams.get("format") === "json") return send(res, 200, { items: rows, total: rows.length });
+      res.writeHead(200, { "Content-Type": "text/csv; charset=utf-8", "Content-Disposition": `attachment; filename="investwatch-raport-${module}.csv"`, "X-Total-Count": String(rows.length) });
+      return res.end(`\uFEFF${[head.join(","), ...lines].join("\r\n")}\r\n`);
+    }
+    if (path === "/v1/overview" || path === "/v1/state") return send(res, 200, { ...state, queues: counts(), findings: [], threshold, qualification, events: events.concat(state.events).slice(0, 50) });
     if (path.startsWith("/v1/queues/")) {
       if (legacy) return send(res, 404, { detail: "Not Found" });
       const name = path.slice(11);
