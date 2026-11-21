@@ -1,13 +1,13 @@
 {
-  "gitAtStart": "78ff5005b68f4ab641bb5bbf8f5b6de73d387f06",
-  "codeSha256": "8df2ce71102f4ea7cc1e866e7d96133f852b0414748b0ee59f265e4ab7ede744",
+  "gitAtStart": "59bf07c7484ce20d5eec2e9e4ecd01abb5c7278b",
+  "codeSha256": "3190d8bcd63342de0a431149bd1e6bf9c0f13c76655f9b36625a8e4f89f71594",
   "timeBasis": "monotonic, docker compose up to populated HTTP /v1/state",
   "network": "Docker internal; HTTP probe over loopback inside the API container",
   "trials": [
     {
       "trial": 1,
-      "project": "investwatch-proof-053ceafe704944",
-      "secondsToCases": 3.67,
+      "project": "investwatch-proof-fc31cc7b0f7145",
+      "secondsToCases": 4.37,
       "cases": 17,
       "versions": 17,
       "semantic": {
@@ -22,20 +22,20 @@
       "resources": {
         "api": {
           "oomKilled": false,
-          "memoryPeakBytes": 58228736,
+          "memoryPeakBytes": 67837952,
           "restartCount": 0
         },
         "worker": {
           "oomKilled": false,
-          "memoryPeakBytes": 666546176,
+          "memoryPeakBytes": 996044800,
           "restartCount": 0
         }
       }
     },
     {
       "trial": 2,
-      "project": "investwatch-proof-b7269df0c4a645",
-      "secondsToCases": 4.01,
+      "project": "investwatch-proof-3143d6a8f0a641",
+      "secondsToCases": 3.69,
       "cases": 17,
       "versions": 17,
       "semantic": {
@@ -45,19 +45,19 @@
       "resources": {
         "api": {
           "oomKilled": false,
-          "memoryPeakBytes": 58081280,
+          "memoryPeakBytes": 57724928,
           "restartCount": 0
         },
         "worker": {
           "oomKilled": false,
-          "memoryPeakBytes": 562548736,
+          "memoryPeakBytes": 569282560,
           "restartCount": 0
         }
       }
     },
     {
       "trial": 3,
-      "project": "investwatch-proof-d3bb6c4b254e40",
+      "project": "investwatch-proof-49e6afb6680747",
       "recovery": {
         "interrupted": true,
         "simulatedExpiry": true,
@@ -67,7 +67,7 @@
         "distinctCases": 17,
         "terminalScans": 1
       },
-      "secondsToCases": 4.63,
+      "secondsToCases": 4.92,
       "cases": 17,
       "versions": 17,
       "semantic": {
@@ -77,17 +77,17 @@
       "resources": {
         "api": {
           "oomKilled": false,
-          "memoryPeakBytes": 57581568,
+          "memoryPeakBytes": 57745408,
           "restartCount": 0
         },
         "worker": {
           "oomKilled": false,
-          "memoryPeakBytes": 552161280,
+          "memoryPeakBytes": 562089984,
           "restartCount": 0
         }
       }
     }
   ],
-  "gitAtEnd": "78ff5005b68f4ab641bb5bbf8f5b6de73d387f06",
-  "codeSha256AtEnd": "8df2ce71102f4ea7cc1e866e7d96133f852b0414748b0ee59f265e4ab7ede744"
+  "gitAtEnd": "59bf07c7484ce20d5eec2e9e4ecd01abb5c7278b",
+  "codeSha256AtEnd": "3190d8bcd63342de0a431149bd1e6bf9c0f13c76655f9b36625a8e4f89f71594"
 }
