@@ -680,5 +680,8 @@ def m2_asset(name: str):
 
 for route,folder in [("/evidence/browser",store.ROOT/"data/probe-snapshots/browser"),("/media",store.ROOT/"analysis/media")]:
     app.mount(route,StaticFiles(directory=folder,check_dir=False),name=route)
-web=store.ROOT/"web"
-app.mount("/",StaticFiles(directory=web/"dist" if (web/"dist/index.html").exists() else web,html=True,check_dir=False),name="desk")
+# In Compose the web service (nginx) serves the desk and proxies the API; INVESTWATCH_SERVE_WEB=0 leaves "/" unmounted
+# so the API answers 404 instead of 500 for paths it does not own. Default 1 keeps the local variant unchanged.
+if os.getenv("INVESTWATCH_SERVE_WEB","1")!="0":
+    web=store.ROOT/"web"
+    app.mount("/",StaticFiles(directory=web/"dist" if (web/"dist/index.html").exists() else web,html=True,check_dir=False),name="desk")
