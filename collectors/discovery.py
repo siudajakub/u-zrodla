@@ -510,6 +510,27 @@ register(Adapter("m3-offers", _m3_live, "Oferty doradcze M3 · lista ziaren", en
                  run_units_env="INVESTWATCH_M3_RUN_REQUESTS", run_units_default=60, own_network=True))
 
 
+DEMO_ALERT_URL = "https://www.bdm.pl/rachunek-emerytalny"
+
+
+def _demo_alert(ctx):
+    """One REAL saved M2 page (the market archive of 21 XI, referred with a high score) for the demo of the high_risk alert:
+    `POST /v1/scans {mode: replay, adapters: [demo-alert]}`. Never touches the network. The alert fires only when the case
+    is absent (see POST /v1/demo/alert/reset); a stored identical page changes nothing."""
+    from .m2_market import market_captures
+    captures, creators, _ = market_captures(mode="replay")
+    chosen = [c for c in captures if c["url"] == DEMO_ALERT_URL]
+    ids = {c.get("creatorId") for c in chosen}
+    status = {"id": "demo-alert", "name": "Alert pokazowy · jedna zapisana strona M2", "url": DEMO_ALERT_URL,
+              "status": "ok" if chosen else "empty", "count": len(chosen), "observedAt": ctx.clock(), "sampleDate": "2026-11-21",
+              "scope": "Zapisany odczyt strony z 21 XI (komputer i telefon); bez sieci"}
+    return {"creators": [c for c in creators if c["id"] in ids], "captures": chosen, "sources": [status]}
+
+
+register(Adapter("demo-alert", _demo_alert, "Alert pokazowy · zapisana strona M2", modes=("replay",), legacy=True,
+                 explicit_only=True, own_network=False))
+
+
 def _run(mode, previous, known_ids, fetch, clock, runner, options, only=None):
     adapters = active_adapters(mode, only, own_transport=fetch is safe_get or "youtube" in (options or {}))
     runner.plan(["discover:" + a.id for a in adapters])

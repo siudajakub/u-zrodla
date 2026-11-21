@@ -273,7 +273,8 @@ def build(row, owner=None):
         from collectors.m2_browser import refresh_from_worker
         refresh = lambda name, root: refresh_from_worker(name, root, chromium)
     proven_urls = apply_rendered(discovery, staged_captures(mode, store.STATE / "m2", refresh))
-    if mode == "replay":
+    alert_only = mode == "replay" and list(only or []) == ["demo-alert"]
+    if mode == "replay" and not alert_only:
         # The dated market archive of the M2 lane: rendered pages of registered firms, desktop and phone, no browser.
         from collectors.m2_market import market_captures
         proven_urls |= apply_rendered(discovery, market_captures(mode="replay"))
@@ -281,7 +282,7 @@ def build(row, owner=None):
     m3_known = {m3_domain(item) for item in discovery["captures"] if item.get("module") == "M3"}
     demos = [cap for cap in demo_captures()
              if (cap.get("module") != "M2" or cap["url"] not in proven_urls)
-             and (cap.get("module") != "M3" or cap.get("synthetic") or m3_domain(cap) not in m3_known)] if mode == "replay" else []
+             and (cap.get("module") != "M3" or cap.get("synthetic") or m3_domain(cap) not in m3_known)] if mode == "replay" and not alert_only else []
     captures=discovery["captures"]+demos
     from .enrich import enrich_media
     with store.connection() as db:

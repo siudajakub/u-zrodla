@@ -1459,6 +1459,23 @@ def module_queue_effect(db, module, threshold):
             "reviewQueueAtThreshold": now + len(gained) - len(lost), "changed": len(gained) + len(lost),
             "gained": gained[:50], "lost": lost[:50]}
 
+DEMO_ALERT_CASE = "web:www.bdm.pl/rachunek-emerytalny"
+DEMO_ALERT_TABLES = (("cases", "id"), ("versions", "id"), ("version_meta", "id"), ("history", "case_id"), ("discoveries", "case_id"),
+                     ("reach_samples", "case_id"), ("media_state", "case_id"), ("qualification_results", "case_id"))
+
+def demo_alert_state(db):
+    return {"case": DEMO_ALERT_CASE, "armed": db.execute("SELECT 1 FROM cases WHERE id=?", (DEMO_ALERT_CASE,)).fetchone() is None,
+            "trigger": {"method": "POST", "path": "/v1/scans", "body": {"mode": "replay", "adapters": ["demo-alert"], "requestId": "<nowy identyfikator>"}},
+            "reset": {"method": "POST", "path": "/v1/demo/alert/reset"}}
+
+def reset_demo_alert(db):
+    """Remove the one demo case (a saved real M2 page) so that the next `demo-alert` replay creates it again and raises
+    `high_risk` exactly once. Idempotent: a second reset removes nothing. Nothing else is touched."""
+    removed = db.execute("SELECT 1 FROM cases WHERE id=?", (DEMO_ALERT_CASE,)).fetchone() is not None
+    for table, column in DEMO_ALERT_TABLES:
+        db.execute(f"DELETE FROM {table} WHERE {column}=?", (DEMO_ALERT_CASE,))
+    return {**demo_alert_state(db), "removed": removed}
+
 def published_of(case):
     """Publication time; TikTok gives none, so the time derived from the video id stands in (flagged by the report)."""
     if case.get("publishedAt"):

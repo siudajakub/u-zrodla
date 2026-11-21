@@ -292,6 +292,18 @@ def scan(body:ScanRequest):
     except ValueError as e:
         raise HTTPException(409,str(e)) from e
 
+@app.get("/v1/demo/alert")
+def demo_alert_state():
+    """The scripted alert of the demo: is it armed (the saved M2 page is absent) and how to fire and reset it."""
+    with store.connection() as db:
+        return store.demo_alert_state(db)
+
+@app.post("/v1/demo/alert/reset")
+def demo_alert_reset():
+    """Arm the demo alert again (idempotent). Fire it with POST /v1/scans {mode: replay, adapters: [demo-alert]}."""
+    with store.connection(True) as db:
+        return store.reset_demo_alert(db)
+
 def settings_error(error):
     if isinstance(error,store.Conflict):
         raise HTTPException(409,str(error)) from error
