@@ -284,6 +284,184 @@
      "import": true
     }
    ]
+  },
+  {
+   "author": "Giełda Inwestycje Trading",
+   "availability": {
+    "observedAt": "2026-11-21T19:35:00+00:00",
+    "reason": null,
+    "state": "available"
+   },
+   "contentCompleteness": "full",
+   "contentHash": "2297b196255576bcc914ba36fdd273ba1c58741440e4405f4425dd8d784be036",
+   "creatorId": "youtube:UCh9IhKUDYhf0-IyJII0VClg",
+   "description": "Tutaj możecie zacząć inwestować i sam to też tutaj robię: https://freedom24.club/Gielda\n\n📚 Książka do kanału D. Heliosz \"Giełda, inwestycje, trading\" teraz z DARMOWĄ wysyłką:  https://sklep.pamietnikgieldowy.pl/produkt/gielda-inwestycje-trading/\n\nW większości przypadków za masowymi zwolnieniami stoi AI i naturalnie pojawiać się mogą pytania, czy to już AI staje się na tyle produktywne, że firmy technologiczne zaczynają redukować człowieka ze swoich struktur? A może AI to obecnie idealne wymówka dla wielu firm które mogą zwolnienia argumentować wdrażaniem AI, a w rzeczywistości niewiele mają z tym wspólnego? W dzisiejszym odcinku spróbuję przyjrzeć się temu i przedstawię mój pogląd bo rzeczywistość jak zwykle może być dużo bardziej skomplikowana. Zainteresowani? Ta zapraszam na odcinek.\n\n👉  Subskrybuj nasz kanał: https://www.youtube.com/channel/UCh9IhKUDYhf0-IyJII0VClg\n\n✉️ Współpraca: gieldainwestycjetrading@gmail.com\n\nBlog Pamiętnik Giełdowy: https://www.pamietnikgieldowy.pl/\n\n👉 Nasze social media:\nInstagram: https://www.instagram.com/gieldainwestycjetrading/\nFacebook: https://www.facebook.com/PamietnikGieldowy/\nFacebook: https://www.facebook.com/gieldainwestycjetrading\nTwitter: https://twitter.com/DanielHeliosz?\n\nWszystko co musicie wiedzieć o Freedom24 w jednym miejscu:\nhttp://youtube.com/post/Ugkx-MRVQK0a8ezFMMOnUhGqqaV-VPC45jlQ?si=rQDZ7j-8gOAdsauh\n\nOferta brokera Freedom24: https://www.youtube.com/watch?v=64izFEzy1J8&t=0s&ab_channel=Gie%C5%82daInwestycjeTrading\n\nZASTRZEŻENIE: Twój kapitał jest zagrożony. Przeszłe prognozy i wyniki nie są wiarygodnymi wskaźnikami przyszłych wyników. Przed dokonaniem jakiejkolwiek inwestycji konieczne jest przeprowadzenie własnej analizy. W razie potrzeby należy uważnie zasięgnąć niezależnej porady inwestycyjnej u certyfikowanego specjalisty.",
+   "id": "youtube:q7pHqpsve14",
+   "materialType": "youtube_data_api_title_description",
+   "module": "M1",
+   "observedAt": "2026-11-21T19:35:00+00:00",
+   "platform": "youtube",
+   "provenance": {
+    "mode": "live",
+    "observedAt": "2026-11-21T19:35:00+00:00",
+    "responseSha256": "413a45d948d2e65eee0a9fae820a75da6911c06ca9c5d82622538540edc3aede",
+    "scope": "youtube_data_api_title_description",
+    "sourceUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics%2CcontentDetails%2Cstatus%2CpaidProductPlacementDetails&id=lYps4WseWLM%2Cm0NBjoNQGTU%2CePfzHQVf-lc%2CWZmvKNBLXZs%2CdvL23rIbAaM%2C7ZhqQH7fjsw%2C02E5f_a1FOU%2CiK2TXhhE7y4%2Cnhfgy1ITJ0Q%2CnY229Xr1FUE%2CZy9E5IyXmaw%2CS6Vf2A369zI%2CQuE-v8Zpgjo%2Cq7pHqpsve14%2C2Fou-Kwa2uo%2CDiXrL4EvTj4%2CRVOwoPXLAYM%2C9h-x2auymYk%2C46Rqd4HTrGE%2CuiOiYEsgyLc%2C5OuFrlmcQ5E%2CmEzobIjQsG8%2CjC8B7v_FoPc%2CWD_lw9r0t80%2CHbieU1aGvAM%2CvUy5BNX-VWs%2Cl0Om2KHz27A%2CGDUUqjd4cjk%2CpJLp5lz1DNM%2CCycUldvTdCc%2Cnfu7lNhnQH8%2Cb_VBKKu7g9w%2C9-4GFGDVib4%2Cxd2bEFYuwRE&maxResults=50&key=REDACTED",
+    "truncated": false,
+    "fixture": "replay-media-extra.json",
+    "extraOrigin": "skan live 21 XI, źródło .runtime/s4-live",
+    "note": "Dołączone do archiwum 21 XI ze skanu live (próba S4): film, w którym podejrzenie z opisu (link firmy) obala oznaczenie współpracy w mowie. Nie jest wynikiem wyszukiwania zapisanego w replay.json.gz. Drugiego głosu (secondOpinion) brak: film nie był w pomiarze."
+   },
+   "publishedAt": "2026-06-03T13:15:02+00:00",
+   "title": "Inwestorzy ekscytują się wzrostami na giełdach, a spółki masowo zwalniają. Czy to zapowiedź spadków?",
+   "url": "https://www.youtube.com/watch?v=q7pHqpsve14",
+   "youtube": {
+    "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+    "defaultAudioLanguage": "pl",
+    "defaultLanguage": "pl",
+    "detectedLanguage": "pl",
+    "durationSec": 1150,
+    "isShort": false,
+    "languageMethod": "declared",
+    "languageStatus": "in_scope",
+    "liveBroadcastContent": "none",
+    "madeForKids": false,
+    "paidPromotionFlag": true,
+    "privacyStatus": "public",
+    "publishedAt": "2026-06-03T13:15:02Z",
+    "videoId": "q7pHqpsve14"
+   },
+   "reach": {
+    "asOf": "2026-11-21T19:35:00+00:00",
+    "metrics": {
+     "commentCount": {
+      "observedAt": "2026-11-21T19:35:00+00:00",
+      "source": "data_api",
+      "state": "observed",
+      "value": 32
+     },
+     "likeCount": {
+      "observedAt": "2026-11-21T19:35:00+00:00",
+      "source": "data_api",
+      "state": "observed",
+      "value": 547
+     },
+     "viewCount": {
+      "observedAt": "2026-11-21T19:35:00+00:00",
+      "source": "data_api",
+      "state": "observed",
+      "value": 12394
+     }
+    },
+    "primary": "viewCount",
+    "source": "data_api"
+   },
+   "discovery": [
+    {
+     "method": "fixture",
+     "adapter": "youtube-replay-extra",
+     "queryKind": "topic",
+     "query": "giełda",
+     "position": 26,
+     "page": 1,
+     "sourceId": "youtube-replay-extra",
+     "sourceUrl": null,
+     "observedAt": "2026-11-21T19:35:00+00:00",
+     "responseSha256": "8967564d58c906e38abc56efad4f28c8f6ca642b6c7d6cb10e78fa70c63452cb",
+     "reason": "dołączone ze skanu live 21 XI (.runtime/s4-live): wynik wyszukiwania giełda",
+     "quotaUnits": 0,
+     "import": true
+    }
+   ]
+  },
+  {
+   "author": "FXMAG - tłumaczymy świat finansów",
+   "availability": {
+    "observedAt": "2026-11-21T19:35:00+00:00",
+    "reason": null,
+    "state": "available"
+   },
+   "contentCompleteness": "full",
+   "contentHash": "5da1b8507a2659efe8fa1c9c0fd48e4438fa674fd333c7201b1a93fe4f4f87c3",
+   "creatorId": "youtube:UCtTpDSRTegHewCxP9GTUaXQ",
+   "description": "POBIERZ RAPORT O WYBORACH POŁÓWKOWYCH W USA https://geolink.xtb.com/P82TB \nSprawdź możliwość inwestowania w akcje i ETF-y bez prowizji w XTB: https://www.fxmag.pl/xtb\nRejestrując konto z kodem “FXMAG” otrzymasz darmowy kurs dla początkujących inwestorów.\nInwestowanie wiąże się z ryzykiem. Inwestuj odpowiedzialnie.\n\nStwórz własną markę kawy - https://caffedelmondo.pl/lp/privatelabele/?adasd=22 \nWyśmienita kawa i ekspres do kawy od polskiej palarni! Sprawdź Caffedelmondo! Z kodem FXMAG pierwsze 30 dni dzierżawy bezpłatne!  https://caffedelmondo.pl/content/58-kontakt?preview=true&id_employee=18&adtoken=9c2a32f6b4806081a659b58caef547ab&preview_id=58070101 \n\nWeź udział w Ogólnopolskim Badaniu Inwestorów od SII www.obi.sii.org.pl/ - będziemy wdzięczni za każdy głos! \n\nZapisz się do newslettera inwestycyjnego FXMAG - http://fxmag24.substack.com/ \n\nW materiale ma miejsce lokowanie: XTB oraz CaffeDelMondo. \n\nKontrakty CFD są złożonymi instrumentami i wiążą się z dużym ryzykiem szybkiej utraty środków pieniężnych z powodu dźwigni finansowej. 77% rachunków inwestorów detalicznych odnotowuje straty pieniężne w wyniku handlu kontraktami CFD u niniejszego dostawcy CFD (XTB S.A.). Zastanów się, czy rozumiesz, jak działają kontrakty CFD i czy możesz pozwolić sobie na wysokie ryzyko utraty pieniędzy. \n \nNajnowsze wiadomości ze świata finansów i gospodarki znajdziesz na https://www.fxmag.pl\n\n#fxmag #giełda #inwestowanie",
+   "id": "youtube:5OuFrlmcQ5E",
+   "materialType": "youtube_data_api_title_description",
+   "module": "M1",
+   "observedAt": "2026-11-21T19:35:00+00:00",
+   "platform": "youtube",
+   "provenance": {
+    "mode": "live",
+    "observedAt": "2026-11-21T19:35:00+00:00",
+    "responseSha256": "413a45d948d2e65eee0a9fae820a75da6911c06ca9c5d82622538540edc3aede",
+    "scope": "youtube_data_api_title_description",
+    "sourceUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics%2CcontentDetails%2Cstatus%2CpaidProductPlacementDetails&id=lYps4WseWLM%2Cm0NBjoNQGTU%2CePfzHQVf-lc%2CWZmvKNBLXZs%2CdvL23rIbAaM%2C7ZhqQH7fjsw%2C02E5f_a1FOU%2CiK2TXhhE7y4%2Cnhfgy1ITJ0Q%2CnY229Xr1FUE%2CZy9E5IyXmaw%2CS6Vf2A369zI%2CQuE-v8Zpgjo%2Cq7pHqpsve14%2C2Fou-Kwa2uo%2CDiXrL4EvTj4%2CRVOwoPXLAYM%2C9h-x2auymYk%2C46Rqd4HTrGE%2CuiOiYEsgyLc%2C5OuFrlmcQ5E%2CmEzobIjQsG8%2CjC8B7v_FoPc%2CWD_lw9r0t80%2CHbieU1aGvAM%2CvUy5BNX-VWs%2Cl0Om2KHz27A%2CGDUUqjd4cjk%2CpJLp5lz1DNM%2CCycUldvTdCc%2Cnfu7lNhnQH8%2Cb_VBKKu7g9w%2C9-4GFGDVib4%2Cxd2bEFYuwRE&maxResults=50&key=REDACTED",
+    "truncated": false,
+    "fixture": "replay-media-extra.json",
+    "extraOrigin": "skan live 21 XI, źródło .runtime/s4-live",
+    "note": "Dołączone do archiwum 21 XI ze skanu live (próba S4): film, w którym podejrzenie z opisu (link firmy) obala oznaczenie współpracy w mowie. Nie jest wynikiem wyszukiwania zapisanego w replay.json.gz. Drugiego głosu (secondOpinion) brak: film nie był w pomiarze."
+   },
+   "publishedAt": "2026-10-30T15:00:19+00:00",
+   "title": "POTĘŻNE TĄPNIĘCIE na giełdzie i NAJWIEKSZA kradzież krypto w historii. Intel, Google i Amazon toną!",
+   "url": "https://www.youtube.com/watch?v=5OuFrlmcQ5E",
+   "youtube": {
+    "channelId": "UCtTpDSRTegHewCxP9GTUaXQ",
+    "defaultAudioLanguage": "pl",
+    "defaultLanguage": "pl",
+    "detectedLanguage": "pl",
+    "durationSec": 1107,
+    "isShort": false,
+    "languageMethod": "declared",
+    "languageStatus": "in_scope",
+    "liveBroadcastContent": "none",
+    "madeForKids": false,
+    "paidPromotionFlag": true,
+    "privacyStatus": "public",
+    "publishedAt": "2026-10-30T15:00:19Z",
+    "videoId": "5OuFrlmcQ5E"
+   },
+   "reach": {
+    "asOf": "2026-11-21T19:35:00+00:00",
+    "metrics": {
+     "commentCount": {
+      "observedAt": "2026-11-21T19:35:00+00:00",
+      "source": "data_api",
+      "state": "observed",
+      "value": 48
+     },
+     "likeCount": {
+      "observedAt": "2026-11-21T19:35:00+00:00",
+      "source": "data_api",
+      "state": "observed",
+      "value": 537
+     },
+     "viewCount": {
+      "observedAt": "2026-11-21T19:35:00+00:00",
+      "source": "data_api",
+      "state": "observed",
+      "value": 49396
+     }
+    },
+    "primary": "viewCount",
+    "source": "data_api"
+   },
+   "discovery": [
+    {
+     "method": "fixture",
+     "adapter": "youtube-replay-extra",
+     "queryKind": "topic",
+     "query": "giełda",
+     "position": 33,
+     "page": 1,
+     "sourceId": "youtube-replay-extra",
+     "sourceUrl": null,
+     "observedAt": "2026-11-21T19:35:00+00:00",
+     "responseSha256": "8967564d58c906e38abc56efad4f28c8f6ca642b6c7d6cb10e78fa70c63452cb",
+     "reason": "dołączone ze skanu live 21 XI (.runtime/s4-live): wynik wyszukiwania giełda",
+     "quotaUnits": 0,
+     "import": true
+    }
+   ]
   }
  ]
 }

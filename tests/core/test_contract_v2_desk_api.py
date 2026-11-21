@@ -133,7 +133,7 @@ class ReplayMedia(StateCase):
 
 
 class ReplayEvent(unittest.TestCase):
-    PACK = "7M0rC6-Rueo AqXHkxDzSDI OIyPE0z2mng ZJrT-X08Xwc CDk20n4u9Kk -HpCSKp9bqk 9Fcwo1jlwe4 xtMqKkFO-0M yIbtMnfP25Q O5YmmKadQQw eQYmvRfHtr8 YQH4FEP9exI ePfzHQVf-lc o2GfnmVVkO8 _aqCM37gK1U p_ui_fqLdV0 i3QxMqyRlks".split()
+    PACK = "7M0rC6-Rueo AqXHkxDzSDI OIyPE0z2mng ZJrT-X08Xwc CDk20n4u9Kk -HpCSKp9bqk 9Fcwo1jlwe4 xtMqKkFO-0M yIbtMnfP25Q O5YmmKadQQw eQYmvRfHtr8 YQH4FEP9exI ePfzHQVf-lc o2GfnmVVkO8 _aqCM37gK1U p_ui_fqLdV0 i3QxMqyRlks reaI2uNoGSk ysRd-DFgqwo zsfT3OIO-9c 5e0D6XJUF84 q7pHqpsve14 5OuFrlmcQ5E".split()
 
     def test_the_replay_event_holds_every_film_of_the_media_pack_and_marks_the_ones_it_added(self):
         from collectors.discovery import ADAPTERS
@@ -141,7 +141,7 @@ class ReplayEvent(unittest.TestCase):
         by_id = {c["id"]: c for c in result["captures"]}
         self.assertEqual([v for v in self.PACK if "youtube:" + v not in by_id], [])
         extra = [c for c in result["captures"] if (c.get("provenance") or {}).get("fixture") == "replay-media-extra.json"]
-        self.assertEqual({c["id"][8:] for c in extra}, {"CDk20n4u9Kk", "-HpCSKp9bqk", "9Fcwo1jlwe4", "xtMqKkFO-0M", "YQH4FEP9exI"})
+        self.assertEqual({c["id"][8:] for c in extra}, {"CDk20n4u9Kk", "-HpCSKp9bqk", "9Fcwo1jlwe4", "xtMqKkFO-0M", "YQH4FEP9exI", "q7pHqpsve14", "5OuFrlmcQ5E"})
         creators = {c["id"] for c in result["creators"]}
         self.assertTrue(all(c["creatorId"] in creators for c in extra), "every added film has its creator")
         self.assertTrue(all(c["mode"] == "replay" and c["discovery"][0]["import"] for c in extra))
