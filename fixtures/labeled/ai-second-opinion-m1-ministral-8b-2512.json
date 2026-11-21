@@ -1,0 +1,517 @@
+{
+ "measurementOnly": true,
+ "backend": "openrouter",
+ "module": "m1",
+ "task": "m1_disclosure",
+ "model": "mistralai/ministral-8b-2512",
+ "labels": "etykiety agentów (Claude), nie ekspertów",
+ "runs": [
+  {
+   "promptVersion": "so-2",
+   "split": "all",
+   "measuredOn": "2026-11-21",
+   "endpointProvider": "Mistral",
+   "quantization": "unknown",
+   "pricePerMtok": {
+    "prompt": 0.15,
+    "completion": 0.15
+   },
+   "parameters": {
+    "temperature": 0,
+    "seed": 0,
+    "max_tokens": 600,
+    "structuredOutput": "json_schema strict",
+    "reasoning": "n/a"
+   },
+   "planned": 17,
+   "completed": 17,
+   "stopped": null,
+   "costUsd": 0.009887,
+   "items": [
+    {
+     "id": "youtube:-HpCSKp9bqk",
+     "group": "C-M1-DNARYNKOW-XTB",
+     "split": "heldout",
+     "inputSha": "8124debf52e164d1",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "Rejestrując się na XTB z kodem DNARYNKOW otrzymasz specjalny kurs zarządzania finansami od podstaw.",
+     "locator": {
+      "field": "description",
+      "lineId": "D2",
+      "seconds": null,
+      "time": null
+     },
+     "confidence": "wysoka",
+     "explanation": "W cytacie wyraźnie wskazano kod partnerski (DNARYNKOW) oraz korzyść dla twórcy, co stanowi ujawnienie współpracy z XTB.",
+     "errorCode": null,
+     "calls": 1,
+     "callStatuses": [
+      "ready"
+     ],
+     "cost": 0.000464,
+     "latencyMs": 1115.1,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:7M0rC6-Rueo",
+     "group": "C-M1-INWESTYCYJNAWYPRAWA-XTB",
+     "split": "tuning",
+     "inputSha": "3c1fcc22a0d0e055",
+     "truthPositive": true,
+     "rulesPositive": true,
+     "status": "ready",
+     "verdict": "brak_ujawnienia",
+     "modelPositive": true,
+     "quote": null,
+     "locator": {
+      "field": "transcript+description",
+      "windows": 4
+     },
+     "confidence": "średnia",
+     "explanation": "Przeczytano wszystkie fragmenty (4); żaden nie ujawnia współpracy z XTB.",
+     "errorCode": null,
+     "calls": 4,
+     "callStatuses": [
+      "ready",
+      "ready",
+      "ready",
+      "ready"
+     ],
+     "cost": 0.001132,
+     "latencyMs": 4196.2,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:9Fcwo1jlwe4",
+     "group": "C-M1-DNARYNKOW-FREEDOM24",
+     "split": "tuning",
+     "inputSha": "c1d5254f89e7681f",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "To wszystko, moi drodzy, w tym filmiku, który powstał dzięki partnerowi odcinka brokerowi Freedom.",
+     "locator": {
+      "field": "transcript",
+      "lineId": "T143",
+      "seconds": 2084.119,
+      "time": "34:44"
+     },
+     "confidence": "wysoka",
+     "explanation": "Autor jasno wskazuje na współpracę z firmą Freedom24, określając ją jako partnera odcinka.",
+     "errorCode": null,
+     "calls": 6,
+     "callStatuses": [
+      "ready",
+      "rejected",
+      "ready",
+      "ready",
+      "rejected",
+      "ready"
+     ],
+     "cost": 0.002622,
+     "latencyMs": 9324.1,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:AqXHkxDzSDI",
+     "group": "C-M1-FOREXMIND-XTB",
+     "split": "tuning",
+     "inputSha": "bbd8e68909bd26b4",
+     "truthPositive": true,
+     "rulesPositive": true,
+     "status": "ready",
+     "verdict": "brak_ujawnienia",
+     "modelPositive": true,
+     "quote": null,
+     "locator": {
+      "field": "transcript+description",
+      "windows": 2
+     },
+     "confidence": "średnia",
+     "explanation": "Przeczytano wszystkie fragmenty (2); żaden nie ujawnia współpracy z XTB.",
+     "errorCode": null,
+     "calls": 2,
+     "callStatuses": [
+      "ready",
+      "ready"
+     ],
+     "cost": 0.000277,
+     "latencyMs": 2881.2,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:CDk20n4u9Kk",
+     "group": "C-M1-COMPARICRYNKI-XTB",
+     "split": "heldout",
+     "inputSha": "b4b9ba4f990fd9cd",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "💰 Inwestowanie z XTB - Sprawdź XTB",
+     "locator": {
+      "field": "description",
+      "lineId": "D2",
+      "seconds": null,
+      "time": null
+     },
+     "confidence": "wysoka",
+     "explanation": "W cytacie wyraźnie występuje słowo „inwestowanie z XTB”, co wskazuje na płatną współpracę lub reklamę firmy XTB.",
+     "errorCode": null,
+     "calls": 1,
+     "callStatuses": [
+      "ready"
+     ],
+     "cost": 0.000321,
+     "latencyMs": 1085.4,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:O5YmmKadQQw",
+     "group": "C-M1-KRYPTOKROLESTWO-ETORO",
+     "split": "tuning",
+     "inputSha": "3487070a8ef61cc9",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "rejected",
+     "verdict": null,
+     "modelPositive": null,
+     "quote": null,
+     "locator": null,
+     "confidence": null,
+     "explanation": null,
+     "errorCode": "rejected:quote_not_in_line",
+     "calls": 3,
+     "callStatuses": [
+      "ready",
+      "rejected",
+      "ready"
+     ],
+     "cost": 0.001093,
+     "latencyMs": 3689.0,
+     "rawRejected": [
+      "{\n  \"verdict\": \"brak_ujawnienia\",\n  \"lineId\": \"\",\n  \"quote\": \"\",\n  \"confidence\": \"wysoka\",\n  \"explanation\": \"W żadnym fragmencie nie występuje słowo określające charakter relacji (np. reklama, sponsor, partner, współpraca, afiliacyjny, płatny) w kontekście współpracy z eToro.\"\n}",
+      "{\n  \"verdict\": \"ujawnione\",\n  \"lineId\": \"T8\",\n  \"quote\": \"Oczywiście jeżeli rejestrujcie się z linku partnerskiego to jak najbardziej was to uprawnia do bonusu. Dlatego oczywiście yyy tutaj gorąco zachęcam do przetestowania strony. Stąd też oczywiście materiały. No co mam powiedzieć? mistrz afiliacji we własnej osobie.\",\n  \"confidence\": \"wysoka\",\n  \"explanation\": \"Autor wyraźnie wskazuje na swoją rolę jako partnera (afiliata) eToro, używając słów „link partnerski” oraz „mistrz afiliacji we własnej osobie”.\"\n}",
+      "{\n  \"verdict\": \"brak_ujawnienia\",\n  \"lineId\": \"\",\n  \"quote\": \"\",\n  \"confidence\": \"wysoka\",\n  \"explanation\": \"W żadnym fragmencie nie występuje słowo określające charakter relacji (np. reklama, sponsor, partner, współpraca, afiliacyjny, płatny) w kontekście współpracy z eToro.\"\n}"
+     ]
+    },
+    {
+     "id": "youtube:OIyPE0z2mng",
+     "group": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+     "split": "heldout",
+     "inputSha": "4b6fa0a919687638",
+     "truthPositive": true,
+     "rulesPositive": true,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "🔹 XTB",
+     "locator": {
+      "field": "description",
+      "lineId": "D12",
+      "seconds": null,
+      "time": null
+     },
+     "confidence": "wysoka",
+     "explanation": "Wskazanie firmy XTB symbolem 🔹 w kontekście relacji handlowej (znany dowód relacji) sugeruje ujawnienie współpracy.",
+     "errorCode": null,
+     "calls": 1,
+     "callStatuses": [
+      "ready"
+     ],
+     "cost": 0.000146,
+     "latencyMs": 1167.8,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:YQH4FEP9exI",
+     "group": "C-M1-COMPARICRYNKI-XTB",
+     "split": "heldout",
+     "inputSha": "f8289bd3d43baa2b",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "💰 Inwestowanie z XTB - Sprawdź XTB",
+     "locator": {
+      "field": "description",
+      "lineId": "D2",
+      "seconds": null,
+      "time": null
+     },
+     "confidence": "wysoka",
+     "explanation": "W fragmencie zawarte jest wyraźne ujawnienie współpracy z XTB poprzez słowa 'Inwestowanie z XTB', co wskazuje na charakter reklamowy lub partnerski.",
+     "errorCode": null,
+     "calls": 1,
+     "callStatuses": [
+      "ready"
+     ],
+     "cost": 0.000335,
+     "latencyMs": 1203.9,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:ZJrT-X08Xwc",
+     "group": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+     "split": "heldout",
+     "inputSha": "b9cb85807bad9e29",
+     "truthPositive": true,
+     "rulesPositive": true,
+     "status": "ready",
+     "verdict": "brak_ujawnienia",
+     "modelPositive": true,
+     "quote": null,
+     "locator": {
+      "field": "transcript+description",
+      "windows": 2
+     },
+     "confidence": "średnia",
+     "explanation": "Przeczytano wszystkie fragmenty (2); żaden nie ujawnia współpracy z XTB.",
+     "errorCode": null,
+     "calls": 2,
+     "callStatuses": [
+      "ready",
+      "ready"
+     ],
+     "cost": 0.000193,
+     "latencyMs": 2206.8,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:_aqCM37gK1U",
+     "group": "C-M1-DNARYNKOW-SAXO",
+     "split": "tuning",
+     "inputSha": "a582fadb69a47002",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "Partnerem publikacji jest Saxo Bank, z którym serwis prowadzi płatną współpracę marketingową. #PłatnaWspółpraca / Saxo Bank",
+     "locator": {
+      "field": "description",
+      "lineId": "D2",
+      "seconds": null,
+      "time": null
+     },
+     "confidence": "wysoka",
+     "explanation": "W linii D2 jasno i bezpośrednio podano, że współpraca z Saxo Bankiem jest płatna oraz użyto hasztagu #PłatnaWspółpraca.",
+     "errorCode": null,
+     "calls": 1,
+     "callStatuses": [
+      "ready"
+     ],
+     "cost": 0.000395,
+     "latencyMs": 1225.7,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:ePfzHQVf-lc",
+     "group": "C-M1-DNARYNKOW-XTB",
+     "split": "heldout",
+     "inputSha": "6e170659793b143b",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "Partnerem tego odcinka jest XTB, polska aplikacja inwestycyjna, w której możecie kupić akcje i ETFY bez prowizji do 100 000 € obrotu miesięcznie.",
+     "locator": {
+      "field": "transcript",
+      "lineId": "T6",
+      "seconds": 98.119,
+      "time": "1:38"
+     },
+     "confidence": "wysoka",
+     "explanation": "Autor wyraźnie wskazał firmę XTB jako partnera odcinka, co stanowi jasne ujawnienie współpracy.",
+     "errorCode": null,
+     "calls": 2,
+     "callStatuses": [
+      "ready",
+      "ready"
+     ],
+     "cost": 0.000849,
+     "latencyMs": 3165.2,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:eQYmvRfHtr8",
+     "group": "C-M1-COMPARICRYNKI-XTB",
+     "split": "heldout",
+     "inputSha": "7892389966acf369",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "💰 Inwestowanie z XTB - Sprawdź XTB",
+     "locator": {
+      "field": "description",
+      "lineId": "D3",
+      "seconds": null,
+      "time": null
+     },
+     "confidence": "wysoka",
+     "explanation": "W linijce D3 wyraźnie wskazano współpracę z XTB, używając słowa 'Inwestowanie z XTB' oraz zachęty do sprawdzenia tej firmy.",
+     "errorCode": null,
+     "calls": 1,
+     "callStatuses": [
+      "ready"
+     ],
+     "cost": 0.000328,
+     "latencyMs": 1632.0,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:i3QxMqyRlks",
+     "group": "C-M1-BADZNABIEZACO-FREEDOM24",
+     "split": "tuning",
+     "inputSha": "4f2baae61c369342",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "*Materiał sponsorowany przez Freedom.",
+     "locator": {
+      "field": "description",
+      "lineId": "D20",
+      "seconds": null,
+      "time": null
+     },
+     "confidence": "wysoka",
+     "explanation": "W linii D20 autor jasno i bezpośrednio wskazuje, że materiał jest sponsorowany przez firmę Freedom24.",
+     "errorCode": null,
+     "calls": 1,
+     "callStatuses": [
+      "ready"
+     ],
+     "cost": 0.00022,
+     "latencyMs": 1129.1,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:o2GfnmVVkO8",
+     "group": "C-M1-DNARYNKOW-FREEDOM24",
+     "split": "tuning",
+     "inputSha": "b7163421543c3c29",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "sprawdzacie koniecznie Freedom partnera tego odcinka.",
+     "locator": {
+      "field": "transcript",
+      "lineId": "T5",
+      "seconds": 71.56,
+      "time": "1:11"
+     },
+     "confidence": "wysoka",
+     "explanation": "Autor wyraźnie wskazuje firmę Freedom24 jako partnera odcinka, co stanowi jasne ujawnienie współpracy.",
+     "errorCode": null,
+     "calls": 2,
+     "callStatuses": [
+      "ready",
+      "ready"
+     ],
+     "cost": 0.000855,
+     "latencyMs": 2596.8,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:p_ui_fqLdV0",
+     "group": "C-M1-KONOPSKYY-XTB",
+     "split": "tuning",
+     "inputSha": "24ffd9f883bde660",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "[reklama] Zarejestruj się w XTB z kodem KONOP i zgarnij darmowy kurs inwestowania od podstaw",
+     "locator": {
+      "field": "description",
+      "lineId": "D1",
+      "seconds": null,
+      "time": null
+     },
+     "confidence": "wysoka",
+     "explanation": "W cytacie wyraźnie występuje słowo 'reklama', co jednoznacznie wskazuje na ujawnienie współpracy z XTB.",
+     "errorCode": null,
+     "calls": 1,
+     "callStatuses": [
+      "ready"
+     ],
+     "cost": 0.000168,
+     "latencyMs": 1391.5,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:xtMqKkFO-0M",
+     "group": "C-M1-DETERMINACJA-XTB",
+     "split": "heldout",
+     "inputSha": "4a9338a615abce5b",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "#xtb #współpraca",
+     "locator": {
+      "field": "description",
+      "lineId": "D24",
+      "seconds": null,
+      "time": null
+     },
+     "confidence": "wysoka",
+     "explanation": "W linijce D24 autor jasno użył hasztagu #współpraca, co jednoznacznie wskazuje na ujawnienie współpracy z XTB.",
+     "errorCode": null,
+     "calls": 1,
+     "callStatuses": [
+      "ready"
+     ],
+     "cost": 0.000284,
+     "latencyMs": 1272.4,
+     "rawRejected": null
+    },
+    {
+     "id": "youtube:yIbtMnfP25Q",
+     "group": "C-M1-DIVIDENDINVESTOR-XTB",
+     "split": "tuning",
+     "inputSha": "e79c5de3727d4b04",
+     "truthPositive": false,
+     "rulesPositive": false,
+     "status": "ready",
+     "verdict": "ujawnione",
+     "modelPositive": false,
+     "quote": "✅Konto maklerskie, które polecam (XTB): https://link-pso.xtb.com/pso/WtGV9",
+     "locator": {
+      "field": "description",
+      "lineId": "D10",
+      "seconds": null,
+      "time": null
+     },
+     "confidence": "wysoka",
+     "explanation": "Autor wyraźnie używa słowa 'polecam' w kontekście konta maklerskiego XTB, co stanowi jasne ujawnienie współpracy.",
+     "errorCode": null,
+     "calls": 1,
+     "callStatuses": [
+      "ready"
+     ],
+     "cost": 0.000205,
+     "latencyMs": 1278.1,
+     "rawRejected": null
+    }
+   ]
+  }
+ ]
+}

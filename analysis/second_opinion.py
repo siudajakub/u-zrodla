@@ -40,7 +40,7 @@ import unicodedata
 from analysis import inference
 
 PROMPT_VERSION = "so-2"
-DEFAULT_MODEL = "qwen3.5:27b-q4_K_M"   # see docs/lanes/2026-11-21-fable-ai-drugi-glos.md
+DEFAULT_MODEL = "qwen3.8:27b-q4_K_M"   # best measured open-weights model, see docs/lanes/2026-11-21-fable-ai-drugi-glos.md
 ABSTAIN = "nieustalone"
 REVIEW_LABEL = "rozbieżność — do przeglądu"
 CONFIDENCE = ("niska", "średnia", "wysoka")
@@ -164,7 +164,7 @@ MODEL_CARDS = {
     "mistralai/ministral-8b-2512": {"name": "Ministral 3 8B", "license": "Apache-2.0", "ollama": "ministral-3:8b-instruct-2512-q4_K_M", "q4Gb": 6.0, "memoryGb": 7.5},
     "mistralai/ministral-3b-2512": {"name": "Ministral 3 3B", "license": "Apache-2.0", "ollama": "ministral-3:3b-instruct-2512-q4_K_M", "q4Gb": 3.0, "memoryGb": 4},
 }
-DEMO_DEFAULT_MODEL = "google/gemma-4-31b-it"   # recommendation from the measurement, see the lane record
+DEMO_DEFAULT_MODEL = "qwen/qwen3.8-27b"   # same weights as DEFAULT_MODEL, run through the API for the demo stand
 LEDGER = Path(__file__).resolve().parents[1] / ".runtime" / "second-opinion" / "demo-ledger.json"
 _demo_lock = threading.Lock()
 _demo = {"chat": None, "meta": None, "stopped": None}
