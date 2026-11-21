@@ -3,6 +3,7 @@ from collections import Counter
 from functools import lru_cache
 import hashlib
 import json
+import os
 import re
 from urllib.parse import urlsplit
 
@@ -545,6 +546,45 @@ def _shadow(capture, finding, semantic, variant=None):
                            "review": order["review"], "basis": order["basis"], "affectsDecision": False}
 
 
+def _annotate_on():
+    return os.getenv("INVESTWATCH_MODEL_ANNOTATE", "").strip().lower() in {"1", "on", "true"}
+
+
+def _annotation_wanted(finding):
+    """Only material of a human queue costs CPU: review (refer + eligible), ad register, M2 and M3 offers.
+    The test mirrors api.store.queues_of; a replay of thousands of other findings stays free."""
+    decision = finding.get("reviewDecision") if isinstance(finding.get("reviewDecision"), dict) else {}
+    return bool(finding.get("module") in ("M2", "M3")
+                or (finding.get("adRegistry") or {}).get("state") in ("included", "candidate")
+                or (decision.get("route") == "refer" and decision.get("queueEligible")))
+
+
+MODEL_UNAVAILABLE = {"task": "material_type", "engine": None, "status": "unavailable", "label": None, "confidence": None,
+                     "quote": None, "modelId": None, "version": None, "digest": None, "promptVersion": None,
+                     "latencyMs": None, "affectsDecision": False,
+                     "meaning": "Typ materiału opisuje treść dla analityka; nie zmienia skierowania ani punktów."}
+
+
+def _annotate(finding, capture):
+    """INVESTWATCH_MODEL_ANNOTATE=1: add the descriptive `model` field (affectsDecision=false) and its version to
+    analysisVersion.model. Route, score and queues stay as the rules set them; a failure is a status, never a scan error."""
+    try:
+        from .inference import annotate
+        annotated = annotate(finding, capture)
+        model = annotated["model"]
+        second = model.get("secondOpinion") or {}
+        version = {"materialType": model.get("version"),
+                   "secondOpinion": second.get("modelId") if second.get("status") not in ("disabled", None) else None}
+        model["affectsDecision"] = False
+    except Exception as exc:  # no weights, no service, a bug: "model niedostępny"
+        model = {**MODEL_UNAVAILABLE, "reason": f"model niedostępny ({type(exc).__name__})"}
+        annotated, version = dict(finding), None
+    result = {**finding, "model": model}
+    if isinstance(result.get("analysisVersion"), dict):
+        result["analysisVersion"] = {**result["analysisVersion"], "model": version}
+    return result
+
+
 def analyze(capture, *, semantic=None, variant=None):
     module = capture.get("module", "M1")
     score, summary, evidence, extra = {"M1": m1, "M2": m2, "M3": m3}[module](capture)
@@ -557,6 +597,8 @@ def analyze(capture, *, semantic=None, variant=None):
                     "rulesVersion": RULESET, **extra})
     if module == "M1":
         _shadow(capture, finding, semantic, variant)
+    if _annotate_on() and _annotation_wanted(finding):
+        finding = _annotate(finding, capture)
     return finding
 
 
