@@ -7,7 +7,7 @@ import sys
 from urllib.parse import urlsplit
 
 from .common import MAX_RESPONSE, SourceError, digest, safe_get, utc_now
-from .m2_archive import PUBLISHERS, REPLAY, SCHEMA, TARGETS, VIEWPORTS, encode, read_bundle, save_asset, write_once
+from .m2_archive import PUBLISHERS, SCHEMA, TARGETS, VIEWPORTS, encode, read_bundle, save_asset, write_once
 from .sites import SITES, one_hop_links, parse_page
 
 SUPPLEMENTAL = {

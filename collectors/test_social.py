@@ -1,6 +1,5 @@
 import gzip
 import json
-from pathlib import Path
 import unittest
 
 from collectors.adapter import AdapterContext, validate_adapter_result

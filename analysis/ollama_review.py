@@ -1,4 +1,4 @@
-"""Run the evidence-review prompt through an installed local Ollama model."""
+"""Run the evidence-review prompt through an installed local Ollama model (measurement CLI used by ops/mac/check.sh; the product path uses analysis/inference.py)."""
 import argparse
 from contextlib import closing
 from http.client import HTTPConnection, HTTPException

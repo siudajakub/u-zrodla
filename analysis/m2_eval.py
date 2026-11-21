@@ -12,7 +12,7 @@ import json
 from pathlib import Path
 
 from analysis.m2_card import STRICT_THRESHOLD, THRESHOLD, build
-from analysis.m2_rules import ORDER, PREMISE, OK, evaluate
+from analysis.m2_rules import ORDER, PREMISE, evaluate
 from collectors.m2_market import MARKET, market_captures, material
 
 ROOT = Path(__file__).resolve().parents[1]

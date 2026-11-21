@@ -1,4 +1,4 @@
-"""Recreate the team's synthetic clip with espeak-ng, Pillow and ffmpeg."""
+"""Recreate the team's synthetic clips in analysis/media/ with espeak-ng, Pillow and ffmpeg (manual dev tool, not used at runtime)."""
 import argparse
 from pathlib import Path
 import subprocess

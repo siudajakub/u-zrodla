@@ -1,5 +1,7 @@
 """Render discovered M2 pages in Chromium on a desktop and a phone viewport and archive the proof.
 
+Standalone CLI that produced data/probe-snapshots/m2/market/ (read by collectors/m2_market.py); the worker does not call it.
+
 Usage (heavy: one Chromium at a time, closed after every page):
   /path/to/playwright-python -m collectors.m2_capture \
       --discovery data/probe-snapshots/m2/market/discovery.json \

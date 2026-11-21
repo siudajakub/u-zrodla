@@ -1,5 +1,4 @@
 """Synthetic positive, negative and not-applicable/no-data cases for each of the 19 UKNF M2 criteria."""
-import re
 import unittest
 
 from analysis.m2_card import build, card

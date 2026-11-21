@@ -9,7 +9,7 @@ by a transparent score over the address and the anchor text. robots.txt is honou
 requests to one host are spaced by at least MIN_DELAY seconds.
 """
 import argparse
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from html.parser import HTMLParser
 import json
 from pathlib import Path

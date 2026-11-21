@@ -20,7 +20,7 @@ import re
 import time
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
-from .common import MAX_TEXT, SourceError, capture, digest, open_url, public_link, source_result, utc_now
+from .common import SourceError, capture, open_url, public_link, source_result
 from .social import _firm_index
 
 GRAPH = "https://graph.facebook.com/v21.0/ads_archive"

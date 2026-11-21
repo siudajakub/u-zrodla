@@ -1,4 +1,4 @@
-"""Opt-in comparison of one public InvestWatch capture through OpenRouter."""
+"""Opt-in comparison of one public InvestWatch capture through OpenRouter (measurement only: tools/measure_*, ops/review; not imported by api/ or engine)."""
 
 import argparse
 from decimal import Decimal, InvalidOperation

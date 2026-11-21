@@ -1,6 +1,5 @@
 """Offline tests for the YouTube adapter on recorded-shape responses (no network)."""
 
-from copy import deepcopy
 import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -9,8 +8,8 @@ from unittest.mock import patch
 from urllib.parse import parse_qs, urlsplit
 
 from . import youtube
-from .youtube import (Context, QUERIES, description_signals, detect_language, discover, flag_candidates, key_id, load_key,
-                      load_keys, rank_videos, replay)
+from .youtube import (Context, QUERIES, description_signals, detect_language, discover, key_id, load_key,
+                      load_keys, replay)
 
 KEY = "AIzaTESTKEYtestkeyTESTKEYtestkey12345"
 NOW = "2026-11-21T19:00:00+00:00"

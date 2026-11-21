@@ -30,7 +30,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode, urlsplit
 from urllib.request import Request, urlopen
 
-from .common import MAX_TEXT, SourceError, capture, public_link, utc_now
+from .common import SourceError, capture, public_link, utc_now
 from .meta_ads import relate
 from .social import firm_signals, _firm_index
 

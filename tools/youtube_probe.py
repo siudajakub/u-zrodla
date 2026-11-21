@@ -26,7 +26,7 @@ import re
 import sys
 import time
 from urllib.error import HTTPError, URLError
-from urllib.parse import parse_qs, urlencode, urlsplit
+from urllib.parse import urlencode, urlsplit
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree
 
