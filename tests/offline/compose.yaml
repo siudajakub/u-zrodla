@@ -1,0 +1,17 @@
+# Overlay for the isolated offline verification project.
+x-proof: &proof
+  restart: "no"
+  cpus: 1
+  volumes:
+    - ${INVESTWATCH_PROOF_STATE:?}:/data
+    - ${INVESTWATCH_PROOF_WATCH:?}:/app/.runtime/watch:ro
+  environment:
+    INVESTWATCH_DISCOVERY_INTERVAL: "0"
+services:
+  api:
+    <<: *proof
+  worker:
+    <<: *proof
+networks:
+  default:
+    internal: true
