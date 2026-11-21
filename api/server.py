@@ -460,7 +460,12 @@ def case_reach(key:str):
 @app.get("/v1/cases/{key:path}")
 def case(key:str,schema:int|None=Query(None,ge=1,le=2),request:Request=None):
     with store.connection() as db:
-        return store.case_dict(db,get_case(db,key),schema=wanted_schema(request,schema))
+        chosen=wanted_schema(request,schema)
+        card=store.case_dict(db,get_case(db,key),schema=chosen)
+    if chosen>=2:
+        from .card_view import card_view
+        return card_view(card)
+    return card
 
 @app.patch("/v1/cases/{key:path}")
 def decision(key:str,body:Decision,request:Request=None):

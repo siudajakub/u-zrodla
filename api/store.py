@@ -45,6 +45,21 @@ CREATE TABLE IF NOT EXISTS events (
 );
 """
 
+TOKEN_PATH = re.compile(r"(?:~|/home/[^/\s\"]+)/\.config/investwatch/[\w.-]+")
+HOME_PREFIX = re.compile(r"/home/[^/\s\"]+/")
+
+def scrub(value):
+    """No local file paths in an API answer: a token file is named "plik tokenu poza repozytorium", a path inside the
+    repository is shown relative to it, any other home directory is cut."""
+    if isinstance(value, str):
+        value = TOKEN_PATH.sub("plik tokenu poza repozytorium", value).replace(str(ROOT) + "/", "")
+        return HOME_PREFIX.sub("", value)
+    if isinstance(value, dict):
+        return {k: scrub(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [scrub(v) for v in value]
+    return value
+
 def utc():
     return datetime.now(timezone.utc).isoformat(timespec="milliseconds")
 
@@ -1352,7 +1367,34 @@ def firm_of(case):
     name,_=_firm_cells(case)
     return name or None
 
-def summary_of_case(case, threshold=60):
+def clean_firm(name):
+    """The KNF copy of 21 XI lost the first letter of one word ("... S.A.) iuro Maklerskie PEKAO"): restore it for display."""
+    return re.sub(r"\)\s+iuro\b",") Biuro",name) if isinstance(name,str) else name
+
+def firm_names(case):
+    """(short trade name, full registry name) of the firm of a row; the short one is the display name."""
+    module=case.get("module","M1")
+    if module=="M3":
+        name=m3_report_cells(case)["podmiot"] or None
+        return name,name
+    if module=="M2":
+        card=case.get("m2Card") if isinstance(case.get("m2Card"),dict) else {}
+        firm=card.get("firm") if isinstance(card.get("firm"),dict) else {}
+        legal=clean_firm(firm.get("name") or case.get("legalName") or None)
+        return firm.get("brand") or legal or case.get("brand") or case.get("creatorName") or None, legal
+    relation=case.get("adRelationship") if isinstance(case.get("adRelationship"),dict) else {}
+    firm=relation.get("firm") if isinstance(relation.get("firm"),dict) else {}
+    legal,_=_firm_cells(case)
+    return firm.get("mention") or case.get("brand") or legal or None, legal or None
+
+def clean_title(title):
+    """A title without the separator that a cut left at its end ("Rachunek IKE -")."""
+    return re.sub(r"[\s\-–—|·:,;]+$","",title).strip() if isinstance(title,str) else title
+
+def summary_of_case(case, threshold=60, thresholds=None):
+    module_threshold=(thresholds or {}).get(MODULE_VARIANT.get(case.get("module")))
+    band_threshold=module_threshold if module_threshold is not None else threshold
+    short,legal=firm_names(case)
     decision=case.get("reviewDecision") if isinstance(case.get("reviewDecision"),dict) else {}
     active=case.get("activeVariant") or ANALYSIS_VARIANT
     chosen=variant_view(case,active,threshold)
@@ -1363,11 +1405,11 @@ def summary_of_case(case, threshold=60):
     registry=case.get("adRegistry") if isinstance(case.get("adRegistry"),dict) else {}
     reasons=decision.get("reasons") or []
     coverage=case.get("coverage") if isinstance(case.get("coverage"),dict) else {}
-    return {"id":case["id"],"title":case.get("title"),"module":case.get("module"),"platform":case.get("platform"),
+    return {"id":case["id"],"title":clean_title(case.get("title")),"module":case.get("module"),"platform":case.get("platform"),
             "creatorId":case.get("creatorId"),"creatorName":case.get("creatorName") or case.get("author"),"publishedAt":case.get("publishedAt"),
             "observedAt":case.get("observedAt"),"status":case["status"],"revision":case["revision"],"version":case.get("version"),
             "origin":case.get("origin"),"importLabel":case.get("importLabel"),"route":case.get("route"),"reviewScore":chosen["value"],
-            "band":band_of(chosen["value"],threshold),"completeReason":decision.get("completeReason"),
+            "band":band_of(chosen["value"],band_threshold),"completeReason":decision.get("completeReason"),
             "firstReason":reasons[0] if reasons else None,
             "score":case.get("score"),"queueEligible":case.get("queueEligible"),"adRegistry":registry.get("state"),
             "adRegistryInfo":{"state":registry.get("state"),"summary":registry.get("summary"),
@@ -1376,7 +1418,8 @@ def summary_of_case(case, threshold=60):
             "transcriptState":((coverage.get("modalities") or {}).get("transcript") or {}).get("state"),
             "queues":case["queues"],"pendingReReview":case["pendingReReview"],"reviewStale":case["reviewStale"],
             "needsRecalc":case.get("needsRecalc"),"priority":case.get("priority"),"reason":reason,
-            "firm":firm_of(case),"publishedAtDerived":case.get("publishedAtDerived"),"publishedAtBasis":published_of(case)[1],
+            "firm":short,"firmShort":short,"firmLegal":legal,"licensed":(bool((case.get("identity") or {}).get("licensed")) if case.get("module")=="M3" else None),
+            "publishedAtDerived":case.get("publishedAtDerived"),"publishedAtBasis":published_of(case)[1],
             "firstMoment":moment,"lastDecision":case.get("lastDecision"),"url":case.get("url")}
 
 def creator_names(db):
@@ -1486,7 +1529,7 @@ def published_of(case):
     return None, None
 
 def filter_cases(items, *, module=None, creator=None, since=None, until=None, min_score=None, q=None, platform=None,
-                 band=None, route=None, status=None, date_field="observedAt", variant="rules_1_2", threshold=60):
+                 band=None, route=None, status=None, date_field="observedAt", variant="rules_1_2", threshold=60, thresholds=None):
     """The filters shared by the queues and the report: module, platform, date, risk (score, band), route, status."""
     if module:
         items=[c for c in items if c.get("module")==module]
@@ -1500,7 +1543,10 @@ def filter_cases(items, *, module=None, creator=None, since=None, until=None, mi
     if status:
         items=[c for c in items if c.get("status")==status]
     if band:
-        items=[c for c in items if band_of(variant_view(c,variant,threshold)["value"],threshold)==band]
+        def band_threshold(c):
+            own=(thresholds or {}).get(MODULE_VARIANT.get(c.get("module")))
+            return threshold if own is None else own
+        items=[c for c in items if band_of(variant_view(c,variant,threshold)["value"],band_threshold(c))==band]
     def when(c):
         return published_of(c)[0] if date_field=="publishedAt" else c.get("observedAt")
     if since:
@@ -1528,7 +1574,7 @@ def queue_list(db, name, *, limit=50, cursor=None, module=None, creator=None, si
         items=[c for c in items if (c.get("adRegistry") or {}).get("state")==want]
     items=filter_cases(items,module=module,creator=creator,since=since,until=until,min_score=min_score,q=q,platform=platform,
                        band=band,route=route,date_field=date_field,variant=settings["variant"],
-                       threshold=settings["thresholds"].get(settings["variant"],60))
+                       threshold=settings["thresholds"].get(settings["variant"],60),thresholds=settings["thresholds"])
     def score(c):
         view=variant_view(c,settings["variant"],60)["value"]
         return view if isinstance(view,(int,float)) else -1
@@ -1547,7 +1593,7 @@ def queue_list(db, name, *, limit=50, cursor=None, module=None, creator=None, si
     start=int(cursor or 0)
     page=items[start:start+limit]
     scan=db.execute("SELECT id,status,updated FROM scans ORDER BY created DESC LIMIT 1").fetchone()
-    return {"items":[summary_of_case(c,settings["thresholds"].get(settings["variant"],60)) for c in page],"total":len(items),
+    return {"items":[summary_of_case(c,settings["thresholds"].get(settings["variant"],60),settings["thresholds"]) for c in page],"total":len(items),
             "nextCursor":str(start+limit) if start+limit<len(items) else None,"counts":counts,
             "threshold":{"variant":settings["variant"],**(threshold_current(db,settings["variant"]) or {})},
             "asOf":utc(),"lastScan":None if scan is None else {"id":scan["id"],"status":scan["status"],"updatedAt":scan["updated"]}}
@@ -1916,10 +1962,14 @@ def state(schema=2, compact=False, findings=True):
         active=settings["variant"]
         queue_numbers=queue_counts(cases) if findings else counts_of(db)
         funnel=funnel_of(cases,settings,queue_numbers) if findings else funnel_cached(db,queue_numbers)
-        return {"creators":creators,"funnel":funnel,"sources":sources,"sourceHealth":health,"sourceState":[{k:v for k,v in x.items() if k!="cursor"} for x in states.values()],"findings":cases,"scans":scans,
+        result={"creators":creators,"funnel":funnel,"sources":sources,"sourceHealth":health,"sourceState":[{k:v for k,v in x.items() if k!="cursor"} for x in states.values()],"findings":cases,"scans":scans,
                 "events":events,"schema":{**schema_info(db),"views":[1,2],"served":schema},"analysisCurrent":{**current,"variant":active},
                 "queues":queue_numbers,"threshold":{"variant":active,**(threshold_current(db,active) or {})},
                 "qualification":settings["qualification"],"recompute":recompute_status(db),"semantic":semantic_status(),**scan_mode(db),**extra}
+        for name in ("sources","sourceHealthDetail","sourceState","semantic","scans","events"):
+            if name in result:
+                result[name]=scrub(result[name])
+        return result
 
 def scan_detail(db,key):
     row=db.execute("SELECT * FROM scans WHERE id=?",(key,)).fetchone()

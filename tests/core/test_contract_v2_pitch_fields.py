@@ -1,4 +1,5 @@
 """Fields the pitch needs from the desk (lane H): funnel, proofPath, scanMode and scanLabel in the overview. No network."""
+import json
 from pathlib import Path
 import unittest
 
@@ -61,6 +62,19 @@ class Overview(StateCase):
                                        "heldBySpeechGate", "byModule", "byPlatform"})
         self.assertEqual(funnel["byModule"]["M1"], funnel["materials"] - funnel["byModule"]["M2"] - funnel["byModule"]["M3"])
         self.assertEqual(set(funnel["explainedAutomatically"]), {"bySpeech", "byPlatformFlag", "byFrame", "byDescription"})
+
+
+class NoLocalPaths(StateCase):
+    def test_scrub_hides_token_files_and_home_directories(self):
+        text = "zapisać go w ~/.config/investwatch/meta.token (tryb 600); paczka /home/ktos/projects/x/.runtime/replay-media/2026"
+        out = store.scrub({"nextStep": text, "list": [str(store.ROOT) + "/.runtime/semantic"]})
+        self.assertNotIn("/home/", json.dumps(out))
+        self.assertNotIn(".config", json.dumps(out))
+        self.assertIn("plik tokenu poza repozytorium", out["nextStep"])
+        self.assertEqual(out["list"], [".runtime/semantic"])
+
+    def test_the_overview_has_no_home_path(self):
+        self.assertNotIn("/home/", json.dumps(store.state(2, False, False), default=str))
 
 
 class ProbeFrames(unittest.TestCase):
