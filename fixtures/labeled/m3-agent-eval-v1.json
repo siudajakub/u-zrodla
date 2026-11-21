@@ -1,0 +1,98 @@
+{
+ "n": 31,
+ "missingLabels": [],
+ "refer": {
+  "TP": 0,
+  "FP": 3,
+  "TN": 27,
+  "FN": 1,
+  "cost_2FN_plus_FP": 5,
+  "errors": [
+   {
+    "entityId": "m3:mbank.pl",
+    "route": "refer",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:erste.pl",
+    "route": "refer",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:tomaszkuprasz.pl",
+    "route": "refer",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:rdmwm.pl",
+    "route": "complete",
+    "label": "refer"
+   }
+  ]
+ },
+ "refer_or_complete": {
+  "TP": 4,
+  "FP": 9,
+  "TN": 16,
+  "FN": 2,
+  "cost_2FN_plus_FP": 13,
+  "errors": [
+   {
+    "entityId": "m3:mbank.pl",
+    "route": "refer",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:erste.pl",
+    "route": "refer",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:deriv.com",
+    "route": "no_signal",
+    "label": "complete"
+   },
+   {
+    "entityId": "m3:biznesradar.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:strefainwestorow.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:tomaszkuprasz.pl",
+    "route": "refer",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:familywm.pl",
+    "route": "no_signal",
+    "label": "complete"
+   },
+   {
+    "entityId": "m3:pwm.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:kursyszkolenia24.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:gpwalert.com",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:akademiaplanowaniafinansowego.pl",
+    "route": "complete",
+    "label": "no_signal"
+   }
+  ]
+ },
+ "agreementExactRoute": 19
+}
