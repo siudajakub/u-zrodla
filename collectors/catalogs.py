@@ -258,3 +258,64 @@ def read_peertube(query, fetch, clock=utc_now):
     result["indexedTotal"] = data["total"]
     result["creatorIds"] = list(creators)
     return list(creators.values()), list(captures.values()), result
+
+
+# --- M3: seeds for advisory offers -----------------------------------------------------------------
+# A seed is a firm domain found in a public catalogue or a recorded search result. Press, regulators,
+# rankings and foreign pages are dropped; one seed per site keeps the deep result link as an offer hint.
+
+import json as _json
+from pathlib import Path as _Path
+
+M3_NOT_FIRMS = {
+    "analizy.pl", "bank.pl", "knf.gov.pl", "bip.knf.gov.pl", "parkiet.com", "money.pl", "bankier.pl", "forbes.pl",
+    "icobench.com", "takeprofitapp.com", "wprost.pl", "infor.pl", "linkedin.com", "facebook.com", "youtube.com",
+    "gpw.pl", "gov.pl", "esma.europa.eu", "udemy.com", "artykul.com.pl", "mfiles.pl", "krs-pobierz.pl",
+}
+M3_SEED_QUERIES = (
+    "wealth management", "family office", "doradca inwestycyjny", "niezależny doradca finansowy",
+    "opieka nad portfelem", "sygnały inwestycyjne", "portfel modelowy abonament", "grupa premium co kupić",
+)
+
+
+def _registrable(host):
+    host = (host or "").lower().removeprefix("www.")
+    parts = host.split(".")
+    return ".".join(parts[-3:]) if len(parts) >= 3 and parts[-2] in ("com", "org", "net", "gov") else ".".join(parts[-2:])
+
+
+def m3_seed_allowed(url):
+    """A firm page: https, not press, a regulator or a document. The market axis later judges Poland."""
+    if not public_link(url):
+        return False
+    parts = urlsplit(url)
+    host = parts.hostname.lower()
+    if _registrable(host) in M3_NOT_FIRMS or host in M3_NOT_FIRMS:
+        return False
+    if re.search(r"\.(?:pdf|docx?|xlsx?)$", parts.path, re.I):
+        return False
+    # Foreign-language paths of an international site are not an offer for Poland.
+    return not re.search(r"/(?:en|de|en_us|en_gb)(?:/|$)", parts.path, re.I) or host.endswith(".pl")
+
+
+def load_m3_seeds(path):
+    """Read recorded search results or catalogue rows and return one seed per firm site, in order."""
+    data = _json.loads(_Path(path).read_text(encoding="utf-8"))
+    seeds, seen = [], set()
+    for query in data.get("queries", []):
+        for rank, url in enumerate(query.get("results", []), 1):
+            if not m3_seed_allowed(url):
+                continue
+            parts = urlsplit(url)
+            site = _registrable(parts.hostname)
+            if site in seen:
+                continue
+            seen.add(site)
+            deep = parts.path.strip("/") and not re.search(r"/(?:pl|pl_pl)/?$", parts.path)
+            seeds.append({
+                "url": f"https://{parts.hostname}/", "offerUrl": url if deep else None, "label": site,
+                "discoveredVia": f"Wynik wyszukiwania · {query['query']}",
+                "discovery": {"queryId": query.get("id"), "query": query["query"], "rank": rank, "resultUrl": url,
+                              "observedAt": data.get("observedAt"), "source": str(path)},
+            })
+    return seeds

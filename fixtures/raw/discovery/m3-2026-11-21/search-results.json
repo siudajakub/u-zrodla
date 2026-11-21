@@ -1,0 +1,23 @@
+{
+ "note": "Wyniki wyszukiwania wykonanego 21.11.2026 przez agenta F narzędziem WebSearch (wyszukiwarka udostępniona agentowi; produkt nie ma klucza wyszukiwarki). Zapisano zapytanie i adresy wyników w kolejności zwrócenia. Do odczytu wybrano polskie strony podmiotów z ofertą usług, a nie artykuły prasowe ani urzędowe PDF. Produkt odczytuje ten plik jako źródło ziaren; bieżące wyszukiwanie w produkcie wymaga dostawcy z API i zgodnymi warunkami.",
+ "observedAt": "2026-11-21",
+ "rejectedSources": [
+  {"source": "pkt.pl (WeNet)", "reason": "Regulamin zabrania generowania zapytań do wyszukiwarki i bazy przez oprogramowanie. Jedna strona wyników pobrana przy sprawdzaniu, odrzucona i nieużyta."},
+  {"source": "panoramafirm.pl", "reason": "Ochrona antybotowa (wyzwanie Anubis); nie obchodzimy zabezpieczeń."},
+  {"source": "aleo.com", "reason": "HTTP 403 już dla robots.txt."},
+  {"source": "Wikidata SPARQL (branże wealth/asset/investment management, Polska)", "reason": "Warunki pozwalają (CC0), ale zapytanie zwróciło 0 podmiotów."},
+  {"source": "zfdf.pl, znif.pl, api.marginalia.nu", "reason": "Brak połączenia z hosta (DNS lub zerwane połączenie)."}
+ ],
+ "queries": [
+  {"id": "q-member", "query": "lista członków stowarzyszenie niezależnych doradców finansowych wealth management family office Polska", "results": ["https://www.analizy.pl/puls-rynku/29524/zwiazek-niezaleznych-instytucji-finansowych-przystepuje-do-izfia", "https://www.knf.gov.pl/knf/pl/komponenty/img/Family_office_87378.pdf", "https://bank.pl/?p=401804"]},
+  {"id": "q-independent", "query": "\"niezależny doradca inwestycyjny\" opieka nad portfelem klienta indywidualnego oferta", "results": ["https://www.mbank.pl/private-banking/zarzadzanie-majatkiem/indywidualne-doradztwo-inwestycyjne/", "https://www.mbank.pl/private-banking/zarzadzanie-majatkiem/doradztwo-inwestycyjne/", "https://www.knf.gov.pl/knf/pl/komponenty/img/Stanowisko_UKNF_ws_doradztwa_inwestycyjnego.pdf", "https://www.erste.pl/klient-indywidualny/oszczednosci-i-inwestycje/doradztwo-inwestycyjne"]},
+  {"id": "q-family", "query": "family office Polska usługi zarządzanie majątkiem rodzinnym doradztwo", "results": ["https://grantthornton.pl/usluga/kancelaria-prawna/family-office/", "https://www.ey.com/pl_pl/services/family-office", "https://www.mbank.pl/private-banking/family-office"]},
+  {"id": "q-signals", "query": "sygnały inwestycyjne subskrypcja portfel modelowy akcje co kupić płatna grupa", "results": ["https://ppcg.com.pl/portfele-inwestycyjne/", "https://ppcg.com.pl/abonament/", "https://ppcg.com.pl/wykup-premium/", "https://deriv.com/pl/mt5-trading-signals", "https://www.biznesradar.pl/premium/brplus", "https://strefainwestorow.pl/premium"]},
+  {"id": "q-adviser", "query": "doradca finansowy pomogę dobrać fundusze inwestycyjne indywidualnie do Twoich celów konsultacja", "results": ["https://imercado.pl/doradztwo-inwestycyjne", "https://www.tomaszkuprasz.pl/", "https://phinance.pl/jak-moze-ci-pomoc-doradca-finansowy-i-czemu-warto-skorzystac-z-jego-uslug-sprawdz/", "https://www.spolkawsingapurze.pl/doradca-finansowy-kompleksowe-doradztwo-finansowe-i-inwestycyjne/"]},
+  {"id": "q-wealth", "query": "\"wealth management\" Warszawa butik doradczy dla zamożnych klientów inwestycje portfel", "results": ["https://annamariapanasiuk.com/wealth-management/", "https://rdmwm.pl/", "https://wealthmanagement.com.pl/", "https://familywm.pl/", "https://pwm.pl/"]},
+  {"id": "q-mentoring", "query": "mentoring inwestycyjny kurs giełdowy grupa premium alerty kupna akcji spółek GPW", "results": ["https://www.kursyszkolenia24.pl/inwestor_rynku_kapitalowym.php", "https://www.inwestowaniegpw.pl/", "https://kursnagielde.pl/", "https://www.doradca.tv/szkola-gieldowa-podstawy-inwestowania/", "https://gpwalert.com/"]},
+  {"id": "q-forex", "query": "sygnały forex CFD grupa telegram polska abonament trader", "results": ["https://icobench.com/pl/akademia/najlepsze-grupy-telegram-dla-sygnalow-forex/", "https://takeprofitapp.com/pl/learn/aplikacja-trading-z-sygnalami-pl-2026"]},
+  {"id": "q-feeonly", "query": "niezależne doradztwo finansowe dla osób prywatnych inwestowanie oszczędności plan finansowy fee-only Polska", "results": ["https://akademiaplanowaniafinansowego.pl/doradztwo-finansowe-w-polsce/", "https://niezalezny.expert/", "https://phinance.pl/"]},
+  {"id": "q-mfo", "query": "multi family office Polska firma zarządzanie aktywami rodzin inwestycje alternatywne doradztwo", "results": ["https://familyoffice.com.pl/", "https://family-office.pl/en/home/", "https://zpi-fo.pl/", "https://mklegal.eu/doradztwo-strategiczne-dla-firm-i-wlascicieli/family-office/", "https://zwyrtek.pl/family-office/", "https://niezaleznydoradca.pl/family-office-koszt-majatku-struktura/"]}
+ ]
+}
