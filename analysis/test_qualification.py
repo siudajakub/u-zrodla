@@ -748,5 +748,64 @@ class HumanWording(unittest.TestCase):
         self.assertNotIn("naruszeni", joined.lower())
 
 
+class LanguageScope(unittest.TestCase):
+    """Owner decision of 21 XI: only Polish material is in scope. Records taken from the live trial (s4-live)."""
+    XTB_IT = ("▶️contatto: becurious.business@gmail.com \n\nServizi che uso e consiglio\nBroker\n✅XTB: https://link-pso.xtb.com/pso/kuTy7\n\n"
+              "La Norvegia è uno dei Paesi più ricchi al mondo e possiede il fondo sovrano più grande della storia.")
+    ETORO_PL = ("► Link do eToro z 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca "
+                "wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\n"
+                "W tym kompletnym poradniku krok po kroku dla początkujących dowiesz się, jak kupować i sprzedawać ETF-y na platformie eToro.")
+    IBKR_EN = ("Finally AI can trade your Interactive Brokers Stocks account with amazing results.\n"
+               "✪ IBKR (affiliate link): https://ibkr.com/referral/mihail314\n✪ Claude: https://claude.ai")
+    UNAVAILABLE = {"transcript": {"state": "unavailable", "source": "none", "reason": "brak napisów po polsku", "windows": []}}
+
+    def video(self, vid, title, description, language, **extra):
+        youtube = {"videoId": vid, "detectedLanguage": language, "languageMethod": "declared",
+                   "defaultLanguage": language, "defaultAudioLanguage": language,
+                   "languageStatus": "in_scope" if language == "pl" else "out_of_scope"}
+        return {"id": f"youtube:{vid}", "module": "M1", "creatorId": "youtube:UC" + vid, "title": title,
+                "url": f"https://www.youtube.com/watch?v={vid}", "description": description, "youtube": youtube,
+                "mediaCoverage": self.UNAVAILABLE, **extra}
+
+    def test_italian_video_with_xtb_link_is_out_of_scope(self):
+        result = qualify(self.video("1K-444KBaos", "Come la Norvegia è Diventata Ricchissima", self.XTB_IT, "it"))
+        decision = result["reviewDecision"]
+        self.assertEqual(decision["route"], "no_signal")
+        self.assertIn("poza zakresem: materiał nie jest po polsku (rozpoznany język: włoski, it)", decision["reason"])
+        self.assertEqual(result["adRegistry"], {"state": "none"})
+        self.assertEqual(result["premises"], [])
+        self.assertEqual(result["scope"]["code"], "language")
+
+    def test_same_description_in_polish_video_still_refers(self):
+        result = qualify(self.video("reaI2uNoGSk", "Jak KUPIĆ ETF na eToro (Poradnik dla Początkujących)", self.ETORO_PL, "pl"))
+        self.assertEqual(result["reviewDecision"]["route"], "refer")
+        self.assertNotIn("scope", result)
+
+    def test_foreign_original_with_polish_dubbing_is_out_of_scope(self):
+        segments = [{"modality": "speech", "method": "auto_captions", "language": "pl", "lang": "pl", "start": 0.1, "end": 1.5,
+                     "text": "Czy faktycznie można handlować", "windowId": "w0"}]
+        capture = self.video("J5DqR1DZrFw", "Claude + IBKR: Finally FULL AI Stock Portfolio Automation", self.IBKR_EN, "en",
+                             segments=segments)
+        capture["mediaCoverage"] = {"transcript": {"state": "full", "source": "auto_captions", "durationSec": 1422,
+                                                   "windows": [{"start": 0, "end": 1422}]}}
+        decision = qualify(capture)["reviewDecision"]
+        self.assertEqual(decision["route"], "no_signal")
+        self.assertIn("angielski, en", decision["reason"])
+
+    def test_missing_or_unknown_language_is_not_out_of_scope(self):
+        for language in (None, "unknown", "und"):
+            capture = self.video("reaI2uNoGSk", "Jak KUPIĆ ETF na eToro", self.ETORO_PL, language)
+            self.assertEqual(qualify(capture)["reviewDecision"]["route"], "refer", language)
+        capture = self.video("reaI2uNoGSk", "Jak KUPIĆ ETF na eToro", self.ETORO_PL, "pl")
+        capture.pop("youtube")
+        self.assertEqual(qualify(capture)["reviewDecision"]["route"], "refer")
+
+    def test_polish_video_without_captions_keeps_refer(self):
+        capture = self.video("reaI2uNoGSk", "Jak KUPIĆ ETF na eToro", self.ETORO_PL, "pl")
+        result = qualify(capture)
+        self.assertEqual(result["coverage"]["modalities"]["transcript"]["state"], "unavailable")
+        self.assertEqual(result["reviewDecision"]["route"], "refer")
+
+
 if __name__ == "__main__":
     unittest.main()

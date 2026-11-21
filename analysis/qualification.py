@@ -842,6 +842,44 @@ def _point_components(premise_type, unit_modality, method, confidence, cov, extr
     return components
 
 
+LANGUAGE_NAMES = {"it": "włoski", "uk": "ukraiński", "en": "angielski", "de": "niemiecki", "es": "hiszpański",
+                  "fr": "francuski", "el": "grecki", "ro": "rumuński", "ru": "rosyjski", "pt": "portugalski",
+                  "tr": "turecki", "cs": "czeski", "sk": "słowacki", "nl": "niderlandzki", "other": "inny niż polski"}
+
+
+def foreign_language(capture):
+    """Language scope of M1 (owner decision of 21 XI: Polish market, Polish material only).
+
+    Returns {"language", "method"} only on positive evidence that the material is not Polish: the language label of the
+    YouTube adapter (defaultAudioLanguage / defaultLanguage; a strong Polish title and description already override a
+    foreign label there) or a language declared on the capture. A missing or unknown language is not evidence, so the
+    material stays in scope. The language of the auto captions (a Polish machine dubbing of a foreign original) never
+    counts as Polish: only the original-language label decides."""
+    youtube = capture.get("youtube") if isinstance(capture.get("youtube"), dict) else {}
+    declared = capture.get("language") if isinstance(capture.get("language"), dict) else {}
+    for value, method in ((youtube.get("detectedLanguage"), youtube.get("languageMethod") or "adapter YouTube"),
+                          (declared.get("detected") or declared.get("declared"), declared.get("method") or "język zadeklarowany")):
+        code = str(value or "").lower().split("-")[0].strip()
+        if not code or code in ("unknown", "und", "zxx"):
+            continue
+        return None if code == "pl" else {"language": code, "method": str(method)}
+    return None
+
+
+def _out_of_scope_language(capture, base, found):
+    code = found["language"]
+    name = LANGUAGE_NAMES.get(code)
+    shown = f"{name}, {code}" if name and name != code and code != "other" else (name or code)
+    reason = f"poza zakresem: materiał nie jest po polsku (rozpoznany język: {shown})"
+    relation = _relationship_none(capture, "none")
+    relation["disclosure"]["summary"] = "Materiał poza zakresem językowym (tylko polski rynek); nie badano relacji ani oznaczenia."
+    return {**base, "adRelationship": relation, "adRegistry": {"state": "none"}, "premises": [], "evidence": [],
+            "counterEvidence": [],
+            "scope": {"state": "out_of_scope", "code": "language", "language": code, "method": found["method"], "reason": reason},
+            "reviewDecision": _decision("no_signal", reason),
+            "reviewScore": _score(0)}
+
+
 def qualify(capture, finding=None, semantic=None, context=None):
     """Return M1 qualification fields. ``finding`` and ``semantic`` are accepted for the
     H call signature but do not change the result; E5 never adds points."""
@@ -849,13 +887,16 @@ def qualify(capture, finding=None, semantic=None, context=None):
     index = context.get("firmIndex") or _default_index()
     firms, outside = _compiled(index)
     cov = coverage(capture)
+    base = {"rulesVersion": RULES_VERSION, "coverage": cov}
+    found = foreign_language(capture)
+    if found:  # one place, before the speech gate and any relation rule
+        return _out_of_scope_language(capture, base, found)
     ev = Evidence(capture)
     counter = []
     description = capture.get("description") or ""
     dunits = _description_units(description)
     sunits = _speech_units(capture)
     funits = _frame_units(capture)
-    base = {"rulesVersion": RULES_VERSION, "coverage": cov}
 
     if not dunits and not sunits and not funits and not (capture.get("title") or "").strip():
         return {**base, "adRelationship": _relationship_none(capture, "unknown"), "adRegistry": {"state": "none"},
