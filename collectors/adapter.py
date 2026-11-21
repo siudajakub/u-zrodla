@@ -361,16 +361,20 @@ def record_adapter_result(adapter_id, result, *, at=None, scan_id=None, adapter=
 # source with `paths[]`; the row status is the best of the paths, and an inactive path (empty import) never hides a block.
 PATH_OF = {"meta_import": "manual_import", "meta_ads": "ad_library_api", "facebook": "organic_posts",
            "instagram": "organic_posts", "social": "organic_posts", "social-replay": "organic_posts",
-           "meta-import-replay": "manual_import"}
-PATH_LABEL = {"manual_import": "import ręczny", "ad_library_api": "API reklam", "organic_posts": "wpisy automatycznie"}
+           "meta-import-replay": "manual_import", "vendor-social-replay": "vendor_sample"}
+PATH_LABEL = {"manual_import": "import ręczny", "ad_library_api": "API reklam", "organic_posts": "wpisy automatycznie",
+              "vendor_sample": "próbka z usługi zewnętrznej"}
 PATH_SOURCES = frozenset({"facebook", "instagram", "facebook-ads", "instagram-ads"})
 _RANK = {"ok": 0, "partial": 1, "stale": 1, "needs_key": 2, "access_blocked": 3}
 _NEXT_STEP = {"manual_import": "Zapisz stronę Biblioteki Reklam lub osadzenie profilu i wgraj ją (POST /v1/import/meta).",
               "ad_library_api": "Token Ad Library API w pliku klucza (adapter meta_ads jest gotowy).",
-              "organic_posts": "Meta Content Library albo osadzenie profilu zapisane ręcznie."}
+              "organic_posts": "Meta Content Library albo osadzenie profilu zapisane ręcznie.",
+              "vendor_sample": "Import ręczny (POST /v1/import/meta) lub oficjalne API po uzyskaniu dostępu."}
 
 
 def _rank(entry):
+    if entry["status"] == "ok" and entry["path"] == "vendor_sample":
+        return -0.5  # the larger dated sample leads the sentence; the manual import follows
     return 9 if entry["status"] == "empty" else _RANK.get(entry["status"], 5 if health_of(entry["status"]) != "ok" else 4)
 
 
@@ -388,7 +392,11 @@ def path_summary(name, paths, status, posts=False):
     parts = []
     for entry in sorted(paths, key=_rank):
         label = PATH_LABEL[entry["path"]]
-        if entry["status"] == "ok" and entry["path"] == "manual_import":
+        if entry["status"] == "ok" and entry["path"] == "vendor_sample":
+            day = entry.get("sampleDate")
+            when = f", {int(day[8:10])} {('I II III IV V VI VII VIII IX X XI XII'.split())[int(day[5:7]) - 1]}" if day else ""
+            text = f"próbka z usługi zewnętrznej ({entry.get('count') or 0} {'postów' if posts else 'reklam'}{when})"
+        elif entry["status"] == "ok" and entry["path"] == "manual_import":
             day = entry.get("sampleDate")
             when = f", {int(day[8:10])} {('I II III IV V VI VII VIII IX X XI XII'.split())[int(day[5:7]) - 1]}" if day else ""
             text = f"próbka z importu ręcznego ({entry.get('count') or 0} {'postów' if posts else 'reklam'}{when})"

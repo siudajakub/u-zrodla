@@ -63,7 +63,10 @@ def _merge_discovery(first, second):
     for entry in [*(first or []), *(second or [])]:
         if not isinstance(entry, dict):
             continue
-        key = (entry.get("method"), entry.get("query") or "", entry.get("sourceId") or "")
+        query = entry.get("query") or ""
+        if not isinstance(query, str):  # the vendor sample keeps its request parameters as an object
+            query = json.dumps(query, sort_keys=True, ensure_ascii=False)
+        key = (entry.get("method"), query, entry.get("sourceId") or "")
         if key not in merged or _moment(entry.get("observedAt")) >= _moment(merged[key].get("observedAt")):
             merged[key] = entry
     return sorted(merged.values(), key=lambda e: (_moment(e.get("observedAt")), str(e.get("method")), str(e.get("query"))))
@@ -360,6 +363,13 @@ if importlib.util.find_spec("collectors.meta_import") is not None:
                      enabled=_on_unless_listed("meta_import"), own_network=False))
     register(Adapter("meta-import-replay", discover_meta_import, "Meta · import ręczny, archiwum 21 XI", modes=("replay",),
                      explicit_only=True, own_network=False))
+
+# One dated sample of Instagram, Facebook and Ad Library material collected once through an external service (lane K).
+# Replay only: a product scan never calls the service. Explicit in a payload, bootstrapped by the worker like social-replay.
+if importlib.util.find_spec("collectors.vendor_social") is not None:
+    from .vendor_social import discover as discover_vendor_social
+    register(Adapter("vendor-social-replay", discover_vendor_social, "Instagram i Facebook · próbka z usługi zewnętrznej (21 XI)",
+                     modes=("replay",), enabled=_on_unless_listed("vendor-social-replay"), own_network=False, explicit_only=True))
 
 SOCIAL_REPLAY = social_module.FIXTURES / "replay.json.gz"
 
