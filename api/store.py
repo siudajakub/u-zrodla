@@ -14,7 +14,7 @@ import unicodedata
 from urllib.parse import parse_qs, urlsplit
 from uuid import uuid4
 
-from collectors.adapter import LeaseLost, daily_limit, health_of, quota_day, redact
+from collectors.adapter import LeaseLost, daily_limit, health_of, legacy_paths, merge_stored_paths, quota_day, redact
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = Path(os.environ.get("INVESTWATCH_STATE", ROOT / ".runtime/demo")).resolve()
@@ -499,6 +499,14 @@ def record_adapter(db, adapter_id, result, at, scan_id=None, adapter=None):
     db.execute("INSERT OR REPLACE INTO source_state VALUES(?,?,?)", (adapter_id, dump(body), at))
     return body
 
+def public_source(source):
+    """A stored source row without the per-path snapshots that only rebuild the aggregate (paths[].row)."""
+    paths=legacy_paths(source)
+    if paths:
+        out={**source,"paths":[{k:v for k,v in p.items() if k!="row"} for p in paths if isinstance(p,dict)]}
+        return out if isinstance(source.get("paths"),list) else {**out,"bestPath":paths[0]["path"]}
+    return source
+
 def all_objects(db, table):
     assert table in {"creators","sources"}
     return [json.loads(r[0]) for r in db.execute(f"SELECT body FROM {table} ORDER BY id")]
@@ -929,7 +937,7 @@ def apply_scan(db, findings, creators, sources, mode, scan_id=None):
         old=json.loads(before[0]) if before else {}
         if mode=="replay" and old.get("mode")=="live":
             continue
-        body={**source,"mode":mode,"checkedAt":utc()}
+        body={**merge_stored_paths(old,source),"mode":mode,"checkedAt":utc()}
         body["lastSuccessAt"]=source.get("lastSuccessAt") or (utc() if source["status"]=="ok" else old.get("lastSuccessAt"))
         db.execute("INSERT INTO sources VALUES(?,?) ON CONFLICT(id) DO UPDATE SET body=excluded.body",(key,dump(body)))
     for capture,finding in findings:
@@ -1266,7 +1274,7 @@ def summary_of_case(case, threshold=60):
     return {"id":case["id"],"title":case.get("title"),"module":case.get("module"),"platform":case.get("platform"),
             "creatorId":case.get("creatorId"),"creatorName":case.get("creatorName") or case.get("author"),"publishedAt":case.get("publishedAt"),
             "observedAt":case.get("observedAt"),"status":case["status"],"revision":case["revision"],"version":case.get("version"),
-            "origin":case.get("origin"),"route":case.get("route"),"reviewScore":chosen["value"],
+            "origin":case.get("origin"),"importLabel":case.get("importLabel"),"route":case.get("route"),"reviewScore":chosen["value"],
             "band":band_of(chosen["value"],threshold),"completeReason":decision.get("completeReason"),
             "firstReason":reasons[0] if reasons else None,
             "score":case.get("score"),"queueEligible":case.get("queueEligible"),"adRegistry":registry.get("state"),
@@ -1661,7 +1669,7 @@ def state(schema=2, compact=False, findings=True):
         scans=[scan_view(db,r) for r in db.execute("SELECT * FROM scans ORDER BY created DESC LIMIT 50")]
         events=[dict(r) for r in db.execute("SELECT seq AS id,at,kind,ref,message FROM events ORDER BY seq DESC LIMIT 50")]
         # Schema 1 keeps the v1 shape (T18): rows as stored, health a string per source id.
-        sources=all_objects(db,"sources")
+        sources=[public_source(x) for x in all_objects(db,"sources")]
         states={s["sourceId"]:s for s in source_states(db)}
         health={(s.get("id") or s.get("name")):health_of(s.get("status")) for s in sources}
         creators=all_objects(db,"creators")

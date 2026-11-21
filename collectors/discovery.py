@@ -7,7 +7,7 @@ import json
 import os
 from pathlib import Path
 
-from .adapter import Adapter, MemoryRunner, execute
+from .adapter import Adapter, MemoryRunner, execute, merge_source_rows
 from .catalogs import (
     PODCAST_ID, PODCAST_QUERIES, PEERTUBE_QUERIES, feed_allowed, read_apple, read_peertube, read_podcast,
 )
@@ -351,6 +351,16 @@ if importlib.util.find_spec("collectors.meta_ads") is not None:
                      run_units_env="INVESTWATCH_META_RUN_REQUESTS", run_units_default=30,
                      daily_units_env="INVESTWATCH_META_DAILY_REQUESTS", daily_units_default=300, own_network=True))
 
+# The analyst's saved Meta pages (collectors/meta_import.py). No network in either mode. Live reads the import folder
+# (INVESTWATCH_META_IMPORT_DIR or STATE/meta-import); the dated sample of 2026-11-21 is a separate, explicit-only replay
+# adapter, so a default replay does not mix it in and the worker orders it like social-replay.
+if importlib.util.find_spec("collectors.meta_import") is not None:
+    from .meta_import import discover as discover_meta_import
+    register(Adapter("meta_import", discover_meta_import, "Meta · import ręczny (FB i IG)", modes=("live",),
+                     enabled=_on_unless_listed("meta_import"), own_network=False))
+    register(Adapter("meta-import-replay", discover_meta_import, "Meta · import ręczny, archiwum 21 XI", modes=("replay",),
+                     explicit_only=True, own_network=False))
+
 SOCIAL_REPLAY = social_module.FIXTURES / "replay.json.gz"
 
 
@@ -387,15 +397,18 @@ def _run(mode, previous, known_ids, fetch, clock, runner, options, only=None):
     for adapter in adapters:
         if adapter.after:
             results[adapter.id] = execute(adapter, runner, base, {"captures": first_captures})
-    creators, captures, statuses = {}, {}, {}
+    creators, captures, rows = {}, {}, []
     for adapter in adapters:
         found = results[adapter.id]
         for creator in found["creators"]:
             creators.setdefault(creator["id"], creator)
         for item in found["captures"]:
             merge_capture(captures, item)
-        for source in found["sources"]:
-            statuses[source.get("id") or source["name"]] = source
+        rows.extend((adapter.id, source) for source in found["sources"])
+    # Later rows of the same id replace earlier ones, as before; the Meta sources collapse into one row with paths[].
+    statuses = {}
+    for source in merge_source_rows(rows):
+        statuses[source.get("id") or source["name"]] = source
     return {"creators": list(creators.values()), "captures": list(captures.values()), "sources": list(statuses.values())}
 
 

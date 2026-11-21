@@ -353,3 +353,103 @@ def record_adapter_result(adapter_id, result, *, at=None, scan_id=None, adapter=
     with store.connection(True) as db:
         return store.record_adapter(db, adapter_id, validate_adapter_result(result, adapter, at or utc_now()),
                                     at or utc_now(), scan_id, adapter)
+
+
+# --- one source row, several access paths (facebook-ads, instagram-ads, instagram, facebook) ---
+# Several adapters report on the same platform: the Ad Library API (meta_ads, needs a token), the organic posts
+# (facebook, instagram: access_blocked) and the analyst's saved pages (meta_import). The desk shows one row per
+# source with `paths[]`; the row status is the best of the paths, and an inactive path (empty import) never hides a block.
+PATH_OF = {"meta_import": "manual_import", "meta_ads": "ad_library_api", "facebook": "organic_posts",
+           "instagram": "organic_posts", "social": "organic_posts", "social-replay": "organic_posts",
+           "meta-import-replay": "manual_import"}
+PATH_LABEL = {"manual_import": "import ręczny", "ad_library_api": "API reklam", "organic_posts": "wpisy automatycznie"}
+PATH_SOURCES = frozenset({"facebook", "instagram", "facebook-ads", "instagram-ads"})
+_RANK = {"ok": 0, "partial": 1, "stale": 1, "needs_key": 2, "access_blocked": 3}
+_NEXT_STEP = {"manual_import": "Zapisz stronę Biblioteki Reklam lub osadzenie profilu i wgraj ją (POST /v1/import/meta).",
+              "ad_library_api": "Token Ad Library API w pliku klucza (adapter meta_ads jest gotowy).",
+              "organic_posts": "Meta Content Library albo osadzenie profilu zapisane ręcznie."}
+
+
+def _rank(entry):
+    return 9 if entry["status"] == "empty" else _RANK.get(entry["status"], 5 if health_of(entry["status"]) != "ok" else 4)
+
+
+def _entry(path, row):
+    last = row.get("lastError") if isinstance(row.get("lastError"), dict) else {}
+    out = {"path": path, "status": row.get("status"), "detail": row.get("message") or last.get("message") or row.get("error"),
+           "at": row.get("observedAt") or row.get("checkedAt"), "nextStep": row.get("nextStep") or last.get("nextStep") or _NEXT_STEP[path],
+           "count": row.get("count"), "sampleDate": row.get("sampleDate"), "row": {k: v for k, v in row.items() if k != "paths"}}
+    return out
+
+
+def path_summary(name, paths, status, posts=False):
+    """The sentence the desk puts under the source: the best path first, the others after a middle dot."""
+    words = {"needs_key": "brak tokenu", "access_blocked": "blokada dostępu", "empty": "brak plików", "error": "błąd"}
+    parts = []
+    for entry in sorted(paths, key=_rank):
+        label = PATH_LABEL[entry["path"]]
+        if entry["status"] == "ok" and entry["path"] == "manual_import":
+            day = entry.get("sampleDate")
+            when = f", {int(day[8:10])} {('I II III IV V VI VII VIII IX X XI XII'.split())[int(day[5:7]) - 1]}" if day else ""
+            text = f"próbka z importu ręcznego ({entry.get('count') or 0} {'postów' if posts else 'reklam'}{when})"
+        elif entry["status"] == "ok":
+            text = f"próbka ({entry.get('count') or 0})"
+        else:
+            text = words.get(entry["status"], str(entry["status"]))
+        parts.append(text if not parts else f"{label}: {text}")
+    return (name + ": " + " · ".join(parts)) if parts else None
+
+
+def combine_paths(rows_by_path):
+    """rows_by_path: {path: row} of one source id -> one row with `paths[]` and the best path's fields."""
+    entries = [_entry(path, row) for path, row in rows_by_path.items()]
+    return _row_of(entries)
+
+
+def _row_of(entries):
+    active = [e for e in entries if e["status"] != "empty"] or entries
+    best = min(active, key=_rank)
+    row = dict(best["row"])
+    label = (row.get("name") or "").split(" · ")[0]
+    ordered = sorted(entries, key=lambda e: (_rank(e), e["path"]))
+    row["paths"] = [{**e} for e in ordered]
+    row["pathsSummary"] = path_summary(label or row.get("id") or "", entries, best["status"], posts=row.get("id") in ("instagram", "facebook"))
+    row["bestPath"] = best["path"]
+    return row
+
+
+def merge_source_rows(rows_with_adapter):
+    """[(adapter id, source row)] -> source rows; rows of the PATH_SOURCES collapse to one row per id."""
+    grouped, out = {}, []
+    for adapter_id, row in rows_with_adapter:
+        key = row.get("id") or row.get("name")
+        path = PATH_OF.get(adapter_id)
+        if key in PATH_SOURCES and path:
+            if key not in grouped:
+                grouped[key] = {}
+                out.append(key)
+            grouped[key][path] = row
+        else:
+            out.append(row)
+    return [combine_paths(grouped[item]) if isinstance(item, str) else item for item in out]
+
+
+def legacy_paths(row):
+    """paths[] of a stored row written before paths existed: the row itself was one path (the only adapter that wrote
+    it then). Rows of other sources have none."""
+    key = row.get("id")
+    if key not in PATH_SOURCES or isinstance(row.get("paths"), list):
+        return row.get("paths") if isinstance(row.get("paths"), list) else []
+    path = "manual_import" if row.get("importMethod") == "manual_import" else \
+        "organic_posts" if key in ("facebook", "instagram") else "ad_library_api"
+    return [{**_entry(path, row), "derived": "legacy"}]
+
+
+def merge_stored_paths(old, new):
+    """Fold a stored row of an earlier scan into the row of this scan: a path the new row does not report keeps its
+    last entry; a path it reports replaces the old one. The stored `row` of every entry rebuilds the aggregate."""
+    if not isinstance(new.get("paths"), list):
+        return new
+    entries = {e["path"]: e for e in legacy_paths(old) if isinstance(e, dict) and e.get("row")}
+    entries.update({e["path"]: e for e in new["paths"]})
+    return {**_row_of(list(entries.values())), **{k: new[k] for k in ("mode", "checkedAt") if k in new}}
