@@ -400,7 +400,7 @@ class Report(HttpCase):
         status, body = self.request("GET", "/v1/report?module=M2")
         self.assertEqual((status, body["total"], body["columns"][2]), (200, 0, "operator"))
         status, body = self.request("GET", "/v1/report?module=M3")
-        self.assertEqual((status, body["columns"][2]), (200, "autor"))
+        self.assertEqual((status, body["columns"][0], "stanUprawnien" in body["columns"]), (200, "podmiot", True))
         self.assertEqual(self.request("GET", "/v1/report?module=M9")[0], 422)
         self.assertEqual(self.request("GET", "/v1/report?module=M1&queue=nope")[0], 404)
 

@@ -586,6 +586,23 @@ def uploaded_file(name:str):
         raise HTTPException(404)
     return FileResponse(store.STATE/"uploads"/name)
 
+@app.api_route("/evidence/m2/market/{name}", methods=["GET", "HEAD"])
+def m2_market_asset(name: str):
+    """Evidence of the M2 market archive: only files named by the manifests (64-hex digest names, digest verified)."""
+    from collectors.common import SourceError
+    from collectors.m2_market import ASSET, MARKET, asset
+
+    if not ASSET.fullmatch(name):
+        raise HTTPException(404)
+    try:
+        data = asset(MARKET, name)
+    except (SourceError, OSError):
+        raise HTTPException(404)
+    media_type = "image/jpeg" if name.endswith(".jpg") else "application/gzip"
+    headers = {"ETag": f'"{name.split(".")[0]}"', "Cache-Control": "private, max-age=31536000, immutable"}
+    return Response(data, media_type=media_type, headers=headers)
+
+
 @app.api_route("/evidence/m2/{name}", methods=["GET", "HEAD"])
 def m2_asset(name: str):
     from collectors.common import SourceError

@@ -22,6 +22,7 @@ class ReviewIntegration(unittest.TestCase):
                 return result
             with patch('collectors.discovery.discover', return_value={'creators':[],'captures':[m1,m2],'sources':[]}), \
                  patch('collectors.m2_archive.staged_captures', return_value=([], [], [])), \
+                 patch('collectors.m2_market.market_captures', return_value=([], [], [])), \
                  patch('analysis.engine.demo_captures', return_value=[]), \
                  patch('analysis.engine.analyze', side_effect=findings), \
                  patch('analysis.semantic.suggest', return_value={'status':'unavailable'}):

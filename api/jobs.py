@@ -139,14 +139,16 @@ def evaluate(cap, previous=None):
         finding["reviewSuggestion"]=review_suggestion(cap,finding["semantic"],finding)
     return cap,finding
 
-def recompute_pairs_raw():
-    """(capture, stored finding) of the current version of every stored M1 case, with its media state merged back."""
+def recompute_pairs_raw(modules=("M1",)):
+    """(capture, stored finding) of the current version of every stored case (M1, and with `modules` also M2 and M3),
+    with its media state merged back. M2 is analysed from the saved measurements and M3 from the saved pages: no
+    browser and no network."""
     pairs=[]
     with store.connection() as db:
         rows=db.execute("SELECT id,body FROM cases").fetchall()
         for row in rows:
             body=json.loads(row["body"])
-            if body.get("module","M1")!="M1":
+            if body.get("module","M1") not in modules:
                 continue
             last=db.execute("SELECT capture,finding FROM versions WHERE id=? AND version=?",(row["id"],body.get("version"))).fetchone()
             if last is None:
@@ -158,9 +160,9 @@ def recompute_pairs_raw():
     return [(merge_known([cap],media)[0],old) for cap,old in pairs]
 
 def recompute_pairs(runner):
-    """Stored M1 captures analysed again with the current rules. Observations are not replayed."""
+    """Stored captures of M1, M2 and M3 analysed again with the current rules. Observations are not replayed."""
     out=[]
-    for cap,old in recompute_pairs_raw():
+    for cap,old in recompute_pairs_raw(("M1","M2","M3")):
         runner.heartbeat()
         out.append(evaluate(cap,old))
     return out
@@ -263,7 +265,15 @@ def build(row, owner=None):
         from collectors.m2_browser import refresh_from_worker
         refresh = lambda name, root: refresh_from_worker(name, root, chromium)
     proven_urls = apply_rendered(discovery, staged_captures(mode, store.STATE / "m2", refresh))
-    demos = [cap for cap in demo_captures() if cap.get("module") != "M2" or cap["url"] not in proven_urls] if mode == "replay" else []
+    if mode == "replay":
+        # The dated market archive of the M2 lane: rendered pages of registered firms, desktop and phone, no browser.
+        from collectors.m2_market import market_captures
+        proven_urls |= apply_rendered(discovery, market_captures(mode="replay"))
+    from collectors.discovery import m3_domain
+    m3_known = {m3_domain(item) for item in discovery["captures"] if item.get("module") == "M3"}
+    demos = [cap for cap in demo_captures()
+             if (cap.get("module") != "M2" or cap["url"] not in proven_urls)
+             and (cap.get("module") != "M3" or cap.get("synthetic") or m3_domain(cap) not in m3_known)] if mode == "replay" else []
     captures=discovery["captures"]+demos
     from .enrich import enrich_media
     with store.connection() as db:
@@ -329,6 +339,8 @@ def work():
         submit("replay","bootstrap-youtube-replay-v1",{"adapters":["youtube-replay"]})
     if "social-replay" in ADAPTERS and (ROOT/"fixtures/raw/discovery/social-2026-11-21/replay.json.gz").is_file():
         submit("replay","bootstrap-social-replay-v1",{"adapters":["social-replay"]})
+    if "m3-offers-replay" in ADAPTERS:
+        submit("replay","bootstrap-m3-offers-replay-v1",{"adapters":["m3-offers-replay"]})
     if "meta-import-replay" in ADAPTERS and (ROOT/"fixtures/raw/discovery/social-2026-11-21/replay-meta.json.gz").is_file():
         submit("replay","bootstrap-meta-import-replay-v1",{"adapters":["meta-import-replay"]})
     next_check=0

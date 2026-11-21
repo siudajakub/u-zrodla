@@ -239,6 +239,12 @@ def m1(cap):
 
 
 def m2(cap):
+    if cap.get("m2Market"):  # a rendered market page (lane E): 19 criteria, card, reasons and screenshots
+        from .m2_card import card
+        score, summary, evidence, extra = card(cap)
+        # Code that predates the card counts "obserwacja"; a premise is the same kind of observation.
+        extra["checkCounts"] = {**extra["checkCounts"], OBS: extra["checkCounts"].get("przesłanka", 0)}
+        return score, summary, evidence, extra
     checks = marketing(cap)
     counts = Counter(r["state"] for r in checks)
     severe = any(r["id"] in {"17", "18"} and r["state"] == OBS for r in checks)
@@ -349,6 +355,169 @@ def m3(cap):
             return 58, "Sygnał oferty spersonalizowanej. Wpis w wykazie jest kandydatem; potwierdź tożsamość i zakres zezwolenia.", evidence, extra
         return 83, "Sygnał oferty dopasowania portfela. Ustal podmiot i sprawdź zakres zezwolenia.", evidence, extra
     return 18 if text else 0, "W dostępnym fragmencie brak jednoznacznej oferty indywidualnego doboru instrumentów.", evidence, extra
+
+
+# --- M3: advisory offers (lane F). One decision per firm, taken in one place: analysis.offers.analyze_entity ---------
+M3_STRONG = {"present", "catalog", "poland"}
+M3_PARTIAL = {"service_only", "weak", "generic"}
+M3_AXES = (("action", "Czynność"), ("personalisation", "Personalizacja"), ("instrument", "Instrument"), ("market", "Rynek"))
+M3_ROUTE_STATE = {"refer": "review", "complete": "uncertain", "no_signal": "no_signal"}
+M3_LICENSED = {"authorized_advice": "podmiot uprawniony", "investment_firm_agent": "agent firmy inwestycyjnej"}
+M3_MEANING = "Siła sygnału reguł M3 w skali 0–100: ile przesłanek do sprawdzenia widać w tekście. Nie jest oceną prawną."
+
+
+def m3_rules():
+    from . import offers
+    return offers.RULES_VERSION
+
+
+@lru_cache(maxsize=1)
+def _offer_index():
+    from . import offers
+    return offers.load_registers()
+
+
+def m3_entity(cap):
+    """The firm behind a M3 capture: all saved pages (m3Pages) or, for a single-page capture, that page."""
+    prov = cap.get("provenance") if isinstance(cap.get("provenance"), dict) else {}
+    url = cap.get("url") or ""
+    domain = (cap.get("m3Entity") or "").removeprefix("m3:") or re.sub(r"^www\.", "", urlsplit(url).hostname or "")
+    if cap.get("m3Pages"):
+        pages = [{"url": p["url"], "observedAt": p.get("observedAt"), "sha256": p.get("sha256"), "text": p.get("text") or "",
+                  "textSha256": p.get("textSha256"), "identityText": p.get("identityText") or "", "role": p.get("role")}
+                 for p in cap["m3Pages"]]
+    else:
+        ident = cap.get("identityEvidence") if isinstance(cap.get("identityEvidence"), dict) else {}
+        footer = " ".join(str(ident[k]) for k in ("name", "krs", "nip") if ident.get(k))
+        text = cap.get("description") or ""
+        pages = [{"url": url, "observedAt": cap.get("observedAt"), "sha256": prov.get("responseSha256"), "text": text,
+                  "textSha256": hashlib.sha256(text.encode()).hexdigest(), "identityText": footer, "role": "offer"}]
+    return {"id": cap.get("id") or url, "domain": domain, "label": cap.get("brand") or cap.get("title"),
+            "discoveredVia": prov.get("discoveredFrom") or cap.get("discoveredVia"), "pages": pages}
+
+
+def _loc(item, page_urls):
+    loc = item.get("locator") or {}
+    return {"field": "pageText", **{k: loc.get(k) for k in ("url", "line", "start", "end", "textSha256")}}
+
+
+def _offer_evidence(case_id, analysis):
+    """Evidence items with role (claim/context/counter), one per quote, each with the locator and the URL of its own page."""
+    items, moments = [], []
+    for key, label in M3_AXES:
+        axis = analysis["axes"][key]
+        strong = axis["status"] in M3_STRONG
+        for number, quote in enumerate(axis["evidence"][:2 if key != "market" else 1], 1):
+            loc = _loc(quote, None)
+            item = {"id": f"m3:{case_id}:{key}:{number}", "kind": "page", "role": "claim" if strong else "context",
+                    "modality": "page", "method": "html-text", "match": "verbatim", "text": quote["quote"],
+                    "textSha256": hashlib.sha256(quote["quote"].encode()).hexdigest(), "url": loc["url"], "sourceUrlAtTime": loc["url"],
+                    "locator": loc, "criterionId": key, "label": label, "observedAt": None, "available": bool(loc["url"])}
+            items.append(item)
+            if strong and number == 1:
+                moments.append({"start": None, "end": None, "label": f"{label}: {_q(quote['quote'], 70)}", "deepLink": loc["url"],
+                                "evidenceId": item["id"], "locator": loc, "kind": "text", "url": loc["url"], "quote": quote["quote"]})
+    counters = []
+    for number, quote in enumerate(analysis.get("counterEvidence") or [], 1):
+        loc = _loc(quote, None)
+        counter = {"id": f"m3:{case_id}:counter:{number}", "kind": "page", "role": "counter", "modality": "page",
+                   "method": "html-text", "match": "verbatim", "text": quote["quote"], "counterKind": quote.get("kind"),
+                   "textSha256": hashlib.sha256(quote["quote"].encode()).hexdigest(), "url": loc["url"], "sourceUrlAtTime": loc["url"],
+                   "locator": loc, "available": bool(loc["url"])}
+        counters.append(counter)
+    return items, counters, moments
+
+
+def _q(text, limit):
+    text = " ".join((text or "").split())
+    return text if len(text) <= limit else text[:limit].rsplit(" ", 1)[0] + "…"
+
+
+def _offer_checks(analysis):
+    rows = []
+    for key, label in M3_AXES:
+        axis = analysis["axes"][key]
+        status = axis["status"]
+        state = ("przesłanka" if status in M3_STRONG else "częściowo" if status in M3_PARTIAL
+                 else "poza katalogiem" if status == "outside_only" else "brak danych")
+        quote = axis["evidence"][0] if axis["evidence"] else None
+        rows.append({"id": key, "label": label, "state": state, "axisStatus": status,
+                     "evidence": quote["quote"] if quote else "Brak jednoznacznego fragmentu w dostępnym tekście.",
+                     "url": _loc(quote, None)["url"] if quote else None, "locator": _loc(quote, None) if quote else None,
+                     "counter": [c["quote"] for c in axis.get("counter") or []][:2]})
+    return rows
+
+
+def _offer_complete_reason(analysis):
+    state = analysis["identity"]["state"]
+    if state in ("name_collision", "registry_error", "no_identity") and any("tożsamo" in m or "operator" in m
+                                                                             for m in analysis["missing"] + [analysis["summary"]]):
+        return "identity_unresolved"
+    return "market_unknown" if analysis["axes"]["market"]["status"] != "poland" else "axes_incomplete"
+
+
+def _offers_view(capture, finding):
+    """Add the v2 fields to a M3 finding: the same shape as M1 (reviewDecision with reasons, moments and missing,
+    reviewScore, axes table, identity, counterEvidence, coverage)."""
+    from . import offers
+    entity = m3_entity(capture)
+    analysis = offers.analyze_entity(entity, _offer_index())
+    case_id = capture.get("id") or entity["id"]
+    evidence, counters, moments = _offer_evidence(case_id, analysis)
+    identity = analysis["identity"]
+    state = identity["state"]
+    badge = M3_LICENSED.get(state)
+    route = analysis["route"]
+    cues = {"currency": "waluta PLN", "poland": "odniesienie do Polski", "pl_domain": "domena .pl", "polish_text": "tekst po polsku"}
+    reasons = [re.sub(r"\b(currency|poland|pl_domain|polish_text)\b", lambda m: cues[m.group(1)], r)
+               for r in analysis["reasons"]] or [analysis["summary"]]
+    pages = analysis["pages"]
+    read = len(pages)
+    knf_warning = {"state": "found" if identity["warning"] else "none", "entries": identity["warning"],
+                   "checkedAt": identity["checkedAt"]}
+    missing = list(analysis["missing"])
+    decision = {"route": route, "reason": analysis["summary"][:160], "reasons": reasons[:5],
+                "moments": moments if route in ("refer", "complete") else [],
+                "completeReason": _offer_complete_reason(analysis) if route == "complete" else None,
+                "requirement": None, "claim": None, "alternative": None, "missing": missing,
+                "decidedBy": "rules", "version": offers.RULES_VERSION, "queueEligible": route == "refer",
+                "wording": analysis["wording"]}
+    value = analysis["signalPoints"]
+    score = {"state": "computed", "value": value, "scale": "0-100",
+             "band": "strong" if value >= 75 else "moderate" if value >= 60 else "weak", "meaning": M3_MEANING,
+             "notComputableReason": None, "rulesVersion": offers.RULES_VERSION, "modelVersion": None, "components": []}
+    gaps = [{"modality": "render", "code": "not_collected", "reason": "strony odczytano jako tekst HTML; układu i obrazów nie badano"}]
+    if read < 2:
+        gaps.append({"modality": "pages", "code": "one_page", "reason": "odczytano jedną podstronę"})
+    coverage = {"scope": "public_html_text", "state": "partial",
+                "modalities": {"pageText": {"state": "full", "pages": read}, "render": {"state": "not_collected"},
+                               "media": {"state": "not_collected"},
+                               "registers": {"state": "checked" if not identity["registerFailures"] else "partial",
+                                             "reviewed": identity["reviewedRegisters"], "checkedAt": identity["checkedAt"]}},
+                "gaps": gaps, "blocksConclusion": False,
+                "label": f"Zbadano: tekst {read} {'podstrony' if read in (2, 3, 4) else 'podstron' if read != 1 else 'podstrony'} firmy "
+                         f"i {len(identity['reviewedRegisters'])} wykazów KNF z {identity['checkedAt']}; bez renderu i multimediów"}
+    offer = {"entityId": analysis["entityId"], "name": analysis["name"], "domain": analysis["domain"], "pages": pages,
+             "paidOffer": analysis["paidOffer"], "formAndInitiative": analysis["formAndInitiative"],
+             "rulesVersion": offers.RULES_VERSION, "wording": analysis["wording"]}
+    suggestion = {"source": "rules", "version": offers.RULES_VERSION, "state": M3_ROUTE_STATE[route], "reason": analysis["summary"]}
+    lead = next((e for e in evidence if e["role"] == "claim"), None)
+    if lead and route == "refer":
+        suggestion["evidence"] = {"kind": "description", "text": lead["text"], "url": lead["url"]}
+    if not capture.get("m3Pages"):
+        # A single-page capture of the earlier demo (bossa.pl, FinanceWell, the study room): its v1 score, summary,
+        # checks and review hint stay as they were (the T21 queue golden); it only gains the v2 fields below.
+        keep = {k: finding[k] for k in ("score", "summary", "rulesVersion", "checks") if k in finding}
+        keep["registryStatus"] = finding.get("registryStatus")
+    else:
+        keep = {"score": value, "summary": analysis["summary"], "rulesVersion": offers.RULES_VERSION, "reviewSuggestion": suggestion,
+                "checks": _offer_checks(analysis)}
+    finding.update({
+        **keep, "axes": analysis["axes"], "offer": offer, "offerChecks": _offer_checks(analysis),
+        "identity": {**identity, "licensed": badge is not None, "badge": badge, "knfWarning": knf_warning},
+        "reviewDecision": decision, "reviewScore": score, "counterEvidence": counters, "coverage": coverage,
+        "evidence": [*finding["evidence"], *evidence, *counters],
+    })
 
 
 # Fields of the D qualification. In shadow mode (step S5) they are computed and stored beside the
@@ -585,7 +754,23 @@ def _annotate(finding, capture):
     return result
 
 
-def analyze(capture, *, semantic=None, variant=None):
+M2_RULES = "investwatch-m2-rendered-1"
+
+
+def module_rules():
+    """Rule version(s) a stored finding of each module is current with."""
+    from .m2_rules import RULES_VERSION as card_rules
+    return {"M1": RULESET, "M2": (M2_RULES, card_rules), "M3": m3_rules()}
+
+
+def _stamp(finding, module):
+    """analysisVersion of M2 and M3 (M1 gets it from the qualification): the module's rules and the analysis schema."""
+    rules = module_rules()["M3"] if module == "M3" else finding.get("rulesVersion") or module_rules()[module][0]
+    finding["analysisVersion"] = {"rules": rules, "model": None, "schema": ANALYSIS_SCHEMA, "variant": module.lower() + "_rules",
+                                  "module": module}
+
+
+def analyze(capture, *, semantic=None, variant=None, offers=True):
     module = capture.get("module", "M1")
     score, summary, evidence, extra = {"M1": m1, "M2": m2, "M3": m3}[module](capture)
     finding = {k: capture[k] for k in (
@@ -597,6 +782,14 @@ def analyze(capture, *, semantic=None, variant=None):
                     "rulesVersion": RULESET, **extra})
     if module == "M1":
         _shadow(capture, finding, semantic, variant)
+    elif module == "M3" and offers:
+        try:
+            _offers_view(capture, finding)
+        except Exception as exc:  # a failing rule must never stop a scan
+            finding["reviewDecision"] = _qualification_failed(exc)["reviewDecision"]
+            finding["reviewScore"] = _qualification_failed(exc)["reviewScore"]
+    if module in ("M2", "M3"):
+        _stamp(finding, module)
     if _annotate_on() and _annotation_wanted(finding):
         finding = _annotate(finding, capture)
     return finding
@@ -615,7 +808,7 @@ def calibration(threshold=60, variant="rules_1_2"):
             cap["registry"] = cases[cap["registryExample"]]["registry"]
         if cap.get("savedDom"):
             cap["views"] = dom_views(cap["url"])
-        found = analyze(cap)
+        found = analyze(cap, offers=False)
         score = found["score"]
         if variant == "rules_1_2" or "reviewScore" not in found:
             predicted = score >= threshold

@@ -213,7 +213,7 @@ DEFAULT_VALIDATION_REF = "fixtures/validation/q-v2/WYNIK-M1-2026-11-21.md@463cce
 DEFAULT_APPROVED_BY = "Fable (orkiestrator)"
 DEFAULT_NOTE = ("Domyślny wariant produktu, próg 60. Pomiar na 17 filmach: koszt 2×FN+FP 15 → 0 względem rules_1_2. "
                 "To oceny agentów, nie walidacja ekspercka.")
-# Mirrors the literal in analysis.engine.m2 until the engine exposes its own versions (step S5).
+# Fallback when the engine cannot be imported; the engine's module_rules() is the source of truth.
 M2_RULES = "investwatch-m2-rendered-1"
 
 @lru_cache(maxsize=1)
@@ -233,8 +233,13 @@ def _engine_versions():
 
 def analysis_current():
     rules, model = _engine_versions()
+    try:
+        from analysis.engine import module_rules
+        by_module = module_rules()
+    except Exception:
+        by_module = {"M1": rules, "M2": (M2_RULES,), "M3": rules}
     return {"rules": rules, "model": model, "schema": ANALYSIS_SCHEMA, "variant": ANALYSIS_VARIANT,
-            "rulesByModule": {"M1": rules, "M2": M2_RULES, "M3": rules}}
+            "rulesByModule": by_module}
 
 def derive_origin(item):
     """One origin per record: live, replay, synthetic or upload."""
@@ -253,12 +258,14 @@ def compat_view(body, current):
     declared = body.get("analysisVersion") if isinstance(body.get("analysisVersion"), dict) else None
     schema = declared.get("schema", 1) if declared else (current["schema"] if "reviewDecision" in body else 1)
     rules = (declared or {}).get("rules") or body.get("rulesVersion")
-    wanted = current["rulesByModule"].get(module) or current["rules"]
+    accepted = current["rulesByModule"].get(module) or current["rules"]
+    accepted = (accepted,) if isinstance(accepted, str) else tuple(accepted or ())
+    wanted = accepted[0] if accepted else None
     stale_schema = schema < current["schema"]
-    stale_rules = bool(rules and wanted and rules != wanted)
+    stale_rules = bool(rules and accepted and rules not in accepted)
     needs = stale_schema or stale_rules
     parts = []
-    if rules and wanted and rules != wanted:
+    if stale_rules:
         parts.append(f"Wynik z reguł {rules}; bieżące {wanted}")
     if stale_schema:
         parts.append(f"Analiza w schemacie {schema}; bieżący {current['schema']}")
@@ -385,7 +392,7 @@ def ledger_row(db, source_id, day):
 
 # Sources that stay visible as "no token" (needs_key, with the next step) but never make a scan partial or the source health
 # degraded: the Meta Ad Library is optional, so a missing token is a known state of the installation, not a failure.
-TOKEN_OPTIONAL = {"meta_ads", "facebook-ads", "instagram-ads"}
+TOKEN_OPTIONAL = {"meta_ads", "facebook-ads", "instagram-ads", "m3-offers"}
 
 KEY_ID = re.compile(r"[0-9a-f]{8}")
 
@@ -913,6 +920,16 @@ def media_states(db, keys=None):
 def gate_of(shadow, variant):
     return (((shadow or {}).get("variants") or {}).get(variant) or {}).get("gated")
 
+def stamp_analysis(db, key, body, finding):
+    """M2 and M3 findings of the legacy form (no qualification record) keep their analysisVersion in the case body.
+    A recompute that gives the same analysis writes no new version, so the stamp is written here: needsRecalc ends."""
+    declared = finding.get("analysisVersion")
+    if not isinstance(declared, dict) or body.get("analysisVersion") == declared:
+        return body
+    body = {**body, "analysisVersion": declared, "rulesVersion": finding.get("rulesVersion") or body.get("rulesVersion")}
+    db.execute("UPDATE cases SET body=? WHERE id=?", (dump(body), key))
+    return body
+
 def apply_scan(db, findings, creators, sources, mode, scan_id=None):
     new_creators=0
     first_live=0
@@ -954,7 +971,9 @@ def apply_scan(db, findings, creators, sources, mode, scan_id=None):
         previous_body=json.loads(before["body"]) if before else {}
         if mode=="replay" and previous_body.get("mode")=="live":
             continue
-        if previous_body.get("m2EvidenceRevision"):
+        if before and shadow is None:
+            previous_body=stamp_analysis(db,key,previous_body,finding)
+        if previous_body.get("m2EvidenceRevision") and not capture.get("m2Market"):
             latest=previous_body.get("latestM2Observation",previous_body["observedAt"])
             if not proof_revision or datetime.fromisoformat(capture["observedAt"])<datetime.fromisoformat(latest):
                 continue
@@ -999,7 +1018,7 @@ def apply_scan(db, findings, creators, sources, mode, scan_id=None):
                 old_finding=json.loads(last["finding"])
                 old_parts=signature_parts(json.loads(last["capture"]),old_finding)
         reason,details=version_reason(old_parts,parts,old_finding,finding)
-        body={**capture,**finding,"version":version,"mode":mode}
+        body={k:v for k,v in {**capture,**finding,"version":version,"mode":mode}.items() if k!="m3Pages"}  # pages stay in versions.capture
         db.execute("INSERT INTO versions VALUES(?,?,?,?,?,?)",
                    (key,version,signature,utc(),dump(capture),dump(finding)))
         db.execute("INSERT INTO version_meta VALUES(?,?,?,?,?,?,?)",
@@ -1075,7 +1094,12 @@ def variant_view(body, variant, threshold):
         eligible = bool(route == "refer" and isinstance(value, (int, float)) and value >= threshold)
     if chosen is None and decision.get("queueEligible") is not None and value is None:
         eligible = bool(route == "refer" and decision["queueEligible"])
-    return {"route": route, "value": value, "queueEligible": eligible and body.get("module", "M1") == "M1",
+    module = body.get("module", "M1")
+    if module in ("M2", "M3") and chosen is None and decision:
+        # The card of the module decided on its own scale (M2 card: premises from 30 points; M3: route refer).
+        eligible = bool(route == "refer" and decision.get("queueEligible"))
+        return {"route": route, "value": value, "queueEligible": eligible, "gated": None}
+    return {"route": route, "value": value, "queueEligible": eligible and module == "M1",
             "gated": (chosen or {}).get("gated")}
 
 def rereview(db, key, status, body, decided):
@@ -1119,19 +1143,28 @@ def queues_of(core, view, flags, threshold=None):
         evidence = core.get("evidenceV2") if core.get("evidenceV2") is not None else core.get("_evidenceV2")
         has_evidence = not evidence or any(e.get("available", True) for e in evidence)
         reopened = core.get("status") == "closed" and (flags["pendingReReview"] or flags["reviewStale"])
-        if module == "M1" and view["route"] == "refer" and view["queueEligible"] and has_evidence and not core.get("needsRecalc") \
+        if module in ("M1", "M2", "M3") and view["route"] == "refer" and view["queueEligible"] and has_evidence and not core.get("needsRecalc") \
                 and (core.get("status") != "closed" or reopened):
             out.add("review")
         if (core.get("adRegistry") or {}).get("state") in ("included", "candidate"):
             out.add("adRegister")
+        decision = core.get("reviewDecision") if isinstance(core.get("reviewDecision"), dict) else {}
         if module == "M2":
             out.add("offersM2")
-        if module == "M3":
-            out.add("offersM3")
-        # incomplete: only material with a signal and a concrete gap that can still be closed.
-        # A video without any signal is no_signal with the coverage "mowy nie zbadano" and stays in `all`.
-        if core.get("needsRecalc") or (view["route"] in ("complete", "insufficient") and (view.get("gated") or has_signal(core))):
-            out.add("incomplete")
+            # incomplete: only a concrete gap (too few measurable criteria), never the mere wait for a recompute.
+            if decision and view["route"] == "insufficient":
+                out.add("incomplete")
+        elif module == "M3":
+            identity = core.get("identity") if isinstance(core.get("identity"), dict) else {}
+            if not decision or view["route"] in ("refer", "complete") or identity.get("licensed"):
+                out.add("offersM3")  # a licensed firm stays visible as a negative control
+            if decision and view["route"] == "complete" and decision.get("missing"):
+                out.add("incomplete")
+        else:
+            # incomplete: only material with a signal and a concrete gap that can still be closed.
+            # A video without any signal is no_signal with the coverage "mowy nie zbadano" and stays in `all`.
+            if core.get("needsRecalc") or (view["route"] in ("complete", "insufficient") and (view.get("gated") or has_signal(core))):
+                out.add("incomplete")
     else:
         out.discard("closed")
     return sorted(out)
@@ -1427,7 +1460,7 @@ REPORT_COLUMNS = {
            "dataOdczytu", "trasa", "silaSygnalu", "relacjaReklamowa", "rejestrReklam", "statusDecyzji", "id"],
     "M2": ["firma", "typPodmiotu", "operator", "tresc", "url", "platforma", "dataPublikacji", "podstawaDatyPublikacji",
            "dataOdczytu", "trasa", "silaSygnalu", "statusDecyzji", "id"],
-    "M3": ["firma", "typPodmiotu", "autor", "tresc", "url", "platforma", "dataPublikacji", "podstawaDatyPublikacji",
+    "M3": ["podmiot", "daneRejestrowe", "trescOferty", "url", "stanUprawnien", "przejrzaneWykazy", "dataWykazow", "platforma",
            "dataOdczytu", "trasa", "silaSygnalu", "statusDecyzji", "id"],
 }
 ENTITY_NAMES = {"domestic_investment_firm": "krajowa firma inwestycyjna", "domestic_bank": "bank krajowy",
@@ -1467,8 +1500,27 @@ def report_row(case, module, variant):
     elif module=="M2":
         row["operator"]=who
     else:
-        row["autor"]=who
+        row.update(m3_report_cells(case))
     return {k:row.get(k) for k in REPORT_COLUMNS[module]}
+
+def m3_report_cells(case):
+    """Columns of the M3 report: the firm as the page names it, registry data if any, the quotes of the axes,
+    the licence state with the reviewed registers and their date."""
+    identity=case.get("identity") if isinstance(case.get("identity"),dict) else {}
+    operator=identity.get("operator") if isinstance(identity.get("operator"),dict) else {}
+    offer=case.get("offer") if isinstance(case.get("offer"),dict) else {}
+    name=(operator.get("names") or [None])[0] or offer.get("name") or case.get("brand") or case.get("creatorName") or ""
+    ids=[f"NIP {n}" for n in operator.get("nip") or []]+[f"KRS {n}" for n in operator.get("krs") or []]+[f"REGON {n}" for n in operator.get("regon") or []]
+    matches=[f"{m.get('register')}: {m.get('name') or ('nr '+str(m.get('number')))}" for m in identity.get("matches") or [] if isinstance(m,dict)]
+    registry="; ".join([*ids,*matches[:3]])
+    quotes=[f"{c.get('label')}: {c.get('evidence')}" for c in case.get("checks") or []
+            if isinstance(c,dict) and c.get("id") in ("action","personalisation","instrument","market") and c.get("state")!="brak danych"]
+    state=identity.get("label") or ""
+    if identity.get("badge"):
+        state=f"{identity['badge']} · {state}"
+    return {"podmiot":name,"daneRejestrowe":registry,"trescOferty":" | ".join(" ".join(q.split()) for q in quotes)[:1500],
+            "stanUprawnien":state,"przejrzaneWykazy":"; ".join(identity.get("reviewedRegisters") or []),
+            "dataWykazow":identity.get("checkedAt") or ""}
 
 def report_list(db, module, *, queue=None, limit=500, cursor=None, platform=None, since=None, until=None, min_score=None,
                 band=None, route=None, q=None, date_field="observedAt"):
@@ -1515,7 +1567,7 @@ def report_csv(report):
 def events_since(db, cursor, limit=100):
     return [dict(r) for r in db.execute("SELECT seq AS id,at,kind,ref,message FROM events WHERE seq>? ORDER BY seq LIMIT ?",(cursor,limit))]
 
-COMPACT_DROP = ("history", "evidence", "premises", "counterEvidence", "segments", "description", "versions", "discovery",
+COMPACT_DROP = ("m3Pages", "history", "evidence", "premises", "counterEvidence", "segments", "description", "versions", "discovery",
                 "evidenceV2", "frames", "relationships")
 
 def scan_view(db, row):
