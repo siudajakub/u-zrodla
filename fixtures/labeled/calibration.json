@@ -1,0 +1,144 @@
+[
+  {
+    "origin": "publiczny",
+    "expected": true,
+    "capture": {
+      "id": "yt-partner",
+      "module": "M1",
+      "title": "Partner odcinka DETERMINACJI",
+      "description": "Partnerem odcinka jest XTB",
+      "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M"
+    }
+  },
+  {
+    "origin": "syntetyczny",
+    "expected": true,
+    "capture": {
+      "id": "kod",
+      "module": "M1",
+      "title": "Odsyłacz afiliacyjny",
+      "description": "W opisie jest link afiliacyjny do założenia rachunku."
+    }
+  },
+  {
+    "origin": "syntetyczny",
+    "expected": true,
+    "capture": {
+      "id": "wynagrodzenie",
+      "module": "M1",
+      "title": "Rozliczenie za otwarcie rachunku",
+      "description": "Przelew od domu maklerskiego dostaję za każdy nowy rachunek otwarty przez mój formularz."
+    }
+  },
+  {
+    "origin": "syntetyczny",
+    "expected": false,
+    "capture": {
+      "id": "krytyka",
+      "module": "M1",
+      "title": "Krytyczna wzmianka o marce",
+      "description": "Porównuję XTB z konkurencją i krytykuję czas realizacji."
+    }
+  },
+  {
+    "origin": "syntetyczny",
+    "expected": false,
+    "capture": {
+      "id": "odmowa",
+      "module": "M1",
+      "title": "Zaprzeczenie partnerstwu",
+      "description": "To nie jest reklama. Sam kupiłem kurs i oceniam jego koszty."
+    }
+  },
+  {
+    "origin": "syntetyczny",
+    "expected": false,
+    "capture": {
+      "id": "cytat",
+      "module": "M1",
+      "title": "Cytat z nieaktualnym kodem",
+      "description": "Kiedyś na stronie widniał kod rabatowy, lecz cytuję go wyłącznie jako przykład z archiwum."
+    }
+  },
+  {
+    "origin": "publiczny",
+    "expected": true,
+    "capture": {
+      "id": "dom-etf",
+      "module": "M2",
+      "title": "Początkowy widok oferty ETF",
+      "description": "Inwestuj w fundusze ETF z prowizją 0%",
+      "url": "https://www.xtb.com/pl/etf",
+      "savedDom": true,
+      "legalName": "XTB S.A."
+    }
+  },
+  {
+    "origin": "syntetyczny",
+    "expected": true,
+    "capture": {
+      "id": "gwarancja",
+      "module": "M2",
+      "title": "Gwarancja organu",
+      "description": "Reklama. Fikcyjny Dom S.A. KNF gwarantuje bezpieczeństwo środków.",
+      "fullText": true,
+      "legalName": "Fikcyjny Dom S.A."
+    }
+  },
+  {
+    "origin": "syntetyczny",
+    "expected": false,
+    "capture": {
+      "id": "neutralny-nadzor",
+      "module": "M2",
+      "title": "Neutralna informacja o nadzorze",
+      "description": "Reklama. Fikcyjny Dom S.A. podlega nadzorowi KNF.",
+      "fullText": true,
+      "legalName": "Fikcyjny Dom S.A."
+    }
+  },
+  {
+    "origin": "syntetyczny",
+    "expected": true,
+    "capture": {
+      "id": "M3-portfel",
+      "module": "M3",
+      "title": "Oferta do sprawdzenia",
+      "description": "Po ankiecie dobiorę dla ciebie konkretne akcje."
+    }
+  },
+  {
+    "origin": "syntetyczny",
+    "expected": false,
+    "capture": {
+      "id": "M3-edukacja",
+      "module": "M3",
+      "title": "Edukacja grupowa",
+      "description": "Na przykładzie koszyka pokazujemy, czym jest dywersyfikacja. Nie dobieramy instrumentów dla konkretnych klientów."
+    }
+  },
+  {
+    "origin": "publiczny",
+    "expected": true,
+    "capture": {
+      "id": "M3-boś",
+      "module": "M3",
+      "title": "Zarejestrowany dom maklerski",
+      "description": "Klienci usługi otrzymują wyselekcjonowaną listę papierów wartościowych składających się na portfel rekomendowany odpowiedni dla profilu inwestycyjnego Klienta.",
+      "url": "https://bossa.pl/oferta/doradztwo-inwestycyjne",
+      "registryExample": "public-bos-profil"
+    }
+  },
+  {
+    "origin": "publiczny",
+    "expected": true,
+    "capture": {
+      "id": "M3-agent",
+      "module": "M3",
+      "title": "Kolizja nazw w wykazie agentów",
+      "description": "jako agent firmy inwestycyjnej EVO Domu Maklerskiego S.A.",
+      "url": "https://financewell.pl/o-nas/",
+      "registryExample": "public-financewell-agent"
+    }
+  }
+]

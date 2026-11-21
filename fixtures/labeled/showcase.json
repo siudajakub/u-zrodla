@@ -1,0 +1,83 @@
+[
+  {
+    "id": "demo-studio-aurora",
+    "title": "Jak działa konto inwestycyjne?",
+    "module": "M1",
+    "creatorId": "studio:aurora",
+    "creatorName": "Studio Aurora",
+    "platform": "Studio",
+    "url": "/media/studio.mp4",
+    "mediaUrl": "/media/studio.mp4",
+    "brand": "Aurora",
+    "publishedAt": "2026-11-18",
+    "mode": "import",
+    "synthetic": true,
+    "contractDemo": true,
+    "description": "Jak działa konto inwestycyjne? Krótki przewodnik dla początkujących.",
+    "provenance": "Fikcyjna publikacja zespołu. Polski głos syntetyczny, rzeczywisty odczyt Vosk z pliku MP4. Data publikacji stanowi część scenariusza."
+  },
+  {
+    "id": "dom-xtb-etf",
+    "title": "Fundusze ETF z prowizją 0%",
+    "module": "M2",
+    "platform": "WWW",
+    "creatorId": "www:xtb.com",
+    "creatorName": "XTB",
+    "url": "https://www.xtb.com/pl/etf",
+    "brand": "XTB",
+    "legalName": "XTB S.A.",
+    "description": "Inwestuj w fundusze ETF z prowizją 0%",
+    "observedAt": "2026-11-21T15:17:41.787Z",
+    "archivedDom": true,
+    "mode": "replay",
+    "provenance": "Publiczna strona firmy. Nagłówek z DOM i trzy rzeczywiste zrzuty Chromium z 21 XI 2026."
+  },
+  {
+    "id": "public-financewell-agent",
+    "title": "FinanceWell · ustalenie tożsamości",
+    "module": "M3",
+    "platform": "WWW",
+    "creatorId": "www:financewell.pl",
+    "creatorName": "FinanceWell",
+    "url": "https://financewell.pl/o-nas/",
+    "brand": "FinanceWell",
+    "description": "jako agent firmy inwestycyjnej EVO Domu Maklerskiego S.A.",
+    "mode": "replay",
+    "provenance": "Publiczna strona o firmie. Wycinek opisu i krajowy wykaz agentów z sondy 21 XI 2026.",
+    "registrySnapshot": "knf_agenci_prawne",
+    "registryIds": [
+      4844186,
+      4844187
+    ]
+  },
+  {
+    "id": "public-bos-profil",
+    "title": "DM BOŚ · portfel rekomendowany",
+    "module": "M3",
+    "platform": "WWW",
+    "creatorId": "www:bossa.pl",
+    "creatorName": "DM BOŚ",
+    "url": "https://bossa.pl/oferta/doradztwo-inwestycyjne",
+    "brand": "DM BOŚ",
+    "description": "Klienci usługi otrzymują wyselekcjonowaną listę papierów wartościowych składających się na portfel rekomendowany odpowiedni dla profilu inwestycyjnego Klienta.",
+    "mode": "replay",
+    "provenance": "Publiczna oferta, wycinek strony firmy i archiwalny wykaz krajowych domów maklerskich z 21 XI 2026.",
+    "registrySnapshot": "knf_domy_maklerskie",
+    "registryIds": [
+      8353437
+    ]
+  },
+  {
+    "id": "demo-pracownia-edukacja",
+    "title": "Warsztat o dywersyfikacji",
+    "module": "M3",
+    "creatorId": "studio:pracownia",
+    "creatorName": "Pracownia edukacyjna",
+    "platform": "Studio",
+    "url": "",
+    "description": "Na przykładzie koszyka pokazujemy, czym jest dywersyfikacja. Nie dobieramy instrumentów dla konkretnych klientów.",
+    "mode": "import",
+    "synthetic": true,
+    "provenance": "Kontrola edukacyjna napisana przez zespół."
+  }
+]

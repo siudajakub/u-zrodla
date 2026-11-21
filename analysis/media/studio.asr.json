@@ -1,0 +1,26 @@
+{
+  "model": "vosk-model-small-pl-0.22",
+  "engine": "Vosk 0.3.45",
+  "language": "pl",
+  "sha256": "bae1577259da1028cad79ba091af3751062a0ba65f5557747af63b2d090e6f4c",
+  "segments": [
+    {
+      "start": 0.33,
+      "end": 3.03,
+      "text": "dzisiaj porozmawiamy o inwestowaniu",
+      "confidence": 1.0
+    },
+    {
+      "start": 4.35,
+      "end": 7.26,
+      "text": "partnerem programu jest firma aurora",
+      "confidence": 1.0
+    },
+    {
+      "start": 8.61,
+      "end": 12.51,
+      "text": "ten materiał powstał we współpracy z firmą aurora",
+      "confidence": 1.0
+    }
+  ]
+}
