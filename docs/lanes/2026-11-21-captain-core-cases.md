@@ -1,6 +1,8 @@
 # Lane: core-cases
 
 - Owner: captain
+- State: READY
+- Worktree: .worktrees/core
 - Branch: hack/captain/core-cases
 
 ## Acceptance
@@ -17,11 +19,11 @@ Konsument discover, analyze, transcribe_file, transcribe_excerpt i calibration. 
 
 ## Current State
 
-Działają testy repozytorium przypadków. Weryfikacja przez przeglądarkę i w kontenerach należy do integracji.
+Sprawdzono przez niezależny worker i Chromium. Po poprawce rejestracji Huey przez HTTP przyjęto nowy WAV i odtworzono rozpoznany cytat.
 
 ## Next Step
 
-Uruchomić jeden worker, wprowadzić replay, zeskanować źródła na żywo i ponownie sprawdzić odtwarzanie po restarcie.
+Otworzyć gotowe demo i użyć dwóch przykładów audio lub rzeczywistej kolejki.
 
 ## Verification
 
