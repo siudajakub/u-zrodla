@@ -1,5 +1,7 @@
 # Lane: source-adapters
 
+Historyczny rekord pierwszej integracji. Aktualny zakres i model wykonawcy wskazuje [tablica](../../TEAM_BOARD.md).
+
 - Owner: sol
 - Branch: hack/sol/source-adapters
 - Worktree: /home/codexdev/projects/hacknation/uknf-investwatch/.worktrees/sources

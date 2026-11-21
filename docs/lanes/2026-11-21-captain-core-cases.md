@@ -1,5 +1,7 @@
 # Lane: core-cases
 
+Historyczny rekord pierwszej integracji. Aktualny zakres i model wykonawcy wskazuje [tablica](../../TEAM_BOARD.md).
+
 - Owner: captain
 - State: READY
 - Worktree: .worktrees/core

@@ -4,3 +4,5 @@
 .cal-example{flex-basis:100%;background:#f1f8f9;padding:12px;margin-top:8px;color:#486573;line-height:1.5}.cal-example p{margin:7px 0}.check:has(.cal-example){flex-wrap:wrap}
 .semantic-note{border:1px solid #dbe5ed;background:#f7f9fc;padding:14px 16px;margin-bottom:14px}.semantic-note p{font-size:12px;line-height:1.5;margin:6px 0}
 .historical-evidence{margin:10px 0 16px}.historical-evidence .evidence{overflow-wrap:anywhere}.historical-evidence .evidence p{margin:5px 0}
+
+.check > div { min-width: 0; overflow-wrap: anywhere; }

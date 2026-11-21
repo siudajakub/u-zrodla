@@ -1,27 +1,15 @@
-# InvestWatch dla analityka UKNF
+# InvestWatch — automatyczne wykrywanie promocji i ofert na polskim rynku
 
-Analityk otwiera sprawę i może pokazać firmie dokładnie ten materiał, który wzbudził wątpliwość. Zanim zespół oceni zgodność, musi ustalić autora, wydawcę, produkt i zakres zachowanego materiału. Źródłami wymagań są [indeks pięciu załączników](docs/INDEKS.md) i [brief](docs/brief/Urząd_Komisji_Nadzoru_Finansowego__UKNF_-_Pełna_treść_zadania_konkursowego.txt). Wersja oceniana przez panel to [plan realizacji](docs/PLAN-REALIZACJI.md).
+UKNF chce otrzymać z sieci trzy rzeczy: aktualizowaną bazę reklam osób trzecich, flagi dotyczące informacji o ryzyku w reklamie własnej firmy i raport potencjalnego nieuprawnionego doradztwa. System ma sam znaleźć materiał i wyjaśnić wskazanie w jego kontekście. Analityk sprawdza trafność, może odrzucić alarm i zapisuje decyzję. [Opis zadania i załączniki](docs/zrodla-uknf/README.md)
 
-## Golden Path
+**Wyróżnik do pokazu: otwórz dokładnie to, co zobaczył odbiorca reklamy.** Na rzeczywistej stronie firmy model i pomiary mają wskazać twierdzenie o możliwym zysku, znaleźć ryzyko tego samego produktu i pokazać obie lokalizacje na telefonie i desktopie. Analityk może podważyć flagę jednym spojrzeniem na zachowany ekran. Nagłówek o prowizji i ostrzeżenie dotyczące innego instrumentu stanowią dwie ważne próby ujemne. [Reguły UKNF](docs/zrodla-uknf/KRYTERIA-M2.md) · [Aktualny odbiór](docs/ODBIOR-UKNF.md)
 
-1. Operator uruchamia przegląd źródeł lub otwiera ostatni zaplanowany przebieg. Widzi także awarie i datę ostatniego sukcesu.
-2. M1 pokazuje autora, firmę, cytat, URL, datę i dostępne części materiału. Powtórzenia opisu grupujemy z zachowaniem poszczególnych publikacji.
-3. Analityk zapisuje decyzję. W osobnej fikcyjnej sprawie odczytuje lokalną odpowiedź firmy, porównuje zakres umowy i aneks. Zachowuje historię zmiany wyniku.
-4. W M2 otwiera materiał opublikowany przez samą firmę i sprawdza ostrzeżenie w kontekście korzyści na dwóch ekranach. W M3 zestawia ofertę spersonalizowanej usługi z zakresem zezwolenia.
-5. Na zamrożonej próbce zmienia próg, sprawdza fałszywe alarmy i przeoczenia oraz otwiera jeden konkretny błąd.
+W M1 ta sama zasada prowadzi od automatycznie znalezionej publikacji do rzeczywistego cytatu albo czasu w nagraniu. W M3 prowadzi od pełnej publicznej oferty do fragmentu o potrzebach klienta, rekomendowanej czynności i instrumencie, a następnie do operatora strony i zakresu zezwolenia. Oferta autoryzowanego domu maklerskiego to kontrola przed fałszywym alarmem. Przy brakujących przesłankach analityk widzi przyczynę niepewności.
 
-## Stan, role i odbiór
+## Jak zdobywamy punkty
 
-Kapitan integracji koordynuje kontrakty, kolejność zmian, testy i dziennik. J jest właścicielem decyzji produktowych, zgłoszenia i prezentacji. Źródła publiczne i stanowisko pobierające można sprawdzić osobno. Dashboard, analiza modelem, Compose i pełna próba sceniczna mają własne kryteria odbioru w planie. Zestaw testowy offline musi dać ten sam wynik po restarcie. Szkic pytania i fikcyjna umowa pozostają w lokalnej sprawie demonstracyjnej.
+Jury przyznaje do 10 punktów. Najwięcej ważą technologia i gotowość demo (30%). Proces z asystentami AI, architektura i zgodność ze specyfikacją ważą po 20%, atrakcyjność 10%. Pokazujemy żywy przepływ i rzeczywisty błąd wykryty przez drugiego agenta, z wynikiem przed i po poprawce. Nagroda za I miejsce wynosi 30 000 zł brutto. Źródła nie określają ceny produktu. [Brief, sekcje 6, 8 i 9](docs/zrodla-uknf/BRIEF.md)
 
-- [Tablica dostępnych prac](TEAM_BOARD.md), [kontrakty](docs/hackathon/contracts.md), [próba pokazu](docs/hackathon/demo.md), [monitor i dobór próby](docs/MONITORING.md), [arkusz odbioru każdego wymagania](docs/ODBIOR-UKNF.md).
-- Do 21 XI 19:00 czasu polskiego celem jest pierwszy przebieg od skanu do zapisanej decyzji. Do 20:00 J zapisuje szkic HackTribe. Do 23:30 zespół łączy trzy raporty. Do 02:00 zamyka walidację, do 05:00 funkcje, rano wykonuje trzy próby offline. Cel przekazania 22 XI 10:30, ostateczny termin 11:00. [Przewodnik uczestnika](https://hacknation.pl/przewodnik-uczestnika)
-- Na hoście sprawdzono dostęp do Docker Engine 29.1.3 i wersję Compose 2.40.3. Na wybranym stanowisku prezentacji sprawdzić czysty start całego zestawu z modelem. Brak sieci na scenie uruchamia replay z jawną datą. Wolną inferencję ograniczyć do przygotowanego korpusu i zgłosić zmierzony czas.
+## Gdzie pracujemy
 
-### Artefakty dla jury
-
-J przygotowuje tytuł, opis, prezentację PDF, minimalny README z Quick Start i repozytorium. Opcjonalny film do 3 minut. Na dwóch minutach pokazu otwiera co najmniej jeden dowód i demonstruje jedną zmianę decyzji. Analityk zachowuje możliwość zweryfikowania każdego cytatu.
-
-## Stan po budowie
-
-Aktualna wersja implementacyjna, instrukcja startu i testy mają własny [README](README.md) i [raport odbioru](docs/DEMO-ODBIOR.md). Plan oceniany przez panel wyprzedza chronologicznie implementację. Przed porównaniem z prezentacją sprawdź wyniki uruchomionych prób.
+[Quick Start](README.md) · [Kolejność funkcji i próby rozstrzygające](docs/PLAN-REALIZACJI.md) · [Przydział agentów](TEAM_BOARD.md) · [Scenariusz pokazu](docs/hackathon/demo.md). Status zgłoszenia potwierdza J. Prezentacja PDF, tytuł, opis, README i repozytorium należą do obowiązkowego pakietu. Film do trzech minut jest opcjonalny.

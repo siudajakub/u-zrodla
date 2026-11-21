@@ -1,5 +1,7 @@
 # Lane: analyst-desk
 
+Historyczny rekord pierwszej integracji. Aktualny zakres i model wykonawcy wskazuje [tablica](../../TEAM_BOARD.md).
+
 - Owner: terra
 - Branch: hack/terra/analyst-desk
 - Worktree: /home/codexdev/projects/hacknation/uknf-investwatch/.worktrees/desk

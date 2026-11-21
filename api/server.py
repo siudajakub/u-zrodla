@@ -14,7 +14,7 @@ from functools import lru_cache
 from fastapi import FastAPI, HTTPException, Query, Request, WebSocket, WebSocketDisconnect
 from pydantic import BaseModel, Field
 from starlette.middleware.trustedhost import TrustedHostMiddleware
-from starlette.responses import FileResponse
+from starlette.responses import FileResponse, Response
 from starlette.staticfiles import StaticFiles
 from . import jobs, store
 
@@ -102,12 +102,7 @@ def require_revision(row,expected):
     if expected is not None and expected!=row["revision"]:
         raise HTTPException(409,"Sprawa została zmieniona. Odśwież ją przed zapisem.")
 
-@app.get("/v1/cases/{key}")
-def case(key:str):
-    with store.connection() as db:
-        return store.case_dict(db,get_case(db,key))
-
-@app.get("/v1/cases/{key}/versions/{version}")
+@app.get("/v1/cases/{key:path}/versions/{version}")
 def case_version(key:str,version:int):
     with store.connection() as db:
         row=db.execute("SELECT * FROM versions WHERE id=? AND version=?",(key,version)).fetchone()
@@ -116,7 +111,12 @@ def case_version(key:str,version:int):
         return {"observedAt":row["observed"],"sha256":row["signature"],"version":version,
                 "capture":json.loads(row["capture"]),"finding":json.loads(row["finding"])}
 
-@app.patch("/v1/cases/{key}")
+@app.get("/v1/cases/{key:path}")
+def case(key:str):
+    with store.connection() as db:
+        return store.case_dict(db,get_case(db,key))
+
+@app.patch("/v1/cases/{key:path}")
 def decision(key:str,body:Decision):
     with store.connection(True) as db:
         row=get_case(db,key)
@@ -128,7 +128,7 @@ def decision(key:str,body:Decision):
         store.event(db,"case",key,"Zapisano decyzję analityka")
         return store.case_dict(db,get_case(db,key))
 
-@app.post("/v1/cases/{key}/inquiry")
+@app.post("/v1/cases/{key:path}/inquiry")
 def inquiry(key:str,body:Inquiry):
     with store.connection(True) as db:
         row=get_case(db,key)
@@ -153,7 +153,7 @@ def inquiry(key:str,body:Inquiry):
         store.event(db,"case",key,messages[body.action])
         return {**result,"revision":row["revision"]+1}
 
-@app.post("/v1/cases/{key}/contract")
+@app.post("/v1/cases/{key:path}/contract")
 def contract(key:str,body:Contract):
     with store.connection(True) as db:
         row=get_case(db,key)
@@ -249,6 +249,26 @@ def uploaded_file(name:str):
     if not re.fullmatch(r"[a-f0-9]{64}\.[a-z0-9]{2,4}",name) or not (store.STATE/"uploads"/name).is_file():
         raise HTTPException(404)
     return FileResponse(store.STATE/"uploads"/name)
+
+@app.api_route("/evidence/m2/{name}", methods=["GET", "HEAD"])
+def m2_asset(name: str):
+    from collectors.common import SourceError
+    from collectors.m2_archive import ASSET_NAME, REPLAY, asset_bytes
+
+    match = ASSET_NAME.fullmatch(name)
+    if match is None:
+        raise HTTPException(404)
+    for root in (store.STATE / "m2", REPLAY):
+        try:
+            data = asset_bytes(root, name)
+        except SourceError:
+            continue
+        media_type = "image/png" if match[2] == "png" else "application/json"
+        return Response(data, media_type=media_type, headers={
+            "ETag": f'"{match[1]}"', "Cache-Control": "private, max-age=31536000, immutable",
+        })
+    raise HTTPException(404)
+
 
 for route,folder in [("/evidence/browser",store.ROOT/"data/probe-snapshots/browser"),("/media",store.ROOT/"analysis/media")]:
     app.mount(route,StaticFiles(directory=folder,check_dir=False),name=route)

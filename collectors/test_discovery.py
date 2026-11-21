@@ -100,6 +100,22 @@ class TestDiscovery(unittest.TestCase):
             self.assertEqual(capture["provenance"]["mode"], "replay")
             self.assertRegex(capture["provenance"]["responseSha256"], "^[0-9a-f]{64}$")
 
+    def test_replay_uses_observation_matching_each_archived_bossa_capture(self):
+        result = discover("replay", ())
+        sources = {source["id"]: source for source in result["sources"]}
+        for source_id, filename in (("www:bossa.pl", "bossa-discovery-2026-11-21.json"),
+                                    ("www:bossa.pl:edukacja", "bossa-education-2026-11-21.json")):
+            archive = json.loads((Path(__file__).resolve().parents[1] / "fixtures/validation" / filename).read_text())
+            source = sources[source_id]
+            capture = next(item for item in result["captures"] if item["id"] == archive["capture"]["id"])
+            self.assertEqual((source["status"], source["count"], source["observedAt"]),
+                             ("ok", 1, archive["source"]["observedAt"]))
+            self.assertEqual((source["fixture"], capture["provenance"]["fixture"]), (filename, filename))
+            self.assertEqual(capture["observedAt"], archive["capture"]["observedAt"])
+        old = sources["www:bossa.pl"]["previousObservation"]
+        self.assertEqual((old["status"], old["count"]), ("empty", 0))
+        self.assertLess(old["observedAt"], sources["www:bossa.pl"]["observedAt"])
+
     def test_non_polish_and_malformed_feed_are_distinct_from_403(self):
         creator = {"id": "apple-podcasts:41", "platform": "apple-podcasts", "name": "Test",
                    "url": "https://podcasts.apple.com/pl/podcast/id41", "feedUrl": KNOWN_FEED}

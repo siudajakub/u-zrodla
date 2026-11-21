@@ -2,10 +2,9 @@
 const fs = require("node:fs");
 const vm = require("node:vm");
 const assert = require("node:assert/strict");
-const source = fs.readFileSync("web/app.js", "utf8");
+const source = fs.readFileSync("web/app.js", "utf8").replace("export function", "function");
 function render(data) {
-  let first = true,
-    output;
+  let first = true;
   const React = {
     Fragment: Symbol("fragment"),
     createElement(type, props, ...children) {
@@ -33,20 +32,6 @@ function render(data) {
   };
   const context = {
     React,
-    ReactDOM: {
-      createRoot() {
-        return {
-          render(v) {
-            output = v;
-          },
-        };
-      },
-    },
-    document: {
-      getElementById() {
-        return {};
-      },
-    },
     location: {
       origin: "http://localhost",
       protocol: "http:",
@@ -58,8 +43,7 @@ function render(data) {
     clearTimeout,
     console,
   };
-  vm.runInNewContext(source, context);
-  return output;
+  return vm.runInNewContext(`${source}\nReact.createElement(createDesk(React));`, context);
 }
 function nodes(tree) {
   if (tree == null || typeof tree !== "object") return [];

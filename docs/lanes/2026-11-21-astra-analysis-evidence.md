@@ -1,5 +1,7 @@
 # Lane: analysis-evidence
 
+Historyczny rekord pierwszej integracji. Aktualny zakres i model wykonawcy wskazuje [tablica](../../TEAM_BOARD.md).
+
 - Owner: astra
 - Branch: hack/astra/analysis-evidence
 - Worktree: /home/codexdev/projects/hacknation/uknf-investwatch/.worktrees/analysis

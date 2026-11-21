@@ -1,12 +1,20 @@
 # UKNF #InvestWatch
 
-Zbuduj jeden obieg sprawy dla analityka UKNF, od odkrycia materiału do decyzji z dowodem. Zacznij od [HACKATHON.md](HACKATHON.md) i [planu realizacji](docs/PLAN-REALIZACJI.md). [Indeks materiałów](docs/INDEKS.md) prowadzi do briefu, załączników i wyników sond.
+InvestWatch automatycznie odkrywa i flaguje materiały z polskiego rynku. Źródło wymagań to [ZIP UKNF i pięć opracowań](docs/zrodla-uknf/README.md). [Cel i wyróżnik](HACKATHON.md), [macierz odbioru](docs/ODBIOR-UKNF.md) i [kolejność prac](docs/PLAN-REALIZACJI.md) rozdzielają wymagania, dowody i decyzje zespołu. J odpowiada za decyzje produktowe. Trafność oceniaj na całych kampaniach z udokumentowanymi etykietami i mianownikami. Zachowaj pełny kontekst materiału, niepewność i kontrolę ujemną.
 
 ## Start sesji
 
 1. Uruchom `sh tools/hack_context.sh`. Zobaczysz status linii i ostatni wpis każdej z najnowszych sesji. Claude Code wykonuje ten odczyt przy starcie, wznowieniu i po kompaktowaniu.
 2. Przeczytaj [TEAM_BOARD.md](TEAM_BOARD.md) i [kontrakty](docs/hackathon/contracts.md) dla swojego zakresu. Gdy wracasz do konkretnej sesji, użyj `python3 tools/session_log.py latest --session ID`. Jeśli pracujesz w linii, przeczytaj jej [rekord](docs/lanes/README.md).
 3. Zgoda na bazę została udzielona. Gałęzie main i hack/integration oraz cztery izolowane worktree istnieją. Sprawdź aktualny HEAD i stan linii poleceniami git status i python3 tools/hack_status.py. Kapitan scala do hack/integration i promuje sprawdzony commit do main.
+
+## Orkiestracja i odbiór
+
+ASTRA pełni wyłącznie rolę orkiestratora. Wyznacza cel, rozdziela zakresy, uzgadnia kontrakty, ocenia dowody, koordynuje integrację i komunikuje wynik J. Wykonanie, test i niezależny przegląd deleguje agentom SOL i TERRA. Historyczne nazwy gałęzi opisują poprzednią rundę.
+
+Każdą falę prowadź z agentami. Do rutynowych zmian i odtwarzalnych sprawdzeń wybieraj niższy lub średni reasoning, do diagnoz, niejednoznacznych danych i architektury wysoki. Przy spornej hipotezie niech jeden agent ją sprawdzi, drugi spróbuje obalić na tym samym materiale. Zapisz kontrprzykład, decyzję i test rozstrzygający. Do oceny angażuj osobnych sędziów SOL i TERRA, zanim poznają nawzajem swoje punkty. Dbaj o limit zasobów hosta.
+
+Najpierw odbierz funkcję w normalnej ścieżce użytkownika, następnie upraszczaj wygląd i optymalizuj. Po zmianie UI powtórz ten sam scenariusz na desktopie i telefonie. W web/ obowiązują też lokalne instrukcje Astryx. Rozpoczynając kontynuację przeczytaj [mapę kolejnej fali](docs/KONTYNUACJA.md).
 
 ## Log sesji
 

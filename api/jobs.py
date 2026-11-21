@@ -37,10 +37,12 @@ def claim(key, owner):
 def build(row):
     import json
     from analysis.engine import analyze, demo_captures
-    from analysis.semantic import suggest
+    from analysis.semantic import suggest, review_suggestion
     def evaluate(cap):
         finding=analyze(cap)
         finding["semantic"]=suggest(cap)
+        if "reviewSuggestion" not in finding:
+            finding["reviewSuggestion"]=review_suggestion(cap, finding["semantic"], finding)
         return cap,finding
     mode=row["mode"]
     if mode=="upload":
@@ -60,7 +62,15 @@ def build(row):
     if mode=="live":
         from .listen import sample_audio
         discovery["sources"].append(sample_audio(discovery["captures"]))
-    captures=discovery["captures"]+(demo_captures() if mode=="replay" else [])
+    from collectors.m2_archive import apply_rendered, staged_captures
+    chromium = os.environ.get("INVESTWATCH_M2_BROWSER")
+    refresh = None
+    if mode == "live" and chromium:
+        from collectors.m2_browser import refresh_from_worker
+        refresh = lambda name, root: refresh_from_worker(name, root, chromium)
+    proven_urls = apply_rendered(discovery, staged_captures(mode, store.STATE / "m2", refresh))
+    demos = [cap for cap in demo_captures() if cap.get("module") != "M2" or cap["url"] not in proven_urls] if mode == "replay" else []
+    captures=discovery["captures"]+demos
     return [evaluate(cap) for cap in captures],discovery["creators"],discovery["sources"]
 
 @queue.task()
@@ -101,7 +111,7 @@ def recover():
 def work():
     logging.basicConfig(level=logging.INFO)
     store.init()
-    submit("replay","bootstrap-single-mention-v2")
+    submit("replay","bootstrap-m2-rendered-v1")
     next_check=0
     interval=int(os.environ.get("INVESTWATCH_DISCOVERY_INTERVAL","14400"))
     while True:

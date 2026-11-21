@@ -1,0 +1,19 @@
+{
+  "name": "investwatch-desk",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build-preview.mjs"
+  },
+  "dependencies": {
+    "@astryxdesign/core": "0.7.17",
+    "@astryxdesign/theme-neutral": "0.7.17",
+    "@stylexjs/stylex": "0.19.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@astryxdesign/cli": "0.7.17",
+    "esbuild": "0.28.2"
+  }
+}

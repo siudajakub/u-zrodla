@@ -24,4 +24,9 @@ if [ -f analysis/semantic-requirements.txt ]; then
 fi
 docker image inspect python:3.12-bookworm >/dev/null 2>&1 || docker pull python:3.12-bookworm
 sh ops/demo/prepare.sh
+if [ "${INVESTWATCH_PREVIEW:-auto}" != off ] && [ -f web/package-lock.json ]; then
+  sh ops/demo/prepare-preview.sh --prepare > .runtime/demo/preview.log 2>&1 ||
+    echo 'Nie przygotowano podglądu Astryx. Zobacz .runtime/demo/preview.log.' >&2
+  exec env INVESTWATCH_PREVIEW=off sh ops/demo/start.sh
+fi
 exec sh ops/demo/start.sh

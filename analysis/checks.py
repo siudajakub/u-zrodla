@@ -2,6 +2,8 @@
 from collections import Counter
 import re
 
+from .m2_evidence import show_checks
+
 LABELS = {
     "1": "Nazwa prawna firmy", "2": "Rozpoznawalność reklamy", "3": "Korzyść a istotne ryzyko",
     "4": "Ostrzeżenie a dominujący krój pisma", "5": "Widoczność i kontrast",
@@ -13,7 +15,6 @@ LABELS = {
     "16": "Zastrzeżenia podatkowe", "17": "Sugestia aprobaty przez organ", "18": "Bezpieczeństwo dzięki nadzorowi",
 }
 UNKNOWN, OBS, OK, NA = "brak danych", "obserwacja", "spełnione", "nie dotyczy"
-RISK = r"ryzyk\w*|strat\w*|utrat\w* kapitału"
 HISTORY = r"wynik\w* historyczn\w*|historyczn\w* stop\w* zwrotu|wynik\w* z przeszłości"
 FORECAST = r"prognoz\w*|przewidywan\w* (?:zysk|wynik)\w*"
 TAX = r"podatk\w*|podat(?:ek|ku)"
@@ -51,9 +52,8 @@ def marketing(capture):
     present("2", r"\breklama\b|materiał (?:reklamowy|promocyjny)|komunikat marketingowy",
             "W dostępnym tekście brak jednoznacznej etykiety reklamy.")
     benefit = excerpt(text, r"prowizj\w* 0\s*%|bez prowizji|korzyś\w*|zysk\w*|bezpłatn\w*")
-    risk = excerpt(text, RISK)
-    add("3", OBS if benefit and (risk or full) else UNKNOWN,
-        " ".join(filter(None, [benefit, risk, "Sprawdź, czy ostrzeżenie dotyczy tego samego produktu i jest obok korzyści."])))
+    add("3", OBS if benefit and full else UNKNOWN,
+        " ".join(filter(None, [benefit, "Parę korzyść–ryzyko trzeba potwierdzić w tym samym materiale i dla tego samego produktu."])))
 
     for key, missing in {
         "4": "Brak pełnego rozkładu rozmiarów widocznych znaków w obszarze reklamy.",
@@ -63,24 +63,6 @@ def marketing(capture):
         "8": "Brak porównywalnych pomiarów na telefonie, tablecie i komputerze.",
     }.items():
         add(key, UNKNOWN, missing, "ręczny")
-
-    views = capture.get("views", [])
-    observed = []
-    for view in views:
-        warning = next((m for m in view.get("measurement", []) if m.get("pattern") == "ryzyk"), None)
-        if not warning:
-            continue
-        w, h, (x, y, bw, bh) = view["width"], view["height"], warning["bbox"]
-        in_frame = x < w and y < h and x+bw > 0 and y+bh > 0
-        observed.append({"viewport": f"{w}×{h}", "px": warning["px"], "bbox": warning["bbox"],
-                         "inFrame": in_frame, "url": "/evidence/" + view["screenshotFile"],
-                         "domUrl": "/evidence/" + view["domExtractFile"]})
-    if observed:
-        geometry = " · ".join(f"{v['viewport']} / {v['px']} / y={v['bbox'][1]}" for v in observed)
-        add("5", OBS, "Element zawierający frazę „ryzyk” w początkowym układzie. " + geometry +
-            ". Kontrast i zasłonięcie wymagają osobnego pomiaru.", measurements=observed)
-        add("8", OBS if len({v["viewport"] for v in observed}) >= 3 else UNKNOWN,
-            geometry + ". Zweryfikuj czytelność po przewinięciu na każdym ekranie.", measurements=observed)
 
     # The optional ad-region measurements must refer to a single verified warning
     # and complete, visible, non-navigation text within the same creative.
@@ -101,8 +83,8 @@ def marketing(capture):
         add("7", OK if region["before"] else OBS, "Ostrzeżenie widoczne przed interakcją: " +
             ("tak" if region["before"] else "nie") + ". Po interakcji: tak.", "automatyczny")
 
-    add("9", UNKNOWN, "Adresat: " + capture.get("audience", "nieustalony") + ". " +
-        (excerpt(text, r"dźwign\w*|zmiennoś\w*|dywersyfikac\w*") or "Potrzebna ocena rozumienia przekazu przez odbiorcę."), "ręczny")
+    audience = capture.get("audience") or "nieustalony"
+    add("9", UNKNOWN, f"Adresat materiału: {audience}. Brak potwierdzonego ostrzeżenia o reklamowanym produkcie.", "ręczny")
     langs = capture.get("verifiedLanguages", {})
     if langs.get("offer") and langs.get("warning"):
         add("10", OK if langs["offer"] == langs["warning"] else OBS,
@@ -154,4 +136,6 @@ def marketing(capture):
         quote = excerpt(text, pattern)
         add(key, OBS if quote else OK if full else UNKNOWN, quote or "Brak jednoznacznej formuły w analizowanym zakresie.",
             "automatyczny" if quote or full else "ręczny")
+    if capture.get("m2Views"):
+        show_checks(capture, add)
     return list(rows.values())

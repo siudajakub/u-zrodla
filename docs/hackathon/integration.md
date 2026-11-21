@@ -17,7 +17,7 @@ main (demo-safe) <- hack/integration <- hack/<owner>/<feature>
 
 ## Starting A Lane
 
-The recommended path reads available work from the project documentation:
+The current scope and model assignments live in [TEAM_BOARD.md](../../TEAM_BOARD.md). Bind acceptance to the relevant [UKNF source](../zrodla-uknf/README.md) and evidence version. The recommended path reads available work from the project documentation:
 
 ```bash
 git fetch --all --prune

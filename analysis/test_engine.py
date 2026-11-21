@@ -1,4 +1,5 @@
 import hashlib
+import json
 import shutil
 import subprocess
 import tempfile
@@ -149,6 +150,66 @@ class Findings(unittest.TestCase):
         self.assertEqual(result["registry"]["status"], "do wyjaśnienia")
         self.assertLess(analyze(self.cases["demo-pracownia-edukacja"])["score"], 35)
 
+    def test_offer_cues_are_verbatim_and_registry_is_not_identity_proof(self):
+        cap = self.cases["public-bos-profil"]
+        result = analyze(cap)
+        self.assertEqual({c["id"] for c in result["checks"] if c["state"] == OBS},
+                         {"personalizacja", "instrument", "czynność"})
+        for check in result["checks"]:
+            self.assertIn(check["evidence"], cap["description"])
+            self.assertEqual(check["url"], cap["url"])
+        entry = result["registry"]["entries"][0]
+        self.assertEqual(entry["authorizationDate"], "18-08-1994")
+        self.assertIn("5", entry["scopeCodes"].split(", "))
+        self.assertIn("kandydatem", result["summary"])
+        self.assertEqual(result["registryStatus"], "do wyjaśnienia")
+        unrelated = dict(cap, registry={**cap["registry"], "entries": [{"id": 1, "name": "Inny podmiot"}]})
+        self.assertNotIn("Potwierdzono tożsamość", analyze(unrelated)["summary"])
+
+    def test_m3_instrument_cue_uses_words_and_negation(self):
+        for text in ("Transakcja w portfelu. Brak szczegółów.", "Nie dobieramy akcji dla klientów."):
+            found = analyze({"module": "M3", "description": text})
+            self.assertEqual(next(c for c in found["checks"] if c["id"] == "instrument")["state"], UNKNOWN)
+
+    def test_registry_join_rejects_untrusted_source_or_conflicting_identifier(self):
+        path = Path(__file__).resolve().parents[1] / "fixtures/validation/bossa-discovery-2026-11-21.json"
+        cap = json.loads(path.read_text())["capture"]
+        self.assertEqual(analyze(cap)["registryStatus"], "zgodność w stanie archiwalnym")
+        for changed in (
+            {**cap, "url": "https://other.example/oferta"},
+            {**cap, "identityEvidence": {**cap["identityEvidence"], "krsCandidates": ["0000048901", "0000099999"]}},
+            {**cap, "identityEvidence": {**cap["identityEvidence"], "nip": "NIP 000-00-00-000"}},
+        ):
+            with self.subTest(changed=changed.get("url")):
+                self.assertEqual(analyze(changed)["registryStatus"], "do wyjaśnienia")
+                self.assertNotIn("registry", analyze(changed))
+
+    def test_discovered_public_material_remains_traceable_on_replay(self):
+        from collectors.discovery import discover
+        first = discover("replay", ())
+        again = discover("replay", {c["id"] for c in first["creators"]})
+        cap_id = "peertube:959e5bcc-8562-4a2c-9d78-6b8b83d8d306"
+        cap = next(c for c in first["captures"] if c["id"] == cap_id)
+        second = next(c for c in again["captures"] if c["id"] == cap_id)
+        creator = next(c for c in first["creators"] if c["id"] == cap["creatorId"])
+        self.assertTrue(creator["isNew"])
+        self.assertFalse(next(c for c in again["creators"] if c["id"] == cap["creatorId"])["isNew"])
+        self.assertEqual((cap["id"], cap["contentHash"]), (second["id"], second["contentHash"]))
+        finding = analyze(cap)
+        self.assertLess(finding["score"], 60)
+        self.assertIn(finding["evidence"][0]["text"], cap["description"])
+        self.assertEqual(finding["evidence"][0]["url"], cap["url"])
+        self.assertEqual(finding["provenance"]["sourceUrl"], creator["discovery"]["sourceUrl"])
+
+    def test_public_partner_declaration_has_verbatim_evidence(self):
+        from collectors.discovery import discover
+        cap = next(c for c in discover("replay", ())["captures"] if c["id"] == "youtube:xtMqKkFO-0M")
+        finding = analyze(cap)
+        self.assertEqual(finding["score"], 94)
+        self.assertEqual(finding["descriptionDisclosedBrand"], "XTB")
+        self.assertIn(finding["evidence"][0]["text"], cap["description"])
+        self.assertEqual(finding["evidence"][0]["url"], cap["url"])
+
     def test_archive_evidence_resolves(self):
         from analysis.engine import SNAPSHOTS
         report = analyze(self.cases["dom-xtb-etf"])
@@ -157,9 +218,9 @@ class Findings(unittest.TestCase):
             if item["kind"] == "screenshot":
                 image = SNAPSHOTS / item["url"].removeprefix("/evidence/")
                 self.assertEqual(hashlib.sha256(image.read_bytes()).hexdigest(), item["sha256"])
-        geometry = next(c for c in report["checks"] if c["id"] == "8")["measurements"]
-        self.assertEqual([m["px"] for m in geometry], ["16px", "14px", "14px"])
-        self.assertTrue(all(not m["inFrame"] for m in geometry))
+        old_geometry = next(c for c in report["checks"] if c["id"] == "8")
+        self.assertEqual(old_geometry["state"], UNKNOWN)
+        self.assertNotIn("measurements", old_geometry)
 
     def test_calibration_uses_same_groups_and_exposes_mistakes(self):
         low, high = calibration(35), calibration(70)

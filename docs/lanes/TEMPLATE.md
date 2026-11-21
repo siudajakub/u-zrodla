@@ -9,7 +9,7 @@
 
 ## Acceptance
 
-<Brief requirement/ID and one observable outcome.>
+<UKNF source, page or rule ID, expected positive and counterexample, and one observable outcome.>
 
 ## Claim
 
@@ -39,4 +39,4 @@
 
 ## Handoff
 
-<Reviewer and result, integration order, and any decision a consumer must know.>
+<Independent reviewer, model and reasoning, counterexample, artifact version, result and integration order.>

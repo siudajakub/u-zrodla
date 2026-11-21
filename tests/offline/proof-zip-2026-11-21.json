@@ -1,0 +1,93 @@
+{
+  "gitAtStart": "eaa9c10e8ef5a49171276c770d50bbf1d342bf94",
+  "codeSha256": "b572eda8b83ab0a69e174ee46df0d885c301581fe769c1fdd679537d3190fbb8",
+  "timeBasis": "monotonic, docker compose up to populated HTTP /v1/state",
+  "network": "Docker internal; HTTP probe over loopback inside the API container",
+  "trials": [
+    {
+      "trial": 1,
+      "project": "investwatch-proof-377b675d1fbe47",
+      "secondsToCases": 6.27,
+      "cases": 20,
+      "versions": 20,
+      "semantic": {
+        "ready": 20
+      },
+      "offline": true,
+      "uploadASR": {
+        "done": true,
+        "start": 0.33,
+        "end": 3.6
+      },
+      "resources": {
+        "api": {
+          "oomKilled": false,
+          "memoryPeakBytes": 62042112,
+          "restartCount": 0
+        },
+        "worker": {
+          "oomKilled": false,
+          "memoryPeakBytes": 665444352,
+          "restartCount": 0
+        }
+      }
+    },
+    {
+      "trial": 2,
+      "project": "investwatch-proof-f22eb2b35cfc46",
+      "secondsToCases": 6.61,
+      "cases": 20,
+      "versions": 20,
+      "semantic": {
+        "ready": 20
+      },
+      "offline": true,
+      "resources": {
+        "api": {
+          "oomKilled": false,
+          "memoryPeakBytes": 60628992,
+          "restartCount": 0
+        },
+        "worker": {
+          "oomKilled": false,
+          "memoryPeakBytes": 617271296,
+          "restartCount": 0
+        }
+      }
+    },
+    {
+      "trial": 3,
+      "project": "investwatch-proof-2310c4d6804940",
+      "recovery": {
+        "interrupted": true,
+        "simulatedExpiry": true,
+        "ownersDiffer": true,
+        "attempts": 2,
+        "versions": 20,
+        "distinctCases": 20,
+        "terminalScans": 1
+      },
+      "secondsToCases": 7.0,
+      "cases": 20,
+      "versions": 20,
+      "semantic": {
+        "ready": 20
+      },
+      "offline": true,
+      "resources": {
+        "api": {
+          "oomKilled": false,
+          "memoryPeakBytes": 60874752,
+          "restartCount": 0
+        },
+        "worker": {
+          "oomKilled": false,
+          "memoryPeakBytes": 553480192,
+          "restartCount": 0
+        }
+      }
+    }
+  ],
+  "gitAtEnd": "eaa9c10e8ef5a49171276c770d50bbf1d342bf94",
+  "codeSha256AtEnd": "b572eda8b83ab0a69e174ee46df0d885c301581fe769c1fdd679537d3190fbb8"
+}

@@ -1,5 +1,5 @@
-/* Offline analyst desk; React is served locally from vendor/. */
-(() => {
+/* Shared analyst desk for the static launcher and the Astryx preview. */
+export function createDesk(React, createViews) {
   const h = React.createElement;
   const { useState, useEffect, useRef, useCallback } = React;
   const list = (value) => (Array.isArray(value) ? value : []);
@@ -46,6 +46,8 @@
       description: "Opis",
       screenshot: "Zrzut strony",
       registry: "Rejestr",
+      identity: "Tożsamość",
+      semantic: "Fragment wskazany przez model",
     })[value] || text(value, "Fragment materiału");
   const modeLabel = (value) =>
     ({
@@ -212,7 +214,8 @@
                   key: id,
                   type: "button",
                   className: page === id ? "active" : "",
-                  title: label,
+                  "aria-label": label,
+                  "aria-current": page === id ? "page" : undefined,
                   onClick: () => setPage(id),
                 },
                 El("span", null, icon),
@@ -1413,11 +1416,11 @@
       ),
     );
   }
-  function Calibration() {
+  const calibrationLabels = "Robocze etykiety oznaczają materiały do sprawdzenia. Przykłady DM BOŚ i ETF z 0% prowizji pochodzą ze starszych wycinków. Ten test nie mierzy naruszeń prawa ani trafności nowych flag.";
+  function useCalibration() {
     const [threshold, setThreshold] = useState(60),
       [cal, setCal] = useState(null),
-      [retry, setRetry] = useState(0),
-      [expanded, setExpanded] = useState(null);
+      [retry, setRetry] = useState(0);
     useEffect(() => {
       let active = true;
       const timer = setTimeout(
@@ -1427,7 +1430,7 @@
               if (active) setCal(x);
             })
             .catch((e) => {
-              if (active) setCal({ error: e.message });
+              if (active) setCal({ threshold, error: e.message });
             }),
         150,
       );
@@ -1436,6 +1439,15 @@
         clearTimeout(timer);
       };
     }, [threshold, retry]);
+    return {
+      threshold, setThreshold,
+      cal: cal?.threshold === threshold ? cal : null,
+      retry: () => setRetry((previous) => previous + 1),
+    };
+  }
+  function Calibration({ openFinding }) {
+    const { threshold, setThreshold, cal, retry } = useCalibration();
+    const [expanded, setExpanded] = useState(null);
     return El(
       React.Fragment,
       null,
@@ -1454,6 +1466,7 @@
           { className: "subtle", style: { margin: "12px 0 20px" } },
           "Niższy próg może wykryć więcej przypadków, ale zwiększyć liczbę alarmów do sprawdzenia.",
         ),
+        El("p", { className: "subtle" }, calibrationLabels),
         El("input", {
           type: "range",
           min: 0,
@@ -1471,7 +1484,7 @@
               " ",
               El(
                 Button,
-                { onClick: () => setRetry(retry + 1) },
+                { onClick: retry },
                 "Spróbuj ponownie",
               ),
             )
@@ -1501,7 +1514,7 @@
                   { className: "subtle" },
                   `Liczba przykładów: ${text(cal.n)} · Zbiór: ${text(
                     cal.datasetId,
-                  )} · Koszt operacyjny: ${text(cal.cost)}`,
+                  )} · Koszt (2 × przeoczenia + fałszywe alarmy): ${text(cal.cost)}`,
                 ),
                 El(
                   "p",
@@ -1558,6 +1571,7 @@
                               }`,
                             ),
                             x.url && El("p", null, El(Link, { url: x.url })),
+                            openFinding && El(Button, { onClick: () => openFinding(x) }, "Otwórz sprawę"),
                           ),
                       ),
                     ),
@@ -1903,6 +1917,12 @@
       refresh,
       scan,
     };
+    if (views) {
+      return El(views.Desk, {
+        ...common, page, setPage, connection, error, toast,
+        openFinding, upload, lastUpload, openUpload,
+      });
+    }
     return El(
       Shell,
       { page, setPage, connection },
@@ -1930,5 +1950,9 @@
       toast && El("div", { className: "toast", role: "status" }, toast),
     );
   }
-  ReactDOM.createRoot(document.getElementById("app")).render(El(App));
-})();
+  const views = createViews?.({
+    Contract, useCalibration, calibrationLabels,
+    list, text, date, status, clock, kindLabel, linkUrl, provenanceText, modeLabel, request,
+  });
+  return App;
+}

@@ -1,31 +1,26 @@
-# Podział pracy InvestWatch
+# Podział pracy po rewizji UKNF
 
-Kapitan przypisuje jednego właściciela do jednej linii. Tablica opisuje następny etap budowy. Stan wykonania zbierają rekordy sesji i rzeczywiste testy. Przy starcie odczytaj dostępne linie poleceniem `python3 tools/hack_join.py --list`.
+ASTRA ustala cel i kryteria odbioru, uzgadnia wspólne kontrakty, scala sprawdzony stan roboczy i przekazuje J wyniki. Każdy wykonawca rozwija i testuje swój zakres w osobnym worktree. J podejmuje decyzje produktowe i zatwierdza zgłoszenie. [Cele i kolejność prac](docs/PLAN-REALIZACJI.md)
+
+| Linia i wykonawca | Model i reasoning | Odpowiedzialność | Kontrprzykład na tym samym materiale |
+|---|---|---|---|
+| M2 · SOL · m2-wave | GPT-6.2 SOL, high | Przechwycenie reklamy, 19 ID, dowody wersji, tabela źródłowa | Korzyść niższych opłat nie jest automatycznie twierdzeniem o zysku. Ostrzeżenie CFD może należeć do innego produktu. |
+| M3, odkrywanie i AI · TERRA · m3-wave | GPT-6.1 TERRA, high | Od pełnej oferty do sugestii E5 i datowanego wpisu, kontrola edukacyjna, tematy 1–3, przegląd M1 | Model może uznać listę instrumentów za spersonalizowaną rekomendację. Pojedyncza zgodna nazwa nie potwierdza tożsamości. |
+| Pulpit i demo · SOL · desk | GPT-6.2 SOL, high | Układ Astryx, filtry i dowód z decyzją, ocena mobilna, odtworzenie PDF briefu | Syntetyczny przykład z prostym ID nie wykrywa błędu otwierania realnej sprawy WWW z ukośnikiem w ID. |
+| Integracja · ASTRA | Model sesji orkiestratora | Wymagania, przeniesienie zmian bez utraty zastanych edycji, priorytety i bramki | Ocena poprzedniej wersji lub planu nie jest pomiarem aktualnego demo. |
+
+Do powtórzenia testów wystarcza reasoning medium. Odrębni sędziowie SOL i TERRA oceniają dowody na tej samej wersji z reasoning high. Każdy przekazuje własny rozkład punktów przed poznaniem wyniku drugiego.
 
 ## Available Work
 
 | Slug | Outcome / acceptance | Claim | Contract / dependency | Priority | State |
 | --- | --- | --- | --- | --- | --- |
-| core-cases | Skan ma trwałe ID, decyzja i alert przeżywają restart, równoległa edycja zwraca 409 | api/, compose.yaml, migrations/ | Scan, Finding, Case | P0 | PAUSED |
-| source-adapters | Jeden kontrakt łączy monitor z kolejką, importem materiałów firm i odkrywaniem stron ofert PL. Powtórzenie nie dubluje sprawy | collectors/, fixtures/raw/ | Scan, Capture | P0 | PAUSED |
-| analysis-evidence | M1, 19 wierszy M2 i M3 zwracają cytaty lub jawne braki danych. Lokalny model porównany z regułami | analysis/, fixtures/labeled/ | Capture, Finding | P0 | PAUSED |
-| analyst-desk | Operator przechodzi od kolejki do dowodu, umowy i zmiany progu. Odświeżenie zachowuje decyzję | web/, tests/ui/ | Finding, Case, Calibration | P0 | PAUSED |
+| m2-capture | Zrzut i DOM właściwej wersji dla kryterium ryzyka | collectors/m2*, analysis/m2*, data/probe-snapshots/m2/ | Capture, Finding | P0 | PAUSED |
+| m3-review | Wykrycie, źródło fragmentu, ustalenie podmiotu i zakresu, jawna niepewność | analysis/semantic.py, collectors/sites.py | Capture, Finding, reviewSuggestion | P0 | PAUSED |
+| analyst-desk | Dowód i decyzja w zwykłej ścieżce na telefonie i desktopie | web/, tests/e2e/neutral_desk.py | Finding, Case | P0 | PAUSED |
 
-## Active Lanes
+PAUSED w tabeli rekrutacyjnej chroni zajęte linie przed ponownym przydziałem przez hack_join. Stan odbioru podaje [macierz](docs/ODBIOR-UKNF.md). Cztery historyczne linie dostarczyły bazę eaa9c10 i mają [osobne rekordy](docs/lanes/README.md).
 
-Cztery linie dostarczyły zakres demo, a lokalne commity zostały scalone. Rekordy i wyniki są w docs/lanes oraz w [odbiorze](docs/DEMO-ODBIOR.md). Stan PAUSED blokuje ponowne przydzielenie zamkniętej pracy. Dalszy zakres kapitan tworzy osobno.
+## Odbiór roboczy
 
-| Linia | Właściciel | Gałąź | Stan |
-|---|---|---|---|
-| core-cases | kapitan | hack/captain/core-cases | INTEGRATED |
-| source-adapters | SOL | hack/sol/source-adapters | INTEGRATED |
-| analysis-evidence | ASTRA | hack/astra/analysis-evidence | INTEGRATED |
-| analyst-desk | TERA | hack/terra/analyst-desk | INTEGRATED |
-
-## Merge Train
-
-Kapitan integruje najpierw API i kontrakt, potem po jednym konsumencie. Każda linia przedstawia wynik próby pozytywnej i błędnej, odtworzonej przez innego agenta. Kryteria odbioru są w [planie](docs/PLAN-REALIZACJI.md).
-
-## Broadcasts
-
-Wykaz ESMA pobrany w sondzie zawiera 26 wpisów CSP. Zakres zezwolenia na doradztwo i prawo świadczenia tej usługi w Polsce wymagają odrębnego potwierdzenia. Tę uwagę stosują linie source-adapters i analysis-evidence.
+Zakresy M2, M3 i pulpitu przeniesiono do roboczej integracji. SOL i TERRA zakończyli dwie niezależne oceny. Trzy czyste starty offline przeszły na odcisku b572eda8. Formalna bramka gałęzi zakłada zatwierdzony commit. [Linia M2](docs/lanes/2026-11-21-zip-m2-capture.md) · [Linia M3](docs/lanes/2026-11-21-zip-m3-review.md) · [Pulpit i dowody](docs/DEMO-ODBIOR.md) · [Panel](docs/JUDGING.md)

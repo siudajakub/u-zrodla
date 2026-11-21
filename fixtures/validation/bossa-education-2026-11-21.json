@@ -1,0 +1,46 @@
+{
+  "capture": {
+    "id": "web:bossa.pl/edukacja/rynek-i-inwestycje/instrumenty-finansowe",
+    "creatorId": "www:bossa.pl:edukacja",
+    "title": "Instrumenty finansowe | Dom Maklerski Banku Ochrony Środowiska",
+    "url": "https://bossa.pl/edukacja/rynek-i-inwestycje/instrumenty-finansowe",
+    "platform": "web",
+    "description": "Instrumenty finansowe | Dom Maklerski Banku Ochrony Środowiska\nPrzejdź do głównej treści\nInstrumenty finansowe\nZgodnie z polskim prawem oraz unijną Dyrektywą MiFID instrumenty finansowe stanowią: papiery wartościowe, oraz instrumenty niebędące papierami wartościowymi.\nDo tych pierwszych należą m.in.: akcje, prawa poboru, prawda do akcji, obligacje, certyfikaty inwestycyjne, warranty subskrypcyjne, ETF, kwity depozytowe.\nDo drugiej grupy zalicza się m.in.: instrumenty pochodne, takie jak opcje, kontrakty terminowe, swapy, certyfikaty strukturyzowane (ETP), kontrakty na różnice (CFD) oraz tytuły uczestnictwa w instytucjach zbiorowego inwestowania.\nGłówna treść\nPapiery wartościowe:\nAkcje\nPrawa do akcji\nObligacje\nWarranty subskrypcyjne\nCertyfikaty inwestycyjne\nETF-y\nInstrumenty nie będące papierami wartościowymi:\nKontrakty terminowe\nOpcje\nCertyfikaty strukturyzowane\nNiniejszy materiał, przygotowany przez DM BOŚ S.A. ma charakter wyłącznie informacyjny, prezentowany jest w celach edukacyjnych i nie stanowi porady prawnej oraz nie jest rekomendacją osobistą w ramach świadczenia usługi doradztwa inwestycyjnego zgodnie z przepisami prawa. DM BOŚ S.A. nie udziela gwarancji dokładności, aktualności, oraz kompletności niniejszych informacji. Zaleca się przeprowadzenie we własnym zakresie niezależnego przeglądu informacji z niniejszego materiału.\nTransakcje\nOdśwież\nZamknij\nTabela transakcji\nCzas\nKurs (wolumen)\nZmiana\nWolumen obrotu\nWartość obrotu\nWolumen transakcji\n1/1",
+    "module": "M3",
+    "observedAt": "2026-11-21T16:54:06.098486+00:00",
+    "publishedAt": null,
+    "contentHash": "b2400152fd6ee79a252dc9113b2b532bc5610e29a7b51db722e5d4eb2082e5bc",
+    "materialType": "public_html_text",
+    "provenance": {
+      "sourceUrl": "https://bossa.pl/edukacja/rynek-i-inwestycje/instrumenty-finansowe",
+      "observedAt": "2026-11-21T16:54:06.098486+00:00",
+      "responseSha256": "7322e23a18f199456041c345fea0b41b923ee493e41c91b1e27f6cdfae7ccecb",
+      "scope": "public_html_text",
+      "truncated": false,
+      "discoveredFrom": "https://bossa.pl/edukacja",
+      "indexSha256": "2a9a9bd1266524aae73bde78891972a716051100398992f4527f706816f794c2"
+    },
+    "brand": "DM BOŚ · edukacja",
+    "identityEvidence": {
+      "name": "Dom Maklerski Banku Ochrony Środowiska Spółka Akcyjna",
+      "krs": "KRS, pod numerem 0000048901",
+      "nip": "NIP 526-10-26-828",
+      "krsCandidates": [
+        "0000048901"
+      ],
+      "url": "https://bossa.pl/edukacja/rynek-i-inwestycje/instrumenty-finansowe",
+      "observedAt": "2026-11-21T16:54:06.098486+00:00"
+    }
+  },
+  "source": {
+    "id": "www:bossa.pl:edukacja",
+    "name": "DM BOŚ · edukacja",
+    "url": "https://bossa.pl/edukacja",
+    "count": 1,
+    "status": "ok",
+    "observedAt": "2026-11-21T16:54:06.107085+00:00",
+    "lastSuccessAt": "2026-11-21T16:54:06.107085+00:00",
+    "rawCount": 1,
+    "scope": "Tekst HTML strony firmy · jeden poziom od strony głównej"
+  }
+}

@@ -10,9 +10,9 @@ import re
 
 from .setup_semantic import DEFAULT_DIR, LOCK, MODEL_DIR_ENV, available
 
-MAX_FRAGMENTS = 16
-MAX_SOURCE_CHARS = 6_000
-MAX_FRAGMENT_CHARS = 600
+MAX_FRAGMENTS = 512
+MAX_SOURCE_CHARS = 24_000
+MAX_FRAGMENT_CHARS = 300
 MAX_TOKENS = 128
 MIN_MARGIN = 0.02
 LOG = logging.getLogger(__name__)
@@ -77,7 +77,7 @@ EXAMPLES = {
 }
 
 METHOD_HASH = sha256(
-    json.dumps([EXAMPLES, MIN_MARGIN, MAX_FRAGMENTS, MAX_SOURCE_CHARS, MAX_FRAGMENT_CHARS, MAX_TOKENS],
+    json.dumps(["windows-positive-guard-v2", EXAMPLES, MIN_MARGIN, MAX_FRAGMENTS, MAX_SOURCE_CHARS, MAX_FRAGMENT_CHARS, MAX_TOKENS],
                ensure_ascii=False, sort_keys=True).encode(),
 ).hexdigest()
 MODEL = LOCK["repository"]
@@ -164,7 +164,7 @@ def _fragments(capture):
     if isinstance(segments, list):
         sources.extend(
             ("transcript", segment.get("text"), {k: segment[k] for k in ("start", "end") if k in segment})
-            for segment in segments[:6] if isinstance(segment, dict)
+            for segment in segments if isinstance(segment, dict)
         )
     sources.append(("description", capture.get("description"), {}))
     out = {}
@@ -173,15 +173,16 @@ def _fragments(capture):
         if not isinstance(text, str):
             continue
         for sentence in BOUNDARY.split(text[:budget]):
-            quote = sentence[:MAX_FRAGMENT_CHARS].strip()
-            if sum(char.isalpha() for char in quote) < 14:
-                continue
-            out.setdefault(quote, {
-                "kind": "semantic", "field": field, "text": quote, "url": capture.get("url"),
-                **timing,
-            })
-            if len(out) >= MAX_FRAGMENTS:
-                return out
+            for offset in range(0, len(sentence), MAX_FRAGMENT_CHARS):
+                quote = sentence[offset:offset + MAX_FRAGMENT_CHARS].strip()
+                if sum(char.isalpha() for char in quote) < 14:
+                    continue
+                out.setdefault(quote, {
+                    "kind": "semantic", "field": field, "text": quote, "url": capture.get("url"),
+                    **timing,
+                })
+                if len(out) >= MAX_FRAGMENTS:
+                    return out
         budget -= min(len(text), budget)
         if budget == 0:
             break
@@ -189,7 +190,7 @@ def _fragments(capture):
 
 
 def suggest(capture):
-    """Compare up to 16 source fragments and return the strongest class margin."""
+    """Compare bounded source fragments and prefer a positive candidate for review."""
 
     base = {"model": MODEL, "version": VERSION}
     module = capture.get("module")
@@ -208,16 +209,20 @@ def suggest(capture):
     if backend is None:
         return {**base, "status": "unavailable"}
     best = None
+    best_positive = None
+    positive = {"M1": "partnership", "M2": "benefit", "M3": "personalized_advice"}[module]
     try:
         for quote, evidence in fragments.items():
             (kind, cosine), (other_kind, other_cosine), *_ = backend.similar(module, quote)
             margin = cosine - other_cosine
             if best is None or margin > best[0]:
                 best = margin, kind, cosine, other_kind, other_cosine, evidence
+            if kind == positive and (best_positive is None or margin > best_positive[0]):
+                best_positive = margin, kind, cosine, other_kind, other_cosine, evidence
     except Exception as error:
         LOG.warning("Nie udało się obliczyć podobieństwa (%s).", type(error).__name__)
         return {**base, "status": "unavailable"}
-    margin, kind, cosine, other_kind, other_cosine, evidence = best
+    margin, kind, cosine, other_kind, other_cosine, evidence = best_positive or best
     ambiguous = margin < MIN_MARGIN
     return {
         **base, "status": "ready", "class": "uncertain" if ambiguous else kind,
@@ -227,5 +232,46 @@ def suggest(capture):
         "runnerUp": {"class": other_kind, "cosineSimilarity": round(other_cosine, 6)},
         "margin": round(margin, 6), "evidence": evidence,
         "scope": {"fragments": len(fragments), "sampledUpToChars": MAX_SOURCE_CHARS,
-                  "tokensPerFragment": MAX_TOKENS},
+                  "tokensPerFragment": MAX_TOKENS,
+                  "limited": sum(len(capture.get(k) or "") for k in ("title", "description")) +
+                             sum(len(s.get("text") or "") for s in (capture.get("segments") or []) if isinstance(s, dict)) > MAX_SOURCE_CHARS
+                             or len(fragments) >= MAX_FRAGMENTS},
     }
+
+
+def review_suggestion(capture, semantic, finding=None):
+    """A model cue for human triage; it cannot determine legality or identity."""
+    if capture.get("module", "M1") == "M1" and finding is not None:
+        from .engine import relation
+        base = {"source": "rules", "version": finding.get("rulesVersion")}
+        if finding.get("signalType") in {"declaration", "brand_cta"}:
+            expected = {"declaration": 94, "brand_cta": 74}[finding["signalType"]]
+            for evidence in finding.get("evidence", []):
+                if evidence.get("kind") in {"audio", "description"} and relation(evidence.get("text", ""), capture.get("brand"))[0] == expected:
+                    return {**base, "state": "review", "reason": "Reguły wskazują deklarację albo zachętę przy marce do sprawdzenia.", "evidence": evidence}
+            return {**base, "state": "uncertain", "reason": "Nie znaleziono fragmentu potwierdzającego wskazany sygnał."}
+        return {**base, "state": "no_signal", "reason": "Reguły nie wskazały deklaracji ani zachęty przy marce w zbadanym zakresie."}
+    base = {"source": "semantic", "model": semantic.get("model"), "version": semantic.get("version")}
+    if capture.get("module") != "M3":
+        return {**base, "state": "unavailable", "reason": "Flaga modelowa przeglądu nie jest jeszcze ustalona dla tego modułu."}
+    if semantic.get("status") != "ready":
+        return {**base, "state": "unavailable", "reason": "Model nie zwrócił wyniku; dostępne są reguły."}
+    evidence = semantic.get("evidence") or {}
+    quote = evidence.get("text", "")
+    if semantic.get("class") == "uncertain":
+        return {**base, "state": "uncertain", "reason": "Podobieństwa są zbliżone; potrzebna ocena człowieka.", "evidence": evidence}
+    module = capture.get("module")
+    positive = {"M1": "partnership", "M2": "benefit", "M3": "personalized_advice"}.get(module)
+    negated = re.search(r"\b(?:nie|bez|brak|żadn\w*)\b.{0,90}\b(?:rekomend\w*|doradz\w*|dobier\w*|współprac\w*|partner\w*|sponsor\w*|finansow\w*)", quote, re.I)
+    relation = re.search(r"\b(?:współprac\w*|partner\w*|sponsor\w*|finansow\w*|sfinansow\w*|opłaci\w*|pokrył\w*|wynagrodzeni\w*|zapłat\w*)\b", quote, re.I)
+    personal_action = (re.search(r"\b(?:podpowiad\w*|rekomend\w*|doradz\w*|dob(?:ier|ior)\w*|wskaż\w*|wybierz\w*)\b", quote, re.I)
+                       and re.search(r"\b(?:ty|ci|tobie|two\w*|klient\w*|państw\w*|ciebie)\b", quote, re.I))
+    if (semantic.get("class") == positive and not negated and (module != "M1" or relation)
+            and (module != "M3" or personal_action)):
+        return {**base, "state": "review", "reason": "Model wskazuje fragment do przeglądu; to nie jest rozstrzygnięcie prawne.",
+                "evidence": evidence, "score": semantic.get("cosineSimilarity")}
+    if semantic.get("class") == positive:
+        return {**base, "state": "uncertain", "reason": "Model wskazał fragment, ale brakuje jednoznacznej podstawy do powiązania go z sygnałem.",
+                "evidence": evidence}
+    return {**base, "state": "no_signal", "reason": "Model nie wskazał dostatecznie jednoznacznego sygnału w zbadanym zakresie.",
+            "evidence": evidence}

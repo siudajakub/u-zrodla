@@ -133,15 +133,34 @@ def apply_scan(db, findings, creators, sources, mode):
         key=finding["id"]
         # Acquisition times change on each scan. Version only the captured content and analysis.
         content_keys=("title","url","description","segments","mediaUrl","publishedAt","module","brand","platform","creatorId","sha256","contractDemo")
+        proof_revision=capture.get("m2EvidenceRevision")
+        checks=finding.get("checks")
+        if proof_revision:
+            content_keys+=("m2EvidenceRevision",)
+            checks=[
+                {**check, "measurements": [
+                    {k:v for k,v in measurement.items() if k!="capturedAt"}
+                    for measurement in check["measurements"]
+                ]} if "measurements" in check else check
+                for check in checks or []
+            ]
         signature=sha256(dump([[capture.get(k) for k in content_keys],finding.get("summary"),finding.get("score"),
-                                finding.get("checks"),finding.get("evidence"),finding.get("semantic"),finding.get("modalityComparison")]).encode()).hexdigest()
+                                checks,finding.get("evidence"),finding.get("semantic"),finding.get("modalityComparison"),
+                                finding.get("reviewSuggestion")]).encode()).hexdigest()
         before=db.execute("SELECT fingerprint,revision,body FROM cases WHERE id=?",(key,)).fetchone()
-        if before and mode=="replay" and json.loads(before["body"]).get("mode")=="live":
+        previous_body=json.loads(before["body"]) if before else {}
+        if mode=="replay" and previous_body.get("mode")=="live":
             continue
+        if previous_body.get("m2EvidenceRevision"):
+            latest=previous_body.get("latestM2Observation",previous_body["observedAt"])
+            if not proof_revision or datetime.fromisoformat(capture["observedAt"])<datetime.fromisoformat(latest):
+                continue
         if before and before["fingerprint"]==signature:
-            previous_body=json.loads(before["body"])
             if mode=="live":
-                previous_body.update({field:capture[field] for field in ("observedAt","provenance") if field in capture})
+                if proof_revision:
+                    previous_body["latestM2Observation"]=capture["observedAt"]
+                else:
+                    previous_body.update({field:capture[field] for field in ("observedAt","provenance") if field in capture})
                 previous_body["mode"]="live"
                 db.execute("UPDATE cases SET body=? WHERE id=?",(dump(previous_body),key))
             continue

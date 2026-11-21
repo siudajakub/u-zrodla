@@ -27,7 +27,25 @@ def rotating_topic(observed_at):
 
 
 def _read_replay():
-    return json.loads(SNAPSHOT.read_text(encoding="utf-8"))
+    result = json.loads(SNAPSHOT.read_text(encoding="utf-8"))
+    for filename in ("bossa-discovery-2026-11-21.json", "bossa-education-2026-11-21.json"):
+        archived = ROOT / "fixtures/validation" / filename
+        if archived.exists():
+            saved = json.loads(archived.read_text(encoding="utf-8"))
+            capture = saved["capture"]
+            capture["provenance"]["fixture"] = filename
+            if not any(item["id"] == capture["id"] for item in result["captures"]):
+                result["captures"].append(capture)
+            source = {**saved["source"], "fixture": filename}
+            previous = next((item for item in result["sources"] if item["id"] == source["id"]), None)
+            if previous:
+                source["previousObservation"] = previous
+                result["sources"][result["sources"].index(previous)] = source
+            else:
+                result["sources"].append(source)
+    known_creators = {item["id"] for item in result["creators"]}
+    result["creators"].extend(site.creator for site in SITES if site.key not in known_creators)
+    return result
 
 
 def _remember(creator, previous_creators):
@@ -148,7 +166,7 @@ def discover(mode, known_ids, *, known_creators=(), fetch=safe_get, clock=utc_no
         item["mode"] = mode
         item["provenance"]["mode"] = mode
         if mode == "replay":
-            item["provenance"]["fixture"] = SNAPSHOT.name
+            item["provenance"].setdefault("fixture", SNAPSHOT.name)
     for status in result["sources"]:
         status["mode"] = mode
         if "creatorIds" in status:

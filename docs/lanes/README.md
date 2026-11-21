@@ -9,6 +9,8 @@ After J authorizes the bootstrap and the captain creates the integration base, u
 `sh tools/hack_start.sh <feature>` for unplanned work. A record owns only its lane; shared
 priorities live in `TEAM_BOARD.md` and shared interfaces live in `docs/hackathon/contracts.md`.
 
+The four records dated 21 November with the original branch names document the first delivered wave. Consult the [current board](../../TEAM_BOARD.md) and [acceptance matrix](../ODBIOR-UKNF.md) for the active scope.
+
 ## Rules
 
 - One owner and one record per feature branch.
