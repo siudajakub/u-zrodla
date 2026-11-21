@@ -3,8 +3,8 @@
 - Owner: sol
 - Branch: hack/sol/source-adapters
 - Worktree: /home/codexdev/projects/hacknation/uknf-investwatch/.worktrees/sources
-- State: ACTIVE
-- Updated: 2026-11-21 15:59 UTC
+- State: READY
+- Updated: 2026-11-21 16:21 UTC
 - PR / issue: none
 
 ## Acceptance
