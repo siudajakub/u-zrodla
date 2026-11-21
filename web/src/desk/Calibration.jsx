@@ -9,12 +9,13 @@ import { Grid } from "@astryxdesign/core/Grid";
 import { Heading, Text } from "@astryxdesign/core/Text";
 import { HStack, VStack } from "@astryxdesign/core/Layout";
 import { MetadataList, MetadataListItem } from "@astryxdesign/core/MetadataList";
+import { SegmentedControl, SegmentedControlItem } from "@astryxdesign/core/SegmentedControl";
 import { Slider } from "@astryxdesign/core/Slider";
 import { Table, pixel, proportional } from "@astryxdesign/core/Table";
 import { StatusDot } from "@astryxdesign/core/StatusDot";
 import { Token } from "@astryxdesign/core/Token";
 import { api } from "./api.js";
-import { VARIANTS, fmtDate, fmtDateTime } from "./labels.js";
+import { MODULE_NAME, VARIANTS, fmtDate, fmtDateTime } from "./labels.js";
 import { Chart } from "./charts.jsx";
 import { ExternalLink, Loading } from "./parts.jsx";
 
@@ -53,15 +54,15 @@ const rates = (x) => {
 };
 
 /** Odpowiedzi kalibracji z pamięcią podręczną na czas pobytu w zakładce (klucz: wariant, wpis kwalifikacji, próg). */
-function useCalibrationCache(variant, qualId) {
+function useCalibrationCache(variant, qualId, module) {
   const cache = useRef(new Map());
   useEffect(() => {
     cache.current = new Map();
-  }, [variant, qualId]);
+  }, [variant, qualId, module]);
   return (t) => {
-    const key = `${variant}|${qualId}|${t}`;
+    const key = `${module}|${variant}|${qualId}|${t}`;
     if (!cache.current.has(key)) {
-      const p = api.calibration(t, variant);
+      const p = api.calibration(t, module === "M1" ? variant : undefined, module);
       cache.current.set(key, p);
       p.catch(() => cache.current.delete(key));
     }
@@ -100,6 +101,7 @@ export function Calibration({ data, rev, onChanged }) {
   const variant = data.qualification?.variant || data.threshold?.variant || "rules_1_2";
   const applied = data.threshold?.value ?? 60;
   const [threshold, setThreshold] = useState(applied);
+  const [module, setModule] = useState("M1");
   const [state, setState] = useState({ status: "loading" });
   const [curve, setCurve] = useState({});
   const [nonce, setNonce] = useState(0);
@@ -108,14 +110,14 @@ export function Calibration({ data, rev, onChanged }) {
   const [busy, setBusy] = useState(false);
   const thresholds = useHistory(() => api.thresholdHistory(), `${rev}-${nonce}`);
   const variants = useHistory(() => api.qualificationHistory(), `${rev}-${nonce}`);
-  const getCal = useCalibrationCache(variant, data.qualification?.id);
+  const getCal = useCalibrationCache(variant, data.qualification?.id, module);
   useEffect(() => setThreshold(applied), [applied]);
   useEffect(() => {
     let cancelled = false;
     setState((s) => (s.cal ? { ...s, status: "refreshing" } : { status: "loading" }));
     const t = setTimeout(() => {
       Promise.all([getCal(threshold), getCal(applied)]).then(
-        ([cal, base]) => !cancelled && setState({ status: "ready", cal, base }),
+        ([cal, base]) => !cancelled && setState(cal.module && cal.module !== module ? { status: "unsupported", got: cal.module } : { status: "ready", cal, base }),
         (e) => !cancelled && setState({ status: "error", error: e.message }),
       );
     }, 120);
@@ -124,10 +126,11 @@ export function Calibration({ data, rev, onChanged }) {
       clearTimeout(t);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [threshold, applied, variant, nonce, data.qualification?.id]);
+  }, [threshold, applied, variant, nonce, data.qualification?.id, module]);
   const points = useMemo(() => [...new Set([...GRID, applied, threshold])].sort((a, b) => a - b), [applied, threshold]);
   useEffect(() => {
     let cancelled = false;
+    if (state.status === "unsupported") return undefined;
     const todo = points.filter((p) => !(p in curve));
     let next = 0;
     const worker = async () => {
@@ -146,8 +149,8 @@ export function Calibration({ data, rev, onChanged }) {
       cancelled = true;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [points.join(","), variant, data.qualification?.id]);
-  useEffect(() => setCurve({}), [variant, data.qualification?.id]);
+  }, [points.join(","), variant, data.qualification?.id, module, state.status === "unsupported"]);
+  useEffect(() => setCurve({}), [variant, data.qualification?.id, module]);
 
   async function act(fn, ok) {
     if (busy) return;
@@ -184,6 +187,19 @@ export function Calibration({ data, rev, onChanged }) {
   if (state.status === "error") {
     return <VStack padding={4}><Banner status="error" title="Nie można pobrać wyników kalibracji" description={state.error} endContent={<Button label="Spróbuj ponownie" onClick={() => setNonce((n) => n + 1)} />} /></VStack>;
   }
+  const moduleSwitch = (
+    <SegmentedControl label="Moduł kalibracji" size="sm" value={module} onChange={(v) => { setState({ status: "loading" }); setModule(v); }}>
+      {Object.keys(MODULE_NAME).map((m) => <SegmentedControlItem key={m} value={m} label={`${m} ${MODULE_NAME[m]}`} />)}
+    </SegmentedControl>
+  );
+  if (state.status === "unsupported") {
+    return (
+      <VStack gap={3} padding={3}>
+        <HStack gap={2} vAlign="center" wrap="wrap"><Heading level={1}>Kalibracja</Heading>{moduleSwitch}</HStack>
+        <Banner status="info" title={`Brak kalibracji dla ${module} (${MODULE_NAME[module]})`} description={`API zwraca kalibrację tylko dla ${state.got}. Pulpit niczego nie liczy sam; próg i etykiety dla ${module} pojawią się po stronie API.`} />
+      </VStack>
+    );
+  }
   if (!cal) return <Loading rows={4} label="Pobieranie wyników kalibracji…" />;
   const { precision, recall } = rates(cal);
   const ci = cal.precisionCI;
@@ -195,6 +211,7 @@ export function Calibration({ data, rev, onChanged }) {
     <VStack gap={3} padding={3}>
       <HStack gap={2} vAlign="center" wrap="wrap">
         <Heading level={1}>Kalibracja</Heading>
+        {moduleSwitch}
         <Text type="supporting" color="secondary">Jak próg i wariant reguł zgadzają się z ręcznymi etykietami.</Text>
       </HStack>
       <Banner status="warning" title="Oceny agentów, nie walidacja ekspercka" description={`${cal.disclaimer || "Wyniki opierają się na etykietach zespołu i agentów, na małej próbie."} Punkty to siła przesłanki do kontroli, nie prawdopodobieństwo.`} />

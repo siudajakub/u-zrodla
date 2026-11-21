@@ -11,7 +11,8 @@ export const SERIES = ["blue", "orange", "green", "purple"];
 
 /**
  * spec: { type: "bar"|"line", labels: string[], datasets: [{ label, data, axis?: "y"|"y2", color?: nazwa serii }], stacked?, height }
- * Dwie osie (y, y2) są używane, gdy zestawy mają różne skale (materiały i skierowania).
+ * Dwie osie (y, y2) są dostępne, ale pulpit ich nie używa: zestawy o różnej skali dostają osobne wykresy.
+ * valueLabels: liczby nad słupkami lub punktami.
  */
 export function Chart({ spec, label, height = 220, width }) {
   const canvas = useRef(null);
@@ -70,6 +71,22 @@ export function Chart({ spec, label, height = 220, width }) {
       config.options.scales = { x: { display: false }, y: { display: false, beginAtZero: true } };
       config.options.layout = { padding: 2 };
       config.options.events = [];
+    }
+    if (spec.valueLabels) {
+      config.plugins = [{
+        id: "valueLabels",
+        afterDatasetsDraw(instance) {
+          const { ctx } = instance;
+          ctx.save();
+          ctx.fillStyle = tokens["--color-text-primary"] || text;
+          ctx.textAlign = "center";
+          ctx.font = `600 12px ${tokens["--font-family-body"] || "sans-serif"}`;
+          instance.data.datasets.forEach((ds, i) => instance.getDatasetMeta(i).data.forEach((el, j) => {
+            if (ds.data[j] != null) ctx.fillText(String(ds.data[j]), el.x, el.y - 6);
+          }));
+          ctx.restore();
+        },
+      }];
     }
     chart.current?.destroy();
     chart.current = new ChartJS(canvas.current, config);

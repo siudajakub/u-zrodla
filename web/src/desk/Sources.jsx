@@ -105,20 +105,23 @@ function withHealth(data) {
 const ok = (n, one, few, many) => `${n} ${n === 1 ? one : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? few : many}`;
 
 /** Definicje kafelków platform: które wiersze źródeł do nich należą i co o nich powiedzieć po ludzku. */
-function platformTiles(data, sources, counts) {
+function platformTiles(data, sources, counts, totals) {
   const creators = data.creatorCounts?.byPlatform || {};
   const pick = (test) => sources.filter((s) => test(s.key));
   const yt = pick((k) => k === "youtube" || k.startsWith("youtube"));
   const tt = pick((k) => k.startsWith("tiktok"));
   const ig = pick((k) => k === "instagram" || k === "instagram-ads");
   const fb = pick((k) => k === "facebook" || k === "facebook-ads");
-  const m2 = pick((k) => k.startsWith("m2:"));
+  const m2 = pick((k) => k.startsWith("m2:") || k.startsWith("m2-market:"));
   const m3 = pick((k) => k.startsWith("m3"));
   const meta = pick((k) => k === "meta_ads");
   const sum = (list) => list.reduce((n, s) => n + (s.count || 0), 0);
   const dataScan = dataScanOf(data);
   const lastOk = (list) => list.map((s) => s.lastSuccessAt).filter(Boolean).sort().pop() || null;
-  const PATH_LABEL = { manual_import: "import ręczny", ad_library_api: "API Biblioteki Reklam", organic_posts: "wpisy automatycznie" };
+  const PATH_LABEL = { vendor_sample: "próbka z usługi zewnętrznej", manual_import: "import ręczny", ad_library_api: "API Biblioteki Reklam", organic_posts: "wpisy automatycznie" };
+  const latest = (list, field) => list.map((s) => s[field]).filter(Boolean).sort().pop() || null;
+  const web = [...(data.creatorMap?.values?.() || [])].filter((x) => x.platform === "web");
+  const m2Firms = web.filter((x) => !String(x.id).endsWith(":m3")).length;
   const PATH_RANK = { ok: 0, partial: 1, needs_key: 2, access_blocked: 3 };
   /** Droga z wiersza: `paths[]` z API, a dla starego wiersza jedna droga z samego wiersza. */
   const pathsOf = (s) => (s.paths?.length ? s.paths : [{ path: s.key.endsWith("-ads") ? "ad_library_api" : "organic_posts", status: s.status, detail: s.lastError?.message || s.error || s.scope || "", nextStep: s.lastError?.nextStep || null, at: s.health?.lastAttemptAt || s.checkedAt, count: s.count }]);
@@ -136,10 +139,11 @@ function platformTiles(data, sources, counts) {
     const total = paths.filter((p) => p.status === "ok" || p.status === "partial").reduce((n, p) => n + (p.count || 0), 0);
     return {
       id, title, status: !best ? "needs_key" : working ? "ok" : best.status,
-      state: !best ? "nie uruchomiono" : working ? (best.path === "manual_import" ? "próbka z importu ręcznego" : null) : best.status === "access_blocked" ? "dostęp zablokowany" : best.status === "needs_key" ? "brak tokenu" : null,
+      state: !best ? "nie uruchomiono" : working ? (best.path === "vendor_sample" ? "próbka z usługi zewnętrznej" : best.path === "manual_import" ? "próbka z importu ręcznego" : null) : best.status === "access_blocked" ? "dostęp zablokowany" : best.status === "needs_key" ? "brak tokenu" : null,
       rows: [
         ...(summary ? [["Podsumowanie", summary]] : []),
-        ["Materiały", String(total)],
+        ["Materiały w bazie", String(totals?.[id] ?? total)],
+        ...(creators[id] != null ? [["Konta w bazie", String(creators[id])]] : []),
         ["Ostatnia próba", fmtDateTime(paths.map((p) => p.at).filter(Boolean).sort().pop() || null)],
       ],
       paths: paths.map((p) => ({ ...p, label: PATH_LABEL[p.path] || p.path })),
@@ -154,7 +158,7 @@ function platformTiles(data, sources, counts) {
       id: "youtube", title: "YouTube", status: yt.length ? worst(yt) : "empty", state: null,
       rows: [
         ["Kanały w bazie", String(creators.youtube ?? "—")],
-        ["Materiały", String(sum(yt))],
+        ["Materiały w bazie", String(totals?.youtube ?? sum(yt))],
         ...(keys.length
           ? keys.map((k, i) => [`Klucz ${i + 1} (${k.keyId})`, `${k.used} z ${k.limit} jednostek${k.exhaustedAt ? ", wyczerpany" : ""}`])
           : ytRow?.quota?.limit != null ? [["Kwota", `${ytRow.quota.used} z ${ytRow.quota.limit} jednostek${ytRow.quota.resetAt ? `, odnowienie ${fmtDateTime(ytRow.quota.resetAt)}` : ""}`]] : []),
@@ -167,7 +171,7 @@ function platformTiles(data, sources, counts) {
       id: "tiktok", title: "TikTok", status: tt.length ? worst(tt.filter((s) => s.status !== "skipped")) : "empty", state: null,
       rows: [
         ["Profile", `${tt.length} (z odnośników w opisach YouTube)`],
-        ["Materiały", String(sum(tt))],
+        ["Materiały w bazie", String(totals?.tiktok ?? sum(tt))],
         ["Ograniczenia", "tylko podpis i zasięg odtworzeń; mowy i kadrów nie ma; data szacowana z identyfikatora"],
         ["Ostatni sukces", lastOk(tt) ? fmtDateTime(lastOk(tt)) : "brak udanego odczytu"],
       ],
@@ -178,13 +182,24 @@ function platformTiles(data, sources, counts) {
     social(fb, "Facebook", "facebook"),
     {
       id: "m2", title: "WWW firm (M2)", status: m2.length ? worst(m2) : "empty", state: m2.length ? null : "brak stron",
-      rows: [["Strony", String(m2.length)], ["Zrzuty ofert", String(sum(m2) || counts.offersM2 || 0)], ["Ostatni sukces", lastOk(m2) ? fmtDateTime(lastOk(m2)) : "brak"]],
+      rows: [
+        ["Firmy", String(m2Firms)],
+        ["Strony", String(m2.length)],
+        ["Odczytano", latest(m2, "observedAt") ? fmtDateTime(latest(m2, "observedAt")) : "brak"],
+        ["Ograniczenie", m2[0]?.scope || "render strony z odnośników strony głównej firmy"],
+      ],
       next: "Nic do zrobienia.", url: m2[0]?.url || m2[0]?.target,
     },
     {
       id: "m3", title: "WWW doradców (M3)", status: m3.length ? worst(m3) : "empty", state: m3.length ? null : "próbka",
-      rows: [["Oferty w bazie", String(counts.offersM3 ?? 0)], ["Źródło", m3.length ? `${m3.length} stron` : "próbka publiczna, bez odczytu na żywo"], ["Model semantyczny", data.semantic?.status === "unavailable" ? "niedostępny: M3 działa tylko regułami" : "dostępny"]],
-      next: data.semantic?.status === "unavailable" ? "Opcjonalnie: wskaż katalog modelu E5 (INVESTWATCH_SEMANTIC_DIR)." : "Nic do zrobienia.",
+      rows: [
+        ["Podmioty", String(m3.reduce((n, s) => n + (s.count || 0), 0) || counts.offersM3 || 0)],
+        ["Strony odczytane", m3.some((s) => s.pages != null) ? String(m3.reduce((n, s) => n + (s.pages || 0), 0)) : "—"],
+        ["Odczytano", latest(m3, "observedAt") ? fmtDateTime(latest(m3, "observedAt")) : "brak"],
+        ["Ograniczenie", m3.map((s) => s.message).filter(Boolean)[0] || "odczyt z listy ziaren; bez własnej wyszukiwarki"],
+        ["Model semantyczny", data.semantic?.status === "unavailable" ? "niedostępny: M3 działa tylko regułami" : "dostępny"],
+      ],
+      next: m3.length ? "Dopisz domeny do listy ziaren albo podłącz dostawcę wyszukiwania z kluczem." : "Uruchom skan.", 
     },
     (() => {
       const s = meta[0];
@@ -221,7 +236,7 @@ function PlatformTile({ t }) {
         </MetadataList>
         {t.paths?.length > 0 && (
           <Table idKey="path" density="compact" verticalAlign="top" data={t.paths} columns={[
-            { key: "p", header: "Droga", width: proportional(2, { minWidth: 90 }), renderCell: (p) => <Text weight="medium">{p.label}</Text> },
+            { key: "p", header: "Droga", width: proportional(3, { minWidth: 130 }), renderCell: (p) => <Text weight="medium">{p.label}</Text> },
             { key: "s", header: "Stan", width: proportional(2, { minWidth: 90 }), renderCell: (p) => <Text type="supporting">{(SOURCE_STATE[p.status] || [0, p.status])[1]}{p.count ? ` (${p.count})` : ""}</Text> },
             { key: "d", header: "Szczegół", width: proportional(3, { minWidth: 120 }), renderCell: (p) => <Text type="supporting" color="secondary" maxLines={3}>{p.detail || "—"}</Text> },
             { key: "n", header: "Następny krok", width: proportional(3, { minWidth: 120 }), renderCell: (p) => <Text type="supporting" color="secondary" maxLines={3}>{p.nextStep || "—"}</Text> },
@@ -236,27 +251,30 @@ function PlatformTile({ t }) {
 const HEALTH = { ok: ["success", "Wszystkie źródła działają"], degraded: ["warning", "Część źródeł ma problem"], failed: ["error", "Żadne źródło nie działa"] };
 const MODE_SHORT = { live: "na żywo", replay: "odtworzenie", recompute: "przeliczenie", enrich: "transkrypcje", upload: "plik" };
 
-/** Materiały i skierowania w czasie: słupki per skan przy jednym dniu danych, linie per dzień przy kilku. */
+/** Materiały i skierowania w czasie: dwa osobne wykresy, każdy z własną skalą i liczbami nad słupkami (bez drugiej osi). */
 export function TrendTile({ trend }) {
   const days = trend?.byDay || [];
   const scans = (trend?.byScan || []).filter((s) => s.mode !== "recompute" || s.referred);
   const perScan = days.length < 2;
   const rows = perScan ? scans : days;
-  const spec = React.useMemo(() => ({
-    type: perScan ? "bar" : "line",
-    labels: rows.map((r) => (perScan ? `${MODE_SHORT[r.mode] || r.mode} ${fmtTime(r.at)}` : fmtDay(r.day))),
-    datasets: [
-      { label: "Materiały przejrzane", data: rows.map((r) => (perScan ? r.captures : r.captures) || 0), axis: "y", color: "blue" },
-      { label: "Skierowania do sprawdzenia", data: rows.map((r) => r.referred || 0), axis: "y2", color: "orange" },
-    ],
-    yTitle: "materiały",
-    y2Title: "skierowania",
-  }), [trend]);
+  const type = perScan ? "bar" : "line";
+  const labels = rows.map((r) => (perScan ? `${MODE_SHORT[r.mode] || r.mode} ${fmtTime(r.at)}` : fmtDay(r.day)));
+  const materials = React.useMemo(() => ({ type, labels, valueLabels: true, datasets: [{ label: "Materiały przejrzane", data: rows.map((r) => r.captures || 0), color: "blue" }], yTitle: "materiały" }), [trend]);
+  const referrals = React.useMemo(() => ({ type: "bar", labels, valueLabels: true, datasets: [{ label: "Skierowania do sprawdzenia", data: rows.map((r) => r.referred || 0), color: "orange" }], yTitle: "skierowania" }), [trend]);
   if (!rows.length) return <EmptyState isCompact title="Brak danych o skanach" description="Wykres pojawi się po pierwszym skanie." />;
-  const summary = rows.map((r) => `${perScan ? `${MODE_SHORT[r.mode] || r.mode} ${fmtTime(r.at)}` : fmtDay(r.day)}: ${r.captures} materiałów, ${r.referredKnown === false ? "?" : r.referred || 0} skierowań`).join("; ");
+  const part = (r) => `${perScan ? `${MODE_SHORT[r.mode] || r.mode} ${fmtTime(r.at)}` : fmtDay(r.day)}`;
   return (
     <VStack gap={1.5}>
-      <Chart spec={spec} label={`Wykres: materiały i skierowania w czasie. ${summary}`} height={230} />
+      <Grid columns={{ minWidth: 300, max: 2 }} gap={3}>
+        <VStack gap={1}>
+          <Text weight="semibold">Materiały przejrzane</Text>
+          <Chart spec={materials} label={`Wykres: materiały przejrzane w czasie. ${rows.map((r) => `${part(r)}: ${r.captures}`).join("; ")}`} height={200} />
+        </VStack>
+        <VStack gap={1}>
+          <Text weight="semibold">Skierowania do sprawdzenia</Text>
+          <Chart spec={referrals} label={`Wykres: skierowania do sprawdzenia w czasie. ${rows.map((r) => `${part(r)}: ${r.referredKnown === false ? "?" : r.referred || 0}`).join("; ")}`} height={200} />
+        </VStack>
+      </Grid>
       <Text type="supporting" color="secondary">{perScan ? "Jeden dzień danych: słupki pokazują kolejne skany." : `Dni: ${rows.length}.`} Skierowania to nowe sprawy w kolejce „Co wymaga sprawdzenia” po skanie.</Text>
       <Collapsible defaultIsOpen={false} trigger={<Text type="supporting">Dane wykresu (tabela)</Text>}>
         <Table idKey="k" density="compact" data={rows.map((r, i) => ({ k: i, ...r }))} columns={[
@@ -279,7 +297,6 @@ function usePlatformTotals(rev) {
     let off = false;
     Promise.all([
       ...PLATFORM_ORDER.map((p) => api.queue("all", { source: p }, { limit: 1 }).then((r) => [p, r.total])),
-      api.queue("offersM3", { source: "web" }, { limit: 1 }).then((r) => ["web", r.total]),
     ]).then((pairs) => {
       if (off) return;
       const t = {};
@@ -316,12 +333,12 @@ export function Sources({ data, busy, scanning, onScan, rev, onRefresh }) {
   const dataScan = dataScanOf(data);
   const sources = withHealth(data);
   const counts = data.counts || {};
-  const tiles = platformTiles(data, sources, counts);
+  const totals = usePlatformTotals(rev);
+  const tiles = platformTiles(data, sources, counts, totals);
   const creators = [...data.creatorMap.values()];
   const [allCreators, setAllCreators] = useState(false);
   const detail = useScanProgress(scan);
   const [lastSteps, setLastSteps] = useState(null);
-  const totals = usePlatformTotals(rev);
   useEffect(() => {
     if (!dataScan?.id) return undefined;
     let off = false;
