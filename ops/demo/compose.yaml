@@ -1,0 +1,46 @@
+# Copy to repository root as compose.yaml. Run through ops/demo/start.sh.
+name: investwatch-demo
+x-common: &common
+  image: python:3.12-bookworm
+  pull_policy: never
+  user: '${INVESTWATCH_UID:?Run ops/demo/prepare.sh first}:${INVESTWATCH_GID:?Run ops/demo/prepare.sh first}'
+  working_dir: /app
+  read_only: true
+  init: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  tmpfs:
+    - /tmp:size=128m,mode=1777
+  environment:
+    PYTHONPATH: /app:/opt/investwatch/deps
+    PYTHONDONTWRITEBYTECODE: '1'
+    PYTHONUNBUFFERED: '1'
+    PATH: /opt/investwatch/ffmpeg/bin:/usr/local/bin:/usr/bin:/bin
+    INVESTWATCH_STATE: /data
+    INVESTWATCH_DISCOVERY_INTERVAL: '${INVESTWATCH_DISCOVERY_INTERVAL:-0}'
+  volumes:
+    - type: bind
+      source: .
+      target: /app
+      read_only: true
+    - type: bind
+      source: ./.runtime/demo/deps
+      target: /opt/investwatch/deps
+      read_only: true
+    - type: bind
+      source: ./.runtime/demo/ffmpeg
+      target: /opt/investwatch/ffmpeg
+      read_only: true
+    - type: bind
+      source: ./.runtime/demo/state
+      target: /data
+  restart: unless-stopped
+services:
+  api:
+    <<: *common
+    command: [python, -m, uvicorn, 'api.server:app', --host, 0.0.0.0, --port, '8769']
+    ports:
+      - '127.0.0.1:8769:8769'
+  worker:
+    <<: *common
+    command: [python, -m, api.jobs]
