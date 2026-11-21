@@ -158,7 +158,7 @@ def encoder():
     return _encoder(str(directory), identities)
 
 
-def fit(np, x, y, l2, epochs=400, rate=0.5):
+def fit(np, x, y, l2, epochs=600, rate=0.05):
     """Multinomial logistic regression, full-batch gradient descent with L2 on the weights."""
     n, d = x.shape
     k = len(CLASSES)
@@ -214,14 +214,17 @@ def keyword_baseline(text):
     return "informacja"
 
 
-def train(labels_path=LABELS, replay_path=REPLAY, out=WEIGHTS, grid=(1e-4, 1e-3, 1e-2, 3e-2)):
+def train(labels_path=LABELS, replay_path=REPLAY, out=WEIGHTS, grid=(1e-3, 1e-2, 3e-2, 0.1, 0.3, 1.0)):
     labels, rows = labeled_examples(labels_path, replay_path)
     tuning = [r for r in rows if r["split"] == "tuning"]
     enc = encoder()
     if enc is None:
         raise SystemExit("Brak wag E5: uruchom python3 -m analysis.setup_semantic.")
     np = enc.np
-    x = enc.encode([r["text"] for r in tuning])
+    raw = enc.encode([r["text"] for r in tuning])
+    # E5 vectors share a large common component; centring and scaling makes the classes separable.
+    mean, scale = raw.mean(axis=0), raw.std(axis=0) + 1e-6
+    x = (raw - mean) / scale
     y = np.array([CLASSES.index(r["label"]) for r in tuning])
     creators = sorted({r["creatorId"] for r in tuning})
     folds = [creators[i::5] for i in range(5)]
@@ -230,8 +233,10 @@ def train(labels_path=LABELS, replay_path=REPLAY, out=WEIGHTS, grid=(1e-4, 1e-3,
         hits = 0
         for fold in folds:
             test = np.array([r["creatorId"] in fold for r in tuning])
-            w, b = fit(np, x[~test], y[~test], l2)
-            hits += int((softmax(np, x[test] @ w + b).argmax(axis=1) == y[test]).sum())
+            m, sc = raw[~test].mean(axis=0), raw[~test].std(axis=0) + 1e-6
+            w, b = fit(np, (raw[~test] - m) / sc, y[~test], l2)
+            x_test = (raw[test] - m) / sc
+            hits += int((softmax(np, x_test @ w + b).argmax(axis=1) == y[test]).sum())
         scores[l2] = hits / len(tuning)
     l2 = max(grid, key=lambda value: (scores[value], value))
     w, b = fit(np, x, y, l2)
@@ -242,6 +247,7 @@ def train(labels_path=LABELS, replay_path=REPLAY, out=WEIGHTS, grid=(1e-4, 1e-3,
             "trainedOn": {"labels": Path(labels_path).name, "labelsSha256": sha256(Path(labels_path).read_bytes()).hexdigest(),
                           "n": len(tuning), "split": "tuning", "creators": len(creators)},
             "l2": l2, "cvAccuracyByL2": {str(k): round(v, 4) for k, v in scores.items()},
+            "mean": np.round(mean, 6).tolist(), "scale": np.round(scale, 6).tolist(),
             "weights": np.round(w, 6).tolist(), "bias": np.round(b, 6).tolist()}
     payload = json.dumps(body, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     body["version"] = f"mt-e5lr-1-{sha256(payload.encode()).hexdigest()[:12]}"
@@ -276,7 +282,7 @@ def classify_texts(texts, weights=None):
     if weights is None or enc is None:
         return None
     np = enc.np
-    x = enc.encode(list(texts))
+    x = (enc.encode(list(texts)) - np.array(weights["mean"])) / np.array(weights["scale"])
     return softmax(np, x @ np.array(weights["weights"]) + np.array(weights["bias"]))
 
 

@@ -1,0 +1,463 @@
+{
+ "split": "heldout",
+ "version": "mt-e5lr-1-f6557041f182",
+ "digest": "9ed55aa329410562402603a0670f84623da1bc0d731400099aac1514aa188e91",
+ "secondsPerMaterial": 3.0341,
+ "model": {
+  "n": 57,
+  "correct": 30,
+  "accuracy": 0.5263157894736842,
+  "answered": 57,
+  "abstained": 0,
+  "accuracyAnswered": 0.5263157894736842,
+  "macroF1": 0.4701573534069947,
+  "perClass": {
+   "promocja": {
+    "support": 3,
+    "precision": 0.125,
+    "recall": 0.3333333333333333,
+    "f1": 0.18181818181818182
+   },
+   "edukacja": {
+    "support": 14,
+    "precision": 0.6428571428571429,
+    "recall": 0.6428571428571429,
+    "f1": 0.6428571428571429
+   },
+   "informacja": {
+    "support": 17,
+    "precision": 0.5,
+    "recall": 0.7058823529411765,
+    "f1": 0.5853658536585366
+   },
+   "opinia": {
+    "support": 23,
+    "precision": 0.7272727272727273,
+    "recall": 0.34782608695652173,
+    "f1": 0.4705882352941176
+   }
+  },
+  "matrix": {
+   "promocja": {
+    "promocja": 1,
+    "edukacja": 0,
+    "informacja": 2,
+    "opinia": 0,
+    "nieustalone": 0
+   },
+   "edukacja": {
+    "promocja": 2,
+    "edukacja": 9,
+    "informacja": 1,
+    "opinia": 2,
+    "nieustalone": 0
+   },
+   "informacja": {
+    "promocja": 2,
+    "edukacja": 2,
+    "informacja": 12,
+    "opinia": 1,
+    "nieustalone": 0
+   },
+   "opinia": {
+    "promocja": 3,
+    "edukacja": 3,
+    "informacja": 9,
+    "opinia": 8,
+    "nieustalone": 0
+   }
+  }
+ },
+ "modelWithAbstention": {
+  "n": 57,
+  "correct": 29,
+  "accuracy": 0.5087719298245614,
+  "answered": 51,
+  "abstained": 6,
+  "accuracyAnswered": 0.5686274509803921,
+  "macroF1": 0.4908155569920276,
+  "perClass": {
+   "promocja": {
+    "support": 3,
+    "precision": 0.25,
+    "recall": 0.3333333333333333,
+    "f1": 0.28571428571428575
+   },
+   "edukacja": {
+    "support": 14,
+    "precision": 0.6428571428571429,
+    "recall": 0.6428571428571429,
+    "f1": 0.6428571428571429
+   },
+   "informacja": {
+    "support": 17,
+    "precision": 0.5,
+    "recall": 0.6470588235294118,
+    "f1": 0.5641025641025642
+   },
+   "opinia": {
+    "support": 23,
+    "precision": 0.7272727272727273,
+    "recall": 0.34782608695652173,
+    "f1": 0.4705882352941176
+   }
+  },
+  "matrix": {
+   "promocja": {
+    "promocja": 1,
+    "edukacja": 0,
+    "informacja": 2,
+    "opinia": 0,
+    "nieustalone": 0
+   },
+   "edukacja": {
+    "promocja": 2,
+    "edukacja": 9,
+    "informacja": 0,
+    "opinia": 2,
+    "nieustalone": 1
+   },
+   "informacja": {
+    "promocja": 0,
+    "edukacja": 2,
+    "informacja": 11,
+    "opinia": 1,
+    "nieustalone": 3
+   },
+   "opinia": {
+    "promocja": 1,
+    "edukacja": 3,
+    "informacja": 9,
+    "opinia": 8,
+    "nieustalone": 2
+   }
+  }
+ },
+ "keywordRules": {
+  "n": 57,
+  "correct": 13,
+  "accuracy": 0.22807017543859648,
+  "answered": 57,
+  "abstained": 0,
+  "accuracyAnswered": 0.22807017543859648,
+  "macroF1": 0.20648010078157136,
+  "perClass": {
+   "promocja": {
+    "support": 3,
+    "precision": 0.043478260869565216,
+    "recall": 0.3333333333333333,
+    "f1": 0.07692307692307691
+   },
+   "edukacja": {
+    "support": 14,
+    "precision": 0.4,
+    "recall": 0.5714285714285714,
+    "f1": 0.47058823529411764
+   },
+   "informacja": {
+    "support": 17,
+    "precision": 0.2,
+    "recall": 0.058823529411764705,
+    "f1": 0.0909090909090909
+   },
+   "opinia": {
+    "support": 23,
+    "precision": 0.3333333333333333,
+    "recall": 0.13043478260869565,
+    "f1": 0.18750000000000003
+   }
+  },
+  "matrix": {
+   "promocja": {
+    "promocja": 1,
+    "edukacja": 0,
+    "informacja": 0,
+    "opinia": 2,
+    "nieustalone": 0
+   },
+   "edukacja": {
+    "promocja": 4,
+    "edukacja": 8,
+    "informacja": 1,
+    "opinia": 1,
+    "nieustalone": 0
+   },
+   "informacja": {
+    "promocja": 10,
+    "edukacja": 3,
+    "informacja": 1,
+    "opinia": 3,
+    "nieustalone": 0
+   },
+   "opinia": {
+    "promocja": 8,
+    "edukacja": 9,
+    "informacja": 3,
+    "opinia": 3,
+    "nieustalone": 0
+   }
+  }
+ },
+ "majorityClass": {
+  "label": "edukacja",
+  "n": 57,
+  "correct": 14,
+  "accuracy": 0.24561403508771928,
+  "answered": 57,
+  "abstained": 0,
+  "accuracyAnswered": 0.24561403508771928,
+  "macroF1": 0.09859154929577466,
+  "perClass": {
+   "promocja": {
+    "support": 3,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "edukacja": {
+    "support": 14,
+    "precision": 0.24561403508771928,
+    "recall": 1.0,
+    "f1": 0.3943661971830986
+   },
+   "informacja": {
+    "support": 17,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "opinia": {
+    "support": 23,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0
+   }
+  },
+  "matrix": {
+   "promocja": {
+    "promocja": 0,
+    "edukacja": 3,
+    "informacja": 0,
+    "opinia": 0,
+    "nieustalone": 0
+   },
+   "edukacja": {
+    "promocja": 0,
+    "edukacja": 14,
+    "informacja": 0,
+    "opinia": 0,
+    "nieustalone": 0
+   },
+   "informacja": {
+    "promocja": 0,
+    "edukacja": 17,
+    "informacja": 0,
+    "opinia": 0,
+    "nieustalone": 0
+   },
+   "opinia": {
+    "promocja": 0,
+    "edukacja": 23,
+    "informacja": 0,
+    "opinia": 0,
+    "nieustalone": 0
+   }
+  }
+ },
+ "errors": [
+  {
+   "id": "youtube:fBs3HCH1qpM",
+   "expected": "promocja",
+   "predicted": "informacja",
+   "confidence": 0.506,
+   "title": "A gdyby zamiast oglądać Netflixa, kupować akcje Netflix? 🤔 #współpraca #freedom24"
+  },
+  {
+   "id": "youtube:3x9VNTJSksg",
+   "expected": "informacja",
+   "predicted": "edukacja",
+   "confidence": 0.889,
+   "title": "Rząd chce skasować IKE i IKZE. Czy Twoje pieniądze skończą jak te które zabrał Ci Tusk z OFE?💰💸"
+  },
+  {
+   "id": "youtube:MSXs8PXVWVA",
+   "expected": "opinia",
+   "predicted": "informacja",
+   "confidence": 0.974,
+   "title": "Beata Pawlikowska obala mit o asertywności! Partnerem odcinka jest Apart"
+  },
+  {
+   "id": "youtube:3TdtwBe7WxU",
+   "expected": "edukacja",
+   "predicted": "promocja",
+   "confidence": 0.693,
+   "title": "Czy kiedykolwiek powinieneś sprzedać swoje ETF-y?"
+  },
+  {
+   "id": "youtube:2Hrga7ATLUk",
+   "expected": "opinia",
+   "predicted": "informacja",
+   "confidence": 0.849,
+   "title": "3 zagrania na giełdzie które będe obserwował w tym tygodniu #nvidia #etf #finanse #giełda"
+  },
+  {
+   "id": "youtube:W1WMMKLnmOA",
+   "expected": "edukacja",
+   "predicted": "promocja",
+   "confidence": 0.588,
+   "title": "ETF globalny vs ETF na USA. Co się bardziej opłaca?"
+  },
+  {
+   "id": "youtube:sXSRnStiRrw",
+   "expected": "opinia",
+   "predicted": "informacja",
+   "confidence": 0.965,
+   "title": "WYJŚCIEM JEST OBALENIE RZĄDU! KACZYŃSKI O RESECIE TK"
+  },
+  {
+   "id": "youtube:kuYFTfE2GtI",
+   "expected": "opinia",
+   "predicted": "informacja",
+   "confidence": 0.592,
+   "title": "🔥Spółki dywidendowe 2026"
+  },
+  {
+   "id": "youtube:tS4WVQr_Vbg",
+   "expected": "opinia",
+   "predicted": "informacja",
+   "confidence": 0.755,
+   "title": "XTB spada po wynikach 📉 Dlaczego nie sprzedaję?"
+  },
+  {
+   "id": "youtube:eINo3nbh9-I",
+   "expected": "opinia",
+   "predicted": "informacja",
+   "confidence": 0.544,
+   "title": "Wyniki XTB! Idzie Potężna Dywidenda!"
+  },
+  {
+   "id": "youtube:P1SgAG8j0g0",
+   "expected": "opinia",
+   "predicted": "informacja",
+   "confidence": 0.957,
+   "title": "ZROBILI Z TRYNKIEWICZA OFIARĘ?"
+  },
+  {
+   "id": "youtube:74S9gSnDiT0",
+   "expected": "informacja",
+   "predicted": "promocja",
+   "confidence": 0.405,
+   "title": "Masz więcej niż przeciętny Polak?"
+  },
+  {
+   "id": "youtube:GxugMTFSb9Y",
+   "expected": "informacja",
+   "predicted": "promocja",
+   "confidence": 0.485,
+   "title": "UDANA EKSTRADYCJA STUU (PANDORA, ANDREW TATE, TRUMP, MUNDIAL, MESSI, YAMAL)"
+  },
+  {
+   "id": "youtube:cuy22iXIGxU",
+   "expected": "opinia",
+   "predicted": "edukacja",
+   "confidence": 0.744,
+   "title": "Domowy makaron za 200 czy 4000 zł? Pojedynek maszynek do makaronu"
+  },
+  {
+   "id": "youtube:V0jw7g74Zp4",
+   "expected": "opinia",
+   "predicted": "promocja",
+   "confidence": 0.42,
+   "title": "Inwestycje Cykliczne - Update po 2 Miesiącach"
+  },
+  {
+   "id": "youtube:YSSw-NzFOzM",
+   "expected": "informacja",
+   "predicted": "opinia",
+   "confidence": 0.673,
+   "title": "Słowa, które załamały XTB..."
+  },
+  {
+   "id": "youtube:6a0YbVL3CO0",
+   "expected": "opinia",
+   "predicted": "edukacja",
+   "confidence": 0.601,
+   "title": "Jeśli zaczynałbym inwestowanie od ZERA, oto co bym zrobił. Omar Arnaout [Expert w Bentleyu]"
+  },
+  {
+   "id": "youtube:0QzSssZp3v4",
+   "expected": "opinia",
+   "predicted": "edukacja",
+   "confidence": 0.788,
+   "title": "vistra czyli mój wybór pod sektor energetyczny.  #stockmarket #etf #finanse #inwestowanie #vistra"
+  },
+  {
+   "id": "youtube:oSS50IHBxQg",
+   "expected": "informacja",
+   "predicted": "edukacja",
+   "confidence": 0.57,
+   "title": "IKE i IKZE 2027: limit wpłat w górę o 6,5%. Ile więcej odłożycie?"
+  },
+  {
+   "id": "youtube:gB3cMg56mRU",
+   "expected": "opinia",
+   "predicted": "informacja",
+   "confidence": 0.749,
+   "title": "Hossobessa trwa. Anthropic, Nvidia, surowce i koniec eldorado na GPW? | Analizy LIVE"
+  },
+  {
+   "id": "youtube:RYqozKbEyNY",
+   "expected": "edukacja",
+   "predicted": "opinia",
+   "confidence": 0.847,
+   "title": "500 zł MIESIĘCZNIE z DYWIDEND. Ile trzeba mieć? #dywidendy #inwestowanie #giełda #shorts"
+  },
+  {
+   "id": "youtube:2oGyvQWUXHY",
+   "expected": "edukacja",
+   "predicted": "opinia",
+   "confidence": 0.923,
+   "title": "Obligacje skarbowe to dopiero początek. Gdzie zaczyna się zarabianie?"
+  },
+  {
+   "id": "youtube:OENj7HSzQAE",
+   "expected": "edukacja",
+   "predicted": "informacja",
+   "confidence": 0.35,
+   "title": "„Nieskończoność nie istnieje”. Polski fizyk obala mit początku Wszechświata | Ryszard Stroynowski"
+  },
+  {
+   "id": "youtube:nQ_ONVFGZzM",
+   "expected": "opinia",
+   "predicted": "promocja",
+   "confidence": 0.497,
+   "title": "Portfel Inwestycyjny na eToro - Moja Strategia 1084 zł Miesięcznie"
+  },
+  {
+   "id": "youtube:6Jnqi-cw_dk",
+   "expected": "opinia",
+   "predicted": "informacja",
+   "confidence": 0.915,
+   "title": "Płk Piotr Lewandowski: Rosyjska ofensywa nie przebiegła zgodnie z planem #shorts"
+  },
+  {
+   "id": "youtube:W31QOacOtM8",
+   "expected": "opinia",
+   "predicted": "promocja",
+   "confidence": 0.728,
+   "title": "Test wyrzutnia Król Iskra Line IC45-48-1 - Potężne 45mm w akcji! Fireworks Batch 2026"
+  },
+  {
+   "id": "youtube:P_-4ZWcUgEI",
+   "expected": "promocja",
+   "predicted": "informacja",
+   "confidence": 0.631,
+   "title": "TEASER czwartego odcinka PC Masters 🔥 Będzie naprawdę gorąco! #PCMasters #xkom"
+  }
+ ],
+ "measuredOn": {
+  "host": "devbox Linux x86_64, 4 vCPU współdzielone z innymi agentami, CPU, onnxruntime 1 wątek",
+  "date": "2026-11-21",
+  "command": "python -m analysis.material_classifier evaluate --split heldout"
+ }
+}
