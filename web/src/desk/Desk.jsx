@@ -265,7 +265,7 @@ export function Desk() {
   let content;
   if (error && !data) content = <ErrorBlock message={error} retry={desk.refresh} />;
   else if (!data) content = <Loading label="Pobieranie danych…" />;
-  else if (tab === "sources") content = <Layout height="fill" content={<LayoutContent padding={0} isScrollable><Sources data={data} busy={busy} scanning={scanning} onScan={startScan} rev={desk.rev} onRefresh={() => desk.schedule({ heavy: true })} openAdd={route.add} go={go} /></LayoutContent>} />;
+  else if (tab === "sources") content = <Layout height="fill" content={<LayoutContent padding={0} isScrollable><Sources data={data} busy={busy} scanning={scanning} onScan={startScan} rev={desk.rev} onRefresh={() => desk.schedule({ heavy: true })} openAdd={route.add} go={go} narrow={narrow} /></LayoutContent>} />;
   else if (tab === "calibration") content = <Layout height="fill" content={<LayoutContent padding={0} isScrollable><Calibration data={data} rev={desk.rev} onChanged={() => desk.refresh({ heavy: true })} /></LayoutContent>} />;
   else content = <QueueScreen key={tab} tab={tab} route={route} go={go} desk={desk} narrow={narrow} actions={actions} />;
 

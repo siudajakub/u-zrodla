@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { Banner } from "@astryxdesign/core/Banner";
 import { Button } from "@astryxdesign/core/Button";
-import { Divider } from "@astryxdesign/core/Divider";
 import { FileInput } from "@astryxdesign/core/FileInput";
 import { HStack, VStack } from "@astryxdesign/core/Layout";
 import { Heading, Text } from "@astryxdesign/core/Text";
 import { TextArea } from "@astryxdesign/core/TextArea";
 import { TextInput } from "@astryxdesign/core/TextInput";
 import { api } from "./api.js";
-import { MetaImport } from "./MetaImport.jsx";
 
+/** Własny plik audio lub wideo: trafia poza rzeczywiste kolejki, w stan „Demo” z oznaczeniem „plik operatora”. */
 export function EvidenceForm({ onDone, onOpenDemo }) {
   const [file, setFile] = useState(null);
   const [title, setTitle] = useState("");
@@ -24,8 +23,8 @@ export function EvidenceForm({ onDone, onOpenDemo }) {
     }
     setBusy(true);
     try {
-      const r = await api.uploadEvidence(file, title.trim(), description);
-      setResult({ status: "success", title: "Plik przesłany do analizy.", description: `Po zakończeniu pojawi się w zakładce „Demo i własne pliki” z etykietą „plik operatora”. Identyfikator zadania: ${r.scanId || r.id || "—"}.` });
+      await api.uploadEvidence(file, title.trim(), description);
+      setResult({ status: "success", title: "Plik przesłany do analizy.", description: "Po zakończeniu pojawi się na liście Do sprawdzenia, w stanie Demo, z oznaczeniem „plik operatora”." });
       onDone?.();
     } catch (e) {
       setResult({ status: "error", title: "Nie przesłano pliku", description: e.message });
@@ -34,10 +33,10 @@ export function EvidenceForm({ onDone, onOpenDemo }) {
     }
   }
   return (
-    <VStack gap={3} padding={4} maxWidth={720}>
-      <VStack gap={1}>
-        <Heading level={1}>Dodaj dowód</Heading>
-        <Text color="secondary">Własny plik audio lub wideo (limit 40 MiB, analiza do 120 sekund). Trafia poza rzeczywiste kolejki i jest oznaczony jako plik operatora.</Text>
+    <VStack gap={2}>
+      <VStack gap={0.5}>
+        <Heading level={3}>Nagranie lub plik własny</Heading>
+        <Text type="supporting" color="secondary">Plik audio lub wideo (do 40 MiB, analiza do 120 sekund). Trafia poza rzeczywiste kolejki.</Text>
       </VStack>
       <FileInput label="Plik audio lub wideo" mode="dropzone" placeholder="Wybierz nagranie" value={file} onChange={setFile}
         description="mp4, wav, mp3, m4a, webm, ogg, mov, mkv, aac, flac" maxSize={40 * 1024 * 1024}
@@ -47,10 +46,8 @@ export function EvidenceForm({ onDone, onOpenDemo }) {
       {result && <Banner status={result.status} title={result.title} description={result.description} />}
       <HStack gap={2} wrap="wrap">
         <Button label="Prześlij do analizy" variant="primary" isLoading={busy} onClick={submit} />
-        <Button label="Zobacz Demo i własne pliki" variant="ghost" onClick={onOpenDemo} />
+        <Button label="Zobacz stan Demo" variant="ghost" onClick={onOpenDemo} />
       </HStack>
-      <Divider />
-      <MetaImport onDone={onDone} />
     </VStack>
   );
 }

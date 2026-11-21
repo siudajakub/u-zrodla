@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Banner } from "@astryxdesign/core/Banner";
 import { Button } from "@astryxdesign/core/Button";
+import { Collapsible } from "@astryxdesign/core/Collapsible";
 import { FileInput } from "@astryxdesign/core/FileInput";
 import { VStack } from "@astryxdesign/core/Layout";
 import { Heading, Text } from "@astryxdesign/core/Text";
@@ -28,8 +29,8 @@ export function MetaImport({ onDone, headingLevel = 2 }) {
       const waiting = r.scan?.status === "queued";
       setResult({
         status: waiting ? "info" : r.alreadyImported ? "info" : "success",
-        title: waiting ? `Plik zapisany (${parts}); analiza czeka na worker.` : r.alreadyImported ? `Ten plik był już wczytany (${parts}); nic nie dodano.` : `Wczytano: ${parts}. Nowych: ${r.new ?? 0}, już w bazie: ${r.existing ?? 0}.`,
-        description: [waiting ? "Wpisy pojawią się w ofertach M2, gdy worker skończy skan." : "Wpisy są w „Oferty WWW M2” z plakietką „import ręczny”.", ...(r.warnings || [])].join(" "),
+        title: waiting ? `Plik zapisany (${parts}); analiza czeka w kolejce.` : r.alreadyImported ? `Ten plik był już wczytany (${parts}); nic nie dodano.` : `Wczytano: ${parts}. Nowych: ${r.new ?? 0}, już w bazie: ${r.existing ?? 0}.`,
+        description: [waiting ? "Wpisy pojawią się na liście, gdy analiza się skończy." : "Wpisy są na liście Do sprawdzenia (stan Wszystkie, M2) z plakietką „import ręczny”.", ...(r.warnings || [])].join(" "),
       });
       onDone?.();
     } catch (e) {
@@ -40,12 +41,14 @@ export function MetaImport({ onDone, headingLevel = 2 }) {
   }
   return (
     <VStack gap={2}>
-      <Heading level={headingLevel}>Wgraj zapisaną stronę Biblioteki Reklam Meta lub profilu Instagram</Heading>
-      <VStack gap={0.5} role="list" aria-label="Jak zapisać stronę">
-        <Text role="listitem">1. Otwórz w przeglądarce Bibliotekę Reklam Meta (facebook.com/ads/library) albo profil na Instagramie i przewiń, aż załadują się wpisy.</Text>
-        <Text role="listitem">2. Zapisz stronę: Ctrl+S (Cmd+S), „Strona internetowa, tylko HTML”. Może być też zaznaczona i skopiowana treść w pliku .txt.</Text>
-        <Text role="listitem">3. Wybierz zapisany plik poniżej i wgraj. Plik nie jest otwierany ani wykonywany; czyta się z niego tylko tekst.</Text>
-      </VStack>
+      <Heading level={headingLevel + 1}>Zapisana strona Biblioteki Reklam Meta lub profilu Instagram</Heading>
+      <Collapsible defaultIsOpen={false} trigger={<Text type="supporting">Jak zapisać stronę</Text>}>
+        <VStack gap={0.5} role="list" aria-label="Jak zapisać stronę" padding={1}>
+          <Text role="listitem">1. Otwórz w przeglądarce Bibliotekę Reklam Meta albo profil na Instagramie i przewiń, aż załadują się wpisy.</Text>
+          <Text role="listitem">2. Zapisz stronę: Ctrl+S (Cmd+S), „Strona internetowa, tylko HTML”. Może być też skopiowana treść w pliku .txt.</Text>
+          <Text role="listitem">3. Wybierz zapisany plik i wgraj. Plik nie jest otwierany ani wykonywany; czyta się z niego tylko tekst.</Text>
+        </VStack>
+      </Collapsible>
       <FileInput label="Zapisana strona (.html, .htm, .txt)" mode="dropzone" placeholder="Wybierz zapisany plik" value={file} onChange={setFile}
         description="Limit 25 MiB" maxSize={25 * 1024 * 1024} accept=".html,.htm,.txt,text/html,text/plain" />
       {result && <Banner status={result.status} title={result.title} description={result.description} />}
