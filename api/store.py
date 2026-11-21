@@ -664,6 +664,8 @@ def signature_parts(capture, finding, raw=None):
     partial = capture.get("contentCompleteness") == "partial"
     analysis = [finding.get("summary"), finding.get("score"), checks, finding.get("evidence"), finding.get("semantic"),
                 finding.get("modalityComparison"), finding.get("reviewSuggestion")]
+    if finding.get("secondOpinion"):  # only when present: a case without it keeps the fingerprint it always had
+        analysis.append(finding["secondOpinion"])
     payload = [[_hash_view(capture, k) for k in content_keys], *analysis]
     if partial:
         payload.append("partial")

@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 from analysis.engine import analyze
 from api import second_opinion_recorded as rec
-from v2_helpers import HttpCase, capture
+from v2_helpers import HttpCase, StateCase, capture
 
 
 class Recorded(unittest.TestCase):
@@ -42,6 +42,18 @@ class Recorded(unittest.TestCase):
         self.assertEqual((second["measured"]["M3"]["costRules"], second["measured"]["M3"]["costVeto"]), (10, 1))
         self.assertEqual(second["measured"]["M1"]["broken"], 0)
         self.assertEqual(block["materialType"]["measured"]["correct"], 30)
+
+
+class Stored(StateCase):
+    def test_a_recorded_opinion_added_by_a_recompute_is_stored_and_a_repeat_adds_nothing(self):
+        self.put()
+        self.assertEqual(self.versions(), 1)
+        second = {"status": "ready", "verdict": "ujawnione", "needsReview": False, "runtime": "recorded", "affectsRoute": False}
+        self.put(secondOpinion=second)
+        self.assertEqual(self.versions(), 2)
+        self.assertEqual(self.case()["secondOpinion"]["runtime"], "recorded")
+        self.put(secondOpinion=second)
+        self.assertEqual(self.versions(), 2)
 
 
 class Overview(HttpCase):
