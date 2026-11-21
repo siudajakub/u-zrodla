@@ -56,18 +56,23 @@ Interpretacja:
 4. Skrypt odmawia pomiaru (blokada), jeśli sieć nadal działa. Wynik zawiera `internetReachableDuringMeasure: false`.
 5. Przywróć sieć. Ollama i Docker działają na pętli zwrotnej i nie wymagają Internetu po pobraniu wag i obrazu.
 
-**Krok 5. Pełne demo w Compose**
+**Krok 5. Pełne demo w Compose (jedna komenda)**
 
-1. Wymagane: Docker Desktop uruchomiony, Internet przy pierwszym przygotowaniu (pip, Vosk, HuggingFace, apt-get w kontenerze: pakiet `ffmpeg` Debiana wraz z zależnościami), Node 22.13+ dla podglądu. Python hosta nie jest używany przy przygotowaniu.
-2. `sh ops/demo/start.sh`. Pierwszy start wywołuje `bootstrap.sh`, który na Macu: sprawdza obraz (`docker pull --platform linux/arm64`, jeśli lokalny nie jest arm64), buduje w kontenerze zależności, przenosi własność plików na użytkownika hosta, sprawdza architekturę bibliotek (`ops/mac/arch-guard.sh`), buduje podgląd Astryx na hoście (`shasum -a 256`, blokada `mkdir`) i uruchamia Compose.
-3. `sh ops/mac/check.sh`. Oczekiwane `libvosk`, `pydanticCore`, `onnxruntime`, `ffmpegReal`: `elf-aarch64`.
-4. `python3 tests/offline/verify.py --root "$PWD"`, potem scenariusz z [demo.md](../../docs/hackathon/demo.md) na desktopie i telefonie.
-5. Błąd `natywne biblioteki maja architekture niezgodna` oznacza zawartość z innej architektury w `.runtime/demo/deps`, `.runtime/semantic/deps` lub `.runtime/asr/vosk`: usuń wskazany katalog i uruchom `sh ops/demo/bootstrap.sh`.
-6. Znane ograniczenie: `analysis/ollama_review.py` nadal ma host i model wpisane na stałe (zgłoszone właścicielom). Pomiar oceny z kroku 3 działa na hoście.
+1. Skopiuj do katalogu projektu paczkę mediów replay: `replay-media-2026-11-21.tar.gz` i `replay-media-2026-11-21.tar.gz.sha256` (z devboxa: `sh ops/demo/pack-media.sh`, pliki lądują w `.runtime/dist/`). Paczka jest poza Gitem. Bez niej `start.sh` kończy z kodem 3 i instrukcją, bo kolejka „Co wymaga sprawdzenia” byłaby pusta.
+2. Wymagane: Docker Desktop uruchomiony, Internet tylko przy pierwszym przygotowaniu (pip, Vosk, HuggingFace, apt-get w kontenerze), Node 22.13+ dla podglądu. Python hosta nie jest używany przy przygotowaniu (do weryfikacji paczki wystarczy dowolny `python3`).
+3. `sh ops/demo/start.sh`. Skrypt: weryfikuje i rozpakowuje paczkę (SHA-256 z manifestu w repozytorium), przy pierwszym starcie przygotowuje środowisko (`bootstrap.sh`: obraz arm64, koła, Vosk, E5, FFmpeg, `arch-guard.sh`, podgląd Astryx), uruchamia Compose z paczką zamontowaną do odczytu (`/replay-media`), czeka na oba skany bootstrapu (replay M2, replay YouTube, potem kolejki) i drukuje `GOTOWE ... review=4 ids=7M0rC6-Rueo,AqXHkxDzSDI,OIyPE0z2mng,ZJrT-X08Xwc`. Czysty stan: `--reset`. Tryb pokazu ustawia `INVESTWATCH_DISCOVERY_INTERVAL=0`; `--live` włącza harmonogram.
+4. `sh ops/mac/check.sh`. Oczekiwane `libvosk`, `pydanticCore`, `onnxruntime`, `ffmpegReal`: `elf-aarch64`, `replayMediaPack: present`, `reviewQueue` z `review=4`.
+5. `python3 tests/offline/verify.py --root "$PWD"`, potem scenariusz z [demo.md](../../docs/hackathon/demo.md) na desktopie i telefonie.
+6. Błąd `natywne biblioteki maja architekture niezgodna` oznacza zawartość z innej architektury w `.runtime/demo/deps`, `.runtime/semantic/deps` lub `.runtime/asr/vosk`: usuń wskazany katalog i uruchom `sh ops/demo/bootstrap.sh`.
+7. Znane ograniczenie: `analysis/ollama_review.py` nadal ma host i model wpisane na stałe (zgłoszone właścicielom). Pomiar oceny z kroku 3 działa na hoście.
+
+**Krok 5b. Wariant awaryjny bez Dockera**
+
+Gdy Compose na Macu zawiedzie: `sh ops/demo/start-local.sh`. Wymaga Pythona 3.12 (`brew install python@3.12`). Tworzy `.runtime/venv-local`, instaluje `api/requirements.lock` (sieć tylko przy pierwszym razie), uruchamia `uvicorn` i `api.worker` jako procesy hosta na tym samym porcie (`INVESTWATCH_PORT`, domyślnie 8769), czyta tę samą paczkę mediów i drukuje to samo `GOTOWE ... review=4`. Stan: `.runtime/local/state`, logi: `.runtime/local/*.log`. Zatrzymanie: `sh ops/demo/start-local.sh --stop`. Nie uruchamiaj obu wariantów na tym samym porcie. Różnice: brak Vosk i FFmpeg (upload nagrania nie działa), E5 działa po `pip install` pakietów z `analysis/semantic-requirements.txt` (skrypt próbuje to zrobić). W trybie `--live` instaluje też `yt-dlp` i `youtube-transcript-api` (`ops/demo/live-requirements.txt`).
 
 **Krok 6. Co odesłać**
 
-Pliki `.runtime/mac/check-*.json` (online), `.runtime/mac/offline.json` oraz wynik `ollama list` i `ollama --version`. Raporty nie zawierają nazwy użytkownika, hosta, adresów IP ani ścieżek domowych; przejrzyj je mimo to przed wysłaniem. Pole `hardwareModel` to identyfikator sprzętu (np. `Mac15,x`), nie dane osobowe.
+Po `GOTOWE` linię z `start.sh` (czas do kolejki) oraz pliki `.runtime/mac/check-*.json` (online), `.runtime/mac/offline.json` oraz wynik `ollama list` i `ollama --version`. Raporty nie zawierają nazwy użytkownika, hosta, adresów IP ani ścieżek domowych; przejrzyj je mimo to przed wysłaniem. Pole `hardwareModel` to identyfikator sprzętu (np. `Mac15,x`), nie dane osobowe.
 
 ## Kryteria przejścia
 

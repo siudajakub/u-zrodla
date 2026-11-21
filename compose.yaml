@@ -9,10 +9,12 @@ x-code: &code
   - ./tools:/app/tools:ro
   - ./.runtime/demo/deps:/opt/investwatch/deps:ro
   - ./.runtime/demo/ffmpeg:/opt/investwatch/ffmpeg:ro
-  - ./.runtime/demo/state:/data
+  - ${INVESTWATCH_STATE_DIR:-./.runtime/demo/state}:/data
   - ./.runtime/asr:/app/.runtime/asr:ro
   - ./.runtime/semantic:/app/.runtime/semantic:ro
   - ./.runtime/watch:/app/.runtime/watch:ro
+  # Paczka mediów replay (transkrypcje i kadry 21 XI, poza Gitem), tylko do odczytu. Ścieżkę hosta ustawia ops/demo/start.sh.
+  - ${INVESTWATCH_MEDIA_PACK:-./.runtime/replay-media/2026-11-21}:/replay-media:ro
 x-common: &common
   image: python:3.12-bookworm
   pull_policy: never
@@ -31,7 +33,9 @@ x-common: &common
     PYTHONUNBUFFERED: '1'
     PATH: /opt/investwatch/ffmpeg/bin:/usr/local/bin:/usr/bin:/bin
     INVESTWATCH_STATE: /data
-    INVESTWATCH_DISCOVERY_INTERVAL: '${INVESTWATCH_DISCOVERY_INTERVAL:-14400}'
+    INVESTWATCH_DISCOVERY_INTERVAL: '${INVESTWATCH_DISCOVERY_INTERVAL:-0}'
+    INVESTWATCH_REPLAY_MEDIA: /replay-media
+    YOUTUBE_API_KEY: '${YOUTUBE_API_KEY:-}'
     OPENBLAS_NUM_THREADS: '1'
     OMP_NUM_THREADS: '1'
   volumes: *code

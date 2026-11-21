@@ -30,9 +30,15 @@ def code_hash(root):
                           "fixtures", "data/probe-snapshots", "web", "tools", "compose.yaml"], cwd=root)
     digest = hashlib.sha256()
     for name in sorted(os.fsdecode(n) for n in files.split(b"\0") if n):
+        if not (root/name).is_file():
+            continue  # plik śledzony, usunięty w katalogu roboczym: nie jest montowany
         digest.update(os.fsencode(name) + b"\0")
         digest.update(hashlib.sha256((root/name).read_bytes()).digest())
     return digest.hexdigest()
+
+
+KNOWN_REVIEW = {"7M0rC6-Rueo", "AqXHkxDzSDI", "OIyPE0z2mng", "ZJrT-X08Xwc"}
+BOOTSTRAP_SCANS = 2  # co najmniej bootstrap-m2-rendered-v1 i bootstrap-youtube-replay-v1; worker (api/jobs.py: work) może zlecić więcej
 
 
 def wait(fn, description, timeout=90, interval=.15):
@@ -65,6 +71,7 @@ def once(root, dest, port, index):
     db = state/"cases.sqlite3"
     env = {**os.environ, "INVESTWATCH_PORT": str(port), "INVESTWATCH_UID": str(os.getuid()),
            "INVESTWATCH_GID": str(os.getgid()), "INVESTWATCH_DISCOVERY_INTERVAL": "0",
+           "INVESTWATCH_MEDIA_PACK": str(Path(os.environ.get("INVESTWATCH_REPLAY_MEDIA") or root/".runtime/replay-media/2026-11-21")),
            "INVESTWATCH_PROOF_STATE": str(state), "INVESTWATCH_PROOF_WATCH": str(watch)}
     base = ["docker", "compose", "--project-directory", str(root), "-p", project,
             "-f", str(root/"compose.yaml"), "-f", str(Path(__file__).with_name("compose.yaml"))]
@@ -82,6 +89,9 @@ def once(root, dest, port, index):
         assert all(v["target"] == "/data" or v.get("read_only") for v in volumes.values())
         assert volumes["/app/.runtime/watch"]["source"] == str(watch)
         assert all(Path(v["source"]).exists() for v in volumes.values())
+        pack = volumes["/replay-media"]
+        assert pack["read_only"] and (Path(pack["source"])/"MANIFEST.json").is_file(), "brak paczki mediów replay"
+        assert service["environment"]["INVESTWATCH_REPLAY_MEDIA"] == "/replay-media"
         assert service["environment"]["INVESTWATCH_DISCOVERY_INTERVAL"] == "0"
         assert float(service["cpus"]) == 1 and service["restart"] == "no"
     ports = config["services"]["api"]["ports"]
@@ -105,12 +115,14 @@ with urlopen(request, timeout=6) as response:
         return json.loads(r.stdout)
 
     def cards():
+        # Skany czytamy wprost z bazy (lekko); kolejkę i stan dopiero po zakończeniu obu skanów bootstrapu.
+        rows = db_read(db, "select status from scans where mode='replay'")
+        if len(rows) < BOOTSTRAP_SCANS or any(r[0] not in ("done", "partial") for r in rows):
+            return None
         try:
-            report = api("/v1/state")
+            return {"state": api("/v1/state"), "review": api("/v1/queues/review")}
         except ConnectionError:
             return None
-        terminal = [s for s in report["scans"] if s["mode"] == "replay" and s["status"] == "done"]
-        return report if terminal and report["findings"] else None
 
     def container_stats(service):
         cid = dc("ps", "-q", service)
@@ -143,23 +155,37 @@ with urlopen(request, timeout=6) as response:
                 audit.commit()
             dc("start", "worker")
             result["recovery"] = {"interrupted": True, "simulatedExpiry": True}
-        report = wait(cards, "gotowa kolejka spraw HTTP")
+        both = wait(cards, "gotowa kolejka spraw HTTP", timeout=1500, interval=2)
+        report, review = both["state"], both["review"]
         result["secondsToCases"] = round(time.monotonic()-start, 2)
+        review_ids = {i["id"].split(":", 1)[-1] for i in review["items"]}
+        assert review["total"] == 4 and review_ids == KNOWN_REVIEW, (review["total"], sorted(review_ids))
+        assert report["semantic"]["status"] == "ready", report["semantic"]
+        pack_source = next(x for x in report["sources"] if x["id"] == "replay-media")
+        assert pack_source["status"] == "ok" and pack_source["count"] == 17, pack_source
+        result["queues"] = review["counts"]
+        result["variant"] = review["threshold"]["variant"]
         findings = report["findings"]
         ids = {f["id"] for f in findings}
         assert {"demo-studio-aurora", "demo-aurora-kod"}.issubset(ids)
         assert len(findings) == len(ids)
         statuses = Counter(f.get("semantic", {}).get("status") for f in findings)
-        assert statuses.get("ready", 0) and not statuses.get("unavailable"), statuses
+        assert statuses.get("ready", 0), statuses
         dup = db_read(db, "select count(*),count(distinct id) from versions")[0]
-        assert dup == (len(ids),len(ids))
+        # Wersje: bez luk i duplikatów numeracji; nadmiarowe wersje to dowód z transkrypcji (changeKind evidence), nie powtórzenie skanu.
+        gaps = db_read(db, "select count(*) from versions v where v.version > (select count(*) from versions w where w.id=v.id)")[0][0]
+        assert dup[1] == len(ids) and gaps == 0, (dup, gaps)
+        result["extraVersions"] = dup[0]-dup[1]
         scans = db_read(db, "select id,owner,attempts,mode,status from scans")
-        assert len(scans) == 1 and scans[0][3:] == ("replay", "done")
-        assert scans[0][2] == (2 if index == 3 else 1)
+        assert len(scans) >= BOOTSTRAP_SCANS and all(s[3] == "replay" and s[4] in ("done", "partial") for s in scans), scans
+        by_id = {s[0]: s for s in scans}
         if index == 3:
-            assert scans[0][0] == scan_id and scans[0][1] != owner
+            assert by_id[scan_id][1] != owner and by_id[scan_id][2] == 2
+            assert all(s[2] == 1 for s in scans if s[0] != scan_id)
             result["recovery"].update(ownersDiffer=True, attempts=2, versions=len(ids),
-                                      distinctCases=len(ids), terminalScans=1)
+                                      distinctCases=len(ids), terminalScans=len(scans))
+        else:
+            assert all(s[2] == 1 for s in scans)
         result.update(cases=len(ids), versions=dup[0], semantic=dict(statuses), offline=True)
         if index == 1:
             source = root/"analysis/media/wezwanie.mp4"
@@ -199,7 +225,7 @@ def main():
     dest = Path(tempfile.mkdtemp(prefix="cold-", dir=scratch))
     before = code_hash(root)
     report = {"gitAtStart": command(["git", "rev-parse", "HEAD"], cwd=root), "codeSha256": before,
-              "timeBasis": "monotonic, docker compose up to populated HTTP /v1/state",
+              "timeBasis": "monotonic, docker compose up to obu skanów bootstrapu zakończonych i kolejki review z 4 filmami (HTTP)",
               "network": "Docker internal; HTTP probe over loopback inside the API container", "trials": []}
     for i in (1, 2, 3):
         record = once(root, dest/f"trial-{i}", args.port, i)

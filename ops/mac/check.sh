@@ -178,6 +178,24 @@ kvb "$A" asrModelPresent "$([ -f .runtime/asr/vosk-model-small-pl-0.22/am/final.
 kvb "$A" semanticWeightsPresent "$([ -f .runtime/semantic/model_quantized.onnx ] && echo true || echo false)"
 kvb "$A" composeEnvPresent "$([ -f .runtime/demo/compose.env ] && echo true || echo false)"
 
+# ---------- 4b. paczka mediow replay i kolejka "Co wymaga sprawdzenia" ----------
+PACK=${INVESTWATCH_REPLAY_MEDIA:-.runtime/replay-media/2026-11-21}
+if pyok; then
+  if python3 -m api.replay_pack verify --pack "$PACK" >"$T/pack.out" 2>&1; then PK=present; else PK=$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["state"])' "$T/pack.out" 2>/dev/null || echo unreadable); fi
+else
+  if [ -f "$PACK/MANIFEST.json" ]; then PK=present-unverified; else PK=missing; fi
+fi
+kvs "$A" replayMediaPack "$PK"; echo "paczka mediow replay: $PK ($PACK)"
+[ "$PK" = present ] || [ "$PK" = present-unverified ] || blocker "Paczka mediow replay: $PK. Kolejka review bedzie pusta. Skopiuj replay-media-2026-11-21.tar.gz(+.sha256) do katalogu projektu i uruchom sh ops/demo/start.sh (ops/demo/pack-media.sh tworzy archiwum)."
+PORT=${INVESTWATCH_PORT:-8769}
+if pyok && python3 ops/demo/queue_status.py --port "$PORT" --expect-count 4 >"$T/queue.out" 2>&1; then QS=ok; else QS=$(cut -c1-300 "$T/queue.out" 2>/dev/null); fi
+if pyok && have curl && curl -sS -m 4 -o /dev/null "http://127.0.0.1:$PORT/v1/health" 2>/dev/null; then
+  kvb "$A" apiUp true; kvs "$A" reviewQueue "$(cat "$T/queue.out")"; echo "kolejka review: $(cat "$T/queue.out")"
+  [ "$QS" = ok ] || warning "Kolejka review (GET /v1/queues/review) nie ma 4 znanych filmow lub skany trwaja. Kroki: sh ops/demo/start.sh --reset."
+else
+  kvb "$A" apiUp false; kvs "$A" reviewQueue ""; echo "API na porcie $PORT: nie odpowiada (jeszcze nie uruchomione?)"
+fi
+
 # ---------- 5. siec ----------
 N="$T/network"; : > "$N"
 if have curl && curl -sS -m 4 -o /dev/null -I https://huggingface.co >/dev/null 2>&1; then NET=true; else NET=false; fi

@@ -4,17 +4,16 @@ Prototyp dla UKNF wyszukuje publikacje i oferty inwestycyjne, wskazuje fragmenty
 
 ## Quick Start
 
-Na przygotowanym stanowisku Linux x86_64 uruchom z katalogu projektu:
-
 ```sh
 sh ops/demo/start.sh
 ```
 
-[Pulpit](http://127.0.0.1:8769/) i [podgląd Astryx](http://127.0.0.1:8769/theme-preview/) korzystają z lokalnego API. Przy połączeniu zdalnym przekaż port poleceniem `ssh -N -L 8769:127.0.0.1:8769 beeper-devbox`. Do próby bez dostępu do publicznych źródeł wybierz odtworzenie datowanej próbki.
+Jedna komenda przygotowuje stanowisko (pierwszy raz z siecią), uruchamia API i worker w Compose, odtwarza datowany skan z 21 XI 2026 i czeka na kolejkę **Co wymaga sprawdzenia** z czterema filmami (7M0rC6-Rueo, AqXHkxDzSDI, OIyPE0z2mng, ZJrT-X08Xwc). Potem pulpit jest pod [127.0.0.1:8769/theme-preview/](http://127.0.0.1:8769/theme-preview/). Pierwsze odtworzenie liczy ok. 1300 materiałów i trwa kilka minut. Czysty stan: `--reset`.
 
-## Wymagania i konfiguracja
-
-Stanowisko demonstracyjne przewiduje 4 vCPU i 8 GiB RAM, Docker Compose, Python 3.12, FFmpeg i lokalne wagi E5 oraz Vosk PL. Przy pierwszym przygotowaniu potrzebny jest internet do pobrania publicznych pakietów i modeli. Podgląd Astryx buduje Node.js z przypiętych zależności npm. API oraz worker Huey działają w dwóch kontenerach. SQLite zapisuje dane w .runtime/demo/state. Worker wyszukuje źródła co cztery godziny, interwał określa INVESTWATCH_DISCOVERY_INTERVAL w sekundach. Wartość 0 wyłącza harmonogram live. [Przygotowanie środowiska](ops/demo/README.md)
+- **Wymagania:** Linux x86_64 lub macOS Apple Silicon (M1 i nowsze, 16 GiB RAM zalecane, 8 GiB minimum), Docker Compose (Docker Desktop z pamięcią VM co najmniej 4 GiB), Node 22.13+ dla pulpitu, ok. 10 GiB wolnego miejsca. Bez płatnego API.
+- **Paczka mediów replay** (transkrypcje i kadry 17 filmów, poza Gitem): bez niej kolejka jest pusta, a `start.sh` odmawia startu z instrukcją. Na komputerze z paczką: `sh ops/demo/pack-media.sh` tworzy `.runtime/dist/replay-media-2026-11-21.tar.gz` i `.sha256`. Skopiuj oba pliki do katalogu projektu na docelowym komputerze. `start.sh` sam je zweryfikuje (`python -m api.replay_pack verify`) i rozpakuje.
+- **Tryb pokazu (domyślny):** replay, bez sieci po przygotowaniu, harmonogram live wyłączony. **Tryb live:** `sh ops/demo/start.sh --live` (skan co 4 h; klucz YouTube w `.env` jako `YOUTUBE_API_KEY`, wzór w [.env.example](.env.example)). Pobieranie mediów z YouTube (yt-dlp) działa tylko lokalnie, patrz niżej.
+- **Bez Dockera (wariant awaryjny):** `sh ops/demo/start-local.sh` uruchamia ten sam stan i tę samą paczkę jako procesy hosta (Python 3.12, `--stop` zatrzymuje). Procedura odbioru na Macu: [ops/mac/README.md](ops/mac/README.md).
 
 [Zakres UKNF i pięć plików źródłowych](docs/zrodla-uknf/README.md) · [Co działa i z jakimi ograniczeniami](docs/ODBIOR-UKNF.md) · [Scenariusz pokazu](docs/hackathon/demo.md) · [Prezentacja PDF](presentation/InvestWatch.pdf)
 
