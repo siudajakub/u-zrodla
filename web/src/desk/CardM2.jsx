@@ -75,7 +75,7 @@ export function ProofM2({ c }) {
     .map((state) => ({ state, rows: checks.filter((x) => x.state === state) }))
     .filter((g) => g.rows.length);
   return (
-    <Tile title="Dowód" id="sekcja-momenty">
+    <Tile title="Dlaczego tutaj i dowód" id="sekcja-momenty">
       {lead.length === 0 ? <Text color="secondary">Żadne z kryteriów nie jest przesłanką.</Text> : (
         <VStack gap={2}>{lead.map((r) => <PremiseRow key={r.id} r={r} title={c.title} />)}</VStack>
       )}

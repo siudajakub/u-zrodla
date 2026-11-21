@@ -269,10 +269,12 @@ export function CaseDetail({ c, headingRef, onBack, onSaved, narrow }) {
       {c.needsRecalc && c.module === "M1" && <Banner status="warning" title="Wynik ze starszej wersji analizy" description={c.needsRecalcReason || "Wymaga przeliczenia."} />}
       {kind === "m3" && <M3Banners c={c} />}
       <EvidencePath c={c} narrow={narrow} />
-      <Grid columns={{ minWidth: 300, max: 2 }} gap={2}>
-        <WhyTile c={c} />
-        {proofTile}
-      </Grid>
+      {kind === "m2" ? proofTile : (
+        <Grid columns={{ minWidth: 300, max: 2 }} gap={2}>
+          <WhyTile c={c} />
+          {proofTile}
+        </Grid>
+      )}
       <DecisionTile c={c} onSaved={onSaved} key={c.id} />
       <MoreTabs c={c} kind={kind} />
     </VStack>

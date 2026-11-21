@@ -149,7 +149,7 @@ assert.deepEqual(desk.queueFor, ["review", "incomplete", "offersM2", "offersM3",
 assert.deepEqual(desk.legacyHashes.map((x) => x.join("|")), ["#m2|review|all|M2|false", "#m3|review|all|M3|false", "#niepelne|review|incomplete|all|false", "#incomplete|review|incomplete|all|false", "#zamkniete|review|closed|all|false", "#closed|review|closed|all|false", "#demo|review|demo|all|false", "#evidence|sources|review|all|true", "#review|review|review|all|false", "#sources|sources|review|all|false"], "stare adresy przekierowują na filtr");
 if (desk.funnel?.explainedAutomatically) assert.match(html(desk.counters), /w mowie \d+/, "liczniki rejestru z funnel");
 const m2 = html(desk.detailM2);
-for (const part of ["Otwórz stronę", "NOBLE Securities S.A. · dom maklerski", "Dlaczego tutaj", "Dowód", "Informacja o ryzyku przy zysku", "Wszystkie 19 kryteriów wg stanu", "Decyzja", "Rozmiar czcionki ryzyka"]) assert.ok(m2.includes(part), `karta M2: ${part}`);
+for (const part of ["Otwórz stronę", "NOBLE Securities S.A. · dom maklerski", "Dlaczego tutaj i dowód", "Informacja o ryzyku przy zysku", "Wszystkie 19 kryteriów wg stanu", "Decyzja", "Rozmiar czcionki ryzyka"]) assert.ok(m2.includes(part), `karta M2: ${part}`);
 for (const gone of ["Kryteria ryzyka", "Baner cookies", "Co zbadano", "Wynik reguł", "próg skierowania"]) assert.ok(!m2.includes(gone), `karta M2 bez: ${gone}`);
 assert.match(desk.detailM2, /\/evidence\/m2\/market\/[0-9a-f]{64}\.jpg/, "miniatury zrzutów M2");
 assert.ok(!/ px dalej \(próg|y=\d/.test(m2), "M2 bez surowych pomiarów w zdaniu: " + (m2.match(/.{40}(?: px dalej \(próg|y=\d).{30}/) || [""])[0]);

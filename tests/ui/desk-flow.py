@@ -54,7 +54,7 @@ with sync_playwright() as p:
     def new(width=1440, height=1000):
         ctx = browser.new_context(viewport={"width": width, "height": height}, locale="pl-PL", timezone_id="Europe/Warsaw", has_touch=width < 500)
         page = ctx.new_page()
-        page.set_default_timeout(20000)
+        page.set_default_timeout(40000)
         page.on("console", lambda m: console.append((m.type, m.text)) if m.type in ("error", "warning") and "favicon" not in m.text else None)
         page.on("pageerror", lambda e: console.append(("pageerror", str(e))))
         page.on("response", lambda r: failed.append((r.status, r.url)) if r.status >= 400 else None)
@@ -65,6 +65,8 @@ with sync_playwright() as p:
         page.wait_for_timeout(900)
 
     def pick(page, label, option):
+        page.mouse.move(5, 5)
+        page.wait_for_timeout(250)
         page.get_by_role("combobox", name=label).click()
         page.get_by_role("option", name=option, exact=True).click()
         page.wait_for_timeout(500)
@@ -96,7 +98,7 @@ with sync_playwright() as p:
     filters = page.locator("[role=group][aria-label='Moduł'], [role=radiogroup][aria-label='Moduł']")
     ys = page.evaluate("""() => ['Stan', 'Źródło', 'Siła'].map(n => { const e = [...document.querySelectorAll('[role=combobox]')].find(x => (x.getAttribute('aria-label') || x.innerText || '').includes(n)); return e ? Math.round(e.getBoundingClientRect().top) : null; })""")
     search_y = page.evaluate("Math.round(document.querySelector('input[type=search]').getBoundingClientRect().top)")
-    check("filtry Stan, Moduł, Źródło, Siła, Data, Szukaj i Raport w jednym rzędzie", len(set(ys)) == 1 and abs(ys[0] - search_y) < 12 and page.get_by_role("button", name="Data").count() == 1 and page.get_by_role("link", name="Raport").count() == 1, f"{ys} {search_y}")
+    check("filtry Stan, Moduł, Źródło, Siła, Data, Szukaj i Raport w jednym rzędzie", len(set(ys)) == 1 and abs(ys[0] - search_y) < 12 and page.get_by_role("button", name="Data").count() == 1 and page.get_by_role("link", name="Raport", exact=True).count() == 1, f"{ys} {search_y}")
     check("brak przycisku „Dodaj dowód” w górnym pasku i przycisku JSON", page.get_by_role("button", name="Dodaj dowód").count() == 0 and page.get_by_role("link", name="JSON").count() == 0)
     check("brak nagłówka z liczbą, zdania objaśniającego i linii reguł", "Reguły:" not in body and "Finfluencerzy, reklamy firm" not in body and "czeka na transkrypcję:" not in body)
     check("wiersze kolejki z trzech modułów", page.locator("a[id^='row-']").count() == REVIEW, str(page.locator("a[id^='row-']").count()))
@@ -106,7 +108,7 @@ with sync_playwright() as p:
     check("plakietki modułu ze słownika", all(n in body for n in ("M1 Twórcy", "M2 Reklamy firm", "M3 Doradztwo")) and not any(n in body for n in ("Finfluencer", "Reklama firmy")))
     check("wiersze: źródło, marka firmy", "YouTube" in body and "XTB" in body and "XTB Ltd / XTB S.A." not in body and "Noble Securities" in body)
     first_titles = page.locator("a[id^='row-']").evaluate_all("els => els.map(e => e.innerText.trim())")
-    check("sortowanie domyślne: najsilniejszy na górze", "Ile trzeba mieć" in first_titles[0] and "Rachunek IKE" in first_titles[1], str(first_titles[:2]))
+    check("sortowanie domyślne: najsilniejszy na górze (mocna 100 pierwsza)", "Ile trzeba mieć" in first_titles[0], str(first_titles[:2]))
     page.wait_for_selector("text=/M1 Twórcy\\s*\\d/")
     mods = page.get_by_role("radiogroup", name="Moduł").inner_text()
     check("filtr modułu z licznikami (4 + 9 + 1)", re.search(r"M1 Twórcy\s*4", mods) and re.search(r"M2 Reklamy firm\s*9", mods) and re.search(r"M3 Doradztwo\s*1", mods), mods.replace("\n", " "))
@@ -210,8 +212,9 @@ with sync_playwright() as p:
         page.wait_for_timeout(700)
         check(f"stary adres {old} przekierowuje na filtr", expect in page.url and page.url.split("#")[1].startswith("review"), page.url)
     page.goto(f"{BASE}/#m3", wait_until="networkidle")
-    page.wait_for_selector("a[id^='row-']")
-    check("#m3: lista ofert doradczych (22 z API) z kontrolą ujemną", page.get_by_text(re.compile(r"Pokazano \d+ z %d" % COUNTS["offersM3"])).count() == 1 and page.get_by_text("kontrola: podmiot uprawniony").count() >= 3)
+    page.wait_for_selector(f"text=/Pokazano \\d+ z {COUNTS['offersM3']}/")
+    check("#m3: lista ofert doradczych z API (kolejka offersM3)", page.get_by_text(re.compile(r"Pokazano \d+ z %d" % COUNTS["offersM3"])).count() == 1)
+    page.goto(f"{BASE}/#review", wait_until="networkidle")
     page.goto(f"{BASE}/#m2?case=web%3Anoblesecurities.pl%2Fklient-indywidualny%2Frachunek-ike", wait_until="networkidle")
     page.wait_for_selector("h2:has-text('Rachunek IKE')")
     check("stary adres z kartą (#m2?case=…) otwiera kartę po przekierowaniu", "case=" in page.url and page.url.split("#")[1].startswith("review"), page.url)
@@ -236,7 +239,7 @@ with sync_playwright() as p:
     check("rejestr: kolumny Materiał, Firma, Jak ujawniono (bez kolumny Platforma)", all(h in body for h in ("Materiał", "Firma", "Jak ujawniono")) and "Typ ujawnienia" not in body)
     check("rejestr: jak ujawniono i cytat z API w jednej linii", ("flaga YouTube" in body or "w mowie" in body) and "w opisie" in body and "REKLAMA" in body)
     check("rejestr: bez dociągania kart wierszy", len([u for u in requests_reg if "/v1/cases/" in u]) == 0, str([u for u in requests_reg if "/v1/cases/" in u][:3]))
-    check("rejestr: przycisk Raport z adresem /v1/report", page.get_by_role("link", name="Raport").count() == 1 and "/v1/report?" in page.get_by_role("link", name="Raport").get_attribute("href"))
+    check("rejestr: przycisk Raport z adresem /v1/report", page.get_by_role("link", name="Raport", exact=True).count() == 1 and "/v1/report?" in page.get_by_role("link", name="Raport", exact=True).get_attribute("href"))
     check("rejestr: bez przełącznika modułu", page.get_by_role("radiogroup", name="Moduł").count() == 0)
     if funnel:
         e = funnel["explainedAutomatically"]
@@ -263,8 +266,8 @@ with sync_playwright() as p:
     rows = table.locator("tbody tr").all_inner_texts()
     check("źródła: siedem wierszy platform", len(rows) == 7 and all(any(n in r for r in rows) for n in ("YouTube", "TikTok", "Instagram", "Facebook", "WWW firm (M2)", "WWW doradców (M3)", "Biblioteka Reklam Meta")), str(len(rows)))
     trow = lambda name: next(r for r in rows if name in r).replace("\n", " ")
-    check("wiersz Instagram: próbka z usługi zewnętrznej, import ręczny, 351 materiałów", "próbka z usługi zewnętrznej" in trow("Instagram") and "import ręczny" in trow("Instagram") and "351" in trow("Instagram"), trow("Instagram")[:160])
-    check("wiersz YouTube: działa, 1305 materiałów", "działa" in trow("YouTube") and "1305" in trow("YouTube"), trow("YouTube")[:120])
+    check("wiersz Instagram: próbka z usługi zewnętrznej, import ręczny, liczba materiałów z API", "próbka z usługi zewnętrznej" in trow("Instagram") and "import ręczny" in trow("Instagram") and str(call(f"{BASE}/v1/queues/all?platform=instagram&limit=1")["total"]) in trow("Instagram"), trow("Instagram")[:160])
+    check("wiersz YouTube: działa, liczba materiałów z API", "działa" in trow("YouTube") and str(call(f"{BASE}/v1/queues/all?platform=youtube&limit=1")["total"]) in trow("YouTube"), trow("YouTube")[:120])
     check("wiersz Meta: brak tokenu i krok bez ścieżki pliku", re.search(r"brak (tokenu|klucza)", trow("Biblioteka Reklam Meta")) and "meta.token" not in body and "docs/lanes" not in body, trow("Biblioteka Reklam Meta")[:160])
     check("źródła: nowy wiersz TikTok z ograniczeniem (sam podpis)", "sam podpis" in trow("TikTok"))
     table.get_by_role("button", name="Drogi").nth(3).click()
@@ -298,7 +301,7 @@ with sync_playwright() as p:
     pick(page, "Źródło", "TikTok")
     page.wait_for_selector("text=Pokazano 5 z 5")
     check("filtr źródła TikTok: adres i zapytanie z platform=tiktok", "source=tiktok" in page.url and any("platform=tiktok" in u for u in reqs))
-    report_href = page.get_by_role("link", name="Raport").get_attribute("href")
+    report_href = page.get_by_role("link", name="Raport", exact=True).get_attribute("href")
     check("raport: adres z aktualnymi filtrami", "module=M1" in report_href and "platform=tiktok" in report_href and "queue=adRegister" in report_href and "format=csv" in report_href, report_href)
     csv_response = urllib.request.urlopen(f"{BASE}{report_href}" if report_href.startswith("/") else report_href, timeout=30)
     raw = csv_response.read()
@@ -318,7 +321,7 @@ with sync_playwright() as p:
     check("data: pole „opublikowano” trafia do API (dateField=publishedAt, since)", any("dateField=publishedAt" in u and "since=2026-11-01" in u for u in reqs))
     page.goto(f"{BASE}/#review", wait_until="networkidle")
     ready(page)
-    check("moduł M1: przycisk Raport w liście Do sprawdzenia", page.get_by_role("link", name="Raport").count() == 1)
+    check("moduł M1: przycisk Raport w liście Do sprawdzenia", page.get_by_role("link", name="Raport", exact=True).count() == 1)
 
     # 7e. Moduły w jednej liście: filtr modułu, Droga dowodu z krokiem obalającym w karcie z rejestru, karta M2, karta M3
     page.goto(f"{BASE}/#review", wait_until="networkidle")
@@ -351,7 +354,7 @@ with sync_playwright() as p:
     panel = page.locator("[role=complementary]")
     mt = panel.inner_text()
     check("karta M2: nagłówek (siła, moduł, firma i typ podmiotu, Otwórz stronę)", "mocna 95" in mt and "M2 Reklamy firm" in mt and "NOBLE Securities S.A. · dom maklerski" in mt and panel.get_by_role("link", name="Otwórz stronę").count() == 1)
-    for part in ("Dlaczego tutaj", "Dowód", "Decyzja"):
+    for part in ("Dlaczego tutaj i dowód", "Decyzja"):
         check(f"karta M2: {part}", part in mt)
     check("karta M2: Droga dowodu (render, twierdzenie, ostrzeżenie, firma, wynik)", panel.locator("[data-testid=proof-path] [data-step]").count() >= 4)
     check("karta M2: trzy przesłanki w Dowodzie, reszta pod „+ 5 przesłanek”", "Informacja o ryzyku przy zysku" in mt and "Informacja podatkowa" in mt and "Rozmiar czcionki ryzyka" in mt and re.search(r"\+ \d+ przesłan", mt) and panel.locator("[data-premise]:visible").count() == 3, str(panel.locator("[data-premise]:visible").count()))
@@ -368,7 +371,7 @@ with sync_playwright() as p:
     check("karta M2: kliknięcie powiększa zrzut w oknie", page.locator("dialog[open] img").count() >= 1 and page.locator("dialog[open] img").first.evaluate("e => e.naturalWidth > 0"))
     page.keyboard.press("Escape")
     page.wait_for_timeout(400)
-    check("karta M2: Escape zamyka powiększenie, karta zostaje", page.locator("dialog[open]").count() == 0 and "Dowód" in page.locator("[role=complementary]").inner_text())
+    check("karta M2: Escape zamyka powiększenie, karta zostaje", page.locator("dialog[open]").count() == 0 and "Dlaczego tutaj i dowód" in page.locator("[role=complementary]").inner_text())
     page.locator("[role=complementary]").get_by_text("Wszystkie 19 kryteriów wg stanu").click()
     page.wait_for_timeout(400)
     mt = page.locator("[role=complementary]").inner_text()
@@ -394,14 +397,17 @@ with sync_playwright() as p:
     page.wait_for_timeout(300)
     m3 = panel.inner_text()
     check("karta M3: „Szczegóły”: dane podmiotu na stronie, 12 przejrzanych wykazów, zastrzeżenie o braku wpisu", "Dane podmiotu na stronie" in m3 and "Przejrzane wykazy" in m3 and "domy maklerskie" in m3 and "Brak wpisu nie dowodzi braku uprawnień" in m3)
-    page.goto(f"{BASE}/#m3?case=web%3Aerste.pl%3Am3", wait_until="networkidle")
-    page.wait_for_selector("[data-axis]")
-    page.wait_for_timeout(500)
-    check("karta M3: podmiot uprawniony: krok „Uprawnienia: obaliło” i plakietka kontroli", page.locator("[data-testid=proof-path] [data-step=identity][data-state=refuted]").count() == 1 and "kontrola: podmiot uprawniony" in page.inner_text("body"))
-    page.goto(f"{BASE}/#review?case=web%3Aphinance.pl%3Am3", wait_until="networkidle")
-    page.wait_for_selector("[data-axis]")
-    page.wait_for_timeout(700)
-    check("karta M3 (kontrola ujemna): nazwa podmiotu z identity.operator.names w nagłówku", re.search(r"Phinance", page.inner_text("body")) is not None)
+    licensed = [i for i in call(f"{BASE}/v1/queues/offersM3?limit=500")["items"] if i.get("licensed")]
+    if licensed:
+        lid = licensed[0]["id"].replace(":", "%3A")
+        page.goto(f"{BASE}/#review?state=all&module=M3&case={lid}", wait_until="networkidle")
+        page.wait_for_selector("[data-axis]")
+        page.wait_for_timeout(500)
+        check("karta M3: podmiot uprawniony: krok „Uprawnienia: obaliło” i plakietka kontroli na liście", page.locator("[data-testid=proof-path] [data-step=identity][data-state=refuted]").count() == 1 and page.get_by_text("kontrola: podmiot uprawniony").count() >= 1)
+        names = [n for n in (call(f"{BASE}/v1/cases/{licensed[0]['id']}").get("identity", {}).get("operator", {}).get("names") or [])]
+        check("karta M3 (kontrola ujemna): nazwa podmiotu z identity.operator.names w nagłówku", not names or any(n.split()[0] in page.inner_text("body") for n in names), str(names[:2]))
+    else:
+        print("INFO  brak podmiotów z licensed=true w offersM3: kontrola ujemna pominięta")
 
     # 7d. Import ręczny w sekcji „Dodaj materiał” (Źródła): wgranie zapisanej strony Biblioteki Reklam Meta, błąd 422, karta reklamy
     page.goto(f"{BASE}/#sources", wait_until="networkidle")

@@ -206,7 +206,7 @@ export function EvidencePath({ c, narrow }) {
     );
   }
   return (
-    <Grid columns={{ minWidth: 168, max: 4 }} gap={1.5} role="list" aria-label="Droga dowodu" data-testid="proof-path">
+    <Grid columns={{ minWidth: 140, max: 6 }} gap={1.5} role="list" aria-label="Droga dowodu" data-testid="proof-path">
       {steps.map((s) => (
         <Card key={s.id} padding={1.5} variant={s.state === "refuted" ? "green" : s.state === "suspect" ? "yellow" : s.state === "gap" ? "muted" : "default"} role="listitem" data-step={s.id} data-state={s.state} aria-label={`${s.label}: ${STATE_NAME[s.state] || s.state}`}>
           <VStack gap={0.5}>

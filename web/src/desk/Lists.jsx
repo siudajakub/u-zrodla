@@ -79,10 +79,10 @@ export function Filters({ filters, update, reset, tab, narrow, report, moduleCou
       options={[{ label: "Wszystkie", value: "all" }, { label: "Potwierdzone", value: "confirmed" }, { label: "Do potwierdzenia", value: "candidate" }]} renderValue={(o) => `Rejestr: ${o.label}`} />
   );
   const search = (
-    <TextInput label="Szukaj po autorze lub tytule" isLabelHidden type="search" startIcon="search" size="sm" placeholder="Szukaj po autorze lub tytule" width={narrow ? "100%" : "18rem"} value={filters.q} onChange={update("q")} />
+    <TextInput label="Szukaj po autorze lub tytule" isLabelHidden type="search" startIcon="search" size="sm" placeholder="Szukaj po autorze lub tytule" width={narrow ? "100%" : "14rem"} value={filters.q} onChange={update("q")} />
   );
   const reportButton = report && <Button label="Raport" size="sm" href={reportUrl({ ...report, format: "csv", filters })} tooltip="Raport CSV z aktualnymi filtrami (UTF-8, Excel)" />;
-  const clear = count > 0 && <Button variant="ghost" size="sm" label={`Wyczyść filtry (${count})`} onClick={reset} />;
+  const clear = count > 0 && <Button variant="ghost" size="sm" label={`Wyczyść (${count})`} onClick={reset} />;
   if (narrow) {
     const extra = count - (filters.module !== "all" ? 1 : 0);
     return (
