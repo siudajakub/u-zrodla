@@ -14,6 +14,7 @@ x-code: &code
   - ./fixtures:/app/fixtures:ro
   - ./data/probe-snapshots:/app/data/probe-snapshots:ro
   - ./tools:/app/tools:ro
+  - ./ops/scheduler:/app/ops/scheduler:ro
   - ./.runtime/demo/deps:/opt/investwatch/deps:ro
   - ./.runtime/demo/ffmpeg:/opt/investwatch/ffmpeg:ro
   - ./.runtime/asr:/app/.runtime/asr:ro
@@ -121,13 +122,6 @@ services:
     environment:
       <<: *env
       INVESTWATCH_SCHEDULE_INTERVAL: '${INVESTWATCH_DISCOVERY_INTERVAL:-14400}'
-    volumes:
-      - ./api:/app/api:ro
-      - ./collectors:/app/collectors:ro
-      - ./analysis:/app/analysis:ro
-      - ./ops/scheduler:/app/ops/scheduler:ro
-      - ./.runtime/demo/deps:/opt/investwatch/deps:ro
-      - ${INVESTWATCH_STATE_DIR:-./.runtime/demo/state}:/data
     depends_on:
       worker: {condition: service_started}
     healthcheck:
