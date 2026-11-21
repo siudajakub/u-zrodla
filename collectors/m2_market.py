@@ -44,11 +44,13 @@ def read_manifest(path, root=MARKET, mode="replay"):
     views, text = {}, None
     for view in record["views"]:
         dom = json.loads(gzip.decompress(asset(root, view["dom"])))
-        if dom.get("viewport") != view["viewport"] or (dom.get("width"), dom.get("height")) != (view["width"], view["height"]):
+        if dom.get("viewport") != view["viewport"] or dom.get("url") != record["url"]:
             raise SourceError("Widok M2 nie zgadza się z manifestem.")
         asset(root, view["screenshot"])
         views[view["viewport"]] = {
-            **{k: dom.get(k) for k in ("width", "height", "docHeight", "scrollWidth", "consent", "riskLinks", "blocks", "lang")},
+            **{k: dom.get(k) for k in ("docHeight", "scrollWidth", "consent", "riskLinks", "blocks", "lang")},
+            # Requested screen size; the page's own layout size can differ when it ignores the phone viewport.
+            "width": view["width"], "height": view["height"], "layoutWidth": dom.get("width"), "layoutHeight": dom.get("height"),
             "viewport": view["viewport"], "screenshotUrl": EVIDENCE_PREFIX + view["screenshot"], "domUrl": EVIDENCE_PREFIX + view["dom"],
             "screenshotSha256": view["screenshot"].split(".")[0], "domSha256": view["dom"].split(".")[0],
             # Older captures flagged any skipped tiny text; only hitting the block cap means the list is incomplete.
