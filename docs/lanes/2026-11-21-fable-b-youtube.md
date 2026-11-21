@@ -31,9 +31,7 @@
 
 - Repo, zmienne środowiska sesji, `compose.yaml` i `ops/` nie odwołują się do `YOUTUBE_API_KEY`, `GOOGLE_API_KEY` ani innego klucza YouTube. Compose nie ma `env_file`.
 - W `hacknation/` nie ma plików `.env`. Są tylko `vendor/*/.env.example` z innych projektów, bez kluczy YouTube.
-- `~/.config/environment.d/60-devbox-path.conf` zawiera tylko PATH. `~/.config/cloudferro-backup.env` zawiera wyłącznie zmienne `CF_S3_*`.
-- `~/.config/gcloud` jest zalogowany na konto J, bez ustawionego projektu. Tej sesji nie wolno użyć go bez zgody, bo utworzenie projektu lub klucza zmienia konto J.
-- `~/.config/personal-chat/firebase/google-services.json` zawiera klucz Firebase innej aplikacji J. Klucz należy do innego projektu i ma inne przeznaczenie, więc go nie używamy.
+- Konfiguracja hosta poza repo nie zawiera klucza YouTube dla projektu. Konta i klucze innych projektów pominięto bez użycia (szczegóły hosta usunięto z rekordu przy porządkowaniu repo).
 - Narzędzia: brak `yt-dlp` (także w `.runtime/venv` i `.runtime/qa`), `youtube_transcript_api`, `googleapiclient` i whispera w Pythonie hosta. Jest `ffmpeg`. Niczego nie instalowano.
 
 ### Wyniki prób live z 2026-11-21, 18:29:53–18:34:46 UTC

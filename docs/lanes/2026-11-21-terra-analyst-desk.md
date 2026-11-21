@@ -4,7 +4,7 @@ Historyczny rekord pierwszej integracji. Aktualny zakres i model wykonawcy wskaz
 
 - Owner: terra
 - Branch: hack/terra/analyst-desk
-- Worktree: /home/codexdev/projects/hacknation/uknf-investwatch/.worktrees/desk
+- Worktree: .worktrees/desk
 - State: READY
 - Updated: 2026-11-21 16:21 UTC
 - PR / issue: none

@@ -2,7 +2,7 @@
 
 - Owner: J (decyzje produktowe) · orkiestracja: Fable · wykonawca: agent I (UX), model claude-opus-5-5
 - Branch: hack/integration (tylko dokumentacja; kod w web/ prowadzi J1)
-- Worktree: /home/codexdev/projects/hacknation/uknf-investwatch
+- Worktree: główny checkout
 - State: ACTIVE (audyt gotowy, wdrożenie po stronie J1)
 - Updated: 2026-11-21 23:30 UTC
 - PR / issue: brak

@@ -9,3 +9,4 @@ __pycache__/
 node_modules/
 /data/probe-snapshots/social/*.out
 /data/probe-snapshots/knf/knf_warnings_parsed.json
+/.claude/worktrees/
