@@ -10,16 +10,46 @@ from .transcribe import MEDIA, ROOT, replay_file
 
 SNAPSHOTS = ROOT / "data" / "probe-snapshots"
 FIXTURES = ROOT / "fixtures" / "labeled"
-RULESET = "investwatch-rules-pl-1.1"
-PARTNER = (r"\bpartner(?:em)? (?:tego |naszego )?(?:programu|odcinka|materiału|kanału|filmu)\b"
-           r"|\b(?:we współpracy z|płatna współpraca|współpraca reklamowa|materiał sponsorowany|"
-           r"film sponsoruje|sponsorem (?:jest|odcinka)|naszym partnerem jest|reklama)\b")
+RULESET = "investwatch-rules-pl-1.2"
+PARTNER = (
+    r"\b(?:partnerem (?:(?:tego|naszego) )?(?:programu|odcinka|materiału|kanału|filmu) (?:jest|został\w*)"
+    r"|film sponsoruje|sponsorem (?:jest|odcinka jest)|naszym partnerem jest)\b"
+    r"|\b(?:powstał\w*|przygotowano|zrealizowano|nagrano) we współpracy z\b"
+    r"|^\s*we współpracy z\b"
+    r"|^\s*(?:partner|sponsor) (?:odcinka|programu|materiału|filmu)\s*:\s*(?=[\w„])"
+)
+DISCLOSURE_LABEL = (
+    r"(?<![\w/])#(?:reklama|wsp[oó][łl]praca(?:reklamowa)?|płatnawspółpraca|materiałreklamowy|ad|sponsored)\b"
+    r"|^\s*[\[(]?\s*(?:(?:to (?:jest )?|niniejszy )?materiał (?:reklamowy|sponsorowany)"
+    r"|płatna współpraca|współpraca reklamowa|to (?:jest )?reklama)\b"
+    r"|^\s*[\[(]?\s*reklama\s*(?:$|[\]).:–-])"
+)
 REFERRAL = r"\bkod(?:em|u)? (?:rabatow\w*|polecaj\w*|promocyjn\w*)|link\w* (?:afiliacyjn\w*|partnersk\w*)"
 BRANDS = r"\b(?:XTB|Aurora|eToro|Trading 212|BDM|DM BOŚ)\b"
 CTA = (r"\b(?:pobierz (?:aplikację|program)|otwórz (?:konto|rachunek)|załóż (?:konto|rachunek)"
        r"|zarejestruj się|wybierz ofertę|kup teraz|odbierz bonus|skorzystaj z oferty)\b")
 SIGNALS = {94: "declaration", 74: "brand_cta", 66: "affiliate_code", 24: "neutral_mention"}
-DENIAL = r"\b(?:nie jest|nie była|bez|żadnej|brak) (?:to |żadnej )?(?:reklam\w*|współprac\w*|partner\w*|sponsor\w*)|\bnie (?:reklamuję|współpracuję)"
+CLAUSE_SPLIT = re.compile(r"(?<=[.!?])\s+|[\r\n]+|\b(?:ale|jednak|natomiast)\b", re.I)
+DENIAL = re.compile(
+    r"\b(?:nie jest|nie była|bez|żadnej|brak) (?:to |żadnej )?"
+    r"(?:reklam\w*|współprac\w*|partner\w*|sponsor\w*|materiał\w* (?:reklamow\w*|sponsorowan\w*))"
+    r"|\bnie (?:reklamuję|współpracuję)\b"
+    r"|\b(?:materiał|odcinek|film) nie (?:powstał\w*|został\w*) we współpracy\b",
+    re.I,
+)
+ACTION_DENIAL = re.compile(
+    r"\bnie (?:klikaj\w*|korzystaj\w*|używaj\w*|użyj|pobieraj\w*|otwieraj\w*|zakładaj\w*|rejestruj się|polecam)\b",
+    re.I,
+)
+FRAUD_CONTEXT = re.compile(
+    r"\b(?:podszywa\w*|oszust\w*|wyłudz\w*|scam\w*|"
+    r"fałszyw\w*\s+(?:reklam\w*|ofert\w*|link\w*))\b",
+    re.I,
+)
+FRAUD_REFERENCE = re.compile(
+    r"^\s*(?:to (?:jest )?(?:oszustwo|próba wyłudzenia)|(?:ta oferta|ta reklama|ten link) (?:jest )?fałszyw\w*)\b",
+    re.I,
+)
 ADVICE = (r"portfel rekomendowany|rekomendacj\w* (?:dla ciebie|dla klienta|dopasowan\w*)|"
           r"dobior\w* (?:ci |dla ciebie |Państwu )?(?:konkretn\w* )?(?:akcj\w*|portfel|instrument\w*)|"
           r"politykę inwestycyjną zgodną z twoimi potrzebami")
@@ -66,32 +96,68 @@ def demo_captures():
     return captures
 
 
-def clause_relation(text, brand=None):
-    if re.search(DENIAL, text, re.I):
-        return 12, "Autor zaprzecza współpracy", excerpt(text, DENIAL)
-    sponsor = excerpt(text, PARTNER)
-    if sponsor:
-        return 94, "Deklaracja reklamy lub partnerstwa", sponsor
-    brand_pattern = BRANDS
-    if brand and isinstance(brand, str):
-        brand_pattern += r"|(?<!\w)" + re.escape(brand) + r"(?!\w)"
-    brand_match = re.search(brand_pattern, text, re.I)
-    cta = re.search(CTA, text, re.I)
-    if brand_match and cta and abs(brand_match.start() - cta.start()) <= 90:
-        start = min(brand_match.start(), cta.start())
-        end = max(brand_match.end(), cta.end())
-        return 74, "Zachęta do działania przy wzmiance o marce", text[max(0,start-15):end+60]
-    code = excerpt(text, REFERRAL)
-    if code:
-        return 66, "Kod lub link polecający", code
-    if brand_match:
-        return 24, "Wzmianka o marce", excerpt(text, brand_pattern)
-    return (12, "Brak jednoznacznego sygnału współpracy", text[:150]) if text else (0, "Brak treści do oceny", "")
+def promotion_clauses(text):
+    clauses = [part.strip() for part in CLAUSE_SPLIT.split(text) if part.strip()]
+    for index, clause in enumerate(clauses):
+        next_clause = clauses[index + 1] if index + 1 < len(clauses) else ""
+        warning = FRAUD_CONTEXT.search(clause) or FRAUD_REFERENCE.search(next_clause)
+        denial = DENIAL.search(clause)
+        yield clause, denial, bool(warning or ACTION_DENIAL.search(clause) or clause.endswith("?"))
+
+
+def brand_pattern(brand):
+    if isinstance(brand, str) and brand:
+        return BRANDS + r"|(?<!\w)" + re.escape(brand) + r"(?!\w)"
+    return BRANDS
+
+
+def clause_relation(text, brands, denial, blocked):
+    if denial:
+        return 12, "Autor zaprzecza współpracy", excerpt(text, DENIAL.pattern)
+    mentions = list(re.finditer(brands, text, re.I))
+    if not blocked:
+        sponsor = excerpt(text, PARTNER)
+        if sponsor:
+            return 94, "Deklaracja współpracy lub partnerstwa", sponsor
+        for cta in re.finditer(CTA, text, re.I):
+            for mention in mentions:
+                if abs(mention.start() - cta.start()) <= 90:
+                    start = min(mention.start(), cta.start())
+                    end = max(mention.end(), cta.end())
+                    return 74, "Zachęta do działania przy wzmiance o marce", text[max(0, start - 15):end + 60]
+        code = excerpt(text, REFERRAL)
+        if code:
+            return 66, "Kod lub link polecający", code
+    if mentions:
+        return 24, "Wzmianka o marce", excerpt(text, brands)
+    return 12, "Brak jednoznacznego sygnału współpracy", text[:150]
 
 
 def relation(text, brand=None):
-    clauses = re.split(r"(?<=[!?])\s+|(?<=\.)\s+(?=[A-ZĄĆĘŁŃÓŚŹŻ])|\n+|\bale\b", text)
-    return max((clause_relation(clause, brand) for clause in clauses), key=lambda result: result[0])
+    brands = brand_pattern(brand)
+    return max(
+        (clause_relation(clause, brands, denial, blocked) for clause, denial, blocked in promotion_clauses(text)),
+        key=lambda result: result[0],
+        default=(0, "Brak treści do oceny", ""),
+    )
+
+
+def find_disclosure(text, brand):
+    brands = brand_pattern(brand)
+    label = None
+    for clause, denial, blocked in promotion_clauses(text):
+        if denial or blocked:
+            continue
+        declaration = re.search(PARTNER, clause, re.I)
+        if declaration:
+            named = re.match(
+                rf'\s*[:„"«]?\s*(?:(?:firma|marka|dom maklerski)\s+)?(?P<name>{brands})',
+                clause[declaration.end():], re.I,
+            )
+            return "declaration", excerpt(clause, PARTNER), named["name"] if named else None
+        if label is None:
+            label = excerpt(clause, DISCLOSURE_LABEL)
+    return ("label", label, None) if label else (None, None, None)
 
 
 def m1(cap):
@@ -113,8 +179,11 @@ def m1(cap):
         evidence.append(ev)
         if score > best:
             best, reason = score, label
-    if text:
+    if text.strip():
         evidence.append({"kind": "description", "text": quote or text[:180], "url": cap.get("url")})
+    disclosure, disclosure_quote, disclosed_brand = find_disclosure(text, cap.get("brand"))
+    if disclosure_quote and (not quote or disclosure_quote not in quote):
+        evidence.append({"kind": "description", "text": disclosure_quote, "url": cap.get("url")})
     audio_only = bool(text.strip() and strong and ds < 60 <= best)
     if audio_only:
         reason += " w nagraniu. Opis nie ujawnia tego sygnału."
@@ -124,7 +193,17 @@ def m1(cap):
         reason += " w zbadanym zakresie."
     extra = {"descriptionScore": ds, "speechOnlySignal": audio_only}
     extra["signalType"] = SIGNALS.get(best, "none")
-    extra["descriptionDisclosureStatus"] = "unavailable" if not text.strip() else "observed" if ds == 94 else "not_found"
+    extra["descriptionDisclosureStatus"] = "unavailable" if not text.strip() else "observed" if disclosure else "not_found"
+    if disclosure:
+        extra["descriptionDisclosureType"] = disclosure
+    if disclosed_brand:
+        extra["descriptionDisclosedBrand"] = disclosed_brand
+    if disclosure == "label":
+        if best < 60:
+            extra["signalType"] = "disclosure_label"
+            reason = "W zbadanym opisie występuje etykieta reklamowa. Ustal charakter powiązania."
+        else:
+            reason += " W opisie występuje etykieta reklamowa."
     extra["possibleUndisclosedPromotion"] = best in (74, 66) and extra["descriptionDisclosureStatus"] == "not_found"
     if extra["possibleUndisclosedPromotion"]:
         reason = ("Zachęta do działania przy wzmiance o marce" if best == 74 else "Kod lub link polecający")
@@ -133,10 +212,19 @@ def m1(cap):
     if segments:
         extra["modalityComparison"] = {"descriptionOnly": ds, "withAudio": best, "delta": best - ds}
     if not cap.get("brand"):
-        source_quote = " ".join(e["text"] for e in evidence)
-        match = re.search(BRANDS, source_quote, re.I)
-        if match:
-            extra["brand"] = match.group()
+        inferred_brand = disclosed_brand
+        if not inferred_brand and best == 94:
+            for seg, score, _ in displayed:
+                if score == 94:
+                    _, _, inferred_brand = find_disclosure(seg["text"], None)
+                    if inferred_brand:
+                        break
+        elif not inferred_brand:
+            source_quote = " ".join(e["text"] for e in evidence)
+            match = re.search(BRANDS, source_quote, re.I)
+            inferred_brand = match.group() if match else None
+        if inferred_brand:
+            extra["brand"] = inferred_brand
     return best, reason, evidence, extra
 
 

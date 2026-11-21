@@ -76,6 +76,72 @@ class Findings(unittest.TestCase):
         self.assertLess(analyze({"module": "M3", "description": "Nie dobiorę dla ciebie akcji."})["score"], 35)
         self.assertGreater(analyze({"module": "M3", "description": "Nie rekomenduję obligacji, ale dobiorę dla ciebie akcje."})["score"], 70)
 
+    def test_m1_recognizes_disclosure_labels_separately_from_named_declarations(self):
+        for marker in ("Materiał reklamowy XTB.", "#współpraca", "[Reklama]", "Materiał sponsorowany."):
+            with self.subTest(marker=marker):
+                source = "https://example.org/material"
+                description = marker + "\nZałóż rachunek w XTB."
+                result = analyze({"description": description, "url": source})
+                self.assertEqual(result["score"], 74)
+                self.assertEqual(result["descriptionDisclosureStatus"], "observed")
+                self.assertEqual(result["descriptionDisclosureType"], "label")
+                self.assertNotIn("descriptionDisclosedBrand", result)
+                self.assertFalse(result["possibleUndisclosedPromotion"])
+                self.assertTrue(any(marker in item["text"] and item["url"] == source
+                                    for item in result["evidence"]))
+
+        label_only = analyze({"description": "#współpraca"})
+        self.assertEqual(label_only["signalType"], "disclosure_label")
+        self.assertNotIn("brand", label_only)
+        declared = analyze({"description": "Partnerem odcinka jest firma XTB. Omawiamy także eToro."})
+        self.assertEqual((declared["score"], declared["descriptionDisclosureType"]), (94, "declaration"))
+        self.assertEqual(declared["descriptionDisclosedBrand"], "XTB")
+        self.assertEqual(declared["brand"], "XTB")
+        other_brand = analyze({"description": "Partnerem odcinka jest Fikcyjna, a XTB ma inny cennik."})
+        self.assertEqual(other_brand["descriptionDisclosureType"], "declaration")
+        self.assertNotIn("descriptionDisclosedBrand", other_brand)
+        self.assertNotIn("brand", other_brand)
+        headed = analyze({"description": "Partner programu: XTB."})
+        self.assertEqual(headed["descriptionDisclosedBrand"], "XTB")
+        sounded = analyze({"description": "Porównanie stawek w eToro.", "segments": [
+            {"start": 0.2, "end": 1.4, "text": "Partnerem odcinka jest XTB."},
+        ]})
+        self.assertEqual(sounded["brand"], "XTB")
+        self.assertEqual(sounded["descriptionDisclosureStatus"], "not_found")
+
+    def test_m1_neutral_discussion_and_fraud_warning_are_not_promotions(self):
+        cases = (
+            "W tym odcinku mówimy o tym, czym jest reklama.",
+            "Czy partnerem programu jest XTB?",
+            "Ktoś podszywa się pod XTB i mówi: otwórz rachunek. Uważaj na oszustwo.",
+            "Otwórz rachunek w XTB. To próba wyłudzenia.",
+            "Nie używaj kodu polecającego od tego nadawcy.",
+            "Odcinek nie powstał we współpracy z XTB.",
+        )
+        for description in cases:
+            with self.subTest(description=description):
+                result = analyze({"description": description})
+                self.assertLess(result["score"], 60)
+                self.assertEqual(result["descriptionDisclosureStatus"], "not_found")
+                self.assertFalse(result["possibleUndisclosedPromotion"])
+
+    def test_m1_keeps_brand_cta_and_negation_in_their_own_clauses(self):
+        independent = analyze({"description": "XTB opublikowało wyniki. otwórz rachunek w innym banku."})
+        self.assertEqual(independent["signalType"], "neutral_mention")
+        self.assertFalse(independent["possibleUndisclosedPromotion"])
+        positive = analyze({"description": "Uważaj na oszustwa w internecie. Otwórz rachunek w XTB."})
+        self.assertEqual(positive["score"], 74)
+        self.assertTrue(positive["possibleUndisclosedPromotion"])
+        self.assertEqual(positive["evidence"][0]["text"], "Otwórz rachunek w XTB.")
+
+        separate = analyze({"description": "To nie jest reklama kursu. Załóż rachunek w XTB."})
+        self.assertEqual(separate["score"], 74)
+        self.assertEqual(separate["descriptionDisclosureStatus"], "not_found")
+        self.assertTrue(separate["possibleUndisclosedPromotion"])
+        contrast = analyze({"description": "Nie współpracuję z eToro, ALE partnerem odcinka jest XTB."})
+        self.assertEqual(contrast["descriptionDisclosedBrand"], "XTB")
+        self.assertEqual(contrast["score"], 94)
+
     def test_registry_entities_remain_separate(self):
         result = analyze(self.cases["public-financewell-agent"])
         self.assertEqual([e["id"] for e in result["registry"]["entries"]], [4844186, 4844187])
