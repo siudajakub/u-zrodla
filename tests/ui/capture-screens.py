@@ -43,6 +43,7 @@ SCREENS = [
     ("7-kalibracja", "#calibration", "suwak"),
     ("8-niepelne", "#incomplete", None),
     ("9-oferty-m2", "#m2", None),
+    ("9b-karta-reklamy-meta", "#m2?case=facebook%3Aad-1353099026431942", None),
     ("10-oferty-m3", "#m3", None),
     ("11-zamkniete", "#closed", None),
     ("12-demo", "#demo", None),

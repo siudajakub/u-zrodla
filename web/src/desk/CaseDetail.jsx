@@ -18,7 +18,7 @@ import { Heading, Text } from "@astryxdesign/core/Text";
 import { Token } from "@astryxdesign/core/Token";
 import { api } from "./api.js";
 import { BANDS, HISTORY_KIND, RESOLUTIONS, ROUTES, RESOLUTION_LABEL, STATUS, VARIANTS, clock, fmtDate, fmtDateTime, fmtDayRoman, isYoutube, safeUrl } from "./labels.js";
-import { ExternalLink, OriginToken, RecalcToken, ReReviewToken, SCALE_NOTE, discoveryLines, originLabel, proofOf, reachText } from "./parts.jsx";
+import { ExternalLink, ImportToken, OriginToken, RecalcToken, ReReviewToken, SCALE_NOTE, discoveryLines, originLabel, proofOf, reachText } from "./parts.jsx";
 
 function Tile({ title, id, children, aside }) {
   return (
@@ -50,7 +50,7 @@ function WhyTile({ c }) {
   );
   return (
     <Tile title="Dlaczego tutaj" aside={c.route === "refer" ? <Token size="sm" color="blue" label="do sprawdzenia" /> : <Token size="sm" color="gray" label={ROUTES[c.route] || c.route || "bez oceny"} />}>
-      {c.needsRecalc && !c.isV2 ? (
+      {c.needsRecalc && !c.isV2 && !c.reason ? (
         <Text color="secondary">Wynik ze starszej wersji analizy. Przelicz materiały, aby zobaczyć uzasadnienie.</Text>
       ) : reasons.length ? (
         <>
@@ -132,6 +132,9 @@ function coverageRows(c) {
     const n = m.frames.moments?.length || 0;
     rows.push({ key: "f", name: "Kadry", ok: m.frames.state !== "not_collected" && n > 0, text: n ? `${n} ${n === 1 ? "kadr" : n < 5 ? "kadry" : "kadrów"}; tekst z obrazu nieodczytywany` : m.frames.reason || "nie zbadano" });
   }
+  if (m.adText) rows.push({ key: "a", name: "Tekst reklamy", ok: m.adText.state === "full", text: m.adText.state === "full" ? "całość, z zapisanej strony" : "nie zbadano" });
+  if (m.media) rows.push({ key: "m", name: "Obraz i wideo", ok: false, text: "nie zbadano" });
+  if (m.render) rows.push({ key: "r", name: "Wygląd (render)", ok: false, text: "nie zbadano" });
   if (m.platformFlags) {
     const p = m.platformFlags;
     rows.push({ key: "p", name: c.platform === "youtube" ? "Oznaczenie YouTube" : "Oznaczenie platformy", ok: p.paidPromotion != null, text: p.paidPromotion == null ? "nie sprawdzono" : p.paidPromotion ? "płatna promocja: tak" : "brak" });
@@ -159,7 +162,21 @@ function ScopeTile({ c }) {
 }
 
 /* 4. Firma: nazwa | typ | wykaz KNF. */
+const FIRM_ROLE = { advertiser: "reklamodawca", payer: "płatnik", beneficiary: "beneficjent", mentioned: "wspomniana w treści" };
+
 function FirmTile({ c }) {
+  const fr = c.raw.firmRelation;
+  if (fr && !c.relationship) {
+    return (
+      <Tile title="Firma">
+        <MetadataList>
+          <MetadataListItem label="Firma">{fr.label || fr.firm}</MetadataListItem>
+          <MetadataListItem label="Rola">{FIRM_ROLE[fr.role] || fr.role || "—"}</MetadataListItem>
+          {fr.quote && <MetadataListItem label="Podstawa">„{fr.quote}”</MetadataListItem>}
+        </MetadataList>
+      </Tile>
+    );
+  }
   const firm = c.relationship?.firm;
   const candidates = firm?.candidates || [];
   if (!firm?.mention && !candidates.length) {
@@ -182,6 +199,29 @@ function FirmTile({ c }) {
           ]} />
         </Collapsible>
       )}
+    </Tile>
+  );
+}
+
+/* Reklama z Biblioteki Reklam Meta (import): treść, reklamodawca, daty emisji, CTA, domena, wersje. */
+const AD_STATUS = { active: "aktywna", inactive: "zakończona" };
+function AdTile({ c }) {
+  const r = c.raw;
+  const from = r.adDeliveryStartDate && fmtDate(r.adDeliveryStartDate);
+  const to = r.adDeliveryStopDate && fmtDate(r.adDeliveryStopDate);
+  const dates = from ? `${from} – ${to || "nadal emitowana"}` : "brak w zapisanym pliku";
+  return (
+    <Tile title="Treść reklamy" id="sekcja-momenty" aside={<ImportToken c={c} />}>
+      {r.adBody ? <Blockquote>{r.adBody}</Blockquote> : <Text color="secondary">Brak tekstu reklamy.</Text>}
+      <MetadataList>
+        <MetadataListItem label="Reklamodawca">{r.author || c.creatorName || "—"}</MetadataListItem>
+        <MetadataListItem label="Emisja">{dates}{AD_STATUS[r.adStatus] ? ` (${AD_STATUS[r.adStatus]})` : ""}</MetadataListItem>
+        <MetadataListItem label="Wezwanie (CTA)">{r.callToAction || "brak"}</MetadataListItem>
+        <MetadataListItem label="Domena linku">{r.linkDomain || "brak w zapisanym pliku"}</MetadataListItem>
+        <MetadataListItem label="Wersje reklamy">{r.versionsCount ?? 1}{r.multipleVersions ? " (kilka wariantów treści)" : ""}</MetadataListItem>
+        <MetadataListItem label="Zasięg w UE">{reachText(c.reach)}</MetadataListItem>
+      </MetadataList>
+      {r.importNote && <Text type="supporting" color="secondary">{r.importNote}{r.importLayoutNote ? `: ${r.importLayoutNote}` : ""}</Text>}
     </Tile>
   );
 }
@@ -352,6 +392,7 @@ const jump = (id) => () => {
 
 export function CaseDetail({ c, headingRef, onBack, onSaved, narrow }) {
   const proof = proofOf(c);
+  const isAd = c.module === "M2" && !!c.raw.adBody;
   const band = c.score?.value != null ? `${BANDS[c.score.band] || ""} · ${c.score.value}/100` : null;
   const firm = c.relationship?.firmName;
   const header = (
@@ -362,6 +403,7 @@ export function CaseDetail({ c, headingRef, onBack, onSaved, narrow }) {
             {band && <Token size="sm" color={c.score.band === "strong" ? "red" : c.score.band === "moderate" ? "orange" : "gray"} label={`Siła: ${band}`} />}
             {!narrow && <Token size="sm" color="gray" label={STATUS[c.status] || c.status} />}
             {!narrow && <OriginToken origin={c.origin} at={c.observedAt} />}
+            <ImportToken c={c} />
             <RecalcToken c={c} />
             <ReReviewToken c={c} />
           </HStack>
@@ -381,13 +423,13 @@ export function CaseDetail({ c, headingRef, onBack, onSaved, narrow }) {
       {c.origin === "synthetic" || c.origin === "upload" ? (
         <Banner status="info" title={c.origin === "upload" ? "Plik operatora" : "Materiał syntetyczny"} description="Nie pochodzi z bieżącego rynku." />
       ) : null}
-      {c.needsRecalc && <Banner status="warning" title="Wynik ze starszej wersji analizy" description={c.needsRecalcReason || "Wymaga przeliczenia."} />}
+      {c.needsRecalc && c.module === "M1" && <Banner status="warning" title="Wynik ze starszej wersji analizy" description={c.needsRecalcReason || "Wymaga przeliczenia."} />}
       <Grid columns={{ minWidth: 300, max: 2 }} gap={3}>
         <WhyTile c={c} />
-        <MomentsTile c={c} />
+        {isAd ? <AdTile c={c} /> : <MomentsTile c={c} />}
         <ScopeTile c={c} />
         <FirmTile c={c} />
-        <CreatorTile c={c} />
+        {!isAd && <CreatorTile c={c} />}
         <DecisionTile c={c} onSaved={onSaved} key={c.id} />
       </Grid>
       <MoreTabs c={c} />
@@ -396,7 +438,7 @@ export function CaseDetail({ c, headingRef, onBack, onSaved, narrow }) {
   const footer = narrow && (
     <LayoutFooter padding={2} hasDivider>
       <HStack gap={2}>
-        <Button label="Momenty" onClick={jump("sekcja-momenty")} />
+        <Button label={isAd ? "Treść" : "Momenty"} onClick={jump("sekcja-momenty")} />
         <Button label="Decyzja" variant="primary" onClick={jump("sekcja-decyzja")} />
       </HStack>
     </LayoutFooter>

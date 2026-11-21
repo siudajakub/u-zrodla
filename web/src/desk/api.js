@@ -141,6 +141,11 @@ export const api = {
     return request(`/v1/media?${params}`, { method: "POST", headers: { "Content-Type": "application/octet-stream" }, body: file });
   },
 
+  /** Import ręczny strony Biblioteki Reklam Meta lub profilu Instagram: surowy plik, nazwa w zapytaniu. */
+  importMeta(file) {
+    return request(`/v1/import/meta?filename=${encodeURIComponent(file.name)}`, { method: "POST", headers: { "Content-Type": "application/octet-stream" }, body: file });
+  },
+
   /** WebSocket zdarzeń z ponownym łączeniem i dociąganiem od ostatniego ID. Zwraca funkcję zamykającą. */
   events({ onEvent, onStatus }) {
     let ws;

@@ -88,7 +88,7 @@ export function normalizeCase(raw, creators = new Map()) {
   const evidence = (v2.length ? v2 : legacyEvidence).map((e) => normalizeEvidence(e, raw.url));
   const creator = creators.get(raw.creatorId) || null;
   const module = raw.module || "M1";
-  const route = decision?.route || null;
+  const route = decision?.route || (typeof raw.route === "string" ? raw.route : null);
   const isV2 = !!decision;
   // M2 i M3 nie mają trasy kwalifikacji M1; ich przeliczenie wskazuje wyłącznie API (needsRecalc).
   const needsRecalc = raw.needsRecalc ?? (module === "M1" ? !isV2 : false);
@@ -118,7 +118,8 @@ export function normalizeCase(raw, creators = new Map()) {
     observedAt: raw.observedAt || null,
     isV2,
     route,
-    reason: decision?.reason || null,
+    reason: decision?.reason || obj(raw.reviewSuggestion)?.reason || null,
+    importLabel: raw.importLabel || null,
     reasons: arr(decision?.reasons),
     moments: arr(decision?.moments),
     completeReason: decision?.completeReason || null,
@@ -213,6 +214,7 @@ export function normalizeRow(item, creators = new Map()) {
   const creator = creators.get?.(item.creatorId) || null;
   return {
     isRow: true,
+    importLabel: item.importLabel || null,
     id: item.id,
     title: item.title || item.id,
     module: item.module || "M1",

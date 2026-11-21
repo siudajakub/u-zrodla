@@ -170,7 +170,7 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
     list = <CaseList items={items} tab={tab} narrow={narrow} selectedId={shownId} filters={filters} onOpen={open} emptyState={empty} />;
   }
 
-  const recalc = ready ? items.filter((c) => c.needsRecalc).length : 0;
+  const recalc = ready ? items.filter((c) => c.needsRecalc && c.module === "M1").length : 0;
   const variantName = VARIANTS[data.qualification?.variant] || data.qualification?.variant;
   const head = (
     <LayoutHeader padding={0} hasDivider>
@@ -262,7 +262,7 @@ export function Desk() {
   let content;
   if (error && !data) content = <ErrorBlock message={error} retry={desk.refresh} />;
   else if (!data) content = <Loading label="Pobieranie danych…" />;
-  else if (tab === "sources") content = <Layout height="fill" content={<LayoutContent padding={0} isScrollable><Sources data={data} busy={busy} scanning={scanning} onScan={startScan} rev={desk.rev} /></LayoutContent>} />;
+  else if (tab === "sources") content = <Layout height="fill" content={<LayoutContent padding={0} isScrollable><Sources data={data} busy={busy} scanning={scanning} onScan={startScan} rev={desk.rev} onRefresh={() => desk.schedule({ heavy: true })} /></LayoutContent>} />;
   else if (tab === "calibration") content = <Layout height="fill" content={<LayoutContent padding={0} isScrollable><Calibration data={data} rev={desk.rev} onChanged={() => desk.refresh({ heavy: true })} /></LayoutContent>} />;
   else if (tab === "evidence") content = <Layout height="fill" content={<LayoutContent padding={0} isScrollable><EvidenceForm onDone={schedule} onOpenDemo={() => go("demo")} /></LayoutContent>} />;
   else content = <QueueScreen key={tab} tab={tab} route={route} go={go} desk={desk} narrow={narrow} actions={actions} />;

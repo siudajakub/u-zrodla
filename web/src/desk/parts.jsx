@@ -19,8 +19,12 @@ export function OriginToken({ origin, at }) {
   return <Token size="sm" color={synthetic ? "orange" : "gray"} label={originLabel(origin, at)} />;
 }
 
+export function ImportToken({ c }) {
+  return c.importLabel ? <Token size="sm" color="teal" label={c.importLabel} description="Realne dane wczytane z zapisanej strony, nie demonstracja." /> : null;
+}
+
 export function RecalcToken({ c }) {
-  return c.needsRecalc ? <Token size="sm" color="yellow" label="Do ponownego przeliczenia" description={c.needsRecalcReason || undefined} /> : null;
+  return c.needsRecalc && (c.module || "M1") === "M1" ? <Token size="sm" color="yellow" label="Do ponownego przeliczenia" description={c.needsRecalcReason || undefined} /> : null;
 }
 
 export function ReReviewToken({ c }) {

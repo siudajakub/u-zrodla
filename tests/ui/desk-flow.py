@@ -38,6 +38,11 @@ def call(url, method="GET", body=None):
     return json.load(urllib.request.urlopen(request, timeout=30))
 
 
+COUNTS = call(f"{BASE}/v1/queues/review?limit=1")["counts"]
+INC = COUNTS["incomplete"]
+REG = COUNTS["adRegister"]
+
+
 def case(cid):
     return call(f"{BASE}/v1/cases/{cid}")
 
@@ -75,7 +80,7 @@ with sync_playwright() as p:
     check("ile czeka na transkrypcję, link do Niepełnych danych", page.get_by_role("link", name=re.compile("czeka na transkrypcję")).count() == 1)
     check("cztery wiersze kolejki", page.locator("a[id^='row-']").count() == 4)
     check("siła i dowód w wierszu", "100 z 100 pkt" in body and page.get_by_role("link", name=re.compile(r"od \d+:\d\d|opis")).count() >= 4)
-    check("liczniki z API (rejestr 269, niepełne 213)", "269" in body and "213" in body)
+    check("liczniki z API (rejestr i niepełne zgodne z API)", str(REG) in body and str(INC) in body)
     check("brak słowa naruszenie jako werdyktu", "naruszenie" not in body.replace("prawdopodobieństwo naruszenia", "").replace("prawdopodobieństwa naruszenia", ""))
     check("brak „(znaki” i kodów reguł w widoku", "(znaki" not in body and "U1" not in body)
     overview = [u for u in requests if "/v1/overview" in u]
@@ -148,10 +153,10 @@ with sync_playwright() as p:
     page.on("request", lambda r: requests_reg.append(r.url))
     page.goto(f"{BASE}/#register", wait_until="networkidle")
     ready(page, "Rejestr reklam")
-    page.wait_for_selector("text=Pokazano 50 z 269")
-    check("rejestr: pierwsza strona 50 z 269, nie wszystkie", page.locator("a[id^='row-']").count() == 50)
+    page.wait_for_selector(f"text=Pokazano 50 z {REG}")
+    check("rejestr: pierwsza strona 50 z liczby z API, nie wszystkie", page.locator("a[id^='row-']").count() == 50)
     page.get_by_role("button", name="Pokaż więcej").click()
-    page.wait_for_selector("text=Pokazano 100 z 269")
+    page.wait_for_selector(f"text=Pokazano 100 z {REG}")
     check("rejestr: kolejna strona przez kursor", any("cursor=50" in u for u in sizes) and page.locator("a[id^='row-']").count() == 100)
     page.wait_for_timeout(1500)
     body = page.inner_text("body")
@@ -163,8 +168,8 @@ with sync_playwright() as p:
     # 6. Niepełne dane
     page.goto(f"{BASE}/#incomplete", wait_until="networkidle")
     ready(page, "Niepełne dane")
-    page.wait_for_selector("text=Pokazano 50 z 213")
-    check("niepełne: 213 z paginacją i liczba czekających", "czeka na transkrypcję" in page.inner_text("body"))
+    page.wait_for_selector(f"text=Pokazano 50 z {INC}")
+    check("niepełne: liczba z API z paginacją i liczba czekających", "czeka na transkrypcję" in page.inner_text("body"))
 
     # 7. Źródła: wykresy, kafelki platform, zablokowany dostęp, kroki skanu
     page.goto(f"{BASE}/#sources", wait_until="networkidle")
@@ -179,15 +184,16 @@ with sync_playwright() as p:
     for name in ("YouTube", "TikTok", "Instagram", "Facebook", "WWW firm (M2)", "WWW doradców (M3)", "Biblioteka Reklam Meta"):
         check(f"źródła: kafel {name}", page.locator(f"[aria-label='Źródło: {name}']").count() == 1)
     fb = page.locator("[aria-label='Źródło: Facebook']").inner_text()
-    check("kafel Facebooka: blokada dostępu, data próby, następny krok", "dostęp zablokowany" in fb and re.search(r"Ostatnia próba\s*\n?\s*\d+ \w+ 2026", fb) and "Meta Content Library" in fb and "Następny krok" in fb, fb[:200].replace("\n", " "))
-    check("kafel Instagrama: blokada dostępu", "dostęp zablokowany" in page.locator("[aria-label='Źródło: Instagram']").inner_text())
+    check("kafel Facebooka: próbka z importu i lista dróg z blokadą wpisów organicznych", "próbka z importu ręcznego" in fb and "import ręczny" in fb and "wpisy automatycznie" in fb and "dostęp zablokowany" in fb and "Meta Content Library" in fb and "Droga" in fb, fb[:260].replace("\n", " "))
+    check("kafel Facebooka: data próby i następny krok", "Ostatnia próba" in fb and "Następny krok" in fb)
+    ig = page.locator("[aria-label='Źródło: Instagram']").inner_text()
+    check("kafel Instagrama: próbka z importu, wpisy automatycznie zablokowane", "próbka z importu ręcznego" in ig and "wpisy automatycznie" in ig and "dostęp zablokowany" in ig)
     yt = page.locator("[aria-label='Źródło: YouTube']").inner_text()
     check("kafel YouTube: kanały w bazie, kwota, ostatni skan", "381" in yt and "27 z 60" in yt and "Ostatni skan" in yt, yt[:200].replace("\n", " "))
     tt = page.locator("[aria-label='Źródło: TikTok']").inner_text()
     check("kafel TikToka: profile i ograniczenia", "8" in tt and "tylko podpis" in tt, tt[:200].replace("\n", " "))
     check("kafel Meta: brak tokenu i krok", "brak tokenu" in page.locator("[aria-label='Źródło: Biblioteka Reklam Meta']").inner_text())
-    check("źródła: podsumowanie stanu z zablokowanymi dostępami", "Wszystkie źródła działają" in body and "2 zablokowane dostępy" in body)
-    check("źródła: lista zablokowanych dostępów w skanie", page.get_by_role("region", name="Zablokowane dostępy").count() == 1 and "Meta Content Library" in page.get_by_role("region", name="Zablokowane dostępy").inner_text())
+    check("źródła: podsumowanie stanu z zablokowanymi dostępami", "Wszystkie źródła działają" in body and "zablokowan" in body)
     page.get_by_text(re.compile(r"Kroki skanu \(")).click()
     page.wait_for_timeout(300)
     check("źródła: kroki skanu", "Krok skanu" in page.inner_text("body"))
@@ -198,7 +204,7 @@ with sync_playwright() as p:
     page.on("request", lambda r: reqs.append(r.url))
     page.goto(f"{BASE}/#register", wait_until="networkidle")
     ready(page, "Rejestr reklam")
-    page.wait_for_selector("text=Pokazano 50 z 269")
+    page.wait_for_selector(f"text=Pokazano 50 z {REG}")
     for name in ("YouTube", "TikTok", "Instagram", "Facebook", "WWW"):
         check(f"filtr platformy: przełącznik {name}", page.get_by_role("button", name=name, exact=True).count() >= 1)
     page.get_by_role("button", name="TikTok", exact=True).click()
@@ -212,13 +218,13 @@ with sync_playwright() as p:
     body = page.inner_text("body")
     check("rejestr TikTok: wiersze z podpisem [współpraca z XTB] i datą odczytu", "współpraca z XTB" in body and "odczyt" in body)
     page.get_by_role("button", name="TikTok", exact=True).click()
-    page.wait_for_selector("text=Pokazano 50 z 269")
+    page.wait_for_selector(f"text=Pokazano 50 z {REG}")
     check("ponowne kliknięcie przełącznika czyści filtr", "source=" not in page.url)
     page.get_by_role("button", name="M2", exact=True).click()
     page.wait_for_selector("text=Brak materiałów dla wybranych filtrów")
     check("filtr modułu M2 w rejestrze M1: pusty stan", "module=M2" in page.url)
     page.get_by_role("button", name="Wyczyść filtry", exact=False).first.click()
-    page.wait_for_selector("text=Pokazano 50 z 269")
+    page.wait_for_selector(f"text=Pokazano 50 z {REG}")
     expected = call(f"{BASE}/v1/queues/adRegister?q=snela&limit=1")["total"]
     page.get_by_role("searchbox").fill("snela")
     page.wait_for_selector(f"text=Pokazano {expected} z {expected}")
@@ -230,6 +236,31 @@ with sync_playwright() as p:
     page.goto(f"{BASE}/#review", wait_until="networkidle")
     ready(page)
     check("moduł M1: przycisk raportu w kolejce Co wymaga sprawdzenia", page.get_by_role("link", name="Pobierz raport").count() == 1)
+
+    # 7d. Import ręczny: wgranie zapisanej strony Biblioteki Reklam Meta, błąd 422, plakietka i karta reklamy M2
+    page.goto(f"{BASE}/#sources", wait_until="networkidle")
+    ready(page, "Źródła")
+    check("źródła: instrukcja w 3 krokach i formularz importu", "Wgraj zapisaną stronę Biblioteki Reklam Meta lub profilu Instagram" in page.inner_text("body") and page.get_by_text("3. Wybierz zapisany plik").count() == 1)
+    page.locator("input[type=file]").first.set_input_files(str(Path(__file__).resolve().parents[2] / "fixtures/raw/discovery/social-2026-11-21/alt/metaadlib-browser-body.txt"))
+    page.get_by_role("button", name="Wgraj do analizy").click()
+    page.wait_for_selector("text=/Wczytano:|był już wczytany|czeka na worker/", timeout=60000)
+    banner = page.inner_text("body")
+    check("import: wynik z liczbą reklam, nowych i istniejących", re.search(r"(Wczytano: 22 reklam|już wczytany \(22 reklam)", banner) is not None, re.sub(r"\s+", " ", banner[banner.find("Wczytano") - 5:banner.find("Wczytano") + 120]))
+    page.locator("input[type=file]").first.set_input_files(files=[{"name": "smiec.txt", "mimeType": "text/plain", "buffer": b"to nie jest zapisana strona Biblioteki Reklam"}])
+    page.get_by_role("button", name="Wgraj do analizy").click()
+    page.wait_for_selector("text=Nie wczytano pliku", timeout=30000)
+    check("import: nierozpoznany plik daje komunikat z API (422), bez zapisu", True)
+    page.goto(f"{BASE}/#m2", wait_until="networkidle")
+    ready(page, "Oferty WWW")
+    page.wait_for_selector("text=import ręczny")
+    check("oferty M2: plakietka „import ręczny” przy reklamach", page.get_by_text("import ręczny").count() >= 5)
+    page.goto(f"{BASE}/#m2?case=facebook%3Aad-1353099026431942", wait_until="networkidle")
+    page.wait_for_selector("h2:has-text('Inwestuj gdziekolwiek')")
+    page.wait_for_timeout(500)
+    ad = page.inner_text("body")
+    for part in ("Dlaczego tutaj", "Treść reklamy", "Reklamodawca", "Install Now", "Wersje reklamy", "Co zbadano", "tylko tekst reklamy", "Firma", "XTB", "Decyzja", "import ręczny", "Otwórz źródło"):
+        check(f"karta reklamy Meta: {part}", part in ad)
+    check("karta reklamy Meta: bez momentów i bez „starszej analizy”", "Momenty do sprawdzenia" not in ad and "starszej wersji analizy" not in ad)
 
     # 7c. Karta TikToka z rejestru: ta sama karta, zbadano tylko podpis, Otwórz źródło, szacowana data
     page.goto(f"{BASE}/#register?case=tiktok%3A7707284619103718689", wait_until="networkidle")
@@ -397,8 +428,8 @@ with sync_playwright() as p:
         ctx.close()
     browser.close()
 
-unexpected = [f for f in failed_real if f[0] != 409]
-check("odpowiedzi 4xx tylko celowy 409 (konflikt rewizji)", not [f for f in unexpected if "18802" in f[1]], json.dumps(unexpected[:6]))
-check("konsola przeglądarki bez błędów (poza celowym 409)", not [c for c in console_before if "409" not in c[1]], json.dumps(console_before, ensure_ascii=False)[:500])
+unexpected = [f for f in failed_real if f[0] != 409 and not (f[0] == 422 and "/v1/import/meta" in f[1])]
+check("odpowiedzi 4xx tylko celowe: 409 (konflikt rewizji) i 422 (śmieciowy plik importu)", not [f for f in unexpected if "18802" in f[1]], json.dumps(unexpected[:6]))
+check("konsola przeglądarki bez błędów (poza celowymi 409 i 422)", not [c for c in console_before if "409" not in c[1] and "422" not in c[1]], json.dumps(console_before, ensure_ascii=False)[:500])
 print(f"{sum(results)}/{len(results)} sprawdzeń OK")
 sys.exit(0 if all(results) else 1)

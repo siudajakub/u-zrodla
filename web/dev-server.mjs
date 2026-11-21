@@ -174,6 +174,11 @@ const server = createServer(async (req, res) => {
       const data = await readFile(join(root, "sample/frames", path.slice(11))).catch(() => null);
       return data ? send(res, 200, data, "image/jpeg") : send(res, 404, { detail: "Nie ma takiego kadru." });
     }
+    if (path === "/v1/import/meta" && req.method === "POST") {
+      const body = await readBody(req);
+      if (!body.trim()) return send(res, 422, { detail: "Plik jest pusty." });
+      return send(res, 200, { file: url.searchParams.get("filename"), ads: 22, posts: 0, new: 0, existing: 22, warnings: ["Tryb próbny dev-servera: nic nie zapisano."], alreadyImported: true, scan: { status: "done" } });
+    }
     if (path === "/v1/media" && req.method === "POST") {
       await readBody(req);
       return send(res, 202, { scanId: `upload-${Date.now().toString(16)}` });

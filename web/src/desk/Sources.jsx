@@ -17,6 +17,7 @@ import { Token } from "@astryxdesign/core/Token";
 import { api } from "./api.js";
 import { PLATFORM_LABEL, SCAN_MODE, SCAN_STATUS, SOURCE_STATE, describeDiscovery, fmtDateTime, fmtDay, fmtDayRoman, fmtTime } from "./labels.js";
 import { Chart } from "./charts.jsx";
+import { MetaImport } from "./MetaImport.jsx";
 import { ExternalLink, reachText } from "./parts.jsx";
 import { dataScanOf, lastScanOf } from "./model.js";
 
@@ -109,31 +110,41 @@ function platformTiles(data, sources, counts) {
   const pick = (test) => sources.filter((s) => test(s.key));
   const yt = pick((k) => k === "youtube" || k.startsWith("youtube"));
   const tt = pick((k) => k.startsWith("tiktok"));
-  const ig = pick((k) => k === "instagram");
-  const fb = pick((k) => k === "facebook");
+  const ig = pick((k) => k === "instagram" || k === "instagram-ads");
+  const fb = pick((k) => k === "facebook" || k === "facebook-ads");
   const m2 = pick((k) => k.startsWith("m2:"));
   const m3 = pick((k) => k.startsWith("m3"));
-  const meta = pick((k) => k === "meta_ads" || k === "facebook-ads" || k === "instagram-ads");
+  const meta = pick((k) => k === "meta_ads");
   const sum = (list) => list.reduce((n, s) => n + (s.count || 0), 0);
   const dataScan = dataScanOf(data);
   const lastOk = (list) => list.map((s) => s.lastSuccessAt).filter(Boolean).sort().pop() || null;
-  const organic = (list, name) => {
-    const s = list[0];
-    if (!s) return { id: name.toLowerCase(), title: name, status: "needs_key", state: "brak tokenu", rows: [["Stan", "nie uruchomiono w tym skanie"]], next: "Uruchom skan; bez dostępu platforma pokaże blokadę i następny krok." };
-    const err = errorOf(s);
-    const blocked = s.status === "access_blocked";
+  const PATH_LABEL = { manual_import: "import ręczny", ad_library_api: "API Biblioteki Reklam", organic_posts: "wpisy automatycznie" };
+  const PATH_RANK = { ok: 0, partial: 1, needs_key: 2, access_blocked: 3 };
+  /** Droga z wiersza: `paths[]` z API, a dla starego wiersza jedna droga z samego wiersza. */
+  const pathsOf = (s) => (s.paths?.length ? s.paths : [{ path: s.key.endsWith("-ads") ? "ad_library_api" : "organic_posts", status: s.status, detail: s.lastError?.message || s.error || s.scope || "", nextStep: s.lastError?.nextStep || null, at: s.health?.lastAttemptAt || s.checkedAt, count: s.count }]);
+  const social = (list, title, id) => {
+    const all = list.flatMap((s) => pathsOf(s).map((p) => ({ ...p, rowId: s.key })));
+    const byPath = new Map();
+    for (const p of all) {
+      const cur = byPath.get(p.path);
+      if (!cur || (PATH_RANK[p.status] ?? 9) < (PATH_RANK[cur.status] ?? 9) || (p.derived !== "legacy" && cur.derived === "legacy" && p.status === cur.status)) byPath.set(p.path, p);
+    }
+    const paths = [...byPath.values()].sort((x, y) => (PATH_RANK[x.status] ?? 9) - (PATH_RANK[y.status] ?? 9));
+    const best = paths[0];
+    const working = best && (best.status === "ok" || best.status === "partial");
+    const summary = list.map((s) => s.pathsSummary).filter(Boolean)[0];
+    const total = paths.filter((p) => p.status === "ok" || p.status === "partial").reduce((n, p) => n + (p.count || 0), 0);
     return {
-      id: name.toLowerCase(), title: name, status: s.status,
-      state: blocked ? "dostęp zablokowany" : s.status === "needs_key" ? "brak tokenu" : s.mode === "replay" && s.status === "ok" ? "próbka datowana" : null,
+      id, title, status: !best ? "needs_key" : working ? "ok" : best.status,
+      state: !best ? "nie uruchomiono" : working ? (best.path === "manual_import" ? "próbka z importu ręcznego" : null) : best.status === "access_blocked" ? "dostęp zablokowany" : best.status === "needs_key" ? "brak tokenu" : null,
       rows: [
-        ["Ostatnia próba", fmtDateTime(s.health?.lastAttemptAt || s.checkedAt || s.observedAt)],
-        ["Materiały", s.count != null ? String(s.count) : "0"],
-        ["Zakres", blocked ? "wpisy organiczne niedostępne bez logowania" : s.scope || "—"],
-        ...(blocked && err?.message ? [["Co się stało", err.message.length > 170 ? `${err.message.slice(0, 167)}…` : err.message]] : []),
-        ...(s.accessPath?.name ? [["Właściwa ścieżka", s.accessPath.name]] : []),
+        ...(summary ? [["Podsumowanie", summary]] : []),
+        ["Materiały", String(total)],
+        ["Ostatnia próba", fmtDateTime(paths.map((p) => p.at).filter(Boolean).sort().pop() || null)],
       ],
-      next: err?.nextStep || (blocked ? "Wystąp o dostęp badawczy; do tego czasu wpisy tej platformy dodaje się oznaczonym importem ręcznym." : s.status === "needs_key" ? "Uzupełnij token dostępu." : "Nic do zrobienia."),
-      url: s.url || s.target,
+      paths: paths.map((p) => ({ ...p, label: PATH_LABEL[p.path] || p.path })),
+      next: best?.nextStep || (working ? "Nic do zrobienia." : "Uruchom skan albo wgraj zapisaną stronę poniżej."),
+      url: list[0]?.url || list[0]?.target,
     };
   };
   const ytRow = yt.find((s) => s.key === "youtube");
@@ -163,8 +174,8 @@ function platformTiles(data, sources, counts) {
       next: tt.length ? "Transkrypcje TikToka wymagają osobnego kroku (niedostępne w tej wersji)." : "Uruchom skan, aby odkryć profile z odnośników.",
       url: "https://www.tiktok.com/",
     },
-    organic(ig, "Instagram"),
-    organic(fb, "Facebook"),
+    social(ig, "Instagram", "instagram"),
+    social(fb, "Facebook", "facebook"),
     {
       id: "m2", title: "WWW firm (M2)", status: m2.length ? worst(m2) : "empty", state: m2.length ? null : "brak stron",
       rows: [["Strony", String(m2.length)], ["Zrzuty ofert", String(sum(m2) || counts.offersM2 || 0)], ["Ostatni sukces", lastOk(m2) ? fmtDateTime(lastOk(m2)) : "brak"]],
@@ -184,6 +195,7 @@ function platformTiles(data, sources, counts) {
           ["Zakres", "reklamy firm na Facebooku i Instagramie, zasięg w UE"],
           ["Ostatnia próba", s ? fmtDateTime(s.health?.lastAttemptAt || s.checkedAt || s.observedAt) : "nie uruchomiono w tym skanie"],
           ["Materiały", s ? String(sum(meta)) : "0"],
+          ["Import ręczny", "reklamy z zapisanych stron są w kafelku Facebook i w ofertach M2"],
         ],
         next: err?.nextStep || "Potwierdź tożsamość w Meta, wygeneruj token użytkownika i zapisz go w ~/.config/investwatch/meta.token (kroki: docs/lanes/2026-11-21-fable-k-social.md).",
         url: "https://www.facebook.com/ads/library/",
@@ -207,6 +219,14 @@ function PlatformTile({ t }) {
           {t.rows.map(([k, v]) => <Meta key={k} label={k}>{v}</Meta>)}
           <Meta label="Następny krok">{t.next}</Meta>
         </MetadataList>
+        {t.paths?.length > 0 && (
+          <Table idKey="path" density="compact" verticalAlign="top" data={t.paths} columns={[
+            { key: "p", header: "Droga", width: proportional(2, { minWidth: 90 }), renderCell: (p) => <Text weight="medium">{p.label}</Text> },
+            { key: "s", header: "Stan", width: proportional(2, { minWidth: 90 }), renderCell: (p) => <Text type="supporting">{(SOURCE_STATE[p.status] || [0, p.status])[1]}{p.count ? ` (${p.count})` : ""}</Text> },
+            { key: "d", header: "Szczegół", width: proportional(3, { minWidth: 120 }), renderCell: (p) => <Text type="supporting" color="secondary" maxLines={3}>{p.detail || "—"}</Text> },
+            { key: "n", header: "Następny krok", width: proportional(3, { minWidth: 120 }), renderCell: (p) => <Text type="supporting" color="secondary" maxLines={3}>{p.nextStep || "—"}</Text> },
+          ]} />
+        )}
         {t.url && <ExternalLink url={t.url}>Otwórz źródło ↗</ExternalLink>}
       </VStack>
     </Card>
@@ -291,7 +311,7 @@ function stepRows(detail) {
 
 const STEP_STATE = { done: "zakończony", running: "w toku", queued: "w kolejce", failed: "błąd", skipped: "pominięty" };
 
-export function Sources({ data, busy, scanning, onScan, rev }) {
+export function Sources({ data, busy, scanning, onScan, rev, onRefresh }) {
   const scan = lastScanOf(data);
   const dataScan = dataScanOf(data);
   const sources = withHealth(data);
@@ -336,6 +356,7 @@ export function Sources({ data, busy, scanning, onScan, rev }) {
         <Heading level={2}>Platformy ({tiles.length})</Heading>
         <Grid columns={{ minWidth: 300, max: 3 }} gap={3}>{tiles.map((t) => <PlatformTile key={t.id} t={t} />)}</Grid>
       </VStack>
+      <Card padding={3} data-section="meta-import"><MetaImport onDone={() => [500, 2500, 6000].forEach((ms) => setTimeout(onRefresh, ms))} /></Card>
       <Grid columns={{ minWidth: 340, max: 2 }} gap={3}>
         <Card padding={3}>
           <VStack gap={2}>

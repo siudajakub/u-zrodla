@@ -144,7 +144,7 @@ assert.match(tiktok, /Zbadano tylko podpis/);
 assert.match(tiktok, /data szacowana/);
 assert.match(tiktok, /odtworzeń/);
 const sources = html(desk.sources);
-for (const part of ["Materiały i skierowania w czasie", "Źródła: materiały per platforma", "YouTube", "TikTok", "Instagram", "Facebook", "WWW firm (M2)", "WWW doradców (M3)", "Biblioteka Reklam Meta", "dostęp zablokowany", "Meta Content Library", "Zablokowane dostępy"])
+for (const part of ["Materiały i skierowania w czasie", "Źródła: materiały per platforma", "YouTube", "TikTok", "Instagram", "Facebook", "WWW firm (M2)", "WWW doradców (M3)", "Biblioteka Reklam Meta", "dostęp zablokowany", "Meta Content Library", "import ręczny", "Wgraj zapisaną stronę Biblioteki Reklam Meta lub profilu Instagram", "Zapisz stronę"])
   assert.ok(sources.includes(part), `źródła: ${part}`);
 assert.match(desk.sources, /data-chart="bar"|role="img"/);
 if (desk.legacyDetail) assert.match(html(desk.legacyDetail), /starszej wersji analizy/);

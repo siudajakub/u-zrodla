@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { Banner } from "@astryxdesign/core/Banner";
 import { Button } from "@astryxdesign/core/Button";
+import { Divider } from "@astryxdesign/core/Divider";
 import { FileInput } from "@astryxdesign/core/FileInput";
 import { HStack, VStack } from "@astryxdesign/core/Layout";
 import { Heading, Text } from "@astryxdesign/core/Text";
 import { TextArea } from "@astryxdesign/core/TextArea";
 import { TextInput } from "@astryxdesign/core/TextInput";
 import { api } from "./api.js";
+import { MetaImport } from "./MetaImport.jsx";
 
 export function EvidenceForm({ onDone, onOpenDemo }) {
   const [file, setFile] = useState(null);
@@ -47,6 +49,8 @@ export function EvidenceForm({ onDone, onOpenDemo }) {
         <Button label="Prześlij do analizy" variant="primary" isLoading={busy} onClick={submit} />
         <Button label="Zobacz Demo i własne pliki" variant="ghost" onClick={onOpenDemo} />
       </HStack>
+      <Divider />
+      <MetaImport onDone={onDone} />
     </VStack>
   );
 }

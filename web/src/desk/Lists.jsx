@@ -18,7 +18,7 @@ import { Token } from "@astryxdesign/core/Token";
 import { reportUrl } from "./api.js";
 import { PLATFORMS, activeCount } from "./filters.js";
 import { BANDS, COMPLETE_REASON, DISCLOSURE_ROW, DISCLOSURE_WHERE, MODULES, clock, fmtDay, platformLabel, safeUrl } from "./labels.js";
-import { ExternalLink, Lines, OriginToken, ProofLink, RecalcToken, ReReviewToken, Strength } from "./parts.jsx";
+import { ExternalLink, ImportToken, Lines, OriginToken, ProofLink, RecalcToken, ReReviewToken, Strength } from "./parts.jsx";
 import { hashFor } from "./route.js";
 import { rowReason } from "./model.js";
 
@@ -109,7 +109,8 @@ function When({ c }) {
 }
 
 function incompleteReason(c) {
-  if (c.needsRecalc) return "Starsza wersja analizy: wymaga przeliczenia.";
+  if (c.needsRecalc && c.module === "M1") return "Starsza wersja analizy: wymaga przeliczenia.";
+  if (c.module === "M2" && c.reason) return c.reason;
   return COMPLETE_REASON[c.completeReason] || c.reason || "Brak wystarczającego zakresu do oceny.";
 }
 
@@ -151,7 +152,7 @@ export function CaseList({ items, tab, narrow, selectedId, filters, onOpen, empt
       <VStack gap={0.5}>
         <TitleLink c={c} {...props} active={c.id === selectedId} />
         <Text type="supporting" color="secondary" maxLines={1}>{sub(c)}</Text>
-        <HStack gap={1} wrap="wrap">{c.origin !== "replay" && <OriginToken origin={c.origin} at={c.observedAt} />}<RecalcToken c={c} /><ReReviewToken c={c} /></HStack>
+        <HStack gap={1} wrap="wrap">{c.origin !== "replay" && <OriginToken origin={c.origin} at={c.observedAt} />}<ImportToken c={c} /><RecalcToken c={c} /><ReReviewToken c={c} /></HStack>
       </VStack>
     ) },
     { key: "reason", header: REASON_HEADER[kind], width: proportional(3, { minWidth: 150 }), renderCell: (c) => <Text maxLines={1} type="supporting">{reasonFor(kind, c)}</Text> },
@@ -212,12 +213,13 @@ export function OffersTable({ items, module, filters, onOpen, emptyState }) {
     { key: "page", header: isM2 ? "Strona" : "Oferta", width: proportional(3, { minWidth: 170 }), renderCell: (c) => (
       <VStack gap={0.5}>
         <TitleLink c={c} route={tab} filters={filters} onOpen={onOpen} />
-        {safeUrl(c.url) && <ExternalLink url={c.url}>{new URL(c.url, "http://x/").host}</ExternalLink>}
+        <HStack gap={1} wrap="wrap" vAlign="center">{safeUrl(c.url) && <ExternalLink url={c.url}>{new URL(c.url, "http://x/").host}</ExternalLink>}<ImportToken c={c} /></HStack>
+        {c.reason && <Text type="supporting" color="secondary" maxLines={2}>{c.reason}</Text>}
       </VStack>
     ) },
     { key: "firm", header: isM2 ? "Firma" : "Podmiot", width: proportional(2, { minWidth: 110 }), renderCell: (c) => <Text maxLines={1}>{c.creatorName || "—"}</Text> },
     { key: "strength", header: "Siła", width: pixel(104), renderCell: (c) => <Strength c={c} /> },
-    { key: "state", header: "Stan", width: pixel(150), renderCell: (c) => (c.needsRecalc ? <RecalcToken c={c} /> : <Text type="supporting">{c.route ? ({ refer: "do sprawdzenia", complete: "uzupełnij dane", no_signal: "bez przesłanki", insufficient: "za mało danych" })[c.route] || c.route : "—"}</Text>) },
+    { key: "state", header: "Stan", width: pixel(150), renderCell: (c) => (c.needsRecalc && !c.reason ? <RecalcToken c={c} /> : <Text type="supporting">{c.route ? ({ refer: "do sprawdzenia", complete: "uzupełnij dane", no_signal: "bez przesłanki", insufficient: "za mało danych" })[c.route] || c.route : "—"}</Text>) },
   ];
   return <Table idKey="id" columns={columns} data={items} density="compact" hasHover verticalAlign="top" emptyState={emptyState} />;
 }

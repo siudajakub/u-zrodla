@@ -22,7 +22,7 @@ export function run(exported) {
   const register = rows("adRegister").filter((r) => exported.cases[r.id]);
   const noop = () => {};
   const aq = caseOf("youtube:AqXHkxDzSDI");
-  const legacy = exported.queues.incomplete.find((i) => i.needsRecalc);
+  const legacy = exported.queues.incomplete.find((i) => i.needsRecalc && i.module === "M1");
   return {
     counts: state.counts,
     review: review.map((c) => c.id),
