@@ -1,0 +1,59 @@
+{
+ "captures": 28,
+ "creators": 3,
+ "files": [
+  {
+   "count": 22,
+   "file": "alt/metaadlib-browser-body.txt",
+   "kind": "ad_library",
+   "page": {
+    "interfaceLanguage": "pl",
+    "resultCount": 14000
+   },
+   "savedAt": "2026-11-21T21:04:00+00:00",
+   "sha256": "3e94e87b25c1ea90522cf47df1e77536d155363f98c3234bc9117a0233045291",
+   "status": "ok"
+  },
+  {
+   "account": {
+    "followers": 44764,
+    "fullName": "XTB Polska",
+    "postsCount": 808,
+    "username": "xtb_polska"
+   },
+   "count": 6,
+   "file": "alt/ig-profile-embed.html",
+   "kind": "instagram_profile",
+   "savedAt": "2026-11-21T21:01:51+00:00",
+   "sha256": "dc6b953356e0d21fa108563869df00125c44b8479275ef66832fc09fb07ffccf",
+   "status": "ok"
+  },
+  {
+   "account": {
+    "followers": 29,
+    "fullName": "Eugenio Toro",
+    "postsCount": 0,
+    "username": "etoro"
+   },
+   "count": 0,
+   "file": "alt/ig-profile-embed-etoro.html",
+   "kind": "instagram_profile",
+   "message": "Zapisany plik nie zawiera wpisów (brak danych w zapisanym pliku).",
+   "savedAt": "2026-11-21T21:02:30+00:00",
+   "sha256": "abb9c90528d961bae1c4f4a00262b0106c1a46a9f17acbdee1489141fe9f7754",
+   "status": "empty"
+  },
+  {
+   "count": 0,
+   "file": "alt/ig-profile-embed-trading212_pl.html",
+   "kind": "instagram_profile",
+   "message": "Zapisany plik nie zawiera danych konta ani posta (brak danych w zapisanym pliku).",
+   "savedAt": "2026-11-21T21:02:40+00:00",
+   "sha256": "7a4e38435deb332ac074312014cf0f58b0a1d745f86eb1178e3af9f2690e8d8b",
+   "status": "empty"
+  }
+ ],
+ "importedAt": "2026-11-21T22:10:00+00:00",
+ "parser": "meta-import-1",
+ "sourceDir": "fixtures/raw/discovery/social-2026-11-21"
+}

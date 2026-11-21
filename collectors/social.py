@@ -348,9 +348,7 @@ META_PATH = {
     "alternative": "Graph API: funkcja Page Public Content Access (strony Facebooka) i Instagram oEmbed Read po przeglądzie aplikacji",
     "dsa": "Art. 40 DSA (dostęp badawczy do danych publicznych) jako podstawa wniosku",
 }
-META_NEXT_STEP = ("Wystąpić o dostęp do Meta Content Library (Research Tools Manager) jako instytucja badawcza albo "
-                  "o aplikację Meta z funkcją Page Public Content Access; do czasu decyzji wpisy z tej platformy "
-                  "wprowadza się oznaczonym importem ręcznym.")
+META_NEXT_STEP = "Ad Library API po uzyskaniu tokenu (adapter meta_ads gotowy) / Meta Content Library"
 META_PROBE_FILES = ("probe-1-requests.json", "probe-2-requests.json")
 
 
