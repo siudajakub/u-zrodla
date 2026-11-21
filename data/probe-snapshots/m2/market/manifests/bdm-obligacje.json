@@ -1,0 +1,77 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "bdm-obligacje",
+ "kind": "offer",
+ "url": "https://www.bdm.pl/obligacje",
+ "finalUrl": "https://www.bdm.pl/obligacje",
+ "firm": {
+  "key": "bdm",
+  "brand": "Dom Maklerski BDM",
+  "home": "https://www.bdm.pl/",
+  "registryId": 6884964,
+  "name": "DOM MAKLERSKI BDM S.A.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Domy maklerskie",
+  "entityType": "domestic_investment_firm",
+  "entityLabel": "dom maklerski",
+  "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.bdm.pl/",
+  "anchor": "Obligacje Obligacje",
+  "score": 5,
+  "reasons": [
+   "obligacj"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:08:04.336851+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "1128e3d4eabfeba1b985b5c8260fdd8f137658cac171636beb8237cf6661d47f",
+ "htmlBytes": 67422,
+ "htmlStored": "runtime",
+ "title": "Obligacje - BDM",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "437e77b5d8869bf14426be899d3f66ac7478d9df2be89b478fb9c661fe0bc38d.jpg",
+   "screenshotBeforeConsent": "b7889bbd02e7aafb42a69495f9051be78776fd75fa4f22f0745d4171be574a30.jpg",
+   "dom": "a3875ba43d6992f3c3322155fcd1e952bb15ed07810d2244d64fdd3d742cb900.json.gz",
+   "fullPage": "a90d424c1eb782880c49f55892fed580b19c496a7de54e1bae90dad13a806073.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 2320,
+   "scrollWidth": 1440,
+   "blocks": 422,
+   "requests": 84
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "0ac71710062a98220c3c887771bcc1f430548c90cda35589aad87f0ee463978e.jpg",
+   "screenshotBeforeConsent": "df644e5a58fa375f13f90cf1788603c95bb4c11d3cd6dc69812036286714a126.jpg",
+   "dom": "72c4feb0f91b955044849ef4c00333accf61b590f7d308d0cf621e5763a427c3.json.gz",
+   "fullPage": "f163e124fa49cf4cd5f272d2e92f163f859b617fe97ab396b8d780340628515c.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": null,
+    "overlayAfter": true
+   },
+   "docHeight": 3523,
+   "scrollWidth": 910,
+   "blocks": 422,
+   "requests": 68
+  }
+ ]
+}

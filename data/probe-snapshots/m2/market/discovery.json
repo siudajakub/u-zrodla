@@ -1,0 +1,553 @@
+{
+ "schema": "investwatch-m2-discovery-1",
+ "generatedAt": "2026-11-21T21:01:50.652128+00:00",
+ "userAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "minDelaySec": 3.0,
+ "firms": [
+  {
+   "firm": "xtb",
+   "brand": "XTB",
+   "home": "https://www.xtb.com/pl",
+   "register": {
+    "registryId": 6884980,
+    "name": "XTB S.A.",
+    "unit": null,
+    "category": "Firmy inwestycyjne - Domy maklerskie",
+    "entityType": "domestic_investment_firm",
+    "entityLabel": "dom maklerski",
+    "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+    "checkedAt": "2026-11-21"
+   },
+   "observedAt": "2026-11-21T21:01:01.242887+00:00",
+   "pages": [
+    {
+     "url": "https://www.xtb.com/pl/akcje",
+     "anchor": "Akcje i fundusze ETF - Dowiedz się więcej Dowiedz się więcej",
+     "score": 14,
+     "reasons": [
+      "etf",
+      "akcj",
+      "fundusz"
+     ],
+     "from": "https://www.xtb.com/pl",
+     "kind": "offer"
+    },
+    {
+     "url": "https://www.xtb.com/pl/forex",
+     "anchor": "Forex CFD: USD/PLN, AUD/USD, EUR/GBP",
+     "score": 9,
+     "reasons": [
+      "cfd",
+      "forex"
+     ],
+     "from": "https://www.xtb.com/pl",
+     "kind": "offer"
+    },
+    {
+     "url": "https://www.xtb.com/pl/surowce",
+     "anchor": "Surowce CFD: Złoto, Gaz ziemny, Kawa, Kukurydza",
+     "score": 8,
+     "reasons": [
+      "cfd",
+      "surowc"
+     ],
+     "from": "https://www.xtb.com/pl",
+     "kind": "offer"
+    },
+    {
+     "url": "https://www.xtb.com/pl/edukacja",
+     "anchor": "Artykuły edukacyjne Kompleksowa baza wiedzy",
+     "score": 0,
+     "reasons": [
+      "strona edukacyjna (kontrola)"
+     ],
+     "from": "https://www.xtb.com/pl",
+     "kind": "education"
+    }
+   ],
+   "errors": [],
+   "homeFinal": "https://www.xtb.com/pl",
+   "homeSha256": "59d00e65a8f319d4703741c9c07ac6f7c52a131ff034f2b86d048db0be42b785",
+   "hubs": [],
+   "candidates": 10
+  },
+  {
+   "firm": "bossa",
+   "brand": "DM BOŚ (bossa)",
+   "home": "https://bossa.pl/",
+   "register": {
+    "registryId": 8353437,
+    "name": "DOM MAKLERSKI BANKU OCHRONY ŚRODOWISKA S.A.",
+    "unit": null,
+    "category": "Firmy inwestycyjne - Domy maklerskie",
+    "entityType": "domestic_investment_firm",
+    "entityLabel": "dom maklerski",
+    "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+    "checkedAt": "2026-11-21"
+   },
+   "observedAt": "2026-11-21T21:01:04.665361+00:00",
+   "pages": [
+    {
+     "url": "https://bossa.pl/oferta/akcje-obligacje",
+     "anchor": "Akcje, Obligacje, ETF",
+     "score": 17,
+     "reasons": [
+      "etf",
+      "akcj",
+      "obligacj",
+      "oferta"
+     ],
+     "from": "https://bossa.pl/oferta",
+     "kind": "offer"
+    },
+    {
+     "url": "https://bossa.pl/oferta/kontrakty",
+     "anchor": "Kontrakty i opcje",
+     "score": 8,
+     "reasons": [
+      "opcj",
+      "kontrakt",
+      "oferta"
+     ],
+     "from": "https://bossa.pl/oferta",
+     "kind": "offer"
+    }
+   ],
+   "errors": [],
+   "homeFinal": "https://bossa.pl/",
+   "homeSha256": "9f45439483922e9626c2a278a3b07d39547831f440c39dfe95587fe7319e808a",
+   "hubs": [
+    {
+     "url": "https://bossa.pl/oferta",
+     "sha256": "cf30764bac2cbfd802e98c680053cedfb4357cf4ddf87f458c8093cc4fd353ce"
+    }
+   ],
+   "candidates": 4
+  },
+  {
+   "firm": "bdm",
+   "brand": "Dom Maklerski BDM",
+   "home": "https://www.bdm.pl/",
+   "register": {
+    "registryId": 6884964,
+    "name": "DOM MAKLERSKI BDM S.A.",
+    "unit": null,
+    "category": "Firmy inwestycyjne - Domy maklerskie",
+    "entityType": "domestic_investment_firm",
+    "entityLabel": "dom maklerski",
+    "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+    "checkedAt": "2026-11-21"
+   },
+   "observedAt": "2026-11-21T21:01:10.952211+00:00",
+   "pages": [
+    {
+     "url": "https://www.bdm.pl/obligacje",
+     "anchor": "Obligacje Obligacje",
+     "score": 5,
+     "reasons": [
+      "obligacj"
+     ],
+     "from": "https://www.bdm.pl/",
+     "kind": "offer"
+    },
+    {
+     "url": "https://www.bdm.pl/rachunek-emerytalny",
+     "anchor": "Rachunek emerytalny Rachunek emerytalny",
+     "score": 5,
+     "reasons": [
+      "ike"
+     ],
+     "from": "https://www.bdm.pl/",
+     "kind": "offer"
+    }
+   ],
+   "errors": [],
+   "homeFinal": "https://www.bdm.pl/",
+   "homeSha256": "05ffaf9bc28d8cf8ce400d81c7631c7aa18d69edb85da70c9d866d01f63825d2",
+   "hubs": [],
+   "candidates": 5
+  },
+  {
+   "firm": "noble",
+   "brand": "Noble Securities",
+   "home": "https://noblesecurities.pl/",
+   "register": {
+    "registryId": 6884971,
+    "name": "NOBLE Securities S.A.",
+    "unit": null,
+    "category": "Firmy inwestycyjne - Domy maklerskie",
+    "entityType": "domestic_investment_firm",
+    "entityLabel": "dom maklerski",
+    "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+    "checkedAt": "2026-11-21"
+   },
+   "observedAt": "2026-11-21T21:01:14.366192+00:00",
+   "pages": [
+    {
+     "url": "https://noblesecurities.pl/oferta/best-s-a-obligacje-serii-af4/",
+     "anchor": "Szczegóły Szczegóły",
+     "score": 7,
+     "reasons": [
+      "obligacj",
+      "oferta"
+     ],
+     "from": "https://noblesecurities.pl/",
+     "kind": "offer"
+    },
+    {
+     "url": "https://noblesecurities.pl/klient-indywidualny/rachunek-ike/",
+     "anchor": "Czytaj więcej Czytaj więcej",
+     "score": 5,
+     "reasons": [
+      "ike"
+     ],
+     "from": "https://noblesecurities.pl/",
+     "kind": "offer"
+    }
+   ],
+   "errors": [],
+   "homeFinal": "https://noblesecurities.pl/",
+   "homeSha256": "ac875e35318ff172dbccd9ddcf6370525ba1cfee77561f6c32a4dabe8d149cde",
+   "hubs": [],
+   "candidates": 9
+  },
+  {
+   "firm": "tms",
+   "brand": "OANDA TMS Brokers",
+   "home": "https://www.tms.pl/",
+   "register": {
+    "registryId": 6884972,
+    "name": "OANDA TMS BROKERS S.A.",
+    "unit": null,
+    "category": "Firmy inwestycyjne - Domy maklerskie",
+    "entityType": "domestic_investment_firm",
+    "entityLabel": "dom maklerski",
+    "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+    "checkedAt": "2026-11-21"
+   },
+   "observedAt": "2026-11-21T21:01:17.889549+00:00",
+   "pages": [
+    {
+     "url": "https://www.tms.pl/oferta/kryptowaluty",
+     "anchor": "Kryptowaluty CFD",
+     "score": 15,
+     "reasons": [
+      "cfd",
+      "forex",
+      "kryptowalut",
+      "oferta"
+     ],
+     "from": "https://www.tms.pl/",
+     "kind": "offer"
+    },
+    {
+     "url": "https://www.tms.pl/fundusze-etf",
+     "anchor": "ETF Fundusze CFD",
+     "score": 14,
+     "reasons": [
+      "etf",
+      "fundusz",
+      "cfd"
+     ],
+     "from": "https://www.tms.pl/",
+     "kind": "offer"
+    }
+   ],
+   "errors": [],
+   "homeFinal": "https://www.tms.pl/",
+   "homeSha256": "542081e000008dc084079edd2925de12ac0096b4822316455f88af999a6662fc",
+   "hubs": [],
+   "candidates": 17
+  },
+  {
+   "firm": "pekao",
+   "brand": "Bank Pekao",
+   "home": "https://www.pekao.com.pl/",
+   "register": {
+    "registryId": 7976968,
+    "name": "BANK PEKAO S.A. (BANK POLSKA KASA OPIEKI S.A.) iuro Maklerskie PEKAO",
+    "unit": null,
+    "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+    "entityType": "domestic_bank",
+    "entityLabel": "bank prowadzący działalność maklerską",
+    "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+    "checkedAt": "2026-11-21"
+   },
+   "observedAt": "2026-11-21T21:01:21.078110+00:00",
+   "pages": [
+    {
+     "url": "https://www.pekao.com.pl/obligacje-skarbowe",
+     "anchor": "Obligacje Skarbowe",
+     "score": 5,
+     "reasons": [
+      "obligacj"
+     ],
+     "from": "https://www.pekao.com.pl/biuro-maklerskie/klient-indywidualny.html",
+     "kind": "offer"
+    },
+    {
+     "url": "https://www.pekao.com.pl/biuro-maklerskie/nowy-klient/rachunek-inwestycyjny-w-bm-pekao.html",
+     "anchor": "Sprawdź",
+     "score": 5,
+     "reasons": [
+      "rachun (?:inwest"
+     ],
+     "from": "https://www.pekao.com.pl/biuro-maklerskie/klient-indywidualny.html",
+     "kind": "offer"
+    }
+   ],
+   "errors": [],
+   "homeFinal": "https://www.pekao.com.pl/",
+   "homeSha256": "726ea436331cd8ffdf91258144db0863c1eeec8f1c899480d859cece8c5a00a5",
+   "hubs": [
+    {
+     "url": "https://www.pekao.com.pl/biuro-maklerskie/klient-indywidualny.html",
+     "sha256": "f2a124d8be605cf1299a0b53230909e9c49794766643e4a716ed8a289879ebc8"
+    }
+   ],
+   "candidates": 8
+  },
+  {
+   "firm": "ing",
+   "brand": "ING Bank Śląski",
+   "home": "https://www.ing.pl/",
+   "register": {
+    "registryId": 8387348,
+    "name": "ING BANK ŚLĄSKI S.A.",
+    "unit": "Biuro Maklerskie ING Bank Śląski",
+    "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+    "entityType": "domestic_bank",
+    "entityLabel": "bank prowadzący działalność maklerską",
+    "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+    "checkedAt": "2026-11-21"
+   },
+   "observedAt": "2026-11-21T21:01:27.261278+00:00",
+   "pages": [
+    {
+     "url": "https://www.ing.pl/indywidualni/oferta-emerytalna/ike-funduszowe",
+     "anchor": "IKE Funduszowe",
+     "score": 11,
+     "reasons": [
+      "fundusz",
+      "ike",
+      "oferta"
+     ],
+     "from": "https://www.ing.pl/indywidualni/inwestycje-i-oszczednosci",
+     "kind": "offer"
+    },
+    {
+     "url": "https://www.ing.pl/indywidualni/inwestycje-i-oszczednosci/smart-saver",
+     "anchor": "Smart Saver Gdy płacisz, zaokrąglenie kwoty transakcji lub procent od tej kwoty trafia z Twojego konta osobistego na oprocentowanego Smart Savera.",
+     "score": 8,
+     "reasons": [
+      "akcj",
+      "odsetk"
+     ],
+     "from": "https://www.ing.pl/indywidualni/inwestycje-i-oszczednosci",
+     "kind": "offer"
+    }
+   ],
+   "errors": [],
+   "homeFinal": "https://www.ing.pl/",
+   "homeSha256": "49c870a8a4cb33fe6f574e5eb4b114956fb4544cb164b7687577ab037dddcf98",
+   "hubs": [
+    {
+     "url": "https://www.ing.pl/indywidualni/inwestycje-i-oszczednosci",
+     "sha256": "693f2edd9c1e42e406b6ea9be1726cdcc0c26c7319a198c05828e7f34b9e3b0f"
+    }
+   ],
+   "candidates": 17
+  },
+  {
+   "firm": "millennium",
+   "brand": "Bank Millennium",
+   "home": "https://www.bankmillennium.pl/",
+   "register": {
+    "registryId": 7410389,
+    "name": "BANK MILLENNIUM S.A.",
+    "unit": "Biuro Maklerskie Banku Millennium",
+    "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+    "entityType": "domestic_bank",
+    "entityLabel": "bank prowadzący działalność maklerską",
+    "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+    "checkedAt": "2026-11-21"
+   },
+   "observedAt": "2026-11-21T21:01:33.347410+00:00",
+   "pages": [
+    {
+     "url": "https://www.bankmillennium.pl/klienci-indywidualni/inwestycje/fundusze-inwestycyjne/produkty-oszczednosciowe/indywidualne-konto-emerytalne",
+     "anchor": "więcej Indywidualne Konto Emerytalne Inwestycyjne",
+     "score": 11,
+     "reasons": [
+      "fundusz",
+      "ike",
+      "oferta"
+     ],
+     "from": "https://www.bankmillennium.pl/klienci-indywidualni/oszczednosci-i-inwestycje",
+     "kind": "offer"
+    },
+    {
+     "url": "https://www.bankmillennium.pl/klienci-indywidualni/oszczednosci-i-inwestycje/plan-inwestycyjny-millennium",
+     "anchor": "Więcej",
+     "score": 5,
+     "reasons": [
+      "plan inwest"
+     ],
+     "from": "https://www.bankmillennium.pl/klienci-indywidualni/oszczednosci-i-inwestycje",
+     "kind": "offer"
+    }
+   ],
+   "errors": [],
+   "homeFinal": "https://www.bankmillennium.pl/",
+   "homeSha256": "2364f89624bd56ac84b7ed813b24cea75c3b37181f2bae19c03043517986b017",
+   "hubs": [
+    {
+     "url": "https://www.bankmillennium.pl/klienci-indywidualni/oszczednosci-i-inwestycje",
+     "sha256": "e382dd043dd2cc58040d3373da7e6bee2b91bd2743d3f833afd433f511fd1323"
+    }
+   ],
+   "candidates": 3
+  },
+  {
+   "firm": "lynx",
+   "brand": "LYNX",
+   "home": "https://www.lynxbroker.pl/",
+   "register": {
+    "registryId": 9328617,
+    "name": "LYNX B.V.",
+    "unit": null,
+    "category": "Firmy inwestycyjne - Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP poprzez oddział",
+    "entityType": "foreign_investment_firm_branch",
+    "entityLabel": "oddział zagranicznej firmy inwestycyjnej",
+    "sourceFile": "data/probe-snapshots/knf/knf_oddzialy_zagr_FI.json",
+    "checkedAt": "2026-11-21"
+   },
+   "observedAt": "2026-11-21T21:01:39.537069+00:00",
+   "pages": [
+    {
+     "url": "https://www.lynxbroker.pl/rachunek-inwestycyjny/",
+     "anchor": "Rachunek inwestycyjny",
+     "score": 5,
+     "reasons": [
+      "rachun (?:inwest"
+     ],
+     "from": "https://www.lynxbroker.pl/",
+     "kind": "offer"
+    },
+    {
+     "url": "https://www.lynxbroker.pl/online-broker/cfd-broker/",
+     "anchor": "CFD",
+     "score": 5,
+     "reasons": [
+      "cfd"
+     ],
+     "from": "https://www.lynxbroker.pl/",
+     "kind": "offer"
+    }
+   ],
+   "errors": [],
+   "homeFinal": "https://www.lynxbroker.pl/",
+   "homeSha256": "1b5b066f382e8bbc702a3c704f738cbab1d86b9984231309aa86017530068905",
+   "hubs": [],
+   "candidates": 11
+  },
+  {
+   "firm": "finax",
+   "brand": "Finax",
+   "home": "https://www.finax.eu/pl",
+   "register": {
+    "registryId": 8510435,
+    "name": "Finax, o.c.p., a.s.",
+    "unit": null,
+    "category": "Firmy inwestycyjne - Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP poprzez oddział",
+    "entityType": "foreign_investment_firm_branch",
+    "entityLabel": "oddział zagranicznej firmy inwestycyjnej",
+    "sourceFile": "data/probe-snapshots/knf/knf_oddzialy_zagr_FI.json",
+    "checkedAt": "2026-11-21"
+   },
+   "observedAt": "2026-11-21T21:01:42.886749+00:00",
+   "pages": [
+    {
+     "url": "https://www.finax.eu/pl/produkty/inwestowanie-w-etf",
+     "anchor": "Globalne portfele Zarządzane portfele oparte na globalnych funduszach ETF, z tysiącami akcji i obligacji. arrow_forward",
+     "score": 27,
+     "reasons": [
+      "etf",
+      "akcj",
+      "obligacj",
+      "fundusz",
+      "robo",
+      "oferta",
+      "inwestuj"
+     ],
+     "from": "https://www.finax.eu/pl",
+     "kind": "offer"
+    },
+    {
+     "url": "https://www.finax.eu/pl/produkty/zloty-portfel",
+     "anchor": "Złoty Portfel Polskie akcje i obligacje skarbowe, wzbogacone o największe spółki z USA bez ryzyka walutowego. arrow_forward",
+     "score": 16,
+     "reasons": [
+      "akcj",
+      "obligacj",
+      "robo",
+      "oferta"
+     ],
+     "from": "https://www.finax.eu/pl",
+     "kind": "offer"
+    }
+   ],
+   "errors": [],
+   "homeFinal": "https://www.finax.eu/pl",
+   "homeSha256": "0d9ac8eb1603e6a2b5965075b646bc124366dfe5d5ed7ff835684a90e10187c9",
+   "hubs": [],
+   "candidates": 5
+  },
+  {
+   "firm": "cmc",
+   "brand": "CMC Markets",
+   "home": "https://www.cmcmarkets.com/pl-pl/",
+   "register": {
+    "registryId": 9378948,
+    "name": "CMC Markets Germany GmbH",
+    "unit": null,
+    "category": "Firmy inwestycyjne - Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP poprzez oddział",
+    "entityType": "foreign_investment_firm_branch",
+    "entityLabel": "oddział zagranicznej firmy inwestycyjnej",
+    "sourceFile": "data/probe-snapshots/knf/knf_oddzialy_zagr_FI.json",
+    "checkedAt": "2026-11-21"
+   },
+   "observedAt": "2026-11-21T21:01:47.420360+00:00",
+   "pages": [
+    {
+     "url": "https://www.cmcmarkets.com/pl-pl/akcje",
+     "anchor": "Dowiedz się więcej o kontraktach CFD na akcje",
+     "score": 13,
+     "reasons": [
+      "akcj",
+      "cfd",
+      "kontrakt"
+     ],
+     "from": "https://www.cmcmarkets.com/pl-pl",
+     "kind": "offer"
+    },
+    {
+     "url": "https://www.cmcmarkets.com/pl-pl/kryptowaluty",
+     "anchor": "Kryptowaluty",
+     "score": 8,
+     "reasons": [
+      "forex",
+      "kryptowalut"
+     ],
+     "from": "https://www.cmcmarkets.com/pl-pl",
+     "kind": "offer"
+    }
+   ],
+   "errors": [],
+   "homeFinal": "https://www.cmcmarkets.com/pl-pl",
+   "homeSha256": "46f08821894012606bdd717ae9e2cc451a1b8c42bbe1c438daca9f33f14204b9",
+   "hubs": [],
+   "candidates": 9
+  }
+ ]
+}

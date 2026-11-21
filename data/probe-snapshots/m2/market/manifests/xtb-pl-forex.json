@@ -1,0 +1,78 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "xtb-pl-forex",
+ "kind": "offer",
+ "url": "https://www.xtb.com/pl/forex",
+ "finalUrl": "https://www.xtb.com/pl/forex",
+ "firm": {
+  "key": "xtb",
+  "brand": "XTB",
+  "home": "https://www.xtb.com/pl",
+  "registryId": 6884980,
+  "name": "XTB S.A.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Domy maklerskie",
+  "entityType": "domestic_investment_firm",
+  "entityLabel": "dom maklerski",
+  "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.xtb.com/pl",
+  "anchor": "Forex CFD: USD/PLN, AUD/USD, EUR/GBP",
+  "score": 9,
+  "reasons": [
+   "cfd",
+   "forex"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:05:46.757337+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "2600e32f857c70d4ba5474cd2a8b35f49b7d2c0e6dd0c62d482670e9cdb8ba7b",
+ "htmlBytes": 439759,
+ "htmlStored": "runtime",
+ "title": "Forex CFD – platforma i aplikacja online | XTB",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "9d7328d164e12d52db82e3d5cff6620c3086df7d3cfc6c50f410d148363bf2e2.jpg",
+   "screenshotBeforeConsent": "beddc76659c7ffbb2677643970b6f84c1f52c03ce2a8e3ec2be3c5c6e2d09b40.jpg",
+   "dom": "96eadb519b16bc66ccb6157b18b4a20a258fb287ccd5e933b841fe80cefb3977.json.gz",
+   "fullPage": "1e74709b6eae865dc771e683cd8b5030e65593fd2b3efa931eeb37f5ea9fd0c4.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 10488,
+   "scrollWidth": 1440,
+   "blocks": 801,
+   "requests": 225
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "603dcddb87745872e1373275438f68976bf0a497604865374fee1073f904cddd.jpg",
+   "screenshotBeforeConsent": "433a4e53b73f3a308fa09e136f8159d0ae3a21165cc9d8c7614ff2554f06d0fe.jpg",
+   "dom": "9f6cd56069049de88b7659de743f76a635de524b9be68ea7d0047cec280624c6.json.gz",
+   "fullPage": "cd20fe78198648d94413a2e334c0bbdea487f95bd6faf4b7d20fe8815d7d5768.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 13751,
+   "scrollWidth": 390,
+   "blocks": 795,
+   "requests": 218
+  }
+ ]
+}

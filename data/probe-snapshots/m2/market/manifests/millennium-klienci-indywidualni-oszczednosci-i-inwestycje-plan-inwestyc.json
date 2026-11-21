@@ -1,0 +1,77 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "millennium-klienci-indywidualni-oszczednosci-i-inwestycje-plan-inwestyc",
+ "kind": "offer",
+ "url": "https://www.bankmillennium.pl/klienci-indywidualni/oszczednosci-i-inwestycje/plan-inwestycyjny-millennium",
+ "finalUrl": "https://www.bankmillennium.pl/klienci-indywidualni/oszczednosci-i-inwestycje/plan-inwestycyjny-millennium",
+ "firm": {
+  "key": "millennium",
+  "brand": "Bank Millennium",
+  "home": "https://www.bankmillennium.pl/",
+  "registryId": 7410389,
+  "name": "BANK MILLENNIUM S.A.",
+  "unit": "Biuro Maklerskie Banku Millennium",
+  "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+  "entityType": "domestic_bank",
+  "entityLabel": "bank prowadzący działalność maklerską",
+  "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.bankmillennium.pl/klienci-indywidualni/oszczednosci-i-inwestycje",
+  "anchor": "Więcej",
+  "score": 5,
+  "reasons": [
+   "plan inwest"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:12:06.763502+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "ee988bf743b2bacc81c84257ebdc42cf915bbb4c31f2a9d517a2dbd453eb1c22",
+ "htmlBytes": 133783,
+ "htmlStored": "runtime",
+ "title": "Plan Inwestycyjny Millennium - Bank Millennium",
+ "lang": "pl-PL",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "ba9a03c002f2348210e8c47b3b446fbedc2e0efca3b238826f8eec43cd440709.jpg",
+   "screenshotBeforeConsent": "9f6ec262d54ce5f55f1148595bed8c818427c1c0c397b48d7b874eb63dd53c5d.jpg",
+   "dom": "4c1ee15b224bd20a7da83167276d5a5a44434af2c981aae894ac6513660063dd.json.gz",
+   "fullPage": "5c6e4ba6b6e2403c889d65efce5a75f815d25bc7c309a6f33258f7df95a026e8.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 7064,
+   "scrollWidth": 1440,
+   "blocks": 361,
+   "requests": 66
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "f678eca801527f2b66f72f9636ebb06c0be5e4ea01abd657734b4b4771320d9e.jpg",
+   "screenshotBeforeConsent": "82b97a4f965e7f10496e518bf1d95f6b6bc28128cda4c3b88dd23a91c8f2dfb9.jpg",
+   "dom": "92ba35440d25f36d0189401de7b25cd76cf87415607b1cb67af7d7cde5b331f1.json.gz",
+   "fullPage": "c0b71b4271d16a9262210d048943d5655abc0a239a1b39753a74632a20051b90.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 11199,
+   "scrollWidth": 390,
+   "blocks": 387,
+   "requests": 65
+  }
+ ]
+}

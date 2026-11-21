@@ -1,0 +1,78 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "xtb-pl-surowce",
+ "kind": "offer",
+ "url": "https://www.xtb.com/pl/surowce",
+ "finalUrl": "https://www.xtb.com/pl/surowce",
+ "firm": {
+  "key": "xtb",
+  "brand": "XTB",
+  "home": "https://www.xtb.com/pl",
+  "registryId": 6884980,
+  "name": "XTB S.A.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Domy maklerskie",
+  "entityType": "domestic_investment_firm",
+  "entityLabel": "dom maklerski",
+  "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.xtb.com/pl",
+  "anchor": "Surowce CFD: Złoto, Gaz ziemny, Kawa, Kukurydza",
+  "score": 8,
+  "reasons": [
+   "cfd",
+   "surowc"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:06:24.085887+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "201f981e18ff7b5495a73bf13c868fd18b9a16d4b0991d3790ca5ac1cedc88b2",
+ "htmlBytes": 430963,
+ "htmlStored": "runtime",
+ "title": "Handel surowcami CFD online na platformie XTB | XTB",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "62b016670c7e6a6278f61e0fbedd64fdce4adb438fa0ff58e83b7562bfef99fa.jpg",
+   "screenshotBeforeConsent": "8189947daad23512ddc2e50c05ad8f3af3605ddc584496246e45b484536569d6.jpg",
+   "dom": "ce3cd5027a7fe1af1a281e1409a425868c7e8767ebd96995fcc83628b434e7fa.json.gz",
+   "fullPage": "21d701a7aa26fa91fce5ce5788febe5024ae523836752d0ef984ef56497ebc70.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 10355,
+   "scrollWidth": 1440,
+   "blocks": 794,
+   "requests": 225
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "38bd506803e925e6b35b164f3c0aac53a6952f260b18aa77544b371e6a68573d.jpg",
+   "screenshotBeforeConsent": "777fa1adf30c3609900889e7cec9fc7a99354aff600e9fa4f34d17c9be30cfa0.jpg",
+   "dom": "58d0699e0b9806f84cb6be037645e6ef2b1aa35f5ccf722e90bae95ec2ccecd3.json.gz",
+   "fullPage": "302e790b09ec2d946dcb38f981a8658e3bc1cc434da5fa4145dcf73beeffcee1.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 13495,
+   "scrollWidth": 390,
+   "blocks": 788,
+   "requests": 234
+  }
+ ]
+}

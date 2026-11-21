@@ -1,0 +1,79 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "cmc-pl-pl-akcje",
+ "kind": "offer",
+ "url": "https://www.cmcmarkets.com/pl-pl/akcje",
+ "finalUrl": "https://www.cmcmarkets.com/pl-pl/akcje",
+ "firm": {
+  "key": "cmc",
+  "brand": "CMC Markets",
+  "home": "https://www.cmcmarkets.com/pl-pl/",
+  "registryId": 9378948,
+  "name": "CMC Markets Germany GmbH",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP poprzez oddział",
+  "entityType": "foreign_investment_firm_branch",
+  "entityLabel": "oddział zagranicznej firmy inwestycyjnej",
+  "sourceFile": "data/probe-snapshots/knf/knf_oddzialy_zagr_FI.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.cmcmarkets.com/pl-pl",
+  "anchor": "Dowiedz się więcej o kontraktach CFD na akcje",
+  "score": 13,
+  "reasons": [
+   "akcj",
+   "cfd",
+   "kontrakt"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:20:03.326029+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "db4d667c96be400f89cd0b6a5c62a0a3fc4e3827ebc274f936a30a0f60f73006",
+ "htmlBytes": 809915,
+ "htmlStored": "runtime",
+ "title": "Akcje | Transakcje CFD na akcje | CMC Markets",
+ "lang": "pl-pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "bbb6584e3c78e29f9ea61886c5c43ee6e885f68df2e70f95d904a06e3816bf82.jpg",
+   "screenshotBeforeConsent": "d8b324eecfb1d7761954247706bb47578adb6b475b5d41e9fa4adb12997b3616.jpg",
+   "dom": "dd92489da71d89fe923edc6f4093a2126a8cef39af7de0456a174775ab769562.json.gz",
+   "fullPage": "d5c41c7b6c65e09d027357c4ab1fb6acbbba00356915bf512fd58e761ceb0ba1.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 10425,
+   "scrollWidth": 1440,
+   "blocks": 405,
+   "requests": 316
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "6a0745fb0af340a2bbd5db264a6dc8d6afbc04463de250e7856edf1dca18cf8e.jpg",
+   "screenshotBeforeConsent": "82eaed27afedf2c88b1fe10fc0e9d37c173e4df34c87a926d90c80f33e8713c0.jpg",
+   "dom": "edf056324e7c0e49f0a6f9400e08e149f1f005fed6db71ec0593bff9faf9b254.json.gz",
+   "fullPage": "d795336e5f74c6fc438467ee41806d72e687799d9a4fc70db6e202277c4e79d2.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 17926,
+   "scrollWidth": 390,
+   "blocks": 413,
+   "requests": 293
+  }
+ ]
+}

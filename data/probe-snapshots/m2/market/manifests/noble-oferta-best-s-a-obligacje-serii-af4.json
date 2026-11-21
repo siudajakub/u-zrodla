@@ -1,0 +1,78 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "noble-oferta-best-s-a-obligacje-serii-af4",
+ "kind": "offer",
+ "url": "https://noblesecurities.pl/oferta/best-s-a-obligacje-serii-af4/",
+ "finalUrl": "https://noblesecurities.pl/oferta/best-s-a-obligacje-serii-af4/",
+ "firm": {
+  "key": "noble",
+  "brand": "Noble Securities",
+  "home": "https://noblesecurities.pl/",
+  "registryId": 6884971,
+  "name": "NOBLE Securities S.A.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Domy maklerskie",
+  "entityType": "domestic_investment_firm",
+  "entityLabel": "dom maklerski",
+  "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://noblesecurities.pl/",
+  "anchor": "Szczegóły Szczegóły",
+  "score": 7,
+  "reasons": [
+   "obligacj",
+   "oferta"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:08:49.197956+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "c7da751f01fa1595223773cc44c2b283da7e9f02d16fc1fe300aa239f300b850",
+ "htmlBytes": 133371,
+ "htmlStored": "runtime",
+ "title": "BEST S.A. – obligacje serii AF4 -",
+ "lang": "pl-PL",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "6fd2c2157b90b6525a5ce8b20f6f0cb637eb65e85e31a3b827136ac0a4f7d6ec.jpg",
+   "screenshotBeforeConsent": "d56be702d9a0d7cdc468cbd4a4584f503d802892b86844acd0368f982d50249d.jpg",
+   "dom": "b3ecce7168148a2997521aa79538586a6b1153780217aedd3176fb8d03c07590.json.gz",
+   "fullPage": "51350067987bcadde46db889d129bee8884f6e50e0996297d377110e1888e008.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 8051,
+   "scrollWidth": 1440,
+   "blocks": 229,
+   "requests": 47
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "2f4e46d3a48f7966c75eff364300253570ad659ee3d40bd96b20e611462ee359.jpg",
+   "screenshotBeforeConsent": "abbfce42d1fc06827e9e970b140cfcd4e166a2a0f8a0288e6d01f87abc5e1d84.jpg",
+   "dom": "5d95b66248511c13b83db644720de9bfad985faa8996fef0eec8e103429c0d1b.json.gz",
+   "fullPage": "e2a5525f09fe8deff16b991af30274639dd53dc1b1468a274a7f3bef310c6680.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 9656,
+   "scrollWidth": 390,
+   "blocks": 229,
+   "requests": 46
+  }
+ ]
+}

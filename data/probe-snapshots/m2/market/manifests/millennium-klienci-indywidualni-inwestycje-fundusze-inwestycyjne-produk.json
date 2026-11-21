@@ -1,0 +1,79 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "millennium-klienci-indywidualni-inwestycje-fundusze-inwestycyjne-produk",
+ "kind": "offer",
+ "url": "https://www.bankmillennium.pl/klienci-indywidualni/inwestycje/fundusze-inwestycyjne/produkty-oszczednosciowe/indywidualne-konto-emerytalne",
+ "finalUrl": "https://www.bankmillennium.pl/klienci-indywidualni/inwestycje/fundusze-inwestycyjne/produkty-oszczednosciowe/indywidualne-konto-emerytalne",
+ "firm": {
+  "key": "millennium",
+  "brand": "Bank Millennium",
+  "home": "https://www.bankmillennium.pl/",
+  "registryId": 7410389,
+  "name": "BANK MILLENNIUM S.A.",
+  "unit": "Biuro Maklerskie Banku Millennium",
+  "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+  "entityType": "domestic_bank",
+  "entityLabel": "bank prowadzący działalność maklerską",
+  "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.bankmillennium.pl/klienci-indywidualni/oszczednosci-i-inwestycje",
+  "anchor": "więcej Indywidualne Konto Emerytalne Inwestycyjne",
+  "score": 11,
+  "reasons": [
+   "fundusz",
+   "ike",
+   "oferta"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:11:44.826832+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "42dfca91b85282da28d84b4d7f4294b22ab4c702d999297c8042acddcfcb716d",
+ "htmlBytes": 114833,
+ "htmlStored": "runtime",
+ "title": "Indywidualne Konto Emerytalne - Inwestycje - Bank Millennium",
+ "lang": "pl-PL",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "5b3df610317b7c60ee2c459a1205108583a55422c2555cc9cca9244bfd97ff73.jpg",
+   "screenshotBeforeConsent": "2ddfdd6615b4b847d14587cfb89d8d26496705ed8434f7e10ef36be5c19bd4d6.jpg",
+   "dom": "c96643616c32118b51122a12bc2b6e3708f1f49f3c9eb58af71a9679ddd45960.json.gz",
+   "fullPage": "87caa126badccba75801c454d2df915bf17e273704035bf9c1c4e8aeb5076b3a.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 5810,
+   "scrollWidth": 1440,
+   "blocks": 281,
+   "requests": 58
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "f7ef69f4f952f784129f6ae48cc33e5d793a559ffcb47737762fc7a723673087.jpg",
+   "screenshotBeforeConsent": "c142af65a6f7b5e479832fa67629e5ffd6455c10129442890e14f7e93ea3b923.jpg",
+   "dom": "07e9bdccbc140f91c45f471a588435e6fb2e44bda80de0dde3b16d90ed950915.json.gz",
+   "fullPage": "b76d3270c7bcb0c2b1552405a8263ead73bd9860573066de4b3bc7b570929104.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 9238,
+   "scrollWidth": 390,
+   "blocks": 280,
+   "requests": 58
+  }
+ ]
+}

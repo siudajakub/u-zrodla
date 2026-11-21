@@ -1,0 +1,77 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "xtb-pl-etf",
+ "kind": "archive",
+ "url": "https://www.xtb.com/pl/etf",
+ "finalUrl": "https://www.xtb.com/pl/etf",
+ "firm": {
+  "key": "xtb",
+  "brand": "XTB",
+  "home": "https://www.xtb.com/pl",
+  "registryId": 6884980,
+  "name": "XTB S.A.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Domy maklerskie",
+  "entityType": "domestic_investment_firm",
+  "entityLabel": "dom maklerski",
+  "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "data/probe-snapshots/m2 (TARGETS)",
+  "anchor": null,
+  "score": null,
+  "reasons": [
+   "materiał z wcześniejszego archiwum M2"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:15:02.426834+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "29763c451e34ebdbef3f84ff0ffb5b71664b8795b37749edcd0b7780b0489532",
+ "htmlBytes": 452868,
+ "htmlStored": "runtime",
+ "title": "Fundusze ETF w aplikacji XTB - inwestowanie online | XTB",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "7d6770f934d3f2df88aaeeecf6be6a7b31726462789dedc7aa0b119093e52bfa.jpg",
+   "screenshotBeforeConsent": "22e071d1159b239fc339b636ba434cedb4b2d9f2c65eb394235547945c51add2.jpg",
+   "dom": "d6ba381751ba8d084d56de34808acbf24abb18b6f56f100a759cfd634dbeac52.json.gz",
+   "fullPage": "6580f8490c653cb913f8b2acbb6982b2d777b30ac890eaddb9db78cc197a602a.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 11057,
+   "scrollWidth": 1440,
+   "blocks": 604,
+   "requests": 230
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "dac029b6c64e1cac8e337a4c58b44eb887b4aca41b6f4c72b1c2a7c0eb885894.jpg",
+   "screenshotBeforeConsent": "192bcbc0f7a69432face3e57653bbb6570b839e78e4e54f23ff985f895f727ec.jpg",
+   "dom": "7f2478e22d45e6467884ca8c1b693445ff94837c053f4c454f100c2afa31d71c.json.gz",
+   "fullPage": "8d12cde911772dcdea48077ccad3c37de1c27e1246818a9e09756bbe9af2565c.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "accept",
+    "overlayAfter": false
+   },
+   "docHeight": 15004,
+   "scrollWidth": 390,
+   "blocks": 614,
+   "requests": 225
+  }
+ ]
+}

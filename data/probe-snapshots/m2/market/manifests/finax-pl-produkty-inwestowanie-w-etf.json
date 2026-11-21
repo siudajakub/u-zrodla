@@ -1,0 +1,83 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "finax-pl-produkty-inwestowanie-w-etf",
+ "kind": "offer",
+ "url": "https://www.finax.eu/pl/produkty/inwestowanie-w-etf",
+ "finalUrl": "https://www.finax.eu/pl/produkty/inwestowanie-w-etf",
+ "firm": {
+  "key": "finax",
+  "brand": "Finax",
+  "home": "https://www.finax.eu/pl",
+  "registryId": 8510435,
+  "name": "Finax, o.c.p., a.s.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP poprzez oddział",
+  "entityType": "foreign_investment_firm_branch",
+  "entityLabel": "oddział zagranicznej firmy inwestycyjnej",
+  "sourceFile": "data/probe-snapshots/knf/knf_oddzialy_zagr_FI.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.finax.eu/pl",
+  "anchor": "Globalne portfele Zarządzane portfele oparte na globalnych funduszach ETF, z tysiącami akcji i obligacji. arrow_forward",
+  "score": 27,
+  "reasons": [
+   "etf",
+   "akcj",
+   "obligacj",
+   "fundusz",
+   "robo",
+   "oferta",
+   "inwestuj"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:13:10.054439+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "a817095bf5cadd550d2f992002f5fba31cbf5e6b7c1640f3761c14d841b99407",
+ "htmlBytes": 276664,
+ "htmlStored": "runtime",
+ "title": "Globalne portfele | Finax.eu",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "9f5fa1e769a1a4b4c885eaa277cabe559f8c5e31f3606bf6961b57fe99a40f8c.jpg",
+   "screenshotBeforeConsent": "9f5fa1e769a1a4b4c885eaa277cabe559f8c5e31f3606bf6961b57fe99a40f8c.jpg",
+   "dom": "e6158f64156e03ddc4d1b144ebfde5a3b3a4f40e10dbc41bdf9abfb007da576c.json.gz",
+   "fullPage": "c5b8492d9fa0fd36ef1e128cfbfea35b36ec31ae92a863e4a197705388f5d629.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": null,
+    "overlayAfter": true
+   },
+   "docHeight": 12182,
+   "scrollWidth": 1440,
+   "blocks": 761,
+   "requests": 97
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "bd33d3b606cba078be6f447913800a800a89c4a3a7a701bebe4031142596e53a.jpg",
+   "screenshotBeforeConsent": "bd33d3b606cba078be6f447913800a800a89c4a3a7a701bebe4031142596e53a.jpg",
+   "dom": "33ba170d574b506bd8aa89bf38958ceda66130ab8feb2e2acdec46cdcd2b8307.json.gz",
+   "fullPage": "b56f068c529e89cd02f1ae8634ed5655dacfca1e0aaca33d1b787afbb0c47e8d.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": null,
+    "overlayAfter": true
+   },
+   "docHeight": 15820,
+   "scrollWidth": 390,
+   "blocks": 761,
+   "requests": 97
+  }
+ ]
+}

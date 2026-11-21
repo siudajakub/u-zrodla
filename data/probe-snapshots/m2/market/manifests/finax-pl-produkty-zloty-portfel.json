@@ -1,0 +1,80 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "finax-pl-produkty-zloty-portfel",
+ "kind": "offer",
+ "url": "https://www.finax.eu/pl/produkty/zloty-portfel",
+ "finalUrl": "https://www.finax.eu/pl/produkty/zloty-portfel",
+ "firm": {
+  "key": "finax",
+  "brand": "Finax",
+  "home": "https://www.finax.eu/pl",
+  "registryId": 8510435,
+  "name": "Finax, o.c.p., a.s.",
+  "unit": null,
+  "category": "Firmy inwestycyjne - Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP poprzez oddział",
+  "entityType": "foreign_investment_firm_branch",
+  "entityLabel": "oddział zagranicznej firmy inwestycyjnej",
+  "sourceFile": "data/probe-snapshots/knf/knf_oddzialy_zagr_FI.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.finax.eu/pl",
+  "anchor": "Złoty Portfel Polskie akcje i obligacje skarbowe, wzbogacone o największe spółki z USA bez ryzyka walutowego. arrow_forward",
+  "score": 16,
+  "reasons": [
+   "akcj",
+   "obligacj",
+   "robo",
+   "oferta"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:13:30.788960+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "1256ceca3c227d8d2b3fb74842dcfce9c09a2f47fbddbeb6fdc663edff9c895f",
+ "htmlBytes": 227431,
+ "htmlStored": "runtime",
+ "title": "Złoty Portfel | Finax.eu",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "b40c3d70a70bd9304c0b05a894c349c9d02c0aaa157bde66b4e8517e8333bdc8.jpg",
+   "screenshotBeforeConsent": "b40c3d70a70bd9304c0b05a894c349c9d02c0aaa157bde66b4e8517e8333bdc8.jpg",
+   "dom": "291030a8f00b10740651853f94fab43c1296ffe9addbc89d8a15ee340ac21865.json.gz",
+   "fullPage": "2ca4474ddd51495ad25664d2c441b29548718eabcff1a9d1dea3fa5359622e08.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": null,
+    "overlayAfter": true
+   },
+   "docHeight": 8783,
+   "scrollWidth": 1440,
+   "blocks": 712,
+   "requests": 78
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "bd454cba864f8208f8600e2ff519824f67d40e380f5b777bb9883ba73b454585.jpg",
+   "screenshotBeforeConsent": "bd454cba864f8208f8600e2ff519824f67d40e380f5b777bb9883ba73b454585.jpg",
+   "dom": "0e398b2738653db4a8c18b31d66371b96174e4f0932c5ebec0195b534acfcd62.json.gz",
+   "fullPage": "feaac99c075622550922aa4592239abbf465924ad8388f123c85ad221ba4d8ec.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": null,
+    "overlayAfter": true
+   },
+   "docHeight": 10357,
+   "scrollWidth": 390,
+   "blocks": 712,
+   "requests": 78
+  }
+ ]
+}

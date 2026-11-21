@@ -1,0 +1,78 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "ing-indywidualni-inwestycje-i-oszczednosci-smart-saver",
+ "kind": "offer",
+ "url": "https://www.ing.pl/indywidualni/inwestycje-i-oszczednosci/smart-saver",
+ "finalUrl": "https://www.ing.pl/indywidualni/inwestycje-i-oszczednosci/smart-saver",
+ "firm": {
+  "key": "ing",
+  "brand": "ING Bank Śląski",
+  "home": "https://www.ing.pl/",
+  "registryId": 8387348,
+  "name": "ING BANK ŚLĄSKI S.A.",
+  "unit": "Biuro Maklerskie ING Bank Śląski",
+  "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+  "entityType": "domestic_bank",
+  "entityLabel": "bank prowadzący działalność maklerską",
+  "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.ing.pl/indywidualni/inwestycje-i-oszczednosci",
+  "anchor": "Smart Saver Gdy płacisz, zaokrąglenie kwoty transakcji lub procent od tej kwoty trafia z Twojego konta osobistego na oprocentowanego Smart Savera.",
+  "score": 8,
+  "reasons": [
+   "akcj",
+   "odsetk"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:11:23.801126+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "03114ace6187d50b8c9aa19edc833f521ee876c114282c45b1c8e395b54a4c98",
+ "htmlBytes": 110126,
+ "htmlStored": "runtime",
+ "title": "Smart Saver | ING Bank Śląski",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "0904db4aa3f3d97c6dc15b43a307403735796ae000542842111f84114c7437d9.jpg",
+   "screenshotBeforeConsent": "4fce48eaef22427cb8af4f97155ae73a2351730619c55e9696ed206f5728e162.jpg",
+   "dom": "00b01f4448a774a6c11f5f1f48333816b1c0d0b447830f85d7ac35bc22e9ad16.json.gz",
+   "fullPage": "7c3d567e388e4d8157e300d733fa206e1fea761740811bd72eaa6d74946bb914.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 4914,
+   "scrollWidth": 1440,
+   "blocks": 444,
+   "requests": 116
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "fd10473d4a28fd538366222be424aec61314f795be90189ae1db3f733ae324b3.jpg",
+   "screenshotBeforeConsent": "d973117b56f1cfae8dcc65676a81757028e710cdf1f06a7c96e794cebef467b1.jpg",
+   "dom": "e3d9bd45711e2f45719fe8fb38f1878b4325f58426b3321ef903eaa706a35494.json.gz",
+   "fullPage": "6e975df27d76407b99a9bde3c6f96a21f61ff68f1c5e43986907cb174a48a84e.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 5120,
+   "scrollWidth": 390,
+   "blocks": 444,
+   "requests": 115
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "schema": "investwatch-m2-market-1",
+ "id": "ing-indywidualni-oferta-emerytalna-ike-funduszowe",
+ "kind": "offer",
+ "url": "https://www.ing.pl/indywidualni/oferta-emerytalna/ike-funduszowe",
+ "finalUrl": "https://www.ing.pl/indywidualni/oferta-emerytalna/ike-funduszowe",
+ "firm": {
+  "key": "ing",
+  "brand": "ING Bank Śląski",
+  "home": "https://www.ing.pl/",
+  "registryId": 8387348,
+  "name": "ING BANK ŚLĄSKI S.A.",
+  "unit": "Biuro Maklerskie ING Bank Śląski",
+  "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+  "entityType": "domestic_bank",
+  "entityLabel": "bank prowadzący działalność maklerską",
+  "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+  "checkedAt": "2026-11-21"
+ },
+ "discovery": {
+  "from": "https://www.ing.pl/indywidualni/inwestycje-i-oszczednosci",
+  "anchor": "IKE Funduszowe",
+  "score": 11,
+  "reasons": [
+   "fundusz",
+   "ike",
+   "oferta"
+  ]
+ },
+ "capturedAt": "2026-11-21T21:11:05.891246+00:00",
+ "browser": "Chromium 151.0.7922.34",
+ "userAgent": "Playwright Chromium (domyślny)",
+ "robotsAgent": "InvestWatch-M2/1.0 (prototyp badawczy UKNF hackathon)",
+ "htmlSha256": "7f65f3fef6d21be79e178ae528644847651f2a0862ce5bd80103ab6e0a2b892d",
+ "htmlBytes": 117136,
+ "htmlStored": "runtime",
+ "title": "IKE Funduszowe ING Indywidualne Konto Emerytalne Funduszowe",
+ "lang": "pl",
+ "views": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "height": 900,
+   "httpStatus": 200,
+   "screenshot": "ea181a48101f5f0babb3a78acfef844dd6ee0daa7ee72b15874d30e4a595f798.jpg",
+   "screenshotBeforeConsent": "ae3675c11ba7f2c9ab04ded4d45c5db5fe46957d753771d4c4a53b3425bea56d.jpg",
+   "dom": "355ace451de29f043756c04e54bd0bb76be89bd22d5ad5ffcdac0357193ff601.json.gz",
+   "fullPage": "d096da8e0902af667ccc5c5dc7a86eb303d00f6aed49e4cfee6c6be457b5867d.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 5088,
+   "scrollWidth": 1440,
+   "blocks": 375,
+   "requests": 118
+  },
+  {
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "httpStatus": 200,
+   "screenshot": "ecc39ec2ed7e26b0f58338f952f84b9baca898fc221c456a5252d1e3c9503ccc.jpg",
+   "screenshotBeforeConsent": "5d2ed2937ebdd744518e86d551820df9c5f0eaee8a39ffe1ce78668d215823e3.jpg",
+   "dom": "79a4ef26283ce1f8308f069a7b96da0dbde03d1bfa3b1ebf3a9b11282a19549d.json.gz",
+   "fullPage": "3aa40c62ee010d0ec775102fc772296b91adb1931f6643dbe8e1c6d6756c9c35.jpg",
+   "consent": {
+    "overlayBefore": true,
+    "action": "reject",
+    "overlayAfter": false
+   },
+   "docHeight": 5957,
+   "scrollWidth": 390,
+   "blocks": 376,
+   "requests": 117
+  }
+ ]
+}
