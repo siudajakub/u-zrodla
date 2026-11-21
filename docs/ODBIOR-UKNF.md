@@ -20,13 +20,13 @@ Wymagania pochodzą z [pięciu plików konkursu](zrodla-uknf/README.md), ZIP SHA
 | Status | Liczba |
 |---|---:|
 | zaliczone | 41 |
-| częściowe | 75 |
-| brak | 17 |
+| częściowe | 77 |
+| brak | 15 |
 | blokada dostępu | 0 |
 | poza obowiązkowym zakresem | 4 |
 | **razem** | **137** |
 
-W tym 92 wiersze briefu, 26 wierszy załączników tematów i 19 kryteriów M2. Wszystkie 17 wierszy „brak” jest obowiązkowych lub ma charakter definicji. Wymienia je [sekcja 6](#6-obowiązkowe-wiersze-bez-dowodu). Żaden wiersz nie ma dziś statusu „blokada dostępu”, bo w repo nie zapisano jeszcze odmowy dostępu do FB, IG ani YouTube Data API. Status zmieni się po raporcie K lub B.
+W tym 92 wiersze briefu, 26 wierszy załączników tematów i 19 kryteriów M2. Wszystkie 15 wierszy „brak” jest obowiązkowych lub ma charakter definicji. Wymienia je [sekcja 6](#6-obowiązkowe-wiersze-bez-dowodu). Żaden wiersz nie ma dziś statusu „blokada dostępu”, bo w repo nie zapisano jeszcze odmowy dostępu do FB, IG ani YouTube Data API. Status zmieni się po raporcie K lub B.
 
 ## 1. Brief §1–2: cel, silnik i moduły
 
@@ -40,7 +40,7 @@ W tym 92 wiersze briefu, 26 wierszy załączników tematów i 19 kryteriów M2. 
 | R-§2-04 | Pozyskiwanie danych z TikToka | jw. | wspólne | obowiązkowe | K | częściowe | R2, świeży odczyt K | `collectors/social.py`, `data/probe-snapshots/social/2026-11-21-source-check.json`: 2 profile po 10 podpisów, bez dat i bez odkrywania |
 | R-§2-05 | Inne media społecznościowe z otwartej listy, w tym YouTube i podcasty | s.1 §2: „m.in.” | wspólne | obowiązkowe (lista otwarta) | B, K | częściowe | Y | YouTube Atom dla 2 kanałów z `tools/watch_sources.json`, Apple Podcasts i PeerTube w `collectors/catalogs.py`. Brak wyszukiwania YouTube |
 | R-§2-M1-01 | Wyszukiwanie reklam firm inwestycyjnych zarejestrowanych w PL oraz ich instrumentów i usług, publikowanych przez osoby trzecie, zwłaszcza finfluencerów | s.1 M1: „zamieszczane przez podmioty trzecie lub osoby prywatne (w szczególności finfluencerów)” | M1 | obowiązkowe | B, D | częściowe | Y, Q | „Partnerem odcinka jest XTB” w 2 publikacjach monitorowanego kanału (`data/probe-snapshots/2026-11-21-discovery-check.json`). Nowy twórca z PeerTube nie miał reklamy ([próba](M3-WERYFIKACJA-2026-11-21.md)) |
-| R-§2-M1-02 | Polskojęzyczne reklamy zagranicznych firm działających w PL transgranicznie | s.1 M1: „także polskojęzyczne reklamy zagranicznych firm inwestycyjnych działających w Polsce transgranicznie” | M1 | obowiązkowe | D, B | brak | Y (firma transgraniczna) | Brak przykładu. Kandydaci są tylko w `data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json` |
+| R-§2-M1-02 | Polskojęzyczne reklamy zagranicznych firm działających w PL transgranicznie | s.1 M1: „także polskojęzyczne reklamy zagranicznych firm inwestycyjnych działających w Polsce transgranicznie” | M1 | obowiązkowe | D, B | częściowe | Y (firma transgraniczna) | Dwa polskojęzyczne filmy z replay B, oba oznaczone jako współpraca i oba w rejestrze reklam: Freedom24 (9Fcwo1jlwe4, Freedom Finance Europe Ltd, Cypr) i eToro (O5YmmKadQQw, Etoro (Europe) Ltd, Cypr); typ „zagraniczna firma inwestycyjna, transgranicznie” z `knf_notyfikacje_zagr_FI.json`, kopia z 21.11.2026. Test: `.runtime/venv/bin/python -B -m unittest analysis.test_qualification.EntityTypes analysis.test_qualification.MediaPackage2` (21 XI 2026, zielone). Brak: tylko dwa przykłady, język oceniany heurystycznie, wykaz nie mówi, że oferta jest kierowana do Polski |
 | R-§2-M1-03 | Raport: dane firmy inwestycyjnej | s.1 M1 Rezultat: „dane firmy inwestycyjnej” | M1 | obowiązkowe | D, H | częściowe | Y, U | Marka pochodzi z cytatu. Dowody nie pokazują powiązania reklamy M1 z wpisem rejestru KNF |
 | R-§2-M1-04 | Raport: dane podmiotu reklamującego | „dane podmiotu reklamującego” | M1 | obowiązkowe | D, H | częściowe | Y, U | ID kanału, handle i autor ze źródła (`tools/watch_sources.json`, `fixtures/raw/discovery/2026-11-21.json`) |
 | R-§2-M1-05 | Raport: treść reklamy | „treść reklamy” | M1 | obowiązkowe | D, C | częściowe | Y, Q | Dosłowny cytat z opisu. Mowa jest analizowana tylko w klipach syntetycznych (`analysis/media/`). Promocja wyłącznie w mowie lub obrazie na rynku nie była badana |
@@ -142,8 +142,8 @@ Część „Korzyści” (s.3) oraz §9–10 (s.5) to kontekst bez wymagań. Zaw
 | ID | Wymaganie | Źródło i cytat | Zakres | Charakter | Wyk. | Status | Test | Materiał |
 |---|---|---|---|---|---|---|---|---|
 | T1-01 | Firma inwestycyjna: dom maklerski, bank z działalnością maklerską, zagraniczna firma inwestycyjna w PL, osoba prawna z państwa trzeciego | [Temat 1](zrodla-uknf/TEMAT-1.md): „firmie inwestycyjnej - rozumie się przez to dom maklerski, bank prowadzący działalność maklerską…” | M1 | definicja | D | częściowe | Q, Y | Powiązanie z wykazem domów maklerskich w `analysis/engine.py`. Banki i podmioty zagraniczne nie są łączone |
-| T1-02 | Zagraniczna firma inwestycyjna: siedziba lub centrala w innym państwie członkowskim, zezwolenie organu | „zagranicznej firmie inwestycyjnej - rozumie się przez to osobę prawną…” | M1 | definicja | D | brak | Y (firma transgraniczna) | Kod jej nie rozpoznaje |
-| T1-03 | Zagraniczna instytucja kredytowa (art. 4 ust. 1 pkt 1 rozp. 575/2013) | „zagranicznej instytucji kredytowej - rozumie się przez to instytucję kredytową…” | M1 | definicja | D | brak | Y | Kod jej nie rozpoznaje |
+| T1-02 | Zagraniczna firma inwestycyjna: siedziba lub centrala w innym państwie członkowskim, zezwolenie organu | „zagranicznej firmie inwestycyjnej - rozumie się przez to osobę prawną…” | M1 | definicja | D | częściowe | Y (firma transgraniczna) | `firm.entityType`, `homeCountry`, `passporting` (oddział albo transgranicznie) i zdanie dla człowieka z kopii wykazów oddziałów i notyfikacji (`analysis/firm_index.py`, kopie z 21.11.2026). Test: `.runtime/venv/bin/python -B -m unittest analysis.test_qualification.EntityTypes analysis.test_qualification.MediaPackage2` (21 XI 2026, zielone). Brak: rozpoznanie tylko dla 16 marek z indeksu; nazwa spoza indeksu zostaje „nieustalona” |
+| T1-03 | Zagraniczna instytucja kredytowa (art. 4 ust. 1 pkt 1 rozp. 575/2013) | „zagranicznej instytucji kredytowej - rozumie się przez to instytucję kredytową…” | M1 | definicja | D | brak | Y | Typ `foreign_credit_institution` istnieje w modelu, ale w repo nie ma kopii wykazu zagranicznych instytucji kredytowych. Saxo Bank (_aqCM37gK1U, jawne „#PłatnaWspółpraca”) nie występuje w żadnej z czterech przejrzanych kopii (domy maklerskie, banki prowadzące działalność maklerską, oddziały, notyfikacje; 21.11.2026), więc zostaje „nieustalony”, a film trafia do rejestru reklam z adnotacją. Test: `analysis.test_qualification.MediaPackage2.test_saxo_bank_is_not_guessed_and_is_in_the_ad_register` |
 | T1-04 | Źródło: Rejestr Firm Inwestycyjnych, czyli wykaz firm i agentów | „Rejestr Firm Inwestycyjnych” i URL KNF | M1 | obowiązkowe (wskazane źródło) | D, F | częściowe | R1 | `data/probe-snapshots/knf/knf_rejestr_FI.json`, `knf_agenci_prawne.json` (21 XI). Agentów użyto w FinanceWell |
 | T1-05 | Źródło: banki prowadzące działalność maklerską | „Banki prowadzące działalność maklerską” i URL | M1 | obowiązkowe (wskazane źródło) | D | częściowe | Y | `data/probe-snapshots/knf/knf_banki_maklerskie.json` jako kopia, kod jej nie używa |
 | T1-06 | Źródło: domy maklerskie | „Domy maklerskie” i URL | M1 | obowiązkowe (wskazane źródło) | D | zaliczone | `python3 tools/check_plan_evidence.py` | `data/probe-snapshots/knf/knf_domy_maklerskie.json`, test rejestru w `analysis/test_engine.py` |
@@ -202,11 +202,10 @@ Stan na rzeczywistych ujęciach otrzymasz poleceniem `staged_captures('replay', 
 |---|---|
 | R-§2-02 | Brak kolektora i próbki z Facebooka |
 | R-§2-03 | Brak kolektora i próbki z Instagrama |
-| R-§2-M1-02 | Brak polskojęzycznej reklamy zagranicznej firmy działającej transgranicznie |
 | R-§2-M2-02 | Brak materiału polskiego oddziału firmy zagranicznej |
 | R-§3.1-05 | Stały User-Agent, brak rotacji |
 | R-§3.1-06 | Brak obsługi proxy |
-| T1-02, T1-03 | Kod nie rozpoznaje zagranicznej firmy inwestycyjnej ani zagranicznej instytucji kredytowej w M1 |
+| T1-03 | Brak kopii wykazu zagranicznych instytucji kredytowych; Saxo Bank nieustalony (zagraniczna firma inwestycyjna rozpoznawana, patrz T1-02) |
 | T2-02, T2-03 | Jak wyżej dla wydawcy M2 |
 | T3-03, T3-04, T3-05 | M3 nie wykrywa czynności równoważnych, rekomendacji „trzymaj” ani formy i inicjatywy rekomendacji |
 | T3-08, T3-09, T3-10 | M3 nie rozpoznaje pochodnych, CFD ani uprawnień do emisji |
