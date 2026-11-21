@@ -66,6 +66,19 @@ Interpretacja:
 6. Błąd `natywne biblioteki maja architekture niezgodna` oznacza zawartość z innej architektury w `.runtime/demo/deps`, `.runtime/semantic/deps` lub `.runtime/asr/vosk`: usuń wskazany katalog i uruchom `sh ops/demo/bootstrap.sh`.
 7. Znane ograniczenie: `analysis/ollama_review.py` nadal ma host i model wpisane na stałe (zgłoszone właścicielom). Pomiar oceny z kroku 3 działa na hoście.
 
+**Krok 5a. Serwisy, Ollama na hoście i szybki start**
+
+- `start.sh` uruchamia `web` (nginx, jedyny port `127.0.0.1:8769`), `api` i `worker`. Dwa ostatnie działają w sieci wewnętrznej bez Internetu. `--live` dokłada `scheduler` i wyjście do sieci dla workera. Opis: [docs/ARCHITEKTURA.md](../../docs/ARCHITEKTURA.md). Obraz `nginx:1.27-alpine` (arm64) pobiera `prepare-darwin.sh` razem z `python:3.12-bookworm`. Ręcznie: `docker pull --platform linux/arm64 nginx:1.27-alpine`.
+- Drugi głos LLM na Macu: Ollama natywnie na hoście, bo Docker Desktop nie daje kontenerom Metal. Serwisu `inference` (profil `llm`) na Macu nie włączaj.
+  ```sh
+  OLLAMA_CONTEXT_LENGTH=4096 ollama serve &          # albo aplikacja + launchctl setenv OLLAMA_CONTEXT_LENGTH 4096
+  ollama pull ministral-3:8b-instruct-2512-q4_K_M    # model z pomiaru (docs/lanes/2026-11-21-fable-ai-inferencja.md)
+  OLLAMA_HOST=host.docker.internal:11434 INVESTWATCH_LLM=1 INVESTWATCH_MODEL_ANNOTATE=1 \
+    INVESTWATCH_LLM_MODEL=ministral-3:8b-instruct-2512-q4_K_M sh ops/demo/start.sh
+  ```
+  Gdy `OLLAMA_HOST` wskazuje `host.docker.internal`, `start.sh` dokłada nakładkę `ops/compose/egress.yaml`, czyli wyjście sieciowe i `host-gateway` tylko dla workera. Bez Ollamy karta pokazuje status `unavailable`, a reszta działa.
+- Szybki start pokazu: na devboxie po `GOTOWE` uruchom `sh ops/demo/pack-state.sh`. Skopiuj `.runtime/dist/investwatch-state-2026-11-21.tar.gz` i `.sha256` do katalogu projektu na Macu i uruchom `sh ops/demo/start.sh --reset`. Przy zgodnym odcisku kodu (ta sama zawartość `api/ analysis/ collectors/ fixtures/ data/probe-snapshots/`) stan rozpakowuje się w ok. 30 s zamiast kilku–kilkunastu minut analizy. Przy niezgodnym skrypt ostrzega i liczy od zera. Archiwum działa też z `start-local.sh`.
+
 **Krok 5b. Wariant awaryjny bez Dockera**
 
 Gdy Compose na Macu zawiedzie: `sh ops/demo/start-local.sh`. Wymaga Pythona 3.12 (`brew install python@3.12`). Tworzy `.runtime/venv-local`, instaluje `api/requirements.lock` (sieć tylko przy pierwszym razie), uruchamia `uvicorn` i `api.worker` jako procesy hosta na tym samym porcie (`INVESTWATCH_PORT`, domyślnie 8769), czyta tę samą paczkę mediów i drukuje to samo `GOTOWE ... review=4`. Stan: `.runtime/local/state`, logi: `.runtime/local/*.log`. Zatrzymanie: `sh ops/demo/start-local.sh --stop`. Nie uruchamiaj obu wariantów na tym samym porcie. Różnice: brak Vosk i FFmpeg (upload nagrania nie działa), E5 działa po `pip install` pakietów z `analysis/semantic-requirements.txt` (skrypt próbuje to zrobić). W trybie `--live` instaluje też `yt-dlp` i `youtube-transcript-api` (`ops/demo/live-requirements.txt`).
