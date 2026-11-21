@@ -30,7 +30,7 @@ Baza 491094d, główny checkout, rozłączne pliki, bez commitów. Model i wysi�
 - Karta skierowania zawiera krótkie wypunktowane uzasadnienie i momenty filmu ze znacznikami czasu.
 - Reasoning agentów domyślnie medium. Modele do oceny mają dać się hostować lokalnie.
 
-ASTRA ustala cel i kryteria odbioru, uzgadnia wspólne kontrakty, scala sprawdzony stan roboczy i przekazuje J wyniki. Każdy wykonawca rozwija i testuje swój zakres w osobnym worktree. J podejmuje decyzje produktowe i zatwierdza zgłoszenie. [Cele i kolejność prac](docs/PLAN-REALIZACJI.md)
+ASTRA ustala cel i kryteria odbioru, uzgadnia wspólne kontrakty, scala sprawdzony stan roboczy i przekazuje J wyniki. Każdy wykonawca rozwija i testuje swój zakres w osobnym worktree. J podejmuje decyzje produktowe i zatwierdza zgłoszenie. [Cele i kolejność prac](docs/archiwum/PLAN-REALIZACJI.md)
 
 | Linia i wykonawca | Model i reasoning | Odpowiedzialność | Kontrprzykład na tym samym materiale |
 |---|---|---|---|
@@ -53,4 +53,4 @@ PAUSED w tabeli rekrutacyjnej chroni zajęte linie przed ponownym przydziałem p
 
 ## Odbiór roboczy
 
-Zakresy M2, M3 i pulpitu przeniesiono do roboczej integracji. SOL i TERRA zakończyli dwie niezależne oceny. Trzy czyste starty offline przeszły na odcisku b572eda8. Formalna bramka gałęzi zakłada zatwierdzony commit. [Linia M2](docs/lanes/2026-11-21-zip-m2-capture.md) · [Linia M3](docs/lanes/2026-11-21-zip-m3-review.md) · [Pulpit i dowody](docs/DEMO-ODBIOR.md) · [Panel](docs/JUDGING.md)
+Zakresy M2, M3 i pulpitu przeniesiono do roboczej integracji. SOL i TERRA zakończyli dwie niezależne oceny. Trzy czyste starty offline przeszły na odcisku b572eda8. Formalna bramka gałęzi zakłada zatwierdzony commit. [Linia M2](docs/lanes/2026-11-21-zip-m2-capture.md) · [Linia M3](docs/lanes/2026-11-21-zip-m3-review.md) · [Pulpit i dowody](docs/archiwum/DEMO-ODBIOR.md) · [Panel](docs/archiwum/JUDGING.md)

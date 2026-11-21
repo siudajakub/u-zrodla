@@ -1,8 +1,8 @@
 # Co rozwijamy po ponownym odczycie briefu
 
-W sesji Claude obowiązuje [plan Fable z priorytetem YouTube](fable/REALIZACJA.md). Poniżej zachowano stan poprzedniej fali.
+W sesji Claude obowiązuje [plan Fable z priorytetem YouTube](../fable/REALIZACJA.md). Poniżej zachowano stan poprzedniej fali.
 
-**Pierwszeństwo ma automatyczna flaga z dowodem dostępnym po kliknięciu.** Użytkownik nie musi znać URL publikacji, przepisywać fragmentów ani ręcznie klasyfikować reklam, żeby dostać kolejkę. O tym, czy system osiąga cel, decyduje droga od źródła do sprawdzalnego wyniku. [Zakres konkursowy](zrodla-uknf/BRIEF.md) · [Stan testów i luki](ODBIOR-UKNF.md)
+**Pierwszeństwo ma automatyczna flaga z dowodem dostępnym po kliknięciu.** Użytkownik nie musi znać URL publikacji, przepisywać fragmentów ani ręcznie klasyfikować reklam, żeby dostać kolejkę. O tym, czy system osiąga cel, decyduje droga od źródła do sprawdzalnego wyniku. [Zakres konkursowy](../zrodla-uknf/BRIEF.md) · [Stan testów i luki](../ODBIOR-UKNF.md)
 
 | Kolejność | Pion do rozwinięcia | Po czym poznamy, że działa |
 |---|---|---|
@@ -18,6 +18,6 @@ Pierwszą minutę przeznaczamy na jedną rzeczywistą reklamę i jeden wynik, kt
 
 ## Co pochodzi od zespołu
 
-Dwuminutowy pokaz, trzy rozmiary 1440/768/390, koszt błędu 2:1, Vosk, E5, SQLite, Huey i Astryx to nasze ustalenia. UKNF wymaga m.in. kolejki open source, SQL, lokalnego AI, filtrowania, progów oraz testowalnego demo. Brief podaje przykłady bibliotek i modeli. Nie ustanawia konkretnej architektury SQL, wag poszczególnych 19 kontroli, granicy liczby pikseli ani wymogu zdobycia 90/100. W dotychczasowym planie utożsamiono oszczędność na opłatach z twierdzeniem o zysku, przeceniono wynik przypisany do podobnej nazwy firmy i przeniesiono etykietowanie przez J do bieżącej pracy. Wróciliśmy do kryteriów z dokumentów. [Kryteria M2](zrodla-uknf/KRYTERIA-M2.md) · [Temat 3](zrodla-uknf/TEMAT-3.md)
+Dwuminutowy pokaz, trzy rozmiary 1440/768/390, koszt błędu 2:1, Vosk, E5, SQLite, Huey i Astryx to nasze ustalenia. UKNF wymaga m.in. kolejki open source, SQL, lokalnego AI, filtrowania, progów oraz testowalnego demo. Brief podaje przykłady bibliotek i modeli. Nie ustanawia konkretnej architektury SQL, wag poszczególnych 19 kontroli, granicy liczby pikseli ani wymogu zdobycia 90/100. W dotychczasowym planie utożsamiono oszczędność na opłatach z twierdzeniem o zysku, przeceniono wynik przypisany do podobnej nazwy firmy i przeniesiono etykietowanie przez J do bieżącej pracy. Wróciliśmy do kryteriów z dokumentów. [Kryteria M2](../zrodla-uknf/KRYTERIA-M2.md) · [Temat 3](../zrodla-uknf/TEMAT-3.md)
 
-Przed skalowaniem potrzebne są niezależna próba jakości, pomiar kolejki przy kilku procesach, odtworzenie pełnej kopii danych z załącznikami, zasady retencji, tożsamość operatorów i uprawnienia. Te prace mają znaczenie dla pilotażu. Ocena MVP uwzględnia rzeczywiście przeprowadzone próby. [Wcześniejsze warianty i pełny plan techniczny](archiwum/kontekst-przed-rewizja-uknf.tar.gz)
+Przed skalowaniem potrzebne są niezależna próba jakości, pomiar kolejki przy kilku procesach, odtworzenie pełnej kopii danych z załącznikami, zasady retencji, tożsamość operatorów i uprawnienia. Te prace mają znaczenie dla pilotażu. Ocena MVP uwzględnia rzeczywiście przeprowadzone próby. [Wcześniejsze warianty i pełny plan techniczny](kontekst-przed-rewizja-uknf.tar.gz)

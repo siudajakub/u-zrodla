@@ -7,7 +7,7 @@ Opis stanu z 21 XI 2026. Dotyczy drugiej rundy prac, prowadzonej w Claude Code. 
 | Rola | Kto | Co robi | Czego nie robi |
 |---|---|---|---|
 | Właściciel produktu | J (człowiek) | Podejmuje decyzje produktowe (np. jawna współpraca trafia do rejestru, a nie do alarmu), zatwierdza koszty i zgłoszenie | Nie etykietuje materiałów ([protokół §3](../fixtures/validation/PROTOKOL.md)) |
-| Orkiestrator | Fable (sesja Claude Code) | Rozdziela zakresy, uzgadnia kontrakty, sam powtarza testy przy odbiorze, scala, prowadzi rejestr kosztów | Nie implementuje. Implementację, testy i ocenę zleca agentom Opus i Sonnet ([START_PROMPT](../START_PROMPT.md)) |
+| Orkiestrator | Fable (sesja Claude Code) | Rozdziela zakresy, uzgadnia kontrakty, sam powtarza testy przy odbiorze, scala, prowadzi rejestr kosztów | Nie implementuje. Implementację, testy i ocenę zleca agentom Opus i Sonnet ([START_PROMPT](fable/START_PROMPT.md)) |
 | Wykonawcy | Agenci A–N, po jednym na linię | Piszą w wyłącznym zakresie plików, oddają rekord linii z poleceniem testu, wynikiem, jednym przypadkiem błędu i ograniczeniami | Nie dotykają cudzych plików. Jedynym właścicielem `api/` i schematu jest H |
 | Oceniający i sędziowie | Świeże agenty bez dostępu do wyników | Etykietują na ślepo, oceniają wersję według §8 briefu, próbują obalić flagę | Nie widzą predykcji ani ocen drugiego sędziego |
 

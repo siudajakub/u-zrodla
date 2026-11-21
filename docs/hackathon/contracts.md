@@ -1,6 +1,6 @@
 # Kontrakty pierwszej integracji
 
-Kontrakty do implementacji zatwierdza kapitan. Przykłady wyznaczają próby akceptacyjne. Stan lokalnego kolektora opisuje [monitoring](../MONITORING.md), definicje wariantów i formatów błędów rozwija [plan](../PLAN-REALIZACJI.md).
+Kontrakty do implementacji zatwierdza kapitan. Przykłady wyznaczają próby akceptacyjne. Stan lokalnego kolektora opisuje [monitoring](../MONITORING.md), definicje wariantów i formatów błędów rozwija [plan](../archiwum/PLAN-REALIZACJI.md).
 
 | Właściciel → odbiorca | Wejście i sukces | Awaria i zachowanie odbiorcy |
 |---|---|---|

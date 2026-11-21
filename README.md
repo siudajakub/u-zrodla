@@ -19,3 +19,5 @@ Jedna komenda przygotowuje stanowisko (pierwszy raz z siecią), uruchamia serwis
 [Zakres UKNF i pięć plików źródłowych](docs/zrodla-uknf/README.md) · [Co działa i z jakimi ograniczeniami](docs/ODBIOR-UKNF.md) · [Scenariusz pokazu](docs/hackathon/demo.md) · [Prezentacja PDF](presentation/InvestWatch.pdf)
 
 Test porównawczy oceny pojedynczej reklamy przez OpenRouter i lokalnie na Apple Silicon opisuje [instrukcja OpenRouter / Mac M3](docs/fable/OPENROUTER-M3.md).
+
+Mapa repozytorium: [docs/README.md](docs/README.md)

@@ -46,7 +46,7 @@ Stan źródeł jest nierówny. Plik esma_mif_passport_to_PL.json zawiera 26 wpis
 
 ## Stan aplikacji po integracji
 
-Od wieczornej implementacji worker Compose sam uruchamia wyszukiwanie po polskich tematach w Apple Podcasts i PeerTube. Zachowuje odkrytych twórców oraz sprawdza kolejne odcinki RSS również po wypadnięciu z wyników wyszukiwania. Dodatkowa fraza zmienia się w czterogodzinnych oknach. Powrót do znanego twórcy i pierwsze odkrycie mają osobne liczniki. Proces na żywo może odsłuchać początek jednej wybranej audycji na skan. Aktywacja ścieżki zależy od dozwolonego źródła, dostępu do publicznego audio i zainstalowania modeli. Zakres pomiaru jest widoczny w karcie. Pozyskanie materiałów z prywatnego konta i systematyczne pokrycie wszystkich polskich twórców pozostają poza zakresem. [Odbiór demonstracji](DEMO-ODBIOR.md)
+Od wieczornej implementacji worker Compose sam uruchamia wyszukiwanie po polskich tematach w Apple Podcasts i PeerTube. Zachowuje odkrytych twórców oraz sprawdza kolejne odcinki RSS również po wypadnięciu z wyników wyszukiwania. Dodatkowa fraza zmienia się w czterogodzinnych oknach. Powrót do znanego twórcy i pierwsze odkrycie mają osobne liczniki. Proces na żywo może odsłuchać początek jednej wybranej audycji na skan. Aktywacja ścieżki zależy od dozwolonego źródła, dostępu do publicznego audio i zainstalowania modeli. Zakres pomiaru jest widoczny w karcie. Pozyskanie materiałów z prywatnego konta i systematyczne pokrycie wszystkich polskich twórców pozostają poza zakresem. [Odbiór demonstracji](archiwum/DEMO-ODBIOR.md)
 
 ## Oszczędne budowanie bazy kanałów YouTube
 

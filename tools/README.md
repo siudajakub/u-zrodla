@@ -7,8 +7,8 @@ Skrypty pomocnicze poza produktem. Wszystkie testy z tego katalogu: `python3 -B 
 | Plik | Do czego | Kto woła | Test |
 |---|---|---|---|
 | `check_agent_docs.py` | Sprawdza zestaw plików kontekstu, budżet `AGENTS.md`, tabelę `TEAM_BOARD.md`; `--sync` odtwarza `CLAUDE.md` z `AGENTS.md` | [AGENTS.md](../AGENTS.md), `hack_ready.sh` | `test_agent_context.py` |
-| `check_plan_evidence.py` | Weryfikuje sumy SHA-256 i komplet plików w [data/probe-snapshots](../data/probe-snapshots/) | [AGENTS.md](../AGENTS.md), [docs/ODBIOR-UKNF.md](../docs/ODBIOR-UKNF.md) | `test_plan_evidence.py` |
-| `eval_validation.py` | Liczy trafność kolejki według zamrożonego [protokołu](../fixtures/validation/PROTOKOL.md) (etykiety JSONL + predykcje) | `api/calibration_q2.py`, [fixtures/validation](../fixtures/validation/) | `test_eval_validation.py` |
+| `check_plan_evidence.py` | Weryfikuje sumy SHA-256 i komplet plików w [data/probe-snapshots](../data/probe-snapshots) | [AGENTS.md](../AGENTS.md), [docs/ODBIOR-UKNF.md](../docs/ODBIOR-UKNF.md) | `test_plan_evidence.py` |
+| `eval_validation.py` | Liczy trafność kolejki według zamrożonego [protokołu](../fixtures/validation/PROTOKOL.md) (etykiety JSONL + predykcje) | `api/calibration_q2.py`, [fixtures/validation](../fixtures/validation) | `test_eval_validation.py` |
 
 ## Linie hackathonu
 

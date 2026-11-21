@@ -2,7 +2,7 @@
 
 # UKNF #InvestWatch
 
-InvestWatch automatycznie odkrywa i flaguje materiały z polskiego rynku. Źródło wymagań to [ZIP UKNF i pięć opracowań](docs/zrodla-uknf/README.md). [Cel i wyróżnik](HACKATHON.md), [macierz odbioru](docs/ODBIOR-UKNF.md) i [kolejność prac](docs/PLAN-REALIZACJI.md) rozdzielają wymagania, dowody i decyzje zespołu. J odpowiada za decyzje produktowe. Trafność oceniaj na całych kampaniach z udokumentowanymi etykietami i mianownikami. Zachowaj pełny kontekst materiału, niepewność i kontrolę ujemną.
+InvestWatch automatycznie odkrywa i flaguje materiały z polskiego rynku. Źródło wymagań to [ZIP UKNF i pięć opracowań](docs/zrodla-uknf/README.md). [Cel i wyróżnik](HACKATHON.md), [macierz odbioru](docs/ODBIOR-UKNF.md) i [mapa dokumentacji](docs/README.md) rozdzielają wymagania, dowody i decyzje zespołu. J odpowiada za decyzje produktowe. Trafność oceniaj na całych kampaniach z udokumentowanymi etykietami i mianownikami. Zachowaj pełny kontekst materiału, niepewność i kontrolę ujemną.
 
 ## Start sesji
 
@@ -12,13 +12,13 @@ InvestWatch automatycznie odkrywa i flaguje materiały z polskiego rynku. Źród
 
 ## Orkiestracja i odbiór
 
-W sesji Claude Code prowadzonej na polecenie J obowiązuje [prompt Fable](START_PROMPT.md) i [plan Opus/Sonnet](docs/fable/REALIZACJA.md). Fable wyłącznie orkiestruje, a wykonanie i niezależny odbiór deleguje Opus i Sonnet. Poniższy przydział dotyczy sesji Codex.
+W sesji Claude Code prowadzonej na polecenie J obowiązuje [prompt Fable](docs/fable/START_PROMPT.md) i [plan Opus/Sonnet](docs/fable/REALIZACJA.md). Fable wyłącznie orkiestruje, a wykonanie i niezależny odbiór deleguje Opus i Sonnet. Poniższy przydział dotyczy sesji Codex.
 
 ASTRA pełni wyłącznie rolę orkiestratora. Wyznacza cel, rozdziela zakresy, uzgadnia kontrakty, ocenia dowody, koordynuje integrację i komunikuje wynik J. Wykonanie, test i niezależny przegląd deleguje agentom SOL i TERRA. Historyczne nazwy gałęzi opisują poprzednią rundę.
 
 Każdą falę prowadź z agentami. Do rutynowych zmian i odtwarzalnych sprawdzeń wybieraj niższy lub średni reasoning, do diagnoz, niejednoznacznych danych i architektury wysoki. Przy spornej hipotezie niech jeden agent ją sprawdzi, drugi spróbuje obalić na tym samym materiale. Zapisz kontrprzykład, decyzję i test rozstrzygający. Do oceny angażuj osobnych sędziów SOL i TERRA, zanim poznają nawzajem swoje punkty. Dbaj o limit zasobów hosta.
 
-Najpierw odbierz funkcję w normalnej ścieżce użytkownika, następnie upraszczaj wygląd i optymalizuj. Po zmianie UI powtórz ten sam scenariusz na desktopie i telefonie. W web/ obowiązują też lokalne instrukcje Astryx. Rozpoczynając kontynuację przeczytaj [mapę kolejnej fali](docs/KONTYNUACJA.md).
+Najpierw odbierz funkcję w normalnej ścieżce użytkownika, następnie upraszczaj wygląd i optymalizuj. Po zmianie UI powtórz ten sam scenariusz na desktopie i telefonie. W web/ obowiązują też lokalne instrukcje Astryx. Każdy katalog kodu ma własne README z mapą plików i testów. Dokumenty poprzednich rund leżą w [archiwum](docs/archiwum/README.md).
 
 ## Log sesji
 
@@ -37,7 +37,7 @@ Rekord linii przechowuje zakres plików, stan, weryfikację i krok integracji. H
 
 ## Co działa i jak sprawdzać
 
-Działające demo, komendę startową i dwa przypadki do odsłuchania opisują [README](README.md) i [odbiór](docs/DEMO-ODBIOR.md). [Monitoring](docs/MONITORING.md) łączy znane profile z odkrywaniem twórców. Modele i prywatne dane robocze są poza Gitem.
+Działające demo i komendę startową opisuje [README](README.md), pokaz [scenariusz](docs/hackathon/demo.md), a zestawy testów [tests/README.md](tests/README.md). [Monitoring](docs/MONITORING.md) łączy znane profile z odkrywaniem twórców. Modele i prywatne dane robocze są poza Gitem.
 
 ```sh
 python3 tools/check_agent_docs.py

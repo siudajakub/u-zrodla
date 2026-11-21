@@ -2,19 +2,19 @@
 
 ## Bieżące stanowisko
 
-Pokaż drogę od automatycznego wskazania materiału do dosłownego dowodu i zapisanej decyzji. W jasnym podglądzie Astryx wybierz filtr spraw oznaczonych do sprawdzenia. Przy dowodzie otwórz źródło, kontekst, wersję i czas. W M2 linki do zrzutu i DOM odnoszą się do konkretnego pomiaru. W M3 sprawdź cytat oraz zakres uprawnienia na rzeczywistej ofercie DM BOŚ. [Scenariusz](hackathon/demo.md) · [Brief UKNF](zrodla-uknf/BRIEF.md)
+Pokaż drogę od automatycznego wskazania materiału do dosłownego dowodu i zapisanej decyzji. W jasnym podglądzie Astryx wybierz filtr spraw oznaczonych do sprawdzenia. Przy dowodzie otwórz źródło, kontekst, wersję i czas. W M2 linki do zrzutu i DOM odnoszą się do konkretnego pomiaru. W M3 sprawdź cytat oraz zakres uprawnienia na rzeczywistej ofercie DM BOŚ. [Scenariusz](../hackathon/demo.md) · [Brief UKNF](../zrodla-uknf/BRIEF.md)
 
-Próba podglądu w Chromium na odizolowanej bazie przeszła kolejkę, odsłuch 0,33–3,60, decyzję i odczyt historii, odnośniki do dokładnych plików M2, źródła oraz zmianę progu przy 1440 i 390 px. Przełączenie zakładki zachowało czas odtwarzacza i treść uzasadnienia. Próba użyła materiałów z bazowego replay. Wyniki pomiaru z nowszych archiwów przypisuje się do ich własnych odcisków i dat. [Powtórzenie próby](../tests/offline/README.md)
+Próba podglądu w Chromium na odizolowanej bazie przeszła kolejkę, odsłuch 0,33–3,60, decyzję i odczyt historii, odnośniki do dokładnych plików M2, źródła oraz zmianę progu przy 1440 i 390 px. Przełączenie zakładki zachowało czas odtwarzacza i treść uzasadnienia. Próba użyła materiałów z bazowego replay. Wyniki pomiaru z nowszych archiwów przypisuje się do ich własnych odcisków i dat. [Powtórzenie próby](../../tests/offline/README.md)
 
 ### Sprawdzenie wersji z archiwami XTB i BOŚ
 
 Na odizolowanej bazie z 20 sprawami replay oba pulpity przeszły w Chromium scenariusz przy 1440 × 1000 i 390 × 844. Podgląd przeszedł dodatkowo filtr wskazań modelu i pomiarów, rzeczywisty konflikt 409 z zachowaniem szkicu oraz zapis decyzji na sprawie BDM ze znakiem ukośnika w ID.
 
-W kryterium 3 ETF sprawdzono odnośniki przypisane do zapisanych stanów strony. Widok po przewinięciu pokazuje dosłowną wzmiankę o dywidendach oraz oddzielnie zmierzone ostrzeżenie. W telefonie wzmianka zajmuje 100% swojej widocznej powierzchni, a ostrzeżenie pozostaje poza kadrem. Zrzut, DOM i zapisane pomiary odnoszą się do tej samej wersji. W sprawie DM BOŚ odtworzono sugestię modelu E5 z dosłownym kontekstem, źródło oraz pozycję 5 z datowanego wykazu KNF. [Test przeglądarkowy](../tests/offline/README.md)
+W kryterium 3 ETF sprawdzono odnośniki przypisane do zapisanych stanów strony. Widok po przewinięciu pokazuje dosłowną wzmiankę o dywidendach oraz oddzielnie zmierzone ostrzeżenie. W telefonie wzmianka zajmuje 100% swojej widocznej powierzchni, a ostrzeżenie pozostaje poza kadrem. Zrzut, DOM i zapisane pomiary odnoszą się do tej samej wersji. W sprawie DM BOŚ odtworzono sugestię modelu E5 z dosłownym kontekstem, źródło oraz pozycję 5 z datowanego wykazu KNF. [Test przeglądarkowy](../../tests/offline/README.md)
 
 Widok kryterium 3 na [komputerze](pokaz/etf-desktop.png) i [telefonie](pokaz/etf-telefon.png) pokazuje twierdzenie o dywidendach. [Karta M3](pokaz/oferta-m3.png) zawiera sugestię i kontekst oferty BOŚ. Obrazy pochodzą z interaktywnej próby zespołu na wersji interfejsu o skrócie JS 51407984.
 
-Na końcowym odcisku b572eda8 powtórzono oba pulpity na osobnej bazie. Pełna próba Chromium dodatkowo sprawdziła nowy upload WAV, lokalne ASR, odpowiedź firmy, umowę i aneks, 409, HTTP Range 206 oraz odświeżenie. Nie zarejestrowano błędów JavaScript. [Trzy starty Compose offline i odcisk kodu](../tests/offline/proof-zip-2026-11-21.json) · [Oceny sędziów](JUDGING.md)
+Na końcowym odcisku b572eda8 powtórzono oba pulpity na osobnej bazie. Pełna próba Chromium dodatkowo sprawdziła nowy upload WAV, lokalne ASR, odpowiedź firmy, umowę i aneks, 409, HTTP Range 206 oraz odświeżenie. Nie zarejestrowano błędów JavaScript. [Trzy starty Compose offline i odcisk kodu](../../tests/offline/proof-zip-2026-11-21.json) · [Oceny sędziów](JUDGING.md)
 
 ## Środowisko pokazu i łańcuch dostaw · 21 XI 2026 (linia L)
 
@@ -70,6 +70,6 @@ React 18.3.1 korzysta z MIT. Vosk i model PL 0.22 wskazują Apache 2.0. Bazowy m
 
 ### Próba uruchomienia offline
 
-Trzy odrębne projekty Compose dostały puste bazy i wewnętrzną sieć Docker bez wyjścia do internetu. W każdym HTTP zwrócił 17 spraw i 17 sugestii semantycznych. Zmierzono kolejno 4,37 s, 3,69 s i 4,92 s. W trzecim przebiegu po zatrzymaniu workera i przyspieszeniu wygaśnięcia jego dzierżawy drugi właściciel ukończył ten sam skan. Liczba wersji pozostała równa liczbie spraw. Najwyższy zmierzony szczyt pamięci workera to 949,9 MiB. Rewizję próby, odcisk kodu, metodę i wyniki zapisuje [raport](../tests/offline/proof-2026-11-21.json). [Powtórzenie próby](../tests/offline/README.md)
+Trzy odrębne projekty Compose dostały puste bazy i wewnętrzną sieć Docker bez wyjścia do internetu. W każdym HTTP zwrócił 17 spraw i 17 sugestii semantycznych. Zmierzono kolejno 4,37 s, 3,69 s i 4,92 s. W trzecim przebiegu po zatrzymaniu workera i przyspieszeniu wygaśnięcia jego dzierżawy drugi właściciel ukończył ten sam skan. Liczba wersji pozostała równa liczbie spraw. Najwyższy zmierzony szczyt pamięci workera to 949,9 MiB. Rewizję próby, odcisk kodu, metodę i wyniki zapisuje [raport](../../tests/offline/proof-2026-11-21.json). [Powtórzenie próby](../../tests/offline/README.md)
 
 W przebiegu z końcową integracją odsyłaczy kolejka live uzyskała **78 materiałów i jednego nowego kandydata** względem utrwalonego stanu. Raport zawiera stan częściowy m.in. z powodu przekierowań do strony zgody. Baza pulpitu po tym przebiegu miała 93 odrębne sprawy oraz 22 zapamiętane tożsamości źródłowe, w tym kandydatów, wydawców i profile startowe. Liczby te nie są liczbą naruszeń ani oszacowaniem całego rynku.

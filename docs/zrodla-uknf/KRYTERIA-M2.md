@@ -28,7 +28,7 @@ Podstawy prawne podano za tabelą UKNF. „Rozporządzenie” oznacza rozporząd
 
 ## Rozbieżności w planie zespołu
 
-Poniższe ustalenia dotyczą sekcji „Oficjalne 19 kontroli M2” w [planie realizacji](../PLAN-REALIZACJI.md).
+Poniższe ustalenia dotyczą sekcji „Oficjalne 19 kontroli M2” w [planie realizacji](../archiwum/PLAN-REALIZACJI.md).
 
 | ID | Rozbieżność i konsekwencja |
 | --- | --- |

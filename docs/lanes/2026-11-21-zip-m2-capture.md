@@ -24,7 +24,7 @@ Kryterium 3 ma pełną parę i właściwą wersję obrazu oraz DOM. Kryterium 9 
 
 ## Next Step
 
-[Plan funkcji](../PLAN-REALIZACJI.md) i [warunki dalszego odbioru](../ODBIOR-UKNF.md).
+[Plan funkcji](../archiwum/PLAN-REALIZACJI.md) i [warunki dalszego odbioru](../ODBIOR-UKNF.md).
 
 ## Verification
 
@@ -36,4 +36,4 @@ Przy niedostępności źródła operator otwiera datowane odtworzenie. Gdy braku
 
 ## Handoff
 
-Przyjęcie robocze na odcisku b572eda8 po poprawkach z [niezależnego przeglądu](../JUDGING.md). Bramka commitowa pozostaje do wykonania po decyzji J.
+Przyjęcie robocze na odcisku b572eda8 po poprawkach z [niezależnego przeglądu](../archiwum/JUDGING.md). Bramka commitowa pozostaje do wykonania po decyzji J.
