@@ -1,43 +1,61 @@
-// Adres jest stanem widoku: #zakładka?case=ID&module=M1&from=2026-11-01. Odświeżenie i „Wstecz” zachowują filtry.
+// Adres jest stanem widoku: #zakładka?case=ID&state=incomplete&module=M2&from=2026-11-01. Odświeżenie i „Wstecz” zachowują filtry.
+// Cztery zakładki: Do sprawdzenia, Rejestr reklam, Źródła, Kalibracja. Stan i moduł to filtry listy „Do sprawdzenia”.
 import { useCallback, useEffect, useState } from "react";
 import { EMPTY_FILTERS, FILTER_KEYS } from "./filters.js";
 
 export const TABS = [
-  { id: "review", label: "Co wymaga sprawdzenia", queue: "review", mode: "split" },
-  { id: "register", label: "Rejestr reklam M1", queue: "adRegister", mode: "table" },
-  { id: "m2", label: "Oferty WWW M2", queue: "offersM2", mode: "table" },
-  { id: "m3", label: "Oferty M3", queue: "offersM3", mode: "table" },
-  { id: "incomplete", label: "Niepełne dane", queue: "incomplete", mode: "split" },
-  { id: "closed", label: "Zamknięte", queue: "closed", mode: "split" },
+  { id: "review", label: "Do sprawdzenia", mode: "split" },
+  { id: "register", label: "Rejestr reklam", queue: "adRegister", mode: "table" },
   { id: "sources", label: "Źródła", queue: null, mode: "page" },
   { id: "calibration", label: "Kalibracja", queue: null, mode: "page" },
-  { id: "demo", label: "Demo i własne pliki", queue: "demo", mode: "split" },
-  { id: "evidence", label: "Dodaj dowód", queue: null, mode: "page" },
 ];
 export const TAB_BY_ID = Object.fromEntries(TABS.map((t) => [t.id, t]));
+
+/** Stare adresy zakładek → zakładka i filtry (przekierowanie, żeby nie psuć zapisanych linków). */
+export const LEGACY = {
+  m2: { tab: "review", filters: { state: "all", module: "M2" } },
+  m3: { tab: "review", filters: { state: "all", module: "M3" } },
+  incomplete: { tab: "review", filters: { state: "incomplete" } },
+  niepelne: { tab: "review", filters: { state: "incomplete" } },
+  closed: { tab: "review", filters: { state: "closed" } },
+  zamkniete: { tab: "review", filters: { state: "closed" } },
+  demo: { tab: "review", filters: { state: "demo" } },
+  evidence: { tab: "sources", filters: {}, add: true },
+  dodaj: { tab: "sources", filters: {}, add: true },
+};
 
 export function parseHash(hash = location.hash) {
   const raw = hash.replace(/^#\/?/, "");
   const [path, query = ""] = raw.split("?");
-  const tab = TAB_BY_ID[path] ? path : "review";
+  const legacy = LEGACY[path];
+  const tab = legacy ? legacy.tab : TAB_BY_ID[path] ? path : "review";
   const params = new URLSearchParams(query);
-  const filters = { ...EMPTY_FILTERS };
+  const filters = { ...EMPTY_FILTERS, ...(legacy?.filters || {}) };
   for (const key of FILTER_KEYS) if (params.has(key)) filters[key] = params.get(key) || EMPTY_FILTERS[key];
-  return { tab, caseId: params.get("case") || null, filters };
+  return { tab, caseId: params.get("case") || null, filters, add: !!legacy?.add || params.get("add") === "1", legacy: !!legacy };
 }
 
-export function hashFor(tab, { caseId = null, filters = EMPTY_FILTERS } = {}) {
+export function hashFor(tab, { caseId = null, filters = EMPTY_FILTERS, add = false } = {}) {
   const params = new URLSearchParams();
   for (const key of FILTER_KEYS) if (filters[key] && filters[key] !== EMPTY_FILTERS[key]) params.set(key, filters[key]);
   if (caseId) params.set("case", caseId);
+  if (add) params.set("add", "1");
   const query = params.toString();
   return `#${tab}${query ? `?${query}` : ""}`;
 }
 
 export function useRoute() {
-  const [route, setRoute] = useState(() => parseHash());
+  const [route, setRoute] = useState(() => {
+    const first = parseHash();
+    if (first.legacy) history.replaceState(null, "", hashFor(first.tab, first));
+    return first;
+  });
   useEffect(() => {
-    const onChange = () => setRoute(parseHash());
+    const onChange = () => {
+      const next = parseHash();
+      if (next.legacy) history.replaceState(null, "", hashFor(next.tab, next));
+      setRoute(next);
+    };
     window.addEventListener("hashchange", onChange);
     return () => window.removeEventListener("hashchange", onChange);
   }, []);

@@ -7,9 +7,10 @@ import { Link } from "@astryxdesign/core/Link";
 import { Skeleton } from "@astryxdesign/core/Skeleton";
 import { Text } from "@astryxdesign/core/Text";
 import { Token } from "@astryxdesign/core/Token";
-import { BANDS, DISCLOSURE, ORIGINS, clock, moduleName, describeDiscovery, fmtDateTime, fmtDayRoman, fmtNumber, safeUrl } from "./labels.js";
+import { Tooltip } from "@astryxdesign/core/Tooltip";
+import { BANDS, DISCLOSURE, ORIGINS, clock, moduleName, describeDiscovery, fmtDateTime, fmtDayRoman, fmtNumber, safeUrl, strengthLabel } from "./labels.js";
 
-export const SCALE_NOTE = "Siła przesłanki to punkty 0–100 z jawnych składników reguł. To nie jest prawdopodobieństwo naruszenia ani ocena prawna.";
+export const SCALE_NOTE = "Siła to punkty 0–100 z jawnych składników reguł. To nie jest prawdopodobieństwo ani ocena prawna.";
 
 export const originLabel = (origin, at) => (origin === "replay" ? (at ? `odtworzenie skanu z ${fmtDayRoman(at)}` : "odtworzenie skanu") : ORIGINS[origin] || origin);
 
@@ -20,7 +21,7 @@ export function OriginToken({ origin, at }) {
 }
 
 const MODULE_COLOR = { M1: "blue", M2: "purple", M3: "green" };
-/** Plakietka modułu: Finfluencer, Reklama firmy, Doradztwo. */
+/** Plakietka modułu ze słownika: M1 Twórcy, M2 Reklamy firm, M3 Doradztwo. */
 export function ModuleToken({ module }) {
   return module ? <Token size="sm" color={MODULE_COLOR[module] || "gray"} label={moduleName(module)} /> : null;
 }
@@ -42,22 +43,14 @@ export function ExternalLink({ url, children }) {
   return href ? <Link href={href} target="_blank">{children}</Link> : null;
 }
 
-/** Siła sygnału z opisem skali: punkty, nie prawdopodobieństwo. */
+/** Siła w jednej plakietce: „mocna 95”. Brak wyniku: „—”, a powód w podpowiedzi. */
+export const BAND_COLOR = { strong: "red", moderate: "orange", weak: "gray" };
 export function Strength({ c }) {
-  if (!c.score) {
-    return c.legacyScore != null && !c.isV2
-      ? <VStack gap={0.5}><Text weight="semibold">—</Text><Text type="supporting" color="secondary">starsze reguły: {c.legacyScore} pkt</Text></VStack>
-      : <Text color="secondary">—</Text>;
+  if (!c.score || c.score.value == null) {
+    const why = c.score?.notComputableReason || (c.legacyScore != null && !c.isV2 ? `starsze reguły: ${c.legacyScore} pkt` : null);
+    return why ? <Tooltip content={why}><Text color="secondary">—</Text></Tooltip> : <Text color="secondary">—</Text>;
   }
-  if (c.score.value == null) {
-    return <VStack gap={0.5}><Text weight="semibold">—</Text><Text type="supporting" color="secondary" maxLines={2}>{c.score.notComputableReason || "nie do wyliczenia"}</Text></VStack>;
-  }
-  return (
-    <VStack gap={0.5}>
-      <Text weight="semibold">{BANDS[c.score.band] || "bez pasma"}</Text>
-      <Text type="supporting" color="secondary" hasTabularNumbers>{c.score.value} z 100 pkt</Text>
-    </VStack>
-  );
+  return <Token size="sm" color={BAND_COLOR[c.score.band] || "gray"} label={strengthLabel(c.score.band, c.score.value)} />;
 }
 
 /** Pierwszy dowód do pokazania. Wiersz kolejki ma tylko `firstMoment`; pełna sprawa wskazuje moment w mowie (z czasem), potem twierdzenie. */
@@ -90,7 +83,7 @@ export function locatorText(locator) {
   return locator.field === "description" ? "w opisie" : locator.field === "title" ? "w tytule" : `w polu ${locator.field}`;
 }
 
-const CHECKED = { description: "opis", transcript: "mowa", frames: "kadry", platformFlags: "flaga płatnej promocji" };
+const CHECKED = { description: "opis", transcript: "mowa", frames: "kadry", platformFlags: "flaga YouTube" };
 
 /** Typ ujawnienia współpracy: opis / mowa m:ss / flaga płatnej promocji YouTube / kadr, albo brak oznaczenia w zbadanym zakresie. */
 export function disclosureText(c) {
@@ -102,7 +95,7 @@ export function disclosureText(c) {
   }
   if (d.state === "not_found_in_scope") {
     const checked = d.checked.length ? ` (zbadano: ${d.checked.map((m) => CHECKED[m] || m).join(", ")})` : "";
-    return `nie znaleziono w zbadanym zakresie${checked}`;
+    return `brak w zbadanym zakresie${checked}`;
   }
   return DISCLOSURE[d.state] || d.state;
 }
@@ -122,12 +115,12 @@ export function DisclosureProof({ c }) {
 }
 
 export function reachText(reach) {
-  if (!reach) return "Zasięg nieznany";
-  if (reach.hidden) return `Statystyka ukryta przez autora${reach.observedAt ? ` (sprawdzono ${fmtDateTime(reach.observedAt)})` : ""}`;
+  if (!reach) return "brak danych";
+  if (reach.hidden) return "ukryty przez autora";
   const n = fmtNumber(reach.value);
-  if (n == null) return "Zasięg nieznany";
-  const unit = reach.metric === "subscribers" ? "obserwujących kanał" : reach.metric === "plays" ? "odtworzeń" : reach.metric === "eu_reach" ? "osób w UE (zasięg reklamy)" : "wyświetleń";
-  return `${n} ${unit}${reach.observedAt ? `, stan z ${fmtDateTime(reach.observedAt)}` : ""}${reach.source ? ` (${reach.source})` : ""}`;
+  if (n == null) return "brak danych";
+  const unit = reach.metric === "subscribers" ? "obserwujących" : reach.metric === "plays" ? "odtworzeń" : reach.metric === "eu_reach" ? "osób w UE" : "wyświetleń";
+  return `${n} ${unit}`;
 }
 
 export function discoveryLines(list) {

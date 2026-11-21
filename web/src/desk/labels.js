@@ -1,16 +1,24 @@
 // Polskie nazwy i formaty pulpitu. Bez żargonu: „przesłanka do sprawdzenia”, nigdy „naruszenie”.
 
-export const MODULES = { M1: "Materiały twórców", M2: "Oferty WWW", M3: "Doradztwo WWW" };
-/** Nazwa modułu dla kontrolera (plakietka w kolejce i filtr). */
-export const MODULE_NAME = { M1: "Finfluencer", M2: "Reklama firmy", M3: "Doradztwo" };
+/** Słownik etykiet: jedna nazwa każdego pojęcia w całym interfejsie (audyt redukcyjny, §3.4). */
+export const MODULE_NAME = { M1: "M1 Twórcy", M2: "M2 Reklamy firm", M3: "M3 Doradztwo" };
+export const MODULES = MODULE_NAME;
 export const moduleName = (m) => MODULE_NAME[m] || m || "";
 export const STATUS = { new: "Nowa", reviewing: "W kontroli", closed: "Zamknięta" };
 export const ROUTES = {
   refer: "Do sprawdzenia",
-  complete: "Uzupełnij dane",
+  complete: "Niepełne",
   no_signal: "Bez przesłanki",
-  insufficient: "Za mało danych",
+  insufficient: "Niepełne",
 };
+/** Filtr „Stan” listy: wartość w adresie → etykieta i kolejka API. */
+export const STATES = [
+  { value: "review", label: "Do sprawdzenia", queue: "review" },
+  { value: "incomplete", label: "Niepełne", queue: "incomplete" },
+  { value: "all", label: "Wszystkie", queue: "all" },
+  { value: "closed", label: "Zamknięte", queue: "closed" },
+  { value: "demo", label: "Demo", queue: "demo" },
+];
 export const BANDS = { strong: "mocna", moderate: "średnia", weak: "słaba" };
 export const bandOfValue = (v) => (v == null ? null : v >= 75 ? "strong" : v >= 60 ? "moderate" : "weak");
 export const VARIANTS = {
@@ -19,11 +27,13 @@ export const VARIANTS = {
   qual_d_model: "kwalifikacja D z modelem lokalnym",
 };
 export const SCAN_MODE = { live: "skan na żywo", replay: "odtworzenie skanu", recompute: "przeliczenie", enrich: "uzupełnienie transkrypcji", upload: "plik operatora" };
+/** „Siła” w jednej plakietce: „mocna 95”. */
+export const strengthLabel = (band, value) => `${BANDS[band] || ""} ${value}`.trim();
 export const SCAN_STATUS = { queued: "w kolejce", running: "w toku", done: "zakończony", partial: "częściowy", failed: "nieudany" };
 export const RESOLUTIONS = [
   { value: "refer_to_control", label: "Przekaż do kontroli", hint: "Materiał wymaga dalszej kontroli; sprawa zostaje w toku." },
   { value: "complete_data", label: "Uzupełnij dane", hint: "Brakuje danych do oceny (np. transkrypcji); sprawa zostaje w toku." },
-  { value: "no_signal", label: "Bez sygnału", hint: "Po sprawdzeniu nie ma przesłanki; sprawa zostaje zamknięta." },
+  { value: "no_signal", label: "Bez przesłanki", hint: "Po sprawdzeniu nie ma przesłanki; sprawa zostaje zamknięta." },
   { value: "close", label: "Zamknij", hint: "Zamknij bez dalszych działań, z uzasadnieniem." },
 ];
 export const RESOLUTION_LABEL = Object.fromEntries(RESOLUTIONS.map((r) => [r.value, r.label]));
@@ -31,12 +41,12 @@ export const DISCLOSURE_KIND = {
   in_description: "w opisie",
   in_speech: "w mowie",
   in_frame: "w kadrze",
-  platform_flag: "flaga płatnej promocji YouTube",
+  platform_flag: "flaga YouTube",
 };
 export const ORIGINS = {
-  live: "na żywo",
+  live: "skan na żywo",
   replay: "odtworzenie skanu",
-  synthetic: "syntetyczny (studio zespołu)",
+  synthetic: "Demo",
   upload: "plik operatora",
   import: "import",
 };
@@ -70,14 +80,14 @@ export const IDENTITY_STATE = {
   register_failure: ["red", "awaria rejestru"],
   registry_failure: ["red", "awaria rejestru"],
 };
-export const ENTITY_ROW = { name: "nazwa", krs: "KRS", nip: "NIP", regon: "REGON" };
+export const ENTITY_ROW = { names: "nazwa", krs: "KRS", nip: "NIP", regon: "REGON" };
 export const DISCLOSURE_ROW = {
   explicit_ad: "oznaczona reklama",
   platform_flag: "flaga płatnej promocji",
   partner_mention: "wzmianka o współpracy",
   affiliate_link_mention: "link afiliacyjny",
 };
-export const DISCLOSURE_WHERE = { in_description: "w opisie", in_speech: "w mowie", in_frame: "w kadrze", platform_flag: "flaga platformy", description: "w opisie" };
+export const DISCLOSURE_WHERE = { in_description: "w opisie", in_speech: "w mowie", in_frame: "w kadrze", platform_flag: "flaga YouTube", description: "w opisie", transcript: "w mowie", frame: "w kadrze", platform: "flaga YouTube" };
 export const SOURCE_STATE = {
   skipped: ["neutral", "pominięty"],
   access_blocked: ["warning", "dostęp zablokowany"],
@@ -95,9 +105,9 @@ export const DISCLOSURE = {
   in_description: "w opisie",
   in_speech: "w mowie",
   in_frame: "w kadrze",
-  platform_flag: "flaga płatnej promocji YouTube",
-  not_found_in_scope: "nie znaleziono w zbadanym zakresie",
-  not_checked: "niesprawdzone",
+  platform_flag: "flaga YouTube",
+  not_found_in_scope: "brak w zbadanym zakresie",
+  not_checked: "nie sprawdzono",
 };
 export const REL_STATUS = {
   declared: "jawna współpraca",
@@ -111,7 +121,7 @@ export const MODALITY = {
   description: "opis",
   transcript: "mowa",
   frames: "kadry",
-  platformFlags: "flaga płatnej promocji",
+  platformFlags: "flaga YouTube",
   page: "strona",
 };
 export const COVER_STATE = {
@@ -191,7 +201,12 @@ export const fmtTime = (iso) => {
   return Number.isNaN(d.getTime()) ? String(iso) : d.toLocaleTimeString("pl-PL", { hour: "2-digit", minute: "2-digit", ...tz });
 };
 export const fmtDateTime = (iso) => (iso ? `${fmtDate(iso)}, ${fmtTime(iso)}` : "—");
-export const fmtNumber = (n) => (Number.isFinite(Number(n)) && n !== null && n !== "" ? Number(n).toLocaleString("pl-PL") : null);
+/** Pusta wartość: „—” w tabeli, „brak danych” w zdaniu. */
+export const EMPTY = "—";
+/** Liczba ze spacją tysięcy: „1 923”. */
+const grouped = (n) => String(Math.round(Number(n))).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+export const fmtInt = (n) => (Number.isFinite(Number(n)) && n !== null && n !== "" ? grouped(n) : EMPTY);
+export const fmtNumber = (n) => (Number.isFinite(Number(n)) && n !== null && n !== "" ? grouped(n) : null);
 
 export const clock = (seconds) => {
   const s = Math.max(0, Math.floor(Number(seconds) || 0));

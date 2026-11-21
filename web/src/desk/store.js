@@ -93,9 +93,9 @@ export function useDeskData() {
 }
 
 /** Kolejka ze stronicowaniem: pierwsza strona po zmianie kolejki, filtrów lub wersji danych, kolejne przez `more()`. */
-export function useQueue(name, filters, data, rev) {
+export function useQueue(name, filters, data, rev, limit = 50) {
   const [state, setState] = useState({ status: "loading", items: [], total: 0, nextCursor: null, error: null, legacy: false, loadingMore: false });
-  const key = useMemo(() => JSON.stringify([name, filters]), [name, filters]);
+  const key = useMemo(() => JSON.stringify([name, filters, limit]), [name, filters, limit]);
   const creators = data?.creatorMap;
   const gen = useRef(0);
   useEffect(() => {
@@ -104,7 +104,7 @@ export function useQueue(name, filters, data, rev) {
     setState((s) => ({ ...s, status: s.items.length ? "refreshing" : "loading", error: null, legacy: false }));
     const wait = filters?.q ? 250 : 0;
     const t = setTimeout(() => {
-      api.queue(name, filters, { creators }).then(
+      api.queue(name, filters, { creators, limit }).then(
         (r) => mine === gen.current && setState({ status: "ready", items: r.items, total: r.total, nextCursor: r.nextCursor, error: null, legacy: false, loadingMore: false }),
         (e) => mine === gen.current && setState((s) => ({ ...s, status: "error", error: e.message, legacy: e.status === 404, loadingMore: false })),
       );
@@ -116,28 +116,28 @@ export function useQueue(name, filters, data, rev) {
     setState((s) => {
       if (!s.nextCursor || s.loadingMore) return s;
       const mine = gen.current;
-      api.queue(name, filters, { cursor: s.nextCursor, creators }).then(
+      api.queue(name, filters, { cursor: s.nextCursor, creators, limit }).then(
         (r) => mine === gen.current && setState((cur) => ({ ...cur, items: [...cur.items, ...r.items.filter((i) => !cur.items.some((x) => x.id === i.id))], total: r.total, nextCursor: r.nextCursor, loadingMore: false })),
         (e) => mine === gen.current && setState((cur) => ({ ...cur, loadingMore: false, error: e.message })),
       );
       return { ...s, loadingMore: true };
     });
-  }, [name, filters, creators]);
+  }, [name, filters, creators, limit]);
   return { ...state, more };
 }
 
-/** Liczba pozycji kolejki w podziale na moduł (te same filtry poza modułem): małe zapytania o samą liczność. */
-export function useModuleCounts(name, filters, rev, enabled) {
+/** Liczba pozycji w podziale na moduł (te same filtry poza modułem): małe zapytania o samą liczność. `queueOf(moduł)` wskazuje kolejkę API. */
+export function useModuleCounts(queueOf, filters, rev, enabled) {
   const [counts, setCounts] = useState(null);
-  const key = useMemo(() => JSON.stringify([name, { ...filters, module: "all" }]), [name, filters]);
+  const key = useMemo(() => JSON.stringify([["M1", "M2", "M3"].map(queueOf), { ...filters, module: "all", state: "" }]), [queueOf, filters]);
   useEffect(() => {
-    if (!enabled || !name) {
+    if (!enabled) {
       setCounts(null);
       return undefined;
     }
     let off = false;
     const t = setTimeout(() => {
-      Promise.all(["M1", "M2", "M3"].map((m) => api.queue(name, { ...filters, module: m }, { limit: 1 }).then((r) => [m, r.total]))).then(
+      Promise.all(["M1", "M2", "M3"].map((m) => api.queue(queueOf(m), { ...filters, module: m }, { limit: 1 }).then((r) => [m, r.total]))).then(
         (pairs) => !off && setCounts(Object.fromEntries(pairs)),
         () => !off && setCounts(null),
       );
