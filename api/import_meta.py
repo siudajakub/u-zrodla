@@ -132,7 +132,8 @@ def qualify_import(cap, finding):
     """Imported ads and captions are read as text. The text of an ad may omit what the graphic or the video carries,
     so a benefit claim without a warning in the text is never a strong flag by itself: it routes to "complete: check
     the creative" with the reason named. Whatever the M2 analysis itself established from the text stays as it is."""
-    if not cap.get("importLabel") or finding.get("module") != "M2":
+    vendor = str(cap.get("materialType") or "").startswith("vendor_")  # the dated sample of the external service: text as well
+    if not (cap.get("importLabel") or vendor) or finding.get("module") != "M2":
         return finding
     kind = "ad" if cap.get("adId") else "post"
     text = "\n".join(str(cap.get(k) or "") for k in ("adBody", "adTitle", "adDescription", "description") if cap.get(k))

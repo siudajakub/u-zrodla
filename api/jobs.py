@@ -339,6 +339,8 @@ def work():
         submit("replay","bootstrap-youtube-replay-v1",{"adapters":["youtube-replay"]})
     if "social-replay" in ADAPTERS and (ROOT/"fixtures/raw/discovery/social-2026-11-21/replay.json.gz").is_file():
         submit("replay","bootstrap-social-replay-v1",{"adapters":["social-replay"]})
+    if "vendor-social-replay" in ADAPTERS and (ROOT/"fixtures/raw/discovery/social-2026-11-21/vendor/replay-vendor.json.gz").is_file():
+        submit("replay","bootstrap-vendor-social-replay-v1",{"adapters":["vendor-social-replay"]})
     if "m3-offers-replay" in ADAPTERS:
         submit("replay","bootstrap-m3-offers-replay-v1",{"adapters":["m3-offers-replay"]})
     if "meta-import-replay" in ADAPTERS and (ROOT/"fixtures/raw/discovery/social-2026-11-21/replay-meta.json.gz").is_file():

@@ -652,6 +652,93 @@ def _qualification_failed(exc):
             "premises": [], "evidence": [], "counterEvidence": [], "coverage": None}
 
 
+# --- Instagram and Facebook posts read as text (lane K sample, manual import) -------------------------------------
+CAPTION_ONLY = re.compile(r"obrazu i wideo nie analizowano|obrazu, wideo i układu", re.I)
+STRONG_RELATION = {"tracking_link", "creator_code"}
+PLATFORM_FLAG_TEXT = {"instagram": "Instagram oznacza post jako płatne partnerstwo",
+                      "facebook": "Facebook oznacza wpis jako płatne partnerstwo"}
+
+
+def _social_platform(capture):
+    return str(capture.get("platform") or "").split(":")[0]
+
+
+def _with_platform_flag(capture):
+    """The platform's paid-partnership flag of an Instagram or Facebook post is a disclosure at platform level, as
+    paidPromotionFlag is on YouTube. Only True counts; False proves nothing about a label inside the picture."""
+    flag = capture.get("isPaidPartnership")
+    if _social_platform(capture) not in PLATFORM_FLAG_TEXT or not isinstance(flag, bool) or isinstance(capture.get("youtube"), dict):
+        return capture
+    return {**capture, "youtube": {"paidPromotionFlag": flag, "observedAt": capture.get("observedAt"), "synthetic": "platform-flag"}}
+
+
+def _name_the_platform(capture, result):
+    """The shared qualification words the flag as YouTube's: say which platform really reported it."""
+    text = PLATFORM_FLAG_TEXT.get(_social_platform(capture))
+    if text is None or not isinstance(capture.get("isPaidPartnership"), bool):
+        return
+    for item in result.get("evidence", []):
+        if isinstance(item, dict) and item.get("field") == "youtube.paidPromotionFlag":
+            stamp = item["text"].partition(" (")[2]
+            item.update(text=text + (f" ({stamp}" if stamp else ""), field="platform.paidPartnership", method="vendor_api")
+            disclosure = (result.get("adRelationship") or {}).get("disclosure")
+            if isinstance(disclosure, dict) and disclosure.get("evidenceId") == item["id"]:
+                disclosure["text"] = item["text"]
+    platform = ((result.get("coverage") or {}).get("modalities") or {}).get("platformFlags")
+    if isinstance(platform, dict):
+        platform["label"] = text.split(" oznacza")[0] + ": flaga płatnego partnerstwa"
+
+
+def _platform_register(capture, result):
+    """A post flagged by the platform as a paid partnership is an advertising relation declared at platform level even when
+    the caption names no firm: it enters the register with the firm unresolved (the platform does not name the partner)."""
+    flagged = capture.get("isPaidPartnership") is True and _social_platform(capture) in PLATFORM_FLAG_TEXT
+    if not flagged or (result.get("adRegistry") or {}).get("state") != "none":
+        return
+    item = next((e for e in result.get("evidence", []) if isinstance(e, dict) and e.get("field") == "platform.paidPartnership"), None)
+    if item is None:
+        return
+    sentence = f"{PLATFORM_FLAG_TEXT[_social_platform(capture)]}; w podpisie nie wskazano firmy."
+    relation = dict(result.get("adRelationship") or {})
+    relation.update(status="declared", basis="flaga płatnego partnerstwa platformy", firm=None,
+                    disclosure={"state": "platform_flag", "where": "platform", "text": item["text"], "evidenceId": item["id"],
+                                "checked": ["platformFlags"], "notChecked": ["frames", "transcript"], "kind": "platform_flag",
+                                "kinds": ["platform_flag"], "summary": sentence})
+    result["adRelationship"] = relation
+    result["adRegistry"] = {"state": "included", "campaignKey": f"{capture.get('creatorId')}|platform_flag",
+                            "firstObservedAt": capture.get("observedAt"), "identityStatus": "unresolved", "entityType": "unresolved",
+                            "disclosureKind": "platform_flag", "summary": sentence}
+
+
+def _caption_only(capture):
+    media = capture.get("mediaCoverage") if isinstance(capture.get("mediaCoverage"), dict) else {}
+    reason = str((media.get("transcript") or {}).get("reason") or "")
+    return (capture.get("module", "M1") == "M1" and _social_platform(capture) in PLATFORM_FLAG_TEXT
+            and not capture.get("segments") and bool(CAPTION_ONLY.search(reason)))
+
+
+def _caption_gate(capture, result, decision):
+    """Only the caption was read. A label may sit in the picture or the video, so a missing label is not a finding by
+    itself: the route becomes `complete: check the material`. It stays `refer` only when the proof of the relation is
+    strong (a firm's tracking link or a code) AND the platform returned the paid-partnership flag as false."""
+    if decision.get("route") != "refer":
+        return None
+    kinds = {r.get("kind") for p in result.get("premises") or [] for r in p.get("relationEvidence") or []}
+    flag = capture.get("isPaidPartnership")
+    scope = "Zbadano tylko podpis posta; obrazu i wideo nie oglądano."
+    if kinds & STRONG_RELATION and flag is False:
+        sentence = f"{scope} Platforma zwróciła flagę płatnego partnerstwa: nie. Dowód relacji z firmą jest mocny (link śledzący lub kod)."
+        reasons = list(decision.get("reasons") or [])
+        decision["reasons"] = [*reasons[:4], sentence]
+        decision["captionBasis"] = "caption_only_strong"
+        return None
+    decision.update(route="complete", completeReason="visual_unexamined", gatedFrom="refer", queueEligible=False,
+                    reason="Uzupełnij: sprawdź materiał wideo lub grafikę; w podpisie nie ma oznaczenia, ale mogło być w obrazie.",
+                    missing=list(dict.fromkeys([*(decision.get("missing") or []), "obraz i wideo posta"])))
+    decision["reasons"] = [*(decision.get("reasons") or [])[:4], scope + " Brak oznaczenia w podpisie nie wyklucza oznaczenia w obrazie."]
+    return "visual_unexamined"
+
+
 BRACKET_TAG_START = re.compile(r"\s*\[\s*współprac\w*\s+z\s+", re.I)
 BRACKET_COLLABORATION = r"|\[\s*współprac\w*\s+z\s+(?:firmą\s+)?(?P<name_tag>[^\]\n]{2,60})\]"
 
@@ -679,13 +766,17 @@ def _shadow(capture, finding, semantic, variant=None):
     from .semantic import review_suggestion
     phase = transcript_phase(capture)
     try:
-        result = qualification.qualify(_with_phase(capture, phase), finding, semantic)
+        result = qualification.qualify(_with_platform_flag(_with_phase(capture, phase)), finding, semantic)
+        _name_the_platform(capture, result)
+        _platform_register(capture, result)
     except Exception as exc:  # a failing rule must never stop a scan
         result = _qualification_failed(exc)
     suggestion = review_suggestion(capture, semantic or {}, finding)
     decision = result["reviewDecision"]
     score = result["reviewScore"]
     gate = _gate(decision, phase)
+    if gate is None and _caption_only(capture):
+        gate = _caption_gate(capture, result, decision)
     if capture.get("frames"):
         _frame_evidence(capture, result)
     decision["queueEligible"] = bool(decision["route"] == "refer" and score.get("value") is not None
