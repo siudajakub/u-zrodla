@@ -241,6 +241,16 @@ def analysis_current():
     return {"rules": rules, "model": model, "schema": ANALYSIS_SCHEMA, "variant": ANALYSIS_VARIANT,
             "rulesByModule": by_module}
 
+PLATFORM_ALIAS = {"www": "web", "studio": "web"}
+
+def canonical_platform(value):
+    """One spelling of the platform: sites are `web` (older records and fixtures say `WWW`, the demo studio `Studio`).
+    A suffix after `:` (tiktok:handle) is kept."""
+    text = str(value or "")
+    head, sep, tail = text.partition(":")
+    head = PLATFORM_ALIAS.get(head.lower(), head)
+    return head + sep + tail if text else text
+
 def derive_origin(item):
     """One origin per record: live, replay, synthetic or upload."""
     provenance = item.get("provenance") if isinstance(item.get("provenance"), dict) else {}
@@ -505,6 +515,19 @@ def record_adapter(db, adapter_id, result, at, scan_id=None, adapter=None):
             body["quota"]["keys"] = key_views(keys)
     db.execute("INSERT OR REPLACE INTO source_state VALUES(?,?,?)", (adapter_id, dump(body), at))
     return body
+
+META_ADS_ROW = {"id": "meta_ads", "name": "Meta · Biblioteka Reklam (FB i IG)", "url": "https://www.facebook.com/ads/library/",
+                "status": "needs_key", "count": 0, "kind": "feed", "observedAt": None, "derived": "not_run",
+                "message": "Brak tokenu Biblioteki Reklam: źródło nie wysłało żadnego żądania.",
+                "nextStep": "Token Ad Library API w pliku klucza (adapter meta_ads jest gotowy) albo import ręczny (POST /v1/import/meta)."}
+
+def configured_youtube_keys():
+    """Key ids (8 characters of the SHA-256) of the configured YouTube keys: the list the ledger shows before any use."""
+    try:
+        from collectors import youtube
+        return [youtube.key_id(k) for k in youtube.load_keys()]
+    except Exception:
+        return []
 
 def public_source(source):
     """A stored source row without the per-path snapshots that only rebuild the aggregate (paths[].row)."""
@@ -1182,6 +1205,8 @@ def case_core(db, row, current, settings):
     pending, _ = rereview(db, key, row["status"], body, decided)
     stale = bool(decided and decided.get("route") is not None and chosen["route"] is not None and decided["route"] != chosen["route"])
     flags = {"pendingReReview": pending, "reviewStale": stale}
+    if body.get("platform"):
+        body = {**body, "platform": canonical_platform(body["platform"])}
     core = {**view, **body, **{k: body[k] for k in ("origin", "analysisVersion", "derived") if k in body},
             **{k: view[k] for k in ("needsRecalc", "needsRecalcReason", "requalification")},
             "id": key, "status": row["status"], "revision": row["revision"], "updatedAt": row["updated"],
@@ -1293,6 +1318,19 @@ def disclosure_info(case):
     return {"kind": registry.get("disclosureKind"), "state": disclosure.get("state"), "where": disclosure.get("where"),
             "atSec": (evidence or {}).get("start"), "text": disclosure.get("text")}
 
+def firm_of(case):
+    """The firm the row is about: the advertiser or registry firm (M1), the owner of the page (M2 card), the operator the
+    page names (M3)."""
+    module=case.get("module","M1")
+    if module=="M3":
+        return m3_report_cells(case)["podmiot"] or None
+    if module=="M2":
+        card=case.get("m2Card") if isinstance(case.get("m2Card"),dict) else {}
+        firm=card.get("firm") if isinstance(card.get("firm"),dict) else {}
+        return firm.get("name") or firm.get("brand") or case.get("legalName") or case.get("brand") or case.get("creatorName") or None
+    name,_=_firm_cells(case)
+    return name or None
+
 def summary_of_case(case, threshold=60):
     decision=case.get("reviewDecision") if isinstance(case.get("reviewDecision"),dict) else {}
     active=case.get("activeVariant") or ANALYSIS_VARIANT
@@ -1317,6 +1355,7 @@ def summary_of_case(case, threshold=60):
             "transcriptState":((coverage.get("modalities") or {}).get("transcript") or {}).get("state"),
             "queues":case["queues"],"pendingReReview":case["pendingReReview"],"reviewStale":case["reviewStale"],
             "needsRecalc":case.get("needsRecalc"),"priority":case.get("priority"),"reason":reason,
+            "firm":firm_of(case),"publishedAtDerived":case.get("publishedAtDerived"),"publishedAtBasis":published_of(case)[1],
             "firstMoment":moment,"lastDecision":case.get("lastDecision"),"url":case.get("url")}
 
 def creator_names(db):
@@ -1395,7 +1434,8 @@ def filter_cases(items, *, module=None, creator=None, since=None, until=None, mi
     if creator:
         items=[c for c in items if c.get("creatorId")==creator]
     if platform:
-        items=[c for c in items if str(c.get("platform") or "").split(":")[0]==platform]
+        wanted=canonical_platform(platform).lower()
+        items=[c for c in items if canonical_platform(str(c.get("platform") or "").split(":")[0]).lower()==wanted]
     if route:
         items=[c for c in items if c.get("route")==route]
     if status:
@@ -1582,6 +1622,8 @@ LEGACY_METHOD = {"apple-podcasts": "apple_search", "peertube": "peertube_search"
 def creator_view(creator):
     """Schema 2 creator: `discoveries[]` and `reach` always present (derived and flagged when the record predates v2)."""
     out = dict(creator)
+    if out.get("platform"):
+        out["platform"] = canonical_platform(out["platform"])
     if not isinstance(out.get("discoveries"), list):
         legacy = out.get("discovery") if isinstance(out.get("discovery"), dict) else None
         platform = str(out.get("platform") or "").split(":")[0]
@@ -1608,6 +1650,16 @@ def source_view(source, states):
            "lastAttemptAt": state.get("lastAttemptAt")}
     if state.get("lastSuccessAt") and not out.get("lastSuccessAt"):
         out["lastSuccessAt"] = state["lastSuccessAt"]
+    if key == "youtube":
+        quota = out.get("quota") if isinstance(out.get("quota"), dict) else {}
+        if not quota.get("keys"):  # an empty ledger still lists the configured keys, nothing used yet
+            ids = configured_youtube_keys()
+            if ids:
+                from collectors.discovery import ADAPTERS
+                limit = daily_limit(ADAPTERS["youtube"]) if "youtube" in ADAPTERS else None
+                out["quota"] = {"used": quota.get("used") or 0, "limit": quota.get("limit") if quota.get("limit") is not None else
+                                (limit * len(ids) if limit else None), "resetAt": quota.get("resetAt"),
+                                "keys": [{"keyId": i, "used": 0, "limit": limit, "exhaustedAt": None} for i in ids]}
     return out
 
 def trend(db, days=30):
@@ -1722,6 +1774,8 @@ def state(schema=2, compact=False, findings=True):
         events=[dict(r) for r in db.execute("SELECT seq AS id,at,kind,ref,message FROM events ORDER BY seq DESC LIMIT 50")]
         # Schema 1 keeps the v1 shape (T18): rows as stored, health a string per source id.
         sources=[public_source(x) for x in all_objects(db,"sources")]
+        if schema>=2 and not any((x.get("id") or x.get("name"))=="meta_ads" for x in sources):
+            sources.append(META_ADS_ROW)
         states={s["sourceId"]:s for s in source_states(db)}
         health={(s.get("id") or s.get("name")):health_of(s.get("status")) for s in sources}
         creators=all_objects(db,"creators")
@@ -1729,7 +1783,7 @@ def state(schema=2, compact=False, findings=True):
         if not findings:
             by_platform={}
             for creator in creators:
-                platform=str(creator.get("platform") or "").split(":")[0] or "unknown"
+                platform=canonical_platform(str(creator.get("platform") or "").split(":")[0]) or "unknown"
                 by_platform[platform]=by_platform.get(platform,0)+1
             extra={"findingsOmitted":True,"creatorCounts":{"total":len(creators),"byPlatform":by_platform}}
             creators=[{k:c[k] for k in CREATOR_LIGHT if k in c} for c in creators]

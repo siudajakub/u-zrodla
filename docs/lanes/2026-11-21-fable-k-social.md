@@ -187,3 +187,85 @@ async def import_meta(request: Request, filename: str = Query("meta.txt", max_le
 - Platformy, identyfikator strony reklamodawcy, zasięg w UE, płatnik i targetowanie nie występują w tekście karty: `null` / `not_collected`.
 - Dane z jednego widoku (22 z ok. 14 000 wyników). To próbka, nie pokrycie kampanii.
 - Import ręczny z przeglądarki analityka mieści się w jego własnym użyciu publicznej strony, ale warunki Meta kierują odczyt maszynowy do API; decyzja o pokazaniu tych danych jury należy do J.
+
+## Próbka FB, IG i reklam przez usługę zewnętrzną (ScrapeCreators), 21 XI 2026, wieczór
+
+Model: Sonnet 5.5. Zakres: `collectors/vendor_social.py`, `collectors/test_vendor_social.py`, `fixtures/raw/discovery/social-2026-11-21/vendor/`. Dane zebrała **usługa ScrapeCreators**, nie nasz host: wołano wyłącznie `api.scrapecreators.com` (klucz w nagłówku `x-api-key`, z pliku `~/.config/investwatch/scrapecreators.token`, tryb 600, poza repo). Żadnego żądania do facebook.com, instagram.com i graph.facebook.com. Apify nie użyto.
+
+**Ryzyko regulaminowe (wprost).** Automatyczny odczyt publicznych treści Meta wykonuje dostawca. Meta uznaje automatyczne zbieranie danych za sprzeczne z warunkami platformy; ryzyko leży po stronie dostawcy (blokada usługi) i decyzji o jej użyciu. Wyrok z sprawy Meta v. Bright Data (N.D. Cal. 2024) dotyczył odczytu bez logowania, jest rozstrzygnięciem sądu pierwszej instancji w USA i nie wiąże w Polsce. To jednorazowa, datowana próbka do pokazu. Produkt nie zależy od tej usługi: adapter `vendor-social-replay` czyta tylko zapisaną próbkę i nie ma ścieżki do klucza ani do sieci (test `test_adapter_reads_only_the_sample_and_never_the_network`). Odczyt cykliczny w produkcie to import ręczny lub oficjalne API po uzyskaniu dostępu.
+
+### Przebieg i kredyty
+
+100 darmowych kredytów, 1 kredyt = 1 zapytanie; **zero zakupów**. Zużyto 74, **zostało 26** (rezerwa 15 nienaruszona; plan do 85 nie został wykorzystany do końca). Licznik: `requests.json` (każde żądanie: czas, punkt końcowy, parametry, kod, kredyty naliczone i pozostałe, SHA-256 odpowiedzi, plik; nagłówek `x-api-key: REDACTED`). Saldo czytane z pola `credits_remaining` każdej odpowiedzi (osobnego wywołania salda nie robiono, jego strona dokumentacji nie dała kształtu odpowiedzi). Odstęp między wywołaniami 2,2 s.
+
+| Operacja (punkt końcowy) | Zapytań | Kredytów | Uwagi |
+|---|---|---|---|
+| `GET /v1/instagram/profile` (profil + 12 ostatnich postów, obserwujący) | 31 | 31 | próba kształtu: `xtb_polska` (1 kredyt, curl); 5 kont firm, 26 twórców |
+| `GET /v1/facebook/adLibrary/search/companies` | 8 | 8 | ustalenie strony, `page_alias` i `ig_username` firmy; trafiono XTB, Trading 212, eToro, Lightyear, Saxo; mBank, DM BOŚ i Freedom24 bez właściwej strony |
+| `GET /v1/facebook/adLibrary/company/ads` (`country=PL`, `status=ALL`) | 13 | 5 (+1 ponowione) | 30 reklam na stronę; XTB, eToro, Saxo; Trading 212, Lightyear i trzy zapytania po nazwie zwróciły 0 reklam w PL (zapytania z 0 wynikami nie kosztowały); kursor XTB strona 2: HTTP 500 „Facebook is blocking us” (2 próby, bez kosztu) |
+| `GET /v1/facebook/profile/posts` | 16 | 15 | 3 wpisy na stronę; parametr `pageId` zwracał 0 wpisów (5 prób, bez kosztu), działa `url` strony |
+| `GET /v1/facebook/adLibrary/search/ads` | 7 | 7 | reklamy stron trzecich: XTB, Trading 212, eToro, Freedom24, „kod promocyjny XTB”, „kod polecający broker”, Lightyear |
+| `GET /v1/facebook/adLibrary/ad` (szczegóły: zasięg w UE, płatnik, targetowanie) | 7 | 7 | 5 reklam firm i 2 reklamy stron trzecich |
+
+Pierwsza odpowiedź reklam XTB została ponowiona (1 kredyt), bo filtr zapisu usunął wtedy pole `cards` z treścią reklam dynamicznych (`DCO`, w `snapshot.body.text` stoi szablon `{{product.brand}}`). Filtr poprawiono; odpowiedź zastąpioną usunięto z repo, w `requests.json` zostało `superseded`. Zapytanie „Lightyear” w wyszukiwaniu reklam zwróciło reklamy o filmie Toy Story (Buzz Lightyear): oznaczone `discard`, odpowiedź zachowana w `raw/`, poza replayem. Z wyszukiwania słów kluczowych zostają tylko reklamy, które nazywają firmę z rejestru (`firmRelation`).
+
+### Co zawiera próbka (replay `replay-vendor.json.gz`, 494 materiały)
+
+- **Instagram:** 31 kont (5 firm z rejestru: xtb_polska, trading212, etoro_official, golightyear, saxobank; 26 twórców znalezionych w odnośnikach opisów YouTube), 350 postów (60 z kont firm, 290 twórców), od 15 IV 2021 do 21 XI 2026. Flaga `is_paid_partnership`: `true` w 13 postach (12 konto Oskara Bednarskiego, 1 konto Trading 212 ze współautorem `the.independent`), `false` w 337.
+- **Facebook:** 10 stron (4 firmy: XTB Online Investing, eToro, Lightyear, Saxo Bank; 6 twórców/mediów z opisów YouTube), 30 wpisów po 3 na stronę. Trading 212 pod aliasem `Trading212` i część stron nie dały wpisów w odpowiedzi.
+- **Reklamy w PL (Biblioteka Reklam):** 114 reklam, 7 reklamodawców: eToro 40, Saxo Bank 40, XTB Online Investing 30, XTB Online Trading 1 (razem 111, moduł M2, 102 nieaktywne i 9 aktywnych) oraz 3 reklamy stron trzecich z firmą z rejestru (M1). Szczegóły z zasięgiem w UE, płatnikiem i targetowaniem dla 7 reklam. Brak reklam w PL dla Trading 212 i Lightyear (0 wyników).
+- **Firmy z materiałem w próbce:** XTB, eToro, Saxo, Trading 212, Lightyear (konta firm), plus wzmianki w postach twórców o BOŚ (bossa), mBank, PKO BP, Alior, Freedom24. Moduł: **M2 = 183** (konta i strony firm, reklamy firm), **M1 = 311**.
+- Zakres: tylko tekst (podpisy, treść reklam), liczby (polubienia, komentarze, odtworzenia, reakcje, udostępnienia; z datą odczytu) i flaga platformy. Obrazu, wideo, mowy i napisów w grafice nie zbadano. Z odpowiedzi usunięto komentarze użytkowników, listy obserwujących, podpisane adresy mediów i zdjęć profilowych; oznaczone konta sprowadzono do publicznej nazwy konta. Surowe odpowiedzi (796 KB razem z replayem) są w repo.
+
+### Wskazania w próbce (cytaty, bez oceny prawnej)
+
+Twórcy z promocją firmy z rejestru, **z oznaczeniem** (flaga platformy była `false` przy wszystkich z tekstowym znacznikiem):
+- @kacper.snela (5 postów XI 2026, podpis zaczyna się od „[współpraca z XTB]”), np. https://www.instagram.com/p/Df7QRf4jI99/ („[współpraca z XTB] 🥇 Złoto fizyczne czy ETC na złoto? …”), `isPaidPartnership: false`.
+- Giełda Inwestycje Trading, Facebook, 31 X do 10 XI 2026: „#współpracareklamowa #Freedom24”, „#wspolpraca #freedom24” (flaga na FB: `null`).
+- @piotr.zajac.finsite https://www.instagram.com/p/DOLoE5fjEbI/ (4 IX 2025): „#sponsorowane”, „Partnerem” (bossa).
+
+Kandydaci M1 **bez** flagi i **bez** oznaczenia w tekście (to kandydaci do przeglądu, nie kwalifikacja; w próbce takich materiałów jest mało, tylko pierwszy ma link firmy):
+1. Marcin Tuszkiewicz, Facebook, 21 XI 2026, https://www.facebook.com/reel/987873170602563/: „Porozmawiam z nimi podczas debaty na XTB Investing Masterclass, 27–28 listopada … 👉 Rejestracja na XTB Investing Masterclass …: https://link-pso.xtb.com/pso/4CLMt”. Link w domenie firmy, brak oznaczenia.
+2. Justyna Kik, https://www.instagram.com/p/DfZuVJXiFDi/ (6 XI 2026): „Teraz gdybym miała wybrać jedną promkę, postawiłabym na Alior i te łatwe 3500 zł” … „300 zł za polecenie mu konta” … „Napisz w komentarzu JDG, a wyślę Ci linki”. Firmy z rejestru: mBank, Alior; brak flagi, brak oznaczenia, brak linku w podpisie.
+3. Paweł, https://www.instagram.com/p/DRCmQ9AiNjt/ (14 XI 2025): „Najwyższa dywidenda w tym roku. Ile zysku przyniosła inwestycja 120 000 PLN w XTB?”; brak oznaczenia i linku (słaby sygnał).
+4. Giełda Inwestycje Trading, https://www.instagram.com/p/DcOkHz9DKif/ (19 VIII 2026): „Oto krótki tutorial jak zaimportować swój portfel z XTB”, `#markawlasna` (promocja własnej aplikacji Stoxly; firma tylko wymieniona; to samo konto oznacza „#współpracareklamowa” przy Freedom24 na Facebooku).
+5. holi.inwestuje, https://www.instagram.com/p/DZDCsF-gY54/ (1 VI 2026): omówienie kursu XTB, z ostrzeżeniem „Inwestowanie wiąże się z ryzykiem utraty kapitału” (kontrola ujemna: wzmianka o firmie bez promocji).
+
+Kandydaci M2: twierdzenie o korzyści w treści reklam i postów firm (ostrzeżenie może być w grafice; badany jest tylko tekst):
+1. XTB Online Investing, reklama 1421543096020676 (18 IX 2025 do 1 IX 2026, nieaktywna), https://www.facebook.com/ads/library/?id=1421543096020676: „Nie tylko zarabiaj pieniądze. Zacznij inwestować w akcje i ETF-y z 0% prowizji”; zasięg w UE 5 279 218, targetowanie Polska 18–65, płatnik XTB Online Trading. Bez ostrzeżenia w tekście.
+2. XTB, reklama 1150549887287116 (3 XI 2025 do 2 II 2026), https://www.facebook.com/ads/library/?id=1150549887287116: „… Twoje pieniądze mogą pracować i zarabiać odsetki. 🇵🇱 4.1% 🇺🇸 3.9% 🇪🇺 2.3% … Zyskaj na swoich wolnych środkach”. Bez ostrzeżenia w tekście.
+3. XTB, reklama aktywna 846978505145299 (od 8 X 2026), https://www.facebook.com/ads/library/?id=846978505145299: „Pieniądze są tylko narzędziem. Ty decydujesz, czy będą pracować dla Ciebie.”; zasięg w UE 1 660 449. Bez ostrzeżenia w tekście.
+4. XTB Polska, Instagram, https://www.instagram.com/p/Dfo_zBYzzMi/ (12 XI 2026): przykład „efektywnych 10% rocznie … wartość wynosi około 346 673 zł” i kod „TECHPILOT” przy rejestracji w XTB; w tekście zastrzeżenie „Rzeczywisty wynik może być inny, także ujemny” (jest, ale nie jako ostrzeżenie o ryzyku utraty środków).
+5. Z ostrzeżeniem w tekście (kontrola): Saxo Bank, reklama aktywna 1269830924657531 (od 10 IV 2026), https://www.facebook.com/ads/library/?id=1269830924657531: „Oszczędzaj do 70% na opłatach … Handel instrumentami finansowymi jest ryzykowny. Zawsze najpierw upewnij się, że rozumiesz to ryzyko.” W próbce 40 reklam Saxo, 28 z ostrzeżeniem w tekście; XTB: 14 z 30 reklam bez żadnego twierdzenia ani ostrzeżenia, 16 z twierdzeniem bez ostrzeżenia.
+
+Reklamy stron trzecich z firmą jako marką (M1): Instagram `trading212pies` https://www.facebook.com/ads/library/?id=3672200766256534 (17 II 2026): „(282.11 - 171.33) ÷ 171.33 × 100% = +65% profit in just 16.5 months 🔥 … #trading212promocode #trading212freeshares”; zasięg w UE 20 775, płatnik „Trading 212 Pies”; bez ostrzeżenia w tekście. Facebook `tatiana.yurchik` ?id=1426347765576294 (24 XI 2025, po rosyjsku, wymienia „Freedom Finance, Degiro, Trading 212”, zasięg w UE 17 479) i `Forum Boost` ?id=949389864484336.
+
+### Statusy źródeł dla integracji (`paths[]`)
+
+Adapter zwraca wiersze `instagram`, `facebook`, `facebook-ads`, `instagram-ads` z `path: "vendor_sample"`, `sampleDate: "2026-11-21"`, `count`, `message` = „próbka datowana z 21 XI zebrana przez usługę zewnętrzną (N kont, M postów / K reklam); odczyt cykliczny w produkcie: import ręczny lub oficjalne API po uzyskaniu dostępu” i `nextStep`, oraz wiersz zbiorczy `vendor_social` (kredyty zużyte i pozostałe). `instagram-ads` ma liczbę 1 (reklama tylko na IG; reszta idzie na Facebooka i Instagram jednocześnie, a ID dostaje przedrostek `facebook:`, jak w `meta_ads`). Propozycja dla H w `collectors/adapter.py` (poza moim zakresem zapisu):
+
+```python
+PATH_OF["vendor-social-replay"] = "vendor_sample"
+PATH_LABEL["vendor_sample"] = "próbka z usługi zewnętrznej"
+_NEXT_STEP["vendor_sample"] = "Import ręczny (POST /v1/import/meta) lub oficjalne API po uzyskaniu dostępu."
+# w path_summary: dla entry["path"] == "vendor_sample" i statusu ok:
+#   text = f"próbka z usługi zewnętrznej ({count} {'postów' if posts else 'reklam'}, {dzień} XI)"
+```
+
+### Do wpięcia przez H (`collectors/discovery.py`)
+
+```python
+if importlib.util.find_spec("collectors.vendor_social") is not None:
+    from .vendor_social import discover as discover_vendor_social
+    register(Adapter("vendor-social-replay", discover_vendor_social, "Instagram i Facebook · próbka z usługi zewnętrznej (21 XI)",
+                     modes=("replay",), enabled=_on_unless_listed("vendor-social-replay"), own_network=False))
+```
+Tylko `replay` i tylko na żądanie (jak `meta-import-replay`), żeby domyślny replay jej nie mieszał; worker może zlecić `adapters=["vendor-social-replay"]`. Opcja `vendor_social_sample` wskazuje inny plik próbki. Narzędzie zbierające to osobna komenda i nie jest zarejestrowane jako adapter: `python -m collectors.vendor_social collect --plan plan.json --max-credits N [--reserve 15] [--out-dir …]`; odbudowa replayu i manifestu bez sieci: `python -m collectors.vendor_social build`. Bez klucza `collect` kończy się kodem 3 (`needs_key`) bez żądania.
+
+### Testy
+
+`.runtime/venv/bin/python -B -m unittest discover -s collectors -t . -p 'test_*.py'`: 200 testów OK (w tym 25 nowych w `test_vendor_social.py`; żaden nie otwiera sieci): parser postów IG (profil i `v2/user/posts`, brak pól, ukryte polubienia), wpisów FB, reklam (reklama dynamiczna, szczegóły, strona trzecia), mapowanie błędów 401/402/429/404/400/500, licznik kredytów i rezerwa, wznowienie, klucz tylko w nagłówku, brak klucza (`needs_key`, kod 3, bez żądania), odmowa hostów spoza `api.scrapecreators.com`, replay zgodny z surowymi (także przy różnym `PYTHONHASHSEED`), skróty z manifestu, adapter bez sieci i bez klucza, brak komentarzy i klucza w plikach.
+
+### Czego nie zrobiono
+
+Nie wołano punktów komentarzy, obserwujących, grup ani transkrypcji. XTB ma w Bibliotece 2044 reklamy w PL, próbka ma 31 (dwie pierwsze strony po 30 posortowane według wyświetleń; drugiej strony nie dało się pobrać, HTTP 500). Posty tylko z jednej strony profilu IG (12 ostatnich) i 3 ostatnie wpisy strony FB, więc nie jest to pełna historia ani miara trafności. Tekst reklam bez grafiki: brak ostrzeżenia w tekście nie dowodzi braku ostrzeżenia w kreacji. Własność kont twórców z opisów YouTube nie została potwierdzona (konto wskazane w opisie, `crosslinkDiscovery`). Reklamy w UE bez zasięgu w UE zwracają `euTotalReach: null` do czasu pobrania szczegółów (7 z 114 mają szczegóły).
