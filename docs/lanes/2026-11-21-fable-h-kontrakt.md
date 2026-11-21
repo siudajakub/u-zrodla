@@ -467,3 +467,10 @@ Rozstrzygnięte samodzielnie (do wiadomości): nazwa `route`, struktura `coverag
 - Dokumenty D, I, B i OPENROUTER-M3 czytano w stanie z 21 XI wieczorem; `fable-d-porownanie.md` nie był czytany.
 - `Qwen` i Ollama nie były uruchamiane; opis wariantu z modelem opiera się wyłącznie na dokumentach.
 - Nakłady i wydajność to oceny bez pomiaru pod obciążeniem.
+
+## Uzupełnienie 21 XI (kolejka mediów i adnotacja modelem)
+
+- Model agenta: claude-sonnet-5-5 (Sonnet 5.5).
+- `api/enrich.py`: 429 o zakresie `video` zostawia film jako pending z `mediaAttempts` i krok idzie dalej (`summary.videoLimited`); przerwanie tylko przy `login_required` lub `rate_limited` z zakresem `host` (także w kroku kadrów). Kolejność: najmniej prób najpierw, w obrębie tego dotychczasowy ranking. Po `MAX_TRIES`=3 nieudanych próbach film jest trwale niedostępny z powodem „nieudane 3 próby”. `api/store.py::media_outcome` liczy pending z `mediaAttempts` jako `failed`. `no_captions` pozostaje trwały i nie wraca do kolejki. `mediaCoverage.transcript.source=transcript_api` przechodzi bez zmian. Testy: `tests/core/test_contract_v2_media_queue.py` (4).
+- `analysis/engine.py`: przy `INVESTWATCH_MODEL_ANNOTATE=1|on|true` `analyze()` dopisuje `finding.model` (`affectsDecision=false`) i `analysisVersion.model` tylko dla materiałów kolejek review (refer i kwalifikujący się), adRegister (included/candidate), M2 i M3. Wyjątek lub brak wag daje `model.status=unavailable` z powodem „model niedostępny”, nigdy błąd skanu. Bez flagi wynik jest identyczny. Pole `model` nie wchodzi w sygnaturę treści i trafia do widoku 2 sprawy. Testy: `tests/core/test_contract_v2_model_annotation.py` (5). Łatka `fable-ai-inferencja-patch.diff` wdrożona ręcznie (inne gating i obsługa wyjątku).
+- Ograniczenia: adnotacja kolejki jest przybliżeniem `queues_of` na poziomie findingu (nie widzi statusu `closed`, `needsRecalc`, dostępności dowodów). Nie uruchamiano pętli enrich na `.runtime/s4-live` ani realnych wag/usługi LLM.
