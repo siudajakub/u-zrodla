@@ -7,14 +7,15 @@ The shared fetcher blocks redirects and limits response size and duration.
 from hashlib import sha256
 from html.parser import HTMLParser
 import re
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, urlencode, urlsplit
 
 from tools.watch_sources import Source
-from .common import SourceError, public_link, safe_get, source_result, utc_now
+from .common import SourceError, json_object, public_link, safe_get, source_result, utc_now
 from .social import CONFIG, read_social
 
 PROFILE_LIMIT = 8
 ALIAS_LIMIT = 8
+VIDEO_LIMIT = 4
 URL_LIMIT = 32
 CHANNEL = re.compile(r"UC[A-Za-z0-9_-]{22}\Z")
 HANDLE = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_.-]{0,99}\Z")
@@ -25,6 +26,8 @@ SEEDS = {source.key for source in CONFIG.sources}
 
 def profile_url(raw):
     """Return a canonical candidate URL, rejecting content and off-site URLs."""
+    if not isinstance(raw, str):
+        return None
     raw = raw.rstrip(".,;:!?)]}")
     if not public_link(raw):
         return None
@@ -42,6 +45,43 @@ def profile_url(raw):
         if match:
             return f"https://www.tiktok.com/@{match.group(1).lower()}"
     return None
+
+
+def video_id(raw):
+    """Accept only an explicit video URL; never follow arbitrary source links."""
+    if not isinstance(raw, str):
+        return None
+    raw = raw.rstrip(".,;:!?)]}")
+    if not public_link(raw):
+        return None
+    parts = urlsplit(raw)
+    host = parts.hostname.lower()
+    if host in {"youtu.be", "www.youtu.be"}:
+        value = parts.path.strip("/")
+    elif host in {"youtube.com", "www.youtube.com", "m.youtube.com"} and parts.path == "/watch":
+        values = parse_qs(parts.query).get("v", [])
+        value = values[0] if len(values) == 1 else ""
+    else:
+        return None
+    return value if re.fullmatch(r"[A-Za-z0-9_-]{11}", value) else None
+
+
+def video_candidate(video, refs, fetch, clock):
+    """Official oEmbed identifies an author, not a stable channel ID or ownership."""
+    video_url = f"https://www.youtube.com/watch?v={video}"
+    endpoint = "https://www.youtube.com/oembed?" + urlencode({"url": video_url, "format": "json"})
+    data = json_object(fetch(endpoint, {"www.youtube.com"}))
+    author = data.get("author_name")
+    url = profile_url(data.get("author_url", ""))
+    if not isinstance(author, str) or not author.strip() or not url or urlsplit(url).hostname != "www.youtube.com":
+        raise SourceError("oEmbed nie zwrócił poprawnego publicznego profilu autora.")
+    key = "youtube-candidate:" + sha256(url.encode()).hexdigest()[:20]
+    discovery = {"profileUrl": url, "videoUrl": video_url, "references": refs,
+                 "description": "Autor filmu według YouTube oEmbed; odnośnik nie dowodzi własności konta przez autora opisu.",
+                 "discoveredAt": clock(), "method": "youtube_oembed"}
+    return {"id":key, "platform":"youtube", "name":author.strip()[:200], "url":url,
+            "discoveredVia":"Autor filmu wskazanego w opisie (YouTube oEmbed)", "crosslinkDiscovery":discovery,
+            "isSeed":False, "status":"candidate", "qualification":"candidate", "profileVerified":False}
 
 
 class ChannelMetadata(HTMLParser):
@@ -115,15 +155,21 @@ def extend_from_posts(captures, known_creators, fetch=safe_get, clock=utc_now):
     An error or budget skip is reported; it is never represented as an empty feed.
     """
     references = {}
+    videos = {}
     for post in captures:
         description = post.get("description")
         if not isinstance(description, str):
             continue
         for match in URLS.finditer(description):
             url = profile_url(match.group())
+            ref = {"captureId": post.get("id"), "creatorId": post.get("creatorId"),
+                   "url": public_link(post.get("url"))}
+            video = video_id(match.group())
+            if video and (video in videos or len(videos) < URL_LIMIT):
+                video_refs = videos.setdefault(video, [])
+                if ref not in video_refs and len(video_refs) < 8:
+                    video_refs.append(ref)
             if url:
-                ref = {"captureId": post.get("id"), "creatorId": post.get("creatorId"),
-                       "url": public_link(post.get("url"))}
                 refs = references.setdefault(url, [])
                 if ref not in refs and len(refs) < 8:
                     refs.append(ref)
@@ -179,7 +225,27 @@ def extend_from_posts(captures, known_creators, fetch=safe_get, clock=utc_now):
                    "isSeed": False}
         queue[source.key] = (Source(source.platform, source.account, creator["name"]), creator)
 
-    creators, found = [], []
+    # Keep unresolved candidates across scans; they are explicitly not verified profiles.
+    candidates = {c["id"]: c for c in known.values() if c.get("status") == "candidate"
+                  and c.get("crosslinkDiscovery", {}).get("method") == "youtube_oembed"}
+    for index, (video, refs) in enumerate(videos.items()):
+        endpoint = f"https://www.youtube.com/watch?v={video}"
+        if index >= VIDEO_LIMIT:
+            status = candidate_status(endpoint, clock, "Pominięto: limit filmów oEmbed w tym przebiegu.")
+            status["status"] = "skipped"
+            statuses.append(status)
+            continue
+        try:
+            candidate = video_candidate(video, refs, fetch, clock)
+            if candidate["id"] not in candidates:
+                candidates[candidate["id"]] = candidate
+            status = source_result("oembed:" + video, "Autor filmu YouTube", endpoint, clock(),
+                                   count=1, scope="Autor z oEmbed; konto do potwierdzenia")
+            status["status"] = "candidate"
+            statuses.append(status)
+        except SourceError as error:
+            statuses.append(candidate_status(endpoint, clock, str(error), error.status))
+    creators, found = list(candidates.values()), []
     pending = sorted(queue.values(), key=lambda item: (item[1].get("crosslinkCheckedAt") or "", item[0].key))
     for index, (source, creator) in enumerate(pending):
         if index >= PROFILE_LIMIT:
@@ -204,9 +270,10 @@ def extend_from_posts(captures, known_creators, fetch=safe_get, clock=utc_now):
     summary = source_result("crosslink-discovery", "Odkrywanie profili z opisów", "https://www.youtube.com/",
                             clock(), count=len(creators), raw_count=len(references),
                             scope="Publiczne odnośniki w opisach; brak domniemania własności")
-    if issues:
+    if issues or candidates:
         summary["status"] = "partial" if creators else "error"
-        summary["error"] = f"Nie sprawdzono w pełni {issues} profili; szczegóły w statusach źródeł."
+        summary["error"] = (f"Nie sprawdzono w pełni {issues} profili; "
+                            f"kandydaci do potwierdzenia: {len(candidates)}. Szczegóły w statusach źródeł.")
         summary.pop("lastSuccessAt", None)
     statuses.append(summary)
     return creators, found, statuses
