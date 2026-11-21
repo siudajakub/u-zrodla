@@ -21,8 +21,13 @@ KEEP = ("tp", "fp", "tn", "fn", "evaluated", "cost", "precision", "precisionCI95
         "registryNegatives", "registryInQueue", "undetermined", "errors")
 
 
-@lru_cache(maxsize=1)
 def _evaluator():
+    """The scoring tool, reloaded when its file changes (the cache is keyed by the file's digest)."""
+    return _load_evaluator(sha256((ROOT / "tools/eval_validation.py").read_bytes()).hexdigest())
+
+
+@lru_cache(maxsize=2)
+def _load_evaluator(digest):
     spec = importlib.util.spec_from_file_location("eval_validation", ROOT / "tools/eval_validation.py")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)

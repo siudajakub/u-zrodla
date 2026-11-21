@@ -160,16 +160,36 @@ def state_calibration():
         return calculate_cached(60,"rules_1_2")
     return calibration_q2.compare(value)
 
-@lru_cache(maxsize=303)
+def labeled_digest():
+    """Digest of the illustrative set's files: a cached result never outlives a change of the set."""
+    folder=Path(__file__).resolve().parents[1]/"fixtures"/"labeled"
+    digest=sha256()
+    for path in sorted(folder.glob("*.json")):
+        digest.update(path.name.encode()+sha256(path.read_bytes()).digest())
+    return digest.hexdigest()[:16]
+
 def calculate_cached(threshold,variant="rules_1_2"):
+    return _calculate(threshold,variant,labeled_digest())
+
+@lru_cache(maxsize=303)
+def _calculate(threshold,variant,digest):
     from analysis.engine import calibration as calculate
     return calculate(threshold,variant)
 
 @app.get("/v1/state")
-def state(schema:int|None=Query(None,ge=1,le=2),compact:int=Query(0),request:Request=None):
+def state(schema:int|None=Query(None,ge=1,le=2),compact:int=Query(0),findings:int=Query(1),request:Request=None):
+    """The whole state. `?findings=0` (same as GET /v1/overview) leaves the cases out: creators in short form with
+    counters (`creatorCounts`), queue counters, sources, scans, `sourceHealth*`, trend, threshold, qualification and
+    the recompute state. `compact=1` keeps the cases but drops their heavy fields."""
     chosen=wanted_schema(request,schema)
-    return {**store.state(chosen,bool(compact) if isinstance(compact,(bool,int)) else False),
+    jobs.recover_recompute()
+    return {**store.state(chosen,bool(compact) if isinstance(compact,(bool,int)) else False,bool(findings)),
             "calibration":state_calibration()}
+
+@app.get("/v1/overview")
+def overview(schema:int|None=Query(None,ge=1,le=2),request:Request=None):
+    """The light state for the desk header and the sources view: no cases (see `GET /v1/state?findings=0`)."""
+    return state(schema,0,0,request)
 
 @app.get("/v1/trend")
 def trend(days:int=Query(30,ge=1,le=365)):
@@ -187,15 +207,38 @@ def frame(video:str,name:str):
         raise HTTPException(404,"Nie ma takiego kadru.")
     return FileResponse(path,media_type="image/jpeg",headers={"Cache-Control":"private, max-age=86400"})
 
+@app.get("/v1/report")
+def report(module:Literal["M1","M2","M3"]=Query(...),format:Literal["json","csv"]="json",limit:int=Query(500,ge=1,le=5000),
+           cursor:str|None=None,queue:str|None=None,platform:str|None=None,since:str|None=None,until:str|None=None,
+           minScore:float|None=None,band:str|None=None,route:str|None=None,q:str|None=None,
+           dateField:Literal["observedAt","publishedAt"]="observedAt"):
+    """Report of one module: firm and entity type, advertiser or author, content, URL, platform, dates, route, signal
+    strength, decision status. CSV is UTF-8 with a BOM and neutralises formulas; `cursor`/`limit` page it
+    (X-Next-Cursor, X-Total-Count)."""
+    if queue is not None and queue not in store.QUEUES:
+        raise HTTPException(404,"Nie ma takiej kolejki.")
+    with store.connection() as db:
+        out=store.report_list(db,module,queue=queue,limit=limit,cursor=cursor,platform=platform,since=since,until=until,
+                              min_score=minScore,band=band,route=route,q=q,date_field=dateField)
+    if format=="json":
+        return out
+    headers={"Content-Disposition":f'attachment; filename="investwatch-raport-{module}.csv"',"X-Total-Count":str(out["total"]),
+             "Cache-Control":"private, no-store"}
+    if out["nextCursor"]:
+        headers["X-Next-Cursor"]=out["nextCursor"]
+    return Response(store.report_csv(out).encode("utf-8"),media_type="text/csv; charset=utf-8",headers=headers)
+
 @app.get("/v1/queues/{name}")
 def queue(name:str,limit:int=Query(50,ge=1,le=500),cursor:str|None=None,module:str|None=None,creator:str|None=None,
           since:str|None=None,until:str|None=None,minScore:float|None=None,q:str|None=None,section:str|None=None,
-          platform:str|None=None):
+          platform:str|None=None,band:str|None=None,route:str|None=None,
+          dateField:Literal["observedAt","publishedAt"]="observedAt"):
     if name not in store.QUEUES:
         raise HTTPException(404,"Nie ma takiej kolejki.")
     with store.connection() as db:
         return store.queue_list(db,name,limit=limit,cursor=cursor,module=module,creator=creator,since=since,until=until,
-                                min_score=minScore,q=q,section=section,platform=platform)
+                                min_score=minScore,q=q,section=section,platform=platform,band=band,route=route,
+                                date_field=dateField)
 
 @app.post("/v1/scans",status_code=202)
 def scan(body:ScanRequest):

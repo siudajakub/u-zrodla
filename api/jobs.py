@@ -21,6 +21,8 @@ logger=logging.getLogger("investwatch.worker")
 LEASE=int(os.environ.get("INVESTWATCH_LEASE_SECONDS","300"))
 BEAT_EVERY=5.0
 
+TOKEN_OPTIONAL=store.TOKEN_OPTIONAL
+
 class ScanRunner(MemoryRunner):
     """Persists steps, source state and the quota ledger of one scan owned by `owner`."""
     def __init__(self, scan_id, owner, mode="live"):
@@ -67,7 +69,9 @@ class ScanRunner(MemoryRunner):
     def quota(self, adapter, at):
         with store.connection() as db:
             day,_=store.quota_day(adapter,at)
-            return store.quota_view(adapter,store.ledger_row(db,adapter.id,day),at)
+            keys=store.ledger_keys(db,adapter.id,day)
+            return store.quota_view(adapter,store.ledger_row(db,adapter.id,day),at,keys or None,
+                                    1 if keys else store.known_key_count(db,adapter.id,day))
 
     def record(self, adapter, result, at):
         if self.mode!="live":
@@ -87,6 +91,19 @@ INLINE_RECOMPUTE_MAX=int(os.environ.get("INVESTWATCH_INLINE_RECOMPUTE_MAX","60")
 def small_enough_for_inline():
     with store.connection() as db:
         return db.execute("SELECT count(*) FROM cases").fetchone()[0]<=INLINE_RECOMPUTE_MAX
+
+def recover_recompute():
+    """A recompute that nobody picked up (no worker) is finished inside the request when the database is small.
+    A large one stays queued and /v1/state.recompute says since when it is waiting. Returns the scan id it ran, if any."""
+    with store.connection() as db:
+        status=store.recompute_status(db)
+    if status.get("state")!="waiting_for_worker" or not small_enough_for_inline():
+        return None
+    with store.connection(True) as db:
+        if status.get("stalled"):  # release the dead worker's lease so that the run can be claimed
+            db.execute("UPDATE scans SET status='queued',lease_until=0,owner=NULL WHERE id=? AND status='running'",(status["scanId"],))
+    run_inline(status["scanId"])
+    return status["scanId"]
 
 def run_inline(key):
     """Run a queued scan in the calling thread. The claim keeps a worker that picks the same message from running it twice."""
@@ -145,6 +162,23 @@ def recompute_pairs(runner):
         runner.heartbeat()
         out.append(evaluate(cap,old))
     return out
+
+def _env_number(name, cast):
+    try:
+        return cast(os.environ[name]) if os.environ.get(name) else None
+    except ValueError:
+        return None
+
+def youtube_options():
+    """Settings of the YouTube adapter taken from the environment. The channel base lives in a file under the state
+    directory (state_dir), so it survives a restart and does not travel through the scan journal or /v1/state."""
+    options={"raw_dir":store.STATE/"youtube-raw","cache_dir":store.STATE/"youtube-cache","state_dir":store.STATE/"youtube-state"}
+    for key,env,cast in (("monitor_share","INVESTWATCH_YT_MONITOR_SHARE",float),("monitor_channels","INVESTWATCH_YT_MONITOR_CHANNELS",int),
+                         ("monitor_min_hours","INVESTWATCH_YT_MONITOR_MIN_HOURS",float),("key_daily_units","INVESTWATCH_YT_KEY_DAILY_UNITS",int)):
+        value=_env_number(env,cast)
+        if value is not None:
+            options[key]=value
+    return options
 
 def build(row, owner=None):
     import json
@@ -211,7 +245,7 @@ def build(row, owner=None):
         known=store.all_objects(db,"creators")
     only=(json.loads(row.get("payload") or "{}") or {}).get("adapters") if isinstance(row,dict) else None
     runner.plan([*planned_steps(mode,only),"enrich","analyze","apply"])
-    options={"youtube":{"raw_dir":store.STATE/"youtube-raw","cache_dir":store.STATE/"youtube-cache"}}
+    options={"youtube":youtube_options()}
     discovery=discover(mode,{x["id"] for x in known},known_creators=known,runner=runner,options=options,only=only)
     runner.mark("enrich","running")
     if mode=="live":
@@ -254,7 +288,8 @@ def process(key):
                 return
             result=(store.apply_recompute(db,findings,key) if row["mode"] in ("recompute","enrich")
                     else store.apply_scan(db,findings,creators,sources,row["mode"],scan_id=key))
-            errors=[s for s in sources if s.get("status") in ("error","failed","unavailable","partial","stale","forbidden","rate_limited","limit","needs_key")]
+            errors=[s for s in sources if s.get("status") in ("error","failed","unavailable","partial","stale","forbidden","rate_limited","limit","needs_key")
+                    and not (s.get("status")=="needs_key" and (s.get("id") or "") in TOKEN_OPTIONAL)]
             status="done"
             if errors:
                 status="partial" if len(errors)<len(sources) or findings else "failed"
@@ -287,6 +322,8 @@ def work():
     from collectors.discovery import ADAPTERS
     if "youtube-replay" in ADAPTERS and (ROOT/"fixtures/raw/discovery/youtube-api-2026-11-21/replay.json.gz").is_file():
         submit("replay","bootstrap-youtube-replay-v1",{"adapters":["youtube-replay"]})
+    if "social-replay" in ADAPTERS and (ROOT/"fixtures/raw/discovery/social-2026-11-21/replay.json.gz").is_file():
+        submit("replay","bootstrap-social-replay-v1",{"adapters":["social-replay"]})
     next_check=0
     interval=int(os.environ.get("INVESTWATCH_DISCOVERY_INTERVAL","14400"))
     while True:
