@@ -1,0 +1,331 @@
+{
+ "videoId": "o2GfnmVVkO8",
+ "url": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+ "channel": "Piotr Cymcyk - Merytorycznie o Finansach",
+ "firm": "Freedom24",
+ "observedAt": "2026-11-21T19:20:07+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Gdybym miał włożyć cały majątek tylko w 3 spółki z USA, wybrałbym te!",
+  "channel": "Piotr Cymcyk - Merytorycznie o Finansach",
+  "duration": 1032,
+  "uploadDate": "20261121",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 4983,
+ "descriptionSha256": "e6cadfe2a5429ccae84bd935aa1c4010c3c53d7da39bd5f264ff4621ddb3e37f",
+ "paidPromotionFlagApi": true,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 501,
+  "spanSec": [
+   0.12,
+   1014.16
+  ],
+  "captionsSha256": "5a88c1257e0c939d7bacab2599605c38b17f717e00d602611045acf31cf9e169",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 331538,
+  "segments": 501,
+  "captionsWallSeconds": 1.84,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 4983,
+    "originalTextSha256": "e6cadfe2a5429ccae84bd935aa1c4010c3c53d7da39bd5f264ff4621ddb3e37f"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 1032
+     }
+    ],
+    "durationSec": 1032,
+    "reason": null,
+    "spanSec": [
+     0.12,
+     1014.16
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 4983 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 1032
+    }
+   ],
+   "durationSec": 1032,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": false,
+  "quote": null
+ },
+ "markingInSpeech": [
+  {
+   "start": 77,
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=77s",
+   "kind": "partner",
+   "quote": "koniecznie Freedom partnera tego odcinka. Masa instrumentów tam jest"
+  }
+ ],
+ "markersLexical": [
+  {
+   "start": 77.32,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "koniecznie Freedom partnera tego",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=77s"
+  },
+  {
+   "start": 86.84,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "Jak się spełni warunki w opisie. Można",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=86s"
+  },
+  {
+   "start": 99.479,
+   "kinds": [
+    "partner",
+    "link_w_opisie"
+   ],
+   "quote": ">> link w opisie. A partnerem",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=99s"
+  },
+  {
+   "start": 111.64,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "kupujecie na Lantre z kodem DNA 100. 100",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=111s"
+  },
+  {
+   "start": 123.56,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "cenę. Także link w opisie. Jak nie",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=123s"
+  },
+  {
+   "start": 131.44,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "partnerem z kanału, bo ja muszę być cały",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=131s"
+  },
+  {
+   "start": 162.959,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "opisie w opisie do wszystkiego. A jeśli",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=162s"
+  },
+  {
+   "start": 172.4,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "ponad 300 inwestorów. Link w opisie.",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=172s"
+  },
+  {
+   "start": 304.039,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "znajomi. Reklamodawca jest na",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=304s"
+  },
+  {
+   "start": 326.16,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "starym biznesie. Reklamy lepiej trafiają",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=326s"
+  },
+  {
+   "start": 329.88,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "reklamy. Średnia cena reklamy wzrosła w",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=329s"
+  },
+  {
+   "start": 335.039,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "W 2 lata kwartalne przychody z reklam",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=335s"
+  },
+  {
+   "start": 344.6,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "reklamie. Już pomaga. Do tego dochodzi",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=344s"
+  },
+  {
+   "start": 596.24,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "dopasowanie reklam, agent AIM, modele AI",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=596s"
+  },
+  {
+   "start": 677.44,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "frontach. Meta reklama dla konsumenta",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=677s"
+  },
+  {
+   "start": 823.199,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "grania w gry. Kod napisany pod KUUDA",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=823s"
+  },
+  {
+   "start": 833.88,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "10 lat pisze kod pod kuda. Jego firma",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=833s"
+  },
+  {
+   "start": 1006.92,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "premiumdnarynków.pl. Link w opisie tego",
+   "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=1006s"
+  }
+ ],
+ "frames": [],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=2111” w opisie (znaki 61–113).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+    "Firma: Freedom24; kandydaci z wykazu KNF: [9439434].",
+    "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+     "evidenceId": "ev-1",
+     "locator": {
+      "field": "description",
+      "charStart": 61,
+      "charEnd": 113,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 75,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": [
+    "U1"
+   ]
+  },
+  "descriptionSpeechFrames": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=2111” w opisie (znaki 61–113).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres), mowie (pełny zakres).",
+    "Firma: Freedom24; kandydaci z wykazu KNF: [9439434].",
+    "Niezbadane: kadrów nie zbadano (krok opcjonalny)."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+     "evidenceId": "ev-1",
+     "locator": {
+      "field": "description",
+      "charStart": 61,
+      "charEnd": 113,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 85,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+   "premises": [
+    "U1"
+   ]
+  }
+ }
+}

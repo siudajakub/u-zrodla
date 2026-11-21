@@ -1,0 +1,2262 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "Lds4h1LRitvqhqGk6SlmpbjdAIc",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 458201,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GUziSGHygYPBuQkrkc6yKoTU72w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UuXWJIK0VMk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T12:03:32Z",
+        "channelId": "UCv_fwQqff6zEFDxfJh_03fg",
+        "title": "STUDIO + DWIE DARMOWE WALKI + OTWARCIE GALI XTB KSW 123 W SZCZECINIE",
+        "description": "Całą galę XTB KSW 123 można oglądać w Polsce wyłącznie w CANAL+. Szczegóły oferty na stronie naszego partnera.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UuXWJIK0VMk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UuXWJIK0VMk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UuXWJIK0VMk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/UuXWJIK0VMk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/UuXWJIK0VMk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/UuXWJIK0VMk/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "KSW",
+        "liveBroadcastContent": "live",
+        "publishTime": "2026-11-21T12:03:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CLn78WpPH4a3mcYFOlVqcPY80ho",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2GOTC2JZxyA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T20:46:23Z",
+        "channelId": "UCdiAORc5zDcFqhojS9LNT0w",
+        "title": "Krach na akcjach XTB! Co KNF szykuje dla rynku CFD?",
+        "description": "TELEWIZJA NA ŻYWO ➡ http://youtube.com/@TelewizjaBIZNES24/streams OFICJALNA STRONA ➡ http://biznes24.pl ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2GOTC2JZxyA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2GOTC2JZxyA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2GOTC2JZxyA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2GOTC2JZxyA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2GOTC2JZxyA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Telewizja BIZNES24",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T20:46:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "VtBdLLTrhFX9KHKmUC-cfgeQx1c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "0Nbc_JdL9Ec"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T17:48:58Z",
+        "channelId": "UCAH85XhPoXCxSXUKdwsm0Ig",
+        "title": "Co Się Dzieje na XTB i Co Się Będzie Działo?",
+        "description": "Kurs XTB runął ze 185 zł do okolic 110 zł, a po słowach wiceprzewodniczącego KNF inwestorzy wpadli w popłoch! Czy nadzór ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0Nbc_JdL9Ec/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0Nbc_JdL9Ec/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0Nbc_JdL9Ec/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/0Nbc_JdL9Ec/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/0Nbc_JdL9Ec/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/0Nbc_JdL9Ec/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Konrad Książak - Giełda, Pieniądze, Inwestycje",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T17:48:58Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kNeGl9JdAbmZAxEpxmukCqhmU4I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "M9ReTC1tQzk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T16:18:40Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "Krach na akcjach XTB. Zakupy za 25 000 PLN. Wyniki królowej AI, Synektiku, Cyberfolks i Vercomu.",
+        "description": "Jak inwestować na giełdzie? Jak inwestować w akcje? Seria o inwestowaniu w akcje dywidendowe, budowaniu dochodu ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/M9ReTC1tQzk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/M9ReTC1tQzk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/M9ReTC1tQzk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/M9ReTC1tQzk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/M9ReTC1tQzk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T16:18:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4c5UTUXLJdXwsQ3lO5dEAj2eDUA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "muvIRrcHZaE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T15:41:06Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "Tąpnięcie na akcjach XTB! KNF bierze się za CFD?",
+        "description": "Nasza strona www: oiz.com.pl ✓ Walutomat: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/muvIRrcHZaE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/muvIRrcHZaE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/muvIRrcHZaE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/muvIRrcHZaE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/muvIRrcHZaE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T15:41:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CCyOYRNT6rz2HgC3153qyYspSdk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LQrB-dAm8P8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T12:02:40Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "Krach na akcjach XTB! Demony z KNF i CFD wracają! #gpw #xtb",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LQrB-dAm8P8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LQrB-dAm8P8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LQrB-dAm8P8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LQrB-dAm8P8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LQrB-dAm8P8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T12:02:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GV3v8FbQLMKtxIbU5CI1JIAzueE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wzxCbG1zo0I"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T07:28:37Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "Czy złoto znów zabłyśnie? | Co przyniesie tydzień? dr Przemysław Kwiecień",
+        "description": "Rezygnacja Jensena Huanga, kontrowersyjne doniesienia medialne i gwałtowna przecena akcji stawiają inwestorów przed ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wzxCbG1zo0I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wzxCbG1zo0I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wzxCbG1zo0I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wzxCbG1zo0I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wzxCbG1zo0I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T07:28:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CH7_OOIV7MZ-G1PfD2Vu7bmmQ7o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CidYtH1llKc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T18:24:04Z",
+        "channelId": "UCQiHfPlSgOTpZLnpPBIvlpg",
+        "title": "Akcje XTB spadły o 17%! Czy to okazja?",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CidYtH1llKc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CidYtH1llKc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CidYtH1llKc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CidYtH1llKc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CidYtH1llKc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Paweł Ziętek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T18:24:04Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Rb644Q_FsIEqodhQWekqTgRrKYM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mqpdZeTvkj8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T08:14:38Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "US100 zawraca i przecina kluczowe wsparcie! | Bliżej Rynków, 20.11.2026",
+        "description": "Spadki na Wall Street nabierają tempa! US100 przełamuje kluczowe wsparcie, a słabość spółek technologicznych i rosnące ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mqpdZeTvkj8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mqpdZeTvkj8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mqpdZeTvkj8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mqpdZeTvkj8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mqpdZeTvkj8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T08:14:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DptT_VNwYPQk6-5SHZp2a_2SkL0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CBUK8lJgeKw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T17:00:10Z",
+        "channelId": "UCvEV7e_zb6UsUq7BXy9cntw",
+        "title": "XTB wydaje fortunę na reklamy. Czy akcjonariusze na tym zarobią? #inwestowanie #akcje",
+        "description": "XTB reklamuje się wszędzie i szybko zdobywa klientów. Ale czy po przecenie akcji o około 25% to również okazja dla ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "kyudo | krypto & finanse",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T17:00:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "s0Egpi5OLreW0rjMX2PV31kBRvM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "V6wcqUf9fWQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T19:53:46Z",
+        "channelId": "UCLmFjtUdzo1eMvSnF8xFJYg",
+        "title": "XTB w dół o 17%! Co się właśnie stało?",
+        "description": "Akcje XTB na GPW w dół o 17% w jeden dzień! Co się właśnie stało? Wystarczyła jedna zapowiedź zastępcy przewodniczącego ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/V6wcqUf9fWQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/V6wcqUf9fWQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/V6wcqUf9fWQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/V6wcqUf9fWQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/V6wcqUf9fWQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "5mlnPL",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T19:53:46Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "qjSuVjDyF5KdK8zdldL-RZrXpVY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UAoDJU0NzMc"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T11:39:41Z",
+        "channelId": "UCHv11ztykFWf_0dhTEMLO6A",
+        "title": "Prezes XTB: Mamy apetyt na więcej. I nie chodzi tylko o Polskę. Bankowość? Jesteśmy coraz bliżej",
+        "description": "xtb #brokerage #forex #cfd Wyniki finansowe znów pozytywnie zaskoczyły rynek. O osiągnięciach finansowych, planach na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UAoDJU0NzMc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UAoDJU0NzMc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UAoDJU0NzMc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/UAoDJU0NzMc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/UAoDJU0NzMc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Parkiet",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T11:39:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6qLwqvos95F2fVnopLjgoeOefM0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DkDhwg31SoI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T17:15:53Z",
+        "channelId": "UCtTpDSRTegHewCxP9GTUaXQ",
+        "title": "XTB -20%. SZOK NA NVIDII. Debiut Anthropic. Już jest GTA VI i dolar po 4 złote. Dzieje się!",
+        "description": "Partnerem kanału jest Sharkfutures ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DkDhwg31SoI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DkDhwg31SoI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DkDhwg31SoI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DkDhwg31SoI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DkDhwg31SoI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "FXMAG - tłumaczymy świat finansów",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T17:15:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "aKFp-Jrl8qYbvH2jp89851-5fm0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YSSw-NzFOzM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T18:04:02Z",
+        "channelId": "UCQdae3gqmjZTBqqAgX5gbrg",
+        "title": "Słowa, które załamały XTB...",
+        "description": "Co wydarzyło się we wtorek na polskim i światowych rynkach finansowych? Jak i dlaczego zmieniały się notowania akcji, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YSSw-NzFOzM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YSSw-NzFOzM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YSSw-NzFOzM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YSSw-NzFOzM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YSSw-NzFOzM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Piotr Zając o rynkach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T18:04:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nZHn_WoD2oKc65Z4WWOnT4neocQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qy8k4JSBrSA"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-02T19:24:45Z",
+        "channelId": "UCAH85XhPoXCxSXUKdwsm0Ig",
+        "title": "ABB na Akcjach XTB Co Z Kursem?",
+        "description": "Trzęsienie ziemi w akcjonariacie XTB: główny akcjonariusz sprzedaje miliony akcji i traci kluczowy przywilej ze statutu! Czy to ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qy8k4JSBrSA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qy8k4JSBrSA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qy8k4JSBrSA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qy8k4JSBrSA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qy8k4JSBrSA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Konrad Książak - Giełda, Pieniądze, Inwestycje",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-02T19:24:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LFM0Q1yI_izJjz6cgMp9T3zq6Hk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "o6gRs1ZtzMM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T18:34:09Z",
+        "channelId": "UCbcGARiE4aPFIDTkwQmWMCQ",
+        "title": "XTB tąpnęło 🚨 KNF zapowiada interwencję w CFD",
+        "description": "Akcje XTB traciły w trakcie sesji blisko 19% po zapowiedzi interwencji KNF na rynku CFD. Co już wiadomo i co ta informacja ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/o6gRs1ZtzMM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/o6gRs1ZtzMM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/o6gRs1ZtzMM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/o6gRs1ZtzMM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/o6gRs1ZtzMM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Holi inwestuje | Piotr Bochnia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T18:34:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lyhcH2TbhpPZ1Lwq_TNldg7HxDg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hxXLNdF4-L4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T09:39:50Z",
+        "channelId": "UCvEV7e_zb6UsUq7BXy9cntw",
+        "title": "KNF chce zniszczyć XTB? #inwestowanie #giełda",
+        "description": "W dwie sesje z wyceny XTB zniknęło około 3,5 miliarda złotych. Powodem była zapowiedź zmian na rynku CFD. Co KNF może ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "kyudo | krypto & finanse",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T09:39:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TSIur8uor7sEU49GHWNLC0pjUeY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "i2Zsv2R6nJ8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T08:02:59Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "Czy Bitcoin spadnie poniżej 60 tys. USD? | Bliżej Rynków, 17.11.2026",
+        "description": "Bitcoin pod presją, a poziom 60 tys. USD coraz częściej pojawia się w rynkowych scenariuszach. Czy BTC czeka kolejna fala ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/i2Zsv2R6nJ8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/i2Zsv2R6nJ8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/i2Zsv2R6nJ8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/i2Zsv2R6nJ8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/i2Zsv2R6nJ8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T08:02:59Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "R89Vyy_8K3650X_x695Dv5JHcTI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tS4WVQr_Vbg"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-03T16:00:16Z",
+        "channelId": "UCbcGARiE4aPFIDTkwQmWMCQ",
+        "title": "XTB spada po wynikach 📉 Dlaczego nie sprzedaję?",
+        "description": "XTB zarobiło w III kwartale 2026 r. więcej, niż oczekiwali analitycy. Po pierwszym odbiciu kurs znów spadł. Nadal trzymam akcje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tS4WVQr_Vbg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tS4WVQr_Vbg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tS4WVQr_Vbg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tS4WVQr_Vbg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tS4WVQr_Vbg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Holi inwestuje | Piotr Bochnia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-03T16:00:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "aE44GQwJZhA6eL_5zsk3ctk1hSc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oc5X_6HqsBs"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-29T18:14:02Z",
+        "channelId": "UCMp_zLzI5_PkhndV6fXNcoQ",
+        "title": "Wstępne wyniki za III kwartał 2026 roku | Konferencja dla inwestorów",
+        "description": "Spotkanie online z przedstawicielami Zarządu XTB S.A. dla inwestorów poświęcone podsumowaniu wstępnych wyników ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oc5X_6HqsBs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oc5X_6HqsBs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oc5X_6HqsBs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oc5X_6HqsBs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oc5X_6HqsBs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Relacje Inwestorskie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-29T18:14:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CwFpkiyS9AyGWmVBcTZnpv7ALK4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pouXxWWCeFM"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-05T17:35:56Z",
+        "channelId": "UC65BgRPz27OfaozBf_NtAdg",
+        "title": "akcje xtb ostatnio w mocnej korekcie czy to zwiastun słabego kwartału? #xtb #gpw #inwestowanie #etf",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pouXxWWCeFM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pouXxWWCeFM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pouXxWWCeFM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pouXxWWCeFM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pouXxWWCeFM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Portevo-Finanse-Portfel ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-05T17:35:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "BkDFBh5wzIKorHH9PadU-gs8Wf8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2VGzRX12RXM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T18:08:19Z",
+        "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+        "title": "Krach akcji Polsatu - szykują sprzedaż spółki? XTB bije prognozy, a kurs stoi",
+        "description": "Znajdź swój cel, dla którego warto inwestować. Zacznij razem z aplikacją XTB — https://link-pso.xtb.com/pso/kdg44 Rejestrując ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2VGzRX12RXM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2VGzRX12RXM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2VGzRX12RXM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2VGzRX12RXM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2VGzRX12RXM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Piotr Cymcyk - Merytorycznie o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T18:08:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0u3ooS1wUXESdkiKK1Z_DOJtZRs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Kdy_e8vS6vE"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-17T13:30:03Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "XTB: +200% w rok! Dlaczego spółka rośnie i co może to zatrzymać?",
+        "description": "Kurs XTB wzrósł o blisko 200% w rok — z okolic 59 zł do rekordowych 177 zł w sierpniu 2026. To jedna z najsilniejszych historii ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Kdy_e8vS6vE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Kdy_e8vS6vE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Kdy_e8vS6vE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Kdy_e8vS6vE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Kdy_e8vS6vE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-17T13:30:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6pU91CD6S7Qf8k74S-DuzqOGckA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "O-4GyB8G0lw"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-12T06:38:44Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "Złoty na krawędzi | Co przyniesie tydzień? dr Przemysław Kwiecień",
+        "description": "Rosnące rentowności obligacji, napięcia geopolityczne i obawy o inflację tworzą bowiem niebezpieczną kombinację.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/O-4GyB8G0lw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/O-4GyB8G0lw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/O-4GyB8G0lw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/O-4GyB8G0lw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/O-4GyB8G0lw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-12T06:38:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ZF6y9nPyM7Z2TxnsJj3EnfR6ZN0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "eINo3nbh9-I"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-15T16:30:35Z",
+        "channelId": "UCAH85XhPoXCxSXUKdwsm0Ig",
+        "title": "Wyniki XTB! Idzie Potężna Dywidenda!",
+        "description": "XTB o krok od ściany? Sprawdzamy, czy trzeci kwartał 2026 przyniesie brutalne zderzenie z rzeczywistością, czy kolejny rekord!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eINo3nbh9-I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eINo3nbh9-I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eINo3nbh9-I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/eINo3nbh9-I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/eINo3nbh9-I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Konrad Książak - Giełda, Pieniądze, Inwestycje",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-15T16:30:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NywM3i1J8yr7cqcbYbIgv7-CxHk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "WQ7vz_o8yoo"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-15T12:00:37Z",
+        "channelId": "UCH5UB8PulkZ75fOHgcSGt2g",
+        "title": "&quot;Czy moje pieniądze są tam bezpieczne?&quot;. Prezes XTB odpowiada wprost na obawy Polaków",
+        "description": "Czy pieniądze w XTB są bezpieczne? Czy XTB to bank, fintech, dom maklerski, a może aplikacja do inwestowania? I co właściwie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WQ7vz_o8yoo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WQ7vz_o8yoo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WQ7vz_o8yoo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WQ7vz_o8yoo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WQ7vz_o8yoo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/WQ7vz_o8yoo/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "naTemat",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-15T12:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "fRghsXNjzm9oCEkb1mzOOdeucdc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YFK_8Yvkr_k"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-03T21:07:12Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "Wybory w USA. Czy Trump straci władzę?",
+        "description": "Wybory połówkowe w USA mogą mieć znaczenie nie tylko dla układu sił w Waszyngtonie, ale również dla rynków finansowych.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YFK_8Yvkr_k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YFK_8Yvkr_k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YFK_8Yvkr_k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YFK_8Yvkr_k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YFK_8Yvkr_k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-03T21:07:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YPvgL8IUngEziO2ih2EXKIzjYOc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oJztD2jjjgY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T06:32:43Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "Czy to (wreszcie) czas na korektę AI? | Co przyniesie tydzień? dr Przemysław Kwiecień",
+        "description": "Kontrakty CFD są złożonymi instrumentami i wiążą się z dużym ryzykiem szybkiej utraty środków pieniężnych z powodu dźwigni ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oJztD2jjjgY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oJztD2jjjgY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oJztD2jjjgY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oJztD2jjjgY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oJztD2jjjgY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T06:32:43Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "pqiMHfkW6LSRZRm0m287ap23gOc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8k1Fy-Go_fg"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-28T06:17:23Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "USA na skraju kryzysu długu? | Co przyniesie tydzień? dr Przemysław Kwiecień",
+        "description": "Zaplanowana na środę decyzja Fed może okazać się jednym z najważniejszych punktów września dla globalnych rynków.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8k1Fy-Go_fg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8k1Fy-Go_fg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8k1Fy-Go_fg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8k1Fy-Go_fg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8k1Fy-Go_fg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-28T06:17:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WusvyTXvr1Cb27tPbrBDfb34H2s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vVZLIzid7s8"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-08T16:00:38Z",
+        "channelId": "UC2cqc_rOjR14biUlvFqHc9A",
+        "title": "XTB SPADŁO O 16%! 🚨 JA KUPUJĘ! Czy to WIELKA OKAZJA?",
+        "description": "XTB to jedna z moich ulubionych polskich spółek i jednocześnie jedna z największych pozycji w moim prywatnym portfelu.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vVZLIzid7s8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vVZLIzid7s8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vVZLIzid7s8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vVZLIzid7s8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vVZLIzid7s8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "InwestoSfera",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-08T16:00:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6LsewosLZHviEt2TVIah_v3YbbI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pCLc41Uj2hs"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-06T06:59:34Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "Czy to koniec hossy producentów chipów? | Co przyniesie tydzień? dr Przemysław Kwiecień",
+        "description": "Początek nowego tygodnia na rynkach finansowych upływa pod znakiem pytania, czy euforia wokół sztucznej inteligencji nadal ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pCLc41Uj2hs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pCLc41Uj2hs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pCLc41Uj2hs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pCLc41Uj2hs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pCLc41Uj2hs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-06T06:59:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8DWvGgXz0kjQpxS6Sj9deSym910",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "EwMD2-aOXfU"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-29T16:22:10Z",
+        "channelId": "UCMp_zLzI5_PkhndV6fXNcoQ",
+        "title": "Zapis konferencji wynikowej - wstępne wyniki za III kwartał 2026 roku",
+        "description": "Konferencja wynikowa Zarządu XTB S.A. poświęcona wstępnym wynikom finansowym i operacyjnym za III kwartał 2026 roku, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/EwMD2-aOXfU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/EwMD2-aOXfU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/EwMD2-aOXfU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/EwMD2-aOXfU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/EwMD2-aOXfU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Relacje Inwestorskie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-29T16:22:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hJDmI6DmeCAQUuZ9jQXkJvK0Uzc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8gYiteB1k34"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-27T22:29:11Z",
+        "channelId": "UCHv11ztykFWf_0dhTEMLO6A",
+        "title": "Akcje XTB urosły już za mocno? Mateusz Chrzanowski o prognozach wynikowych za II kwartał",
+        "description": "xtb #stockmarket #gpw #akcje XTB szykuje się do publikacji wyników za drugi kwartał. Czego się po nich spodziewać? O tym w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8gYiteB1k34/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8gYiteB1k34/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8gYiteB1k34/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8gYiteB1k34/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8gYiteB1k34/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Parkiet",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-27T22:29:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kgy-UOOR38r_tnqHwPBHVxKhVBk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "f2qptRtGZV8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T20:16:48Z",
+        "channelId": "UCarSdldjMo1Cq_Xgy4kOoOQ",
+        "title": "XTB: akcje runęły prawie 20%! Co planuje KNF? 📉 #XTB #Giełda #Shorts",
+        "description": "Akcje XTB spadają o prawie 20% w jedną sesję! Co przestraszyło inwestorów i jaki związek mają z tym działania KNF wobec ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/f2qptRtGZV8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/f2qptRtGZV8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/f2qptRtGZV8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/f2qptRtGZV8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/f2qptRtGZV8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/f2qptRtGZV8/sardefault.jpg",
+            "width": 574,
+            "height": 1020
+          }
+        },
+        "channelTitle": "Inwestor z Ulicy akcje ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T20:16:48Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GbYsx4Jgfq0yLu-iAn6MReuczJM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GdiWXY7dTi8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T14:53:07Z",
+        "channelId": "UCTVB8m2FcbwBsi6DHsGSuVw",
+        "title": "XTB KSW 123 | STUDIO + DWIE DARMOWE WALKI",
+        "description": "REKLAMA: XTB | Wybierz IKE najlepsze dla Twojej emerytury: https://link-pso.xtb.com/pso/EY8Zp | Oferowane instrumenty ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GdiWXY7dTi8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GdiWXY7dTi8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GdiWXY7dTi8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/GdiWXY7dTi8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/GdiWXY7dTi8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/GdiWXY7dTi8/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "CANAL+ SPORT",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T14:53:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PVFrJtlBdSXNq1gQceiYw1t7rUc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TaoY6WYy0p0"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-02T15:53:11Z",
+        "channelId": "UCzhHyWK-xb2xiyvfMnuXoDw",
+        "title": "XTB −25% od szczytu. Sprawdziłem, czy to OKAZJA",
+        "description": "WSPARCIE NA KAWĘ - https://tipply.pl/@Paradygmat 2 miesiące gratis + 20% taniej dla widzów ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TaoY6WYy0p0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TaoY6WYy0p0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TaoY6WYy0p0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TaoY6WYy0p0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TaoY6WYy0p0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/TaoY6WYy0p0/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Paradygmat",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-02T15:53:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "59uO3Pbn6n6s8LkT2VIxwp63RiE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FH71hlXo8-c"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T17:34:30Z",
+        "channelId": "UCAH85XhPoXCxSXUKdwsm0Ig",
+        "title": "Mamy Wyniki XTB! Jest Mocno! Zaczynamy Wzrosty?",
+        "description": "XTB zaskakuje wyniki za III kwartał 2026! Zysk netto na poziomie 213,7 miliona złotych wyraźnie przebija konsensus analityków, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FH71hlXo8-c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FH71hlXo8-c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FH71hlXo8-c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/FH71hlXo8-c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/FH71hlXo8-c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Konrad Książak - Giełda, Pieniądze, Inwestycje",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T17:34:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "29Vc1endarn46EWMVCBjq7kM7Q4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nOOI8BRsq_w"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-07T14:49:21Z",
+        "channelId": "UCcJq-5bSAMp2ZCOR8kacfmA",
+        "title": "Ogromny spadek XTB, kupiłem akcje za 17 000 zł!",
+        "description": "Zacznij być dumny z inwestowania w XTB: https://geolink.xtb.com/wMYiO ▶️ Teraz, rejestrując się w XTB z kodem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nOOI8BRsq_w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nOOI8BRsq_w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nOOI8BRsq_w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nOOI8BRsq_w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nOOI8BRsq_w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowa TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-07T14:49:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Qj-J9AIGwnLVbXic-j0sAycW398",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xOhPQWtuD7s"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-10T15:24:56Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "CREOTECH-y, XTB, NIEWIADÓW z korektą. Inwestorzy patrzą na SpaceX i AI | Zamknięcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xOhPQWtuD7s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xOhPQWtuD7s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xOhPQWtuD7s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xOhPQWtuD7s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xOhPQWtuD7s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-10T15:24:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-TGnhZ2f9GrE-6pt8PPYHROl2o0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TY95T_bDurQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-09T07:41:13Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "Jak Trump przegrał wybory? | Co przyniesie tydzień? Michał Stajniak",
+        "description": "Donald Trump nie startował w listopadowych wyborach do Kongresu, ale ich wynik okazał się politycznym ciosem dla jego ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TY95T_bDurQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TY95T_bDurQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TY95T_bDurQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TY95T_bDurQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TY95T_bDurQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-09T07:41:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UthtxgIjkEFri__cyHMc0XqOFjg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dNrw_AikSPQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-17T10:00:11Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "To już czas na XTB? Asbis się wypalił? ATH na WIG i WIG20! | Te spółki z GPW mam na oku!",
+        "description": "Myślisz o przyszłości? Sprawdź możliwości IKE i IKZE w XTB, klikając w link i wpisując w trakcie rejestracji kod “OIZ”: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dNrw_AikSPQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dNrw_AikSPQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dNrw_AikSPQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dNrw_AikSPQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dNrw_AikSPQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-17T10:00:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LpiuhelCNbgF597INa_AeTPc3Cc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZgKZ7lkRdg0"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-17T06:25:41Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "Czy jest potencjał do dalszych wzrostów? | Co przyniesie tydzień? dr Przemysław Kwiecień",
+        "description": "Wall Street pozostaje na rekordowych poziomach, ale tym razem za wzrostami stoją nie tylko oczekiwania inwestorów.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZgKZ7lkRdg0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZgKZ7lkRdg0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZgKZ7lkRdg0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZgKZ7lkRdg0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZgKZ7lkRdg0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-17T06:25:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "pJ9Q_UXTnZBeUxYXQs6iSVRJTvg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sM2rk2ARDZw"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-31T06:26:05Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "Jastrzębi Warsh umacnia dolara | Co przyniesie tydzień? dr Przemysław Kwiecień",
+        "description": "Jastrzębie wypowiedzi Kevina Warsha wspierają dolara i zwiększają oczekiwania, że polityka monetarna w USA może pozostać ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sM2rk2ARDZw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sM2rk2ARDZw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sM2rk2ARDZw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sM2rk2ARDZw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sM2rk2ARDZw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-31T06:26:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kKNzGpXEWRpeB6aFhw3oBLUEDnE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "npiIMP6N-nI"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-03T14:00:35Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Co się stało z XTB? Analiza Fundamentalna",
+        "description": "XTB zaraportowało ponad MILIARD złotych przychodów w jednym kwartale. Rekord wszech czasów. Kurs wystrzelił. Wszyscy biją ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/npiIMP6N-nI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/npiIMP6N-nI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/npiIMP6N-nI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/npiIMP6N-nI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/npiIMP6N-nI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/npiIMP6N-nI/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-03T14:00:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QYTbHJNyMP3UFA_JMROOt93L_HA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qdpR3RXuOZo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T12:01:16Z",
+        "channelId": "UCv_fwQqff6zEFDxfJh_03fg",
+        "title": "XTB KSW 123: Ważenie / Weigh-Ins (Held, Mircea, Ziółkowski, Szymański) | VLOG - Fight Week",
+        "description": "Zobacz vloga z ważenia przed XTB KSW 123 ******************** XTB KSW 123 odbędzie się 21 listopada w Szczecinie.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qdpR3RXuOZo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qdpR3RXuOZo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qdpR3RXuOZo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qdpR3RXuOZo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qdpR3RXuOZo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "KSW",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T12:01:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "H5jhfLa5FlL8RxoZYu-5y55j3jg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TozRYPrqRsg"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-15T08:00:31Z",
+        "channelId": "UC4IuBQ0i0z4l1jnHEHVcelQ",
+        "title": "Czy XTB to kolos na glinianych nogach? Prezes odpowiada!",
+        "description": "SUBSKRYBUJ KANAŁ: https://www.youtube.com/@biznesinfopl/?sub_confirmation=1 Znajdziesz nas na: ➡️ portalu ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TozRYPrqRsg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TozRYPrqRsg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TozRYPrqRsg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TozRYPrqRsg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TozRYPrqRsg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biznes Info",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-15T08:00:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Uwd5SU8MlA9YC0gkpLI6liqwUcw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Ar6xxxp2_ck"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T06:45:11Z",
+        "channelId": "UCdiAORc5zDcFqhojS9LNT0w",
+        "title": "Dlaczego akcje XTB spadły o 17%? Słowa wiceszefa KNF o bukmacherce",
+        "description": "TELEWIZJA NA ŻYWO ➡ http://youtube.com/@TelewizjaBIZNES24/streams OFICJALNA STRONA ➡ http://biznes24.pl ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ar6xxxp2_ck/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ar6xxxp2_ck/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ar6xxxp2_ck/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Ar6xxxp2_ck/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Ar6xxxp2_ck/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/Ar6xxxp2_ck/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Telewizja BIZNES24",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T06:45:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "qpANTtFDkkYgjKlQfhzJSCgWRQk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sYIp2P9EXqI"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-30T13:04:21Z",
+        "channelId": "UCMp_zLzI5_PkhndV6fXNcoQ",
+        "title": "Wstępne wyniki za I półrocze 2026 roku | Konferencja dla inwestorów",
+        "description": "Spotkanie online z przedstawicielami Zarządu XTB S.A. dla inwestorów poświęcone podsumowaniu wstępnych wyników ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sYIp2P9EXqI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sYIp2P9EXqI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sYIp2P9EXqI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sYIp2P9EXqI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sYIp2P9EXqI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Relacje Inwestorskie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-30T13:04:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "xRaJI1Mt8xmExZOpZ8xOUp2t95s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VZcFnXz8EZ0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T15:00:11Z",
+        "channelId": "UC5SCWle5EgiN7vzMMwPOpug",
+        "title": "NA GRACH MOŻNA ZARABIAĆ #reklama #xtb",
+        "description": "Chcesz, aby Twoje pieniądze pracowały dla Ciebie? Zacznij naukę inwestowania z bezpłatnym kursem od XTB. Podczas ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VZcFnXz8EZ0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VZcFnXz8EZ0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VZcFnXz8EZ0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VZcFnXz8EZ0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VZcFnXz8EZ0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kiszak",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T15:00:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "qLNn5vx38g6QRM--l5YYkMj60Zg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "orIJG9Vw-zs"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-30T16:57:27Z",
+        "channelId": "UCdZ7DSk48Meff2cURImIxwg",
+        "title": "XTB na historycznych szczytach. Czy jest jeszcze sens kupować akcje?",
+        "description": "XTB opublikowało rekordowe wyniki za pierwsze półrocze 2026 roku. Spółka osiągnęła ponad 2 mld zł przychodów oraz ponad 1 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/orIJG9Vw-zs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/orIJG9Vw-zs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/orIJG9Vw-zs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/orIJG9Vw-zs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/orIJG9Vw-zs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "InwestON",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-30T16:57:27Z"
+      }
+    }
+  ]
+}

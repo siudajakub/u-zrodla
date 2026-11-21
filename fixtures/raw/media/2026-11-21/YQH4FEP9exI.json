@@ -1,0 +1,222 @@
+{
+ "videoId": "YQH4FEP9exI",
+ "url": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+ "channel": "Comparic Rynki",
+ "firm": "XTB",
+ "observedAt": "2026-11-21T19:20:07+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "NIEMCY PĘKAJĄ Z TRZECH STRON NARAZ. A czwarta strona to Polska",
+  "channel": "Comparic Rynki",
+  "duration": 871,
+  "uploadDate": "20261121",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 4568,
+ "descriptionSha256": "10f47e27b570009b95b5ff7c9e11111229c30cf9fe2e38e718b189f099e55bb9",
+ "paidPromotionFlagApi": null,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 342,
+  "spanSec": [
+   0.3,
+   872.901
+  ],
+  "captionsSha256": "1847ca83f53aad9b9b8c293288905b469e242c91ef7c917fe3f08698de179f51",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 219670,
+  "segments": 342,
+  "captionsWallSeconds": 3.53,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 4568,
+    "originalTextSha256": "10f47e27b570009b95b5ff7c9e11111229c30cf9fe2e38e718b189f099e55bb9"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 871
+     }
+    ],
+    "durationSec": 871,
+    "reason": null,
+    "spanSec": [
+     0.3,
+     872.901
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 4568 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 871
+    }
+   ],
+   "durationSec": 871,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": false,
+  "quote": null
+ },
+ "markingInSpeech": [
+  {
+   "start": 697,
+   "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI&t=697s",
+   "kind": "partner",
+   "quote": "macie u partnera tego odcinka XTB, a z kodem COMPARYK dorzucają jeszcze darmowy"
+  }
+ ],
+ "markersLexical": [
+  {
+   "start": 438.395,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "jeden z partnerów tego odcinka to",
+   "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI&t=438s"
+  },
+  {
+   "start": 475.295,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "chcecie sprawdzić jak jeździ przez kod",
+   "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI&t=475s"
+  },
+  {
+   "start": 480.295,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "Link jest też w opisie, a w formularzu",
+   "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI&t=480s"
+  },
+  {
+   "start": 697.798,
+   "kinds": [
+    "partner",
+    "broker"
+   ],
+   "quote": "macie u partnera tego odcinka XTB, a z",
+   "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI&t=697s"
+  },
+  {
+   "start": 700.798,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "kodem COMPARYK dorzucają jeszcze darmowy",
+   "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI&t=700s"
+  }
+ ],
+ "frames": [],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://link-pso.xtb.com/pso/GFTfa” w opisie (znaki 232–266).",
+    "Dodatkowy dowód relacji (creator_code): „Kod „COMPARIC” przy rejestracji = darmowy kurs inwestowania.” w opisie (znaki 379–439).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+    "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+    "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny); flaga płatnej promocji niesprawdzona."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+     "evidenceId": "ev-3",
+     "locator": {
+      "field": "description",
+      "charStart": 232,
+      "charEnd": 266,
+      "occurrences": 1
+     }
+    },
+    {
+     "start": null,
+     "end": null,
+     "label": "Dowód relacji handlowej",
+     "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+     "evidenceId": "ev-4",
+     "locator": {
+      "field": "description",
+      "charStart": 379,
+      "charEnd": 439,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 85,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": [
+    "U1"
+   ]
+  },
+  "descriptionSpeechFrames": {
+   "route": "no_signal",
+   "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+   "reasons": [],
+   "moments": [],
+   "completeReason": null,
+   "relationship": "declared",
+   "score": 0,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+   "premises": [
+    "U1"
+   ]
+  }
+ }
+}

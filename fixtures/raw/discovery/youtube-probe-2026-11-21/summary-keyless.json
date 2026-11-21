@@ -1,0 +1,64 @@
+{
+  "mode": "keyless",
+  "finishedAt": "2026-11-21T18:30:41+00:00",
+  "seededChannels": [
+    "UCelOnoH_P-vJgAHSAcMKQiw",
+    "UCnmJzS-tFT7DlxIMFxYGcHw"
+  ],
+  "routes": {
+    "data_api_v3": {
+      "requests": 1,
+      "ok": 0,
+      "errors": [
+        "data-api-search-without-key: 403"
+      ],
+      "results": 0,
+      "status": "wymaga klucza"
+    },
+    "apple_podcasts": {
+      "requests": 9,
+      "ok": 9,
+      "errors": [],
+      "results": 0
+    },
+    "podcast_rss": {
+      "requests": 12,
+      "ok": 12,
+      "errors": [],
+      "results": 0,
+      "youtubeLinks": {
+        "profiles": [
+          "https://www.youtube.com/@eToroDE",
+          "https://www.youtube.com/@eToroItalia",
+          "https://www.youtube.com/@etoro",
+          "https://www.youtube.com/@etoro?sub_confirmation=1",
+          "https://www.youtube.com/@etoro?sub_confirmation=1&nbsp"
+        ],
+        "videos": 188
+      }
+    },
+    "channel_page": {
+      "requests": 8,
+      "ok": 8,
+      "errors": [],
+      "results": 0
+    },
+    "oembed": {
+      "requests": 3,
+      "ok": 3,
+      "errors": [],
+      "results": 0
+    },
+    "wikidata": {
+      "requests": 1,
+      "ok": 1,
+      "errors": [],
+      "results": 1
+    }
+  },
+  "results": 1,
+  "uniqueChannels": 1,
+  "uniqueVideos": 0,
+  "promoWithBrand": [],
+  "note": "channelId znormalizowane do prefiksu UC po przebiegu (bez nowych żądań); duże pliki .html/.xml spakowane gzip, sha256 w requests.jsonl dotyczy treści nieskompresowanej."
+}

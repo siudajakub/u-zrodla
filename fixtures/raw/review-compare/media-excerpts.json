@@ -1,0 +1,1860 @@
+{
+ "note": "Okna ±40 s wokół znaczników agenta C z pełnych auto-napisów (.runtime/media-cache/<id>/transcript.json). C zbadał całą mowę; fikstura przechowuje tylko okna. Pełne transkrypty pozostają w ignorowanym cache.",
+ "videos": {
+  "CDk20n4u9Kk": {
+   "mediaFixture": "fixtures/raw/media/2026-11-21/CDk20n4u9Kk.json",
+   "captionsSha256": "a2fc9171060ae7e2a1d6bc8733ae24acd7032340f896f233e323f095b7e71ab2",
+   "fullSegmentCount": 434,
+   "windowSec": 40,
+   "windowCenters": [
+    614.598
+   ],
+   "segments": [
+    {
+     "start": 574.897,
+     "end": 577.687,
+     "text": "o pół procenta, a akcje Aramco nawet",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=574s"
+    },
+    {
+     "start": 577.697,
+     "end": 579.987,
+     "text": "lekko zyskały. Ludzie w mieście budzą",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=577s"
+    },
+    {
+     "start": 579.997,
+     "end": 582.187,
+     "text": "się w nocy przez alarmy, a inwestorzy na",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=579s"
+    },
+    {
+     "start": 582.197,
+     "end": 584.687,
+     "text": "miejscowej giełdzie wzruszają ramionami.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=582s"
+    },
+    {
+     "start": 584.697,
+     "end": 586.487,
+     "text": "Złoto też nie zachowuje się jak w czasie",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=584s"
+    },
+    {
+     "start": 586.497,
+     "end": 588.787,
+     "text": "wojny. W czwartek rano było blisko",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=586s"
+    },
+    {
+     "start": 588.797,
+     "end": 591.087,
+     "text": "najniższego poziomu od ponad roku, bo",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=588s"
+    },
+    {
+     "start": 591.097,
+     "end": 593.487,
+     "text": "inwestorzy bardziej niż Huti boją się",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=591s"
+    },
+    {
+     "start": 593.497,
+     "end": 595.987,
+     "text": "mocnego dolara, no i kolejnej podwyżki",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=593s"
+    },
+    {
+     "start": 595.997,
+     "end": 598.287,
+     "text": "stóp w Stanach Zjednoczonych. Takie noce",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=595s"
+    },
+    {
+     "start": 598.297,
+     "end": 600.087,
+     "text": "jak ta w Rijadzie najlepiej widać na",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=598s"
+    },
+    {
+     "start": 600.097,
+     "end": 602.987,
+     "text": "wykresie ropy. Huk o 4:00 rano, a rynek",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=600s"
+    },
+    {
+     "start": 602.997,
+     "end": 605.387,
+     "text": "po kilku godzinach wraca do tego, co",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=602s"
+    },
+    {
+     "start": 605.397,
+     "end": 607.487,
+     "text": "ważne dla niego, czyli do zapasów i",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=605s"
+    },
+    {
+     "start": 607.497,
+     "end": 610.387,
+     "text": "podaży. A A chce sam patrzeć, jak ropa",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=607s"
+    },
+    {
+     "start": 610.397,
+     "end": 612.188,
+     "text": "reaguje na wojnę, a nie czytać o tym",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=610s"
+    },
+    {
+     "start": 612.198,
+     "end": 614.588,
+     "text": "dzień później, kontrakty na ropę Brent",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=612s"
+    },
+    {
+     "start": 614.598,
+     "end": 617.388,
+     "text": "znajdziecie u partnera tego odcinka XTB.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=614s"
+    },
+    {
+     "start": 617.398,
+     "end": 619.288,
+     "text": "A z kodem Komparik dorzucają jeszcze",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=617s"
+    },
+    {
+     "start": 619.298,
+     "end": 621.388,
+     "text": "darmowy kurs inwestowania. Oczywiście",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=619s"
+    },
+    {
+     "start": 621.398,
+     "end": 623.188,
+     "text": "chyba nie muszę was przekonywać, że",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=621s"
+    },
+    {
+     "start": 623.198,
+     "end": 625.788,
+     "text": "inwestowanie w ropę bywa ryzykowne. Dla",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=623s"
+    },
+    {
+     "start": 625.798,
+     "end": 628.288,
+     "text": "nas wszystko ma bardzo konkretny wymiar.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=625s"
+    },
+    {
+     "start": 628.298,
+     "end": 630.388,
+     "text": "Według Polskiej Organizacji Przemysłu i",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=628s"
+    },
+    {
+     "start": 630.398,
+     "end": 632.488,
+     "text": "Handlu Naftowego w zeszłym roku z Arabii",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=630s"
+    },
+    {
+     "start": 632.498,
+     "end": 635.988,
+     "text": "Saudyjskiej przypłynęło prawie 47% całej",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=632s"
+    },
+    {
+     "start": 635.998,
+     "end": 639.088,
+     "text": "ropy dostarczonej do polskich rafinerii.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=635s"
+    },
+    {
+     "start": 639.098,
+     "end": 641.088,
+     "text": "To już nie jest jeden z dostawców, to",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=639s"
+    },
+    {
+     "start": 641.098,
+     "end": 643.388,
+     "text": "główne źródło. Jeszcze kilka lat temu",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=641s"
+    },
+    {
+     "start": 643.398,
+     "end": 645.888,
+     "text": "większość ropy płynęła do nas z Rosji",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=643s"
+    },
+    {
+     "start": 645.898,
+     "end": 649.588,
+     "text": "rurociągiem Przyjaźń. Od początku 2023",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=645s"
+    },
+    {
+     "start": 649.598,
+     "end": 651.588,
+     "text": "roku tego kierunku dla Orlenu już nie",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=649s"
+    },
+    {
+     "start": 651.598,
+     "end": 654.188,
+     "text": "ma, a lukę w dużej części wypełniła",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=651s"
+    },
+    {
+     "start": 654.198,
+     "end": 656.588,
+     "text": "właśnie Arabia Saudyjska. Uciekliśmy od",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=654s"
+    }
+   ],
+   "mediaCoverage": {
+    "transcript": {
+     "state": "full",
+     "source": "auto_captions",
+     "windows": [
+      {
+       "start": 0,
+       "end": 1065
+      }
+     ],
+     "durationSec": 1065,
+     "reason": null
+    },
+    "frames": {
+     "state": "not_collected",
+     "moments": [],
+     "intervalSec": null
+    }
+   },
+   "frames": [
+    {
+     "kind": "frame",
+     "method": "stream_ffmpeg_360p",
+     "time": 614.0,
+     "requestedTime": 614.0,
+     "path": ".runtime/media-cache/CDk20n4u9Kk/frames/stream_360p_000614.jpg",
+     "sha256": "9abf09dee670760e393fca829890fe3b779abcb45d044580697c8b3a3a6bc15d",
+     "width": 640,
+     "height": 360,
+     "bytesFile": 79486,
+     "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=614s",
+     "sourceVersion": {
+      "videoId": "CDk20n4u9Kk",
+      "readAt": "2026-11-21T18:52:52+00:00",
+      "source": "youtube-captions-v1",
+      "captionsSha256": "a2fc9171060ae7e2a1d6bc8733ae24acd7032340f896f233e323f095b7e71ab2",
+      "descriptionSha256": "17916af3c9d62a052b62462a1b795b8eff97ca126deb58e40ed977d40097ac6a",
+      "ytDlpVersion": "2026.10.26"
+     },
+     "bytesFetchedLive": 140433,
+     "observation": "Lewy górny róg: etykieta „REKLAMA” nad banerem XTB (z kodem), u dołu pasek XTB i „Oferowane instrumenty są ryzykowne. Inwestuj odpowiedzialnie”. Oznaczenie reklamy WIDOCZNE na ekranie."
+    }
+   ]
+  },
+  "xtMqKkFO-0M": {
+   "mediaFixture": "fixtures/raw/media/2026-11-21/xtMqKkFO-0M.json",
+   "captionsSha256": "bb6de6ef588ae0f2a6110617972a7d87099f929d740f2f3ba65f21fd04834337",
+   "fullSegmentCount": 75,
+   "windowSec": 40,
+   "windowCenters": [
+    109.6
+   ],
+   "segments": [
+    {
+     "start": 69.8,
+     "end": 72.59,
+     "text": "żeby zobaczyć, co tam się zadzieje",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=69s"
+    },
+    {
+     "start": 72.6,
+     "end": 77.29,
+     "text": "no to jeszcze będę dokupował pewnie.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=72s"
+    },
+    {
+     "start": 77.3,
+     "end": 80.09,
+     "text": "Ogólnie ostatnio dokupowałem Bitcoina,",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=77s"
+    },
+    {
+     "start": 80.1,
+     "end": 81.99,
+     "text": "ale no oczywiście to się nie liczy, bo",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=80s"
+    },
+    {
+     "start": 82.0,
+     "end": 84.29,
+     "text": "to nie na XTB.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=82s"
+    },
+    {
+     "start": 84.3,
+     "end": 87.99,
+     "text": "No ale co? Ja wolę sobie brać spota niż",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=84s"
+    },
+    {
+     "start": 88.0,
+     "end": 91.09,
+     "text": "te te ETF-y.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=88s"
+    },
+    {
+     "start": 91.1,
+     "end": 93.69,
+     "text": "Może sobie gdzieś tu jeszcze coś wrzucę",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=91s"
+    },
+    {
+     "start": 93.7,
+     "end": 95.59,
+     "text": "tak, żeby było chociaż",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=93s"
+    },
+    {
+     "start": 95.6,
+     "end": 98.09,
+     "text": "jakaś ekspozycja tutaj na portfelu na",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=95s"
+    },
+    {
+     "start": 98.1,
+     "end": 100.39,
+     "text": "tym.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=98s"
+    },
+    {
+     "start": 100.4,
+     "end": 101.59,
+     "text": "No ale",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=100s"
+    },
+    {
+     "start": 101.6,
+     "end": 103.89,
+     "text": "nie wiem, to zobaczymy. Na razie mam co",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=101s"
+    },
+    {
+     "start": 103.9,
+     "end": 105.69,
+     "text": "tutaj do uśredniania, to chyba nie ma",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=103s"
+    },
+    {
+     "start": 105.7,
+     "end": 108.09,
+     "text": "sensu tego jakoś tam",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=105s"
+    },
+    {
+     "start": 108.1,
+     "end": 109.59,
+     "text": "łączyć.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=108s"
+    },
+    {
+     "start": 109.6,
+     "end": 112.09,
+     "text": "Partnerem odcinka jest XTB, a z kodem",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=109s"
+    },
+    {
+     "start": 112.1,
+     "end": 114.39,
+     "text": "DETERMINACJA możecie odebrać darmowy",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=112s"
+    },
+    {
+     "start": 114.4,
+     "end": 116.89,
+     "text": "kurs o inwestowaniu. Co się działo na",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=114s"
+    },
+    {
+     "start": 116.9,
+     "end": 118.09,
+     "text": "portfelu?",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=116s"
+    },
+    {
+     "start": 118.1,
+     "end": 120.782,
+     "text": "No uśredniłem sobie Netflixa powalającą",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=118s"
+    },
+    {
+     "start": 120.792,
+     "end": 124.482,
+     "text": "kwotę aż 200 zł.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=120s"
+    },
+    {
+     "start": 124.492,
+     "end": 126.682,
+     "text": "No i to było śmieszne właśnie, że zaraz",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=124s"
+    },
+    {
+     "start": 126.692,
+     "end": 131.182,
+     "text": "po kupnie uśredniło tą cenę o 0,3",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=126s"
+    },
+    {
+     "start": 131.192,
+     "end": 132.082,
+     "text": "procent.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=131s"
+    },
+    {
+     "start": 132.092,
+     "end": 133.482,
+     "text": "Liczę na to",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=132s"
+    },
+    {
+     "start": 133.492,
+     "end": 135.882,
+     "text": "powodzenia z takim uśrednianiem.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=133s"
+    },
+    {
+     "start": 135.892,
+     "end": 138.182,
+     "text": "Ale no nie ma co się dziwić, jak jest to",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=135s"
+    },
+    {
+     "start": 138.192,
+     "end": 139.782,
+     "text": "taka po prostu dysproporcja, bo ta",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=138s"
+    },
+    {
+     "start": 139.792,
+     "end": 142.282,
+     "text": "pozycja jest już tak duża, że duża. No",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=139s"
+    },
+    {
+     "start": 142.292,
+     "end": 144.382,
+     "text": "wiadomo, dla was pewnie jest mikro",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=142s"
+    },
+    {
+     "start": 144.392,
+     "end": 146.882,
+     "text": "jakieś, mikrocypek.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=144s"
+    },
+    {
+     "start": 146.892,
+     "end": 148.982,
+     "text": "Ale no dla mnie jest duża.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=146s"
+    },
+    {
+     "start": 148.992,
+     "end": 150.282,
+     "text": "Sprzedaję je w sensie na skalę tego",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=148s"
+    }
+   ],
+   "mediaCoverage": {
+    "transcript": {
+     "state": "full",
+     "source": "auto_captions",
+     "windows": [
+      {
+       "start": 0,
+       "end": 204
+      }
+     ],
+     "durationSec": 204,
+     "reason": null
+    },
+    "frames": {
+     "state": "not_collected",
+     "moments": [],
+     "intervalSec": null
+    }
+   },
+   "frames": [
+    {
+     "kind": "frame",
+     "method": "storyboard_320x180",
+     "time": 109.85,
+     "requestedTime": 109.0,
+     "path": ".runtime/media-cache/xtMqKkFO-0M/frames/storyboard_320x180_000109.jpg",
+     "sha256": "97e2c98a3428386f3d40afdc9109117e48c3a70b25d57af119563402a5047366",
+     "width": 320,
+     "height": 180,
+     "bytesFile": 19628,
+     "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=109s",
+     "sourceVersion": {
+      "videoId": "xtMqKkFO-0M",
+      "readAt": "2026-11-21T18:52:52+00:00",
+      "source": "youtube-captions-v1",
+      "captionsSha256": "bb6de6ef588ae0f2a6110617972a7d87099f929d740f2f3ba65f21fd04834337",
+      "descriptionSha256": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716",
+      "ytDlpVersion": "2026.10.26"
+     },
+     "bytesFetchedLive": 47434,
+     "observation": "Plansza „Z kodem: DETERMINACJA”, „Partnerem kanału jest XTB”, ostrzeżenie o ryzyku. Deklaracja partnerstwa WIDOCZNA (320x180, czytelna)."
+    }
+   ]
+  },
+  "-HpCSKp9bqk": {
+   "mediaFixture": "fixtures/raw/media/2026-11-21/-HpCSKp9bqk.json",
+   "captionsSha256": "06d2db1abf93b73ab5e7589276805a1626e800718f93f512ef71a40793a8abb4",
+   "fullSegmentCount": 516,
+   "windowSec": 40,
+   "windowCenters": [
+    94.6
+   ],
+   "segments": [
+    {
+     "start": 56.2,
+     "end": 57.39,
+     "text": "mieszkania w największych polskich",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=56s"
+    },
+    {
+     "start": 57.4,
+     "end": 60.59,
+     "text": "miastach potaniały rok do roku. Pierwszy",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=57s"
+    },
+    {
+     "start": 60.6,
+     "end": 63.79,
+     "text": "raz od 12 lat. Od tamtej pory stoją w",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=60s"
+    },
+    {
+     "start": 63.8,
+     "end": 65.89,
+     "text": "miejscu, a patrząc na inflację jeszcze",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=63s"
+    },
+    {
+     "start": 65.9,
+     "end": 67.99,
+     "text": "są tak naprawdę tańsze o 5%",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=65s"
+    },
+    {
+     "start": 68.0,
+     "end": 69.59,
+     "text": "niż półtora roku temu. I mimo to, że w",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=68s"
+    },
+    {
+     "start": 69.6,
+     "end": 71.19,
+     "text": "tym czasie koszt kredytu jednak przecież",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=69s"
+    },
+    {
+     "start": 71.2,
+     "end": 72.99,
+     "text": "stanie o dwa punkty procentowe. Pokażę",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=71s"
+    },
+    {
+     "start": 73.0,
+     "end": 75.49,
+     "text": "wam swoją prognozę sprzed półtora roku o",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=73s"
+    },
+    {
+     "start": 75.5,
+     "end": 77.29,
+     "text": "właśnie rynku mieszkań i pokażę trzy",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=75s"
+    },
+    {
+     "start": 77.3,
+     "end": 79.99,
+     "text": "powody, dla których te silniki",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=77s"
+    },
+    {
+     "start": 80.0,
+     "end": 82.19,
+     "text": "nie wrócą tak szybko. Więc nie.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=80s"
+    },
+    {
+     "start": 82.2,
+     "end": 84.39,
+     "text": "Mieszkanie to nie jest dziś dobra",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=82s"
+    },
+    {
+     "start": 84.4,
+     "end": 85.89,
+     "text": "inwestycja.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=84s"
+    },
+    {
+     "start": 85.9,
+     "end": 87.69,
+     "text": "W końcu. A skoro mieszkania w dużych",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=85s"
+    },
+    {
+     "start": 87.7,
+     "end": 88.99,
+     "text": "miastach realnie tanieją, to coraz",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=87s"
+    },
+    {
+     "start": 89.0,
+     "end": 90.59,
+     "text": "więcej osób szuka dla swoich",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=89s"
+    },
+    {
+     "start": 90.6,
+     "end": 92.39,
+     "text": "oszczędności innego miejsca niż beton i",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=90s"
+    },
+    {
+     "start": 92.4,
+     "end": 94.59,
+     "text": "bardzo dobrze i mogą to robić chociażby",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=92s"
+    },
+    {
+     "start": 94.6,
+     "end": 95.89,
+     "text": "dzięki partnerowi tego odcinka, jakim",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=94s"
+    },
+    {
+     "start": 95.9,
+     "end": 98.19,
+     "text": "jest XTB, polska aplikacja inwestycyjna.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=95s"
+    },
+    {
+     "start": 98.2,
+     "end": 100.19,
+     "text": "To jest kupicie kupicie sobie tam akcje,",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=98s"
+    },
+    {
+     "start": 100.2,
+     "end": 101.89,
+     "text": "ETF-y bez prowizji do 100 000 euro",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=100s"
+    },
+    {
+     "start": 101.9,
+     "end": 103.29,
+     "text": "obrotu miesięcznie, a jeśli założycie",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=101s"
+    },
+    {
+     "start": 103.3,
+     "end": 104.69,
+     "text": "konto z linka w opisie, podacie kod DN",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=103s"
+    },
+    {
+     "start": 104.7,
+     "end": 106.09,
+     "text": "na rynków, to dostaniecie też specjalny",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=104s"
+    },
+    {
+     "start": 106.1,
+     "end": 108.19,
+     "text": "kurs zarządzania finansami od podstaw.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=106s"
+    },
+    {
+     "start": 108.2,
+     "end": 109.29,
+     "text": "Wszyscy będą na szczęśliwi wtedy.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=108s"
+    },
+    {
+     "start": 109.3,
+     "end": 110.79,
+     "text": "Wszyscy są i będą szczęśliwi. Tylko",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=109s"
+    },
+    {
+     "start": 110.8,
+     "end": 111.79,
+     "text": "pamiętajcie, że inwestowanie jest",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=110s"
+    },
+    {
+     "start": 111.8,
+     "end": 113.99,
+     "text": "ryzykowne, zawsze, ale mieszkania też.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=111s"
+    },
+    {
+     "start": 114.0,
+     "end": 115.29,
+     "text": "Więc inwestujcie odpowiedzialnie. A",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=114s"
+    },
+    {
+     "start": 115.3,
+     "end": 116.79,
+     "text": "partnerem technologicznym kanału jest",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=115s"
+    },
+    {
+     "start": 116.8,
+     "end": 118.29,
+     "text": "Lantre, autoryzowany sprzedawca",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=116s"
+    },
+    {
+     "start": 118.3,
+     "end": 119.99,
+     "text": "produktów takich jak Apple, bo gdzieś",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=118s"
+    },
+    {
+     "start": 120.0,
+     "end": 121.482,
+     "text": "trzeba gdzieś trzeba pisać, gdzieś",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=120s"
+    },
+    {
+     "start": 121.492,
+     "end": 123.382,
+     "text": "trzeba oglądać filmy i właśnie dzięki",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=121s"
+    },
+    {
+     "start": 123.392,
+     "end": 125.082,
+     "text": "takim produktom jak Apple na Lentrę",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=123s"
+    },
+    {
+     "start": 125.092,
+     "end": 127.182,
+     "text": "możecie to zrobić. Wystarczy wejść na",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=125s"
+    },
+    {
+     "start": 127.192,
+     "end": 129.582,
+     "text": "Lentrę, sprawdzić co tam fajnego w",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=127s"
+    },
+    {
+     "start": 129.592,
+     "end": 131.482,
+     "text": "ofercie jest, obecnie w promocji fajnej.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=129s"
+    },
+    {
+     "start": 131.492,
+     "end": 132.682,
+     "text": "Jak już coś znajdziecie, najlepiej",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=131s"
+    },
+    {
+     "start": 132.692,
+     "end": 134.282,
+     "text": "wchodźcie codziennie, to używacie kodu",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=132s"
+    },
+    {
+     "start": 134.292,
+     "end": 136.682,
+     "text": "DNA100 i macie to samo co chcecie 100 zł",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=134s"
+    }
+   ],
+   "mediaCoverage": {
+    "transcript": {
+     "state": "full",
+     "source": "auto_captions",
+     "windows": [
+      {
+       "start": 0,
+       "end": 1095
+      }
+     ],
+     "durationSec": 1095,
+     "reason": null
+    },
+    "frames": {
+     "state": "not_collected",
+     "moments": [],
+     "intervalSec": null
+    }
+   },
+   "frames": [
+    {
+     "kind": "frame",
+     "method": "stream_ffmpeg_360p",
+     "time": 95.0,
+     "requestedTime": 95.0,
+     "path": ".runtime/media-cache/-HpCSKp9bqk/frames/stream_360p_000095.jpg",
+     "sha256": "9faffbc4481b4dc0358032cf427d1a42a5b4675ffb484b4283f4de84bb5214c9",
+     "width": 640,
+     "height": 360,
+     "bytesFile": 52697,
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=95s",
+     "sourceVersion": {
+      "videoId": "-HpCSKp9bqk",
+      "readAt": "2026-11-21T18:52:52+00:00",
+      "source": "youtube-captions-v1",
+      "captionsSha256": "06d2db1abf93b73ab5e7589276805a1626e800718f93f512ef71a40793a8abb4",
+      "descriptionSha256": "ded32e0ac38865c3850991c95a0ced87170af71946156de5b4e05dec2515d523",
+      "ytDlpVersion": "2026.10.26"
+     },
+     "bytesFetchedLive": 131072,
+     "observation": "Studio z dużym logo XTB za prowadzącym; brak etykiety reklamy ani tekstu współpracy w kadrze. Oznaczenie NIEWIDOCZNE w tym kadrze."
+    },
+    {
+     "kind": "frame",
+     "method": "stream_ffmpeg_360p",
+     "time": 104.0,
+     "requestedTime": 104.0,
+     "path": ".runtime/media-cache/-HpCSKp9bqk/frames/stream_360p_000104.jpg",
+     "sha256": "ae68b4f0f9a96cd583a278465aac637dd3459bc2d1558203af708e71dd108712",
+     "width": 640,
+     "height": 360,
+     "bytesFile": 57445,
+     "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=104s",
+     "sourceVersion": {
+      "videoId": "-HpCSKp9bqk",
+      "readAt": "2026-11-21T18:52:52+00:00",
+      "source": "youtube-captions-v1",
+      "captionsSha256": "06d2db1abf93b73ab5e7589276805a1626e800718f93f512ef71a40793a8abb4",
+      "descriptionSha256": "ded32e0ac38865c3850991c95a0ced87170af71946156de5b4e05dec2515d523",
+      "ytDlpVersion": "2026.10.26"
+     },
+     "bytesFetchedLive": 131072,
+     "observation": "Plansza „PARTNEREM ODCINKA JEST XTB” z ostrzeżeniem o ryzyku. Deklaracja partnerstwa WIDOCZNA (słowo „reklama” nie pada)."
+    }
+   ]
+  },
+  "9Fcwo1jlwe4": {
+   "mediaFixture": "fixtures/raw/media/2026-11-21/9Fcwo1jlwe4.json",
+   "captionsSha256": "0606c04d157f4989856e79c8a7561b3777f2fccfd9de781a2f4d31d670007f72",
+   "fullSegmentCount": 975,
+   "windowSec": 40,
+   "windowCenters": [
+    192.04
+   ],
+   "segments": [
+    {
+     "start": 153.84,
+     "end": 155.83,
+     "text": "udało, bo nawet Chińczycy tego nie chcą,",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=153s"
+    },
+    {
+     "start": 155.84,
+     "end": 157.67,
+     "text": "także szok, kto by się spodziewał. A",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=155s"
+    },
+    {
+     "start": 157.68,
+     "end": 160.19,
+     "text": "Europa idzie w zimę z pustymi magazynami",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=157s"
+    },
+    {
+     "start": 160.2,
+     "end": 162.509,
+     "text": "gazu i są spółki, które na tym zarobią.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=160s"
+    },
+    {
+     "start": 162.519,
+     "end": 164.27,
+     "text": "Na deserek będą też dwa słowa o",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=162s"
+    },
+    {
+     "start": 164.28,
+     "end": 166.509,
+     "text": "Rocketlabs, który odłożył start rakiety",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=164s"
+    },
+    {
+     "start": 166.519,
+     "end": 169.309,
+     "text": "na potem, a kurs i tak rośnie, czyli",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=166s"
+    },
+    {
+     "start": 169.319,
+     "end": 171.71,
+     "text": "będzie ciekawie i będzie się działo.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=169s"
+    },
+    {
+     "start": 171.72,
+     "end": 173.67,
+     "text": "Zapraszam. A w tym wszystkim i tak",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=171s"
+    },
+    {
+     "start": 173.68,
+     "end": 175.509,
+     "text": "zawsze warto mieć jedną rzecz. Konto",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=173s"
+    },
+    {
+     "start": 175.519,
+     "end": 176.67,
+     "text": "przede wszystkim, na którym da się",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=175s"
+    },
+    {
+     "start": 176.68,
+     "end": 178.509,
+     "text": "szybko kupić albo sprzedać przeróżne",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=176s"
+    },
+    {
+     "start": 178.519,
+     "end": 181.03,
+     "text": "aktywa, nawet te egzotyczne, bo na rynku",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=178s"
+    },
+    {
+     "start": 181.04,
+     "end": 183.509,
+     "text": "zawsze się dużo dzieje, bardzo dużo.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=181s"
+    },
+    {
+     "start": 183.519,
+     "end": 186.39,
+     "text": "Dlatego jak szukacie brokera z szerokim",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=183s"
+    },
+    {
+     "start": 186.4,
+     "end": 188.47,
+     "text": "dostęp, będę to wizualizował, z szerokim",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=186s"
+    },
+    {
+     "start": 188.48,
+     "end": 192.03,
+     "text": "dostępem do rynków, rynki to sprawdzacie",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=188s"
+    },
+    {
+     "start": 192.04,
+     "end": 195.229,
+     "text": "freedom, partnera, partnera tego kanału,",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=192s"
+    },
+    {
+     "start": 195.239,
+     "end": 197.789,
+     "text": "całej serii Finwick, tej szalonej. Tam",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=195s"
+    },
+    {
+     "start": 197.799,
+     "end": 200.07,
+     "text": "znajdziecie masę instrumentów,",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=197s"
+    },
+    {
+     "start": 200.08,
+     "end": 202.19,
+     "text": "instrumentów do niedostępnych u żadnej",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=200s"
+    },
+    {
+     "start": 202.2,
+     "end": 205.39,
+     "text": "konkurencji. Bogatą bogatość, bogatość,",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=202s"
+    },
+    {
+     "start": 205.4,
+     "end": 207.71,
+     "text": "oferta opcji bogata, dostęp do akcji z",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=205s"
+    },
+    {
+     "start": 207.72,
+     "end": 210.19,
+     "text": "GPW, wszystko w jednym miejscu i na",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=207s"
+    },
+    {
+     "start": 210.2,
+     "end": 211.83,
+     "text": "start odbieracie też nawet 20 darmowych",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=210s"
+    },
+    {
+     "start": 211.84,
+     "end": 213.589,
+     "text": "akcji. Wystarczy założyć konto z linka w",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=211s"
+    },
+    {
+     "start": 213.599,
+     "end": 216.47,
+     "text": "opisie, spełnić warunki promocji. Klik.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=213s"
+    },
+    {
+     "start": 216.48,
+     "end": 218.63,
+     "text": "A partnerem technologicznym jest Lantre.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=216s"
+    },
+    {
+     "start": 218.64,
+     "end": 220.07,
+     "text": "Też będę wizualizował. Możecie sobie",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=218s"
+    },
+    {
+     "start": 220.08,
+     "end": 222.19,
+     "text": "kupić takie oto MacBooki, bo Lantre jest",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=220s"
+    },
+    {
+     "start": 222.2,
+     "end": 223.83,
+     "text": "autoryzowanym sprzedawcą produktów Apple",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=222s"
+    },
+    {
+     "start": 223.84,
+     "end": 225.47,
+     "text": "i wtedy sobie wchodzicie na ich stronę.",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=223s"
+    },
+    {
+     "start": 225.48,
+     "end": 228.63,
+     "text": "Jak nie wiecie co zrobić to pytacie mają",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=225s"
+    },
+    {
+     "start": 228.64,
+     "end": 231.309,
+     "text": "doradców kupujecie takiego laptopika",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=228s"
+    },
+    {
+     "start": 231.319,
+     "end": 233.429,
+     "text": "sobie albo telefon albo zegarek",
+     "modality": "speech",
+     "method": "auto_captions",
+     "language": "pl",
+     "lang": "pl",
+     "windowId": "w0",
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=231s"
+    }
+   ],
+   "mediaCoverage": {
+    "transcript": {
+     "state": "full",
+     "source": "auto_captions",
+     "windows": [
+      {
+       "start": 0,
+       "end": 2128
+      }
+     ],
+     "durationSec": 2128,
+     "reason": null
+    },
+    "frames": {
+     "state": "not_collected",
+     "moments": [],
+     "intervalSec": null
+    }
+   },
+   "frames": [
+    {
+     "kind": "frame",
+     "method": "stream_ffmpeg_360p",
+     "time": 195.0,
+     "requestedTime": 195.0,
+     "path": ".runtime/media-cache/9Fcwo1jlwe4/frames/stream_360p_000195.jpg",
+     "sha256": "16da6c11f50e32d68e52e85f34fa2cf191a02629fc1c5534bc77bd7cfe5cb179",
+     "width": 640,
+     "height": 360,
+     "bytesFile": 64746,
+     "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=195s",
+     "sourceVersion": {
+      "videoId": "9Fcwo1jlwe4",
+      "readAt": "2026-11-21T18:52:52+00:00",
+      "source": "youtube-captions-v1",
+      "captionsSha256": "0606c04d157f4989856e79c8a7561b3777f2fccfd9de781a2f4d31d670007f72",
+      "descriptionSha256": "5a9233e7640c78a8ec8e8e84fc4c77b1b76849233cac40b70f19992c0b39f4a6",
+      "ytDlpVersion": "2026.10.26"
+     },
+     "bytesFetchedLive": 206057,
+     "observation": "Dolny pasek z etykietą „REKLAMA” (mały druk), logo FREEDOM, QR „Zeskanuj kod i załóż konto”, „Otwórz konto już teraz”. Oznaczenie reklamy WIDOCZNE na ekranie."
+    }
+   ]
+  }
+ }
+}

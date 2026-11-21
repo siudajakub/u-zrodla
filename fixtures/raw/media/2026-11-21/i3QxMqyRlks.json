@@ -1,0 +1,200 @@
+{
+ "videoId": "i3QxMqyRlks",
+ "url": "https://www.youtube.com/watch?v=i3QxMqyRlks",
+ "channel": "Bądź Na Bieżąco",
+ "firm": "Freedom24",
+ "observedAt": "2026-11-21T19:20:07+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Z Ostatniej Chwili! Kolejne Rakiety SPADAJĄ Na Polskę! Kraj NATO Zamyka Granice",
+  "channel": "Bądź Na Bieżąco",
+  "duration": 1112,
+  "uploadDate": "20261120",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 2577,
+ "descriptionSha256": "c4b0cc61ebefd3922bfb73ab3a5dcf460be3768bbdc897c6b103d5d9ee841754",
+ "paidPromotionFlagApi": true,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 460,
+  "spanSec": [
+   0.16,
+   1110.0
+  ],
+  "captionsSha256": "146a58ea1f2fffccc0bd25f7186208b216a063429989c551c28ec79ef9e102e4",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 293326,
+  "segments": 460,
+  "captionsWallSeconds": 1.92,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 2577,
+    "originalTextSha256": "c4b0cc61ebefd3922bfb73ab3a5dcf460be3768bbdc897c6b103d5d9ee841754"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 1112
+     }
+    ],
+    "durationSec": 1112,
+    "reason": null,
+    "spanSec": [
+     0.16,
+     1110.0
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 2577 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 1112
+    }
+   ],
+   "durationSec": 1112,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": true,
+  "quote": "*Materiał sponsorowany przez Freedom."
+ },
+ "markingInSpeech": [
+  {
+   "start": 44,
+   "deepLink": "https://www.youtube.com/watch?v=i3QxMqyRlks&t=44s",
+   "kind": "partner",
+   "quote": "zaczniemy, partnerem kanału jest Freedom, międzynarodowy broker, u"
+  }
+ ],
+ "markersLexical": [
+  {
+   "start": 44.28,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "zaczniemy, partnerem kanału jest",
+   "deepLink": "https://www.youtube.com/watch?v=i3QxMqyRlks&t=44s"
+  },
+  {
+   "start": 57.64,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "Szczegóły macie w opisie.",
+   "deepLink": "https://www.youtube.com/watch?v=i3QxMqyRlks&t=57s"
+  },
+  {
+   "start": 448.36,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "portfel publiczny, link macie w opisie.",
+   "deepLink": "https://www.youtube.com/watch?v=i3QxMqyRlks&t=448s"
+  },
+  {
+   "start": 474.319,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "wpisaniu kodu welcome 1 możecie",
+   "deepLink": "https://www.youtube.com/watch?v=i3QxMqyRlks&t=474s"
+  },
+  {
+   "start": 480.72,
+   "kinds": [
+    "promocja"
+   ],
+   "quote": "800 $. Wpłaty w czasie promocji się",
+   "deepLink": "https://www.youtube.com/watch?v=i3QxMqyRlks&t=480s"
+  },
+  {
+   "start": 614.8,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "przez jego zagranicznych partnerów, w",
+   "deepLink": "https://www.youtube.com/watch?v=i3QxMqyRlks&t=614s"
+  },
+  {
+   "start": 1092.12,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "macie w opisie. I pamiętajcie, że po",
+   "deepLink": "https://www.youtube.com/watch?v=i3QxMqyRlks&t=1092s"
+  }
+ ],
+ "frames": [],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "complete",
+   "reason": "Relacja reklamowa (probable) z Freedom24; treść mowy niezbadana.",
+   "reasons": [],
+   "moments": [],
+   "completeReason": "transcript_unavailable",
+   "relationship": "probable",
+   "score": null,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": []
+  },
+  "descriptionSpeechFrames": {
+   "route": "no_signal",
+   "reason": "Relacja reklamowa bez przesłanki do kontroli w opisie i mowie; wpis w rejestrze reklam.",
+   "reasons": [],
+   "moments": [],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 0,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+   "premises": []
+  }
+ }
+}

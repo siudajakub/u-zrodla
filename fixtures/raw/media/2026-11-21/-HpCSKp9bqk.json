@@ -1,0 +1,281 @@
+{
+ "videoId": "-HpCSKp9bqk",
+ "url": "https://www.youtube.com/watch?v=-HpCSKp9bqk",
+ "observedAt": "2026-11-21T18:52:52+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Nadchodzi bessa na rynku nieruchomości? Mieszkania przestały być pewną inwestycją!",
+  "channel": "Piotr Cymcyk - Merytorycznie o Finansach",
+  "duration": 1095,
+  "uploadDate": "20261111",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 4727,
+ "descriptionSha256": "ded32e0ac38865c3850991c95a0ced87170af71946156de5b4e05dec2515d523",
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 516,
+  "spanSec": [
+   0.0,
+   1076.702
+  ],
+  "captionsSha256": "06d2db1abf93b73ab5e7589276805a1626e800718f93f512ef71a40793a8abb4",
+  "files": {
+   "-HpCSKp9bqk.pl.vtt": {
+    "bytes": 169832,
+    "sha256": "06d2db1abf93b73ab5e7589276805a1626e800718f93f512ef71a40793a8abb4"
+   },
+   "-HpCSKp9bqk.pl-orig.vtt": {
+    "bytes": 169832,
+    "sha256": "06d2db1abf93b73ab5e7589276805a1626e800718f93f512ef71a40793a8abb4"
+   }
+  },
+  "caveat": "auto-napisy: błędy w nazwach własnych i liczbach są możliwe; cytaty niżej nie są poprawiane"
+ },
+ "measurement": {
+  "captionsWallSeconds": 1.95,
+  "requests": 1,
+  "captionBytes": 169832,
+  "note": "bajty = jeden plik napisów; ruch ekstraktora yt-dlp (strona + player API) niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 4727,
+    "originalTextSha256": "ded32e0ac38865c3850991c95a0ced87170af71946156de5b4e05dec2515d523"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 1095
+     }
+    ],
+    "durationSec": 1095,
+    "reason": null,
+    "spanSec": [
+     0.0,
+     1076.702
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 4727 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 1095
+    }
+   ],
+   "durationSec": 1095,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markers": [
+  {
+   "start": 94.6,
+   "end": 95.89,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "dzięki partnerowi tego odcinka, jakim",
+   "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=94s",
+   "assessment": "mowa: partner odcinka XTB, link w opisie i kod DNA (okno 94–106 s); słowa „reklama” brak"
+  },
+  {
+   "start": 95.9,
+   "end": 98.19,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "jest XTB, polska aplikacja inwestycyjna.",
+   "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=95s",
+   "assessment": null
+  },
+  {
+   "start": 103.3,
+   "end": 104.69,
+   "kinds": [
+    "link_w_opisie",
+    "kod"
+   ],
+   "quote": "konto z linka w opisie, podacie kod DN",
+   "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=103s",
+   "assessment": null
+  },
+  {
+   "start": 115.3,
+   "end": 116.79,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "partnerem technologicznym kanału jest",
+   "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=115s",
+   "assessment": null
+  },
+  {
+   "start": 129.592,
+   "end": 131.482,
+   "kinds": [
+    "promocja"
+   ],
+   "quote": "ofercie jest, obecnie w promocji fajnej.",
+   "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=129s",
+   "assessment": null
+  },
+  {
+   "start": 132.692,
+   "end": 134.282,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "wchodźcie codziennie, to używacie kodu",
+   "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=132s",
+   "assessment": null
+  },
+  {
+   "start": 153.692,
+   "end": 155.182,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "Partnerem kanału jest e-Faktury. Jeśli",
+   "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=153s",
+   "assessment": null
+  },
+  {
+   "start": 475.095,
+   "end": 477.185,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "pojawia się e-faktor, partner tego",
+   "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=475s",
+   "assessment": null
+  },
+  {
+   "start": 1070.602,
+   "end": 1072.292,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "rynkach.pl. Link w opisie tego nagrania.",
+   "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=1070s",
+   "assessment": null
+  }
+ ],
+ "descriptionMarkers": [
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "Znajdź swój cel, dla którego warto inwestować. Zacznij razem z aplikacją XTB — https://link-pso.xtb.com/pso/kdg44"
+  },
+  {
+   "kinds": [
+    "kod",
+    "broker"
+   ],
+   "quote": "Rejestrując się na XTB z kodem DNARYNKOW otrzymasz specjalny kurs zarządzania finansami od podstaw. #YSBP | Inwestowanie jest ryzykowne. Inwestuj odpowiedzialnie."
+  },
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "Portfel emerytalny XTB: https://www.fundstat.pl/pl/wallets/portfel-emerytalny-xtb-a66e95a78a?utm_source=dna&utm_medium=yt"
+  },
+  {
+   "kinds": [
+    "kod"
+   ],
+   "quote": "Z kodem DNA100 otrzymasz 100 zł rabatu przy zakupach od 3999 zł: https://bit.ly/DNARynków-x-Lantre"
+  },
+  {
+   "kinds": [
+    "wspolpraca"
+   ],
+   "quote": "✉️ Współpraca: biuro@dnarynkow.pl"
+  }
+ ],
+ "frames": [
+  {
+   "kind": "frame",
+   "method": "stream_ffmpeg_360p",
+   "time": 95.0,
+   "requestedTime": 95.0,
+   "path": ".runtime/media-cache/-HpCSKp9bqk/frames/stream_360p_000095.jpg",
+   "sha256": "9faffbc4481b4dc0358032cf427d1a42a5b4675ffb484b4283f4de84bb5214c9",
+   "width": 640,
+   "height": 360,
+   "bytesFile": 52697,
+   "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=95s",
+   "sourceVersion": {
+    "videoId": "-HpCSKp9bqk",
+    "readAt": "2026-11-21T18:52:52+00:00",
+    "source": "youtube-captions-v1",
+    "captionsSha256": "06d2db1abf93b73ab5e7589276805a1626e800718f93f512ef71a40793a8abb4",
+    "descriptionSha256": "ded32e0ac38865c3850991c95a0ced87170af71946156de5b4e05dec2515d523",
+    "ytDlpVersion": "2026.10.26"
+   },
+   "bytesFetchedLive": 131072,
+   "observation": "Studio z dużym logo XTB za prowadzącym; brak etykiety reklamy ani tekstu współpracy w kadrze. Oznaczenie NIEWIDOCZNE w tym kadrze."
+  },
+  {
+   "kind": "frame",
+   "method": "stream_ffmpeg_360p",
+   "time": 104.0,
+   "requestedTime": 104.0,
+   "path": ".runtime/media-cache/-HpCSKp9bqk/frames/stream_360p_000104.jpg",
+   "sha256": "ae68b4f0f9a96cd583a278465aac637dd3459bc2d1558203af708e71dd108712",
+   "width": 640,
+   "height": 360,
+   "bytesFile": 57445,
+   "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk&t=104s",
+   "sourceVersion": {
+    "videoId": "-HpCSKp9bqk",
+    "readAt": "2026-11-21T18:52:52+00:00",
+    "source": "youtube-captions-v1",
+    "captionsSha256": "06d2db1abf93b73ab5e7589276805a1626e800718f93f512ef71a40793a8abb4",
+    "descriptionSha256": "ded32e0ac38865c3850991c95a0ced87170af71946156de5b4e05dec2515d523",
+    "ytDlpVersion": "2026.10.26"
+   },
+   "bytesFetchedLive": 131072,
+   "observation": "Plansza „PARTNEREM ODCINKA JEST XTB” z ostrzeżeniem o ryzyku. Deklaracja partnerstwa WIDOCZNA (słowo „reklama” nie pada)."
+  }
+ ]
+}

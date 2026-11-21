@@ -1,0 +1,213 @@
+{
+ "videoId": "_aqCM37gK1U",
+ "url": "https://www.youtube.com/watch?v=_aqCM37gK1U",
+ "channel": "Piotr Cymcyk - Merytorycznie o Finansach",
+ "firm": "Saxo Bank",
+ "observedAt": "2026-11-21T19:20:07+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Kupujesz za późno i sprzedajesz za wcześnie? To nie jest przypadek!",
+  "channel": "Piotr Cymcyk - Merytorycznie o Finansach",
+  "duration": 1173,
+  "uploadDate": "20261119",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 4745,
+ "descriptionSha256": "ef74931baef2fb74f8a557130298fb909e4729a00d2f92dbca5510116d6f355e",
+ "paidPromotionFlagApi": true,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 562,
+  "spanSec": [
+   0.1,
+   1155.203
+  ],
+  "captionsSha256": "08c25767149b9c1d39f4e3d37dcf0cca040900679dc0b19aa1f42a3e9f8ae3fa",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 363960,
+  "segments": 562,
+  "captionsWallSeconds": 2.08,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 4745,
+    "originalTextSha256": "ef74931baef2fb74f8a557130298fb909e4729a00d2f92dbca5510116d6f355e"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 1173
+     }
+    ],
+    "durationSec": 1173,
+    "reason": null,
+    "spanSec": [
+     0.1,
+     1155.203
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 4745 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 1173
+    }
+   ],
+   "durationSec": 1173,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": true,
+  "quote": "Partnerem publikacji jest Saxo Bank, z którym serwis prowadzi płatną współpracę marketingową. #PłatnaWspółpraca / Saxo Bank"
+ },
+ "markingInSpeech": [
+  {
+   "start": 85,
+   "deepLink": "https://www.youtube.com/watch?v=_aqCM37gK1U&t=85s",
+   "kind": "partner+reklamowy",
+   "quote": "partnerem tego materiału jest Saxo Bank. Tadam! Pojawił się też kaseton reklamowy. Duński bank dla inwestorów,"
+  }
+ ],
+ "markersLexical": [
+  {
+   "start": 85.9,
+   "kinds": [
+    "partner",
+    "broker"
+   ],
+   "quote": "partnerem tego materiału jest Saxo Bank.",
+   "deepLink": "https://www.youtube.com/watch?v=_aqCM37gK1U&t=85s"
+  },
+  {
+   "start": 90.7,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "reklamowy. Duński bank dla inwestorów,",
+   "deepLink": "https://www.youtube.com/watch?v=_aqCM37gK1U&t=90s"
+  },
+  {
+   "start": 100.8,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "platformom właśnie na Saxo możecie",
+   "deepLink": "https://www.youtube.com/watch?v=_aqCM37gK1U&t=100s"
+  },
+  {
+   "start": 108.6,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "konto przez linka w opisie, to dodatkowo",
+   "deepLink": "https://www.youtube.com/watch?v=_aqCM37gK1U&t=108s"
+  },
+  {
+   "start": 130.192,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "A partnerem technologicznym kanału jest",
+   "deepLink": "https://www.youtube.com/watch?v=_aqCM37gK1U&t=130s"
+  },
+  {
+   "start": 156.692,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "Apple i kupcie sobie coś z kodem DNA 100",
+   "deepLink": "https://www.youtube.com/watch?v=_aqCM37gK1U&t=156s"
+  },
+  {
+   "start": 161.292,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "Link jest w opisie. A jeśli chcecie",
+   "deepLink": "https://www.youtube.com/watch?v=_aqCM37gK1U&t=161s"
+  },
+  {
+   "start": 1149.303,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "oczywiście w opisie tego nagrania. W tym",
+   "deepLink": "https://www.youtube.com/watch?v=_aqCM37gK1U&t=1149s"
+  }
+ ],
+ "frames": [],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "complete",
+   "reason": "Promowany podmiot bez wpisu w przejrzanych wykazach: do uzupełnienia przed oceną.",
+   "reasons": [],
+   "moments": [],
+   "completeReason": "identity_unresolved",
+   "relationship": "declared",
+   "score": 35,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": [
+    "U3"
+   ]
+  },
+  "descriptionSpeechFrames": {
+   "route": "complete",
+   "reason": "Promowany podmiot bez wpisu w przejrzanych wykazach: do uzupełnienia przed oceną.",
+   "reasons": [],
+   "moments": [],
+   "completeReason": "identity_unresolved",
+   "relationship": "declared",
+   "score": 35,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+   "premises": [
+    "U3"
+   ]
+  }
+ }
+}

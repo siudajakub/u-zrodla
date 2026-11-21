@@ -17,3 +17,5 @@ sh ops/demo/start.sh
 Stanowisko demonstracyjne przewiduje 4 vCPU i 8 GiB RAM, Docker Compose, Python 3.12, FFmpeg i lokalne wagi E5 oraz Vosk PL. Przy pierwszym przygotowaniu potrzebny jest internet do pobrania publicznych pakietów i modeli. Podgląd Astryx buduje Node.js z przypiętych zależności npm. API oraz worker Huey działają w dwóch kontenerach. SQLite zapisuje dane w .runtime/demo/state. Worker wyszukuje źródła co cztery godziny, interwał określa INVESTWATCH_DISCOVERY_INTERVAL w sekundach. Wartość 0 wyłącza harmonogram live. [Przygotowanie środowiska](ops/demo/README.md)
 
 [Zakres UKNF i pięć plików źródłowych](docs/zrodla-uknf/README.md) · [Co działa i z jakimi ograniczeniami](docs/ODBIOR-UKNF.md) · [Scenariusz pokazu](docs/hackathon/demo.md) · [Prezentacja PDF](presentation/InvestWatch.pdf)
+
+Test porównawczy oceny pojedynczej reklamy przez OpenRouter i lokalnie na Apple Silicon opisuje [instrukcja OpenRouter / Mac M3](docs/fable/OPENROUTER-M3.md).

@@ -1,0 +1,243 @@
+{
+ "videoId": "AqXHkxDzSDI",
+ "url": "https://www.youtube.com/watch?v=AqXHkxDzSDI",
+ "channel": "ForexMind",
+ "firm": "XTB",
+ "observedAt": "2026-11-21T19:20:06+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Freedom24 Alternatywy: Którego brokera wybrać? (2026)",
+  "channel": "ForexMind",
+  "duration": 204,
+  "uploadDate": "20260531",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 577,
+ "descriptionSha256": "2144d81f759df2052b601dd64c02cc6f3df4022df79768a3770abae3d3f895dd",
+ "paidPromotionFlagApi": false,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 81,
+  "spanSec": [
+   0.16,
+   205.4
+  ],
+  "captionsSha256": "159ac067cdefac815e93a785b472a84192aa229da3df802155e199eed03fd6ba",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 49594,
+  "segments": 81,
+  "captionsWallSeconds": 1.84,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 577,
+    "originalTextSha256": "2144d81f759df2052b601dd64c02cc6f3df4022df79768a3770abae3d3f895dd"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 204
+     }
+    ],
+    "durationSec": 204,
+    "reason": null,
+    "spanSec": [
+     0.16,
+     205.4
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 577 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 204
+    }
+   ],
+   "durationSec": 204,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": false,
+  "quote": null
+ },
+ "markingInSpeech": [
+  {
+   "start": 13,
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=13s",
+   "kind": null,
+   "quote": "24. A jeśli chcesz otworzyć konto, znajdziesz linki do specjalnych ofert w"
+  },
+  {
+   "start": 186,
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=186s",
+   "kind": null,
+   "quote": "wyborem. W opisie znajdziesz linki do specjalnych ofert dla obu brokerów, więc"
+  }
+ ],
+ "markersLexical": [
+  {
+   "start": 2.12,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "Freedom 24 w 2026 roku, trafiłeś we",
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=2s"
+  },
+  {
+   "start": 17.48,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "opisie poniżej. Zaczynajmy. XTB jest",
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=17s"
+  },
+  {
+   "start": 39.84,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "Platforma XTB działa w przeglądarce",
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=39s"
+  },
+  {
+   "start": 72.2,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "Jeśli chodzi o koszty, XTB jest bardzo",
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=72s"
+  },
+  {
+   "start": 92.159,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "konwersji są standardowe. XTB jest",
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=92s"
+  },
+  {
+   "start": 183.84,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "niskich kosztach, XTB może być lepszym",
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=183s"
+  },
+  {
+   "start": 186.799,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "wyborem. W opisie znajdziesz linki do",
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=186s"
+  }
+ ],
+ "frames": [
+  {
+   "time": 15.84,
+   "requestedTime": 15.84,
+   "method": "storyboard_320x180",
+   "path": ".runtime/media-cache/AqXHkxDzSDI/frames/storyboard_320x180_000015.jpg",
+   "sha256": "3a8f04cf9cd2f92ef57641a0d2df4c40b71bb946753ce8265e49329b39c91ab7",
+   "width": 320,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=15s",
+   "observation": "Prowadzący przy biurku, napisy wypalone w obrazie powtarzają mowę. Brak etykiety reklamy lub współpracy."
+  },
+  {
+   "time": 59.42,
+   "requestedTime": 59.42,
+   "method": "storyboard_320x180",
+   "path": ".runtime/media-cache/AqXHkxDzSDI/frames/storyboard_320x180_000059.jpg",
+   "sha256": "a711782a7d7f34ed7f29b1b4a2b0858cdc40fe68d510b5062da26558afd906eb",
+   "width": 320,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=59s",
+   "observation": "Platforma handlowa i kod QR. Brak etykiety."
+  },
+  {
+   "time": 186.17,
+   "requestedTime": 186.17,
+   "method": "storyboard_320x180",
+   "path": ".runtime/media-cache/AqXHkxDzSDI/frames/storyboard_320x180_000186.jpg",
+   "sha256": "26c33a97287a38682ab2d2aa00000988d8e324533eb38829a5d3a622e76ee449",
+   "width": 320,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=186s",
+   "observation": "Prowadzący, napisy wypalone w obrazie powtarzają mowę. Brak etykiety."
+  }
+ ],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "no_signal",
+   "reason": "Wzmianka o firmie bez relacji reklamowej (poza kolejką M1).",
+   "reasons": [],
+   "moments": [],
+   "completeReason": null,
+   "relationship": "none",
+   "score": null,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": []
+  },
+  "descriptionSpeechFrames": {
+   "route": "no_signal",
+   "reason": "Wzmianka o firmie bez relacji reklamowej (poza kolejką M1).",
+   "reasons": [],
+   "moments": [],
+   "completeReason": null,
+   "relationship": "none",
+   "score": 0,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+   "premises": []
+  }
+ }
+}

@@ -1,0 +1,158 @@
+{
+ "frozenAt": "2026-11-21T18:43:14+00:00",
+ "split": "tuning (cały zbiór; brak odłożonego testu — materiały były widziane przy budowie reguł)",
+ "campaigns": [
+  {
+   "campaignId": "C-M1-COMPARICRYNKI-INVESTCUFFS",
+   "kind": "kampania reklamowa",
+   "advertiser": "Invest Cuffs (wydarzenie, nie firma inwestycyjna)",
+   "creatorId": "youtube:UCelOnoH_P-vJgAHSAcMKQiw",
+   "module": "M1",
+   "materials": [
+    "youtube:AE02IBR__H4"
+   ]
+  },
+  {
+   "campaignId": "C-M1-DETERMINACJA-XTB",
+   "kind": "kampania reklamowa",
+   "advertiser": "XTB",
+   "creatorId": "youtube:UCnmJzS-tFT7DlxIMFxYGcHw",
+   "module": "M1",
+   "materials": [
+    "youtube:xtMqKkFO-0M",
+    "youtube:04mmNbAlHFo"
+   ]
+  },
+  {
+   "campaignId": "C-M2-BDM-RACHUNEK",
+   "kind": "kampania reklamowa",
+   "advertiser": "Dom Maklerski BDM S.A. (KNF 6884964)",
+   "creatorId": "www:www.bdm.pl",
+   "module": "M2",
+   "materials": [
+    "web:www.bdm.pl/rachunek-inwestycyjny"
+   ]
+  },
+  {
+   "campaignId": "C-M2-XTB-AKCJE",
+   "kind": "kampania reklamowa",
+   "advertiser": "XTB S.A. (KNF 6884980)",
+   "creatorId": "www:www.xtb.com",
+   "module": "M2",
+   "materials": [
+    "web:www.xtb.com/pl/akcje"
+   ]
+  },
+  {
+   "campaignId": "C-M2-XTB-ETF",
+   "kind": "kampania reklamowa",
+   "advertiser": "XTB S.A. (KNF 6884980)",
+   "creatorId": "www:www.xtb.com",
+   "module": "M2",
+   "materials": [
+    "dom-xtb-etf"
+   ]
+  },
+  {
+   "campaignId": "C-M3-BOS-DORADZTWO",
+   "kind": "kampania reklamowa",
+   "advertiser": "DM BOŚ S.A. (KNF 8353437)",
+   "creatorId": "www:bossa.pl",
+   "module": "M3",
+   "materials": [
+    "web:bossa.pl/oferta/doradztwo",
+    "public-bos-profil"
+   ]
+  },
+  {
+   "campaignId": "P-M1-PEERTUBE-ICD31",
+   "kind": "publikacja bez reklamy firmy (jednostka niezależna)",
+   "advertiser": null,
+   "creatorId": "peertube:video.internet-czas-dzialac.pl/internet_czas_dzialac",
+   "module": "M1",
+   "materials": [
+    "peertube:959e5bcc-8562-4a2c-9d78-6b8b83d8d306"
+   ]
+  },
+  {
+   "campaignId": "P-M1-PEERTUBE-KONTRABANDA-OSM",
+   "kind": "publikacja bez reklamy firmy (jednostka niezależna)",
+   "advertiser": null,
+   "creatorId": "peertube:play.kontrabanda.net/shorts",
+   "module": "M1",
+   "materials": [
+    "peertube:39fb23f2-c689-416e-a2a8-2f8a06b96a67"
+   ]
+  },
+  {
+   "campaignId": "P-M1-PODCAST-1449711708-058",
+   "kind": "publikacja bez reklamy firmy (jednostka niezależna)",
+   "advertiser": null,
+   "creatorId": "apple-podcasts:1449711708",
+   "module": "M1",
+   "materials": [
+    "apple-podcasts:1449711708:episode:5122e67b823309d706dc5b70c3cd88aa"
+   ]
+  },
+  {
+   "campaignId": "P-M1-PODCAST-1506475429-278",
+   "kind": "publikacja bez reklamy firmy (jednostka niezależna)",
+   "advertiser": null,
+   "creatorId": "apple-podcasts:1506475429",
+   "module": "M1",
+   "materials": [
+    "apple-podcasts:1506475429:episode:b266151c4a5122ce38269eb57de19bc1"
+   ]
+  },
+  {
+   "campaignId": "P-M1-PODCAST-1724408193-PZUGOLD",
+   "kind": "publikacja bez reklamy firmy (jednostka niezależna)",
+   "advertiser": null,
+   "creatorId": "apple-podcasts:1724408193",
+   "module": "M1",
+   "materials": [
+    "apple-podcasts:1724408193:episode:cdd48442a32aee651d4ca098f1b4e745"
+   ]
+  },
+  {
+   "campaignId": "P-M1-TIKTOK-COMPARIC-7709518231387524374",
+   "kind": "publikacja bez reklamy firmy (jednostka niezależna)",
+   "advertiser": null,
+   "creatorId": "tiktok:comparic.pl",
+   "module": "M1",
+   "materials": [
+    "tiktok:7709518231387524374"
+   ]
+  },
+  {
+   "campaignId": "P-M1-TIKTOK-TRADEWARS-7686164801038355744",
+   "kind": "publikacja bez reklamy firmy (jednostka niezależna)",
+   "advertiser": null,
+   "creatorId": "tiktok:tradewarspl",
+   "module": "M1",
+   "materials": [
+    "tiktok:7686164801038355744"
+   ]
+  },
+  {
+   "campaignId": "P-M3-BOS-EDUKACJA",
+   "kind": "publikacja bez reklamy firmy (jednostka niezależna)",
+   "advertiser": null,
+   "creatorId": "www:bossa.pl:edukacja",
+   "module": "M3",
+   "materials": [
+    "web:bossa.pl/edukacja/rynek-i-inwestycje/instrumenty-finansowe"
+   ]
+  },
+  {
+   "campaignId": "P-M3-FINANCEWELL-ONAS",
+   "kind": "publikacja bez reklamy firmy (jednostka niezależna)",
+   "advertiser": "nieustalony (2 wpisy w wykazie agentów)",
+   "creatorId": "www:financewell.pl",
+   "module": "M3",
+   "materials": [
+    "public-financewell-agent"
+   ]
+  }
+ ]
+}

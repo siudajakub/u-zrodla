@@ -1,0 +1,2312 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "r0nVTEpmgFUZNKd6wMbhs3GiMso",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FyUWQ10sviL7mbU1NH4aKqOxyzY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xPy04HIAV9c"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T18:08:25Z",
+        "channelId": "UCoVF7lPMKO2HYXfdkcHqEpQ",
+        "title": "Bitcoin NAJTAŃSZY od 2 lat. Co dalej?",
+        "description": "Link do materiału: https://youtu.be/zgMwdllJ5nc *OKX GIEŁDA Z LICENCJĄ MiCA + bonus powitalny do 400 € dla nowych ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xPy04HIAV9c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xPy04HIAV9c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xPy04HIAV9c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xPy04HIAV9c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xPy04HIAV9c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/xPy04HIAV9c/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Świat Krypto",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T18:08:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "D-ziZqqOfyFjxrdaBeP1Ml7S9Ys",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Gg2VjD8EOno"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-02T20:12:01Z",
+        "channelId": "UCZPhFW0NxR7qaHh4P4ClP1g",
+        "title": "Zgarnij darmowe akcje teraz",
+        "description": "Sprawdź jak inwestować bez prowizji i odebrać do 20 bonusowych akcji o wartości 800$. Link w opisie! #inwestowanie #giełda ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Gg2VjD8EOno/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Gg2VjD8EOno/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Gg2VjD8EOno/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Gg2VjD8EOno/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Gg2VjD8EOno/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ciekawostki z Rynku i Polityki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-02T20:12:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_dxdJXUMezQk1dzDxIjIuEnxmkU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "U0eXKz_zcMs"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-14T20:37:49Z",
+        "channelId": "UCwqOMcszSYhCG-7zarIniuQ",
+        "title": "Darmowe akcje za 100 zł? Promocja Trade Republic 2026 krok po kroku",
+        "description": "Link do artykułu: https://moniaki.pl/l/35530 Trade Republic rozdaje 100 zł w akacjach amerykańskich spółek dla nowych klientów.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/U0eXKz_zcMs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/U0eXKz_zcMs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/U0eXKz_zcMs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/U0eXKz_zcMs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/U0eXKz_zcMs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Moniaki.pl",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-14T20:37:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0ZCrTny2fHsPzu5gpdDxPLlDd7w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "q-pwIe85SmA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T16:00:38Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "Jedyny film o IKE i IKZE, jakiego potrzebujesz",
+        "description": "współpraca XTB [współpraca] Tutaj Kupisz Akcje i ETFy (XTB): https://link-pso.xtb.com/pso/DwCbZ Zapisz się za darmo na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T16:00:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WwOGkSEdRiLg3bBgqZZR7ge1jnw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nYHaxY9BJh4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-15T14:00:32Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Nvidia bez Huanga?! Początek końca giganta AI? #GITnews",
+        "description": "Teraz możecie tutaj inwestować również w polskie akcje i w planach inwestycyjnych bez płacenia prowizji za transakcje: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-15T14:00:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_e2QHVAvcUEKwf5fjq6mljFf6uc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "i3QxMqyRlks"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T17:00:00Z",
+        "channelId": "UCTAAUHQl0sN6w0RpAUzs-Bg",
+        "title": "Z Ostatniej Chwili! Kolejne Rakiety SPADAJĄ Na Polskę! Kraj NATO Zamyka Granice",
+        "description": "Inwestuj z poniższego linku i odbierz do 20 darmowych akcji na start: https://freedom24.club/BadzNaBiezaco Poradnik Freedom ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/i3QxMqyRlks/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/i3QxMqyRlks/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/i3QxMqyRlks/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/i3QxMqyRlks/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/i3QxMqyRlks/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/i3QxMqyRlks/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Bądź Na Bieżąco",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T17:00:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PQtD--JKPCi3MuK-S4BnL7l9umA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ePfzHQVf-lc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T17:59:32Z",
+        "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+        "title": "Kupiłem te spółki za 40 tysięcy zł. To Wy zbudowaliście ten portfel! | PORTFEL WIDZÓW 02",
+        "description": "Znajdź swój cel, dla którego warto inwestować. Zacznij razem z aplikacją XTB — https://link-pso.xtb.com/pso/kdg44 Rejestrując ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ePfzHQVf-lc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ePfzHQVf-lc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ePfzHQVf-lc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ePfzHQVf-lc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ePfzHQVf-lc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Piotr Cymcyk - Merytorycznie o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T17:59:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LHlfxpr9W8PNwOhof4U2Mp2QqX4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vuDgP0535Ss"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T07:22:54Z",
+        "channelId": "UC3JgUN78v4RX3saWqmCEV1g",
+        "title": "Totalna wyprzedaż giełd, miedzi, metali. Dlaczego i co dalej?",
+        "description": "Dlaczego Nvidia może być czarnym łabędziem tej hossy? To jest prawdziwy, niespodziewany event, który może mieć swoje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vuDgP0535Ss/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vuDgP0535Ss/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vuDgP0535Ss/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vuDgP0535Ss/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vuDgP0535Ss/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Tuszkiewicz | Inwestowanie & Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T07:22:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "19D1XDSdOYeNOqQy4iF2ftpzoV4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "eQYmvRfHtr8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T10:54:35Z",
+        "channelId": "UCelOnoH_P-vJgAHSAcMKQiw",
+        "title": "KUPIŁEŚ NA OTWARCIU? Wieczorem byłeś 13% pod kreską. Debiut Anthropic",
+        "description": "InvestingPro do 55% taniej + dodatkowe 15% z kodem COMPARIC, tylko do 24 listopada: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eQYmvRfHtr8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eQYmvRfHtr8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eQYmvRfHtr8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/eQYmvRfHtr8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/eQYmvRfHtr8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Rynki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T10:54:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hQbFo65sFimDV-amP_zTfBpqCbQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tVrt5iN1vX8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T15:26:19Z",
+        "channelId": "UCtTpDSRTegHewCxP9GTUaXQ",
+        "title": "GIEŁDA W PANICE. Anthropic BIJE REKORDY! Xi Jinping UPOKORZYŁ Putina",
+        "description": "Sprawdź wyzwania tradignowe od Fintokei - https://www.fintokei.com/?affiliate=2299 Skorzystaj z darmowej próby, klikając w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tVrt5iN1vX8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tVrt5iN1vX8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tVrt5iN1vX8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tVrt5iN1vX8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tVrt5iN1vX8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "FXMAG - tłumaczymy świat finansów",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T15:26:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "C2yMh4mxpAGLnejx39NmdxnZTYM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "k6ww1qfszTo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T15:00:35Z",
+        "channelId": "UC7ifk3ef-i6BE0TrSJmdNMw",
+        "title": "How to Find TRENDING Stocks Using 50 &amp; 200 DMA | FREE Scanner",
+        "description": "Learn the 50 DMA vs 200 DMA Moving Average Crossover Strategy to identify trending stocks, generate potential buy and sell ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/k6ww1qfszTo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/k6ww1qfszTo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/k6ww1qfszTo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/k6ww1qfszTo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/k6ww1qfszTo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Trading Edge by PhonePe Invest",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T15:00:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Kz4sWOTGIWbABxe9ixFJ9xps4n0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "P9XuqBygZHg"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-09T18:00:09Z",
+        "channelId": "UCEPr3huxC4mEPN8NtIKVmxA",
+        "title": "Edukatorka finansowa: dlaczego nic ci nie zostaje z pensji",
+        "description": "Wykorzystaj możliwości aplikacji inwestycyjnej XTB: https://link-pso.xtb.com/pso/O3XPD Uważasz, że brakuje Ci odpowiedniej ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/P9XuqBygZHg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/P9XuqBygZHg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/P9XuqBygZHg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/P9XuqBygZHg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/P9XuqBygZHg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/P9XuqBygZHg/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Gosia Ohme",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-09T18:00:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ToAx5Yb7LYU0eCRhwsjPHqgI57k",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MaGwuulVf2o"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:55:24Z",
+        "channelId": "UClhEl4bMD8_escGCCTmRAYg",
+        "title": "RAKIETY I DRON W POLSCE, FIASKO RESETU WS. TK? DOMAŃSKI WICEPREMIEREM – PRZEKAZ DNIA",
+        "description": "Audycja przeznaczona dla osób powyżej 16. roku życia. Igor Zalewski zaprasza na Przekaz Dnia. Whey Protein Low Lactose ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MaGwuulVf2o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MaGwuulVf2o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MaGwuulVf2o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MaGwuulVf2o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MaGwuulVf2o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/MaGwuulVf2o/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kanał Zero",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:55:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Elm2XhgUZsE-e72NqBXF1N-Tm7A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "URW1Nt3qU4I"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T09:00:13Z",
+        "channelId": "UCoVF7lPMKO2HYXfdkcHqEpQ",
+        "title": "Bitcoin spadł do cen, których miało już NIE BYĆ. Co dalej?",
+        "description": "Link do materiału: https://youtu.be/45PsPh5YtAk *OKX GIEŁDA Z LICENCJĄ MiCA + do 400 € nagród na start dla nowych ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/URW1Nt3qU4I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/URW1Nt3qU4I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/URW1Nt3qU4I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/URW1Nt3qU4I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/URW1Nt3qU4I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/URW1Nt3qU4I/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Świat Krypto",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T09:00:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FSctliz9fytnoul-8rJevYLUtz4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "WPLSzuFu4G8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-13T19:27:25Z",
+        "channelId": "UChqVjLVciDeMlKA0bB42HXA",
+        "title": "O takim PS5 marzyło Sony",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WPLSzuFu4G8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WPLSzuFu4G8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WPLSzuFu4G8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WPLSzuFu4G8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WPLSzuFu4G8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał o technologii",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-13T19:27:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GcSrJcQmvXBidTAfYP1ShpmfPe8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-BOQj0WSs5w"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T14:54:35Z",
+        "channelId": "UCelOnoH_P-vJgAHSAcMKQiw",
+        "title": "KRACH AI! Co Fed znalazł u gigantów AI",
+        "description": "Dziś w nocy pierwsze wyniki Nvidii bez Jensena Huanga, a raport Fedu liczy ponad 3 biliony dolarów zobowiązań gigantów AI ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-BOQj0WSs5w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-BOQj0WSs5w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-BOQj0WSs5w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-BOQj0WSs5w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-BOQj0WSs5w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Rynki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T14:54:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "45KQhiDOonRjCXn4NmG5d6ar7nE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "R_Cq81RQvP4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T05:44:22Z",
+        "channelId": "UCVVAAG6kqrDwjTTwqzVy_TA",
+        "title": "Is Prop Firm Ne Mujhe Free $25K Account Diya | Sabko Milega Free Funded Account",
+        "description": "oin My Official Telegram Channel @Hostellertrader1 (If the link doesn't open, then go to Telegram and search— ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/R_Cq81RQvP4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/R_Cq81RQvP4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/R_Cq81RQvP4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/R_Cq81RQvP4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/R_Cq81RQvP4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Hostellar trader ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T05:44:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Vq5og3r0ObXfZtiufjt-YdHgqLY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dKDQmpvOgQo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T07:35:12Z",
+        "channelId": "UC2sIhf108S02F0Qlb2a88eQ",
+        "title": "On what basis do I take a trade?  #trading",
+        "description": "Join the Booming Bulls Community** Access to our VIP communities, Zoom Sessions & important community links in one place   ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dKDQmpvOgQo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dKDQmpvOgQo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dKDQmpvOgQo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dKDQmpvOgQo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dKDQmpvOgQo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Booming Bulls",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T07:35:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "uwBd7xSkCtIFnf8i1GX7ElQEkPY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Jk_Z6t5XYHw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-11T18:37:44Z",
+        "channelId": "UCxAzQXtVjpDlFFjUqop_0Uw",
+        "title": "Get FREE Stock 📈 Now It&#39;s Time to Get in the Market | Sax Dad",
+        "description": "Get FREE stock — now it's time to get in the market! Join Robinhood through my link and get free stock when you sign up: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Jk_Z6t5XYHw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Jk_Z6t5XYHw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Jk_Z6t5XYHw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Jk_Z6t5XYHw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Jk_Z6t5XYHw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "robert lindell",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-11T18:37:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "L48oSPoiL7H3X_U-xVM1Sw4LEaA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "W31QOacOtM8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T17:30:09Z",
+        "channelId": "UCCzIDb-T3Dc5RL_XbWlLzKg",
+        "title": "Test wyrzutnia Król Iskra Line IC45-48-1 - Potężne 45mm w akcji! Fireworks Batch 2026",
+        "description": "Chcesz wesprzeć? Zostaw donate! Dziękuję https://tipply.pl/@smiechol Link do sklepu: https://odpalaj.pl/pl/ KOD ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/W31QOacOtM8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/W31QOacOtM8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/W31QOacOtM8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/W31QOacOtM8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/W31QOacOtM8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Śmiechol",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T17:30:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mHNnQmcohnPcJSPt641K33Y4Ck0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FoOrUl5mOV0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T14:30:07Z",
+        "channelId": "UC2MQ1TRVmCnslmwlgqayVrw",
+        "title": "Wielki KRYZYS MCDONALD&#39;S - Co się dzieje z biznesem? 🍔",
+        "description": "Reaguj na zmiany rynkowe z XTB: https://link-pso.xtb.com/pso/TzbOV Uważasz, że brakuje Ci odpowiedniej wiedzy? Teraz ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FoOrUl5mOV0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FoOrUl5mOV0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FoOrUl5mOV0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/FoOrUl5mOV0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/FoOrUl5mOV0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/FoOrUl5mOV0/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Globalista TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T14:30:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "OlVHa6FL839WE3Roos_Q7I1qOC4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vFiLpknzfB8"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-19T05:39:10Z",
+        "channelId": "UC5losN-u0iZwghjlvv-HZ5w",
+        "title": "how to Link Trading view in Dhan for Free | Free Trading view kaise chalaye #trading #dhan #shorts",
+        "description": "how to Link Trading view in Dhan for Free | Free Trading view kaise chalaye #trading #dhan #shorts If You Join My Free Learning ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vFiLpknzfB8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vFiLpknzfB8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vFiLpknzfB8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vFiLpknzfB8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vFiLpknzfB8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chhota Trader",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-19T05:39:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jGxb9O7v1djbLxDoesLQMCY0xNQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AACSYgzS47o"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T12:00:11Z",
+        "channelId": "UClhEl4bMD8_escGCCTmRAYg",
+        "title": "GTA 6: GRA I WIELKIE PIENIĄDZE, HISTORIA SUKCESU | KIJ W MROWISKO",
+        "description": "Audycja przeznaczona dla osób powyżej 16. roku życia. Już jest GTA VI! Za nami największa premiera w historii gier wideo.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AACSYgzS47o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AACSYgzS47o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AACSYgzS47o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AACSYgzS47o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AACSYgzS47o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/AACSYgzS47o/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kanał Zero",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T12:00:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GnPNPVNASklMJ4ecU_NHyJenoXs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TlqdbU_dwyQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T09:25:28Z",
+        "channelId": "UC22qsbvkvXLXpjzgIRYzJqw",
+        "title": "GP Makau 2026 | wyścig kwalifikacyjny | NA ŻYWO | Rewanż Tymka",
+        "description": "Materiał sponsorowany przez Mubi, sponsora głównego Tymka Kucharczyka. Chcesz wesprzeć moją karierę? Porównaj ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TlqdbU_dwyQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TlqdbU_dwyQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TlqdbU_dwyQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TlqdbU_dwyQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TlqdbU_dwyQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tymek Kucharczyk: Życie Na Limicie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T09:25:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jaGHiOy1-3g_0nONoCuM_-v_loo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "lnWD3yS4mUs"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-23T06:00:28Z",
+        "channelId": "UCGTkoYHU9n1Ec2Z4s5kdgVg",
+        "title": "KREML MARZY O PRZYWRÓCENIU PRACY NORD STREAM. GAZOCIĄG BYŁ FASCYNACJĄ PUTINA [WYCISZKIEWICZ I BOJKE]",
+        "description": "Historia wysadzenia gazociągu Nord Stream to jedna z najbardziej zuchwałych akcji sabotażowych w historii. W czasie, kiedy w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lnWD3yS4mUs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lnWD3yS4mUs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lnWD3yS4mUs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/lnWD3yS4mUs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/lnWD3yS4mUs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/lnWD3yS4mUs/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Koniec Świata - Arleta Bojke",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-23T06:00:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "C_mHVGNVxl-bA3cHCtsTamQ5ItU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "6YPJhFGK9lY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-08T15:30:07Z",
+        "channelId": "UCPwiZdhLuwaMRk_7W4gh4Rw",
+        "title": "Ta zbroja to szmelc. ★ Wɪᴇᴅźᴍɪɴ 3 Rᴇᴍᴀsᴛᴇʀ",
+        "description": "POLUB JEŚLI CI SIĘ PODOBA NOVIGRAD Link: https://discord.com/invite/Gmhy32jSwG lub na stronie głównej kanału.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6YPJhFGK9lY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6YPJhFGK9lY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6YPJhFGK9lY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6YPJhFGK9lY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6YPJhFGK9lY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jaskier",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-08T15:30:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "qMRk4B4Mqsg0y1YmTxvQlz1i4H4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cAj1_aKBjZc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T18:04:18Z",
+        "channelId": "UCrTTBSUr0zhPU56UQljag5A",
+        "title": "3 Stocks I Own...",
+        "description": "Research Platform https://sven-carlin-research-platform.teachable.com/p/stock-market-research-platform Interactive Brokers: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cAj1_aKBjZc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cAj1_aKBjZc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cAj1_aKBjZc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cAj1_aKBjZc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cAj1_aKBjZc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Value Investing with Sven Carlin, Ph.D.",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T18:04:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6tJSBbw4ah77zvzAqZRAf1ML82U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ea0BqkzS490"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T13:45:23Z",
+        "channelId": "UCccMUtNHioyEZiYiCzC61qw",
+        "title": "Xauusd Fall | Gold free Fall |  #trading #xauusd #usd #gold #smc #priceaction",
+        "description": "Xauusd Fall | Gold free Fall | Daily Trade Analysis Post in Telegram Link in Bio #trading #xauusd #usd #gold #smc #priceaction ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ea0BqkzS490/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ea0BqkzS490/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ea0BqkzS490/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ea0BqkzS490/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ea0BqkzS490/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "AOP TRADERS",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T13:45:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "AepUTlyxUYCHUm0KZUERn11qg8A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "P2ccO8eByAQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-31T16:00:02Z",
+        "channelId": "UCL7J5kDTF7-oPkZyIDe6xqw",
+        "title": "POLICJANT - zabawa W PODSKOKACH | muzyczno-ruchowa | NOWOŚĆ 2026",
+        "description": "Zabawa muzyczno-ruchowa POLICJANT jest skierowana do dzieci w wieku przedszkolnym. Składa się z czterech akcji, w której ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/P2ccO8eByAQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/P2ccO8eByAQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/P2ccO8eByAQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/P2ccO8eByAQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/P2ccO8eByAQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/P2ccO8eByAQ/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "W PODSKOKACH  M.Sadowska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-31T16:00:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2NEv2jqjluCJZ5gKdvp3zdq6-Aw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "z5OXriaEF4M"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-04T17:30:31Z",
+        "channelId": "UCblCfbJ9YCBU11ngfsZKlWg",
+        "title": "BUNT PRZECIWKO DOWÓDCY (WOJSKO DZIEŃ 3) - MIĘCZAKI S01E56",
+        "description": "[reklama] Zainstaluj aplikację TRADE REPUBLIC i zacznij oszczędzać za pośrednictwem naszego linku: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/z5OXriaEF4M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/z5OXriaEF4M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/z5OXriaEF4M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/z5OXriaEF4M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/z5OXriaEF4M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/z5OXriaEF4M/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Mieczaki AJ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-04T17:30:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6uS0CjlI1v4gUrENyPUX2ciqKWo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "paKbZkPlhdg"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T14:30:37Z",
+        "channelId": "UCbWW7i7KnwQfqp6HFg1diFw",
+        "title": "FD vs Equity: How Much Wealth Can Mutual Funds Create in 10 Years?",
+        "description": "In this clip from Mutual Fund Ki Baat, Rupesh Patel, compares the long-term returns of fixed deposits with equity indices such as ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/paKbZkPlhdg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/paKbZkPlhdg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/paKbZkPlhdg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/paKbZkPlhdg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/paKbZkPlhdg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Mutual Funds with Groww",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T14:30:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ELr0SGWWnK63AePxPIscMkzvb4M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "j_qyv7fBDRU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-03T07:11:26Z",
+        "channelId": "UCiLfWJkHjdQMsDKeYyTUGnw",
+        "title": "Start a SIP early: waiting feels free. It isn&#39;t.",
+        "description": "Start a SIP early: waiting feels free. It isn't. Same ₹1 crore goal at an assumed 12% a year: ₹10871 a month if you start today, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/j_qyv7fBDRU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/j_qyv7fBDRU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/j_qyv7fBDRU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/j_qyv7fBDRU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/j_qyv7fBDRU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/j_qyv7fBDRU/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "BAYFOLIO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-03T07:11:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "qRPvb2JDBbdtmNB9t0-EZT8TF48",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "aFyooAb3wt8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T15:00:06Z",
+        "channelId": "UCR7uLtPuXsDpN8N6ocFQyeg",
+        "title": "NOWE USTALENIA O TRAGEDII W KRAKOWIE",
+        "description": "zbiórki wspomniane w materiale: https://zrzutka.pl/pomocpozamachu https://zrzutka.pl/pomockrakow petycja: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aFyooAb3wt8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aFyooAb3wt8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aFyooAb3wt8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/aFyooAb3wt8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/aFyooAb3wt8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/aFyooAb3wt8/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Konopskyy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T15:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "uTVoV0DalkPD-d820nobk8bHs8I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9UD0E0Hez3o"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T15:45:20Z",
+        "channelId": "UCyuW_u7ncRqsy6OC7SNYjjg",
+        "title": "Day 16: 10k to 100k journey in 30 days",
+        "description": "I do NOT sell any paid courses, and my trading education is completely FREE on my official YouTube channel. I also do NOT ask ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9UD0E0Hez3o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9UD0E0Hez3o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9UD0E0Hez3o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9UD0E0Hez3o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9UD0E0Hez3o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "I trade",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T15:45:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ba_LGiowcJN6eAiJ1P0VAelmJM8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mLGepWAN7VI"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-29T17:37:25Z",
+        "channelId": "UCEhFG1k1kcYZlnbqxs-MRdQ",
+        "title": "Live silver 29 OCTOBER 2026- Analysis,Targets &amp; Strategy by Amit Jain",
+        "description": "Our Sebi Registration Number: INH000011112 Please Visit On Our Website For More Information:- ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mLGepWAN7VI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mLGepWAN7VI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mLGepWAN7VI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mLGepWAN7VI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mLGepWAN7VI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Intelisys Investment And Trading (Amit Jain)",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-29T17:37:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "wKTOCwqQzkbDGzAdSu1T8sze6Oo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KLD2CIIVwuQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-21T10:32:23Z",
+        "channelId": "UCS60mGL4Gj-reXpogjGqt2w",
+        "title": "Why This Engineering Firm Could Deliver 213% CAGR Profit Growth | ICICI Direct",
+        "description": "This Indian engineering company has already built a global presence across more than 100 countries. But the next phase of its ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KLD2CIIVwuQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KLD2CIIVwuQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KLD2CIIVwuQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KLD2CIIVwuQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KLD2CIIVwuQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "ICICI Direct",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-21T10:32:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "D1b0b6_ZtX7aSRcwBVvd5bZqsvA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3xR3EoH4X1w"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-12T14:08:55Z",
+        "channelId": "UCR7uLtPuXsDpN8N6ocFQyeg",
+        "title": "NIKOGO NIE OBCHODZI NOWY FILM FRIZA? (GROMDA, PROBLEM YOUTUBE, DRESSCODE, ERYK MOCZKO, EKIPA)",
+        "description": "zbiórka https://www.siepomaga.pl/mikolaj-janiak [marka własna] Wesprzyj swoje skupienie, pamięć, sen oraz energie z MUSHI: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3xR3EoH4X1w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3xR3EoH4X1w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3xR3EoH4X1w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3xR3EoH4X1w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3xR3EoH4X1w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/3xR3EoH4X1w/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Konopskyy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-12T14:08:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rklPvtE5nkwTXX9N8WGrBs8UkXk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5lUBKeUD4Qw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T17:41:14Z",
+        "channelId": "UCCLu5B_Ctsw4N20DJvDykOA",
+        "title": "TRUMP सबको खुश कर दिया 🔥 SHARE MARKET LATEST NEWS TODAY | STOCK MARKET INDIA",
+        "description": "Thanks for Watching OPEN YOUR FREE DEMAT ACCOUNT WITH UPSTOX UnLocK EXCLUSIVE BeNeFits Through OuR ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5lUBKeUD4Qw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5lUBKeUD4Qw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5lUBKeUD4Qw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5lUBKeUD4Qw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5lUBKeUD4Qw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Stock Market INDIA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T17:41:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5euhP0j2CkCcwin0gfDXWR0CctU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dWGvfVKymYw"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-05T12:06:08Z",
+        "channelId": "UCtCpZWqKz6KYPebGXu3ITbQ",
+        "title": "UKRYTE DARMOWE NAGRODY W KORYTARZU UŻYWAJĄC ZAPALNIKA | Brawl Stars #brawlstars #findgus #kevson",
+        "description": "TRZECIA ZAGADKA – LABORATORIUM W KOSTNICY MORTISA   Te ukryte nagrody były w korytarzu więc możecie je dopiero ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dWGvfVKymYw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dWGvfVKymYw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dWGvfVKymYw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dWGvfVKymYw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dWGvfVKymYw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kevson",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-05T12:06:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "L0bnwbLrYHBgao-cKGGUX8TsgM0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2WlxMZFwXsw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T16:33:40Z",
+        "channelId": "UC5N4RVKoMQLaH51C3pV9j-w",
+        "title": "CVS is dismantling the healthcare empire it spent $78 billion building.",
+        "description": "CVS is dismantling the healthcare empire it spent $78 billion building. The stock fell 12%, but the breakup logic might surprise you ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2WlxMZFwXsw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2WlxMZFwXsw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2WlxMZFwXsw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2WlxMZFwXsw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2WlxMZFwXsw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Upside Invest",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T16:33:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MPIiFknmpN0ElPtyqS2n88empVs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HnkUaHP79RA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T15:00:54Z",
+        "channelId": "UC-gO3mMZk0H3uJ-eF_yBgyw",
+        "title": "Free CAIIB Course 2026 | JAIIB Exam Preparation | CAIIB AFM, BFM, ABFM &amp;  BRBL Preparation#shorts#yt",
+        "description": "Free CAIIB Course 2026 | Participate in JAIIB PPB Exam Analysis | Guidely Offer YouTube Shorts Description Want to get the ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HnkUaHP79RA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HnkUaHP79RA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HnkUaHP79RA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HnkUaHP79RA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HnkUaHP79RA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/HnkUaHP79RA/sardefault.jpg",
+            "width": 900,
+            "height": 1600
+          }
+        },
+        "channelTitle": "Guidely JAIIB CAIIB Exams",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T15:00:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3fNbBv7-BWgwK3tmCeVEIEoaJdU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "utCMHjAJtiM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T13:41:36Z",
+        "channelId": "UCgIU8Pg_bo4mN9gT4ySFXYw",
+        "title": "PRZYSTAŃ ZAGLĄDA DO PIEKŁA w Heroes 5 Arena",
+        "description": "Zerknij też tu* Link za pośrednictwem którego wersja Pro Ai do tworzenia własnych gier jest 30% tańsza przez 2 pierwsze ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/utCMHjAJtiM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/utCMHjAJtiM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/utCMHjAJtiM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/utCMHjAJtiM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/utCMHjAJtiM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/utCMHjAJtiM/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Świerszczu",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T13:41:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "o_SZyVvZwmqBsE10SXhxeLqEILI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LaXnICK2hKs"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-26T15:08:10Z",
+        "channelId": "UCEhFG1k1kcYZlnbqxs-MRdQ",
+        "title": "Live silver 26 OCTOBER 2026- Analysis,Targets &amp; Strategy by Amit Jain",
+        "description": "Our Sebi Registration Number: INH000011112 Please Visit On Our Website For More Information:- ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LaXnICK2hKs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LaXnICK2hKs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LaXnICK2hKs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LaXnICK2hKs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LaXnICK2hKs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Intelisys Investment And Trading (Amit Jain)",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-26T15:08:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "89Uw8JvJoUx54_joG6RaNovZ18c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HjfoxZWmrAU"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-22T14:42:35Z",
+        "channelId": "UCEhFG1k1kcYZlnbqxs-MRdQ",
+        "title": "Live GOLD 22 OCTOBER 2026- Analysis,Targets &amp; Strategy by Amit Jain",
+        "description": "Our Sebi Registration Number: INH000011112 Please Visit On Our Website For More Information:- ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HjfoxZWmrAU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HjfoxZWmrAU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HjfoxZWmrAU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HjfoxZWmrAU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HjfoxZWmrAU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Intelisys Investment And Trading (Amit Jain)",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-22T14:42:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WzbtwGN6kDk4aXVMsyFOigam15k",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5oOn5Kp4OVE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-11T14:52:28Z",
+        "channelId": "UCEhFG1k1kcYZlnbqxs-MRdQ",
+        "title": "Live GOLD 11 NOVEMBER 2026- Analysis,Targets &amp; Strategy by Amit Jain",
+        "description": "Our Sebi Registration Number: INH000011112 Please Visit On Our Website For More Information:- ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5oOn5Kp4OVE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5oOn5Kp4OVE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5oOn5Kp4OVE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5oOn5Kp4OVE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5oOn5Kp4OVE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Intelisys Investment And Trading (Amit Jain)",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-11T14:52:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IaZ54T7n1u7Juc1Q6gCEO6baX3A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PPUoDhYbjTY"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-29T10:00:21Z",
+        "channelId": "UCMI9Cw5EiT9I1IjetPEXl8Q",
+        "title": "WSZYSTKIE KLASY *ZA DARMO* w ANIMAL HOSPITAL! 🏥",
+        "description": "LINK DO DISCORDA - https://discord.gg/dzikshop.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PPUoDhYbjTY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PPUoDhYbjTY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PPUoDhYbjTY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PPUoDhYbjTY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PPUoDhYbjTY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "DzikPlus",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-29T10:00:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Cy6p2Tvse0LTbV1hBoV8kRm9M64",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4s93VlZijhc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-06T14:30:03Z",
+        "channelId": "UCDOGn9ZG0Rjb-tsq0KqR1Xg",
+        "title": "FIIs are back to Indian Stock Market?",
+        "description": "Join AI Trading Masterclass Mentorship - https://bit.ly/4r7KXol Open Free Trading Account - https://invite.dhan.co/?join=KIRU ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4s93VlZijhc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4s93VlZijhc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4s93VlZijhc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4s93VlZijhc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4s93VlZijhc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/4s93VlZijhc/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Kirubakaran Rajendran",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-06T14:30:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jcgBlVE3EnsU9tjEpj10t7HYnYM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FaNG2Ravml4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T15:28:49Z",
+        "channelId": "UCEhFG1k1kcYZlnbqxs-MRdQ",
+        "title": "Live silver 02 NOVEMBER 2026- Analysis,Targets &amp; Strategy by Amit Jain",
+        "description": "Our Sebi Registration Number: INH000011112 Please Visit On Our Website For More Information:- ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FaNG2Ravml4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FaNG2Ravml4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FaNG2Ravml4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/FaNG2Ravml4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/FaNG2Ravml4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Intelisys Investment And Trading (Amit Jain)",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T15:28:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RcGAx8ZHBhz1cmZyYUnMwZ5niG4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NQyIwVhQ7D8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T12:30:36Z",
+        "channelId": "UCJTY6z_SrU39MIcJxEtmduA",
+        "title": "How to get your physical annual report for free? | Parth Verma",
+        "description": "Link to the description: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NQyIwVhQ7D8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NQyIwVhQ7D8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NQyIwVhQ7D8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/NQyIwVhQ7D8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/NQyIwVhQ7D8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/NQyIwVhQ7D8/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "The Valuation School",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T12:30:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "geJlGvxsPEp-1L9NGkhRm_S_gFI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yjt9i6iapGE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T17:00:26Z",
+        "channelId": "UCs60_Z83HU76uygzHRQl0kA",
+        "title": "Anthropic&#39;s IPO explained simply",
+        "description": "Stocks Phase Analysis (Free Tool): https://stocksimplifier.com/yt ━━━━━━━━━━━━━━━━━━━━━━━━━ My ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yjt9i6iapGE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yjt9i6iapGE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yjt9i6iapGE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yjt9i6iapGE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yjt9i6iapGE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/yjt9i6iapGE/sardefault.jpg",
+            "width": 1440,
+            "height": 2560
+          }
+        },
+        "channelTitle": "Brian Feroldi",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T17:00:26Z"
+      }
+    }
+  ]
+}

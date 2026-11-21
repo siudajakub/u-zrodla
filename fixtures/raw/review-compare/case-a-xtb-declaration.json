@@ -1,0 +1,32 @@
+{
+ "capture": {
+  "id": "youtube:xtMqKkFO-0M",
+  "creatorId": "youtube:UCnmJzS-tFT7DlxIMFxYGcHw",
+  "title": "Dokupiłem Netflix za 200 zł... Efekt mnie rozbawił 😂 | Portfel inwestycyjny",
+  "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M",
+  "platform": "youtube",
+  "description": "Partnerem odcinka jest XTB",
+  "module": "M1",
+  "observedAt": "2026-11-21T15:40:13.808887+00:00",
+  "publishedAt": "2026-11-15T12:03:48.000000+00:00",
+  "contentHash": "d245bd33bc2209dda4e312e8c2e9508fbc42b3eb36386d6b33a61663ba15d108",
+  "materialType": "youtube_atom_title_description",
+  "provenance": {
+   "sourceUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnmJzS-tFT7DlxIMFxYGcHw",
+   "observedAt": "2026-11-21T15:40:13.808887+00:00",
+   "responseSha256": "6540a1ac08c6940a8508831da9f0c5b00e197f7e01bcdac7ba3ca507815e2764",
+   "scope": "youtube_atom_title_description",
+   "truncated": true,
+   "storage": "watch_sqlite",
+   "sourceVersion": 1,
+   "originalTextSha256": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716",
+   "sampled": true
+  }
+ },
+ "source": {
+  "kind": "fixture",
+  "file": "fixtures/raw/discovery/2026-11-21.json",
+  "fileSha256": "3651cd835e82f93448769471dbab3036f47124eb4acea2ab080bf513568680b6",
+  "note": "Rekord bez zmian. Opis to 26-znakowy wycinek (sampled, truncated)."
+ }
+}

@@ -1,0 +1,4088 @@
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "pDuhXi8alsQBDIWcgp34xtwRy_s",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "dCJ8lldEJnD_wOy-b9cZbGVEVHQ",
+      "id": "pL4v6ebwESE",
+      "snippet": {
+        "publishedAt": "2026-11-18T17:04:55Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "The Longest 1 Minute of Your Life",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pL4v6ebwESE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pL4v6ebwESE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pL4v6ebwESE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pL4v6ebwESE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pL4v6ebwESE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/pL4v6ebwESE/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "The Longest 1 Minute of Your Life",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT41S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "911070",
+        "likeCount": "47082",
+        "favoriteCount": "0",
+        "commentCount": "220"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "lS2Ewa-JenRNi276MaVuM4Fmc1A",
+      "id": "XSpGjkYvTu4",
+      "snippet": {
+        "publishedAt": "2026-11-16T18:56:18Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Motivation vs. Discipline",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XSpGjkYvTu4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XSpGjkYvTu4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XSpGjkYvTu4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/XSpGjkYvTu4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/XSpGjkYvTu4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/XSpGjkYvTu4/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Motivation vs. Discipline",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT29S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1289336",
+        "likeCount": "43882",
+        "favoriteCount": "0",
+        "commentCount": "252"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "OKtc0jYDW_cIcdU1D_4GBpvQ3Do",
+      "id": "Xa5McM_GjbY",
+      "snippet": {
+        "publishedAt": "2026-11-14T19:15:59Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Levels of Fragrances",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Xa5McM_GjbY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Xa5McM_GjbY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Xa5McM_GjbY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Xa5McM_GjbY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Xa5McM_GjbY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/Xa5McM_GjbY/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Levels of Fragrances",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT59S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2933566",
+        "likeCount": "126916",
+        "favoriteCount": "0",
+        "commentCount": "590"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "fYILxbUnEKGBcH9RDUnJhEv8kYw",
+      "id": "kvXIfy7w_t8",
+      "snippet": {
+        "publishedAt": "2026-11-13T20:14:11Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "If You’re Single, Do This Before Dating Anyone",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kvXIfy7w_t8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kvXIfy7w_t8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kvXIfy7w_t8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kvXIfy7w_t8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kvXIfy7w_t8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/kvXIfy7w_t8/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "If You’re Single, Do This Before Dating Anyone",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M26S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "562479",
+        "likeCount": "45845",
+        "favoriteCount": "0",
+        "commentCount": "347"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "ma_-piYorMy803-iBZ5rDB8R7r0",
+      "id": "rmlR0x24tQI",
+      "snippet": {
+        "publishedAt": "2026-11-12T18:46:40Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Nice Guy vs. Good Man",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rmlR0x24tQI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rmlR0x24tQI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rmlR0x24tQI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rmlR0x24tQI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rmlR0x24tQI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/rmlR0x24tQI/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Nice Guy vs. Good Man",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "4745934",
+        "likeCount": "169005",
+        "favoriteCount": "0",
+        "commentCount": "777"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "fb_TcE6d7VMbSQSNoHYfxx8_5b8",
+      "id": "c1_zcdC4MmY",
+      "snippet": {
+        "publishedAt": "2026-11-11T19:33:28Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "How to Start a Business With $0 This Christmas",
+        "description": "Try Printify For Free: https://try.printify.com/ona57k3po9k8 (copy and paste this link)",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/c1_zcdC4MmY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/c1_zcdC4MmY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/c1_zcdC4MmY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/c1_zcdC4MmY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/c1_zcdC4MmY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/c1_zcdC4MmY/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "How to Start a Business With $0 This Christmas",
+          "description": "Try Printify For Free: https://try.printify.com/ona57k3po9k8 (copy and paste this link)"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT32S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "810801",
+        "likeCount": "32365",
+        "favoriteCount": "0",
+        "commentCount": "305"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "kmiOtYhVy4ZMHRlZEiYYmIchhSg",
+      "id": "wngQIbHti8U",
+      "snippet": {
+        "publishedAt": "2026-11-10T18:45:10Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Levels of Spending Money",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wngQIbHti8U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wngQIbHti8U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wngQIbHti8U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wngQIbHti8U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wngQIbHti8U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/wngQIbHti8U/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Levels of Spending Money",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT52S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2927623",
+        "likeCount": "116488",
+        "favoriteCount": "0",
+        "commentCount": "534"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "w41amyzcej1txTDC5iLwKafdhL8",
+      "id": "PiRbfgeDqyw",
+      "snippet": {
+        "publishedAt": "2026-11-09T18:44:28Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Mistakes Most Men Learn Too Late…",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PiRbfgeDqyw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PiRbfgeDqyw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PiRbfgeDqyw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PiRbfgeDqyw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PiRbfgeDqyw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/PiRbfgeDqyw/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Mistakes Most Men Learn Too Late…",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M42S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1075074",
+        "likeCount": "77364",
+        "favoriteCount": "0",
+        "commentCount": "446"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "twp3dHccOwyg37coXtu8sUzHSFo",
+      "id": "5-lo-E5sUz0",
+      "snippet": {
+        "publishedAt": "2026-11-07T18:58:45Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Levels of Learning New Skills",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5-lo-E5sUz0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5-lo-E5sUz0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5-lo-E5sUz0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5-lo-E5sUz0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5-lo-E5sUz0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/5-lo-E5sUz0/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Levels of Learning New Skills",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT46S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2630057",
+        "likeCount": "105379",
+        "favoriteCount": "0",
+        "commentCount": "442"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "uJsFvQBlupaAQ1ocPfeUx2qUv10",
+      "id": "wlIkaP3C1LQ",
+      "snippet": {
+        "publishedAt": "2026-11-07T16:17:42Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "25 Skills to Learn Before You're 25 Years Old",
+        "description": "Download Critique AI Now: https://www.critiqueai.app/\n\nClick here to subscribe - @dalati \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nThese are 25 essential life skills everyone should learn before 25 to get ahead in their 20s. From building confidence and discipline to improving your health, relationships, productivity, and finances, these skills can help you become the best version of yourself.\n\nI'm 25 years old, and looking back, there are so many things I wish I had learned earlier. In this video, I'm sharing 25 important life skills that can help you improve your life, avoid common mistakes, develop better habits, and set yourself up for success.\n\nWhether you're a teenager, in your early 20s, or simply looking for ways to better yourself, these are practical skills everyone should know.\n\nHere's what you'll learn:\n\n🧠 **Mental Skills:** How to control your emotions, find your purpose, stop wasting time on your phone, develop self-discipline, and build a stronger mindset.\n\n🗣️ **Social Skills:** How to communicate effectively, become more confident, stand up for yourself, build meaningful relationships, and improve your social skills.\n\n💪 **Physical & Health Skills:** How to work out properly, build muscle, eat healthy, improve your sleep, take care of your appearance, and learn basic self-defense.\n\n📱 **Practical Life Skills:** How to manage your time, stay organized, understand contracts, protect yourself online, use AI, and turn your ideas into reality.\n\n💰 **Financial Skills:** How to budget, save money, start investing, understand taxes, build good credit, develop high-income skills, and negotiate confidently.\n\nIf you're wondering how to get your life together, become more successful in your 20s, or start your self-improvement journey, this video is for you.\n\nRemember, you don't have to master all 25 skills overnight. Start with one, stay consistent, and keep improving.\n\nComment below: Which of these 25 skills do you think is the most important?\n\nSubscribe for more videos on self-improvement, fitness, confidence, productivity, and becoming the best version of yourself.\n\nTimestamps:\n0:00 - Intro\n0:23 - Mental Skills\n5:45 - Social Skills\n9:46 - Physical Skills\n16:59 - Practical Skills\n22:06 - Financial Skills",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wlIkaP3C1LQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wlIkaP3C1LQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wlIkaP3C1LQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wlIkaP3C1LQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wlIkaP3C1LQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "tags": [
+          "25 skills to learn before 25",
+          "skills to learn before 25",
+          "25 skills you need to learn before 25",
+          "life skills everyone should know",
+          "skills to learn in your 20s",
+          "things to learn before 25",
+          "self improvement",
+          "self improvement for men",
+          "personal development",
+          "how to improve your life",
+          "how to get your life together",
+          "life advice for young adults",
+          "how to be successful in your 20s",
+          "build confidence",
+          "social skills",
+          "financial literacy",
+          "how to budget money",
+          "healthy habits",
+          "productivity tips"
+        ],
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "25 Skills to Learn Before You're 25 Years Old",
+          "description": "Download Critique AI Now: https://www.critiqueai.app/\n\nClick here to subscribe - @dalati \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nThese are 25 essential life skills everyone should learn before 25 to get ahead in their 20s. From building confidence and discipline to improving your health, relationships, productivity, and finances, these skills can help you become the best version of yourself.\n\nI'm 25 years old, and looking back, there are so many things I wish I had learned earlier. In this video, I'm sharing 25 important life skills that can help you improve your life, avoid common mistakes, develop better habits, and set yourself up for success.\n\nWhether you're a teenager, in your early 20s, or simply looking for ways to better yourself, these are practical skills everyone should know.\n\nHere's what you'll learn:\n\n🧠 **Mental Skills:** How to control your emotions, find your purpose, stop wasting time on your phone, develop self-discipline, and build a stronger mindset.\n\n🗣️ **Social Skills:** How to communicate effectively, become more confident, stand up for yourself, build meaningful relationships, and improve your social skills.\n\n💪 **Physical & Health Skills:** How to work out properly, build muscle, eat healthy, improve your sleep, take care of your appearance, and learn basic self-defense.\n\n📱 **Practical Life Skills:** How to manage your time, stay organized, understand contracts, protect yourself online, use AI, and turn your ideas into reality.\n\n💰 **Financial Skills:** How to budget, save money, start investing, understand taxes, build good credit, develop high-income skills, and negotiate confidently.\n\nIf you're wondering how to get your life together, become more successful in your 20s, or start your self-improvement journey, this video is for you.\n\nRemember, you don't have to master all 25 skills overnight. Start with one, stay consistent, and keep improving.\n\nComment below: Which of these 25 skills do you think is the most important?\n\nSubscribe for more videos on self-improvement, fitness, confidence, productivity, and becoming the best version of yourself.\n\nTimestamps:\n0:00 - Intro\n0:23 - Mental Skills\n5:45 - Social Skills\n9:46 - Physical Skills\n16:59 - Practical Skills\n22:06 - Financial Skills"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT28M56S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "189329",
+        "likeCount": "5649",
+        "favoriteCount": "0",
+        "commentCount": "332"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "jvclMLSwIXjWh1VB6AGxmRQ-yjc",
+      "id": "OokWfTxvu1Q",
+      "snippet": {
+        "publishedAt": "2026-11-06T18:17:58Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Levels of Handling Confrontations",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OokWfTxvu1Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OokWfTxvu1Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OokWfTxvu1Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OokWfTxvu1Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OokWfTxvu1Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/OokWfTxvu1Q/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Levels of Handling Confrontations",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT34S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "5706136",
+        "likeCount": "181668",
+        "favoriteCount": "0",
+        "commentCount": "464"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "7u2BAI5cxzodOrIg-VVxwHQGPVE",
+      "id": "60PRHGkHvCI",
+      "snippet": {
+        "publishedAt": "2026-11-05T18:39:00Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "STOP Being a “Nice” Guy",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/60PRHGkHvCI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/60PRHGkHvCI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/60PRHGkHvCI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/60PRHGkHvCI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/60PRHGkHvCI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/60PRHGkHvCI/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "STOP Being a “Nice” Guy",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2568608",
+        "likeCount": "103697",
+        "favoriteCount": "0",
+        "commentCount": "446"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "zTP-DjW5aSHOXIcpbvKDGCAq47w",
+      "id": "yv9aT-rdDCw",
+      "snippet": {
+        "publishedAt": "2026-11-04T18:38:38Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Levels of Achieving Success",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yv9aT-rdDCw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yv9aT-rdDCw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yv9aT-rdDCw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yv9aT-rdDCw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yv9aT-rdDCw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/yv9aT-rdDCw/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Levels of Achieving Success",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT34S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1222696",
+        "likeCount": "44403",
+        "favoriteCount": "0",
+        "commentCount": "322"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "RX-bmFKKf0HMj_knVvb4d7uZNGc",
+      "id": "IQNf-46trfI",
+      "snippet": {
+        "publishedAt": "2026-11-03T17:51:15Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Bad Guest vs Good Guest",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IQNf-46trfI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IQNf-46trfI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IQNf-46trfI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IQNf-46trfI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IQNf-46trfI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/IQNf-46trfI/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Bad Guest vs Good Guest",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT30S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2448264",
+        "likeCount": "76473",
+        "favoriteCount": "0",
+        "commentCount": "335"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "UZgkAsOv-JwubV_JskJXH-4aSsE",
+      "id": "srvgcyxbNKg",
+      "snippet": {
+        "publishedAt": "2026-11-02T18:12:29Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Fine Dining Etiquette",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/srvgcyxbNKg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/srvgcyxbNKg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/srvgcyxbNKg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/srvgcyxbNKg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/srvgcyxbNKg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/srvgcyxbNKg/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Fine Dining Etiquette",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "4107722",
+        "likeCount": "144872",
+        "favoriteCount": "0",
+        "commentCount": "759"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "Ajdo3IFr28-TRYsBEMh_0LsuFSQ",
+      "id": "xAwDCkG8QzU",
+      "snippet": {
+        "publishedAt": "2026-10-31T16:17:35Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "6 Days vs. 3 Days at the Gym (Which Is Better?)",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xAwDCkG8QzU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xAwDCkG8QzU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xAwDCkG8QzU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xAwDCkG8QzU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xAwDCkG8QzU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/xAwDCkG8QzU/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "6 Days vs. 3 Days at the Gym (Which Is Better?)",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT31S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3179870",
+        "likeCount": "95144",
+        "favoriteCount": "0",
+        "commentCount": "521"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "ULOBYoOz63pnaCj3VvBBZxxFI0g",
+      "id": "f44dCTVCObM",
+      "snippet": {
+        "publishedAt": "2026-10-30T19:02:12Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "How to Dominate Any Conversation",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/f44dCTVCObM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/f44dCTVCObM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/f44dCTVCObM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/f44dCTVCObM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/f44dCTVCObM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/f44dCTVCObM/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "How to Dominate Any Conversation",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT27S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "760670",
+        "likeCount": "39442",
+        "favoriteCount": "0",
+        "commentCount": "243"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "QTxzWMm8KVeQ4JaZp4cRMrWq_UA",
+      "id": "GEQ5OEi-eNM",
+      "snippet": {
+        "publishedAt": "2026-10-28T18:37:18Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Levels of Discipline",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GEQ5OEi-eNM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GEQ5OEi-eNM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GEQ5OEi-eNM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/GEQ5OEi-eNM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/GEQ5OEi-eNM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/GEQ5OEi-eNM/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Levels of Discipline",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT44S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1868045",
+        "likeCount": "63300",
+        "favoriteCount": "0",
+        "commentCount": "585"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "9XzDUSMzTeX1wy7LfL5dC39EBTQ",
+      "id": "ujeDN5tnNLk",
+      "snippet": {
+        "publishedAt": "2026-10-28T15:42:10Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Give Me 16 Minutes and I'll Make You Dangerously Confident",
+        "description": "Download Critique AI Now: https://www.critiqueai.app/\n\nClick here to subscribe -  @dalati \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nIf you've been insecure your whole life and want to learn how to become confident, this video is for you.\n\nI'll break down the 5 levels of confidence and show you how to stop overthinking, overcome the fear of being judged, improve your social skills, handle rejection, and build genuine self-confidence. You'll learn practical ways to stop seeking validation, become more comfortable in social situations, and build confidence that doesn't depend on what other people think.\n\nWhich level of confidence are you currently at?\n\nTimestamps:\n0:00 - Intro\n0:40 - Level 1: Insecure\n4:35 - Level 2: Coming out of your shell\n7:23 - Level 3: Building Confidence\n9:51 - Level 4: Secure Confidence\n12:46 - Level 5: Unshakeable Confidence",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ujeDN5tnNLk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ujeDN5tnNLk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ujeDN5tnNLk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ujeDN5tnNLk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ujeDN5tnNLk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "tags": [
+          "how to become confident",
+          "how to be confident",
+          "how to stop being insecure",
+          "5 levels of confidence",
+          "levels of confidence",
+          "how to build confidence",
+          "self confidence",
+          "confidence tips",
+          "overcome insecurity",
+          "stop overthinking",
+          "social confidence",
+          "social skills",
+          "fear of being judged",
+          "stop caring what people think",
+          "stop seeking validation",
+          "overcome self doubt",
+          "improve self esteem",
+          "handle rejection",
+          "how to talk to people",
+          "unshakable confidence",
+          "self improvement",
+          "confidence for men"
+        ],
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Give Me 16 Minutes and I'll Make You Dangerously Confident",
+          "description": "Download Critique AI Now: https://www.critiqueai.app/\n\nClick here to subscribe -  @dalati \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nIf you've been insecure your whole life and want to learn how to become confident, this video is for you.\n\nI'll break down the 5 levels of confidence and show you how to stop overthinking, overcome the fear of being judged, improve your social skills, handle rejection, and build genuine self-confidence. You'll learn practical ways to stop seeking validation, become more comfortable in social situations, and build confidence that doesn't depend on what other people think.\n\nWhich level of confidence are you currently at?\n\nTimestamps:\n0:00 - Intro\n0:40 - Level 1: Insecure\n4:35 - Level 2: Coming out of your shell\n7:23 - Level 3: Building Confidence\n9:51 - Level 4: Secure Confidence\n12:46 - Level 5: Unshakeable Confidence"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT16M1S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "192647",
+        "likeCount": "4585",
+        "favoriteCount": "0",
+        "commentCount": "218"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "SdeuJ81LTR2mPYLNFh7WsRu3tZU",
+      "id": "8akCYIQkNB0",
+      "snippet": {
+        "publishedAt": "2026-10-27T17:36:11Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Levels of Sleeping",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8akCYIQkNB0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8akCYIQkNB0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8akCYIQkNB0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8akCYIQkNB0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8akCYIQkNB0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/8akCYIQkNB0/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Levels of Sleeping",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT45S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "4692547",
+        "likeCount": "159252",
+        "favoriteCount": "0",
+        "commentCount": "566"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "5Y1cI9kpZHsI6KlDVICa1fQECNQ",
+      "id": "-o8IL8b_I9U",
+      "snippet": {
+        "publishedAt": "2026-10-26T18:29:10Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Stop Wasting Money on These Things",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-o8IL8b_I9U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-o8IL8b_I9U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-o8IL8b_I9U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-o8IL8b_I9U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-o8IL8b_I9U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/-o8IL8b_I9U/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Stop Wasting Money on These Things",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT41S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2375593",
+        "likeCount": "88090",
+        "favoriteCount": "0",
+        "commentCount": "394"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "cboJjHygj9HUrIqneYMN42uYBSE",
+      "id": "jCg1Qdgp_pM",
+      "snippet": {
+        "publishedAt": "2026-10-24T16:22:33Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Regular Wallet vs MagSafe Wallet",
+        "description": "Search “ESR Magsafe Wallet” on Amazon or check it out here: https://dada.link/pe-teo\u2060￼",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jCg1Qdgp_pM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jCg1Qdgp_pM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jCg1Qdgp_pM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jCg1Qdgp_pM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jCg1Qdgp_pM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/jCg1Qdgp_pM/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Regular Wallet vs MagSafe Wallet",
+          "description": "Search “ESR Magsafe Wallet” on Amazon or check it out here: https://dada.link/pe-teo\u2060￼"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT27S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2162770",
+        "likeCount": "65146",
+        "favoriteCount": "0",
+        "commentCount": "647"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "nF9YVjGSu3fFzXcjf7c1HK6PRvE",
+      "id": "igzQLk3swfs",
+      "snippet": {
+        "publishedAt": "2026-10-23T18:14:30Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Credit Card vs. Debit Card",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/igzQLk3swfs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/igzQLk3swfs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/igzQLk3swfs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/igzQLk3swfs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/igzQLk3swfs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/igzQLk3swfs/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Credit Card vs. Debit Card",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT36S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3437436",
+        "likeCount": "97273",
+        "favoriteCount": "0",
+        "commentCount": "462"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "TDuzAnR2QACVKPxVJwAFOC5F1eM",
+      "id": "YnINXXmZTZU",
+      "snippet": {
+        "publishedAt": "2026-10-22T18:38:23Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Your Environment Is Sabotaging You",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YnINXXmZTZU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YnINXXmZTZU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YnINXXmZTZU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YnINXXmZTZU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YnINXXmZTZU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/YnINXXmZTZU/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Your Environment Is Sabotaging You",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT39S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "663981",
+        "likeCount": "33316",
+        "favoriteCount": "0",
+        "commentCount": "186"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "4H4XPWt_gNd9H312T1_TnX6wMa0",
+      "id": "WQ5uI7yCd38",
+      "snippet": {
+        "publishedAt": "2026-10-21T18:23:16Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "The Easiest Side Hustle to Start ASAP",
+        "description": "Try Printify For Free: https://try.printify.com/ona57k3po9k8",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WQ5uI7yCd38/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WQ5uI7yCd38/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WQ5uI7yCd38/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WQ5uI7yCd38/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WQ5uI7yCd38/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/WQ5uI7yCd38/sardefault.jpg",
+            "width": 938,
+            "height": 1667
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "The Easiest Side Hustle to Start ASAP",
+          "description": "Try Printify For Free: https://try.printify.com/ona57k3po9k8"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT38S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1742871",
+        "likeCount": "86124",
+        "favoriteCount": "0",
+        "commentCount": "356"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "ZaW76Sb2AW9VEUuApq6vANqfpv8",
+      "id": "-Tnl1F8FsBc",
+      "snippet": {
+        "publishedAt": "2026-10-20T20:52:46Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Self-Sabotaging vs. Self-Improving",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-Tnl1F8FsBc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-Tnl1F8FsBc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-Tnl1F8FsBc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-Tnl1F8FsBc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-Tnl1F8FsBc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Self-Sabotaging vs. Self-Improving",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT39S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "520699",
+        "likeCount": "25685",
+        "favoriteCount": "0",
+        "commentCount": "196"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "dVOygqqKwOQvRkF0kstkvezgfEc",
+      "id": "pUle1weIEWU",
+      "snippet": {
+        "publishedAt": "2026-10-19T18:44:05Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Levels of Confidence",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pUle1weIEWU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pUle1weIEWU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pUle1weIEWU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pUle1weIEWU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pUle1weIEWU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/pUle1weIEWU/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Levels of Confidence",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT52S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "7886377",
+        "likeCount": "254104",
+        "favoriteCount": "0",
+        "commentCount": "1131"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "LqrpvAKHtTTh19WMhXjPvE3wf0I",
+      "id": "f9JCIhYvVqI",
+      "snippet": {
+        "publishedAt": "2026-10-19T14:54:05Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Your Environment Is Secretly Destroying Your Life",
+        "description": "Download Critique AI Now: https://www.critiqueai.app/\n\nClick here to subscribe - @dalati \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nLearn how to set up your space to improve your life, build better habits, and make self-improvement easier. In this video, I break down six everyday spaces—your bedroom, desk, kitchen, bathroom, living room, and closet—and show you practical ways to organize each one for better sleep, productivity, healthy eating, and daily routines.\n\nYou don’t need expensive furniture or more motivation. Start with simple changes that make good habits easier and bad habits harder.\n\nTimestamps:\n0:00 - Intro\n0:50 - Bedroom\n3:17 - Desk\n6:13 - Kitchen\n9:24 - Bathroom\n11:40 - Living Room\n13:03 - Closet",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/f9JCIhYvVqI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/f9JCIhYvVqI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/f9JCIhYvVqI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/f9JCIhYvVqI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/f9JCIhYvVqI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "tags": [
+          "self improvement",
+          "how to improve your life",
+          "environment design",
+          "organize your life",
+          "how to build good habits",
+          "break bad habits",
+          "room setup",
+          "bedroom setup",
+          "desk setup",
+          "home organization",
+          "productivity tips",
+          "sleep better",
+          "healthy eating habits",
+          "daily routine",
+          "reduce distractions",
+          "organize your room",
+          "how to be more disciplined",
+          "make good habits easier",
+          "design your environment",
+          "habits for success",
+          "Pierre Dalati",
+          "home decor",
+          "home setup",
+          "design your room",
+          "self care routine"
+        ],
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Your Environment Is Secretly Destroying Your Life",
+          "description": "Download Critique AI Now: https://www.critiqueai.app/\n\nClick here to subscribe - @dalati \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nLearn how to set up your space to improve your life, build better habits, and make self-improvement easier. In this video, I break down six everyday spaces—your bedroom, desk, kitchen, bathroom, living room, and closet—and show you practical ways to organize each one for better sleep, productivity, healthy eating, and daily routines.\n\nYou don’t need expensive furniture or more motivation. Start with simple changes that make good habits easier and bad habits harder.\n\nTimestamps:\n0:00 - Intro\n0:50 - Bedroom\n3:17 - Desk\n6:13 - Kitchen\n9:24 - Bathroom\n11:40 - Living Room\n13:03 - Closet"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT15M28S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "207203",
+        "likeCount": "4037",
+        "favoriteCount": "0",
+        "commentCount": "280"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "k2CqQlg5X1pRw-GmNJz8JHpPSf0",
+      "id": "CFaH3MSeFUw",
+      "snippet": {
+        "publishedAt": "2026-10-18T17:12:06Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Immature vs Mature",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CFaH3MSeFUw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CFaH3MSeFUw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CFaH3MSeFUw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CFaH3MSeFUw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CFaH3MSeFUw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Immature vs Mature",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1415044",
+        "likeCount": "60455",
+        "favoriteCount": "0",
+        "commentCount": "434"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "_Ca3xbqQPlW70dxBw2Kvo1Tem_4",
+      "id": "27ON8ytnNWg",
+      "snippet": {
+        "publishedAt": "2026-10-17T16:40:46Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Don’t Make These Gym Mistakes",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/27ON8ytnNWg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/27ON8ytnNWg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/27ON8ytnNWg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/27ON8ytnNWg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/27ON8ytnNWg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/27ON8ytnNWg/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Don’t Make These Gym Mistakes",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT41S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2582163",
+        "likeCount": "97783",
+        "favoriteCount": "0",
+        "commentCount": "321"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "3SrnTK1SQkvxVsQ5aJikKDzxMqA",
+      "id": "RATAMlrPz1w",
+      "snippet": {
+        "publishedAt": "2026-10-16T16:25:18Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Why You Can’t Reduce Your Screen Time",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RATAMlrPz1w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RATAMlrPz1w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RATAMlrPz1w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RATAMlrPz1w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RATAMlrPz1w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/RATAMlrPz1w/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Why You Can’t Reduce Your Screen Time",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT27S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "699136",
+        "likeCount": "22660",
+        "favoriteCount": "0",
+        "commentCount": "240"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "4yVYeiywHdfEMBe0RaoTq8H1chw",
+      "id": "tQ4-7ThaJv0",
+      "snippet": {
+        "publishedAt": "2026-10-15T18:25:31Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Don’t Make These Hotel Mistakes!",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tQ4-7ThaJv0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tQ4-7ThaJv0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tQ4-7ThaJv0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tQ4-7ThaJv0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tQ4-7ThaJv0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/tQ4-7ThaJv0/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Don’t Make These Hotel Mistakes!",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT41S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "4306312",
+        "likeCount": "149257",
+        "favoriteCount": "0",
+        "commentCount": "373"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "HpC5FCoSgmdnR2pKt6vLZuy6sK0",
+      "id": "r1nX6mdrrto",
+      "snippet": {
+        "publishedAt": "2026-10-14T19:18:11Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Don’t Make This Travel Mistake…",
+        "description": "Shop at UGREEN here: https://ugreen.pxf.io/enG6NQ",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/r1nX6mdrrto/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/r1nX6mdrrto/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/r1nX6mdrrto/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/r1nX6mdrrto/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/r1nX6mdrrto/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Don’t Make This Travel Mistake…",
+          "description": "Shop at UGREEN here: https://ugreen.pxf.io/enG6NQ"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT27S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2271924",
+        "likeCount": "77520",
+        "favoriteCount": "0",
+        "commentCount": "369"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "_rPEtTKJwnm6vh_HWJdNUKQr-Q8",
+      "id": "loXXlwwWmcs",
+      "snippet": {
+        "publishedAt": "2026-10-13T17:53:37Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "How to Match Colors to Your Outfits",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/loXXlwwWmcs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/loXXlwwWmcs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/loXXlwwWmcs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/loXXlwwWmcs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/loXXlwwWmcs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/loXXlwwWmcs/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "How to Match Colors to Your Outfits",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT21S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2043703",
+        "likeCount": "69699",
+        "favoriteCount": "0",
+        "commentCount": "436"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "1GP-ILx9K0JgCtSWnGujqwoG6hY",
+      "id": "tBYYDUepuxk",
+      "snippet": {
+        "publishedAt": "2026-10-12T18:48:16Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Levels of Smelling Good",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tBYYDUepuxk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tBYYDUepuxk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tBYYDUepuxk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tBYYDUepuxk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tBYYDUepuxk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/tBYYDUepuxk/sardefault.jpg",
+            "width": 940,
+            "height": 1671
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Levels of Smelling Good",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT34S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "16850474",
+        "likeCount": "508894",
+        "favoriteCount": "0",
+        "commentCount": "1398"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "QWtj8UMdW5nCOCSWMvlL7f7EgcA",
+      "id": "2S1YD-pyt2A",
+      "snippet": {
+        "publishedAt": "2026-10-12T15:08:50Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "I'm 25. Here's How to Get Ahead of Most 20 Year Olds",
+        "description": "Download Critique AI Now: https://www.critiqueai.app/\n\nClick here to subscribe -  @dalati  \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nI just turned 25, and these are the 8 life lessons I wish I knew sooner. If you're between 14 and 25, feel lost in life, or worry you're falling behind, this video will help you get ahead in your 20s and start building a future you're proud of.\n\nWe'll talk about how to find your passion, build discipline, stop wasting time, develop valuable skills, improve your physical and mental health, make smarter decisions, and surround yourself with people who push you to grow.\n\nWhether you're a teenager trying to figure out your future or in your 20s looking to turn your life around, remember: you don't need to have everything figured out. But the habits you build today will shape who you become tomorrow.\n\nSubscribe for more self-improvement, personal growth, productivity, and life advice.\n\nTimestamps:\n0:00 - Intro\n1:11 - Get comfortable being bad at things\n3:24 - Find something you care about genuinely\n7:04 - Nothing is permanent\n11:04 - Protect your attention like it's money\n12:57 - Build a body that makes everything else easier\n15:22 - Stop trying to look successful, become useful\n17:56 - Choose an environment that pulls you forward\n20:42 - Make your life about becoming, not arriving",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2S1YD-pyt2A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2S1YD-pyt2A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2S1YD-pyt2A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2S1YD-pyt2A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2S1YD-pyt2A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "tags": [
+          "self improvement",
+          "how to get ahead in life",
+          "life advice",
+          "advice for your 20s",
+          "feeling behind in life",
+          "how to change your life",
+          "how to be successful",
+          "personal growth",
+          "how to stop wasting time",
+          "life lessons",
+          "things I wish I knew at 20",
+          "how to find your passion",
+          "self discipline",
+          "how to get ahead in your 20s",
+          "how to get your life together",
+          "advice for young adults",
+          "how to improve yourself",
+          "habits for success",
+          "how to stop feeling behind",
+          "how to find your purpose",
+          "advice for 20s"
+        ],
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "I'm 25. Here's How to Get Ahead of Most 20 Year Olds",
+          "description": "Download Critique AI Now: https://www.critiqueai.app/\n\nClick here to subscribe -  @dalati  \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nI just turned 25, and these are the 8 life lessons I wish I knew sooner. If you're between 14 and 25, feel lost in life, or worry you're falling behind, this video will help you get ahead in your 20s and start building a future you're proud of.\n\nWe'll talk about how to find your passion, build discipline, stop wasting time, develop valuable skills, improve your physical and mental health, make smarter decisions, and surround yourself with people who push you to grow.\n\nWhether you're a teenager trying to figure out your future or in your 20s looking to turn your life around, remember: you don't need to have everything figured out. But the habits you build today will shape who you become tomorrow.\n\nSubscribe for more self-improvement, personal growth, productivity, and life advice.\n\nTimestamps:\n0:00 - Intro\n1:11 - Get comfortable being bad at things\n3:24 - Find something you care about genuinely\n7:04 - Nothing is permanent\n11:04 - Protect your attention like it's money\n12:57 - Build a body that makes everything else easier\n15:22 - Stop trying to look successful, become useful\n17:56 - Choose an environment that pulls you forward\n20:42 - Make your life about becoming, not arriving"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT24M15S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "229976",
+        "likeCount": "5801",
+        "favoriteCount": "0",
+        "commentCount": "339"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "np369OZo9Cz03P4zrWOtR_XkLH8",
+      "id": "BBZKQk3cUzU",
+      "snippet": {
+        "publishedAt": "2026-10-11T16:00:56Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "How to Stop Being Awkward at Parties",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BBZKQk3cUzU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BBZKQk3cUzU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BBZKQk3cUzU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BBZKQk3cUzU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BBZKQk3cUzU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "How to Stop Being Awkward at Parties",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT31S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1208463",
+        "likeCount": "54244",
+        "favoriteCount": "0",
+        "commentCount": "327"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "ho1L6FqGNc7KpMXdeSa1Uzy2M5M",
+      "id": "VG6qdYLwBUU",
+      "snippet": {
+        "publishedAt": "2026-10-10T17:01:32Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Your Future Self Is Begging You to Watch This",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VG6qdYLwBUU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VG6qdYLwBUU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VG6qdYLwBUU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VG6qdYLwBUU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VG6qdYLwBUU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Your Future Self Is Begging You to Watch This",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT31S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1015207",
+        "likeCount": "47154",
+        "favoriteCount": "0",
+        "commentCount": "341"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "4HRjJRIciVFXGKZ5bPlqHA6c39E",
+      "id": "Rb4CRMn0uyk",
+      "snippet": {
+        "publishedAt": "2026-10-09T17:01:24Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "How to Not Mess Up Your New Job",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Rb4CRMn0uyk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Rb4CRMn0uyk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Rb4CRMn0uyk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Rb4CRMn0uyk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Rb4CRMn0uyk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "How to Not Mess Up Your New Job",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT39S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1403640",
+        "likeCount": "62201",
+        "favoriteCount": "0",
+        "commentCount": "305"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "v-SQ9f8lrBDgH4WoDHkm6ivoihQ",
+      "id": "WrrF0jio6Yo",
+      "snippet": {
+        "publishedAt": "2026-10-08T18:53:18Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Small Changes That Make You Sound Better",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WrrF0jio6Yo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WrrF0jio6Yo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WrrF0jio6Yo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WrrF0jio6Yo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WrrF0jio6Yo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Small Changes That Make You Sound Better",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT22S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1295545",
+        "likeCount": "54706",
+        "favoriteCount": "0",
+        "commentCount": "529"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "8t8DHt-V_6V-CaATQXhb0meKAWk",
+      "id": "6hq1XeF2-5s",
+      "snippet": {
+        "publishedAt": "2026-10-07T18:23:27Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "How to Get Ahead of Most People Before 25",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6hq1XeF2-5s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6hq1XeF2-5s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6hq1XeF2-5s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6hq1XeF2-5s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6hq1XeF2-5s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "How to Get Ahead of Most People Before 25",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M9S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1058803",
+        "likeCount": "62586",
+        "favoriteCount": "0",
+        "commentCount": "1637"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "34fOt7I6PKKZJEdOj8zV4orEors",
+      "id": "iXllj_95t7w",
+      "snippet": {
+        "publishedAt": "2026-10-06T16:33:31Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Do This Instead of Playing Video Games",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iXllj_95t7w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iXllj_95t7w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iXllj_95t7w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/iXllj_95t7w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iXllj_95t7w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Do This Instead of Playing Video Games",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3228058",
+        "likeCount": "96886",
+        "favoriteCount": "0",
+        "commentCount": "710"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "E0eEPR8JueAaUgXOBXWPoE6jFgc",
+      "id": "IPtBFdXzZzU",
+      "snippet": {
+        "publishedAt": "2026-10-06T15:28:13Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "20 Things You're Doing Wrong Without Realizing It",
+        "description": "Download Critique AI Now: https://www.critiqueai.app/\n\nClick here to subscribe - @dalati \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nMost people are making small everyday mistakes without even realizing it, mistakes that affect productivity, focus, health, social skills, and money.\n\nIn this video, I break down 20 common mistakes you may be making every day and show you simple ways to fix them. From creating overwhelming to-do lists and keeping your phone beside you while working, to unhealthy habits, conversation mistakes, credit card habits, lifestyle creep, and more, these small changes can make a huge difference over time.\n\nYou’ll learn about:\n• Productivity mistakes that waste your time  \n• How to improve focus and protect your attention  \n• Healthy habits for sleep, fitness, and nutrition  \n• Social skills and conversation mistakes  \n• Money mistakes that can quietly cost you  \n• Simple self-improvement habits that improve your life\n\nThe goal isn’t to change everything overnight. Find the few mistakes you recognize in yourself, fix those first, and gradually build better habits.\n\nIf you’re interested in self-improvement, productivity, healthy habits, social skills, personal development, and becoming a better version of yourself, subscribe for more.\n\nTimestamps:\n0:00 - Intro\n0:30 - Productivity Mistakes\n3:33 - Attention Mistakes\n8:03 - Physical Mistakes\n11:58 - Social Mistakes\n14:35 - Financial Mistakes",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IPtBFdXzZzU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IPtBFdXzZzU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IPtBFdXzZzU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IPtBFdXzZzU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IPtBFdXzZzU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "tags": [
+          "things you're doing wrong",
+          "things you do wrong",
+          "everyday mistakes",
+          "common mistakes",
+          "self improvement",
+          "self improvement tips",
+          "life mistakes",
+          "bad habits",
+          "habits to stop",
+          "productivity tips",
+          "productivity mistakes",
+          "focus tips",
+          "attention span",
+          "healthy habits",
+          "social skills",
+          "money mistakes",
+          "financial mistakes",
+          "credit card tips",
+          "lifestyle creep",
+          "sleep habits",
+          "how to improve your life",
+          "improve your life",
+          "life advice",
+          "personal development",
+          "mistakes you're making",
+          "Pierre Dalati"
+        ],
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "20 Things You're Doing Wrong Without Realizing It",
+          "description": "Download Critique AI Now: https://www.critiqueai.app/\n\nClick here to subscribe - @dalati \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nMost people are making small everyday mistakes without even realizing it, mistakes that affect productivity, focus, health, social skills, and money.\n\nIn this video, I break down 20 common mistakes you may be making every day and show you simple ways to fix them. From creating overwhelming to-do lists and keeping your phone beside you while working, to unhealthy habits, conversation mistakes, credit card habits, lifestyle creep, and more, these small changes can make a huge difference over time.\n\nYou’ll learn about:\n• Productivity mistakes that waste your time  \n• How to improve focus and protect your attention  \n• Healthy habits for sleep, fitness, and nutrition  \n• Social skills and conversation mistakes  \n• Money mistakes that can quietly cost you  \n• Simple self-improvement habits that improve your life\n\nThe goal isn’t to change everything overnight. Find the few mistakes you recognize in yourself, fix those first, and gradually build better habits.\n\nIf you’re interested in self-improvement, productivity, healthy habits, social skills, personal development, and becoming a better version of yourself, subscribe for more.\n\nTimestamps:\n0:00 - Intro\n0:30 - Productivity Mistakes\n3:33 - Attention Mistakes\n8:03 - Physical Mistakes\n11:58 - Social Mistakes\n14:35 - Financial Mistakes"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT18M48S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "179621",
+        "likeCount": "3931",
+        "favoriteCount": "0",
+        "commentCount": "239"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "O5uqN8jPQvkmN-6i47SHbzOJNl4",
+      "id": "SjJm-dIN_JQ",
+      "snippet": {
+        "publishedAt": "2026-10-05T18:14:12Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Why You’re Always Unlucky",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SjJm-dIN_JQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SjJm-dIN_JQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SjJm-dIN_JQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SjJm-dIN_JQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SjJm-dIN_JQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Why You’re Always Unlucky",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT31S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1188597",
+        "likeCount": "47993",
+        "favoriteCount": "0",
+        "commentCount": "427"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "kPoSH5lIogWXh2xuPg4obxv60cQ",
+      "id": "yHm4MmmWBFM",
+      "snippet": {
+        "publishedAt": "2026-10-04T17:20:40Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Items Under $50 That Improve Your Quality of Life",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yHm4MmmWBFM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yHm4MmmWBFM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yHm4MmmWBFM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yHm4MmmWBFM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yHm4MmmWBFM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Items Under $50 That Improve Your Quality of Life",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT54S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "956452",
+        "likeCount": "39997",
+        "favoriteCount": "0",
+        "commentCount": "251"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "KNC2oVaij984Tk13sf0L5UR-zfE",
+      "id": "3x3Dj7OUXZY",
+      "snippet": {
+        "publishedAt": "2026-11-21T18:57:50Z",
+        "channelId": "UClhEl4bMD8_escGCCTmRAYg",
+        "title": "PO CO POLSCE KRZYŻACY? ZAKON, KTÓRY ZMIENIŁ NASZĄ HISTORIĘ",
+        "description": "Audycja przeznaczona dla osób powyżej 16. roku życia.\nWśród wielu przypadających w tym roku rocznic niepostrzeżenie mija 800 lat od wydarzeń, które zapoczątkowały sprowadzenie Zakonu Krzyżackiego na ziemie polskie. Zakon, powołany pierwotnie do opieki nad chorymi i rannymi podczas wypraw krzyżowych, pojawił się nad Wisłą w XIII wieku, rozpoczynając tym samym długi ciąg kłopotów dla polskich władców. Czy jednak sprowadzenie Krzyżaków na ziemie piastowskie przyniosło również jakieś pozytywy? Po co w ogóle sprowadzono ich nad Wisłę? Zapraszamy na materiał prof. Andrzeja Nowaka.\n\n💪 Whey Protein Low Lactose od SFD. Wybierz swój smak i zgarnij 10% rabatu z kodem ZERO 👉 https://sklep.sfd.pl/r/a/65\n\n📚 Wiedza to dobry pierwszy krok w inwestowaniu! Zdobądź ją podczas bezpłatnej konferencji online XTB Investing Masterclass już 27-28 listopada. Zapisz się 👉 http://link.pl.xtb.com/kanal-zero\nRejestrując się w XTB z kodem ZERO, otrzymasz specjalny kurs zarządzania finansami od podstaw. | Inwestowanie jest ryzykowne. Inwestuj odpowiedzialnie.\n\n💳 Zero ograniczeń, same korzyści. Przygotuj się na nowy rozdział w Twoim portfelu, z wieloma benefitami od ZEN.\nPobierz ZEN i zacznij odzyskiwać część wydatków https://be.zen.com/ZERO\n\n🏎️ W programie \"Tańszy Samochód\" obniżamy cenę każdego samochodu o 3%. Wejdź na 👉 https://vehis.pl/ i sprawdź nas!\n\n⚔️ BLACK WEEK z Kuchnią Vikinga. Wygraj Volvo XC40! Sprawdź na 👉http://blackviking.kuchniavikinga.pl?utm_source=influ_kz&utm_medium=instagram&utm_campaign=bw_20261102\n\nSzczegóły i regulamin loterii na 👉 https://blackviking.kuchniavikinga.pl/pliki/regulamin. Loteria dla osób powyżej 18 roku życia. Organizator: NOFSZA Sp. z o.o\n\n🎬 Wszystkie odcinki: https://youtube.com/playlist?list=PLvLrA9jH7wQiEcePLsCkRFHVFJAeqiZ7k&si=eth5MBtAcNCv2EmY\n\nWpadnij tutaj:\n🔴 Kanał Zero Extra: https://www.youtube.com/channel/UCNbQpy2EqkiK0AUdyyr35vA\n🔴Portal Zero: https://www.zero.pl/\n\n📩 biznes@kanalzero.pl\n\n#kanałzero #nowak #historia #krzyżacy #nauka #polska",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3x3Dj7OUXZY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3x3Dj7OUXZY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3x3Dj7OUXZY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3x3Dj7OUXZY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3x3Dj7OUXZY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Zero",
+        "tags": [
+          "Stanowski",
+          "kanał zero",
+          "kanal zero",
+          "stanowski kanał",
+          "stanowski kanał zero",
+          "kanał",
+          "zero",
+          "stanowski",
+          "kanal",
+          "commentary",
+          "commentary zero",
+          "zero commentary",
+          "kanał zero stanowski",
+          "krzysztof stanowski",
+          "kanal 0",
+          "kanał 0",
+          "stanowski zero",
+          "kanał zero najnowsze",
+          "krzyżacy",
+          "historia polski",
+          "andrzej nowak",
+          "nowak",
+          "kanał zero historia",
+          "historia kanał zero",
+          "krzyżacy polska",
+          "dlaczego krzyżacy byli w polsce",
+          "zakon krzyżacki",
+          "zero kompleksów",
+          "polscy władcy",
+          "władcy polski",
+          "polska historia"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "PO CO POLSCE KRZYŻACY? ZAKON, KTÓRY ZMIENIŁ NASZĄ HISTORIĘ",
+          "description": "Audycja przeznaczona dla osób powyżej 16. roku życia.\nWśród wielu przypadających w tym roku rocznic niepostrzeżenie mija 800 lat od wydarzeń, które zapoczątkowały sprowadzenie Zakonu Krzyżackiego na ziemie polskie. Zakon, powołany pierwotnie do opieki nad chorymi i rannymi podczas wypraw krzyżowych, pojawił się nad Wisłą w XIII wieku, rozpoczynając tym samym długi ciąg kłopotów dla polskich władców. Czy jednak sprowadzenie Krzyżaków na ziemie piastowskie przyniosło również jakieś pozytywy? Po co w ogóle sprowadzono ich nad Wisłę? Zapraszamy na materiał prof. Andrzeja Nowaka.\n\n💪 Whey Protein Low Lactose od SFD. Wybierz swój smak i zgarnij 10% rabatu z kodem ZERO 👉 https://sklep.sfd.pl/r/a/65\n\n📚 Wiedza to dobry pierwszy krok w inwestowaniu! Zdobądź ją podczas bezpłatnej konferencji online XTB Investing Masterclass już 27-28 listopada. Zapisz się 👉 http://link.pl.xtb.com/kanal-zero\nRejestrując się w XTB z kodem ZERO, otrzymasz specjalny kurs zarządzania finansami od podstaw. | Inwestowanie jest ryzykowne. Inwestuj odpowiedzialnie.\n\n💳 Zero ograniczeń, same korzyści. Przygotuj się na nowy rozdział w Twoim portfelu, z wieloma benefitami od ZEN.\nPobierz ZEN i zacznij odzyskiwać część wydatków https://be.zen.com/ZERO\n\n🏎️ W programie \"Tańszy Samochód\" obniżamy cenę każdego samochodu o 3%. Wejdź na 👉 https://vehis.pl/ i sprawdź nas!\n\n⚔️ BLACK WEEK z Kuchnią Vikinga. Wygraj Volvo XC40! Sprawdź na 👉http://blackviking.kuchniavikinga.pl?utm_source=influ_kz&utm_medium=instagram&utm_campaign=bw_20261102\n\nSzczegóły i regulamin loterii na 👉 https://blackviking.kuchniavikinga.pl/pliki/regulamin. Loteria dla osób powyżej 18 roku życia. Organizator: NOFSZA Sp. z o.o\n\n🎬 Wszystkie odcinki: https://youtube.com/playlist?list=PLvLrA9jH7wQiEcePLsCkRFHVFJAeqiZ7k&si=eth5MBtAcNCv2EmY\n\nWpadnij tutaj:\n🔴 Kanał Zero Extra: https://www.youtube.com/channel/UCNbQpy2EqkiK0AUdyyr35vA\n🔴Portal Zero: https://www.zero.pl/\n\n📩 biznes@kanalzero.pl\n\n#kanałzero #nowak #historia #krzyżacy #nauka #polska"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT1H54S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "102",
+        "likeCount": "13",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": true
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "Sig17eYwdcU6bDeooETS78JVSTc",
+      "id": "RxAhtXxEP6A",
+      "snippet": {
+        "publishedAt": "2026-11-21T18:45:36Z",
+        "channelId": "UClhEl4bMD8_escGCCTmRAYg",
+        "title": "APEL DO POLITYKÓW! STWÓRZMY OŚRODEK",
+        "description": "Wpadnij tutaj:\n🔴 Kanał Zero Extra: https://www.youtube.com/channel/UCNbQpy2EqkiK0AUdyyr35vA\n🔴Portal Zero: https://www.zero.pl/\n\n📩 biznes@kanalzero.pl\n\n#kanałzero #krześniak #przestępstwo #warszawa #warszawa #więzienie",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RxAhtXxEP6A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RxAhtXxEP6A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RxAhtXxEP6A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RxAhtXxEP6A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RxAhtXxEP6A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Zero",
+        "tags": [
+          "Stanowski",
+          "kanał zero",
+          "kanal zero",
+          "stanowski kanał",
+          "stanowski kanał zero",
+          "kanał",
+          "zero",
+          "stanowski",
+          "kanal",
+          "commentary",
+          "commentary zero",
+          "zero commentary",
+          "kanał zero stanowski",
+          "krzysztof stanowski",
+          "kanal 0",
+          "kanał 0",
+          "stanowski zero",
+          "kanał zero najnowsze",
+          "zabójca warszawa",
+          "niepoczytalność",
+          "krześniak",
+          "monika krześniak",
+          "zabójca z warszawy",
+          "zabójca uniwersytet warszawski",
+          "uniwersytet warszawski zabójca",
+          "nożownik",
+          "niepoczytalność wyrok",
+          "wyrok niepoczytalność"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "APEL DO POLITYKÓW! STWÓRZMY OŚRODEK",
+          "description": "Wpadnij tutaj:\n🔴 Kanał Zero Extra: https://www.youtube.com/channel/UCNbQpy2EqkiK0AUdyyr35vA\n🔴Portal Zero: https://www.zero.pl/\n\n📩 biznes@kanalzero.pl\n\n#kanałzero #krześniak #przestępstwo #warszawa #warszawa #więzienie"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT40S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "452",
+        "likeCount": "31",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "p2nFUX8YWKkLiIPSuggt6gRmDLU",
+      "id": "o2dDbD5JKkY",
+      "snippet": {
+        "publishedAt": "2026-11-21T18:00:30Z",
+        "channelId": "UClhEl4bMD8_escGCCTmRAYg",
+        "title": "MORDERCY NA WOLNOŚCI. NIEPOCZYTALNOŚĆ I APEL DO POLITYKÓW",
+        "description": "Audycja przeznaczona dla osób powyżej 16. roku życia.\nZabił kobietę, dziewięć osób ranił nożem. Po ośmiu latach jest na wolności. Kary nie odbył, bo sąd uznał go za niepoczytalnego. Konrad K. ze Stalowej Woli to jeden z przypadków, w których niepoczytalność uznano za czynnik łagodzący. Drugim takim przykładem jest sprawa Mieszka R., który zabił kobietę na Uniwersytecie Warszawskim. Obecnie przebywa w szpitalu psychiatrycznym, ale nikt nie wie na jak długo. Prawo nie wyznacza bowiem żadnego limitu. Jak to możliwe, że mordercy mogą wrócić tak szybko na wolność? Czy niepoczytalny morderca powinien pozostawać pod stałym nadzorem państwa? Czy państwo, które chroni chorych, przestaje chronić pozostałych obywateli? Materiał Moniki Krześniak.\n\n🎬 Wszystkie odcinki: https://www.youtube.com/playlist?list=PLvLrA9jH7wQgobnGt7VreOECL8d5PRAIJ\n\nWpadnij tutaj:\n🔴 Kanał Zero Extra: https://www.youtube.com/channel/UCNbQpy2EqkiK0AUdyyr35vA\n🔴Portal Zero: https://www.zero.pl/\n\n📩 biznes@kanalzero.pl\n\n#kanałzero #krześniak #przestępstwo #warszawa #warszawa #więzienie",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/o2dDbD5JKkY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/o2dDbD5JKkY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/o2dDbD5JKkY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/o2dDbD5JKkY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/o2dDbD5JKkY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/o2dDbD5JKkY/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kanał Zero",
+        "tags": [
+          "Stanowski",
+          "kanał zero",
+          "kanal zero",
+          "stanowski kanał",
+          "stanowski kanał zero",
+          "kanał",
+          "zero",
+          "stanowski",
+          "kanal",
+          "commentary",
+          "commentary zero",
+          "zero commentary",
+          "kanał zero stanowski",
+          "krzysztof stanowski",
+          "kanal 0",
+          "kanał 0",
+          "stanowski zero",
+          "kanał zero najnowsze",
+          "zabójca warszawa",
+          "niepoczytalność",
+          "krześniak",
+          "monika krześniak",
+          "zabójca z warszawy",
+          "zabójca uniwersytet warszawski",
+          "uniwersytet warszawski zabójca",
+          "nożownik",
+          "niepoczytalność wyrok",
+          "wyrok niepoczytalność"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "MORDERCY NA WOLNOŚCI. NIEPOCZYTALNOŚĆ I APEL DO POLITYKÓW",
+          "description": "Audycja przeznaczona dla osób powyżej 16. roku życia.\nZabił kobietę, dziewięć osób ranił nożem. Po ośmiu latach jest na wolności. Kary nie odbył, bo sąd uznał go za niepoczytalnego. Konrad K. ze Stalowej Woli to jeden z przypadków, w których niepoczytalność uznano za czynnik łagodzący. Drugim takim przykładem jest sprawa Mieszka R., który zabił kobietę na Uniwersytecie Warszawskim. Obecnie przebywa w szpitalu psychiatrycznym, ale nikt nie wie na jak długo. Prawo nie wyznacza bowiem żadnego limitu. Jak to możliwe, że mordercy mogą wrócić tak szybko na wolność? Czy niepoczytalny morderca powinien pozostawać pod stałym nadzorem państwa? Czy państwo, które chroni chorych, przestaje chronić pozostałych obywateli? Materiał Moniki Krześniak.\n\n🎬 Wszystkie odcinki: https://www.youtube.com/playlist?list=PLvLrA9jH7wQgobnGt7VreOECL8d5PRAIJ\n\nWpadnij tutaj:\n🔴 Kanał Zero Extra: https://www.youtube.com/channel/UCNbQpy2EqkiK0AUdyyr35vA\n🔴Portal Zero: https://www.zero.pl/\n\n📩 biznes@kanalzero.pl\n\n#kanałzero #krześniak #przestępstwo #warszawa #warszawa #więzienie"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT34M51S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "5975",
+        "likeCount": "499",
+        "favoriteCount": "0",
+        "commentCount": "124"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": true
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "if3IpXoBJnyqJr4D5eQWJ91t_Oo",
+      "id": "fdOsmeI22QI",
+      "snippet": {
+        "publishedAt": "2026-11-21T18:00:26Z",
+        "channelId": "UClhEl4bMD8_escGCCTmRAYg",
+        "title": "PODAWALI DZIECIOM ZŁE LEKI! CO JESZCZE DZIAŁO SIĘ W OŚRODKACH",
+        "description": "Wpadnij tutaj:\n🔴Kanał Zero Extra: https://www.youtube.com/channel/UCNbQpy2EqkiK0AUdyyr35vA\n🔴Portal Zero: https://www.zero.pl/\n\n📩 biznes@kanalzero.pl\n\n#kanałzero #talkowski #chamstwowpaństwie #wydarzenia #młodzież #dzieci #przemoc",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fdOsmeI22QI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fdOsmeI22QI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fdOsmeI22QI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fdOsmeI22QI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fdOsmeI22QI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Zero",
+        "tags": [
+          "Stanowski",
+          "kanał zero",
+          "kanal zero",
+          "stanowski kanał",
+          "stanowski kanał zero",
+          "kanał",
+          "zero",
+          "kanal",
+          "krzysztof stanowski",
+          "stanowski",
+          "kanał zero stanowski",
+          "polska",
+          "commentary",
+          "commentary zero",
+          "polityka",
+          "polska polityka",
+          "chamstwo w państwie",
+          "talkowski",
+          "przemysław talkowski",
+          "dzieci",
+          "młodzież",
+          "dzieci psychotropy",
+          "podają dzieciom psychotropy",
+          "dzieci kanał zero",
+          "kanał zero dzieci",
+          "faszerują dzieci"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "PODAWALI DZIECIOM ZŁE LEKI! CO JESZCZE DZIAŁO SIĘ W OŚRODKACH",
+          "description": "Wpadnij tutaj:\n🔴Kanał Zero Extra: https://www.youtube.com/channel/UCNbQpy2EqkiK0AUdyyr35vA\n🔴Portal Zero: https://www.zero.pl/\n\n📩 biznes@kanalzero.pl\n\n#kanałzero #talkowski #chamstwowpaństwie #wydarzenia #młodzież #dzieci #przemoc"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT1M27S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "248",
+        "likeCount": "14",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "cyyEYnNSgpKNMG53fbRS7DkdS7A",
+      "id": "uzUYDd8EwQk",
+      "snippet": {
+        "publishedAt": "2026-11-21T17:50:05Z",
+        "channelId": "UClhEl4bMD8_escGCCTmRAYg",
+        "title": "CO KRYJE SIĘ ZA SPRAWĄ ZATOPIENIA ROSYJSKIEGO STATKU?",
+        "description": "Wpadnij tutaj:\n🔴 Kanał Zero Extra: https://www.youtube.com/channel/UCNbQpy2EqkiK0AUdyyr35vA\n🔴Portal Zero: https://www.zero.pl/\n\n📩 biznes@kanalzero.pl\n\n#kanałzero #słowik #wojna #ukraina #rosja #statek",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uzUYDd8EwQk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uzUYDd8EwQk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uzUYDd8EwQk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uzUYDd8EwQk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uzUYDd8EwQk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Zero",
+        "tags": [
+          "Stanowski",
+          "kanał zero",
+          "kanal zero",
+          "stanowski kanał",
+          "stanowski kanał zero",
+          "kanał",
+          "zero",
+          "stanowski",
+          "kanal",
+          "commentary",
+          "commentary zero",
+          "zero commentary",
+          "kanał zero stanowski",
+          "krzysztof stanowski",
+          "kanal 0",
+          "kanał 0",
+          "stanowski zero",
+          "kanał zero najnowsze",
+          "statek na bałtyku",
+          "statek kanał zero",
+          "kanał zero statek",
+          "płonący statek na bałtyku",
+          "bałtyk",
+          "płonący statek",
+          "wojna",
+          "ukraina rosja",
+          "ukraina",
+          "rosja",
+          "wojna ukraina rosja",
+          "wojna rosja ukraina",
+          "słowik",
+          "patryk słowik"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "CO KRYJE SIĘ ZA SPRAWĄ ZATOPIENIA ROSYJSKIEGO STATKU?",
+          "description": "Wpadnij tutaj:\n🔴 Kanał Zero Extra: https://www.youtube.com/channel/UCNbQpy2EqkiK0AUdyyr35vA\n🔴Portal Zero: https://www.zero.pl/\n\n📩 biznes@kanalzero.pl\n\n#kanałzero #słowik #wojna #ukraina #rosja #statek"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT1M38S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1265",
+        "likeCount": "28",
+        "favoriteCount": "0",
+        "commentCount": "3"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": true
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 50,
+    "resultsPerPage": 50
+  }
+}

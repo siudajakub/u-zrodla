@@ -1,5 +1,7 @@
 # Co rozwijamy po ponownym odczycie briefu
 
+W sesji Claude obowiązuje [plan Fable z priorytetem YouTube](fable/REALIZACJA.md). Poniżej zachowano stan poprzedniej fali.
+
 **Pierwszeństwo ma automatyczna flaga z dowodem dostępnym po kliknięciu.** Użytkownik nie musi znać URL publikacji, przepisywać fragmentów ani ręcznie klasyfikować reklam, żeby dostać kolejkę. O tym, czy system osiąga cel, decyduje droga od źródła do sprawdzalnego wyniku. [Zakres konkursowy](zrodla-uknf/BRIEF.md) · [Stan testów i luki](ODBIOR-UKNF.md)
 
 | Kolejność | Pion do rozwinięcia | Po czym poznamy, że działa |

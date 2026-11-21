@@ -344,7 +344,181 @@ def m3(cap):
     return 18 if text else 0, "W dostępnym fragmencie brak jednoznacznej oferty indywidualnego doboru instrumentów.", evidence, extra
 
 
-def analyze(capture):
+# Fields of the D qualification. In shadow mode (step S5) they are computed and stored beside the
+# case, while the queue, `score`, `reviewSuggestion` and `high_risk` keep following rules_1_2.
+SHADOW_KEYS = ("reviewDecision", "reviewScore", "adRelationship", "relationships", "adRegistry", "premises",
+               "counterEvidence", "coverage", "variants", "analysisVersion", "priority")
+ANALYSIS_SCHEMA = 2
+ACTIVE_VARIANT = "rules_1_2"  # set by the worker from the qualification settings before it analyses
+DEFAULT_THRESHOLD = 60  # N2: the API applies the threshold, qualify only says refer or not
+ROUTE_OF_SUGGESTION = {"review": "refer", "uncertain": "complete", "no_signal": "no_signal", "unavailable": "insufficient"}
+
+
+# --- Speech gate (decision of the product owner) -------------------------------------------------
+# A video reaches "Co wymaga sprawdzenia" only after the description AND the speech were examined and the
+# collaboration label was not found, or when the transcript can permanently not be obtained. A suspicion
+# from the description alone, while the transcript is still to be fetched, waits in `incomplete`.
+PERMANENT_GAP = re.compile(r"^\s*(?:private|unavailable|age_restricted|members_only|no_captions)\b|brak napis", re.I)
+SPEECH_PENDING_REASON = "Podejrzenie z opisu; mowy jeszcze nie zbadano (transkrypcja czeka na pobranie)."
+
+
+def is_video(capture):
+    return capture.get("module", "M1") == "M1" and str(capture.get("id", "")).startswith("youtube:")
+
+
+def permanent_gap(reason):
+    """True for a transcript that can not be obtained at all (no captions, private, removed); false for a retry."""
+    return bool(PERMANENT_GAP.search(str(reason or "")))
+
+
+def transcript_phase(capture):
+    """{state: full|partial|pending|unavailable, reason} of the speech of a YouTube video, None for other material."""
+    if not is_video(capture):
+        return None
+    media = capture.get("mediaCoverage") if isinstance(capture.get("mediaCoverage"), dict) else {}
+    transcript = media.get("transcript") if isinstance(media.get("transcript"), dict) else {}
+    segments = [s for s in capture.get("segments") or [] if isinstance(s, dict) and str(s.get("text", "")).strip()]
+    state, reason = transcript.get("state"), transcript.get("reason")
+    if state in ("full", "partial", "pending"):
+        return {"state": state, "reason": reason}
+    if state == "unavailable":
+        return {"state": "unavailable" if permanent_gap(reason) else "pending", "reason": reason}
+    if segments:
+        return {"state": "partial", "reason": None}  # extent unknown without a coverage record
+    return {"state": "pending", "reason": "transkrypcja jeszcze niepobrana"}
+
+
+def _with_phase(capture, phase):
+    """The capture as the qualification must see it: a transcript still to fetch is `pending`, not `unavailable`."""
+    if phase is None or phase["state"] != "pending":
+        return capture
+    media = dict(capture.get("mediaCoverage") or {})
+    transcript = dict(media.get("transcript") or {})
+    transcript.update(state="pending", source=transcript.get("source") or "none", windows=transcript.get("windows") or [],
+                      reason=phase.get("reason") or "transkrypcja jeszcze niepobrana")
+    media["transcript"] = transcript
+    return {**capture, "mediaCoverage": media}
+
+
+def _gate(decision, phase):
+    """Apply the speech gate to a qualification decision in place; returns the gate code or None."""
+    if phase is None or decision.get("route") != "refer":
+        return None
+    if phase["state"] in ("pending", "partial"):
+        code = "transcript_pending" if phase["state"] == "pending" else "other_gap"
+        decision.update(route="complete", completeReason=code, gatedFrom="refer", queueEligible=False,
+                        reason=SPEECH_PENDING_REASON if code == "transcript_pending" else
+                        "Podejrzenie z opisu; mowę zbadano tylko częściowo.",
+                        missing=list(dict.fromkeys([*(decision.get("missing") or []), "transkrypcja mowy"])))
+        return code
+    if phase["state"] == "unavailable":
+        why = str(phase.get("reason") or "brak napisów").strip()[:120]
+        sentence = f"Transkrypcji nie da się uzyskać ({why}); oceniono wyłącznie opis, mowy nie zbadano."
+        reasons = list(decision.get("reasons") or [])
+        reasons.insert(min(1, len(reasons)), sentence)
+        decision["reasons"] = reasons[:5]
+        decision["speechBasis"] = "unavailable"
+    else:
+        decision["speechBasis"] = "examined"
+    return None
+
+
+FRAME_NOTE = "kadry pobrane, tekst z obrazu nieodczytany automatycznie"
+
+
+def _clock(seconds):
+    seconds = int(seconds or 0)
+    return f"{seconds // 60}:{seconds % 60:02d}"
+
+
+def _frame_evidence(capture, result):
+    """Frames carry no OCR: each is evidence for the analyst (kind=frame), listed beside the moments of the card."""
+    frames = [f for f in capture.get("frames") or [] if isinstance(f, dict) and f.get("time", f.get("t")) is not None]
+    if not frames:
+        return
+    evidence = result.setdefault("evidence", [])
+    have = {(e.get("modality"), e.get("start")) for e in evidence if isinstance(e, dict)}
+    decision = result.get("reviewDecision") or {}
+    added = []
+    for number, frame in enumerate(frames, 1):
+        t = frame.get("time", frame.get("t"))
+        if ("frame", t) in have:
+            continue
+        link = frame.get("sourceUrlAtTime") or frame.get("deepLink") or frame.get("url") or capture.get("url")
+        item = {"id": frame.get("id") or f"frame-{number}", "kind": "frame", "role": "context", "modality": "frame",
+                "method": frame.get("method"), "start": t, "end": t,
+                "text": f"Kadr z {_clock(t)}; tekst z obrazu nieodczytany automatycznie.",
+                "url": frame.get("url") or capture.get("url"), "sourceUrlAtTime": link,
+                "frameSha256": frame.get("sha256") or frame.get("frameSha256"), "framePath": frame.get("path"),
+                "observedAt": frame.get("observedAt") or capture.get("observedAt"), "available": bool(link)}
+        evidence.append(item)
+        added.append(item)
+    if added and decision.get("route") == "refer" and isinstance(decision.get("moments"), list):
+        for item in added:
+            decision["moments"].append({"start": item["start"], "end": item["end"], "label": "Kadr z momentu dowodu",
+                                        "deepLink": item["sourceUrlAtTime"], "evidenceId": item["id"]})
+    cov = result.get("coverage")
+    if isinstance(cov, dict) and isinstance(cov.get("modalities"), dict):
+        frames_cov = cov["modalities"].setdefault("frames", {})
+        frames_cov["reason"] = FRAME_NOTE
+        if isinstance(cov.get("label"), str):
+            cov["label"] = re.sub(r"kadry \([^)]*\)", f"kadry ({FRAME_NOTE})", cov["label"])
+
+
+def _qualification_failed(exc):
+    reason = f"Kwalifikacja nie powiodła się: {type(exc).__name__}"
+    return {"reviewDecision": {"route": "insufficient", "reason": reason[:160], "reasons": [], "moments": [],
+                               "completeReason": None, "requirement": None, "claim": None, "alternative": None,
+                               "missing": [], "decidedBy": "rules", "version": None, "queueEligible": None},
+            "reviewScore": {"state": "withheld", "value": None, "scale": "0-100", "band": None, "meaning": None,
+                            "notComputableReason": reason, "rulesVersion": None, "modelVersion": None, "components": []},
+            "adRelationship": {"status": "unknown"}, "relationships": [], "adRegistry": {"state": "none"},
+            "premises": [], "evidence": [], "counterEvidence": [], "coverage": None}
+
+
+def _shadow(capture, finding, semantic, variant=None):
+    """Single call site of qualify (contract R5). Adds the v2 fields to an M1 finding."""
+    from . import qualification
+    from .semantic import review_suggestion
+    phase = transcript_phase(capture)
+    try:
+        result = qualification.qualify(_with_phase(capture, phase), finding, semantic)
+    except Exception as exc:  # a failing rule must never stop a scan
+        result = _qualification_failed(exc)
+    suggestion = review_suggestion(capture, semantic or {}, finding)
+    decision = result["reviewDecision"]
+    score = result["reviewScore"]
+    gate = _gate(decision, phase)
+    if capture.get("frames"):
+        _frame_evidence(capture, result)
+    decision["queueEligible"] = bool(decision["route"] == "refer" and score.get("value") is not None
+                                     and score["value"] >= DEFAULT_THRESHOLD)
+    rules_route = ROUTE_OF_SUGGESTION.get(suggestion["state"], "insufficient")
+    rules_gate = None
+    if phase is not None and rules_route == "refer" and phase["state"] in ("pending", "partial"):
+        rules_route, rules_gate = "complete", "transcript_pending" if phase["state"] == "pending" else "other_gap"
+    finding.update({key: result[key] for key in SHADOW_KEYS if key in result})
+    finding["evidence"] = [*finding["evidence"], *result["evidence"]]
+    finding["variants"] = {
+        "rules_1_2": {"route": rules_route,
+                      "reviewScore": {"state": "computed", "value": finding["score"], "scale": "0-100"},
+                      "decidedBy": "rules", "variantUsed": "rules_1_2", "fallback": None,
+                      "reason": suggestion.get("reason"), "gated": rules_gate},
+        "qual_d": {"route": decision["route"], "reviewScore": {k: score.get(k) for k in ("state", "value", "scale", "band")},
+                   "decidedBy": decision.get("decidedBy"), "variantUsed": "qual_d", "fallback": None,
+                   "queueEligible": decision["queueEligible"], "gated": gate}}
+    if variant == "qual_d_model":
+        # No local model can run yet (N3): the answer is qual_d, with the reason recorded. No key is read.
+        finding["variants"]["qual_d_model"] = {**finding["variants"]["qual_d"], "variantUsed": "qual_d",
+                                               "fallback": {"from": "qual_d_model", "reason": "model lokalny niedostępny"}}
+    finding["analysisVersion"] = {"rules": RULESET, "model": None, "schema": ANALYSIS_SCHEMA, "variant": variant or ACTIVE_VARIANT,
+                                  "shadowVariant": "qual_d", "qualification": decision.get("version")}
+    order = qualification.priority(capture.get("reach"), result.get("adRelationship"))
+    finding["priority"] = {**(capture.get("priority") if isinstance(capture.get("priority"), dict) else {}),
+                           "review": order["review"], "basis": order["basis"], "affectsDecision": False}
+
+
+def analyze(capture, *, semantic=None, variant=None):
     module = capture.get("module", "M1")
     score, summary, evidence, extra = {"M1": m1, "M2": m2, "M3": m3}[module](capture)
     finding = {k: capture[k] for k in (
@@ -354,10 +528,12 @@ def analyze(capture):
     ) if k in capture}
     finding.update({"module": module, "score": score, "summary": summary, "evidence": evidence,
                     "rulesVersion": RULESET, **extra})
+    if module == "M1":
+        _shadow(capture, finding, semantic, variant)
     return finding
 
 
-def calibration(threshold=60):
+def calibration(threshold=60, variant="rules_1_2"):
     if not 0 <= threshold <= 100:
         raise ValueError("Próg musi mieścić się w zakresie 0–100.")
     dataset = read_json(FIXTURES / "calibration.json")
@@ -370,13 +546,22 @@ def calibration(threshold=60):
             cap["registry"] = cases[cap["registryExample"]]["registry"]
         if cap.get("savedDom"):
             cap["views"] = dom_views(cap["url"])
-        score = analyze(cap)["score"]
-        predicted, expected = score >= threshold, row["expected"]
+        found = analyze(cap)
+        score = found["score"]
+        if variant == "rules_1_2" or "reviewScore" not in found:
+            predicted = score >= threshold
+        else:  # the qualification variants: refer, with a score at or above the threshold
+            value = (found["reviewScore"] or {}).get("value")
+            predicted = found["reviewDecision"]["route"] == "refer" and value is not None and value >= threshold
+        expected = row["expected"]
         outcome = ("t" if predicted == expected else "f") + ("p" if predicted else "n")
         counts[outcome] += 1
         examples.append({"id": cap["id"], "title": cap["title"], "module": cap["module"], "score": score,
                          "expected": expected, "outcome": outcome, "origin": row["origin"], "url": cap.get("url"),
-                         "text": cap["description"]})
+                         "text": cap["description"],
+                         # Active variant rules_1_2 decides today; qual_d is the shadow reading.
+                         "route": "refer" if predicted else "no_signal", "variant": variant,
+                         **({"variants": found["variants"]} if "variants" in found else {})})
     real = sum(row["origin"] == "publiczny" for row in dataset)
     dataset_id = hashlib.sha256((FIXTURES / "calibration.json").read_bytes()).hexdigest()[:12]
     modules = {}

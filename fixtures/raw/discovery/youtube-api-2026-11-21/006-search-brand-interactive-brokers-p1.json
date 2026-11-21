@@ -1,0 +1,2257 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "nHMTJ8uXwZKMYan__afVAtvdj5A",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 569399,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CEPCc73QcNOLilwaqfe8VKoD2ac",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fP3slV4ma1c"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-15T15:00:22Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "Koszty zakupu ETF: XTB vs Interactive Brokers vs mBank #etf #inwestowanie #giełda",
+        "description": "Ten sam ETF za 1000 zł: 5 zł w XTB, 20 zł u innych. Przy 50 000 zł ranking się odwraca. Ściągawka w wideo. Od jakiej kwoty ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fP3slV4ma1c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fP3slV4ma1c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fP3slV4ma1c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fP3slV4ma1c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fP3slV4ma1c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-15T15:00:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ZnWuTaTojGS0Q7jPPhylK49vfAU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YCLwHi-fsbQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-26T15:00:21Z",
+        "channelId": "UCBVtwXexpD1rsM9t3xpvlHQ",
+        "title": "Interactive Brokers &amp; Wise: A Solução Internacional Completa?",
+        "description": "Interactive Brokers e Wise: A dupla perfeita para investir no exterior? Descubra como funciona essa integração passo a passo!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YCLwHi-fsbQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YCLwHi-fsbQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YCLwHi-fsbQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YCLwHi-fsbQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YCLwHi-fsbQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Investidor Bon Vivant",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-26T15:00:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "EG9h-b-xyS7awkLJTR6-uh7zMXQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7lSfEwlcrAA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T17:27:41Z",
+        "channelId": "UCY2ifv8iH1Dsgjrz-h3lWLQ",
+        "title": "Automating an Intraday Trading Strategy with the Interactive Brokers API",
+        "description": "Like the video? Support my content by checking out Interactive Brokers using the link below: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7lSfEwlcrAA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7lSfEwlcrAA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7lSfEwlcrAA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7lSfEwlcrAA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/7lSfEwlcrAA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Part Time Larry",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T17:27:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WRSeyGVjUjvO2dH-J3w73_3RPKc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IIIA7rNyHBs"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-01T12:00:33Z",
+        "channelId": "UCBVtwXexpD1rsM9t3xpvlHQ",
+        "title": "Interactive Brokers: 4 Confusões Comuns e Como Resolver",
+        "description": "Interactive Brokers: As 4 Confusões Comuns de Interface e Como Resolver Passo a Passo! A Interactive Brokers (IBKR) é uma ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IIIA7rNyHBs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IIIA7rNyHBs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IIIA7rNyHBs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IIIA7rNyHBs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IIIA7rNyHBs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Investidor Bon Vivant",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-01T12:00:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1DVUs15FC9n_w7IEiD7luuKxlDw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FhGK1PyDw7U"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-19T12:26:43Z",
+        "channelId": "UCqPRaYs9dE2_yl1vVLjchkQ",
+        "title": "Як відкрити рахунок в INTERACTIVE BROKERS у 2026: Покроковий гайд",
+        "description": "У цьому відео — повний, свіжий та покроковий технічний алгоритм реєстрації в Interactive Brokers (IBKR) станом на 2026 рік ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FhGK1PyDw7U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FhGK1PyDw7U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FhGK1PyDw7U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/FhGK1PyDw7U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/FhGK1PyDw7U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/FhGK1PyDw7U/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Математик інвестує",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-19T12:26:43Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DW-8mq7LFnsckGR2u35jKrvVMBM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "n_EucWWBoLE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T06:45:38Z",
+        "channelId": "UCN2u90hRiUX9GBtLTzL2pAQ",
+        "title": "Interactive Brokers Mobile App Tutorial for Beginners - Learn How To Trade On IBKR Mobile",
+        "description": "In this video I will share with you how you can learn to trade on IBKR Mobile, hope it provides you value.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/n_EucWWBoLE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/n_EucWWBoLE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/n_EucWWBoLE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/n_EucWWBoLE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/n_EucWWBoLE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Platformrank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T06:45:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cPEQD4x6lMiWDvA006Ud_Tuqm6o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mlECcl6-3TU"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-30T15:00:31Z",
+        "channelId": "UCBVtwXexpD1rsM9t3xpvlHQ",
+        "title": "Interactive Brokers: Como Fazer Remessas Mais Baratas com a ARQ (ex-Dollar App)",
+        "description": "Quer economizar nas suas remessas internacionais e depósitos na Interactive Brokers (IBKR)? Neste vídeo, o Investidor Bon ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mlECcl6-3TU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mlECcl6-3TU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mlECcl6-3TU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mlECcl6-3TU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mlECcl6-3TU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Investidor Bon Vivant",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-30T15:00:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "R6ePnr4ODOhXFwxoKo_qE2jQXoc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TS3F57EgsCw"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-26T06:40:44Z",
+        "channelId": "UCqa8ET6heNnWWl0d6_JWWXQ",
+        "title": "Interactive Brokers (IBKR) Review 2026: Is It Worth It?",
+        "description": "Interactive Brokers is one of the most established names in the industry, known for its professional-grade platforms, deep market ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TS3F57EgsCw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TS3F57EgsCw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TS3F57EgsCw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TS3F57EgsCw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TS3F57EgsCw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CompareForexBrokers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-26T06:40:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2XuS5c2rvzI3GaEmQ9uURPkRJPk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KrGv5lav2Vo"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-14T13:39:18Z",
+        "channelId": "UC-KbfmwsRSlo0Aw_nsWHITw",
+        "title": "IBKR How To Use | How To Use IBKR Mobile App | Interactive Brokers Tutorial For Beginners",
+        "description": "IBKR How To Use | How To Use IBKR Mobile App | Interactive Brokers Tutorial For Beginners Want to know how to use IBKR ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KrGv5lav2Vo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KrGv5lav2Vo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KrGv5lav2Vo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KrGv5lav2Vo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KrGv5lav2Vo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "App Guide Central",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-14T13:39:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "J_R6YuTxQ_QRbyuS1H5HRa1c-PE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cOmteHylp8E"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-16T13:20:08Z",
+        "channelId": "UCN2u90hRiUX9GBtLTzL2pAQ",
+        "title": "How to Buy Stocks &amp; ETFs on Interactive Brokers in 2026",
+        "description": "Want to learn how to buy stocks and ETFs on Interactive Brokers (IBKR)? In this step-by-step beginner tutorial, I'll show you ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cOmteHylp8E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cOmteHylp8E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cOmteHylp8E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cOmteHylp8E/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cOmteHylp8E/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Platformrank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-16T13:20:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "O6xVApuAm5q1wX_lA6u5kJc7J2U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CleTf7uajIc"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-27T22:30:29Z",
+        "channelId": "UCNuU4q4XLKyqAHQ3-zwHIkw",
+        "title": "How To Setup Interactive Brokers for Day Trading",
+        "description": "Checkout Interactive Brokers: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CleTf7uajIc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CleTf7uajIc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CleTf7uajIc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CleTf7uajIc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CleTf7uajIc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "BrandonTrades",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-27T22:30:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "l0BPMA6zkgJCTkfhgykpQEB0Mc0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "aUFNZKEI2Lc"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-23T16:18:28Z",
+        "channelId": "UCV_VWoWQo_4NHAE4jZkpERg",
+        "title": "Interactive Brokers vs Trade Republic: Which Is Better?",
+        "description": "Comparing the only brokers I still use after 9 years of ETF investing! My favorite broker in Europe: https://angelo.fi/ib After ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aUFNZKEI2Lc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aUFNZKEI2Lc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aUFNZKEI2Lc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/aUFNZKEI2Lc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/aUFNZKEI2Lc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Angelo Colombo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-23T16:18:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TSXsyqeLvwEBmVSSrPaZMTsrPAY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MPoyRkZcq0U"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-22T13:36:12Z",
+        "channelId": "UCN2u90hRiUX9GBtLTzL2pAQ",
+        "title": "How to Open an Interactive Brokers Account 2026 | IBKR Account Setup Tutorial 📈",
+        "description": "Want to learn how to open an Interactive Brokers account? In this step-by-step tutorial, I'll show you how to create an IBKR ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MPoyRkZcq0U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MPoyRkZcq0U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MPoyRkZcq0U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MPoyRkZcq0U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MPoyRkZcq0U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Platformrank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-22T13:36:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ktgvJ-LTpiGDDSKLfP3a0wN--mg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9PST0Z9kiJ4"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-06T00:57:25Z",
+        "channelId": "UCBXIF5KdGDbrzWpIdmwoU0Q",
+        "title": "Interactive Brokers vs Saxo Bank (2026) What&#39;s the BEST Brokerage?",
+        "description": "Discover the best brokerage for your trading needs in 2026. In this video, we compare two of the most popular brokerages, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9PST0Z9kiJ4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9PST0Z9kiJ4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9PST0Z9kiJ4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9PST0Z9kiJ4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9PST0Z9kiJ4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tutorly",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-06T00:57:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rgfrAnGloG1qOg-N40qscAAqhko",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GLvNQUZr-18"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-14T07:30:04Z",
+        "channelId": "UCMkbc1tGeuRKolmnVpyEy8Q",
+        "title": "Come Aprire un Conto Interactive Brokers (IBKR) | Guida Completa (2026)",
+        "description": "Entra nel canale Telegram Impara la TWS per aggiornamenti, guide e contenuti esclusivi: https://t.me/imparalatws In questo ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GLvNQUZr-18/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GLvNQUZr-18/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GLvNQUZr-18/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/GLvNQUZr-18/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/GLvNQUZr-18/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Impara la TWS - TraderWorkstation di IBKR",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-14T07:30:04Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "o5XOTouasJUtpbwUitqqRpNR9Yk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "XZ6x2NcAiPU"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-08T07:09:18Z",
+        "channelId": "UCcRMfhcMz-rjOs7xxHez_nw",
+        "title": "Обзор брокера (IBKR) Interactive Brokers",
+        "description": "Interactive Brokers LLC — американская транснациональная брокерская фирма, управляющая крупнейшей электронной ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XZ6x2NcAiPU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XZ6x2NcAiPU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XZ6x2NcAiPU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/XZ6x2NcAiPU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/XZ6x2NcAiPU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Aleksandr V | Wealth Management",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-08T07:09:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2xH87zCxS0HyHlpv6L9t4REDGUg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LSCTLqrcWI8"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-11T23:45:22Z",
+        "channelId": "UCfsJUCIO5UeihiG6075hRBw",
+        "title": "Interactive Brokers (IBKR) Paso a Paso: abre tu cuenta, deposita y haz tu primera compra (Tutorial)",
+        "description": "1️⃣Apertura tu cuenta en Interactive Brokers: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LSCTLqrcWI8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LSCTLqrcWI8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LSCTLqrcWI8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LSCTLqrcWI8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LSCTLqrcWI8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Luis Ccaccya - Invertir para el Futuro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-11T23:45:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XpbokLbwIdvmSWbWVjDHxqBKswA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kqKh38AiiUY"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-10T06:04:02Z",
+        "channelId": "UCN2u90hRiUX9GBtLTzL2pAQ",
+        "title": "Interactive Brokers Mobile vs GlobalTrader 2026 | Which IBKR App Is Better?",
+        "description": "Which Interactive Brokers app should you use in 2026? In this video, we compare IBKR Mobile vs GlobalTrader and explain the ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kqKh38AiiUY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kqKh38AiiUY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kqKh38AiiUY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kqKh38AiiUY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kqKh38AiiUY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Platformrank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-10T06:04:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "K2gRHGEwmOFexjPr-ZeLv0At2J8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Xpe1bDvTCzE"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-11T18:30:07Z",
+        "channelId": "UCrtFIqTfS4juyJHUmA2fENg",
+        "title": "How to Connect Interactive Brokers (IBKR) to MetaTrader 5 (MT5) - Step by Step",
+        "description": "How To Connect Interactive Brokers (IBKR) to MetaTrader 5 (MT5) - Step By Step 2026 In this tutorial, I'll show you how to connect ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Xpe1bDvTCzE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Xpe1bDvTCzE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Xpe1bDvTCzE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Xpe1bDvTCzE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Shax Finance",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-11T18:30:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Uzc9vzwPEIAccMhQl5YDA9ZgVkQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qB1jiq8jTb8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T20:21:47Z",
+        "channelId": "UCbY1hA0wpRcbyjBLxI-dxvQ",
+        "title": "Connect Interactive Brokers to Claude AI",
+        "description": "Learn how to connect Interactive Brokers to Claude AI to access your portfolio data, including account balances and positions.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qB1jiq8jTb8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qB1jiq8jTb8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qB1jiq8jTb8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qB1jiq8jTb8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qB1jiq8jTb8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Interactive Brokers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T20:21:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-VrS6PDib9RXqdyI8bZXFnJk9Pw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_uGQF_ijDYs"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-21T16:00:13Z",
+        "channelId": "UCQA-cvlxqQAoRpOoZ-qHTXQ",
+        "title": "Interactive Brokers: Как да продадеш ETF на регулиран пазар?",
+        "description": "Трупай знания за инвестициите - https://angelovdimitar.com/ Влез в Angelov Dimitar Community ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_uGQF_ijDYs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_uGQF_ijDYs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_uGQF_ijDYs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_uGQF_ijDYs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_uGQF_ijDYs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Angelov Dimitar",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-21T16:00:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ot4z-ufe9XHQ1jn6egCFrWIGjjM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "APeulQ2zna0"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-23T16:30:45Z",
+        "channelId": "UCO77Kyuf6Ai-S2qgd8UnxNw",
+        "title": "Tutorial! Cómo abrir tu cuenta de IBKR para COMPRAR OPCIONES FINANCIERAS🔥👉 Interactive Brokers 2026",
+        "description": "Debes utilizar este broker para invertir (el mejor en mi opinión)   ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/APeulQ2zna0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/APeulQ2zna0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/APeulQ2zna0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/APeulQ2zna0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/APeulQ2zna0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "El Planeta Financiero - Kayser Pravia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-23T16:30:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "tdcbdayxEf4Wy0ov9gR3_26YQYs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wpQsHb0aQhs"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-08T23:46:30Z",
+        "channelId": "UCthK_2x3G2Kf_HwDEI_eHdQ",
+        "title": "Cash Secured Puts &amp; Covered Calls Execution in IBKR (Interactive Brokers)",
+        "description": "FREE Discord (Trade Ideas, News & Tools) - Join our growing community: https://discord.gg/D7E7S876nS ⭐ LEARN FROM ME ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wpQsHb0aQhs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wpQsHb0aQhs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wpQsHb0aQhs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wpQsHb0aQhs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wpQsHb0aQhs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Reliable Investments",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-08T23:46:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UYMUlC9C1aT3DEobXHno2Wi_p0A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tQGl2nvJgQU"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-07T13:30:20Z",
+        "channelId": "UCJ50IQN9hf6XHAAVOxMPlQQ",
+        "title": "How To Buy S&amp;P500 ETF On IBKR Mobile (Interactive Brokers)",
+        "description": "Learn how to buy an S&P500 ETF on Interactive Brokers using the IBKR Mobile App step-by-step! In this quick tutorial, I walk ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tQGl2nvJgQU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tQGl2nvJgQU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tQGl2nvJgQU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tQGl2nvJgQU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tQGl2nvJgQU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Get Geek Finance",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-07T13:30:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cdQ7lMQ_bjp3Ev05buV7L9jo--g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_OzTPD1sLBU"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-13T13:00:36Z",
+        "channelId": "UCqPRaYs9dE2_yl1vVLjchkQ",
+        "title": "Як поповнити INTERACTIVE BROKERS та FREEDOM24? Жовтень 2026",
+        "description": "Як поповнити Interactive Brokers та Freedom24 в Україні станом на жовтень 2026 року? У цьому відео я розповім вам про ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Математик інвестує",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-13T13:00:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HWNSB0pp1E6hkYch_5wzjC1tTOY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "70r8_gKngqI"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-06T22:39:19Z",
+        "channelId": "UCBXIF5KdGDbrzWpIdmwoU0Q",
+        "title": "Interactive Brokers vs Trading212 (2026) Which Broker is BEST?",
+        "description": "Discover the best broker for your 2026 trading needs in this in-depth comparison of Trading212 and Interactive Brokers. Whether ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/70r8_gKngqI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/70r8_gKngqI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/70r8_gKngqI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/70r8_gKngqI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/70r8_gKngqI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tutorly",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-06T22:39:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9AE0Zh3sG83gYkwK1odhljtUvu0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pi_Ts71fxDw"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-21T09:00:10Z",
+        "channelId": "UCFcnbBzej0nGa-uBbROmOnw",
+        "title": "Interactive Brokers - надійний? Якщо відповідь &quot;Так&quot; - відео можна не дивитися🙂",
+        "description": "uainvestors #пасивнийдохід #сімейнийбюджет #InteractiveBrokers Напишіть у коментарях Звіт, щоб отримати посилання на ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pi_Ts71fxDw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pi_Ts71fxDw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pi_Ts71fxDw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pi_Ts71fxDw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pi_Ts71fxDw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/pi_Ts71fxDw/sardefault.jpg",
+            "width": 675,
+            "height": 1200
+          }
+        },
+        "channelTitle": "Сімейний Бюджет Україна",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-21T09:00:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "P6DAlUaOlUQLJqBIvKe4tfotz6A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "RP7QysQsK3g"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T14:00:33Z",
+        "channelId": "UCXGnmI9rw1WP3ahTnFrjTxA",
+        "title": "Prawdziwy Silnik Zysków Interactive Brokers",
+        "description": "https://youtu.be/RajzPkhQkRg.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RP7QysQsK3g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RP7QysQsK3g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RP7QysQsK3g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RP7QysQsK3g/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RP7QysQsK3g/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestycyjne Analizy AI",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T14:00:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QLTXIOsnYvOov5DnpWoCG3T3NP4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nD3rdaPqtdI"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-02T23:00:22Z",
+        "channelId": "UCJmaaSJX_PkfUmTuxWbrzLw",
+        "title": "How to Invest on Interactive Brokers as a Beginner 2026 (Full Guide)",
+        "description": "Enjoy low commission on Interactive Brokers https://kvli.link/ibkr ▻ Join my Telegram https://t.me/kelvinvest Interactive Brokers ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nD3rdaPqtdI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nD3rdaPqtdI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nD3rdaPqtdI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nD3rdaPqtdI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nD3rdaPqtdI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kelvin Learns Investing",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-02T23:00:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dFHayKMOyTK51iS2Le5AN6FbTRs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gsh7HArNlOg"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-29T12:54:05Z",
+        "channelId": "UC-KOx2SOWDYZtLBKts2RQkA",
+        "title": "Interactive Brokers vs Saxo Bank (2026) - Which One is Better?",
+        "description": "Interactive Brokers vs Saxo Bank (2026) – Which One is Better? If you're comparing Interactive Brokers and Saxo Bank, this ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "FluxGuide",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-29T12:54:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5bWGP9DidO0XeyqOMVvBuOX5nwM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "0vD3AEcZWQo"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-18T12:36:38Z",
+        "channelId": "UCERUwNfIQkrOcp6_VolXDbQ",
+        "title": "Interactive Brokers KROK PO KROKU. Jedyny poradnik, jakiego potrzebujesz",
+        "description": "Cześć! Interfejs Interactive Brokers potrafi na początku przytłoczyć, ale to jedno z najpotężniejszych i najtańszych narzędzi w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0vD3AEcZWQo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0vD3AEcZWQo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0vD3AEcZWQo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/0vD3AEcZWQo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/0vD3AEcZWQo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kolejny Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-18T12:36:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "znqvj2hQ3vH7nAOZDbdEZmGLckg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YILShgv71Kc"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-08T19:23:29Z",
+        "channelId": "UCqX5VDiih1s4KZEFyfbb8KQ",
+        "title": "How to Close a Position on Interactive Brokers (2026 Method)",
+        "description": "How to Close a Position on Interactive Brokers (2026 Method) interactive brokers close position,how to sell stocks on interactive ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YILShgv71Kc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YILShgv71Kc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YILShgv71Kc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YILShgv71Kc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YILShgv71Kc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jeremiah Tutorials",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-08T19:23:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "h7Mq3HjMgKE1-fQG8OG2jCyMg4E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fJxuPTISeS0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T08:10:15Z",
+        "channelId": "UCot7si_ggrkGY-bGYdiBj_g",
+        "title": "Interactive Brokers Review 2026 – Global Investing, IBKR Mobile &amp; Advanced Trading Tools Explained",
+        "description": "Explore Interactive Brokers (IBKR) in this 2026 review. Discover its global market access, IBKR Mobile, GlobalTrader, Trader ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fJxuPTISeS0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fJxuPTISeS0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fJxuPTISeS0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fJxuPTISeS0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fJxuPTISeS0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Socialceo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T08:10:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RdgoaP-tnGXEu4oV3NBg7BhBde0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DLBzTPpk7_0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T17:27:14Z",
+        "channelId": "UCTMDTCN0EHXJ4hUHh_TKkEA",
+        "title": "Як поповнити Interactive Brokers в Україні в 2026",
+        "description": "Як поповнити рахунок Interactive Brokers з України? У цьому відео покроково показую 2 способи, як завести гроші на ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DLBzTPpk7_0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DLBzTPpk7_0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DLBzTPpk7_0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DLBzTPpk7_0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DLBzTPpk7_0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Мани Майнинг",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T17:27:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-NyzgHsbzmSZAplSHTpufA0cBqE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2wqkX8CsgNs"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-29T20:08:18Z",
+        "channelId": "UCxVyhsLAnZ9HoVVjY9TJ-3Q",
+        "title": "Interactive Brokers Tutorial 2026: Everything You Need to Know | Buy Stocks, ETFs, Withdraw &amp; More",
+        "description": "I've been using Interactive Brokers (IBKR) for more than 2.5 years, and in this video I walk you through the platform from a real ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2wqkX8CsgNs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2wqkX8CsgNs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2wqkX8CsgNs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2wqkX8CsgNs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2wqkX8CsgNs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CA Jai Gupta",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-29T20:08:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "xZp5xCi8J7GOTtaXJH4M15Jr_K8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nJ3Os6qY6h8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-04T16:57:36Z",
+        "channelId": "UCC0O5FKSMcjzrvOUa08hS_A",
+        "title": "Can AI Trade Stocks on IBKR? YES! (No TWS) #shorts #ibkr #claude",
+        "description": "Can AI really trade stocks on Interactive Brokers? YES: no Trader Workstation, no computer running 24/7. Real IBKR account ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nJ3Os6qY6h8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nJ3Os6qY6h8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nJ3Os6qY6h8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nJ3Os6qY6h8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nJ3Os6qY6h8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/nJ3Os6qY6h8/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Michael Automates",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-04T16:57:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UazHYGsRRFe229J79dpEf97ptR4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fyg9A9ay8Z8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T13:57:43Z",
+        "channelId": "UCbY1hA0wpRcbyjBLxI-dxvQ",
+        "title": "Build Multi-Leg Option Trades",
+        "description": "Learn how to use the Option Strategy Builder to create and customize multi-leg options strategies, visualize risk and reward, and ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fyg9A9ay8Z8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fyg9A9ay8Z8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fyg9A9ay8Z8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fyg9A9ay8Z8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fyg9A9ay8Z8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/fyg9A9ay8Z8/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Interactive Brokers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T13:57:43Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NOB39Lakvp-l08qDioJeovWO6W4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "6I-nr6X8iNA"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-01T01:20:50Z",
+        "channelId": "UC0LDrGxdQdTZ2YnjWYManVg",
+        "title": "HOW TO USE INTERACTIVE BROKERS FOR BEGINNERS (STEP-BY-STEP GUIDE 2026)",
+        "description": "How to use Interactive Brokers for beginners in 2026. In this step-by-step tutorial, you'll learn how to use Interactive Brokers for ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6I-nr6X8iNA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6I-nr6X8iNA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6I-nr6X8iNA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6I-nr6X8iNA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6I-nr6X8iNA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Learn Mode Lab",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-01T01:20:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4Xp3--C_tsDPvvE22oD6Yj1MdU8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LIDFa9THd00"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-28T15:30:26Z",
+        "channelId": "UCk2g7RhzBnbdJTmbMsNhK4A",
+        "title": "Tutorial IBKR 2026: cómo abrir, depositar y comprar tu primer ETF",
+        "description": "Abre tu cuenta en Interactive Brokers y sigue el tutorial paso a paso: https://bit.ly/ExploraInteractiveBrokers En este tutorial ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LIDFa9THd00/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LIDFa9THd00/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LIDFa9THd00/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LIDFa9THd00/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LIDFa9THd00/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Francisco Ortiz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-28T15:30:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yZDi6gBLTi_8Ryp-Srk70NpZ-Y0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4n9WBy9Izaw"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-29T14:29:25Z",
+        "channelId": "UCCKfsxX5O8QjhWaCRBejVPQ",
+        "title": "Як поповнити брокерський рахунок Interactive brokers у 2026 році",
+        "description": "За 22 дні з повного нуля сформуйте професійний інвестиційний портфель, що приведе вас до фінансової цілі ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4n9WBy9Izaw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4n9WBy9Izaw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4n9WBy9Izaw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4n9WBy9Izaw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4n9WBy9Izaw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YU.invest",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-29T14:29:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "c7FUkbEvmimtMPhrqohhC1bmfkk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wUE2dz6RtUE"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-22T22:30:19Z",
+        "channelId": "UCNf2-ZdZ8LJ8jgY_kIYHxQQ",
+        "title": "How to Buy Treasury Bills on Interactive Brokers 2026 (Step by Step)",
+        "description": "How to Buy Treasury Bills on Interactive Brokers 2026 (Step by Step) In this informative video, we explore the process of ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wUE2dz6RtUE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wUE2dz6RtUE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wUE2dz6RtUE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wUE2dz6RtUE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wUE2dz6RtUE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "TUTOR BASE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-22T22:30:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8YaPOzMQLcKS9TSQ7dnaGJMaauU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tUmPyed6R0Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T09:34:04Z",
+        "channelId": "UCMkbc1tGeuRKolmnVpyEy8Q",
+        "title": "E se Interactive Brokers fallisse domani? 🏦 #interactivebrokers",
+        "description": "Seguici su Telegram: https://t.me/imparalatws.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tUmPyed6R0Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tUmPyed6R0Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tUmPyed6R0Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tUmPyed6R0Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tUmPyed6R0Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Impara la TWS - TraderWorkstation di IBKR",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T09:34:04Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mauJ254BMmu_RiPOqD0Z9I9uq6g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bkE0FDKtUSE"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-12T16:20:11Z",
+        "channelId": "UC1OY4Id7l1IdkZHgvlatplw",
+        "title": "Interactive Brokers vs Moomoo 2026 | Which Broker Is Better? Complete Comparison",
+        "description": "Hey friends and welcome back to a new honest comparison! In this video, we compare Interactive Brokers vs Moomoo in 2026 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bkE0FDKtUSE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bkE0FDKtUSE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bkE0FDKtUSE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/bkE0FDKtUSE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Funded Frog",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-12T16:20:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "JTx99wbWd6dk6xTBkEG8IdWOVLg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "55wGjiFEMnI"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T14:00:35Z",
+        "channelId": "UCe33Rm00eGBvP1WNPQXdAkA",
+        "title": "Why Interactive Brokers Fails Canadian Savers #investing #canada",
+        "description": "Are you hitting Interactive Brokers limitations with your Canadian investment accounts? While IBKR is a powerful tool, it lacks ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/55wGjiFEMnI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/55wGjiFEMnI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/55wGjiFEMnI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/55wGjiFEMnI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/55wGjiFEMnI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/55wGjiFEMnI/sardefault.jpg",
+            "width": 720,
+            "height": 1280
+          }
+        },
+        "channelTitle": "Aaron The Passive Investor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T14:00:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "OaE08CMIWzP69mGELAbPFC5QrtM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Uwo2dQ84YIc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-11T22:07:33Z",
+        "channelId": "UCbY1hA0wpRcbyjBLxI-dxvQ",
+        "title": "Can the Market Rally Survive Another AI Scare? - IBKR Podcast Ep. 441",
+        "description": "Is Wall Street's latest rebound built to last? Interactive Brokers' Jeff Praissman welcomes Scott Bauer of Prosper Trading Academy ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Uwo2dQ84YIc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Uwo2dQ84YIc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Uwo2dQ84YIc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Uwo2dQ84YIc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Uwo2dQ84YIc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/Uwo2dQ84YIc/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Interactive Brokers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-11T22:07:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9Y02eEGWdzLIDUSKtggezqy6fEU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ykHPt6Srk7Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-22T23:30:29Z",
+        "channelId": "UCNf2-ZdZ8LJ8jgY_kIYHxQQ",
+        "title": "How to Find Bonds on Interactive Brokers 2026 (Simple Guide)",
+        "description": "How to Find Bonds on Interactive Brokers 2026 (Simple Guide) In this video, we guide you through the process of finding bonds ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ykHPt6Srk7Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ykHPt6Srk7Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ykHPt6Srk7Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ykHPt6Srk7Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ykHPt6Srk7Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "TUTOR BASE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-22T23:30:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MZp5ElNGjzCetwApFdCiSJH1STI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "i3Ffr9uist0"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-27T18:46:10Z",
+        "channelId": "UCp_OwXVwS7ZDgH5medUuAjw",
+        "title": "How to Buy Stock on Interactive Brokers | StockBrokers.com  #trading",
+        "description": "How to buy stock on Interactive Brokers (IBKR) mobile app. A quick mobile trade ticket walkthrough from the StockBrokers.com ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/i3Ffr9uist0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/i3Ffr9uist0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/i3Ffr9uist0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/i3Ffr9uist0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/i3Ffr9uist0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/i3Ffr9uist0/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "StockBrokers.com",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-27T18:46:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UWarLoXENKyGbVhVu1z-Ueko1t8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "d9QZLdfb7U4"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-28T16:19:10Z",
+        "channelId": "UC-KOx2SOWDYZtLBKts2RQkA",
+        "title": "Interactive Brokers vs Charles Schwab (2026) - Which One is Better?",
+        "description": "Interactive Brokers vs Charles Schwab (2026) - Which One is Better? – torn between Interactive Brokers and Charles Schwab and ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/d9QZLdfb7U4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/d9QZLdfb7U4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/d9QZLdfb7U4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/d9QZLdfb7U4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/d9QZLdfb7U4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/d9QZLdfb7U4/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "FluxGuide",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-28T16:19:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rIxg-3NvS062ByvlemU-5L0Z7dA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GmbtKZk6blw"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-22T20:33:24Z",
+        "channelId": "UCbY1hA0wpRcbyjBLxI-dxvQ",
+        "title": "How to Open an IBKR Account",
+        "description": "Opening an Interactive Brokers (IBKR) account is easier than you think - and in this video, we'll walk you through the entire ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GmbtKZk6blw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GmbtKZk6blw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GmbtKZk6blw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/GmbtKZk6blw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/GmbtKZk6blw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/GmbtKZk6blw/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Interactive Brokers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-22T20:33:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TV6oHwxz2cRYuttTYhDlLuBkTIE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ag0CMdA_qhM"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-18T06:29:48Z",
+        "channelId": "UCnx40Ba8Wgkmm8m1vlRzP9A",
+        "title": "How to Change Currency on Interactive Brokers (Step-by-Step)",
+        "description": "How to change currency on Interactive Brokers (step-by-step). Convert currencies on the IBKR app — from CAD to USD and more ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ag0CMdA_qhM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ag0CMdA_qhM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ag0CMdA_qhM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ag0CMdA_qhM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ag0CMdA_qhM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "GUIDES & BEYOND",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-18T06:29:48Z"
+      }
+    }
+  ]
+}

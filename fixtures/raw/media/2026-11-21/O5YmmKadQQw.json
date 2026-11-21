@@ -1,0 +1,305 @@
+{
+ "videoId": "O5YmmKadQQw",
+ "url": "https://www.youtube.com/watch?v=O5YmmKadQQw",
+ "channel": "Krypto Królestwo",
+ "firm": "eToro",
+ "observedAt": "2026-11-21T19:20:06+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "eToro UPDATE część praktyczna: bonus, BLIK, KYC i ETF-y 💵",
+  "channel": "Krypto Królestwo",
+  "duration": 857,
+  "uploadDate": "20260619",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 1943,
+ "descriptionSha256": "0ce6f37e7efe9347b3e80e9bb427a8b5007ce239d8b3f7add7286fe04a70bb68",
+ "paidPromotionFlagApi": false,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 398,
+  "spanSec": [
+   0.599,
+   858.48
+  ],
+  "captionsSha256": "2ef2eadf68bfbcdaf699d41e6a6aeae265f3f12fcf503b2c8621f10f53e5278e",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 256996,
+  "segments": 398,
+  "captionsWallSeconds": 2.02,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 1943,
+    "originalTextSha256": "0ce6f37e7efe9347b3e80e9bb427a8b5007ce239d8b3f7add7286fe04a70bb68"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 857
+     }
+    ],
+    "durationSec": 857,
+    "reason": null,
+    "spanSec": [
+     0.599,
+     858.48
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 1943 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 857
+    }
+   ],
+   "durationSec": 857,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": false,
+  "quote": null
+ },
+ "markingInSpeech": [
+  {
+   "start": 121,
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=121s",
+   "kind": "affiliate",
+   "quote": "Oczywiście jeżeli rejestrujcie się z linku partnerskiego to jak najbardziej was to uprawnia do bonusu. Dlatego"
+  }
+ ],
+ "markersLexical": [
+  {
+   "start": 12.2,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "pogadamy nie tylko na temat Etoro, bo na",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=12s"
+  },
+  {
+   "start": 14.879,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "temat Etoro mieliśmy już odcinek",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=14s"
+  },
+  {
+   "start": 38.8,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "mówił o tym jak podejść do etoro, jak to",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=38s"
+  },
+  {
+   "start": 60.0,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "odcinka Etoro, część praktyczna. Więc",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=60s"
+  },
+  {
+   "start": 79.64,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "wetoro. Ja sobie założę jeszcze raz",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=79s"
+  },
+  {
+   "start": 87.759,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "platformy Etoro, darmowe akcje.",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=87s"
+  },
+  {
+   "start": 110.04,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "takiego partnera jakiego jak ja, jakim",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=110s"
+  },
+  {
+   "start": 118.88,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "kodzie. Nieważne. Cichutko.",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=118s"
+  },
+  {
+   "start": 123.6,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "linku partnerskiego to jak najbardziej",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=123s"
+  },
+  {
+   "start": 523.44,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "XTB. Udało się.",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=523s"
+  },
+  {
+   "start": 527.36,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "Etoro też jakby trzeba wziąć pod uwagę",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=527s"
+  },
+  {
+   "start": 584.8,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "partnerskiego, jest to tylko i wyłącznie",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=584s"
+  },
+  {
+   "start": 598.24,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "partnerskiego, ale generalnie są jakieś",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=598s"
+  },
+  {
+   "start": 611.519,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "która też jest w programie partnerskim",
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=611s"
+  }
+ ],
+ "frames": [
+  {
+   "time": 84.21,
+   "requestedTime": 84.21,
+   "method": "storyboard_320x180",
+   "path": ".runtime/media-cache/O5YmmKadQQw/frames/storyboard_320x180_000084.jpg",
+   "sha256": "987235361cd52af62170eed63fdd7da4073bf1eb2cf2e6763cb6175c4d36e532",
+   "width": 320,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=84s",
+   "observation": "Zrzut strony szybkihajs.pl z tytułem „eToro 2026 — do $500 w darmowych akcjach”; prowadzący w rogu. Brak etykiety reklamy lub współpracy na wideo."
+  },
+  {
+   "time": 123.84,
+   "requestedTime": 123.84,
+   "method": "storyboard_320x180",
+   "path": ".runtime/media-cache/O5YmmKadQQw/frames/storyboard_320x180_000123.jpg",
+   "sha256": "0073399af326335eb1b8c84e22231f8c9e5d38ce92822259562a622a02fe6004",
+   "width": 320,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=123s",
+   "observation": "Ta sama strona (progi bonusu), prowadzący w rogu. Brak etykiety."
+  },
+  {
+   "time": 584.54,
+   "requestedTime": 584.54,
+   "method": "storyboard_320x180",
+   "path": ".runtime/media-cache/O5YmmKadQQw/frames/storyboard_320x180_000584.jpg",
+   "sha256": "0c33525bf71c4fc681e3b8ef5843756cc922314f0b1dd18a9eafc00ce2749752",
+   "width": 320,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=584s",
+   "observation": "Okno rejestracji. Brak etykiety."
+  },
+  {
+   "time": 87.0,
+   "requestedTime": 87.0,
+   "method": "stream_ffmpeg_360p",
+   "path": ".runtime/media-cache/O5YmmKadQQw/frames/stream_360p_000087.jpg",
+   "sha256": "2780e2f19acbff878582da856fc61b1586f8906218f4666bc67a385143b451d9",
+   "width": 640,
+   "height": 360,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=87s",
+   "observation": "Czytelny zrzut strony „eToro 2026 — do $500 w darmowych akcjach”, przycisk „Zobacz co teraz wypłaca”. Brak etykiety reklamy lub współpracy w obrazie."
+  }
+ ],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "no_signal",
+   "reason": "Wzmianka o firmie bez relacji reklamowej (poza kolejką M1).",
+   "reasons": [],
+   "moments": [],
+   "completeReason": null,
+   "relationship": "none",
+   "score": null,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": []
+  },
+  "descriptionSpeechFrames": {
+   "route": "no_signal",
+   "reason": "Wzmianka o firmie bez relacji reklamowej (poza kolejką M1).",
+   "reasons": [],
+   "moments": [],
+   "completeReason": null,
+   "relationship": "none",
+   "score": 0,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+   "premises": []
+  }
+ }
+}

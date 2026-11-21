@@ -1,0 +1,233 @@
+{
+ "videoId": "p_ui_fqLdV0",
+ "url": "https://www.youtube.com/watch?v=p_ui_fqLdV0",
+ "channel": "Konopskyy",
+ "firm": "XTB",
+ "observedAt": "2026-11-21T19:20:07+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "PIERWSZY YOUTUBER SKAZANY ZA PANDORA GATE! (CHAJZER, WOJEWÓDZKI, STUU, ZONDA CRYPTO, ZAORSKI, MULTI)",
+  "channel": "Konopskyy",
+  "duration": 2043,
+  "uploadDate": "20260905",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 1426,
+ "descriptionSha256": "95761fc86b889cb996395e626e2931849457253fe8cec6b6eef52773c2cdc0e4",
+ "paidPromotionFlagApi": false,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 928,
+  "spanSec": [
+   0.12,
+   2045.08
+  ],
+  "captionsSha256": "d3b54438f5f236906fd20410ed9689b708b7ff648cb212a9dd93cdb097bbec8f",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 597610,
+  "segments": 928,
+  "captionsWallSeconds": 1.91,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 1426,
+    "originalTextSha256": "95761fc86b889cb996395e626e2931849457253fe8cec6b6eef52773c2cdc0e4"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 2043
+     }
+    ],
+    "durationSec": 2043,
+    "reason": null,
+    "spanSec": [
+     0.12,
+     2045.08
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 1426 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 2043
+    }
+   ],
+   "durationSec": 2043,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": true,
+  "quote": "⚫️[reklama] Zarejestruj się w XTB z kodem KONOP i zgarnij darmowy kurs inwestowania od podstaw"
+ },
+ "markingInSpeech": [
+  {
+   "start": 56,
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=56s",
+   "kind": null,
+   "quote": "wasze zamówienia. XCB to polska aplikacja inwestycyjna. Przy rejestracji z kodem Konop otrzymacie darmowy kurs"
+  }
+ ],
+ "markersLexical": [
+  {
+   "start": 44.239,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "Partnerem kanału są diety od Brokuła,",
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=44s"
+  },
+  {
+   "start": 50.399,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "na czasie macie zniżkę. Partner kanału",
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=50s"
+  },
+  {
+   "start": 54.399,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "Supli. Z kodem Konop macie zniżkę na",
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=54s"
+  },
+  {
+   "start": 60.44,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "z kodem Konop otrzymacie darmowy kurs",
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=60s"
+  },
+  {
+   "start": 401.72,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": ">> Rozbiłeś bank, jeżeli chodzi o reklamy.",
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=401s"
+  },
+  {
+   "start": 672.36,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "rzucone w stronę zapewne partnerki",
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=672s"
+  },
+  {
+   "start": 761.6,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "XTB, bo czas i cierpliwość to klucz do",
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=761s"
+  },
+  {
+   "start": 787.199,
+   "kinds": [
+    "link_w_opisie",
+    "kod"
+   ],
+   "quote": "w opisie z moim kodem otrzymasz kurs",
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=787s"
+  },
+  {
+   "start": 1205.2,
+   "kinds": [
+    "wspolpraca"
+   ],
+   "quote": "Jum podjęła się współpracy z giełdą",
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=1205s"
+  },
+  {
+   "start": 1379.88,
+   "kinds": [
+    "wspolpraca"
+   ],
+   "quote": "Współpraca jednak szybko się posypała,",
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=1379s"
+  },
+  {
+   "start": 2041.639,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "cenach. Linka macie w opisie.",
+   "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=2041s"
+  }
+ ],
+ "frames": [],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "complete",
+   "reason": "Relacja reklamowa (declared) z XTB; treść mowy niezbadana.",
+   "reasons": [],
+   "moments": [],
+   "completeReason": "transcript_unavailable",
+   "relationship": "declared",
+   "score": null,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": []
+  },
+  "descriptionSpeechFrames": {
+   "route": "no_signal",
+   "reason": "Relacja reklamowa bez przesłanki do kontroli w opisie i mowie; wpis w rejestrze reklam.",
+   "reasons": [],
+   "moments": [],
+   "completeReason": null,
+   "relationship": "declared",
+   "score": 0,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+   "premises": []
+  }
+ }
+}

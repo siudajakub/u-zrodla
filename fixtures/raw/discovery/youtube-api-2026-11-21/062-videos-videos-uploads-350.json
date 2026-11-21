@@ -1,0 +1,3285 @@
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "44a6-OMthjfI4s4KEHg0_As5ZAw",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "N5y2xaKLk3wY7HbVMtVpsoipCPU",
+      "id": "DJ021lXqIcU",
+      "snippet": {
+        "publishedAt": "2026-11-09T09:00:17Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Jak wygląda życie na stacji w Arktyce",
+        "description": "#patecki #svalbard #norwegia #stacja #polarna #badawcza",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DJ021lXqIcU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DJ021lXqIcU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DJ021lXqIcU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DJ021lXqIcU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DJ021lXqIcU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak wygląda życie na stacji w Arktyce",
+          "description": "#patecki #svalbard #norwegia #stacja #polarna #badawcza"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT45S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "46236",
+        "likeCount": "904",
+        "favoriteCount": "0",
+        "commentCount": "6"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "9WZr2COBM_s7tud4QxNTORITAFo",
+      "id": "i7KObXGmkAg",
+      "snippet": {
+        "publishedAt": "2026-11-07T16:00:30Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Odwiedziłem POLSKĄ STACJĘ w Arktyce",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/i7KObXGmkAg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/i7KObXGmkAg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/i7KObXGmkAg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/i7KObXGmkAg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/i7KObXGmkAg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/i7KObXGmkAg/sardefault.jpg",
+            "width": 940,
+            "height": 1671
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Odwiedziłem POLSKĄ STACJĘ w Arktyce",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT57S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "22525",
+        "likeCount": "438",
+        "favoriteCount": "0",
+        "commentCount": "3"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "yxDL7rC7wC8OzsgpiJU5cZOr5kc",
+      "id": "IAy3G7-yHv0",
+      "snippet": {
+        "publishedAt": "2026-11-07T14:01:44Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Czy GLOBALNE OCIEPLENIE TO MIT?",
+        "description": "[reklama] Zamów PsiBufet z kodem PATEC40 który daje aż 40% zniżki na 2 pierwsze zamówienia. https://www.psibufet.com/patec40\n\n\n\n\n\nProfesor Jakub prowadzi swój sklep arktyczny, wpadajcie zobaczyć!  https://jacobs-glacier-shop.fourthwall.com/en-pln\n\n📱 Pobierz aplikację Projekt 30 na Android: https://play.google.com/store/apps/details?id=pl.p30.app\n\n📱 Pobierz aplikację Projekt 30 na IOS: https://apps.apple.com/pl/app/projekt-30/id6824886267\n\n🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n\n🎬 Produkcja:\nMontaż: Maciej Gałązka, Maksymilian Oczkowski\nAnimacje: Samuel Nalepka",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IAy3G7-yHv0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IAy3G7-yHv0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IAy3G7-yHv0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IAy3G7-yHv0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IAy3G7-yHv0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/IAy3G7-yHv0/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Czy GLOBALNE OCIEPLENIE TO MIT?",
+          "description": "[reklama] Zamów PsiBufet z kodem PATEC40 który daje aż 40% zniżki na 2 pierwsze zamówienia. https://www.psibufet.com/patec40\n\n\n\n\n\nProfesor Jakub prowadzi swój sklep arktyczny, wpadajcie zobaczyć!  https://jacobs-glacier-shop.fourthwall.com/en-pln\n\n📱 Pobierz aplikację Projekt 30 na Android: https://play.google.com/store/apps/details?id=pl.p30.app\n\n📱 Pobierz aplikację Projekt 30 na IOS: https://apps.apple.com/pl/app/projekt-30/id6824886267\n\n🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n\n🎬 Produkcja:\nMontaż: Maciej Gałązka, Maksymilian Oczkowski\nAnimacje: Samuel Nalepka"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT45M57S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1642550",
+        "likeCount": "22858",
+        "favoriteCount": "0",
+        "commentCount": "550"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": true
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "1x8wTnAJZ-OQN8VdtemhSwHkFtk",
+      "id": "1hEbywasuls",
+      "snippet": {
+        "publishedAt": "2026-11-06T09:00:26Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Tu walczono o PROGNOZĘ POGODY",
+        "description": "#patecki #svalbard",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1hEbywasuls/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1hEbywasuls/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1hEbywasuls/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1hEbywasuls/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1hEbywasuls/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Tu walczono o PROGNOZĘ POGODY",
+          "description": "#patecki #svalbard"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT52S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "29347",
+        "likeCount": "602",
+        "favoriteCount": "0",
+        "commentCount": "5"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "Dkz-4WJj2pTsjnN7KeREVIVBAis",
+      "id": "kGPZsHV23kE",
+      "snippet": {
+        "publishedAt": "2026-11-05T14:00:11Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Tak świętuje się koniec NOCY POLARNEJ",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kGPZsHV23kE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kGPZsHV23kE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kGPZsHV23kE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kGPZsHV23kE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kGPZsHV23kE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/kGPZsHV23kE/sardefault.jpg",
+            "width": 940,
+            "height": 1671
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Tak świętuje się koniec NOCY POLARNEJ",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT32S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "37041",
+        "likeCount": "673",
+        "favoriteCount": "0",
+        "commentCount": "3"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "QeOZdw316eYNvcGUfF9uS_Eovcg",
+      "id": "FQBrBc-KeXg",
+      "snippet": {
+        "publishedAt": "2026-11-03T14:00:12Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Tu przez ponad 4 miesiące nie zobaczysz zmroku",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FQBrBc-KeXg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FQBrBc-KeXg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FQBrBc-KeXg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/FQBrBc-KeXg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/FQBrBc-KeXg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/FQBrBc-KeXg/sardefault.jpg",
+            "width": 940,
+            "height": 1671
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Tu przez ponad 4 miesiące nie zobaczysz zmroku",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "140922",
+        "likeCount": "1986",
+        "favoriteCount": "0",
+        "commentCount": "16"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "Tgrg150nGblis06T2B3v6CIpSTo",
+      "id": "Wkpc_AXz1XE",
+      "snippet": {
+        "publishedAt": "2026-11-03T12:00:30Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Jak wygląda prawdziwy trening Lewego",
+        "description": "#patecki #lewandowski #robert #chicagofire #usa",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Wkpc_AXz1XE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Wkpc_AXz1XE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Wkpc_AXz1XE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Wkpc_AXz1XE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Wkpc_AXz1XE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/Wkpc_AXz1XE/sardefault.jpg",
+            "width": 940,
+            "height": 1671
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak wygląda prawdziwy trening Lewego",
+          "description": "#patecki #lewandowski #robert #chicagofire #usa"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT55S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "50751",
+        "likeCount": "753",
+        "favoriteCount": "0",
+        "commentCount": "6"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "exhyOpiazSFGyj0hNUZ16YRyr30",
+      "id": "k7t4i8sGwRk",
+      "snippet": {
+        "publishedAt": "2026-11-03T08:30:06Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Największa katastrofa lotnicza Norwegii wydarzyła się tutaj",
+        "description": "#patecki #samolot #katastrofa #svalbard",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/k7t4i8sGwRk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/k7t4i8sGwRk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/k7t4i8sGwRk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/k7t4i8sGwRk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/k7t4i8sGwRk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/k7t4i8sGwRk/sardefault.jpg",
+            "width": 940,
+            "height": 1671
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Największa katastrofa lotnicza Norwegii wydarzyła się tutaj",
+          "description": "#patecki #samolot #katastrofa #svalbard"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT35S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "151360",
+        "likeCount": "1722",
+        "favoriteCount": "0",
+        "commentCount": "5"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "peYdFszyWl86jj8SQZJRFA6yvaE",
+      "id": "v90f_K5FHuM",
+      "snippet": {
+        "publishedAt": "2026-11-02T17:26:56Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Spotkaliśmy NIEDŹWIEDZIA POLARNEGO...",
+        "description": "#patec #svalbard #niedźwiedź #polarny",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/v90f_K5FHuM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/v90f_K5FHuM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/v90f_K5FHuM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/v90f_K5FHuM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/v90f_K5FHuM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/v90f_K5FHuM/sardefault.jpg",
+            "width": 940,
+            "height": 1671
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Spotkaliśmy NIEDŹWIEDZIA POLARNEGO...",
+          "description": "#patec #svalbard #niedźwiedź #polarny"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT40S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "67769",
+        "likeCount": "879",
+        "favoriteCount": "0",
+        "commentCount": "7"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "yo6cGpn0SUxo7HLx1FUXUFxlWM8",
+      "id": "ytCUzk0s7gs",
+      "snippet": {
+        "publishedAt": "2026-11-02T11:55:16Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Bez tego NIE wyjdziesz poza miasto  #wildlife #animals",
+        "description": "#patecki #svalbard #patec",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ytCUzk0s7gs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ytCUzk0s7gs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ytCUzk0s7gs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ytCUzk0s7gs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ytCUzk0s7gs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/ytCUzk0s7gs/sardefault.jpg",
+            "width": 940,
+            "height": 1671
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Bez tego NIE wyjdziesz poza miasto  #wildlife #animals",
+          "description": "#patecki #svalbard #patec"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT45S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "41108",
+        "likeCount": "673",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "sVOUL4JZ9wK3PmOKlDHCkJ4u5vQ",
+      "id": "ymclqnF-AIc",
+      "snippet": {
+        "publishedAt": "2026-10-31T14:00:03Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "W TYM MIEŚCIE NIE MOŻNA SIĘ URODZIĆ",
+        "description": "[reklama] Zainstaluj aplikację Trade Republic i zacznij oszczędzać za pośrednictwem mojego linku: https://trade.re/patecki6pro\n\nOferta powitalna: wpłać 400 zł i dokonaj pięciu inwestycji w ciągu 21 dni od założenia konta i otrzymaj 100 złotych bonusu w akcjach. Obowiązuje regulamin promocji.\nSaveback: 1% od kwalifikujących się wydatków kartą do kwoty 4000 zł miesięcznie, inwestowane w Twój Plan Inwestycyjny. Aby skorzystać z oferty, inwestuj co najmniej 100 zł miesięcznie w Plany Inwestycyjne. Nielimitowane, darmowe wypłaty z bankomatów na całym świecie (dotyczy opłat Trade Republic). Wypłaty poniżej 200 zł objęte są opłatą w wysokości 4 zł. Szczegółowe informacje o produktach znajdziesz na https://traderepublic.com.\n\n\n\n🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n\n🎬 Produkcja:\nMontaż: Patryk Maj, Maciej Gałązka, Maksymilian Oczkowski\nAnimacje: Samuel Nalepka",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ymclqnF-AIc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ymclqnF-AIc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ymclqnF-AIc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ymclqnF-AIc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ymclqnF-AIc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/ymclqnF-AIc/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "W TYM MIEŚCIE NIE MOŻNA SIĘ URODZIĆ",
+          "description": "[reklama] Zainstaluj aplikację Trade Republic i zacznij oszczędzać za pośrednictwem mojego linku: https://trade.re/patecki6pro\n\nOferta powitalna: wpłać 400 zł i dokonaj pięciu inwestycji w ciągu 21 dni od założenia konta i otrzymaj 100 złotych bonusu w akcjach. Obowiązuje regulamin promocji.\nSaveback: 1% od kwalifikujących się wydatków kartą do kwoty 4000 zł miesięcznie, inwestowane w Twój Plan Inwestycyjny. Aby skorzystać z oferty, inwestuj co najmniej 100 zł miesięcznie w Plany Inwestycyjne. Nielimitowane, darmowe wypłaty z bankomatów na całym świecie (dotyczy opłat Trade Republic). Wypłaty poniżej 200 zł objęte są opłatą w wysokości 4 zł. Szczegółowe informacje o produktach znajdziesz na https://traderepublic.com.\n\n\n\n🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n\n🎬 Produkcja:\nMontaż: Patryk Maj, Maciej Gałązka, Maksymilian Oczkowski\nAnimacje: Samuel Nalepka"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT1H2M13S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2357480",
+        "likeCount": "30250",
+        "favoriteCount": "0",
+        "commentCount": "467"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": true
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "GtrBYVHPZICgBQJqrslw9L2qW3s",
+      "id": "1p_cDeMS3V4",
+      "snippet": {
+        "publishedAt": "2026-10-29T19:15:29Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Test Polskiego Jedzenia w USA",
+        "description": "#patecki #usa #chicago #lewandowski #patecki #nowciax #kamil #rolex",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1p_cDeMS3V4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1p_cDeMS3V4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1p_cDeMS3V4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1p_cDeMS3V4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1p_cDeMS3V4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/1p_cDeMS3V4/sardefault.jpg",
+            "width": 940,
+            "height": 1671
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Test Polskiego Jedzenia w USA",
+          "description": "#patecki #usa #chicago #lewandowski #patecki #nowciax #kamil #rolex"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT58S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "138371",
+        "likeCount": "2123",
+        "favoriteCount": "0",
+        "commentCount": "22"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "GSfZmov5zBCZLhdGeZPjqirw4Yc",
+      "id": "-vrA1V4EdZ8",
+      "snippet": {
+        "publishedAt": "2026-10-29T11:15:19Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Jaką dietę ma LEWANDOWSKI",
+        "description": "#patecki #lewy #robert #lewandowski #patec #usa #chicago #chicagofire",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-vrA1V4EdZ8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-vrA1V4EdZ8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-vrA1V4EdZ8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-vrA1V4EdZ8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-vrA1V4EdZ8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jaką dietę ma LEWANDOWSKI",
+          "description": "#patecki #lewy #robert #lewandowski #patec #usa #chicago #chicagofire"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT53S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1411661",
+        "likeCount": "17029",
+        "favoriteCount": "0",
+        "commentCount": "153"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "A5ssYzP_mINQ8SVrzow0QUEfKVw",
+      "id": "87Uk8Z4t55w",
+      "snippet": {
+        "publishedAt": "2026-10-28T14:00:16Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Odwiedziłem WUJKA Z AMERYKI - LEWANDOWSKIEGO",
+        "description": "🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Kamil Przygodzki, Patryk Maj, Maksymilian Oczkowski\nAnimacje: Damian Sobecki, Kamil Przygodzki",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/87Uk8Z4t55w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/87Uk8Z4t55w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/87Uk8Z4t55w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/87Uk8Z4t55w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/87Uk8Z4t55w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/87Uk8Z4t55w/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Odwiedziłem WUJKA Z AMERYKI - LEWANDOWSKIEGO",
+          "description": "🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Kamil Przygodzki, Patryk Maj, Maksymilian Oczkowski\nAnimacje: Damian Sobecki, Kamil Przygodzki"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT1H9M37S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3747213",
+        "likeCount": "68183",
+        "favoriteCount": "0",
+        "commentCount": "2268"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "WZyhJPHbhVQbctAzyoSapoHqO1I",
+      "id": "J82csC7Jlhw",
+      "snippet": {
+        "publishedAt": "2026-10-28T08:00:03Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Najbrutalniejszy wyścig rowerowy w Kirgistanie",
+        "description": "#kirgistan #patec #patecki",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/J82csC7Jlhw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/J82csC7Jlhw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/J82csC7Jlhw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/J82csC7Jlhw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/J82csC7Jlhw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Najbrutalniejszy wyścig rowerowy w Kirgistanie",
+          "description": "#kirgistan #patec #patecki"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "20789",
+        "likeCount": "338",
+        "favoriteCount": "0",
+        "commentCount": "4"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "qg2R8B7PZrs_aet6QcW47wbru9c",
+      "id": "BWdMdCul4FI",
+      "snippet": {
+        "publishedAt": "2026-10-27T09:20:39Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Spróbowałem konia w Kirgistanie 🐴 🍽️",
+        "description": "#patecki #patec #kirgistan",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BWdMdCul4FI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BWdMdCul4FI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BWdMdCul4FI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BWdMdCul4FI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BWdMdCul4FI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Spróbowałem konia w Kirgistanie 🐴 🍽️",
+          "description": "#patecki #patec #kirgistan"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT38S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "48371",
+        "likeCount": "460",
+        "favoriteCount": "0",
+        "commentCount": "50"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "Kdg6K0Idh6HisMsJtd4cNRsLjxc",
+      "id": "-qv7qdAiUek",
+      "snippet": {
+        "publishedAt": "2026-10-26T14:29:32Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "MÓJ NAJBARDZIEJ PECHOWY WYJAZD...",
+        "description": "#patecki #patec #kirgistan #rower #bikepacking",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-qv7qdAiUek/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-qv7qdAiUek/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-qv7qdAiUek/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-qv7qdAiUek/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-qv7qdAiUek/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "MÓJ NAJBARDZIEJ PECHOWY WYJAZD...",
+          "description": "#patecki #patec #kirgistan #rower #bikepacking"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT53S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "69369",
+        "likeCount": "964",
+        "favoriteCount": "0",
+        "commentCount": "14"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "RtvZjpY9S20HjvHIL2j-RR5CJrc",
+      "id": "YLupxyhsUVQ",
+      "snippet": {
+        "publishedAt": "2026-10-24T13:02:46Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Odwiedziłem KIRGISTAN (i nie byłem na to gotowy)",
+        "description": "https://p30.pl/\nhttps://p30.pl/\nhttps://p30.pl/\n\n\n🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Filip Chruściel, Kamil Przygodzki, Patryk Maj, Maciej Gałązka\nAnimacje: Damian Sobecki, Samuel Nalepka",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YLupxyhsUVQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YLupxyhsUVQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YLupxyhsUVQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YLupxyhsUVQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YLupxyhsUVQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/YLupxyhsUVQ/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Odwiedziłem KIRGISTAN (i nie byłem na to gotowy)",
+          "description": "https://p30.pl/\nhttps://p30.pl/\nhttps://p30.pl/\n\n\n🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Filip Chruściel, Kamil Przygodzki, Patryk Maj, Maciej Gałązka\nAnimacje: Damian Sobecki, Samuel Nalepka"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT1H23M45S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2047008",
+        "likeCount": "34370",
+        "favoriteCount": "0",
+        "commentCount": "748"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "jYM0484j_TmRv2omNEuRMdv1Xoo",
+      "id": "2LOnLGvdJSM",
+      "snippet": {
+        "publishedAt": "2026-10-20T10:30:10Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Zjechałem 300 metrów wgłąb ziemi",
+        "description": "#patecki #patecwariatec",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2LOnLGvdJSM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2LOnLGvdJSM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2LOnLGvdJSM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2LOnLGvdJSM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2LOnLGvdJSM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/2LOnLGvdJSM/sardefault.jpg",
+            "width": 940,
+            "height": 1671
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Zjechałem 300 metrów wgłąb ziemi",
+          "description": "#patecki #patecwariatec"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT36S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "24188",
+        "likeCount": "329",
+        "favoriteCount": "0",
+        "commentCount": "6"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "LIIfbhLGxzgS_ItfDLqay_o1HN8",
+      "id": "qcjRA9MM7Vc",
+      "snippet": {
+        "publishedAt": "2026-10-19T15:30:13Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Odwiedziłem miejsce tragicznego wypadku. (300m pod ziemią)",
+        "description": "#patecki #kuba #patecwariatec #jaskinia",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qcjRA9MM7Vc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qcjRA9MM7Vc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qcjRA9MM7Vc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qcjRA9MM7Vc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qcjRA9MM7Vc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/qcjRA9MM7Vc/sardefault.jpg",
+            "width": 1536,
+            "height": 2731
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Odwiedziłem miejsce tragicznego wypadku. (300m pod ziemią)",
+          "description": "#patecki #kuba #patecwariatec #jaskinia"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT54S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "36298",
+        "likeCount": "565",
+        "favoriteCount": "0",
+        "commentCount": "4"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "RfCiLhbEvFvVKNoRITHPmjo8gPg",
+      "id": "p77suH2aMt8",
+      "snippet": {
+        "publishedAt": "2026-10-19T09:58:14Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Woda miała 2°C... Dostałem hipotermii! 🥶",
+        "description": "#jaskinia #patecki",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/p77suH2aMt8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/p77suH2aMt8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/p77suH2aMt8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/p77suH2aMt8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/p77suH2aMt8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/p77suH2aMt8/sardefault.jpg",
+            "width": 1530,
+            "height": 2720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Woda miała 2°C... Dostałem hipotermii! 🥶",
+          "description": "#jaskinia #patecki"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT29S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "43000",
+        "likeCount": "585",
+        "favoriteCount": "0",
+        "commentCount": "4"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "mxZKY3Q9f7v6Ziu1omI_fFpzaTI",
+      "id": "fhmw9MQlzAo",
+      "snippet": {
+        "publishedAt": "2026-10-17T13:00:08Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Spędziłem 18 GODZIN POD ZIEMIĄ",
+        "description": "https://p30.pl/\nhttps://p30.pl/\nhttps://p30.pl/\n\n\n🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Patryk Maj, Maciej Gałązka, Maks Oczkowski\nAnimacje: Damian Sobecki, Samuel Nalepka",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fhmw9MQlzAo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fhmw9MQlzAo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fhmw9MQlzAo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fhmw9MQlzAo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fhmw9MQlzAo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/fhmw9MQlzAo/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Spędziłem 18 GODZIN POD ZIEMIĄ",
+          "description": "https://p30.pl/\nhttps://p30.pl/\nhttps://p30.pl/\n\n\n🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Patryk Maj, Maciej Gałązka, Maks Oczkowski\nAnimacje: Damian Sobecki, Samuel Nalepka"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT1H13M41S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2812867",
+        "likeCount": "52994",
+        "favoriteCount": "0",
+        "commentCount": "979"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "now-eERCpB6--qECjsJoB9Lb6m0",
+      "id": "zMVk66e7tXI",
+      "snippet": {
+        "publishedAt": "2026-10-10T13:05:38Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "MOJA NAJWIĘKSZA PODRÓŻ",
+        "description": "Projekt30, czyli moja największa roczna podróż, z której odcinki będą pojawiały się co tydzień o 15:00, a pierwszy z nich w sobotę 17.10.\n\nhttps://p30.pl/\nhttps://p30.pl/\nhttps://p30.pl/\nhttps://p30.pl/\nhttps://p30.pl/\n\n\n\n\n\nCopyrighted music licensed from Lickd. https://lickd.co\nPompeii MMXXIII by Bastille, Hans Zimmer, https://t.lickd.co/l/qAeRd6rL024",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zMVk66e7tXI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zMVk66e7tXI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zMVk66e7tXI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zMVk66e7tXI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zMVk66e7tXI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/zMVk66e7tXI/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "MOJA NAJWIĘKSZA PODRÓŻ",
+          "description": "Projekt30, czyli moja największa roczna podróż, z której odcinki będą pojawiały się co tydzień o 15:00, a pierwszy z nich w sobotę 17.10.\n\nhttps://p30.pl/\nhttps://p30.pl/\nhttps://p30.pl/\nhttps://p30.pl/\nhttps://p30.pl/\n\n\n\n\n\nCopyrighted music licensed from Lickd. https://lickd.co\nPompeii MMXXIII by Bastille, Hans Zimmer, https://t.lickd.co/l/qAeRd6rL024"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT3M25S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "779936",
+        "likeCount": "25747",
+        "favoriteCount": "0",
+        "commentCount": "425"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "H0DeUcZzfHyZqexX635dU4Jz9Yw",
+      "id": "RrneJsr07Xg",
+      "snippet": {
+        "publishedAt": "2026-10-05T14:07:48Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": ".",
+        "description": "start projektu 10.10.2026",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RrneJsr07Xg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RrneJsr07Xg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RrneJsr07Xg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RrneJsr07Xg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RrneJsr07Xg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/RrneJsr07Xg/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": ".",
+          "description": "start projektu 10.10.2026"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT25S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "708310",
+        "likeCount": "17175",
+        "favoriteCount": "0",
+        "commentCount": "350"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "W7wc9b9O8z7maeDqRnyMwTmZMyA",
+      "id": "aBjuAiLR5XY",
+      "snippet": {
+        "publishedAt": "2026-09-30T08:38:23Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Próbuje Pobić REKORD ŚWIATA Na Rowerze",
+        "description": "#patecki #tadejpogacar #tourdefrance #kolarstwo #rower",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aBjuAiLR5XY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aBjuAiLR5XY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aBjuAiLR5XY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/aBjuAiLR5XY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/aBjuAiLR5XY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/aBjuAiLR5XY/sardefault.jpg",
+            "width": 1536,
+            "height": 2731
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Próbuje Pobić REKORD ŚWIATA Na Rowerze",
+          "description": "#patecki #tadejpogacar #tourdefrance #kolarstwo #rower"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT44S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "72696",
+        "likeCount": "787",
+        "favoriteCount": "0",
+        "commentCount": "15"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "gjTJ7a5di5FGBuNA9sZoP03PJzc",
+      "id": "gwwh2BW94LE",
+      "snippet": {
+        "publishedAt": "2026-09-17T17:49:36Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "STRZELAŁEM Z CZOŁGU!",
+        "description": "🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n#patecki #usa #stanyzjednoczone",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gwwh2BW94LE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gwwh2BW94LE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gwwh2BW94LE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gwwh2BW94LE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gwwh2BW94LE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "STRZELAŁEM Z CZOŁGU!",
+          "description": "🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n#patecki #usa #stanyzjednoczone"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT42S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "13265",
+        "likeCount": "175",
+        "favoriteCount": "0",
+        "commentCount": "3"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "-ZvCwem1MLVpA-kHGkszwTZV_qU",
+      "id": "_jnAUbv4cWE",
+      "snippet": {
+        "publishedAt": "2026-08-29T13:18:25Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Czy jestem gotowy? ZOSTAŁY OSTATNIE DNI... (chcę wejść na niezdobyty szczyt)",
+        "description": "🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Maciej Gałązka, Maks Oczkowski\nAnimacje: Damian Sobecki",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_jnAUbv4cWE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_jnAUbv4cWE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_jnAUbv4cWE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_jnAUbv4cWE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_jnAUbv4cWE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/_jnAUbv4cWE/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Czy jestem gotowy? ZOSTAŁY OSTATNIE DNI... (chcę wejść na niezdobyty szczyt)",
+          "description": "🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Maciej Gałązka, Maks Oczkowski\nAnimacje: Damian Sobecki"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT42M1S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2554909",
+        "likeCount": "32147",
+        "favoriteCount": "0",
+        "commentCount": "568"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "_yd-LUwYSLsUYUEkbhiORL7lJIk",
+      "id": "QtD8mSl100g",
+      "snippet": {
+        "publishedAt": "2026-08-25T13:00:03Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "POLSKI POLICJANT zatrzymał mnie w STANACH ZJEDNOCZONYCH",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QtD8mSl100g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QtD8mSl100g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QtD8mSl100g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QtD8mSl100g/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QtD8mSl100g/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "POLSKI POLICJANT zatrzymał mnie w STANACH ZJEDNOCZONYCH",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT38S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "130262",
+        "likeCount": "3068",
+        "favoriteCount": "0",
+        "commentCount": "31"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "HFLJWj4rrJE3phFP-0UAONk0DBE",
+      "id": "8EkMpIPZxpw",
+      "snippet": {
+        "publishedAt": "2026-08-24T13:15:30Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Dlaczego budynki w Meksyku toną?",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8EkMpIPZxpw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8EkMpIPZxpw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8EkMpIPZxpw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8EkMpIPZxpw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8EkMpIPZxpw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Dlaczego budynki w Meksyku toną?",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT29S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "31532",
+        "likeCount": "432",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "oqiVTMWdmdfFs4-0cL58CVwjvg4",
+      "id": "qQVZrMybpOQ",
+      "snippet": {
+        "publishedAt": "2026-08-24T13:00:23Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "W tym miejscu była SEKTA",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qQVZrMybpOQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qQVZrMybpOQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qQVZrMybpOQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qQVZrMybpOQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qQVZrMybpOQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "W tym miejscu była SEKTA",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT46S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "29452",
+        "likeCount": "702",
+        "favoriteCount": "0",
+        "commentCount": "10"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "aouj04k_OiQHskfI8eb3eRpNQhE",
+      "id": "NSMRGAYyX-4",
+      "snippet": {
+        "publishedAt": "2026-08-23T08:30:05Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Odwiedziłem dworzec z Pingwinów z Madagaskaru",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NSMRGAYyX-4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NSMRGAYyX-4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NSMRGAYyX-4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/NSMRGAYyX-4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/NSMRGAYyX-4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Odwiedziłem dworzec z Pingwinów z Madagaskaru",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT52S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "56466",
+        "likeCount": "692",
+        "favoriteCount": "0",
+        "commentCount": "7"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "UFcWXF_os0Edc1sAPG0nIjTrOlg",
+      "id": "Z1DIgB9qUP0",
+      "snippet": {
+        "publishedAt": "2026-08-22T13:00:33Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Ulica bezdomnych w Los Angeles",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Z1DIgB9qUP0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Z1DIgB9qUP0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Z1DIgB9qUP0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Z1DIgB9qUP0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Z1DIgB9qUP0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Ulica bezdomnych w Los Angeles",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "18658",
+        "likeCount": "308",
+        "favoriteCount": "0",
+        "commentCount": "8"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "dFGMvpTdrP7qQ19j7XHFuOs2Na8",
+      "id": "3lz-nRCbggQ",
+      "snippet": {
+        "publishedAt": "2026-08-22T13:00:09Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Zostałem Pod****y przez Kaskaderów",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3lz-nRCbggQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3lz-nRCbggQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3lz-nRCbggQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3lz-nRCbggQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3lz-nRCbggQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Zostałem Pod****y przez Kaskaderów",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "163913",
+        "likeCount": "2344",
+        "favoriteCount": "0",
+        "commentCount": "8"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "RQlRzaKEuKMT5VaFqAqQT2Z2UYk",
+      "id": "qEiYXcpeqRE",
+      "snippet": {
+        "publishedAt": "2026-08-21T19:00:04Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Tour de France to jedna wielka IMPREZA",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qEiYXcpeqRE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qEiYXcpeqRE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qEiYXcpeqRE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qEiYXcpeqRE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qEiYXcpeqRE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Tour de France to jedna wielka IMPREZA",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT20S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "16594",
+        "likeCount": "220",
+        "favoriteCount": "0",
+        "commentCount": "3"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "UWtBtUSUOOUeoH5sbajsYtMXQWw",
+      "id": "TuyjyDHpoSc",
+      "snippet": {
+        "publishedAt": "2026-08-21T15:15:31Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Strzelałem z czołgu XD",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TuyjyDHpoSc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TuyjyDHpoSc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TuyjyDHpoSc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TuyjyDHpoSc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TuyjyDHpoSc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Strzelałem z czołgu XD",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT42S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "33150",
+        "likeCount": "643",
+        "favoriteCount": "0",
+        "commentCount": "7"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "znk4gw3k-mQCpR7Jz2ZWY7xKkU4",
+      "id": "lZhp9stQ9nI",
+      "snippet": {
+        "publishedAt": "2026-08-21T12:00:01Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "W tym kraju wciskasz guzik i przyjeżdza policja",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lZhp9stQ9nI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lZhp9stQ9nI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lZhp9stQ9nI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/lZhp9stQ9nI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/lZhp9stQ9nI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "W tym kraju wciskasz guzik i przyjeżdza policja",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT38S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "27091",
+        "likeCount": "286",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "dMsNTTbxXDJshfXxt-j8Ba98z28",
+      "id": "R4pI7HbxWf0",
+      "snippet": {
+        "publishedAt": "2026-08-15T13:08:41Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Najbardziej BRUTALNY WYŚCIG Na Świecie",
+        "description": "🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\ndziękujemy za wiedzę Michał Kempa \n ig: @pankempa \n\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Maciej Gałązka, Kamil Przygodzki, Maksymilian Oczkowski\nAnimacje: Damian Sobecki",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/R4pI7HbxWf0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/R4pI7HbxWf0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/R4pI7HbxWf0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/R4pI7HbxWf0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/R4pI7HbxWf0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/R4pI7HbxWf0/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Najbardziej BRUTALNY WYŚCIG Na Świecie",
+          "description": "🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\ndziękujemy za wiedzę Michał Kempa \n ig: @pankempa \n\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Maciej Gałązka, Kamil Przygodzki, Maksymilian Oczkowski\nAnimacje: Damian Sobecki"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT46M7S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1024794",
+        "likeCount": "18798",
+        "favoriteCount": "0",
+        "commentCount": "391"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "0a9l9enz9KfbaYmiDTn3yECpKBk",
+      "id": "Ar2I0Zn99oU",
+      "snippet": {
+        "publishedAt": "2026-08-01T13:07:46Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Najbardziej KONTROWERSYJNY mundial i bilety po 8000 dolarów",
+        "description": "ten super odcinek powstał dzięki adidas, dzięki!!! [materiał sponsorowany]\n\nPani Przewodniczka po NY: https://www.instagram.com/littletownshoes/\n\n\n🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n\n🎬 Montaż: Kamil Przygodzki, Patryk Maj, Maksymilian Oczkowski\nAnimacje: Samuel Nalepka, Damian Sobecki",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ar2I0Zn99oU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ar2I0Zn99oU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ar2I0Zn99oU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Ar2I0Zn99oU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Ar2I0Zn99oU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/Ar2I0Zn99oU/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Najbardziej KONTROWERSYJNY mundial i bilety po 8000 dolarów",
+          "description": "ten super odcinek powstał dzięki adidas, dzięki!!! [materiał sponsorowany]\n\nPani Przewodniczka po NY: https://www.instagram.com/littletownshoes/\n\n\n🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n\n🎬 Montaż: Kamil Przygodzki, Patryk Maj, Maksymilian Oczkowski\nAnimacje: Samuel Nalepka, Damian Sobecki"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT52M11S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "676842",
+        "likeCount": "17003",
+        "favoriteCount": "0",
+        "commentCount": "292"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": true
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "ebo_54ovRVfhBMndUBbLXRY4vGU",
+      "id": "_hv-DhVel9A",
+      "snippet": {
+        "publishedAt": "2026-07-11T13:05:11Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "SPEŁNIŁEM JEGO MARZENIE!",
+        "description": "🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Patryk Maj, Maciej Gałązka\nAnimacje: Damian Sobecki",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_hv-DhVel9A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_hv-DhVel9A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_hv-DhVel9A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_hv-DhVel9A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_hv-DhVel9A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/_hv-DhVel9A/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "SPEŁNIŁEM JEGO MARZENIE!",
+          "description": "🔔 Subskrybuj kanał! → https://www.youtube.com/channel/UCYsZvmJGPzTMSBXES06-2lg?sub_confirmation=1\n2\n📸 Dołącz do mnie na instagramie! → https://www.instagram.com/patec_wariatec\n\n📧 Współpraca → ✉️ r.drozdowicz@influpol.com\n\n🎬 Produkcja:\nMontaż: Patryk Maj, Maciej Gałązka\nAnimacje: Damian Sobecki"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT47M29S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1504085",
+        "likeCount": "32749",
+        "favoriteCount": "0",
+        "commentCount": "431"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "blZ4EobVRNetQAhGtvul-MoFnWA",
+      "id": "N5ev5r-QMDI",
+      "snippet": {
+        "publishedAt": "2026-07-06T13:30:01Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "NAJWIĘKSZA STACJA BENZYNOWA NA ŚWIECIE",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/N5ev5r-QMDI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/N5ev5r-QMDI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/N5ev5r-QMDI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/N5ev5r-QMDI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/N5ev5r-QMDI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "tags": [
+          "patecki",
+          "patec",
+          "ekipa",
+          "patecwariatec"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "NAJWIĘKSZA STACJA BENZYNOWA NA ŚWIECIE",
+          "description": ""
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT29S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "126726",
+        "likeCount": "2046",
+        "favoriteCount": "0",
+        "commentCount": "30"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 40,
+    "resultsPerPage": 40
+  }
+}

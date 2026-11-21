@@ -1,0 +1,260 @@
+{
+ "scan": "/tmp/claude-1002/-home-codexdev-projects-hacknation-uknf-investwatch/166504b1-df65-4b17-970d-9c41d3dc6426/scratchpad/scan2.json",
+ "status": "ok",
+ "quota": {
+  "used": 27,
+  "limit": 60,
+  "resetAt": "2026-11-22T08:00:00+00:00"
+ },
+ "captures": 1300,
+ "channels": 380,
+ "polishChannels": 209,
+ "languageStatus": {
+  "out_of_scope": 495,
+  "in_scope": 805
+ },
+ "comparisonSameBudget": {
+  "brand": {
+   "searchUnits": 800,
+   "videos": 391,
+   "channels": 186,
+   "polishChannels": 51,
+   "polishChannelsWithFirmPromotion": 29,
+   "polishChannels100k": 11
+  },
+  "topic": {
+   "searchUnits": 800,
+   "videos": 388,
+   "channels": 170,
+   "polishChannels": 152,
+   "polishChannelsWithFirmPromotion": 37,
+   "polishChannels100k": 20
+  },
+  "promo": {
+   "searchUnits": 300,
+   "videos": 146,
+   "channels": 71,
+   "polishChannels": 52,
+   "polishChannelsWithFirmPromotion": 19,
+   "polishChannels100k": 27
+  }
+ },
+ "reread": {
+  "compared": 1300,
+  "contentHashUnchanged": 1300,
+  "viewCountChanged": 289,
+  "asOf": [
+   "2026-11-21T19:04:17+00:00",
+   "2026-11-21T19:05:55+00:00"
+  ]
+ },
+ "shorts": 361,
+ "paidPromotionFlagTrue": 276,
+ "flagCandidates": [
+  {
+   "videoId": "O5YmmKadQQw",
+   "url": "https://www.youtube.com/watch?v=O5YmmKadQQw",
+   "channel": "Krypto Królestwo",
+   "channelId": "UCWLKTf_GTd1SEjFEoTALkxA",
+   "subscribers": 990,
+   "views": 64,
+   "publishedAt": "2026-06-19T17:00:11Z",
+   "paidPromotionFlag": false,
+   "firms": {
+    "eToro (Europe) Ltd": {
+     "alias": "eToro",
+     "crossBorder": true
+    }
+   },
+   "firmEvidence": [
+    {
+     "firm": "eToro (Europe) Ltd",
+     "kind": "shortener_near_mention",
+     "value": "https://tinyurl.com/WladcaEtoro"
+    }
+   ],
+   "quote": "Materiał ma charakter edukacyjno-publicystyczny i nie jest poradą inwestycyjną, podatkową ani prawną Miłego oglądania i widzimy się w Krypto Królestwie 👑 Link do rejestracji: https://tinyurl.com/WladcaEtoro eToro to wieloaktywowa platforma inwestycyjna, wartość Twoich inwestycji może oczywiście rosnąć lub spadać. Twój kapit",
+   "title": "eToro UPDATE część praktyczna: bonus, BLIK, KYC i ETF-y 💵",
+   "crossBorder": true,
+   "isShort": false
+  },
+  {
+   "videoId": "AqXHkxDzSDI",
+   "url": "https://www.youtube.com/watch?v=AqXHkxDzSDI",
+   "channel": "ForexMind",
+   "channelId": "UCvnev1jh6O7_br__QC0OU2g",
+   "subscribers": 416,
+   "views": 22,
+   "publishedAt": "2026-05-31T15:35:50Z",
+   "paidPromotionFlag": false,
+   "firms": {
+    "XTB S.A.": {
+     "alias": "XTB",
+     "crossBorder": false
+    },
+    "Freedom Finance Europe Ltd": {
+     "alias": "Freedom24",
+     "crossBorder": true
+    }
+   },
+   "firmEvidence": [
+    {
+     "firm": "XTB S.A.",
+     "kind": "shortener_near_mention",
+     "value": "https://bit.ly/44BfO3V"
+    },
+    {
+     "firm": "XTB S.A.",
+     "kind": "shortener_near_mention",
+     "value": "https://bit.ly/4l0vliM"
+    },
+    {
+     "firm": "XTB S.A.",
+     "kind": "code_near_mention",
+     "value": "TRADEXTB"
+    },
+    {
+     "firm": "Freedom Finance Europe Ltd",
+     "kind": "shortener_near_mention",
+     "value": "https://bit.ly/44BfO3V"
+    }
+   ],
+   "quote": "👇ZACZNIJ INWESTOWAĆ👇 🥇XTB: https://bit.ly/44BfO3V (Użyj kodu \"TRADEXTB\", aby uzyskać materiały edukacyjne) 🥈XM: https://bit.ly/4l0vliM W tym filmiku pokażę Ci alternaty",
+   "title": "Freedom24 Alternatywy: Którego brokera wybrać? (2026)",
+   "crossBorder": true,
+   "isShort": false
+  },
+  {
+   "videoId": "yIbtMnfP25Q",
+   "url": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+   "channel": "Dywidendowy Inwestor",
+   "channelId": "UCOiMJpkQSXDspWRMoI2B6CQ",
+   "subscribers": 8350,
+   "views": 5100,
+   "publishedAt": "2026-10-05T16:00:37Z",
+   "paidPromotionFlag": false,
+   "firms": {
+    "XTB S.A.": {
+     "alias": "XTB",
+     "crossBorder": false
+    }
+   },
+   "firmEvidence": [
+    {
+     "firm": "XTB S.A.",
+     "kind": "code_near_mention",
+     "value": "DYWIDENDOWY"
+    },
+    {
+     "firm": "XTB S.A.",
+     "kind": "firm_tracking_link",
+     "value": "https://link-pso.xtb.com/pso/WtGV9"
+    }
+   ],
+   "quote": "✅Konto maklerskie, które polecam (XTB): https://link-pso.xtb.com/pso/WtGV9 ✅Uważasz, że Tobie i Twoim bliskim brakuje odpowiedniej wiedzy? Teraz, rejestrując się w XTB z kodem \"DYWIDENDOWY \" otrzymacie pełny kurs edukacyjny dedykowany początkującym inwestorom. Inwestowanie jest ryzykowne. Inwestujcie odpowi",
+   "title": "Tak teraz wygląda MÓJ PORTFEL ROSNĄCYCH DYWIDEND! Aktualizacja Q3 2026.",
+   "crossBorder": false,
+   "isShort": false
+  },
+  {
+   "videoId": "7M0rC6-Rueo",
+   "url": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+   "channel": "Inwestycyjna wyprawa",
+   "channelId": "UCaW25etEU4Dkir2RbIzSzUw",
+   "subscribers": 1290,
+   "views": 1330,
+   "publishedAt": "2026-07-03T12:30:02Z",
+   "paidPromotionFlag": false,
+   "firms": {
+    "Bank Pekao S.A. (Biuro maklerskie)": {
+     "alias": "Pekao",
+     "crossBorder": false
+    },
+    "XTB S.A.": {
+     "alias": "XTB",
+     "crossBorder": false
+    }
+   },
+   "firmEvidence": [
+    {
+     "firm": "Bank Pekao S.A. (Biuro maklerskie)",
+     "kind": "shortener_near_mention",
+     "value": "https://tmlead.pl/redirect/840824_1134"
+    },
+    {
+     "firm": "Bank Pekao S.A. (Biuro maklerskie)",
+     "kind": "code_near_mention",
+     "value": "WYPRAWA"
+    },
+    {
+     "firm": "XTB S.A.",
+     "kind": "shortener_near_mention",
+     "value": "https://tmlead.pl/redirect/840824_1134"
+    },
+    {
+     "firm": "XTB S.A.",
+     "kind": "code_near_mention",
+     "value": "WYPRAWA"
+    }
+   ],
+   "quote": "✅Bank Pekao SA - Konto Przekorzystne 5,7% na Koncie Oszczędnościowym + obligacje skarbowe - https://tmlead.pl/redirect/840824_1134 ✅Konto maklerskie (XTB) (z kodem \" WYPRAWA \"): https://link-pso.xtb.com/pso/7SA9k ✅Moja strona Internetowa: https://fin",
+   "title": "Ile trzeba mieć, żeby zacząć inwestować? 2 lata inwestowania. Brutalna prawda.",
+   "crossBorder": false,
+   "isShort": false
+  },
+  {
+   "videoId": "OIyPE0z2mng",
+   "url": "https://www.youtube.com/watch?v=OIyPE0z2mng",
+   "channel": "Wojtek Smart",
+   "channelId": "UCA1ZDXtJGtWpQYpP_sPZNAQ",
+   "subscribers": 3550,
+   "views": 1223,
+   "publishedAt": "2026-10-31T11:57:34Z",
+   "paidPromotionFlag": false,
+   "firms": {
+    "XTB S.A.": {
+     "alias": "XTB",
+     "crossBorder": false
+    }
+   },
+   "firmEvidence": [
+    {
+     "firm": "XTB S.A.",
+     "kind": "firm_tracking_link",
+     "value": "https://link-pso.xtb.com/pso/u0V2g"
+    }
+   ],
+   "quote": "Chcesz handlować większym kapitałem? Sprawdź konta fundowane z rabatem 👉 https://mfatraders.com/wojtek Startujesz od niewielkiej opłaty, a masz dostęp do większych środków. 🔹 XTB Tu zakładam konto inwestycyjne 👉 https://link-pso.xtb.com/pso/u0V2g Możesz inwestować nawet do 100 000 € bez prowizji + dostęp do IKE/IKZE. 🔹 Rankingi kont bankowych (bonusy) Sprawd",
+   "title": "Jak znaleźć pierwsze oszczędności gdy brakuje na wszystko",
+   "crossBorder": false,
+   "isShort": true
+  },
+  {
+   "videoId": "ZJrT-X08Xwc",
+   "url": "https://www.youtube.com/watch?v=ZJrT-X08Xwc",
+   "channel": "Wojtek Smart",
+   "channelId": "UCA1ZDXtJGtWpQYpP_sPZNAQ",
+   "subscribers": 3550,
+   "views": 1219,
+   "publishedAt": "2026-10-25T10:59:43Z",
+   "paidPromotionFlag": false,
+   "firms": {
+    "XTB S.A.": {
+     "alias": "XTB",
+     "crossBorder": false
+    }
+   },
+   "firmEvidence": [
+    {
+     "firm": "XTB S.A.",
+     "kind": "firm_tracking_link",
+     "value": "https://link-pso.xtb.com/pso/u0V2g"
+    }
+   ],
+   "quote": "Chcesz handlować większym kapitałem? Sprawdź konta fundowane z rabatem 👉 https://mfatraders.com/wojtek Startujesz od niewielkiej opłaty, a masz dostęp do większych środków. 🔹 XTB Tu zakładam konto inwestycyjne 👉 https://link-pso.xtb.com/pso/u0V2g Możesz inwestować nawet do 100 000 € bez prowizji + dostęp do IKE/IKZE. 🔹 Rankingi kont bankowych (bonusy) Sprawd",
+   "title": "Największy błąd początkujących inwestorów.",
+   "crossBorder": false,
+   "isShort": true
+  }
+ ]
+}

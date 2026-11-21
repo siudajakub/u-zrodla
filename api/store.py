@@ -1,12 +1,20 @@
 """Durable case data. Each transaction gets its own SQLite connection."""
 from contextlib import contextmanager
 from datetime import datetime, timezone
+from functools import lru_cache
 from hashlib import sha256
 import json
 import os
 from pathlib import Path
+import random
+import re
 import sqlite3
+import time
+import unicodedata
+from urllib.parse import parse_qs, urlsplit
 from uuid import uuid4
+
+from collectors.adapter import LeaseLost, daily_limit, health_of, quota_day, redact
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = Path(os.environ.get("INVESTWATCH_STATE", ROOT / ".runtime/demo")).resolve()
@@ -58,11 +66,190 @@ def connection(write=False):
     finally:
         db.close()
 
-def init():
-    STATE.mkdir(parents=True, exist_ok=True, mode=0o700)
-    with sqlite3.connect(STATE / "cases.sqlite3",timeout=20) as db:
-        db.execute("PRAGMA journal_mode=WAL")
+# Schema generations. Each step is additive and idempotent. Never ALTER the v1 tables
+# (cases, versions, creators, sources): the v1 code inserts into them positionally
+# ("INSERT INTO cases VALUES(...)"), so an extra column would break a rollback to 491094d.
+# Per-case or per-version metadata goes into side tables created by later steps.
+def _migration_2(db):
+    db.execute("CREATE TABLE IF NOT EXISTS schema_meta("
+               " version INTEGER PRIMARY KEY, applied_at TEXT NOT NULL, note TEXT NOT NULL)")
+
+def _migration_3(db):
+    # Side tables only: the v1 tables keep their exact shape (see the note above).
+    db.execute("CREATE TABLE IF NOT EXISTS version_meta("
+               " id TEXT NOT NULL, version INTEGER NOT NULL, reason TEXT NOT NULL, content_sig TEXT NOT NULL,"
+               " evidence_sig TEXT NOT NULL, analysis_sig TEXT NOT NULL, details TEXT NOT NULL,"
+               " PRIMARY KEY(id,version))")
+    db.execute("CREATE TABLE IF NOT EXISTS discoveries("
+               " case_id TEXT NOT NULL, key TEXT NOT NULL, first_seen TEXT NOT NULL, last_seen TEXT NOT NULL,"
+               " seen_count INTEGER NOT NULL, body TEXT NOT NULL, PRIMARY KEY(case_id,key))")
+    db.execute("CREATE TABLE IF NOT EXISTS reach_samples("
+               " case_id TEXT NOT NULL, observed TEXT NOT NULL, source TEXT NOT NULL, body TEXT NOT NULL,"
+               " PRIMARY KEY(case_id,observed,source))")
+
+def _migration_4(db):
+    # Scan steps (resume), per-source state (cursor, last success, last error) and the quota ledger.
+    db.execute("CREATE TABLE IF NOT EXISTS scan_steps("
+               " scan_id TEXT NOT NULL, step TEXT NOT NULL, seq INTEGER NOT NULL, status TEXT NOT NULL,"
+               " attempts INTEGER NOT NULL DEFAULT 0, started TEXT, finished TEXT,"
+               " summary TEXT NOT NULL DEFAULT '{}', output TEXT, PRIMARY KEY(scan_id,step))")
+    db.execute("CREATE TABLE IF NOT EXISTS source_state("
+               " source_id TEXT PRIMARY KEY, body TEXT NOT NULL, updated TEXT NOT NULL)")
+    db.execute("CREATE TABLE IF NOT EXISTS quota_ledger("
+               " source_id TEXT NOT NULL, day TEXT NOT NULL, used INTEGER NOT NULL, units_limit INTEGER,"
+               " reset_at TEXT, updated TEXT NOT NULL, PRIMARY KEY(source_id,day))")
+
+def _migration_5(db):
+    # Shadow qualification (S5): the D result of one case version, beside the v1 tables.
+    db.execute("CREATE TABLE IF NOT EXISTS qualification_results("
+               " case_id TEXT NOT NULL, version INTEGER NOT NULL, body TEXT NOT NULL, updated TEXT NOT NULL,"
+               " PRIMARY KEY(case_id,version))")
+
+def _migration_6(db):
+    # Threshold per variant and the qualification switch, both append-only (S7).
+    db.execute("CREATE TABLE IF NOT EXISTS thresholds("
+               " id INTEGER PRIMARY KEY AUTOINCREMENT, variant TEXT NOT NULL, value INTEGER NOT NULL,"
+               " note TEXT NOT NULL DEFAULT '', restored_from INTEGER, at TEXT NOT NULL)")
+    db.execute("CREATE TABLE IF NOT EXISTS qualification_settings("
+               " id INTEGER PRIMARY KEY AUTOINCREMENT, variant TEXT NOT NULL, previous_id INTEGER, restored_from INTEGER,"
+               " note TEXT NOT NULL DEFAULT '', validation_ref TEXT, approved_by TEXT, at TEXT NOT NULL,"
+               " rules_version TEXT, model_id TEXT, model_digest TEXT, prompt_version TEXT)")
+    if not db.execute("SELECT 1 FROM thresholds").fetchone():
+        for variant in ("rules_1_2", "qual_d", "qual_d_model"):
+            db.execute("INSERT INTO thresholds(variant,value,note,at) VALUES(?,60,'Wpis domyślny',?)", (variant, utc()))
+    if not db.execute("SELECT 1 FROM qualification_settings").fetchone():
+        db.execute("INSERT INTO qualification_settings(variant,note,at) VALUES('rules_1_2','Wariant domyślny',?)", (utc(),))
+
+def _migration_7(db):
+    # Media backlog of the speech gate: what was fetched for a video (transcript, frames) and what is still to do.
+    db.execute("CREATE TABLE IF NOT EXISTS media_state("
+               " case_id TEXT PRIMARY KEY, state TEXT NOT NULL, body TEXT NOT NULL, updated TEXT NOT NULL)")
+
+MIGRATIONS = ((2, "schema_meta i numeracja wersji schematu", _migration_2),
+              (3, "version_meta, discoveries, reach_samples", _migration_3),
+              (4, "scan_steps, source_state, quota_ledger", _migration_4),
+              (5, "qualification_results (kwalifikacja D w cieniu)", _migration_5),
+              (6, "thresholds, qualification_settings", _migration_6),
+              (7, "media_state (zaległość mediów bramki mowy)", _migration_7))
+SCHEMA_VERSION = MIGRATIONS[-1][0]
+
+def migrate(db):
+    """Apply missing steps under one write lock. A second process waits, then finds nothing to do."""
+    db.execute("BEGIN IMMEDIATE")
+    try:
+        current = db.execute("PRAGMA user_version").fetchone()[0]
+        for version, note, step in MIGRATIONS:
+            if current >= version:
+                continue
+            step(db)
+            db.execute("INSERT OR REPLACE INTO schema_meta VALUES(?,?,?)", (version, utc(), note))
+            db.execute(f"PRAGMA user_version={int(version)}")
+            current = version
+        db.execute("COMMIT")
+    except BaseException:
+        if db.in_transaction:
+            db.execute("ROLLBACK")
+        raise
+    return current
+
+def _prepare():
+    db = sqlite3.connect(STATE / "cases.sqlite3", timeout=20, isolation_level=None)
+    try:
+        # Switching the journal mode and the first CREATE TABLE ignore the busy timeout when
+        # another process does the same, so the caller retries on "database is locked".
+        if db.execute("PRAGMA journal_mode").fetchone()[0] != "wal":
+            db.execute("PRAGMA journal_mode=WAL")
         db.executescript(SCHEMA)
+        migrate(db)
+    finally:
+        db.close()
+
+def init(wait=30):
+    """Prepare the database. API and worker start together, so concurrent callers must not fail."""
+    STATE.mkdir(parents=True, exist_ok=True, mode=0o700)
+    deadline = time.monotonic() + wait
+    while True:
+        try:
+            return _prepare()
+        except sqlite3.OperationalError as error:
+            if "locked" not in str(error) and "busy" not in str(error) or time.monotonic() > deadline:
+                raise
+            time.sleep(random.uniform(.02, .15))
+
+def schema_info(db):
+    version = db.execute("PRAGMA user_version").fetchone()[0]
+    try:
+        row = db.execute("SELECT applied_at FROM schema_meta WHERE version=?", (version,)).fetchone()
+    except sqlite3.OperationalError:
+        row = None
+    return {"version": version, "migratedAt": row[0] if row else None}
+
+# Analysis generation that new code writes. A record without analysisVersion predates it.
+ANALYSIS_SCHEMA = 2
+ANALYSIS_VARIANT = "rules_1_2"
+# Mirrors the literal in analysis.engine.m2 until the engine exposes its own versions (step S5).
+M2_RULES = "investwatch-m2-rendered-1"
+
+@lru_cache(maxsize=1)
+def _engine_versions():
+    rules = model = None
+    try:
+        from analysis.engine import RULESET
+        rules = RULESET
+    except Exception:
+        pass
+    try:
+        from analysis import semantic
+        model = semantic.VERSION
+    except Exception:
+        pass
+    return rules, model
+
+def analysis_current():
+    rules, model = _engine_versions()
+    return {"rules": rules, "model": model, "schema": ANALYSIS_SCHEMA, "variant": ANALYSIS_VARIANT,
+            "rulesByModule": {"M1": rules, "M2": M2_RULES, "M3": rules}}
+
+def derive_origin(item):
+    """One origin per record: live, replay, synthetic or upload."""
+    provenance = item.get("provenance") if isinstance(item.get("provenance"), dict) else {}
+    if item.get("synthetic") or item.get("contractDemo"):
+        return "synthetic"
+    mode = item.get("mode") or provenance.get("mode")
+    if item.get("platform") == "upload" or mode == "upload":
+        return "upload"
+    # Every stored case carries a mode; the fallback only keeps the value inside the enum.
+    return mode if mode in ("live", "replay") else "replay"
+
+def compat_view(body, current):
+    """Fields v2 readers expect, derived for records written before they existed."""
+    module = body.get("module", "M1")
+    declared = body.get("analysisVersion") if isinstance(body.get("analysisVersion"), dict) else None
+    schema = declared.get("schema", 1) if declared else (current["schema"] if "reviewDecision" in body else 1)
+    rules = (declared or {}).get("rules") or body.get("rulesVersion")
+    wanted = current["rulesByModule"].get(module) or current["rules"]
+    stale_schema = schema < current["schema"]
+    stale_rules = bool(rules and wanted and rules != wanted)
+    needs = stale_schema or stale_rules
+    parts = []
+    if rules and wanted and rules != wanted:
+        parts.append(f"Wynik z reguł {rules}; bieżące {wanted}")
+    if stale_schema:
+        parts.append(f"Analiza w schemacie {schema}; bieżący {current['schema']}")
+    view = {
+        "origin": body.get("origin") or derive_origin(body),
+        "analysisVersion": declared or {"rules": rules, "model": (body.get("semantic") or {}).get("version"),
+                                         "schema": schema, "variant": ANALYSIS_VARIANT},
+        "needsRecalc": needs,
+        "needsRecalcReason": "; ".join(parts) if needs else None,
+        "requalification": {"state": "pending" if needs else "current",
+                            "reasonCode": ("schema_%d" % schema) if stale_schema else ("rules_changed" if stale_rules else None),
+                            "fromRules": rules, "toRules": wanted,
+                            "fromVariant": (declared or {}).get("variant", ANALYSIS_VARIANT)},
+    }
+    if not declared:
+        view["derived"] = "legacy"
+    return view
 
 def event(db, kind, ref, message):
     db.execute("INSERT INTO events(at,kind,ref,message) VALUES(?,?,?,?)", (utc(),kind,ref,message))
@@ -72,8 +259,10 @@ def record(db, case_id, action, note, details):
                (case_id,utc(),action,note,dump(details)))
 
 def history(db, case_id):
-    return [{**dict(row), **json.loads(row["details"])} for row in db.execute(
-        "SELECT at,action,note,details FROM history WHERE case_id=? ORDER BY seq", (case_id,))]
+    out = []
+    for row in db.execute("SELECT at,action,note,details FROM history WHERE case_id=? ORDER BY seq", (case_id,)):
+        out.append({**dict(row), **json.loads(row["details"])})
+    return out
 
 def scan_dict(row):
     return {"id":row["id"],"scanId":row["id"],"mode":row["mode"],"status":row["status"],
@@ -99,14 +288,521 @@ def create_scan(mode, request_id, payload=None, retry_failed=False):
         event(db,"scan",key,"Dodano skan do kolejki")
         return scan_dict(db.execute("SELECT * FROM scans WHERE id=?", (key,)).fetchone()),True
 
+# --- scan steps, source state, quota ledger, lease heartbeat (contract v2, step S3) ---
+def heartbeat(db, scan_id, owner, lease_seconds):
+    """Extend the lease. Raises LeaseLost when the scan is no longer ours."""
+    changed = db.execute("UPDATE scans SET lease_until=? WHERE id=? AND owner=? AND status='running'",
+                         (time.time() + lease_seconds, scan_id, owner)).rowcount
+    if not changed:
+        raise LeaseLost(scan_id)
+
+def plan_steps(db, scan_id, steps):
+    """Register steps in order. Steps that already exist (a resumed scan) keep their state."""
+    seq = db.execute("SELECT coalesce(max(seq),0) FROM scan_steps WHERE scan_id=?", (scan_id,)).fetchone()[0]
+    for step in steps:
+        if not db.execute("SELECT 1 FROM scan_steps WHERE scan_id=? AND step=?", (scan_id, step)).fetchone():
+            seq += 1
+            db.execute("INSERT INTO scan_steps(scan_id,step,seq,status) VALUES(?,?,?,'pending')", (scan_id, step, seq))
+
+def step_start(db, scan_id, step):
+    plan_steps(db, scan_id, [step])
+    db.execute("UPDATE scan_steps SET status='running',attempts=attempts+1,started=?,finished=NULL WHERE scan_id=? AND step=?",
+               (utc(), scan_id, step))
+
+def step_finish(db, scan_id, step, status, summary=None, output=None):
+    plan_steps(db, scan_id, [step])
+    db.execute("UPDATE scan_steps SET status=?,finished=?,summary=?,output=? WHERE scan_id=? AND step=?",
+               (status, utc(), dump(summary or {}), None if output is None else json.dumps(output, ensure_ascii=False, default=str),
+                scan_id, step))
+
+def step_output(db, scan_id, step):
+    row = db.execute("SELECT status,output FROM scan_steps WHERE scan_id=? AND step=?", (scan_id, step)).fetchone()
+    return json.loads(row["output"]) if row and row["status"] == "done" and row["output"] is not None else None
+
+def clear_step_outputs(db, scan_id):
+    db.execute("UPDATE scan_steps SET output=NULL WHERE scan_id=?", (scan_id,))
+
+STEP_NAMES = {"enrich": "Transkrypcje i kadry", "analyze": "Analiza i kwalifikacja", "apply": "Zapis wyników",
+              "transcribe": "Transkrypcja nagrania"}
+
+def step_name(step):
+    if step in STEP_NAMES:
+        return STEP_NAMES[step]
+    if step.startswith("discover:"):
+        try:
+            from collectors.discovery import ADAPTERS
+            label = ADAPTERS[step[9:]].label
+        except Exception:
+            label = ""
+        return "Odkrywanie: " + (label or step[9:])
+    return step
+
+def scan_steps(db, scan_id):
+    return [{"id": r["step"], "name": step_name(r["step"]), "step": r["step"], "status": r["status"],
+             "attempts": r["attempts"], "startedAt": r["started"],
+             "finishedAt": r["finished"], "summary": json.loads(r["summary"])}
+            for r in db.execute("SELECT * FROM scan_steps WHERE scan_id=? ORDER BY seq", (scan_id,))]
+
+def ledger_row(db, source_id, day):
+    return db.execute("SELECT * FROM quota_ledger WHERE source_id=? AND day=?", (source_id, day)).fetchone()
+
+def quota_view(adapter, row, at):
+    """Remaining units today for an adapter, plus the snapshot shown on the source."""
+    day, reset = quota_day(adapter, at)
+    limit = daily_limit(adapter)
+    used = row["used"] if row else 0
+    if limit is None and row:
+        limit = row["units_limit"]
+    snapshot = {"used": used, "limit": limit, "resetAt": reset, "day": day}
+    return {"remaining": None if daily_limit(adapter) is None else max(0, daily_limit(adapter) - used),
+            "resetAt": reset, "snapshot": snapshot}
+
+def source_state(db, source_id):
+    row = db.execute("SELECT body FROM source_state WHERE source_id=?", (source_id,)).fetchone()
+    return json.loads(row[0]) if row else {}
+
+def source_states(db):
+    return [json.loads(r[0]) for r in db.execute("SELECT body FROM source_state ORDER BY source_id")]
+
+def _last_error(result, at):
+    for source in result.get("sources", []):
+        if isinstance(source.get("lastError"), dict):
+            return {"code": None, "message": "", "nextStep": None, **source["lastError"], "at": source["lastError"].get("at") or at}
+    for source in result.get("sources", []):
+        if source.get("error") and health_of(source.get("status")) != "ok":
+            return {"code": source.get("status"), "message": redact(source["error"])[:300], "at": at, "nextStep": "Ponów skan."}
+    return {"code": result.get("status"), "message": "Źródło zwróciło błąd bez opisu.", "at": at, "nextStep": "Ponów skan."}
+
+def record_adapter(db, adapter_id, result, at, scan_id=None, adapter=None):
+    """Persist one adapter run: cursor, last success, last error, retry and quota. Returns the stored state."""
+    old = source_state(db, adapter_id)
+    status = result.get("status") or "ok"
+    health = "quota_exhausted" if result.get("blocked") else health_of(status)
+    body = {**old, "sourceId": adapter_id, "updatedAt": at, "lastScanId": scan_id, "status": status, "health": health}
+    if result.get("blocked"):
+        body["retryAt"] = result.get("retryAt") or old.get("retryAt")
+    else:
+        body["retryAt"] = result.get("retryAt")
+        body["resume"] = result.get("resume") or (old.get("resume") if health != "ok" else None)
+        for key in ("etag", "cursor"):
+            if key in result:
+                body[key] = result[key]
+        if health == "ok":
+            body.update(lastSuccessAt=at, consecutiveErrors=0)
+        else:
+            body["consecutiveErrors"] = int(old.get("consecutiveErrors") or 0) + 1
+            body["lastError"] = _last_error(result, at)
+    quota = result.get("quota") if isinstance(result.get("quota"), dict) else None
+    if quota is not None or (adapter is not None and daily_limit(adapter) is not None):
+        day, reset = quota_day(adapter, at)
+        limit = daily_limit(adapter) if adapter is not None and daily_limit(adapter) is not None else (quota or {}).get("limit")
+        row = ledger_row(db, adapter_id, day)
+        used = (row["used"] if row else 0) + (0 if result.get("blocked") else int((quota or {}).get("used") or 0))
+        code = (_last_error(result, at).get("code") if health == "quota_exhausted" and not result.get("blocked") else None)
+        if code not in (None, "budget") and limit:
+            used = max(used, int(limit))  # the platform refused: the day is spent whatever we counted
+        db.execute("INSERT OR REPLACE INTO quota_ledger VALUES(?,?,?,?,?,?)",
+                   (adapter_id, day, used, limit, (quota or {}).get("resetAt") or reset, at))
+        body["quota"] = {"used": used, "limit": limit, "resetAt": (quota or {}).get("resetAt") or reset, "day": day}
+    db.execute("INSERT OR REPLACE INTO source_state VALUES(?,?,?)", (adapter_id, dump(body), at))
+    return body
+
 def all_objects(db, table):
     assert table in {"creators","sources"}
     return [json.loads(r[0]) for r in db.execute(f"SELECT body FROM {table} ORDER BY id")]
 
-def apply_scan(db, findings, creators, sources, mode):
+# --- normalization, completeness, version reasons, observation layer (contract v2, step S2) ---
+YOUTUBE_HOSTS = {"youtube.com", "www.youtube.com", "m.youtube.com"}
+VIDEO_ID = re.compile(r"[A-Za-z0-9_-]{11}")
+CONTENT_KEYS = ("title","url","description","segments","mediaUrl","publishedAt","module","brand","platform",
+                "creatorId","sha256","contractDemo")
+EVIDENCE_KEYS = ("segments","mediaUrl","sha256")
+COMPLETENESS_RANK = {"partial": 1, "full": 2}
+
+def parse_time(value):
+    """Aware UTC datetime or None. Naive values are not guessed."""
+    if not isinstance(value, str):
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return parsed.astimezone(timezone.utc) if parsed.tzinfo else None
+
+def norm_time(value):
+    """Stored form: UTC. A value already written as +00:00 is kept byte for byte."""
+    parsed = parse_time(value)
+    if parsed is None:
+        return value
+    if value.strip().endswith("+00:00"):
+        return value.strip()
+    return parsed.isoformat(timespec="microseconds" if parsed.microsecond else "seconds")
+
+def canonical_instant(value):
+    """Same instant, same string, whatever the notation. Used only for comparing content."""
+    parsed = parse_time(value)
+    return parsed.isoformat(timespec="microseconds") if parsed else value
+
+def norm_url(value):
+    """Canonical YouTube links; every other URL is kept as received."""
+    if not isinstance(value, str):
+        return value
+    try:
+        parts = urlsplit(value.strip())
+    except ValueError:
+        return value
+    host = (parts.hostname or "").lower()
+    video = None
+    if host in YOUTUBE_HOSTS and parts.path == "/watch":
+        video = (parse_qs(parts.query).get("v") or [""])[0]
+    elif host == "youtu.be":
+        video = parts.path.strip("/")
+    if video and VIDEO_ID.fullmatch(video):
+        return f"https://www.youtube.com/watch?v={video}"
+    if host in YOUTUBE_HOSTS and parts.path.startswith("/shorts/") and VIDEO_ID.fullmatch(parts.path[8:].strip("/")):
+        return f"https://www.youtube.com/shorts/{parts.path[8:].strip('/')}"
+    return value
+
+def norm_text(value):
+    if not isinstance(value, str):
+        return value
+    return unicodedata.normalize("NFC", value).replace("\r\n", "\n").replace("\r", "\n")
+
+def normalize_capture(capture):
+    """Stored form: times in UTC and canonical YouTube links. Text stays as received."""
+    item = dict(capture)
+    for field in ("publishedAt", "observedAt"):
+        if field in item:
+            item[field] = norm_time(item[field])
+    if "url" in item:
+        item["url"] = norm_url(item["url"])
+    if isinstance(item.get("discovery"), list):
+        item["discovery"] = [{**d, "observedAt": norm_time(d.get("observedAt"))} if isinstance(d, dict) else d
+                             for d in item["discovery"]]
+    return item
+
+def _hash_view(capture, key):
+    """Value of a content field as compared for versioning (text normalized)."""
+    value = capture.get(key)
+    if key in ("title", "description"):
+        return norm_text(value)
+    if key == "publishedAt":
+        return canonical_instant(value)
+    if key == "url":
+        return norm_url(value)
+    if key == "segments" and isinstance(value, list):
+        return [{**x, "text": norm_text(x.get("text"))} if isinstance(x, dict) else x for x in value]
+    return value
+
+def completeness(capture):
+    explicit = capture.get("contentCompleteness")
+    if explicit in COMPLETENESS_RANK:
+        return explicit
+    provenance = capture.get("provenance") if isinstance(capture.get("provenance"), dict) else {}
+    return "partial" if provenance.get("truncated") or provenance.get("sampled") or capture.get("sampled") else "full"
+
+def signature_parts(capture, finding, raw=None):
+    """Fingerprint and its components. `raw` is the capture as received: its v1-style fingerprint
+    ("legacy") lets a case stored before S2 recognise an unchanged reading."""
+    proof_revision = capture.get("m2EvidenceRevision")
+    content_keys = CONTENT_KEYS + (("m2EvidenceRevision",) if proof_revision else ())
+    checks = finding.get("checks")
+    if proof_revision:
+        checks = [
+            {**check, "measurements": [
+                {k: v for k, v in measurement.items() if k != "capturedAt"}
+                for measurement in check["measurements"]
+            ]} if "measurements" in check else check
+            for check in checks or []
+        ]
+    partial = capture.get("contentCompleteness") == "partial"
+    analysis = [finding.get("summary"), finding.get("score"), checks, finding.get("evidence"), finding.get("semantic"),
+                finding.get("modalityComparison"), finding.get("reviewSuggestion")]
+    payload = [[_hash_view(capture, k) for k in content_keys], *analysis]
+    if partial:
+        payload.append("partial")
+    plain = [k for k in content_keys if k not in EVIDENCE_KEYS]
+    legacy = None
+    if raw is not None and not partial:
+        legacy = sha256(dump([[raw.get(k) for k in content_keys], *analysis]).encode()).hexdigest()
+    return {
+        "signature": sha256(dump(payload).encode()).hexdigest(),
+        "legacy": legacy,
+        "content": sha256(dump([[_hash_view(capture, k) for k in plain], partial]).encode()).hexdigest(),
+        "evidence": sha256(dump([_hash_view(capture, k) for k in EVIDENCE_KEYS]).encode()).hexdigest(),
+        "analysis": sha256(dump([*analysis, finding.get("rulesVersion")]).encode()).hexdigest(),
+    }
+
+def version_reason(before, after, old_finding, new_finding):
+    """Highest level that changed: content, then evidence, then analysis."""
+    if before is None:
+        return "content", {"initial": True}
+    changed = [name for name in ("content", "evidence", "analysis") if before[name] != after[name]]
+    reason = changed[0] if changed else "analysis"
+    return reason, {"changed": changed, "rulesFrom": old_finding.get("rulesVersion"),
+                    "rulesTo": new_finding.get("rulesVersion"), "scoreFrom": old_finding.get("score"),
+                    "scoreTo": new_finding.get("score")}
+
+def discovery_key(entry):
+    return sha256(f"{entry.get('method')}|{entry.get('query') or ''}|{entry.get('sourceId') or ''}".encode()).hexdigest()[:16]
+
+def observe_discovery(db, key, entries, scan_id):
+    for entry in entries if isinstance(entries, list) else []:
+        if not isinstance(entry, dict) or not entry.get("method"):
+            continue
+        entry = {**entry, "observedAt": norm_time(entry.get("observedAt")) or utc()}
+        if scan_id:
+            entry["scanId"] = scan_id
+        seen = entry["observedAt"]
+        slot = discovery_key(entry)
+        row = db.execute("SELECT * FROM discoveries WHERE case_id=? AND key=?", (key, slot)).fetchone()
+        if row is None:
+            db.execute("INSERT INTO discoveries VALUES(?,?,?,?,1,?)", (key, slot, seen, seen, dump(entry)))
+            continue
+        newest = max((row["last_seen"], seen), key=lambda v: parse_time(v) or datetime.min.replace(tzinfo=timezone.utc))
+        body = {**json.loads(row["body"]), **entry} if seen >= row["last_seen"] else json.loads(row["body"])
+        db.execute("UPDATE discoveries SET last_seen=?,seen_count=seen_count+1,body=? WHERE case_id=? AND key=?",
+                   (newest, dump(body), key, slot))
+
+def observe_reach(db, key, reach, observed_at):
+    if not isinstance(reach, dict) or not isinstance(reach.get("metrics"), dict):
+        return
+    as_of = norm_time(reach.get("asOf") or observed_at) or utc()
+    db.execute("INSERT OR REPLACE INTO reach_samples VALUES(?,?,?,?)",
+               (key, as_of, str(reach.get("source") or ""), dump({**reach, "asOf": as_of})))
+
+def _moment(value):
+    return parse_time(value) or datetime.min.replace(tzinfo=timezone.utc)
+
+def reach_series(db, key):
+    return [json.loads(r["body"]) for r in db.execute(
+        "SELECT body FROM reach_samples WHERE case_id=? ORDER BY observed,source", (key,))]
+
+def latest_reach(samples):
+    """Per metric the newest dated reading; a hidden or missing reading replaces an older number."""
+    metrics, latest = {}, None
+    for sample in samples:
+        for name, metric in sample["metrics"].items():
+            at = metric.get("observedAt") or sample["asOf"]
+            if name not in metrics or _moment(at) >= _moment(metrics[name]["observedAt"]):
+                metrics[name] = {**metric, "observedAt": norm_time(at)}
+        if latest is None or _moment(sample["asOf"]) >= _moment(latest["asOf"]):
+            latest = sample
+    if latest is None:
+        return None
+    return {"asOf": latest["asOf"], "source": latest.get("source"), "primary": latest.get("primary"), "metrics": metrics}
+
+def discovery_entries(db, key):
+    return [{**json.loads(r["body"]), "firstSeenAt": r["first_seen"], "lastSeenAt": r["last_seen"],
+             "seenCount": r["seen_count"]}
+            for r in db.execute("SELECT * FROM discoveries WHERE case_id=? ORDER BY first_seen,key", (key,))]
+
+def version_list(db, key):
+    """Versions with the level that changed; versions stored before S2 are classified from their rows."""
+    out, previous = [], None
+    for row in db.execute("SELECT v.version,v.observed,v.signature,v.capture,v.finding,m.reason,m.details "
+                          "FROM versions v LEFT JOIN version_meta m ON m.id=v.id AND m.version=v.version "
+                          "WHERE v.id=? ORDER BY v.version", (key,)):
+        capture, found = json.loads(row["capture"]), json.loads(row["finding"])
+        parts = signature_parts(capture, found)
+        if row["reason"]:
+            reason, details = row["reason"], json.loads(row["details"])
+        else:
+            reason, details = version_reason(previous[0] if previous else None, parts,
+                                             previous[1] if previous else {}, found)
+        out.append({"version": row["version"], "observedAt": row["observed"], "sha256": row["signature"],
+                    "changeKind": reason, "details": details})
+        previous = (parts, found)
+    return out
+
+# --- shadow qualification (contract v2, step S5) ---
+SHADOW_KEYS = ("reviewDecision", "reviewScore", "adRelationship", "relationships", "adRegistry", "premises",
+               "counterEvidence", "coverage", "variants", "analysisVersion", "priority")
+
+def split_shadow(finding):
+    """(finding as v1 stores it, shadow fields). Findings without a qualification pass through untouched."""
+    if "reviewDecision" not in finding:
+        return finding, None
+    shadow = {k: finding[k] for k in SHADOW_KEYS if k in finding}
+    evidence = finding.get("evidence") or []
+    shadow["evidence"] = [e for e in evidence if isinstance(e, dict) and "role" in e]
+    kept = {k: v for k, v in finding.items() if k not in SHADOW_KEYS}
+    kept["evidence"] = [e for e in evidence if not (isinstance(e, dict) and "role" in e)]
+    return kept, shadow
+
+def save_shadow(db, key, version, shadow):
+    if shadow is not None:
+        db.execute("INSERT OR REPLACE INTO qualification_results VALUES(?,?,?,?)", (key, version, dump(shadow), utc()))
+
+def shadow_view(db, key, version):
+    """Shadow fields of the current version. Names that clash with a v1 field get a V2 suffix until S7."""
+    row = db.execute("SELECT body FROM qualification_results WHERE case_id=? AND version=?", (key, version)).fetchone()
+    if row is None:
+        return {}, {}
+    shadow = json.loads(row[0])
+    renamed = {"evidenceV2": shadow.pop("evidence", None), "coverageV2": shadow.pop("coverage", None)}
+    return shadow, {k: v for k, v in renamed.items() if v is not None}
+
+class Conflict(Exception):
+    """The caller acted on an outdated entry (HTTP 409)."""
+
+class Invalid(Exception):
+    """The request breaks a rule of the contract (HTTP 422)."""
+
+def model_available():
+    """The local model of qual_d_model has no place to run yet (N3): the variant cannot be switched on."""
+    return False
+
+def threshold_history(db, variant):
+    return [threshold_row(r) for r in db.execute("SELECT * FROM thresholds WHERE variant=? ORDER BY id", (variant,))]
+
+def set_threshold(db, variant, value, note, expected_id, restored_from=None):
+    if variant not in VARIANTS:
+        raise Invalid("Nieznany wariant.")
+    current = threshold_current(db, variant)
+    if current and expected_id != current["id"]:
+        raise Conflict("Próg został zmieniony. Odśwież go przed zapisem.")
+    key = db.execute("INSERT INTO thresholds(variant,value,note,restored_from,at) VALUES(?,?,?,?,?)",
+                     (variant, int(value), note or "", restored_from, utc())).lastrowid
+    event(db, "threshold", variant, f"Próg wariantu {variant}: {int(value)}")
+    return threshold_row(db.execute("SELECT * FROM thresholds WHERE id=?", (key,)).fetchone())
+
+def restore_threshold(db, entry_id, expected_id, note):
+    old = db.execute("SELECT * FROM thresholds WHERE id=?", (entry_id,)).fetchone()
+    if old is None:
+        raise Invalid("Nie ma takiego wpisu progu.")
+    return set_threshold(db, old["variant"], old["value"], note or f"Przywrócono wpis {entry_id}", expected_id, entry_id)
+
+def qualification_history(db):
+    return [settings_row(r) for r in db.execute("SELECT * FROM qualification_settings ORDER BY id")]
+
+def set_qualification(db, variant, expected_id, note, validation_ref, approved_by, restored_from=None):
+    if variant not in VARIANTS:
+        raise Invalid("Nieznany wariant kwalifikacji.")
+    current = qualification_current(db)
+    if current and expected_id != current["id"]:
+        raise Conflict("Wariant został zmieniony. Odśwież go przed zapisem.")
+    if variant != ANALYSIS_VARIANT and not (validation_ref and approved_by):
+        raise Invalid("Wariant inny niż rules_1_2 wymaga validationRef (raport z odłożoną próbą) i approvedBy.")
+    if variant == "qual_d_model" and not model_available():
+        raise Invalid("Model lokalny jest niedostępny: brak digestu wag z locka i miejsca uruchomienia.")
+    rules = analysis_current()["rules"]
+    if variant != ANALYSIS_VARIANT:
+        try:
+            from analysis import qualification
+            rules = qualification.RULES_VERSION
+        except Exception:
+            pass
+    key = db.execute("INSERT INTO qualification_settings(variant,previous_id,restored_from,note,validation_ref,approved_by,at,rules_version)"
+                     " VALUES(?,?,?,?,?,?,?,?)", (variant, current and current["id"], restored_from, note or "", validation_ref,
+                                                  approved_by, utc(), rules)).lastrowid
+    event(db, "qualification", variant, f"Wariant kwalifikacji: {variant}")
+    return settings_row(db.execute("SELECT * FROM qualification_settings WHERE id=?", (key,)).fetchone()), current
+
+def restore_qualification(db, entry_id, expected_id, note):
+    old = db.execute("SELECT * FROM qualification_settings WHERE id=?", (entry_id,)).fetchone()
+    if old is None:
+        raise Invalid("Nie ma takiego wpisu wariantu.")
+    return set_qualification(db, old["variant"], expected_id, note or f"Przywrócono wpis {entry_id}",
+                             old["validation_ref"], old["approved_by"], entry_id)
+
+def source_counts(sources):
+    """{ok, empty, partial, failed, total}: what the scan summary shows for the sources of one run."""
+    out = {"ok": 0, "empty": 0, "partial": 0, "failed": 0, "total": len(sources)}
+    for source in sources:
+        status = source.get("status")
+        if health_of(status) != "ok":
+            out["failed"] += 1
+        elif status in ("partial", "stale"):
+            out["partial"] += 1
+        elif status == "empty":
+            out["empty"] += 1
+        else:
+            out["ok"] += 1
+    return out
+
+def _eligible_refer(db, body, shadow):
+    """An eligible, un-gated refer of the active variant for a stored body plus its shadow record."""
+    if not shadow or body.get("module", "M1") != "M1" or derive_origin(body) not in ("live", "replay"):
+        return False
+    variant = active_variant(db)
+    view = variant_view({**body, **shadow}, variant, threshold_value(db, variant))
+    return bool(view["queueEligible"] and not view.get("gated"))
+
+def apply_recompute(db, pairs, scan_id):
+    """Re-analysed stored captures. Each case keeps its own mode; analyst decisions are never touched."""
+    total = {"newCreators": 0, "firstLiveCreators": 0, "changedFindings": 0, "captures": 0, "creatorsSeen": 0, "referred": 0}
+    for capture, finding in pairs:
+        result = apply_scan(db, [(capture, finding)], [], [], capture.get("mode") or "live", scan_id=scan_id)
+        total["changedFindings"] += result["changedFindings"]
+        total["referred"] += result["referred"]
+        total["captures"] += 1
+    return total
+
+def shadow_eligible(shadow, threshold):
+    """refer and above the threshold; a record without a score keeps its own queueEligible flag."""
+    decision = (shadow or {}).get("reviewDecision") or {}
+    if decision.get("route") != "refer":
+        return False
+    value = ((shadow or {}).get("reviewScore") or {}).get("value")
+    return bool(decision.get("queueEligible")) if value is None else value >= threshold
+
+def shadow_variant(shadow):
+    return ((shadow or {}).get("analysisVersion") or {}).get("variant") or ANALYSIS_VARIANT
+
+def latest_shadow(db, key):
+    row = db.execute("SELECT body FROM qualification_results WHERE case_id=? ORDER BY version DESC LIMIT 1", (key,)).fetchone()
+    return json.loads(row[0]) if row else None
+
+def refer_transition(db, key, shadow):
+    """high_risk for the qual_d variants: once, when a case becomes an eligible refer."""
+    variant = shadow_variant(shadow)
+    if shadow is None or not variant.startswith("qual_d"):
+        return None
+    threshold = threshold_value(db, variant)
+    return shadow_eligible(shadow, threshold) and not shadow_eligible(latest_shadow(db, key), threshold)
+
+MEDIA_KEYS = ("segments", "mediaCoverage", "frames", "mediaVersion", "framesAttempted", "mediaAttempts")
+
+def media_outcome(capture):
+    """done (transcript read), unavailable (permanent gap), failed (retry later) or None (not attempted)."""
+    from analysis.engine import permanent_gap
+    if not isinstance(capture.get("mediaCoverage"), dict):
+        return None
+    transcript = capture["mediaCoverage"].get("transcript") or {}
+    if any(isinstance(x, dict) and str(x.get("text", "")).strip() for x in capture.get("segments") or []):
+        return "done"
+    if transcript.get("state") == "unavailable":
+        return "unavailable" if permanent_gap(transcript.get("reason")) else "failed"
+    return None
+
+def save_media(db, key, capture):
+    """Remember the media step of a case beside its versions; a finished reading is never replaced by a gap."""
+    outcome = media_outcome(capture)
+    if outcome is None or (outcome == "failed" and not capture.get("mediaAttempts")):
+        return  # a stale gap copied from an older capture is not an attempt
+    row = db.execute("SELECT state,body FROM media_state WHERE case_id=?", (key,)).fetchone()
+    old = json.loads(row["body"]) if row else {}
+    if row and row["state"] == "done" and outcome != "done":
+        return
+    body = {k: capture[k] for k in MEDIA_KEYS if k in capture}
+    attempted = bool(capture.get("frames") or capture.get("framesAttempted") or old.get("framesAttempted"))
+    body["framesAttempted"] = attempted
+    body["attempts"] = int(capture.get("mediaAttempts") or old.get("attempts") or 0)
+    db.execute("INSERT OR REPLACE INTO media_state VALUES(?,?,?,?)", (key, outcome, dump(body), utc()))
+
+def media_states(db, keys=None):
+    rows = db.execute("SELECT case_id,state,body FROM media_state")
+    return {r["case_id"]: {**json.loads(r["body"]), "state": r["state"]} for r in rows if keys is None or r["case_id"] in keys}
+
+def gate_of(shadow, variant):
+    return (((shadow or {}).get("variants") or {}).get(variant) or {}).get("gated")
+
+def apply_scan(db, findings, creators, sources, mode, scan_id=None):
     new_creators=0
     first_live=0
     updated_cases=0
+    referred=0
     for creator in creators:
         key=creator["id"]
         before=db.execute("SELECT body FROM creators WHERE id=?", (key,)).fetchone()
@@ -130,23 +826,15 @@ def apply_scan(db, findings, creators, sources, mode):
         body["lastSuccessAt"]=source.get("lastSuccessAt") or (utc() if source["status"]=="ok" else old.get("lastSuccessAt"))
         db.execute("INSERT INTO sources VALUES(?,?) ON CONFLICT(id) DO UPDATE SET body=excluded.body",(key,dump(body)))
     for capture,finding in findings:
+        finding,shadow=split_shadow(finding)
         key=finding["id"]
-        # Acquisition times change on each scan. Version only the captured content and analysis.
-        content_keys=("title","url","description","segments","mediaUrl","publishedAt","module","brand","platform","creatorId","sha256","contractDemo")
+        original=capture
+        capture=normalize_capture(original)
+        # Acquisition times, statistics and discovery paths change on each scan. Version only the
+        # captured content and analysis; the observation layer is stored beside the versions.
         proof_revision=capture.get("m2EvidenceRevision")
-        checks=finding.get("checks")
-        if proof_revision:
-            content_keys+=("m2EvidenceRevision",)
-            checks=[
-                {**check, "measurements": [
-                    {k:v for k,v in measurement.items() if k!="capturedAt"}
-                    for measurement in check["measurements"]
-                ]} if "measurements" in check else check
-                for check in checks or []
-            ]
-        signature=sha256(dump([[capture.get(k) for k in content_keys],finding.get("summary"),finding.get("score"),
-                                checks,finding.get("evidence"),finding.get("semantic"),finding.get("modalityComparison"),
-                                finding.get("reviewSuggestion")]).encode()).hexdigest()
+        parts=signature_parts(capture,finding,original)
+        signature=parts["signature"]
         before=db.execute("SELECT fingerprint,revision,body FROM cases WHERE id=?",(key,)).fetchone()
         previous_body=json.loads(before["body"]) if before else {}
         if mode=="replay" and previous_body.get("mode")=="live":
@@ -155,37 +843,476 @@ def apply_scan(db, findings, creators, sources, mode):
             latest=previous_body.get("latestM2Observation",previous_body["observedAt"])
             if not proof_revision or datetime.fromisoformat(capture["observedAt"])<datetime.fromisoformat(latest):
                 continue
-        if before and before["fingerprint"]==signature:
+        observe_discovery(db,key,capture.get("discovery"),scan_id)
+        observe_reach(db,key,capture.get("reach"),capture.get("observedAt"))
+        save_media(db,key,capture)
+        if before and COMPLETENESS_RANK[completeness(capture)]<COMPLETENESS_RANK[completeness(previous_body)]:
+            # A thinner reading of known content adds its path and statistics but never a version.
+            continue
+        if before and before["fingerprint"] in (signature,parts["legacy"]):
+            transition=refer_transition(db,key,shadow) if shadow else None
+            referred+=bool(shadow and _eligible_refer(db,{**previous_body,**finding},shadow)
+                           and not _eligible_refer(db,previous_body,latest_shadow(db,key)))
+            if transition:
+                event(db,"high_risk",key,finding["title"])
+            elif shadow and shadow_variant(shadow)=="rules_1_2" and finding.get("score",0)>=70 \
+                    and gate_of(latest_shadow(db,key),"rules_1_2") and not gate_of(shadow,"rules_1_2"):
+                event(db,"high_risk",key,finding["title"])  # the speech gate was released (transcript examined or unobtainable)
             if mode=="live":
+                if isinstance(capture.get("availability"),dict) and _moment(capture["availability"].get("observedAt"))>=_moment((previous_body.get("availability") or {}).get("observedAt")):
+                    previous_body["availability"]=capture["availability"]
                 if proof_revision:
                     previous_body["latestM2Observation"]=capture["observedAt"]
                 else:
-                    previous_body.update({field:capture[field] for field in ("observedAt","provenance") if field in capture})
+                    promoted=previous_body.get("mode")!="live"
+                    if "observedAt" in capture and (_moment(capture["observedAt"])>=_moment(previous_body.get("observedAt"))):
+                        previous_body["observedAt"]=capture["observedAt"]
+                    if isinstance(capture.get("provenance"),dict):
+                        # The reading that defined the stored content keeps its provenance; a replay case
+                        # promoted to live takes the live one. Other paths are listed from `discovery`.
+                        old_provenance=previous_body.get("provenance") if isinstance(previous_body.get("provenance"),dict) else {}
+                        previous_body["provenance"]={**old_provenance,**capture["provenance"]} if promoted or not old_provenance else old_provenance
                 previous_body["mode"]="live"
                 db.execute("UPDATE cases SET body=? WHERE id=?",(dump(previous_body),key))
+            save_shadow(db,key,previous_body.get("version"),shadow)
             continue
         version=db.execute("SELECT coalesce(max(version),0)+1 FROM versions WHERE id=?",(key,)).fetchone()[0]
+        old_finding,old_parts={},None
+        if before:
+            last=db.execute("SELECT capture,finding FROM versions WHERE id=? AND version=?",(key,version-1)).fetchone()
+            if last:
+                old_finding=json.loads(last["finding"])
+                old_parts=signature_parts(json.loads(last["capture"]),old_finding)
+        reason,details=version_reason(old_parts,parts,old_finding,finding)
         body={**capture,**finding,"version":version,"mode":mode}
         db.execute("INSERT INTO versions VALUES(?,?,?,?,?,?)",
                    (key,version,signature,utc(),dump(capture),dump(finding)))
+        db.execute("INSERT INTO version_meta VALUES(?,?,?,?,?,?,?)",
+                   (key,version,reason,parts["content"],parts["evidence"],parts["analysis"],dump(details)))
         db.execute("""INSERT INTO cases VALUES(?,?,?,'new',1,?) ON CONFLICT(id) DO UPDATE SET
                       body=excluded.body, fingerprint=excluded.fingerprint,revision=cases.revision+1,updated=excluded.updated""",
                    (key,dump(body),signature,utc()))
-        record(db,key,"capture","Zachowano wersję materiału",{"version":version})
-        event(db,"high_risk" if finding.get("score",0)>=70 else "finding",key,finding["title"])
+        transition=refer_transition(db,key,shadow) if shadow else None
+        referred+=bool(shadow and _eligible_refer(db,body,shadow) and not _eligible_refer(db,previous_body,latest_shadow(db,key)))
+        save_shadow(db,key,version,shadow)
+        record(db,key,"capture","Zachowano wersję materiału",{"version":version,"changeKind":reason})
+        fired=(finding.get("score",0)>=70 and not gate_of(shadow,"rules_1_2")) if transition is None else transition
+        event(db,"high_risk" if fired else "finding",key,finding["title"])
         updated_cases+=1
-    return {"newCreators":new_creators,"firstLiveCreators":first_live,"changedFindings":updated_cases,"captures":len(findings),"creatorsSeen":len(creators)}
+    return {"newCreators":new_creators,"firstLiveCreators":first_live,"changedFindings":updated_cases,"captures":len(findings),"creatorsSeen":len(creators),
+            "referred":referred,"sources":source_counts(sources)}
 
-def case_dict(db,row):
-    return {**json.loads(row["body"]),"id":row["id"],"status":row["status"],"revision":row["revision"],
-            "updatedAt":row["updated"],"history":history(db,row["id"])}
+# --- settings, decisions and queues (contract v2, steps S6 and S7) ---
+VARIANTS = ("rules_1_2", "qual_d", "qual_d_model")
+QUEUES = ("review", "adRegister", "offersM2", "offersM3", "incomplete", "closed", "all", "demo")
+ROUTE_OF_SUGGESTION = {"review": "refer", "uncertain": "complete", "no_signal": "no_signal", "unavailable": "insufficient"}
+
+def settings_row(row):
+    return None if row is None else {"id": row["id"], "variant": row["variant"], "setAt": row["at"], "note": row["note"],
+                                     "previousId": row["previous_id"], "restoredFrom": row["restored_from"],
+                                     "validationRef": row["validation_ref"], "validatedBy": row["approved_by"],
+                                     "rulesVersion": row["rules_version"], "modelId": row["model_id"]}
+
+def qualification_current(db):
+    return settings_row(db.execute("SELECT * FROM qualification_settings ORDER BY id DESC LIMIT 1").fetchone())
+
+def active_variant(db):
+    return (qualification_current(db) or {}).get("variant") or ANALYSIS_VARIANT
+
+def threshold_row(row):
+    return None if row is None else {"id": row["id"], "variant": row["variant"], "value": row["value"], "setAt": row["at"],
+                                     "note": row["note"], "restoredFrom": row["restored_from"]}
+
+def threshold_current(db, variant):
+    return threshold_row(db.execute("SELECT * FROM thresholds WHERE variant=? ORDER BY id DESC LIMIT 1", (variant,)).fetchone())
+
+def threshold_value(db, variant):
+    return (threshold_current(db, variant) or {"value": 60})["value"]
+
+def last_decision(db, key):
+    row = db.execute("SELECT at,note,details FROM history WHERE case_id=? AND action='decision' ORDER BY seq DESC LIMIT 1", (key,)).fetchone()
+    if row is None:
+        return None
+    details = json.loads(row["details"])
+    return {"status": details.get("status"), "at": row["at"], "note": row["note"], "version": details.get("version"),
+            "revision": details.get("revision"), "route": details.get("route"), "analysisSig": details.get("analysisSig"),
+            "resolution": details.get("resolution")}
+
+def variant_view(body, variant, threshold):
+    """Route, score and queue eligibility of a case under one variant."""
+    variants = body.get("variants") if isinstance(body.get("variants"), dict) else {}
+    chosen = variants.get(variant)
+    decision = body.get("reviewDecision") if isinstance(body.get("reviewDecision"), dict) else {}
+    score = body.get("reviewScore") if isinstance(body.get("reviewScore"), dict) else {}
+    if chosen is not None:
+        route = chosen.get("route")
+        value = (chosen.get("reviewScore") or {}).get("value")
+        value = body.get("score") if variant == "rules_1_2" and value is None else value
+    elif (body.get("reviewSuggestion") or {}).get("state") and not decision:
+        route, value = ROUTE_OF_SUGGESTION.get(body["reviewSuggestion"]["state"]), body.get("score")
+    elif decision:
+        route, value = decision.get("route"), score.get("value")
+    else:
+        route, value = None, body.get("score")
+    if value is None and decision and variant != "rules_1_2" and decision.get("queueEligible"):
+        eligible = route == "refer"
+    else:
+        eligible = bool(route == "refer" and isinstance(value, (int, float)) and value >= threshold)
+    if chosen is None and decision.get("queueEligible") is not None and value is None:
+        eligible = bool(route == "refer" and decision["queueEligible"])
+    return {"route": route, "value": value, "queueEligible": eligible and body.get("module", "M1") == "M1",
+            "gated": (chosen or {}).get("gated")}
+
+def rereview(db, key, status, body, decided):
+    """pendingReReview: closed, and a content or evidence version came after the version that was decided."""
+    if not decided or status != "closed" or decided.get("version") is None or body.get("version", 0) <= decided["version"]:
+        return False, False
+    kinds = set()
+    for version in range(decided["version"] + 1, body["version"] + 1):
+        row = db.execute("SELECT reason FROM version_meta WHERE id=? AND version=?", (key, version)).fetchone()
+        kinds.add(row[0] if row else "content")
+    return bool(kinds & {"content", "evidence"}), False
+
+def has_signal(core):
+    """A relation proof, a firm of the registry in the description or title, an unresolved identity or a computation gap."""
+    relation = core.get("adRelationship") if isinstance(core.get("adRelationship"), dict) else {}
+    firm = relation.get("firm") if isinstance(relation.get("firm"), dict) else {}
+    decision = core.get("reviewDecision") if isinstance(core.get("reviewDecision"), dict) else {}
+    score = core.get("reviewScore") if isinstance(core.get("reviewScore"), dict) else {}
+    return bool(relation.get("status") in ("declared", "documented", "probable") or firm.get("mention") or firm.get("candidates")
+                or (core.get("adRegistry") or {}).get("state") in ("included", "candidate")
+                or core.get("relationships") or decision.get("completeReason") == "identity_unresolved"
+                or str(score.get("notComputableReason") or "").startswith("Kwalifikacja nie powiodła się")
+                or any(isinstance(p, dict) and p.get("status") in ("documented", "conditional", "candidate")
+                       for p in core.get("premises") or []))
+
+def queues_of(core, view, flags, threshold=None):
+    """Queue names of one case (contract 3.4). A pure function of the case record."""
+    origin = core.get("origin")
+    out = set()
+    live = origin in ("live", "replay")
+    available = core.get("outOfScope") is None and (core.get("availability") or {}).get("state") != "removed"
+    out.add("all")
+    if origin in ("synthetic", "upload"):
+        out.add("demo")
+    if not live:
+        return sorted(out)
+    if available:
+        module = core.get("module", "M1")
+        if core.get("status") == "closed":
+            out.add("closed")
+        evidence = core.get("evidenceV2") if core.get("evidenceV2") is not None else core.get("_evidenceV2")
+        has_evidence = not evidence or any(e.get("available", True) for e in evidence)
+        reopened = core.get("status") == "closed" and (flags["pendingReReview"] or flags["reviewStale"])
+        if module == "M1" and view["route"] == "refer" and view["queueEligible"] and has_evidence and not core.get("needsRecalc") \
+                and (core.get("status") != "closed" or reopened):
+            out.add("review")
+        if (core.get("adRegistry") or {}).get("state") in ("included", "candidate"):
+            out.add("adRegister")
+        if module == "M2":
+            out.add("offersM2")
+        if module == "M3":
+            out.add("offersM3")
+        # incomplete: only material with a signal and a concrete gap that can still be closed.
+        # A video without any signal is no_signal with the coverage "mowy nie zbadano" and stays in `all`.
+        if core.get("needsRecalc") or (view["route"] in ("complete", "insufficient") and (view.get("gated") or has_signal(core))):
+            out.add("incomplete")
+    else:
+        out.discard("closed")
+    return sorted(out)
+
+def case_core(db, row, current, settings):
+    """The case record without history, versions and observation layers: enough to classify it."""
+    body = json.loads(row["body"])
+    key = row["id"]
+    shadow, renamed = shadow_view(db, key, body.get("version"))
+    body = {**body, **shadow}
+    view = compat_view(body, current)
+    decided = last_decision(db, key)
+    variant = settings["variant"]
+    chosen = variant_view(body, variant, settings["thresholds"].get(variant, 60))
+    pending, _ = rereview(db, key, row["status"], body, decided)
+    stale = bool(decided and decided.get("route") is not None and chosen["route"] is not None and decided["route"] != chosen["route"])
+    flags = {"pendingReReview": pending, "reviewStale": stale}
+    core = {**view, **body, **{k: body[k] for k in ("origin", "analysisVersion", "derived") if k in body},
+            **{k: view[k] for k in ("needsRecalc", "needsRecalcReason", "requalification")},
+            "id": key, "status": row["status"], "revision": row["revision"], "updatedAt": row["updated"],
+            "_evidenceV2": renamed.get("evidenceV2"), "_coverage": renamed.get("coverageV2")}
+    return core, renamed, decided, chosen, flags
+
+def load_settings(db):
+    qualification = qualification_current(db)
+    return {"variant": (qualification or {}).get("variant") or ANALYSIS_VARIANT, "qualification": qualification,
+            "thresholds": {v: threshold_value(db, v) for v in VARIANTS}}
+
+FRAME_NAME = re.compile(r"[A-Za-z0-9_.-]{1,80}\.jpg")
+
+def frame_name(path):
+    name = str(path or "").replace("\\", "/").rsplit("/", 1)[-1]
+    return name if FRAME_NAME.fullmatch(name) else None
+
+def with_thumbnail(case_id, evidence):
+    """Frame evidence gets `thumbnailUrl` (read-only route /v1/frames/{videoId}/{name}); other evidence is untouched."""
+    if not isinstance(evidence, dict) or evidence.get("modality") != "frame" or evidence.get("thumbnailUrl"):
+        return evidence
+    name, video = frame_name(evidence.get("framePath") or evidence.get("path")), str(case_id)[8:]
+    if name and case_id.startswith("youtube:") and VIDEO_ID.fullmatch(video):
+        return {**evidence, "thumbnailUrl": f"/v1/frames/{video}/{name}"}
+    return evidence
+
+def frame_file(db, video, name, roots):
+    """Path of a frame JPEG that the stored case really lists, inside one of `roots`; else None. No path traversal."""
+    if not VIDEO_ID.fullmatch(video) or not FRAME_NAME.fullmatch(name):
+        return None
+    row = db.execute("SELECT body FROM cases WHERE id=?", ("youtube:" + video,)).fetchone()
+    if row is None:
+        return None
+    frames = json.loads(row[0]).get("frames") or []
+    listed = [f for f in frames if isinstance(f, dict) and frame_name(f.get("path")) == name]
+    if not listed:
+        return None
+    for root in roots:
+        base = Path(root).resolve()
+        target = (base / video / "frames" / name).resolve()
+        if target.is_file() and target.parent == (base / video / "frames").resolve():
+            wanted = listed[0].get("sha256")
+            if wanted and sha256(target.read_bytes()).hexdigest() != wanted:
+                continue
+            return target
+    return None
+
+def apply_schema(case, renamed, legacy_coverage, schema):
+    """schema 1 keeps the old desk working (v1 evidence, coverage as text); schema 2 uses the target names."""
+    coverage = renamed.get("coverageV2")
+    schema = schema if isinstance(schema, int) else 1
+    if schema >= 2:
+        case["history"] = [{**h, "changeKind": h.get("changeKind") or (h["action"] if h["action"] != "capture" else "content")}
+                           for h in case.get("history", [])]
+        if renamed.get("evidenceV2"):
+            case["evidence"] = renamed["evidenceV2"]
+        if isinstance(case.get("evidence"), list):
+            case["evidence"] = [with_thumbnail(case["id"], e) for e in case["evidence"]]
+        if coverage is not None:
+            case["coverage"] = {**coverage, **({"legacyText": legacy_coverage} if isinstance(legacy_coverage, str) else {})}
+    else:
+        case.update({k: v for k, v in renamed.items() if v is not None})
+    return case
+
+def case_dict(db,row,current=None,schema=2,settings=None,full=True):
+    current=current or analysis_current()
+    settings=settings or load_settings(db)
+    core,renamed,decided,chosen,flags=case_core(db,row,current,settings)
+    key=row["id"]
+    core.pop("_evidenceV2",None)
+    core.pop("_coverage",None)
+    legacy_coverage=core.get("coverage") if isinstance(core.get("coverage"),str) else None
+    probe={**core,"_evidenceV2":renamed.get("evidenceV2"),"_coverage":renamed.get("coverageV2")}
+    out={**core,"queues":queues_of(probe,chosen,flags),"pendingReReview":flags["pendingReReview"],
+         "reviewStale":flags["reviewStale"],"lastDecision":decided,"activeVariant":settings["variant"],
+         "route":chosen["route"],"queueEligible":chosen["queueEligible"]}
+    layer={}
+    if full:
+        entries=discovery_entries(db,key)
+        if entries:
+            layer["discovery"]=entries
+            paths=[{k:e.get(k) for k in ("method","adapter","sourceId","sourceUrl","observedAt","responseSha256")} for e in entries]
+            layer["provenance"]={**(core.get("provenance") if isinstance(core.get("provenance"),dict) else {}),"paths":paths}
+        reach=latest_reach(reach_series(db,key))
+        if reach:
+            layer["reach"]=reach
+        versions=version_list(db,key)
+        if versions:
+            layer["versions"]=versions
+        layer["history"]=history(db,key)
+    return apply_schema({**out,**layer},renamed,legacy_coverage,schema)
+
+def summary_of_case(case):
+    decision=case.get("reviewDecision") if isinstance(case.get("reviewDecision"),dict) else {}
+    active=case.get("activeVariant") or ANALYSIS_VARIANT
+    chosen=variant_view(case,active,60)
+    moment=next(iter(decision.get("moments") or []),None)
+    reason=decision.get("reason")
+    if active==ANALYSIS_VARIANT:  # the shadow decision belongs to qual_d; the active rules explain themselves
+        reason=(case.get("reviewSuggestion") or {}).get("reason") or reason
+    return {"id":case["id"],"title":case.get("title"),"module":case.get("module"),"platform":case.get("platform"),
+            "creatorId":case.get("creatorId"),"creatorName":case.get("creatorName"),"publishedAt":case.get("publishedAt"),
+            "observedAt":case.get("observedAt"),"status":case["status"],"revision":case["revision"],"version":case.get("version"),
+            "origin":case.get("origin"),"route":case.get("route"),"reviewScore":chosen["value"],
+            "score":case.get("score"),"queueEligible":case.get("queueEligible"),"adRegistry":(case.get("adRegistry") or {}).get("state"),
+            "queues":case["queues"],"pendingReReview":case["pendingReReview"],"reviewStale":case["reviewStale"],
+            "needsRecalc":case.get("needsRecalc"),"priority":case.get("priority"),"reason":reason,
+            "firstMoment":moment,"lastDecision":case.get("lastDecision"),"url":case.get("url")}
+
+def all_cases(db,schema=2,full=False):
+    current=analysis_current()
+    settings=load_settings(db)
+    return [case_dict(db,r,current,schema,settings,full) for r in db.execute("SELECT * FROM cases ORDER BY updated DESC,id")],settings
+
+def queue_counts(cases):
+    counts=dict.fromkeys(QUEUES,0)
+    for case in cases:
+        for name in case["queues"]:
+            counts[name]+=1
+    return counts
+
+def _moment_of(value):
+    return parse_time(value) or datetime.min.replace(tzinfo=timezone.utc)
+
+def queue_list(db, name, *, limit=50, cursor=None, module=None, creator=None, since=None, until=None, min_score=None,
+               q=None, section=None, platform=None):
+    if name not in QUEUES:
+        raise KeyError(name)
+    cases,settings=all_cases(db)
+    counts=queue_counts(cases)
+    items=[c for c in cases if name in c["queues"]]
+    if name=="adRegister" and section in ("confirmed","candidate"):
+        want="included" if section=="confirmed" else "candidate"
+        items=[c for c in items if (c.get("adRegistry") or {}).get("state")==want]
+    if module:
+        items=[c for c in items if c.get("module")==module]
+    if creator:
+        items=[c for c in items if c.get("creatorId")==creator]
+    if platform:
+        items=[c for c in items if c.get("platform")==platform]
+    if since:
+        items=[c for c in items if _moment_of(c.get("observedAt"))>=_moment_of(since)]
+    if until:
+        items=[c for c in items if _moment_of(c.get("observedAt"))<=_moment_of(until)]
+    if min_score is not None:
+        items=[c for c in items if isinstance((c.get("reviewScore") or {}).get("value", c.get("score")),(int,float))
+               and (c.get("reviewScore") or {}).get("value", c.get("score"))>=min_score]
+    if q:
+        items=[c for c in items if q.casefold() in (c.get("title") or "").casefold() or q.casefold() in (c.get("creatorName") or "").casefold()]
+    def score(c):
+        view=variant_view(c,settings["variant"],60)["value"]
+        return view if isinstance(view,(int,float)) else -1
+    if name=="review":
+        items.sort(key=lambda c:(-score(c),(c.get("priority") or {}).get("review",{}).get("rank") is None,
+                                  -((c.get("priority") or {}).get("review",{}).get("rank") or 0),
+                                  [-ord(ch) for ch in (c.get("publishedAt") or "")]))
+    elif name in ("adRegister",):
+        items.sort(key=lambda c:[-ord(ch) for ch in (c.get("publishedAt") or "")])
+    elif name=="incomplete":
+        items.sort(key=lambda c:(not c.get("needsRecalc"),[-ord(ch) for ch in (c.get("observedAt") or "")]))
+    elif name=="closed":
+        items.sort(key=lambda c:[-ord(ch) for ch in ((c.get("lastDecision") or {}).get("at") or "")])
+    else:
+        items.sort(key=lambda c:[-ord(ch) for ch in (c.get("observedAt") or "")])
+    start=int(cursor or 0)
+    page=items[start:start+limit]
+    scan=db.execute("SELECT id,status,updated FROM scans ORDER BY created DESC LIMIT 1").fetchone()
+    return {"items":[summary_of_case(c) for c in page],"total":len(items),
+            "nextCursor":str(start+limit) if start+limit<len(items) else None,"counts":counts,
+            "threshold":{"variant":settings["variant"],**(threshold_current(db,settings["variant"]) or {})},
+            "asOf":utc(),"lastScan":None if scan is None else {"id":scan["id"],"status":scan["status"],"updatedAt":scan["updated"]}}
 
 def events_since(db, cursor, limit=100):
     return [dict(r) for r in db.execute("SELECT seq AS id,at,kind,ref,message FROM events WHERE seq>? ORDER BY seq LIMIT ?",(cursor,limit))]
 
-def state():
+COMPACT_DROP = ("history", "evidence", "premises", "counterEvidence", "segments", "description", "versions", "discovery",
+                "evidenceV2", "frames", "relationships")
+
+def scan_view(db, row):
+    """A scan as the desk lists it: result counters plus step progress."""
+    out = scan_dict(row)
+    steps = db.execute("SELECT status FROM scan_steps WHERE scan_id=?", (row["id"],)).fetchall()
+    out["progress"] = {"done": sum(r[0] == "done" for r in steps), "total": len(steps)} if steps else None
+    return out
+
+LEGACY_METHOD = {"apple-podcasts": "apple_search", "peertube": "peertube_search", "youtube": "data_api_search"}
+
+def creator_view(creator):
+    """Schema 2 creator: `discoveries[]` and `reach` always present (derived and flagged when the record predates v2)."""
+    out = dict(creator)
+    if not isinstance(out.get("discoveries"), list):
+        legacy = out.get("discovery") if isinstance(out.get("discovery"), dict) else None
+        platform = str(out.get("platform") or "").split(":")[0]
+        out["discoveries"] = [] if not legacy else [{
+            "method": legacy.get("method") or LEGACY_METHOD.get(platform, "unknown"), "query": legacy.get("query"),
+            "position": legacy.get("rank", legacy.get("position")), "observedAt": legacy.get("observedAt"),
+            "sourceUrl": legacy.get("sourceUrl"), "responseSha256": legacy.get("responseSha256"), "derived": "legacy"}]
+    if not isinstance(out.get("reach"), dict):
+        out["reach"] = {"asOf": None, "source": None, "primary": "subscriberCount",
+                        "metrics": {"subscriberCount": {"value": None, "state": "not_collected", "observedAt": None, "source": None}}}
+    return out
+
+SOURCE_KINDS = {"youtube": "search", "youtube-replay": "search", "apple-podcasts": "feed", "peertube": "search", "social": "profile",
+                "sites": "page", "crosslinks": "crosslink", "replay": "search", "replay-media": "asr"}
+
+def source_view(source, states):
+    """Schema 2 source: lastError, quota, retryAt, kind and target from the persisted adapter state."""
+    key = source.get("id") or source.get("name")
+    state = states.get(key) or {}
+    out = {**source, "kind": source.get("kind") or SOURCE_KINDS.get(key), "target": source.get("target") or source.get("url"),
+           "lastError": source.get("lastError") or state.get("lastError"), "quota": source.get("quota") or state.get("quota"),
+           "retryAt": state.get("retryAt"), "consecutiveErrors": state.get("consecutiveErrors", 0)}
+    if state.get("lastSuccessAt") and not out.get("lastSuccessAt"):
+        out["lastSuccessAt"] = state["lastSuccessAt"]
+    return out
+
+def trend(db, days=30):
+    """Materials and referrals per scan and per day, from the scan journal (no history is invented for older scans)."""
+    rows = db.execute("SELECT * FROM scans WHERE status IN ('done','partial') ORDER BY created DESC LIMIT 400").fetchall()
+    by_scan, by_day = [], {}
+    for row in reversed(rows):
+        result = json.loads(row["result"])
+        day = (row["updated"] or row["created"])[:10]
+        item = {"scanId": row["id"], "mode": row["mode"], "at": row["updated"], "day": day, "captures": result.get("captures"),
+                "changedFindings": result.get("changedFindings"), "referred": result.get("referred"),
+                "newCreators": result.get("newCreators")}
+        by_scan.append(item)
+        entry = by_day.setdefault(day, {"day": day, "scans": 0, "captures": 0, "referred": 0, "referredKnown": True})
+        entry["scans"] += 1
+        entry["captures"] += 0 if row["mode"] == "recompute" else (result.get("captures") or 0)  # recompute re-reads stored cases
+        if result.get("referred") is None:
+            entry["referredKnown"] = False
+        else:
+            entry["referred"] += result["referred"]
+    firsts = {}
+    for key, at in db.execute("SELECT id, min(observed) FROM versions GROUP BY id"):
+        firsts[str(at)[:10]] = firsts.get(str(at)[:10], 0) + 1
+    for day, count in firsts.items():
+        by_day.setdefault(day, {"day": day, "scans": 0, "captures": 0, "referred": 0, "referredKnown": True})["newMaterials"] = count
+    points = [{"newMaterials": 0, **by_day[d]} for d in sorted(by_day)][-max(1, days):]
+    return {"byScan": by_scan[-200:], "byDay": points}
+
+def state(schema=2, compact=False):
+    schema = schema if isinstance(schema, int) else 1
+    compact = compact if isinstance(compact, (bool, int)) else False
     with connection() as db:
-        cases=[case_dict(db,r) for r in db.execute("SELECT * FROM cases ORDER BY updated DESC,id")]
-        scans=[scan_dict(r) for r in db.execute("SELECT * FROM scans ORDER BY created DESC LIMIT 50")]
+        current=analysis_current()
+        cases,settings=all_cases(db,schema,full=not compact)
+        if compact:
+            cases=[{k:v for k,v in c.items() if k not in COMPACT_DROP} for c in cases]
+        scans=[scan_view(db,r) for r in db.execute("SELECT * FROM scans ORDER BY created DESC LIMIT 50")]
         events=[dict(r) for r in db.execute("SELECT seq AS id,at,kind,ref,message FROM events ORDER BY seq DESC LIMIT 50")]
-        return {"creators":all_objects(db,"creators"),"sources":all_objects(db,"sources"),"findings":cases,"scans":scans,"events":events}
+        # Schema 1 keeps the v1 shape (T18): rows as stored, health a string per source id.
+        sources=all_objects(db,"sources")
+        states={s["sourceId"]:s for s in source_states(db)}
+        health={(s.get("id") or s.get("name")):health_of(s.get("status")) for s in sources}
+        creators=all_objects(db,"creators")
+        extra={}
+        if schema>=2:
+            detail={key:{"status":value,"sourceStatus":next((s.get("status") for s in sources if (s.get("id") or s.get("name"))==key),None),
+                         **{k:states.get(key,{}).get(k) for k in ("lastError","quota","retryAt","lastSuccessAt","consecutiveErrors")}}
+                    for key,value in health.items()}
+            overall="ok" if all(v["status"]=="ok" for v in detail.values()) else \
+                    "failed" if all(v["status"]!="ok" for v in detail.values()) and detail else "degraded"
+            sources=[source_view(s,states) for s in sources]
+            creators=[creator_view(c) for c in creators]
+            extra={"trend":trend(db,14),"sourceHealthDetail":detail,"sourceHealthSummary":{"status":overall,"total":len(detail),
+                   "problems":sum(v["status"]!="ok" for v in detail.values())}}
+        active=settings["variant"]
+        return {"creators":creators,"sources":sources,"sourceHealth":health,"sourceState":list(states.values()),"findings":cases,"scans":scans,
+                "events":events,"schema":{**schema_info(db),"views":[1,2],"served":schema},"analysisCurrent":{**current,"variant":active},
+                "queues":queue_counts(cases),"threshold":{"variant":active,**(threshold_current(db,active) or {})},
+                "qualification":settings["qualification"],**extra}
+
+def scan_detail(db,key):
+    row=db.execute("SELECT * FROM scans WHERE id=?",(key,)).fetchone()
+    if row is None:
+        return None
+    steps=scan_steps(db,key)
+    done=sum(s["status"]=="done" for s in steps)
+    budget={s["sourceId"]:s["quota"] for s in source_states(db) if s.get("quota")}
+    return {**scan_dict(row),"steps":steps,"progress":{"done":done,"total":len(steps)} if steps else None,"budget":budget}

@@ -1,0 +1,2257 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "yJud-dJ-QatZgOEBlDCgUPMFlsA",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 71009,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "uz1R9WKVNz54osi-tMdRfVBInFI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NfNnAoikw_A"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-29T10:00:38Z",
+        "channelId": "UCTAAUHQl0sN6w0RpAUzs-Bg",
+        "title": "FREEDOM24 - SZCZERA RECENZJA I PORADNIK. CZY WARTO?",
+        "description": "Inwestuj z poniższego linku i odbierz do 20 darmowych akcji na start: https://freedom24.club/BadzNaBiezaco Freedom24, jest ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NfNnAoikw_A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NfNnAoikw_A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NfNnAoikw_A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/NfNnAoikw_A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/NfNnAoikw_A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/NfNnAoikw_A/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Bądź Na Bieżąco",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-29T10:00:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8sDMbvCsNrH0GpsoKZ0hSpdZ00A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IfF11DEaQl0"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-04T14:00:30Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Czy Freedom24 to dobry broker? Recenzja po 2 miesiącach inwestowania!",
+        "description": "Freedom24 to jeden z najszybciej rosnących brokerów w Polsce — ale czy faktycznie warto tam założyć konto? W tym filmie robię ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IfF11DEaQl0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IfF11DEaQl0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IfF11DEaQl0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IfF11DEaQl0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-04T14:00:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mumUlyCs1knI8LzaCWZCyTV9PEI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "E3lhP8UL7wg"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-21T13:18:29Z",
+        "channelId": "UCcJq-5bSAMp2ZCOR8kacfmA",
+        "title": "Czy Freedom24 to dobry broker?",
+        "description": "Tutaj założysz konto we Freedom24: https://freedom24.club/Finansowa_TV ✓ Załóż darmowe konto na Freedom24 i uzyskaj ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/E3lhP8UL7wg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/E3lhP8UL7wg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/E3lhP8UL7wg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/E3lhP8UL7wg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/E3lhP8UL7wg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowa TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-21T13:18:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Tze_tYyYwkhZXTY4i6kgybRx1YQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iBJHIkLu0w8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-15T17:45:20Z",
+        "channelId": "UCarSdldjMo1Cq_Xgy4kOoOQ",
+        "title": "Freedom24 recenzja brokera po 3 miesiącach: plusy i minusy",
+        "description": "Inwestuj z poniższego linku i odbierz do 20 darmowych akcji na start: https://freedom24.club/Inwestor-z-Ulicy Freedom24, jest ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iBJHIkLu0w8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iBJHIkLu0w8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iBJHIkLu0w8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/iBJHIkLu0w8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iBJHIkLu0w8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestor z Ulicy akcje ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-15T17:45:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WSFTO6KIn-2ce44lX7n3AilIcF8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AqXHkxDzSDI"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-31T15:35:50Z",
+        "channelId": "UCvnev1jh6O7_br__QC0OU2g",
+        "title": "Freedom24 Alternatywy: Którego brokera wybrać? (2026)",
+        "description": "ZACZNIJ INWESTOWAĆ   XTB: https://bit.ly/44BfO3V (Użyj kodu \"TRADEXTB\", aby uzyskać materiały edukacyjne) XM: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AqXHkxDzSDI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AqXHkxDzSDI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AqXHkxDzSDI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AqXHkxDzSDI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AqXHkxDzSDI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "ForexMind",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-31T15:35:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kypE7ADqarv1hKkK4rFSUSsyonU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "o2GfnmVVkO8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T17:57:47Z",
+        "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+        "title": "Gdybym miał włożyć cały majątek tylko w 3 spółki z USA, wybrałbym te!",
+        "description": "Inwestuj globalnie i odbierz do 20 darmowych akcji na start: https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=2111 NOWOŚĆ: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/o2GfnmVVkO8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/o2GfnmVVkO8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/o2GfnmVVkO8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/o2GfnmVVkO8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/o2GfnmVVkO8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Piotr Cymcyk - Merytorycznie o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T17:57:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cIlNwlfb2kjMkzSN0NFFpWZzHKg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "RmAicEi2XM0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T23:23:45Z",
+        "channelId": "UC6SinQiw2eDU6k9tEXpZv9g",
+        "title": "Dlaczego inwestuję przez Freedom?",
+        "description": "Materiał reklamowy - współpraca z Freedom. Chcesz założyć konto na Freedom? Sprawdź ofertę dla moich widzów ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RmAicEi2XM0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RmAicEi2XM0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RmAicEi2XM0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RmAicEi2XM0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RmAicEi2XM0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kuba Midel",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T23:23:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6TSSRS6Vrtk3CjVnXfCtmuze_lc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7UvMx2jOGKI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-10T09:05:23Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Lepiej kupić GTA VI czy akcje producenta gry? #współpraca #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7UvMx2jOGKI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7UvMx2jOGKI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7UvMx2jOGKI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7UvMx2jOGKI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/7UvMx2jOGKI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-10T09:05:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YVS-8i5SiA3kIyb4H6nr4yYSZSM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5B2ZqgW4gB0"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-17T13:05:22Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "4 pytania zanim kupisz akcje #wspolpracareklamowa #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5B2ZqgW4gB0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5B2ZqgW4gB0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5B2ZqgW4gB0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5B2ZqgW4gB0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5B2ZqgW4gB0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-17T13:05:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mGxSUBT5q6AH38hNzdGBJ1ROB-U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "21jaIngzkXU"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-02T12:09:38Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Tak firmy upiększają swoje wyniki finansowe #freedom24",
+        "description": "KSIĄŻKĄ do kanału: https://sklep.pamietnikgieldowy.pl/produkt/gielda-inwestycje-trading/ Subskrybuj nasz kanał: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/21jaIngzkXU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/21jaIngzkXU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/21jaIngzkXU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/21jaIngzkXU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/21jaIngzkXU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-02T12:09:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "OI_qYkdf1f0_hYzh2q1fo7ktgTk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GopJKZMxRz4"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-21T13:20:10Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Czy lepiej być klientem czy akcjonariuszem? #wspolpracareklamowa #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GopJKZMxRz4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GopJKZMxRz4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GopJKZMxRz4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/GopJKZMxRz4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/GopJKZMxRz4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-21T13:20:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IZOtD2nK3nOT0XuHwXHxq4lsIvU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "V2GAk_PrbWo"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-19T18:56:00Z",
+        "channelId": "UC-KOx2SOWDYZtLBKts2RQkA",
+        "title": "XTB vs Freedom24 (2026) - Which One is Better?",
+        "description": "XTB vs Freedom24 (2026) – Which One is Better? – in this beginner-friendly comparison, you'll learn the key differences between ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/V2GAk_PrbWo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/V2GAk_PrbWo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/V2GAk_PrbWo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/V2GAk_PrbWo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/V2GAk_PrbWo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/V2GAk_PrbWo/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "FluxGuide",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-19T18:56:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DYanlsagruXPXDPTLnNRoaqDdQ4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Fxcs1KhDYUM"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-23T08:06:26Z",
+        "channelId": "UCQZR742JXtEjYVBCDI7U70g",
+        "title": "Как да започнете да инвестирате с Freedom24?",
+        "description": "Как да започнете да инвестирате с Freedom24? Стъпка по стъпка с нашия мениджър Димитър Марченко. Екипът на ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Fxcs1KhDYUM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Fxcs1KhDYUM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Fxcs1KhDYUM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Fxcs1KhDYUM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Fxcs1KhDYUM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/Fxcs1KhDYUM/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Freedom24 Bulgaria",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-23T08:06:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "824v2SCCWKd524aYjQfjf0k3stA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MlvgA8eMp98"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T08:40:35Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Czy lepiej było kupić Teslę czy akcje spółki Tesla? #wspolpracareklamowa #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MlvgA8eMp98/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MlvgA8eMp98/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MlvgA8eMp98/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MlvgA8eMp98/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MlvgA8eMp98/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T08:40:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "s1F6D1UtJDt0QqP-r9Vqvg99rQE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "p6oYcdtPCz4"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-09T08:25:53Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Jaka jest najstarsza spółka z NYSE? #wspolpracareklamowa #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/p6oYcdtPCz4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/p6oYcdtPCz4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/p6oYcdtPCz4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/p6oYcdtPCz4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/p6oYcdtPCz4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-09T08:25:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GFsGw_OSeYh6EC_ptyilTqckYl8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-QblC84ZMRM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-13T15:11:21Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Jak bez większej pracy zarobić 100 tys. zł? #wspolpracareklamowa #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-QblC84ZMRM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-QblC84ZMRM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-QblC84ZMRM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-QblC84ZMRM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-QblC84ZMRM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-13T15:11:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YW4M18sb3926YdRokybv_nK9zL8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fBs3HCH1qpM"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-31T10:08:23Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "A gdyby zamiast oglądać Netflixa, kupować akcje Netflix? 🤔 #współpraca #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fBs3HCH1qpM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fBs3HCH1qpM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fBs3HCH1qpM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fBs3HCH1qpM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fBs3HCH1qpM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-31T10:08:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Dt9RRrDbtERIvSoswQg4c4rhBS4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SrbcUTT3xio"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-22T12:00:03Z",
+        "channelId": "UCb80tqeGsQEegfpGSxfl8fg",
+        "title": "Mon avis sans filtre sur Freedom24 (Test Réel)",
+        "description": "Ouvrir un compte Freedom24 : https://investimieux.com/go/freedom24 Les frais qu'on regarde le plus souvent, c'est le prix d'un ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SrbcUTT3xio/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SrbcUTT3xio/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SrbcUTT3xio/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SrbcUTT3xio/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SrbcUTT3xio/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ronan | InvestiMieux",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-22T12:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KtQ2TF1EAOn15cWDWcp8yZ7wyS8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hobhNwZjA4U"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-27T09:00:01Z",
+        "channelId": "UCDmzXtkF-rihXyk3kv1nL3Q",
+        "title": "Investiții automatizate în ETF-uri cu Freedom24!",
+        "description": "Deschide cont Freedom24 / vezi campania aici: https://freedom24.club/RazvanPricop Investițiile automatizate în ETF-uri pot ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hobhNwZjA4U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hobhNwZjA4U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hobhNwZjA4U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/hobhNwZjA4U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/hobhNwZjA4U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Razvan Pricop",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-27T09:00:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HghQpRi-Z2W0eKFXkmbU8pdaP4s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Cf1lWTW8w50"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-25T17:22:14Z",
+        "channelId": "UC6SinQiw2eDU6k9tEXpZv9g",
+        "title": "ROZPOCZYNAM WSPÓŁPRACĘ Z FREEDOM24! #reklama",
+        "description": "Inwestuj z 0% prowizji oraz odbierz do 20 darmowych akcji* - https://freedom24.club/KubaMidel Materiał sponsorowany przez ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Cf1lWTW8w50/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Cf1lWTW8w50/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Cf1lWTW8w50/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Cf1lWTW8w50/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Cf1lWTW8w50/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kuba Midel",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-25T17:22:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lsteiLwlb7wJnPgJ2tJXtjY1nfw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wvQfT9WSXXo"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-29T08:43:51Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "A gdyby kupować akcje Alphabet za równowartość abonamentu? #współpraca #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wvQfT9WSXXo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wvQfT9WSXXo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wvQfT9WSXXo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wvQfT9WSXXo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wvQfT9WSXXo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-29T08:43:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jJDQSgVZqhqyiZYuYeVzU42XkWQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_fOi6rin_aE"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-13T18:10:05Z",
+        "channelId": "UCpV9LpCg4uwYCQZ3qoEn_YQ",
+        "title": "ETF-Sparplan bei Freedom24 einrichten! Ich investiere 250€ im Monat in diesen ETF!",
+        "description": "Jetzt Freedom24 ausprobieren – der Broker, den ich selbst nutze: https://link.aktienmitkopf.de/Depot * Video gesponsert von ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_fOi6rin_aE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_fOi6rin_aE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_fOi6rin_aE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_fOi6rin_aE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_fOi6rin_aE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Aktien mit Kopf",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-13T18:10:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "o6Jktr646MxfsLEs_GtFCm3002Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_TLfRsXNqBM"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T16:04:01Z",
+        "channelId": "UCV_jDtiwh01aAfniQsvCcIw",
+        "title": "J&#39;ai testé Freedom24 : voici mon avis",
+        "description": "Jusqu'à 20 actions offertes chez Freedom24 : https://finance-heros.fr/yt/freedom24 Ma mini-formation gratuite en 5 vidéos pour ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_TLfRsXNqBM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_TLfRsXNqBM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_TLfRsXNqBM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_TLfRsXNqBM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_TLfRsXNqBM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/_TLfRsXNqBM/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Finance Héros",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T16:04:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nAS2-lUOrS1Ar0jOd4hWl9kTRvg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "42CV4iJOAUw"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-07T11:31:02Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Co jest ze mną nie tak? Dlaczego nie inwestuję a kupuje nowy telefon? #współpraca #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/42CV4iJOAUw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/42CV4iJOAUw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/42CV4iJOAUw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/42CV4iJOAUw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/42CV4iJOAUw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-07T11:31:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YMFXrkE6YMXnoC7adOu2alsTUqI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-YRiH-NsKVc"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-24T18:30:06Z",
+        "channelId": "UC6SinQiw2eDU6k9tEXpZv9g",
+        "title": "Wpłaciłem 130 tysięcy złotych na giełdę. Co dalej?",
+        "description": "Freedom24 - sprawdź gdzie inwestuję: https://freedom24.club/KubaMidel Dlaczego Freedom24? * 0% prowizji za automatyczne ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-YRiH-NsKVc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-YRiH-NsKVc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-YRiH-NsKVc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-YRiH-NsKVc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-YRiH-NsKVc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kuba Midel",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-24T18:30:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UkPQGhVGGl-wrv_KpFdqmXK_voE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CAPQQs-1tjw"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-18T14:30:17Z",
+        "channelId": "UCmj8vs8rLEZtkd6uKDXH2yw",
+        "title": "Freedom24 Anleitung 2026: Konto eröffnen &amp; richtig starten | Schritt für Schritt",
+        "description": "Werbung | Bezahlte Kooperation mit Freedom24 In diesem Video zeige ich euch Schritt für Schritt, wie ich mein Konto bei ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CAPQQs-1tjw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CAPQQs-1tjw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CAPQQs-1tjw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CAPQQs-1tjw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CAPQQs-1tjw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "PG-Finanzen",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-18T14:30:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "00ZIuED5mhsHLC0jQhOyT1A-RgA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "lgoDKOIpv38"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T17:00:12Z",
+        "channelId": "UCqrGm_7p3DJ04YPAxPOyAeA",
+        "title": "Freedom24 platform bemutató és vélemény 2026",
+        "description": "Fektess be világszerte, és szerezz regisztrációs bónuszt: https://freedom24.club/NemethAdam A Freedom24 egy európai uniós ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lgoDKOIpv38/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lgoDKOIpv38/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lgoDKOIpv38/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/lgoDKOIpv38/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/lgoDKOIpv38/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/lgoDKOIpv38/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Németh Ádám",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T17:00:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "p2NUKXa9gvCnCK3YCri6Xl_JlL8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "h0P1ywO_2Gg"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-21T08:28:49Z",
+        "channelId": "UCLAHFDTn00PKwz99E9GKf-Q",
+        "title": "De ce am ales să diversific brokerii și ce aduce Freedom24 în plus",
+        "description": "Începe să investești automat și fără comision cu Freedom24: https://freedom24.club/AlinGabriel Deschide gratuit un cont ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/h0P1ywO_2Gg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/h0P1ywO_2Gg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/h0P1ywO_2Gg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/h0P1ywO_2Gg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/h0P1ywO_2Gg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Alin Gabriel – Investiții & Analiză",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-21T08:28:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_mUHrvIR3F3-z-pulwqudBFmvKQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vZRS7ofWydA"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-31T20:41:33Z",
+        "channelId": "UCEWhM-Td7MB_X5duNzLwtAw",
+        "title": "Investiții în SUA, Europa și Asia! Cum poți face asta prin Freedom24! | Interviu Radu Padurean",
+        "description": "Merita sa investesti prin Freedom24? Ce avantaje ofera acest broker si cum poti investi in actiuni si ETF-uri pe pietele ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vZRS7ofWydA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vZRS7ofWydA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vZRS7ofWydA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vZRS7ofWydA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vZRS7ofWydA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Paul Maior",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-31T20:41:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_XzzqFVEad-ZQNb8KWsI0Rlv0X8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "id2IS9BkDVU"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-23T08:51:24Z",
+        "channelId": "UCqPRaYs9dE2_yl1vVLjchkQ",
+        "title": "Як поповнити Freedom24 БЕЗ КОМІСІЙ? Покрокова інструкція (Bybit Card)",
+        "description": "Шукаєте найдешевший спосіб поповнення брокерського рахунку Freedom24? У цьому відео детально розбираємо, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/id2IS9BkDVU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/id2IS9BkDVU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/id2IS9BkDVU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/id2IS9BkDVU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/id2IS9BkDVU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Математик інвестує",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-23T08:51:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cdQ7lMQ_bjp3Ev05buV7L9jo--g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_OzTPD1sLBU"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-13T13:00:36Z",
+        "channelId": "UCqPRaYs9dE2_yl1vVLjchkQ",
+        "title": "Як поповнити INTERACTIVE BROKERS та FREEDOM24? Жовтень 2026",
+        "description": "Як поповнити Interactive Brokers та Freedom24 в Україні станом на жовтень 2026 року? У цьому відео я розповім вам про ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/_OzTPD1sLBU/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Математик інвестує",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-13T13:00:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YQGk4z4Sbj-6cLeCrBju8-7D3Pc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "EtX8RxI0TIc"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-30T13:15:09Z",
+        "channelId": "UCDFerzGT1zx4ROFlYGAaXkQ",
+        "title": "¿Abrir Cuenta en Freedom24? Mi Experiencia tras 3 Años Invirtiendo",
+        "description": "Estás pensando en abrir una cuenta en Freedom24? Te cuento mi experiencia real después de tres años. Abre cuenta en ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/EtX8RxI0TIc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/EtX8RxI0TIc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/EtX8RxI0TIc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/EtX8RxI0TIc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/EtX8RxI0TIc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/EtX8RxI0TIc/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "El Banquero del Pueblo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-30T13:15:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "eT2P9eboBCC1nzW7VtmTMUu4sVU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wOM11nVnq1M"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-30T10:06:06Z",
+        "channelId": "UCGzTbXbnKeAbMjEIESZw52A",
+        "title": "Облігації З ФІКСОВАНИМ Доходом В Freedom Finance. Варто Чи Ні, Які Є Плюси Та Мінуси?",
+        "description": "Брокер фондового ринку для купівлі акцій Freedom24 -- https://freedom24.com/invite_from/1573411 Реєструючись за цим ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wOM11nVnq1M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wOM11nVnq1M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wOM11nVnq1M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wOM11nVnq1M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wOM11nVnq1M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Invest Capital",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-30T10:06:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "A5hI9LJSvtCFmluk8wYAeqp3H8g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "P5ujfni0jEc"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-14T05:03:25Z",
+        "channelId": "UCqPRaYs9dE2_yl1vVLjchkQ",
+        "title": "Як відкрити рахунок Freedom24 та отримати БЕЗКОШТОВНУ АКЦІЮ",
+        "description": "Привіт, друзі! Сьогодні розберемо покроковий та максимально простий алгоритм, як відкрити та верифікувати рахунок у ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/P5ujfni0jEc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/P5ujfni0jEc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/P5ujfni0jEc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/P5ujfni0jEc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Математик інвестує",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-14T05:03:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ZKR24ll8_XPJq_YSr3l2bbm_q08",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UPnlK2aS8JU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T15:19:28Z",
+        "channelId": "UCUgQcyJuN-FNBhgkXJtlBSQ",
+        "title": "Freedom24 - analiza platforme [Novi broker u Hrvatskoj]",
+        "description": "https://freedom24.club/Financije Link za registraciju Izgradite svoj dugoročni investicijski portfelj uz Freedom24: Freedom24 je ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UPnlK2aS8JU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UPnlK2aS8JU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UPnlK2aS8JU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/UPnlK2aS8JU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/UPnlK2aS8JU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Financije i samo Financije",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T15:19:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hXdI6ixpkWCAR_NkzCeAJf1gm9g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wz6fQ2b6w78"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-05T15:01:16Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Ile można maksymalnie stracić na inwestowaniu na giełdzie? #wspolpracareklamowa #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wz6fQ2b6w78/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wz6fQ2b6w78/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wz6fQ2b6w78/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wz6fQ2b6w78/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wz6fQ2b6w78/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-05T15:01:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HO9fMU1KvEQYqPPaj05T9EhRw50",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "500MSQSnCrs"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-09T10:16:38Z",
+        "channelId": "UCjF324DBbR9oFMQkZZucP7Q",
+        "title": "¡Cómo invertir en Hong Kong usando Freedom24, uno de los brókers más baratos para invertir en China!",
+        "description": "Quieres acceder al mercado de Hong Kong desde Europa? Abre tu cuenta en Freedom24: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/500MSQSnCrs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/500MSQSnCrs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/500MSQSnCrs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/500MSQSnCrs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/500MSQSnCrs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Loco del Dividendo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-09T10:16:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "c3bCdM3hrrj85w15m_H-1ZSyTyE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "p2TCMwhXR9Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-22T16:00:31Z",
+        "channelId": "UCn8L0KpGo7L6gcfBViFc_Ag",
+        "title": "Freedom24 Invitation Bonus 2026 ( How to Claim Your FREE GIFT )",
+        "description": "Looking for a Freedom24 referral code, Freedom24 promo code, or Freedom24 free stock offer? Discover how the Freedom24 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/p2TCMwhXR9Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/p2TCMwhXR9Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/p2TCMwhXR9Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/p2TCMwhXR9Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/p2TCMwhXR9Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/p2TCMwhXR9Y/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "The SMART DEAL",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-22T16:00:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_mWeHdL468qjAcF9xnRJcyGrBo0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QX9_lCVldjk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T16:30:15Z",
+        "channelId": "UCTWF4SXHHElggGJQtJZLFrA",
+        "title": "Freedom24 conviene davvero? RECENSIONE completa (TUTORIAL 2026)",
+        "description": "Freedom24 conviene davvero? È sicuro? In questo video ti faccio vedere cos'è Freedom24, come è regolamentato, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QX9_lCVldjk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QX9_lCVldjk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QX9_lCVldjk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QX9_lCVldjk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QX9_lCVldjk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "WebEconomia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T16:30:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "98Ya_m4iIMed-GpWE1T-818tCgs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "C1-HE30QOz4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T09:00:06Z",
+        "channelId": "UCf0lvqFCr0eUyWBY8PVJfLA",
+        "title": "Freedom24: 10 Things I Wish I’d Known Before Opening an Account",
+        "description": "Freedom24 – welcome promotion with free shares, staggered by your deposit: from €1000 1 share, from €5000 4, from €20000 10 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/C1-HE30QOz4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/C1-HE30QOz4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/C1-HE30QOz4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/C1-HE30QOz4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/C1-HE30QOz4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "FinanceArena Europe",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T09:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6h5-BCl3p41xv6xc8nOwDNuW6fU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SZofFxCCk-w"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-14T15:00:18Z",
+        "channelId": "UC0eya_FJaiAXF6yS-qkJPvw",
+        "title": "Investiții recurente fără comision pe Freedom24 (ETF Investment Plan)",
+        "description": "Investiții recurente, fără comision, direct din platformă. Îți arăt pas cu pas cum funcționează ETF Investment Plan de la ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SZofFxCCk-w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SZofFxCCk-w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SZofFxCCk-w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SZofFxCCk-w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SZofFxCCk-w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/SZofFxCCk-w/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Adrian Căruceru",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-14T15:00:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "oRmw7n4CmQz8z5v8BgOv7E8vefk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "j92_8xEv7L4"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-19T11:41:26Z",
+        "channelId": "UCrns5GDTKgtfIA4w9KWI27Q",
+        "title": "How To Buy S&amp;P 500 On Freedom24! Tutorial",
+        "description": "How To Buy S&P 500 On Freedom24! Tutorial Today we talk about freedom24,s&p 500,open account freedom24,broker ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/j92_8xEv7L4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/j92_8xEv7L4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/j92_8xEv7L4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/j92_8xEv7L4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/j92_8xEv7L4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/j92_8xEv7L4/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Titan",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-19T11:41:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "njW6PzOmhAmkWEUUsZiQRU4gIx0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "XWx3xKFxLIM"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-21T08:02:54Z",
+        "channelId": "UCJnSx5GRPGNpBRzvp_zepag",
+        "title": "Freedom24 im Test: Lohnt sich das?",
+        "description": "Hinweis: Stimme & Grafiken in diesem Video sind KI-generiert. Freedom24 begegnet einem inzwischen überall – aber bevor du ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XWx3xKFxLIM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XWx3xKFxLIM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XWx3xKFxLIM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/XWx3xKFxLIM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/XWx3xKFxLIM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "FluxorIQ ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-21T08:02:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "tQ2fMiNbV6JZEAeI1Qsob0V_tdI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7IS0Rk9b15o"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T10:16:49Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Ile byś zyskał inwestując w Spotify zamiast płacąc za abonament? #współpraca #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7IS0Rk9b15o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7IS0Rk9b15o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7IS0Rk9b15o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7IS0Rk9b15o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/7IS0Rk9b15o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T10:16:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Fue3CajajtY-SIM_IN8AAvgobrc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tQR0XpQ74ck"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-28T17:23:53Z",
+        "channelId": "UCGSBPBz8BJQfUQlzaURk1xw",
+        "title": "Ξεκίνα να επενδύεις αυτόματα και χωρίς προμήθεια με την Freedom24🔥.#vavakaslogistis",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tQR0XpQ74ck/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tQR0XpQ74ck/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tQR0XpQ74ck/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tQR0XpQ74ck/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tQR0XpQ74ck/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Βαβάκας Κωνσταντίνος Λογιστής",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-28T17:23:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3kqP0qPy1nG2XZ1k5JEOXTagWs4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "z2YEH4KfjB0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T11:00:06Z",
+        "channelId": "UCTWF4SXHHElggGJQtJZLFrA",
+        "title": "A chi conviene Freedom24?",
+        "description": "Freedom24 conviene? Ecco a chi può convenire • A chi investe nel lungo periodo su azioni ed ETF europei e azioni americane, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/z2YEH4KfjB0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/z2YEH4KfjB0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/z2YEH4KfjB0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/z2YEH4KfjB0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/z2YEH4KfjB0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "WebEconomia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T11:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1ctWztVS9cC-3O9dl8TkgnTC2tg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xGusXS88Rsg"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-02T17:59:50Z",
+        "channelId": "UC5EZzpJwxrRJSOnCWudK7kg",
+        "title": "Freedom24: Invierte en Acciones y Fondos Fácilmente #shorts",
+        "description": "Descubre Freedom24, la plataforma que te da acceso a acciones y fondos internacionales en diversas divisas. Invierte fácilmente ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xGusXS88Rsg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xGusXS88Rsg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xGusXS88Rsg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xGusXS88Rsg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xGusXS88Rsg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Banco para ti",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-02T17:59:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gYmUylavdyhPitA6YcI4YYSUyp0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9qoSBrsWclk"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-14T16:53:17Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Co dzieje się z pieniędzmi w czasach niepokoju? #wspolpracareklamowa #freedom24",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9qoSBrsWclk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9qoSBrsWclk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9qoSBrsWclk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9qoSBrsWclk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9qoSBrsWclk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-14T16:53:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-vm3U-hlgcq4arxAAKbMi_bWsXo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HbqWU4yUViM"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-17T17:00:25Z",
+        "channelId": "UCf4WXe-GhVR6z6g3qUAlykQ",
+        "title": "Trade Republic vs Freedom24: ¿Cuál es mejor para invertir y ahorrar en 2026?",
+        "description": "Enlaces oficiales: Trade Republic: https://finantres.com/go/trade-republic-broker/ Freedom24: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HbqWU4yUViM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HbqWU4yUViM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HbqWU4yUViM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HbqWU4yUViM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HbqWU4yUViM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/HbqWU4yUViM/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Finantres Banca",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-17T17:00:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8_rnacj4TCkZqZH1cIcw1kUUGjA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kdIb0cDxlEA"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-12T15:39:02Z",
+        "channelId": "UCxuoSODs3v_Nz027PzjLJJg",
+        "title": "Автоматические инвестиции в Молдове 2026: настраиваю Freedom24 на покупку ETF",
+        "description": "Как настроить автоматические инвестиции во Freedom24 из Молдовы и что на самом деле значит «0% комиссии».",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kdIb0cDxlEA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kdIb0cDxlEA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kdIb0cDxlEA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kdIb0cDxlEA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kdIb0cDxlEA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "GUNYA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-12T15:39:02Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+ "engine": "analysis.engine.analyze + analysis.semantic.review_suggestion(semantic=unavailable)",
+ "rulesVersion": "investwatch-rules-pl-1.2",
+ "gitHead": "491094da62c100cc562ca422534ff360ebddee5b",
+ "dirtyTree": "tak (cudze niezacommitowane zmiany; analysis/engine.py i semantic.py bez zmian względem HEAD)",
+ "ranAt": "2026-11-21",
+ "results": {
+  "case-a-xtb-declaration": {
+   "score": 94,
+   "summary": "Deklaracja współpracy lub partnerstwa. Ustal warunki współpracy z firmą.",
+   "signalType": "declaration",
+   "descriptionScore": 94,
+   "descriptionDisclosureStatus": "observed",
+   "descriptionDisclosureType": "declaration",
+   "descriptionDisclosedBrand": "XTB",
+   "possibleUndisclosedPromotion": false,
+   "brand": "XTB",
+   "rulesVersion": "investwatch-rules-pl-1.2",
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "Partnerem odcinka jest XTB",
+     "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M"
+    }
+   ],
+   "reviewSuggestion": {
+    "source": "rules",
+    "version": "investwatch-rules-pl-1.2",
+    "state": "review",
+    "reason": "Reguły wskazują deklarację albo zachętę przy marce do sprawdzenia.",
+    "evidence": {
+     "kind": "description",
+     "text": "Partnerem odcinka jest XTB",
+     "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M"
+    }
+   },
+   "quoteInInput": [
+    true
+   ]
+  },
+  "case-a-live-xtb-declaration": {
+   "score": 94,
+   "summary": "Deklaracja współpracy lub partnerstwa. Ustal warunki współpracy z firmą.",
+   "signalType": "declaration",
+   "descriptionScore": 94,
+   "descriptionDisclosureStatus": "observed",
+   "descriptionDisclosureType": "declaration",
+   "descriptionDisclosedBrand": "XTB",
+   "possibleUndisclosedPromotion": false,
+   "brand": "XTB",
+   "rulesVersion": "investwatch-rules-pl-1.2",
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "📢Partnerem odcinka jest XTB",
+     "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M"
+    }
+   ],
+   "reviewSuggestion": {
+    "source": "rules",
+    "version": "investwatch-rules-pl-1.2",
+    "state": "review",
+    "reason": "Reguły wskazują deklarację albo zachętę przy marce do sprawdzenia.",
+    "evidence": {
+     "kind": "description",
+     "text": "📢Partnerem odcinka jest XTB",
+     "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M"
+    }
+   },
+   "quoteInInput": [
+    true
+   ]
+  },
+  "case-b-comparic-xtb-referral": {
+   "score": 24,
+   "summary": "Wzmianka o marce w zbadanym zakresie.",
+   "signalType": "neutral_mention",
+   "descriptionScore": 24,
+   "descriptionDisclosureStatus": "not_found",
+   "descriptionDisclosureType": null,
+   "descriptionDisclosedBrand": null,
+   "possibleUndisclosedPromotion": false,
+   "brand": "XTB",
+   "rulesVersion": "investwatch-rules-pl-1.2",
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "💰 Inwestowanie z XTB - Sprawdź XTB",
+     "url": "https://www.youtube.com/watch?v=CDk20n4u9Kk"
+    }
+   ],
+   "reviewSuggestion": {
+    "source": "rules",
+    "version": "investwatch-rules-pl-1.2",
+    "state": "no_signal",
+    "reason": "Reguły nie wskazały deklaracji ani zachęty przy marce w zbadanym zakresie."
+   },
+   "quoteInInput": [
+    true
+   ]
+  }
+ }
+}

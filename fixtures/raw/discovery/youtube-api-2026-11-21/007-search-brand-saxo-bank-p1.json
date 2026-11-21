@@ -1,0 +1,2242 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "IClPqlAfrsnBd2Eol2_aMlAtMVo",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 129423,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "E_CIw15ZxQS5H_6U17mKPmAFM9w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jYUrxieSlMs"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-03T14:00:26Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Niskie prowizje i wysokie bezpieczeństwo środków? Recenzja Saxo Bank 2026!",
+        "description": "WspółpracaReklamowa Saxo Bank Sprawdź szczegóły promocji, w ramach której nowi klienci mogą otrzymać równowartość do ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jYUrxieSlMs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jYUrxieSlMs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jYUrxieSlMs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jYUrxieSlMs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jYUrxieSlMs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-03T14:00:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zA-G46qF4EJY-27XCJEI4Xf1p58",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-UIS_LY3k3s"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-04T16:09:34Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "Jak inwestować pieniądze za granicą? [Saxo Bank z bonusem 250 EUR]",
+        "description": "Chcesz ogarnąć finanse i zacząć inwestować? Sprawdź: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-UIS_LY3k3s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-UIS_LY3k3s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-UIS_LY3k3s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-UIS_LY3k3s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-UIS_LY3k3s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-04T16:09:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "e_0zA2YjR_KaOXV8-iojxJfcwWE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "A3aX1vkkWAk"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-31T14:16:21Z",
+        "channelId": "UCYjxwFqTUwO5cja6xi5mvUg",
+        "title": "Jak otworzyć rachunek w Saxo Bank?",
+        "description": "Saxo Bank to jeden z czołowych zagranicznych domów maklerskich z perspektywy polskiego inwestora. W ostatnim czasie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/A3aX1vkkWAk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/A3aX1vkkWAk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/A3aX1vkkWAk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/A3aX1vkkWAk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/A3aX1vkkWAk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/A3aX1vkkWAk/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Stockbroker pl",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-31T14:16:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ktgvJ-LTpiGDDSKLfP3a0wN--mg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9PST0Z9kiJ4"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-06T00:57:25Z",
+        "channelId": "UCBXIF5KdGDbrzWpIdmwoU0Q",
+        "title": "Interactive Brokers vs Saxo Bank (2026) What&#39;s the BEST Brokerage?",
+        "description": "Discover the best brokerage for your trading needs in 2026. In this video, we compare two of the most popular brokerages, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9PST0Z9kiJ4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9PST0Z9kiJ4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9PST0Z9kiJ4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9PST0Z9kiJ4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9PST0Z9kiJ4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tutorly",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-06T00:57:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "eAOGBf4xAT-MLsGNjzaesVORzCE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mWJnDOFi-QY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-04T02:17:37Z",
+        "channelId": "UCN2u90hRiUX9GBtLTzL2pAQ",
+        "title": "How to Open a Saxo Bank Account 2026 | Step-by-Step Saxo Account Setup Tutorial",
+        "description": "Want to learn how to open a Saxo Bank account in 2026? In this step-by-step tutorial, I'll show you how to create and verify an ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mWJnDOFi-QY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mWJnDOFi-QY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mWJnDOFi-QY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mWJnDOFi-QY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mWJnDOFi-QY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Platformrank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-04T02:17:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "w4Bvft_Y3R9jbe267_SM3kTrdIg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "N6UgRnsqU3s"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T08:36:45Z",
+        "channelId": "UCXo0mm32-W_klluXTsIxfgQ",
+        "title": "Be Invested",
+        "description": "Today, Saxo is proud to announce partnerships with Lando Norris, Gareth Bale, Thibaut Courtois, Rasmus Højlund, Aryna ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/N6UgRnsqU3s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/N6UgRnsqU3s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/N6UgRnsqU3s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/N6UgRnsqU3s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/N6UgRnsqU3s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Saxo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T08:36:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "D30DJCVC1DZvrf66w2XlHk4TzAU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LwcBJ5c57EE"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-18T10:00:01Z",
+        "channelId": "UCRRXqMGg5Rcm_oHOAdy2MBA",
+        "title": "I Tested Saxo Bank for 2026 | Honest Pros and Cons (Switzerland)",
+        "description": "Sign up for my free investment training here: http://go.charlenecong.com/free-training-yt Open a Saxo Bank account through my ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LwcBJ5c57EE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LwcBJ5c57EE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LwcBJ5c57EE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LwcBJ5c57EE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LwcBJ5c57EE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Charlene Cong, CFA🇨🇭",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-18T10:00:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dFHayKMOyTK51iS2Le5AN6FbTRs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gsh7HArNlOg"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-29T12:54:05Z",
+        "channelId": "UC-KOx2SOWDYZtLBKts2RQkA",
+        "title": "Interactive Brokers vs Saxo Bank (2026) - Which One is Better?",
+        "description": "Interactive Brokers vs Saxo Bank (2026) – Which One is Better? If you're comparing Interactive Brokers and Saxo Bank, this ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/gsh7HArNlOg/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "FluxGuide",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-29T12:54:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_4Q7DxL3eTwA4A_uaEdBDwAMWA4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DGxsaLUYgvk"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T15:00:15Z",
+        "channelId": "UCXo0mm32-W_klluXTsIxfgQ",
+        "title": "Saxo &amp; Jutta Leerdam",
+        "description": "We had some great conversations with Jutta Leerdam about focus, consistency, and the mindset required to compete at the ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DGxsaLUYgvk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DGxsaLUYgvk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DGxsaLUYgvk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DGxsaLUYgvk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DGxsaLUYgvk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Saxo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T15:00:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "VPP3ix0H2boG6hVW1k1C1Ez0nic",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zsubTLM6xis"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-19T15:30:35Z",
+        "channelId": "UC-KOx2SOWDYZtLBKts2RQkA",
+        "title": "XTB vs Saxo Bank (2026) - Which One is Better?",
+        "description": "XTB vs Saxo Bank (2026) - Which One is Better? – can't decide between XTB and Saxo Bank and want to know which platform ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zsubTLM6xis/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zsubTLM6xis/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zsubTLM6xis/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zsubTLM6xis/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zsubTLM6xis/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/zsubTLM6xis/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "FluxGuide",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-19T15:30:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "plH4hEjHb7YAvKX8pD3FJVlcYpk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wo-NEb0SDo8"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-24T22:08:43Z",
+        "channelId": "UC7_LRBw6q3Y9u9SM78u0aYw",
+        "title": "How to Buy and Sell Stocks on Saxo Bank (2026 Step-by-Step Guide)",
+        "description": "Learn how to buy and sell stocks on Saxo Bank with this complete 2026 beginner's guide. In this step-by-step tutorial, I'll show you ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wo-NEb0SDo8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wo-NEb0SDo8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wo-NEb0SDo8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wo-NEb0SDo8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wo-NEb0SDo8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Aslan Tech ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-24T22:08:43Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MlvHrNmeBaeTmo-5Fu0FlCc5hdo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_aqCM37gK1U"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T18:00:07Z",
+        "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+        "title": "Kupujesz za późno i sprzedajesz za wcześnie? To nie jest przypadek!",
+        "description": "Otwórz konto w Saxo Banku przez: https://www.home.saxo/pl-pl/campaigns/commission-credits/ffpl5 i zyskaj 250 euro bonusu!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_aqCM37gK1U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_aqCM37gK1U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_aqCM37gK1U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_aqCM37gK1U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_aqCM37gK1U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Piotr Cymcyk - Merytorycznie o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T18:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CCNJhLxJIw18jV274dLpytc8wN0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5YOZdS5_SsA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-06T04:15:01Z",
+        "channelId": "UCt6QZQrPURNW5EzzpVH4PYQ",
+        "title": "How to Compare Interactive Brokers vs Saxo Bank (2026) | Step-by-Step",
+        "description": "Learn how to compare Interactive Brokers vs Saxo Bank side by side so you can choose the right trading platform for your needs.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5YOZdS5_SsA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5YOZdS5_SsA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5YOZdS5_SsA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5YOZdS5_SsA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5YOZdS5_SsA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/5YOZdS5_SsA/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "ECOM KNTRL",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-06T04:15:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nuJcmlGdBa-AS70HiluLeEsHTpQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AHk116yvCTk"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-04T02:17:43Z",
+        "channelId": "UCN2u90hRiUX9GBtLTzL2pAQ",
+        "title": "Saxoinvest Tutorial - How To Buy Stocks and ETFs With SaxoBANK (2026)",
+        "description": "Saxoinvest Tutorial - How To Start Investing With SaxoBank (2026)",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AHk116yvCTk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AHk116yvCTk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AHk116yvCTk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AHk116yvCTk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AHk116yvCTk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Platformrank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-04T02:17:43Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "oYdBge2bHdDoD0y0EBVGupb9Gro",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vTdOHnl4Ezg"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-14T09:00:23Z",
+        "channelId": "UCrDjRjrTD7mkz0AciU-Q4Zg",
+        "title": "Nordnet vs Saxo vs Pluto: Hvilken er bedst i 2026?",
+        "description": "Reklame: Nedenstående links er affiliate-links. Benytter du dem, støtter du kanalen med en lille provision – uden at det koster dig ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vTdOHnl4Ezg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vTdOHnl4Ezg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vTdOHnl4Ezg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vTdOHnl4Ezg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vTdOHnl4Ezg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marius Invest",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-14T09:00:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mELEPIwzk7JnNckORFFcbIuKugw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-VKKq4PCzeM"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-07T09:00:56Z",
+        "channelId": "UCs9k_1tS_GV_NRfXnyA9tyg",
+        "title": "Ist Saxo ein guter Forex-Broker? Ehrlicher Test 2026",
+        "description": "Saxo gehört zu unseren Top-Forex-Empfehlungen – 190 Währungspaare (weit über dem globalen Durchschnitt von 79), hybride ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-VKKq4PCzeM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-VKKq4PCzeM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-VKKq4PCzeM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-VKKq4PCzeM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Der Broker-Check mit BrokerChooser",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-07T09:00:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1ARjGNG3m7fjgqA0oK7js7WQdzo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Jg3HGO04zJ0"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-10T07:08:27Z",
+        "channelId": "UC-KOx2SOWDYZtLBKts2RQkA",
+        "title": "Robinhood vs. Saxo Bank (2026) - Which One is Better?",
+        "description": "Robinhood vs. Saxo Bank (2026) - Which One is Better? – weighing up Robinhood and Saxo Bank and want to know which ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Jg3HGO04zJ0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Jg3HGO04zJ0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Jg3HGO04zJ0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Jg3HGO04zJ0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Jg3HGO04zJ0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/Jg3HGO04zJ0/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "FluxGuide",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-10T07:08:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PgLTIZLubxcdvxex8WxuiU8AQ_w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QiHyHANq_K8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-04T02:17:37Z",
+        "channelId": "UCN2u90hRiUX9GBtLTzL2pAQ",
+        "title": "SaxoTrader Web Tutorial 2026 | Saxo Bank for Beginners – Complete Trading Guide",
+        "description": "New to Saxo Bank and SaxoTrader? In this beginner-friendly tutorial, I'll walk you through the SaxoTrader Web platform step by ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QiHyHANq_K8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QiHyHANq_K8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QiHyHANq_K8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QiHyHANq_K8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QiHyHANq_K8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Platformrank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-04T02:17:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Gx8EvanT-2lMkavr3HfWALbXBiE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cFKyQtd1rjk"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-11T04:35:14Z",
+        "channelId": "UCeCqF_8l5SJQmf8jBe-BzxA",
+        "title": "W co zainwestować na OKI? Na co uważać przy przekroczeniu progu 100 tys. zł?",
+        "description": "Współpraca reklamowa z Saxo Bankiem - duńskim bankiem dla inwestorów, którego sam używam do inwestowania na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cFKyQtd1rjk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cFKyQtd1rjk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cFKyQtd1rjk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cFKyQtd1rjk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cFKyQtd1rjk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Albert Rokicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-11T04:35:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mkPV7xpwm_dppZz8oIB-gHexmA8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "b5P8NNyKByY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-04T02:17:38Z",
+        "channelId": "UCN2u90hRiUX9GBtLTzL2pAQ",
+        "title": "SaxoTrader App Tutorial 2026 | Complete Saxobank Mobile Trading Guide for Beginners",
+        "description": "Learn how to use the SaxoTrader app in 2026 with this complete step-by-step mobile trading tutorial for beginners!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b5P8NNyKByY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b5P8NNyKByY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b5P8NNyKByY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/b5P8NNyKByY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/b5P8NNyKByY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Platformrank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-04T02:17:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "X-Obe9CVmOg9cK7EQYxI8UrgPuE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Jxu7fuDUd_0"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-05T13:00:05Z",
+        "channelId": "UCRRXqMGg5Rcm_oHOAdy2MBA",
+        "title": "Is Saxo Bank right for you? Straight answers from their Switzerland CEO",
+        "description": "Sign up for my free investment training here: http://go.charlenecong.com/free-training-yt Let's Keep in Touch! Website: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Jxu7fuDUd_0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Jxu7fuDUd_0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Jxu7fuDUd_0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Jxu7fuDUd_0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Jxu7fuDUd_0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/Jxu7fuDUd_0/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Charlene Cong, CFA🇨🇭",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-05T13:00:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "uufkPSpGWFzwhlTveIUUNTeo5G4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LwSGVXSaop8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T13:25:00Z",
+        "channelId": "UCPNXxgle9ADeGchy2K75e1A",
+        "title": "Saxo - Be Invested",
+        "description": "Saxo est fier d'annoncer ses partenariats avec Lando Norris, Gareth Bale, Thibaut Courtois, Rasmus Højlund, Aryna Sabalenka, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LwSGVXSaop8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LwSGVXSaop8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LwSGVXSaop8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LwSGVXSaop8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LwSGVXSaop8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Saxo Banque",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T13:25:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "s_xqJOE-xACDi6ioxHsF-Nioehs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YfqQ75uuC-Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T08:41:46Z",
+        "channelId": "UCXo0mm32-W_klluXTsIxfgQ",
+        "title": "Be Invested",
+        "description": "Today, Saxo is proud to announce partnerships with Lando Norris, Gareth Bale, Thibaut Courtois, Rasmus Højlund, Aryna ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YfqQ75uuC-Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YfqQ75uuC-Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YfqQ75uuC-Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YfqQ75uuC-Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YfqQ75uuC-Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Saxo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T08:41:46Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IJMOy07xjKbwHBwZUA7IN9fGW2w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dSv9oxONpEo"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-27T14:36:36Z",
+        "channelId": "UCX3dO7VY3t1BH9qqmXayUEw",
+        "title": "SAXO BANK SCAM - Watch This To Withdraw",
+        "description": "Be cautious with SAXO BANK. Some reports suggest accounts operate normally during deposits or trading activity, yet payout ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dSv9oxONpEo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dSv9oxONpEo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dSv9oxONpEo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dSv9oxONpEo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dSv9oxONpEo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "FRAUD DISCOVERED",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-27T14:36:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2qLRznjuNnjUP_9ICU3slZG6b9E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NdU38hWu-TU"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-01T10:00:15Z",
+        "channelId": "UCRRXqMGg5Rcm_oHOAdy2MBA",
+        "title": "Saxo Bank (My Honest Review)",
+        "description": "Comment TRAINING for my free 60-minute investment class for expats in Switzerland.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NdU38hWu-TU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NdU38hWu-TU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NdU38hWu-TU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/NdU38hWu-TU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/NdU38hWu-TU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Charlene Cong, CFA🇨🇭",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-01T10:00:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8PWT1Y78IRs9vajOdjkSsd24FpI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fFr88csyKkE"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-26T21:00:14Z",
+        "channelId": "UCWWH72Cynj0fhuJXAxoPUWg",
+        "title": "Interactive Brokers vs Saxo Bank 2026: 150+ Exchanges vs Danish Bank — Who Wins?",
+        "description": "Interactive Brokers versus Saxo Bank. Both tier-one, both world-class, both extensively regulated. Which one fits your money?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fFr88csyKkE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fFr88csyKkE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fFr88csyKkE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fFr88csyKkE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fFr88csyKkE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brokerchampion",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-26T21:00:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9cCwaxtSGUzHG0ECqw7B7VyXuao",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zJ2c2eW9fPM"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-18T03:02:05Z",
+        "channelId": "UCLF7KhSC4qnYPeW4EWG5HXQ",
+        "title": "Saxo vs Interactive Brokers: Which Broker Is Better In 2026?",
+        "description": "Saxo vs Interactive Brokers: A plain GradTraders comparison of two major multi-asset brokers. Both Saxo and Interactive Brokers ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zJ2c2eW9fPM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zJ2c2eW9fPM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zJ2c2eW9fPM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zJ2c2eW9fPM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zJ2c2eW9fPM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/zJ2c2eW9fPM/sardefault.jpg",
+            "width": 1778,
+            "height": 3160
+          }
+        },
+        "channelTitle": "GradTraders",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-18T03:02:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NcRtoOocO6HfyL1h96GqnwfjuIc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fGAaTud6riI"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-30T14:29:44Z",
+        "channelId": "UCrpjzq7n1hdVFIDdAdupo3A",
+        "title": "Benvenuto in Saxo!",
+        "description": "In questo webinar, Simone Di Biase, Head of Commercial Offering & Experience, e Luca Galuppo, Client Experience Officer ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fGAaTud6riI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fGAaTud6riI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fGAaTud6riI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fGAaTud6riI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fGAaTud6riI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Saxo Italia ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-30T14:29:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zYVwSUhuX-ut0_qHxpqguziBN20",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tZ-v_g9MZ_A"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-25T16:03:00Z",
+        "channelId": "UC0zbDQUYqdac-UPHPTTIjwQ",
+        "title": "Come mi sono trovato dopo 1 anno di BG SAXO?",
+        "description": "adv Per scoprire i Piani di Accumulo (PAC) SENZA COMMISSIONI di negoziazione in acquisto su oltre 200 ETF su BG SAXO: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tZ-v_g9MZ_A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tZ-v_g9MZ_A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tZ-v_g9MZ_A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tZ-v_g9MZ_A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tZ-v_g9MZ_A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/tZ-v_g9MZ_A/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Ingegneri in Borsa",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-25T16:03:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mID-Te10zTqypJJB1N8_Np0YXxU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nY6y__PLL1k"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-27T09:51:07Z",
+        "channelId": "UCLM_W5ThO8wtb89jYwKGvBw",
+        "title": "Private Banking Meets Fintech: The Saxo Deal",
+        "description": "Why would a 184-year-old Swiss private bank pay €1.6 billion for a Danish trading app? When J. Safra Sarasin bought Saxo Bank ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nY6y__PLL1k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nY6y__PLL1k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nY6y__PLL1k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nY6y__PLL1k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nY6y__PLL1k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/nY6y__PLL1k/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Anurag Kumar",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-27T09:51:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MEM4zECIYfQI7GviPh2notCN4Lo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "U4L5oLTevPU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-11T16:41:00Z",
+        "channelId": "UCwK2O1jE7-8CLoHWsLxKW3Q",
+        "title": "Bester Online-Broker der Schweiz im 2026? 26 Anbieter im Test",
+        "description": "Welcher Online-Broker ist der beste in der Schweiz? Ich habe 26 Anbieter anhand von 26 Kriterien verglichen, von Interactive ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/U4L5oLTevPU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/U4L5oLTevPU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/U4L5oLTevPU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/U4L5oLTevPU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/U4L5oLTevPU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patrick investiert",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-11T16:41:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ruKaxwAuvnVRuaeRLqbzrytTOfg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "egGyI1oEQeY"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-13T13:00:27Z",
+        "channelId": "UCWWH72Cynj0fhuJXAxoPUWg",
+        "title": "Saxo Bank Review 2026: A Real Danish Bank, 70,000+ Instruments — and the $1M Tier to Unlock It",
+        "description": "Most brokers on a comparison list are CFD shops. Saxo isn't. Saxo Bank A/S is a chartered Danish investment bank, supervised ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/egGyI1oEQeY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/egGyI1oEQeY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/egGyI1oEQeY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/egGyI1oEQeY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/egGyI1oEQeY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brokerchampion",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-13T13:00:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lHtoNNckkqbFTddqvMazDcEIVy0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "g_zNJpzpok8"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-10T17:00:30Z",
+        "channelId": "UCXB4ArYXtq1gyNKwM0rgGqQ",
+        "title": "Conviene investire con BG SAXO nel 2026? La Verità sui Costi - Recensione onesta No sponsor ",
+        "description": "250€ Commissioni Bonus con BG SAXO: https://refer.saxo/27hHT Come funziona BG SAXO, quanto costa e perché è uno dei ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/g_zNJpzpok8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/g_zNJpzpok8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/g_zNJpzpok8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/g_zNJpzpok8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/g_zNJpzpok8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kapis - Finanza Personale",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-10T17:00:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "tfmPiwON3RqTKTb16GbWaDQGdrg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Qgil0SR6lwo"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T15:00:01Z",
+        "channelId": "UCXo0mm32-W_klluXTsIxfgQ",
+        "title": "Saxo &amp; Gareth Bale",
+        "description": "Together with Gareth Bale and eight other world-class athletes, we have been exploring how qualities such as discipline, focus ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Qgil0SR6lwo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Qgil0SR6lwo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Qgil0SR6lwo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Qgil0SR6lwo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Qgil0SR6lwo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Saxo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T15:00:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0gg2R0-TovOaCW-rdNaHS3GFjrw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "rpUP2VK2QOE"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T23:30:14Z",
+        "channelId": "UCRYHWersKQz37zy4jKMyrnQ",
+        "title": "Exness vs Saxo: Which Broker Is Better in 2026?",
+        "description": "Exness vs Saxo: Which Broker Is Better in 2026? https://one.toexness.com/a/an7v1o4pvk?utm_source=youtube_desc An ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rpUP2VK2QOE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rpUP2VK2QOE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rpUP2VK2QOE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rpUP2VK2QOE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rpUP2VK2QOE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "MarketGB",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T23:30:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "g9QUG9KgS_VlyswK6WZi63sSY3E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "icd25eiokA0"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-04T02:17:38Z",
+        "channelId": "UCN2u90hRiUX9GBtLTzL2pAQ",
+        "title": "SaxoInvest App Tutorial 2026 | Complete Saxobank Investing App Guide for Beginners",
+        "description": "In this video, we'll walk through the SaxoInvestor mobile app, including how to log in, navigate the portfolio, search for stocks and ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/icd25eiokA0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/icd25eiokA0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/icd25eiokA0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/icd25eiokA0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/icd25eiokA0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Platformrank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-04T02:17:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "tkkNWyHJ6U0murehm7OioWixpFg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "b7ja_GtHT1E"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-14T07:00:24Z",
+        "channelId": "UCsk_uNySgJd41eQNezVjKng",
+        "title": "XTB vs Saxo Banque [comparatif 2026]",
+        "description": "XTB : https://finances.letraderdudimanche.com/xtb1 ✓ Saxo Banque : https://finances.letraderdudimanche.com/saxobanque ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b7ja_GtHT1E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b7ja_GtHT1E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b7ja_GtHT1E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/b7ja_GtHT1E/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Le Trader du Dimanche",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-14T07:00:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yEqptLdgzn0I8NB9bjMP0sP5xJY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hYH3Oy0y3Ic"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-28T16:00:26Z",
+        "channelId": "UCtB0zZqBu_QfzsmpjExD-GA",
+        "title": "BG SAXO NON ESISTE PIÙ. E I TUOI SOLDI?",
+        "description": "PROVA BGSAXO ED OTTIENI 250 EURO DI TRADING BONUS: https://refer.saxo/pasquale_riganello ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hYH3Oy0y3Ic/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hYH3Oy0y3Ic/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hYH3Oy0y3Ic/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/hYH3Oy0y3Ic/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/hYH3Oy0y3Ic/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pasquale Riganello ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-28T16:00:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "eepl0VxuqYfCvDvkmlUsq9uDJQA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TiJJdI2S1qs"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-27T02:00:32Z",
+        "channelId": "UCWWH72Cynj0fhuJXAxoPUWg",
+        "title": "IBKR vs Saxo: 150+ exchanges vs Danish bank",
+        "description": "Interactive Brokers versus Saxo Bank. IBKR is NASDAQ-listed, cheaper across every asset class, and smart-routes across 150+ ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TiJJdI2S1qs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TiJJdI2S1qs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TiJJdI2S1qs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TiJJdI2S1qs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TiJJdI2S1qs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brokerchampion",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-27T02:00:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RXSXk7lG61sXeYP7elLbdfkCxnw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2rcjZ9o7OAQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-09T08:16:21Z",
+        "channelId": "UCXo0mm32-W_klluXTsIxfgQ",
+        "title": "A day in the life",
+        "description": "What does a day as a Saxonian look like?   From morning coffee in Copenhagen to lunch breaks in Belgium and Dubai. Follow ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2rcjZ9o7OAQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2rcjZ9o7OAQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2rcjZ9o7OAQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2rcjZ9o7OAQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2rcjZ9o7OAQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Saxo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-09T08:16:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5MGR5Iq2QGAD8fiD5c3kJ3zXYrQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LKYNuzYDnss"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-05T13:19:05Z",
+        "channelId": "UCRRXqMGg5Rcm_oHOAdy2MBA",
+        "title": "I asked Saxo Bank CH’s CEO the questions expats actually want answered",
+        "description": "Subscribe @CharleneCong for more investment tips in Switzerland.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LKYNuzYDnss/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LKYNuzYDnss/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LKYNuzYDnss/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LKYNuzYDnss/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LKYNuzYDnss/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Charlene Cong, CFA🇨🇭",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-05T13:19:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UAkQ88xwNwV7DKn_dMS-WbH7AUU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OnzbNfViECA"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-19T20:00:09Z",
+        "channelId": "UCxjpGbfoLy6oodYdiyzQE4g",
+        "title": "رئيس استراتيجية السلع في ساكسو بنك:كان هناك هدوء مزيف في أسواق النفط والأسعار تسير بالاتجاه الصحيح",
+        "description": "تصريحات رئيس استراتيجية السلع في \"ساكسو بنك\" أولي هانسن، بشأن التطورات المتسارعة في أسواق النفط الخام العالمية. ويسلط ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OnzbNfViECA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OnzbNfViECA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OnzbNfViECA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OnzbNfViECA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OnzbNfViECA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Asharq Bloomberg الشرق بلومبرغ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-19T20:00:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "eQJ4MsQ8GMe-5MbDo_UA8oDHlA4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4QbGvHA2TVY"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-28T15:00:29Z",
+        "channelId": "UCWWH72Cynj0fhuJXAxoPUWg",
+        "title": "Saxo Review 2026: The Broker That&#39;s Actually a Bank — Scored 9.1/10, With One Real Catch",
+        "description": "Here is the single most important fact about Saxo, and almost no review leads with it: Saxo isn't a broker that also does banking ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4QbGvHA2TVY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4QbGvHA2TVY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4QbGvHA2TVY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4QbGvHA2TVY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4QbGvHA2TVY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brokerchampion",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-28T15:00:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5kkjUaOhCzjpM1auKG_iOrz9zIU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JZ3NhfumQxM"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-08T14:00:25Z",
+        "channelId": "UCP56pzVbILDidgl9xgTV5ew",
+        "title": "PEA - Saxo Bank ou Interactive Brokers ? (Mon avis 🔎)",
+        "description": "PEA - Saxo Bank ou Interactive Brokers ? (Mon avis ) https://liberte-financiere.net/comparateur-pea?vue=comparer ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JZ3NhfumQxM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JZ3NhfumQxM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JZ3NhfumQxM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JZ3NhfumQxM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JZ3NhfumQxM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Liberté Financière - Laurent",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-08T14:00:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "esEnQQ-8wJkZBDJsDZDHPXCdpMM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yfJoKlQRaYw"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-24T11:11:07Z",
+        "channelId": "UC9OtoV4e1p7QqpKFr8U0ALw",
+        "title": "Catch me should I fall",
+        "description": "Vidste du, at Saxo Bank har en af Europas største private samlinger af samtidskunst med næsten 600 værker? Et af de mest ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yfJoKlQRaYw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yfJoKlQRaYw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yfJoKlQRaYw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yfJoKlQRaYw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yfJoKlQRaYw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Saxo Bank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-24T11:11:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NDzspvU0twFdW-s1NmRzcA8ry9c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "j8SzbODJ5h0"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T18:00:27Z",
+        "channelId": "UCunzRLkB0cWbGaWdxfiC_4w",
+        "title": "Jeg var til møde med min bank – her er hvad jeg lærte",
+        "description": "Bestil min bog her: https://www.saxo.com/dk/din-foerste-million_bog_9788702444681 Lær at styre din økonomi og investere: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/j8SzbODJ5h0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/j8SzbODJ5h0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/j8SzbODJ5h0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/j8SzbODJ5h0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/j8SzbODJ5h0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Daniels Pengetips",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T18:00:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "n5FfLXcKAPMtQuz1QyEuC3rg9ss",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kp9mcJ3lsRY"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-04T23:02:40Z",
+        "channelId": "UCUQ9h7F40JQH9LJ_pAohQUg",
+        "title": "Best DMA Trading Platforms: IBKR &amp; Saxo",
+        "description": "Unlock direct market access, advanced charting, and sentiment tools. Find top broker recommendations for active and small-cap ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kp9mcJ3lsRY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kp9mcJ3lsRY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kp9mcJ3lsRY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kp9mcJ3lsRY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kp9mcJ3lsRY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Good Money Guide",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-04T23:02:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "N6r56B_MGsDP3P8zYolA8nuw81E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JGZJDPy9Vr8"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-12T11:13:24Z",
+        "channelId": "UCXo0mm32-W_klluXTsIxfgQ",
+        "title": "Silver",
+        "description": "Ole S. Hansen, our Head of Commodity Strategy, explores the outlook for silver over the next three years   #Saxo #BeInvested.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JGZJDPy9Vr8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JGZJDPy9Vr8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JGZJDPy9Vr8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JGZJDPy9Vr8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JGZJDPy9Vr8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Saxo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-12T11:13:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "n7e0JYE3lnGAtHHup1_fmf8nv0A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "u0KH-dtkghc"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-28T15:11:12Z",
+        "channelId": "UCPNXxgle9ADeGchy2K75e1A",
+        "title": "Investissez avec Saxo, l&#39;expert de la bourse en ligne !",
+        "description": "Découvrez notre nouveau spot TV : Saxo Banque, l'expert de la bourse en ligne depuis plus de 30 ans.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/u0KH-dtkghc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/u0KH-dtkghc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/u0KH-dtkghc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/u0KH-dtkghc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/u0KH-dtkghc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Saxo Banque",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-28T15:11:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "fUbgyskgu4lKM1Jwo-YG7nzlle8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "22CXxZvr7B4"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-06T11:20:50Z",
+        "channelId": "UC_Oky4xRnC0KflyUH3zbVXg",
+        "title": "¿Es Saxo un buen bróker de futuros? Reseña honesta 2026",
+        "description": "Saxo es el bróker multiactivo con sede en Dinamarca, regulado por la FSA Danesa, la FCA, FINMA y MAS de Singapur, conocido ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/22CXxZvr7B4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/22CXxZvr7B4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/22CXxZvr7B4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/22CXxZvr7B4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Analizando Brókers con BrokerChooser",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-06T11:20:50Z"
+      }
+    }
+  ]
+}

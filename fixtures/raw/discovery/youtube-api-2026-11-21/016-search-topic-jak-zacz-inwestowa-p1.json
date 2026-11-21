@@ -1,0 +1,2399 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "YKlNbsaCMG8pBvwU-GVMZW46VTg",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 199606,
+    "resultsPerPage": 53
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KPWQsBQigyOt4L9-WvIytfkR9fI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "puNF4JbToxA"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-02T15:00:17Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "Oto co bym zrobił, gdybym zaczynał inwestowanie od zera!",
+        "description": "współpraca XTB [współpraca] Tutaj Kupisz Akcje i ETFy (XTB): https://link-pso.xtb.com/pso/DwCbZ Jak kupić akcje i ETFy?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-02T15:00:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4jvoWZqgIJLIIAx8t9lKnBkDPsI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pdsN6vcT7to"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T21:00:39Z",
+        "channelId": "UCFBpVaKCC0ajGps1vf0AgBg",
+        "title": "Proszę (uprzejmie) o rozpoczęcie inwestowania w 2027 roku",
+        "description": "W tym filmie dowiesz się wszystkiego, co musisz wiedzieć o tym, jak zacząć inwestować. Film składa się z 7 sekcji, w tym...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pdsN6vcT7to/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pdsN6vcT7to/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pdsN6vcT7to/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pdsN6vcT7to/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pdsN6vcT7to/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Humphrey Yang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T21:00:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rPR8k7OhDlhyDC-asNTd553D99E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MZAgnk1AP7U"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-18T15:04:06Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "Chcesz zacząć inwestować? Zacznij do TEGO!",
+        "description": "Nie musisz śledzić setek wykresów ani rozumieć skomplikowanego żargonu, żeby skutecznie pomnażać pieniądze. Często to, co ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MZAgnk1AP7U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MZAgnk1AP7U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MZAgnk1AP7U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MZAgnk1AP7U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MZAgnk1AP7U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-18T15:04:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GZziA8JFkQUYuDcrJFRU_r64XQQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Dl7S_GNs87k"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-04T16:30:11Z",
+        "channelId": "UCILwajCs145hxNvB4nckALg",
+        "title": "Jak zacząć inwestować w 2026? Pierwszy portfel krok po kroku",
+        "description": "ETF-y, akcje, obligacje… Co powinno znaleźć się w Twoim portfelu inwestycyjnym? W tym filmie dowiesz się, jak zbudować ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Dl7S_GNs87k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Dl7S_GNs87k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Dl7S_GNs87k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Dl7S_GNs87k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Dl7S_GNs87k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "XTB Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-04T16:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "q9sL_GGpzA3EHyPcxAHjsEia-ic",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "y2ACGacCles"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-15T16:00:19Z",
+        "channelId": "UCLiEUDMA930sCb2D3inalPg",
+        "title": "Jak zacząć INWESTOWAĆ w 2027? (od 100 zł)",
+        "description": "Obejrzyj najważniejszy film: https://youtu.be/qaFRml9vw00 Instagram: https://www.instagram.com/hubert.misiag Chcesz zacząć ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Hubert Misiąg",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-15T16:00:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "xe-5HNQZ9BbSNY7N8KrCfZ-6zP8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CwzHsGfXY2k"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-10T12:00:29Z",
+        "channelId": "UCuQ871Q5qS2hRSp8h5lfJKA",
+        "title": "Jak zacząć inwestować w akcje mając tylko tysiąc złotych? Reksio pokazuje! 🐕📈 #finanse #inwestowanie",
+        "description": "Nie czekaj, aż uzbierasz więcej — to czekanie kosztuje najwięcej. Reksio zakłada rachunek maklerski w jeden wieczór, wpłaca ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CwzHsGfXY2k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CwzHsGfXY2k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CwzHsGfXY2k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CwzHsGfXY2k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CwzHsGfXY2k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Reksio Finansowy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-10T12:00:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "O3cYST_rvTDUlvagI93DSAdSr9g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "W-mEmvpHGek"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-13T17:08:16Z",
+        "channelId": "UCEPr3huxC4mEPN8NtIKVmxA",
+        "title": "Jak zacząć inwestować? Pierwszy krok dla początkujących | Gosia Ohme Podcast",
+        "description": "Chcesz zacząć inwestować, ale nie wiesz, jaki powinien być Twój pierwszy krok? Dorota Sierakowska proponuje trzy proste ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/W-mEmvpHGek/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/W-mEmvpHGek/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/W-mEmvpHGek/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/W-mEmvpHGek/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/W-mEmvpHGek/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gosia Ohme",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-13T17:08:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XqcPiRf_FQp2xyKTn-KSem2Iaus",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ryZCguUDZeI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:00:15Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "W co inwestować na IKE oraz IKZE: akcje, obligacje, ETF-y?",
+        "description": "Chcesz mieć więcej pieniędzy? Przeczytaj moją książkę: https://inwestokracja.pl/yt Chcesz otrzymywać DARMOWE lekcje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:00:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CYCrrpjY5AXWlTQgCPKNp7lMNyE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hRiC2V0bFe8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T20:00:37Z",
+        "channelId": "UCdiAORc5zDcFqhojS9LNT0w",
+        "title": "Jak zacząć inwestować w ETF i OKI? Debiut platformy Investia od DM BOŚ",
+        "description": "TELEWIZJA NA ŻYWO ➡ http://youtube.com/@TelewizjaBIZNES24/streams OFICJALNA STRONA ➡ http://biznes24.pl ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hRiC2V0bFe8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hRiC2V0bFe8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hRiC2V0bFe8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/hRiC2V0bFe8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/hRiC2V0bFe8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Telewizja BIZNES24",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T20:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "iIlB4kxNMPjK9DJ-86oE5Z7ycyw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZvpG9Sd7NWU"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-28T15:10:59Z",
+        "channelId": "UC2MQ1TRVmCnslmwlgqayVrw",
+        "title": "Jak DZIAŁA INWESTOWANIE i jak ZACZĄĆ? (seria inwestycyjna)",
+        "description": "Sprawdź możliwość inwestowania z 0% prowizji w Akcje i ETF: https://link-pso.xtb.com/pso/aH29B Nie wiesz jak zacząć ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZvpG9Sd7NWU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZvpG9Sd7NWU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZvpG9Sd7NWU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZvpG9Sd7NWU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZvpG9Sd7NWU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Globalista TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-28T15:10:59Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FNLTuFLlv9sKRyLC5byrfoaUZY8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VsgkVkobe90"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-27T05:00:10Z",
+        "channelId": "UCi6PZ5-aXuMKFTnQPeMVeNw",
+        "title": "Jak zacząć inwestować i zbudować pierwszy portfel?",
+        "description": "Jak zacząć inwestować pieniądze, zbudować swój pierwszy portfel i zabezpieczyć finansową przyszłość? W dzisiejszym ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VsgkVkobe90/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VsgkVkobe90/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VsgkVkobe90/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VsgkVkobe90/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VsgkVkobe90/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Subiektywnie o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-27T05:00:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nwqBnsbB0GcHpFE1oVooov66XYc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dmYS3qxFpXw"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-23T15:00:13Z",
+        "channelId": "UCqvkwZLk3L3BE8KR1-n9Ffg",
+        "title": "JAK ZACZĄĆ INWESTOWAĆ? SKUTECZNY PLAN DLA POCZĄTKUJĄCYCH",
+        "description": "xtb #investingpro #współpraca ✓ Poznaj InvestingPro ➡️https://www.investing-referral.com/zbrojastudio/ ✓ Załóż konto w XTB: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dmYS3qxFpXw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dmYS3qxFpXw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dmYS3qxFpXw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dmYS3qxFpXw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dmYS3qxFpXw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/dmYS3qxFpXw/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Wszystko o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-23T15:00:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "StZ64DgE88eULuej8ZEu0q1vm7w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BljdXvMnNYw"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-12T15:00:38Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "Nie inwestuj ani złotówki na giełdzie, dopóki tego nie obejrzysz",
+        "description": "Chcesz mieć więcej pieniędzy? Zapisz się i otrzymuj darmowe lekcje: https://pankracy.gr8.com/ ✓ Jeśli masz jakieś pytanie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-12T15:00:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Gnr8JW50I-oDqFuaMLXKBASUVaE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JmSeHIA2jjc"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-26T08:40:05Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "W CO INWESTUJĘ W 2 połowie 2026? Jak zarządzam portfelem 3,7 mln. PLN, żeby wygrać z S&amp;P 500?",
+        "description": "Jak zacząć inwestować na giełdzie? Czy dziś na giełdzie jest drogo? W co sam inwestuję swoje pieniądze z jasnym celem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JmSeHIA2jjc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JmSeHIA2jjc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JmSeHIA2jjc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JmSeHIA2jjc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JmSeHIA2jjc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-26T08:40:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nKZZGzDMyKI5mg2t1H7pbQz5xlg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7hgaZYkAHCg"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-21T08:24:45Z",
+        "channelId": "UCjkNubkfecaFLZbHnnsz6pw",
+        "title": "Jak zacząć inwestować i nie stracić pieniędzy?",
+        "description": "Od jakiej kwoty warto zacząć inwestować? Co zrobić z pierwszymi 10 tysiącami złotych i czy lepiej trzymać oszczędności na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7hgaZYkAHCg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7hgaZYkAHCg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7hgaZYkAHCg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7hgaZYkAHCg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Onet Rano",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-21T08:24:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "fyTvtLypu7BdNJ1cwDEKGrCVv1w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oj8YAONaUoI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T18:56:37Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Jak zacząć inwestować",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oj8YAONaUoI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oj8YAONaUoI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oj8YAONaUoI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oj8YAONaUoI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oj8YAONaUoI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/oj8YAONaUoI/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T18:56:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "tve_ERvEBOcMaJ2EukqxS2MDwac",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Z2jeBerFQ-Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T16:02:09Z",
+        "channelId": "UChdYZTgN62wZUg136bbHOpg",
+        "title": "Jak zacząć inwestować od zera w 2026. Cały plan krok po kroku",
+        "description": "Jak zacząć inwestować od zera? W 8 minut przechodzimy cały plan: poduszka finansowa, ETF, IKE i IKZE, wybór rachunku ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Z2jeBerFQ-Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Z2jeBerFQ-Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Z2jeBerFQ-Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Z2jeBerFQ-Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Z2jeBerFQ-Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pięć Baniek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T16:02:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IH3Kb18Z-KQhTwJiBU5H7yo03eM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "uVPouyBkrMI"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-30T16:16:55Z",
+        "channelId": "UCcJq-5bSAMp2ZCOR8kacfmA",
+        "title": "Czy jest za późno, by zacząć inwestować?",
+        "description": "Sprawdź możliwości inwestowania bez prowizji w XTB: https://geolink.xtb.com/wMYiO ▶️ Teraz, rejestrując się w XTB z kodem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uVPouyBkrMI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uVPouyBkrMI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uVPouyBkrMI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uVPouyBkrMI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uVPouyBkrMI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowa TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-30T16:16:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zOoYuAQIjtDp_ppurzI4eFqjSkk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QudodCw0giY"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-21T15:00:18Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "Co TRZEBA zrobić po zakupie pierwszego ETF-a (najlepiej od razu!)",
+        "description": "Chcesz mieć więcej pieniędzy? Zapisz się i otrzymuj darmowe lekcje: https://pankracy.gr8.com/ ✓ Jeśli masz jakieś pytanie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-21T15:00:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Gn3hPBNxWhRjMZKYBfcJPXfdaZI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VOZIIvmGQOU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T18:00:21Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Jak zacząć inwestować z głową w 2027? Unikaj tych 5 błędów!",
+        "description": "WspółpracaReklamowa Saxo Bank Sprawdź szczegóły promocji, w ramach której nowi klienci mogą otrzymać równowartość do ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VOZIIvmGQOU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VOZIIvmGQOU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VOZIIvmGQOU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VOZIIvmGQOU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VOZIIvmGQOU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T18:00:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x-7ztgpW1Dh1ZzwHTN09b_kP52s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "K1Ykw5XZg9U"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-06T16:00:29Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "Co jeśli zaczniesz inwestować, a następnego dnia przyjdzie kryzys?",
+        "description": "Chcesz mieć więcej pieniędzy? Przeczytaj moją książkę: https://inwestokracja.pl/yt Chcesz otrzymywać DARMOWE lekcje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-06T16:00:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6TK8chj7QMC9u5gyuyoOFH2vzCU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "eye-31meAJ0"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-22T12:18:01Z",
+        "channelId": "UCbdR3TMR-2Fzb0QCKx8tzHw",
+        "title": "Jak zacząć inwestować od zera? 5 kroków, które zrobiłbym jeszcze raz",
+        "description": "Gdybym dziś zaczynał inwestować od zera, nie szukałbym modnej spółki ani magicznej strategii. Zrobiłbym 5 prostych, trochę ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eye-31meAJ0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eye-31meAJ0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eye-31meAJ0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/eye-31meAJ0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/eye-31meAJ0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełdek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-22T12:18:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Vvt4Xdm57MKq5TZ6j2lejjnoGqU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "B8TYcM5WKp0"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-11T14:05:01Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "Jak zacząłbym od zera z dzisiejszą wiedzą? Ile zarobiłem po 950 dniach inwestowania 500 złotych?",
+        "description": "Jak zacząłbym inwestować na giełdzie ze swoją dzisiejszą wiedzą? Jak zacząć inwestować na giełdzie akcji? Jak inwestować w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/B8TYcM5WKp0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/B8TYcM5WKp0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/B8TYcM5WKp0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/B8TYcM5WKp0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/B8TYcM5WKp0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-11T14:05:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "djOHL-ZfXNJxRenE9pUHmoHGjlU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "6a0YbVL3CO0"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-02T16:00:14Z",
+        "channelId": "UCNvSk-U6X9mOJHr7wz_xCWw",
+        "title": "Jeśli zaczynałbym inwestowanie od ZERA, oto co bym zrobił. Omar Arnaout [Expert w Bentleyu]",
+        "description": "TRWA BLACK BENTLEY! TERAZ −25%! ⚫⚫⚫ SUPLEMENTY • KURSY JĘZYKOWE • KSIĄŻKI ⏰ SKORZYSTAJ ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Maciej Wieczorek - Expert w Bentleyu",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-02T16:00:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CVq9AUwq6tdxgUcYg53Q5qHK_4Q",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "n_AcdrPYWaY"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-27T13:30:35Z",
+        "channelId": "UCNgqbCJr4JPDwahd45OZ0OQ",
+        "title": "Jak zacząć inwestować od ZERA (krok po kroku)",
+        "description": "W tym filmie pokazuję, jak sam podszedłbym do inwestowania, gdybym dzisiaj zaczynał od kompletnego zera. Od budowania ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/n_AcdrPYWaY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/n_AcdrPYWaY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/n_AcdrPYWaY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/n_AcdrPYWaY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/n_AcdrPYWaY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "mr scrab",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-27T13:30:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DHt4-bj22T32A-n5_ygQ22XHvSc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dGeekisWgI4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T18:00:37Z",
+        "channelId": "UC1K6ydg6PvkBwJyj2VoEMEg",
+        "title": "Jak zacząć inwestować przed 18. rokiem życia?",
+        "description": "Masz mniej niż 18 lat i chcesz zacząć inwestować? W tym animowanym filmie przyglądamy się pierwszym krokom, małym kwotom ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dGeekisWgI4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dGeekisWgI4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dGeekisWgI4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dGeekisWgI4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dGeekisWgI4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/dGeekisWgI4/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "jablo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T18:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dRPuFKl2dFYc2yV-z_-kNBAqtZw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MC7k4ruZD5c"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-30T17:05:49Z",
+        "channelId": "UCxgAuX3XZROujMmGphN_scA",
+        "title": "Inwestowanie dla początkujących w 75 minut",
+        "description": "Aby otrzymać DARMOWE akcje o wartości 50 GBP od eToro, odwiedź stronę: https://med.etoro.com/B22426_A131573_Tclick_SinvG.aspx Twój kapitał jest zagrożony.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MC7k4ruZD5c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MC7k4ruZD5c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MC7k4ruZD5c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MC7k4ruZD5c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MC7k4ruZD5c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Mark Tilbury",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-30T17:05:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yE2avOSZG3xC-YMgFr7arZyJ_mU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "h0IaBkwnhxc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T17:15:06Z",
+        "channelId": "UCQdIJOLh1fjp5SZpOZ5ZsOw",
+        "title": "Jak zacząć inwestować w nieruchomości bez MILIONÓW? | Maciej Kubik",
+        "description": "Maciej Kubik jest przedsiębiorcą z Krakowa i od lat działa na rynku nieruchomości. Zbudował biuro wyspecjalizowane w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/h0IaBkwnhxc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/h0IaBkwnhxc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/h0IaBkwnhxc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/h0IaBkwnhxc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/h0IaBkwnhxc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/h0IaBkwnhxc/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Uczelnia ASBiRO - praktycznie o biznesie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T17:15:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "BXaME-hxFTorzzIZ14XKkC_UK6Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ekQwvQFhz2o"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-11T04:00:00Z",
+        "channelId": "UCMb0086-ZIOX4p9I0mG1ebQ",
+        "title": "Jak Zacząć Inwestować? Przewodnik dla Początkujących!",
+        "description": "W tym filmie pokazujemy, jak zrobić pierwszy krok w inwestowaniu. Jeśli zawsze wydawało Ci się, że inwestowanie jest trudne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ekQwvQFhz2o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ekQwvQFhz2o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ekQwvQFhz2o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ekQwvQFhz2o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ekQwvQFhz2o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kolekcjonerzy Wrazen - Wczesna Emerytura",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-11T04:00:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dURTNU5oysTvf7UjUPXcDo61pvM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sRepv9NVQUQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-07T07:03:32Z",
+        "channelId": "UCi6PZ5-aXuMKFTnQPeMVeNw",
+        "title": "Jak zacząć inwestować i nie przepłacać? | Gość: Szymon Karaś",
+        "description": "Materiał powstał we współpracy z UniCredit Jak się zabrać do inwestowania pieniędzy? Z jakich narzędzi korzystać? Dla kogo ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sRepv9NVQUQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sRepv9NVQUQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sRepv9NVQUQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sRepv9NVQUQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sRepv9NVQUQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Subiektywnie o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-07T07:03:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "tYLtNBKQ-Seuz9_LlAdFM2OSPco",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OhBJ--Myyiw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T05:50:47Z",
+        "channelId": "UCiUU_F5HTWrJi8dabWHg9eA",
+        "title": "Czy masz za mało pieniędzy, żeby zacząć inwestować?",
+        "description": "Ważne jest wyrobienie nawyku. Na początku wielkość kwoty ma na daną chwilę mniejsze znacznie. Wyrabiasz nawyk, uczysz się ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OhBJ--Myyiw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OhBJ--Myyiw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OhBJ--Myyiw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OhBJ--Myyiw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OhBJ--Myyiw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "UpToYou -Twój Wybór z Alina Angielczyk",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T05:50:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "J1Bx7ZHusxuOncPdrW80D0kuFX8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BlOHlf0LGUo"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T09:00:37Z",
+        "channelId": "UCrKY6A2xsHXgw3MK9mkan5w",
+        "title": "Od Czego Zacząć Inwestowanie? – ft. dr Katarzyna Iwuć",
+        "description": "Rozmawiamy o tym, dlaczego kłótnie o pieniądze mówią o przyszłości związku więcej niż jakiekolwiek inne kłótnie. Katarzyna ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BlOHlf0LGUo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BlOHlf0LGUo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BlOHlf0LGUo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BlOHlf0LGUo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BlOHlf0LGUo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Przemek Górczyk Podcast",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T09:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "qW4Te64voZMzrte9DSbbCrsLLrk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "p8rncWjcgqg"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-25T13:32:03Z",
+        "channelId": "UCucI0M48f2KMK6VZVuAQR7A",
+        "title": "A gdyby przestać tracić swój czas i zacząć inwestować już dziś?",
+        "description": "A gdyby przestać tracić swój czas i zacząć inwestować już dziś? Więcej treści edukacyjnych znajdziesz tutaj: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/p8rncWjcgqg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/p8rncWjcgqg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/p8rncWjcgqg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/p8rncWjcgqg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/p8rncWjcgqg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Erste Fundusze Inwestycyjne",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-25T13:32:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "a5zvZQu1FzWYBXAXT9mg0ggwV3g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "0jLZIKWY0qU"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-11T13:37:39Z",
+        "channelId": "UCzUbP6AbGRH_Q7dKh-_Pzrg",
+        "title": "Masz 100 zł? Możesz zacząć inwestować",
+        "description": "Inwestowanie nie musi zaczynać się od tysięcy złotych. Możesz zacząć od małej kwoty i budować kapitał długoterminowo. Ryzyko ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0jLZIKWY0qU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0jLZIKWY0qU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0jLZIKWY0qU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/0jLZIKWY0qU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/0jLZIKWY0qU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kacper Bisanz - SmartLife",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-11T13:37:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "G4nyoY78Gi9GjIHcNABfGLradEI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "t0MKDwKMhhY"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T10:59:21Z",
+        "channelId": "UC7qOKiLD-O0RTezqBpsvScg",
+        "title": "Jak zacząć inwestować, gdy masz jeszcze długi Odcinek 265",
+        "description": "Made with Restream Studio. Livestream on 30+ platforms at once via https://restream.io Made with Restream Studio. Livestream ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/t0MKDwKMhhY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/t0MKDwKMhhY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/t0MKDwKMhhY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/t0MKDwKMhhY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/t0MKDwKMhhY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowa Edukacja Andrzej Fesnak",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T10:59:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TT2Dt1ftEgO4OF9-94-iL2OS_7M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-_oB93knPyQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-03T22:00:36Z",
+        "channelId": "UCF0Cxpd-HD_an4LRSgu0fNA",
+        "title": "Inwestowanie w Metale Szlachetne - Kiedy Kupować?",
+        "description": "ZASTRZEŻENIE Treści publikowane na tym kanale mają charakter wyłącznie informacyjny i edukacyjny oraz prezentują prywatne ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-_oB93knPyQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-_oB93knPyQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-_oB93knPyQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-_oB93knPyQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-_oB93knPyQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Paweł Szpakowicz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-03T22:00:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kooVpgBo5uBHUDERHqVKRr9z2uE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7M0rC6-Rueo"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-03T12:30:02Z",
+        "channelId": "UCaW25etEU4Dkir2RbIzSzUw",
+        "title": "Ile trzeba mieć, żeby zacząć inwestować? 2 lata inwestowania. Brutalna prawda.",
+        "description": "Bank Pekao SA - Konto Przekorzystne 5,7% na Koncie Oszczędnościowym + obligacje skarbowe ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7M0rC6-Rueo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7M0rC6-Rueo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7M0rC6-Rueo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7M0rC6-Rueo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/7M0rC6-Rueo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestycyjna wyprawa",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-03T12:30:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7TEn5VBGHx6pcmDyQs9LIP9VrY8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CMasL5P09Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-08T16:57:24Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "Chce zacząć inwestować.Mam 1000zł. #inwestowanie #giełda #ike #ikze #etf",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CMasL5P09Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CMasL5P09Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CMasL5P09Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-CMasL5P09Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-CMasL5P09Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-08T16:57:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "AybjX6NON4YthMeRVAj6bzl7grA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "f3p9jes3Vhw"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-06T14:00:21Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "10 000 zł do zainwestowania? Oto co bym zrobił (i czego NIE zrobił)",
+        "description": "Dołącz do Przystani Inwestorów - serwer na Discrod! https://discord.gg/byP4c9WQkp Tutaj Kupisz Akcje i ETFy (XTB): ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/f3p9jes3Vhw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/f3p9jes3Vhw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/f3p9jes3Vhw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/f3p9jes3Vhw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/f3p9jes3Vhw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/f3p9jes3Vhw/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-06T14:00:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IVR5u-20zu4AIeedEiVDT_GKQ6k",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QLQx53KqZgg"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-29T17:22:07Z",
+        "channelId": "UCmi2y00F2ayFD5rg8HEQTmQ",
+        "title": "10 Zasad Jak Zacząć Inwestować Od Zera! 📈 Moje Wnioski i Błędy 💰",
+        "description": "Daję 10 rad początkującym inwestorom po 3 lata własnego inwestowania na giełdzie. Partner odcinka XTB – darmowe konto i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QLQx53KqZgg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QLQx53KqZgg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QLQx53KqZgg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QLQx53KqZgg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QLQx53KqZgg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "ABC Inwestowania",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-29T17:22:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5NdoBiHk47ZxMfjM4YIAQEsm3jQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "rjN2Ah9szO8"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-14T14:49:40Z",
+        "channelId": "UCRknhVAyXVZe9cJNR0Q8jfA",
+        "title": "JAK ZACZĄĆ INWESTOWAĆ OD ZERA  (prosty przewodnik dla poczatkujacych)",
+        "description": "Jak zacząć inwestować od zera? W tym filmie pokazuję krok po kroku, jak rozpocząć swoją przygodę z inwestowaniem, nawet ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rjN2Ah9szO8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rjN2Ah9szO8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rjN2Ah9szO8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rjN2Ah9szO8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rjN2Ah9szO8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Szary Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-14T14:49:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "W_XYPEEj52sDU9bLtCm1eR1nito",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zShd8wgEcIQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-13T11:39:35Z",
+        "channelId": "UCTZzZ14jQSFN5darS2NOsqQ",
+        "title": "Jak zacząć inwestować? Zacznij od małej kwoty",
+        "description": "Mały budżet, rozmowa z bardziej doświadczonymi osobami i ostrożność wobec treści z TikToka oraz Instagrama — takie rady dla ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zShd8wgEcIQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zShd8wgEcIQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zShd8wgEcIQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zShd8wgEcIQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zShd8wgEcIQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "BETA ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-13T11:39:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FnF7E2uZkqT-kV4YnGYvt4QCZcg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZBKV4r6SviE"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-12T16:32:41Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "10 000 zł 5 lat temu w te ETF-y.  #inwestowanie #etfy #giełda #pieniądze #finanse",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZBKV4r6SviE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZBKV4r6SviE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZBKV4r6SviE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZBKV4r6SviE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZBKV4r6SviE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-12T16:32:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "86QsK3PBEQ6KWpRj7hAqjgAsNh0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wiL3Tmd-RFE"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-01T18:15:55Z",
+        "channelId": "UCON-vFfPqLtehQR0FX393Yg",
+        "title": "Jak zacząć inwestować? Fundamenty inwestowania od zera - Praktyczny kurs dla osób początkujących.",
+        "description": "Czy można pracować przez 30 lat, zarabiać coraz więcej i nadal nie mieć żadnego majątku? Dokładnie tak wygląda ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wiL3Tmd-RFE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wiL3Tmd-RFE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wiL3Tmd-RFE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wiL3Tmd-RFE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wiL3Tmd-RFE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "TomInvest",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-01T18:15:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PZjYliC6XRm9IKiXYkhpMLhWBA8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zgU44ih2ipo"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-22T14:00:18Z",
+        "channelId": "UCERgXZU8e2Mrm_zd-n7jyzg",
+        "title": "Jak zacząć inwestować od zera: 7 kroków po kolei",
+        "description": "Jak zacząć inwestować od zera: 7 kroków po kolei, od poduszki finansowej i spłaty karty na 14,5% do stałej kwoty co miesiąc.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zgU44ih2ipo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zgU44ih2ipo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zgU44ih2ipo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zgU44ih2ipo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zgU44ih2ipo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Wujek Rachunek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-22T14:00:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kitIqdeQ2jIof1pL2JYvXcS4ZSY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "W2_iCZTLtdA"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-06T16:27:24Z",
+        "channelId": "UC5nL-ctQJO_pWPya7dJMTdA",
+        "title": "Ile trzeba mieć, żeby zacząć inwestować? Mniej niż myślisz.",
+        "description": "Myślisz, że do inwestowania potrzebujesz dużych pieniędzy? To jeden z najczęstszych mitów. W tym filmie pokażę Ci, dlaczego ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/W2_iCZTLtdA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/W2_iCZTLtdA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/W2_iCZTLtdA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/W2_iCZTLtdA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/W2_iCZTLtdA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowy Profil",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-06T16:27:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "32CFH3-Pa0uyTvsolW8tCDuFKh0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "i9CrWCc7AcA"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-11T05:34:59Z",
+        "channelId": "UChOvmL8dWH58agSskvgEcRg",
+        "title": "Jak bezpiecznie zacząć inwestować?",
+        "description": "Brak decyzji też jest decyzją. Jeśli dzisiaj nic nie zrobisz, za rok możesz być w tym samym miejscu, a za kilka lat nadal ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/i9CrWCc7AcA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/i9CrWCc7AcA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/i9CrWCc7AcA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/i9CrWCc7AcA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/i9CrWCc7AcA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Daniel Siwiec",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-11T05:34:59Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "54AdkOkD2T7rgBoJBSc0OlXgJPQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Q0uzgGG6JNU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T07:37:20Z",
+        "channelId": "UCxhAfhXu0ECIbt_2AN-NdHw",
+        "title": "W co inwestować małe kwoty? Inwestowanie na 2027! Mateusz Mucha - Beta ETF",
+        "description": "W co inwestować małe kwoty? To musisz wiedzieć o ETF-ach! Mateusz Mucha - Beta ETF ▶️ Gość Mateusz Mucha: KONTAKT: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biznes Misja",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T07:37:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-L89ZeiaFfM_KwL8fU9piG5pgEM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "p7CYG8Culpw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-03T15:00:07Z",
+        "channelId": "UCqI0bNrO61UA5wHi-CrOTKQ",
+        "title": "Jak zacząć inwestować pieniądze? 💰 Poradnik dla początkujących krok po kroku!",
+        "description": "inwestowanie #finanseosobiste #jakinwestować #etf #giełda #budowaniemajątku #finanse.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/p7CYG8Culpw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/p7CYG8Culpw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/p7CYG8Culpw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/p7CYG8Culpw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/p7CYG8Culpw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Słowa Natchnienia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-03T15:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nahaK-fsSqhSFsvO187jQmg_I44",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "b2snDsedpBs"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-10T16:00:32Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "Jak zacząć inwestować w 5 krokach i kupić za pierwsze 100 zł #inwestowanie #etf #finanse",
+        "description": "Napisz START w komentarzu, a wyślę Ci bezpłatny przewodnik. Jak zacząć inwestować w pięciu krokach, od celu z kwotą i datą ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b2snDsedpBs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b2snDsedpBs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b2snDsedpBs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/b2snDsedpBs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/b2snDsedpBs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-10T16:00:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "geLLp5ascsAWSi7NUawdaekATq8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gmsKX4KEZk4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T18:35:29Z",
+        "channelId": "UC7qOKiLD-O0RTezqBpsvScg",
+        "title": "Jak zacząć inwestować, gdy masz jeszcze długi Odcinek 265",
+        "description": "Made with Restream Studio. Livestream on 30+ platforms at once via https://restream.io Jak możesz mieć co chcesz pewniej, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gmsKX4KEZk4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gmsKX4KEZk4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gmsKX4KEZk4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gmsKX4KEZk4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gmsKX4KEZk4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowa Edukacja Andrzej Fesnak",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T18:35:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "a_RpvwvbAAa6Obc6Xyg8mmIksKA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cdOooH6jysw"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-17T15:00:03Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "4 książki, żeby zacząć inwestować (zamiast 40) #inwestowanie #shorts",
+        "description": "4 książki, które wystarczą, żeby zacząć inwestować. Ostatnia nie jest nawet o pieniądzach. Napisz w komentarzu START, a wyślę ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cdOooH6jysw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cdOooH6jysw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cdOooH6jysw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cdOooH6jysw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cdOooH6jysw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-17T15:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8yJm7dXKLbo0j4KFF5ij0WsPlVc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hAUek_uWZfw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-13T18:56:13Z",
+        "channelId": "UCzHUL45GdSbPVt11WP5jKyQ",
+        "title": "Jak zacząć inwestować z 1 000 zł w Polsce",
+        "description": "Masz 1 000 zł i chcesz zacząć inwestować w Polsce? Ten praktyczny plan pokazuje, jak myśleć o poduszce finansowej, drogim ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hAUek_uWZfw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hAUek_uWZfw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hAUek_uWZfw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/hAUek_uWZfw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/hAUek_uWZfw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Złoty Doradca",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-13T18:56:13Z"
+      }
+    }
+  ]
+}

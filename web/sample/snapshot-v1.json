@@ -1,0 +1,3138 @@
+{
+ "readAt": "2026-11-21T18:25:00Z",
+ "source": "GET /v1/state z podglądu 127.0.0.1:8769 (kod sprzed kontraktu v2), przycięty",
+ "creators": [
+  {
+   "discoveredVia": "Apple Podcasts · inwestowanie",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.258910+00:00",
+    "query": "inwestowanie",
+    "rank": 6,
+    "responseSha256": "aa7ad985dc208fc486d44ae3b8721051ec393cf11c455e8c4ef920966c446073",
+    "sourceUrl": "https://itunes.apple.com/search?term=inwestowanie&country=PL&media=podcast&entity=podcast&limit=12"
+   },
+   "feedCheckedAt": "2026-11-21T16:09:06.613178+00:00",
+   "feedLanguage": "pl",
+   "feedUrl": "https://feeds.soundcloud.com/users/soundcloud:users:230274228/sounds.rss",
+   "firstDiscoveredAt": "2026-11-21T15:55:08.258910+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "apple-podcasts:1122194778",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Pytania do Eksperta (PDE) - Inwestowanie | Spekulacja | Analiza techniczna i fundamentalna | Psychologia inwestowania | Zarz",
+   "platform": "apple-podcasts",
+   "publisher": "prowebinar.pl",
+   "qualification": "polish_feed",
+   "url": "https://podcasts.apple.com/pl/podcast/id1122194778"
+  },
+  {
+   "discoveredVia": "Apple Podcasts · inwestowanie",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.258910+00:00",
+    "query": "inwestowanie",
+    "rank": 1,
+    "responseSha256": "aa7ad985dc208fc486d44ae3b8721051ec393cf11c455e8c4ef920966c446073",
+    "sourceUrl": "https://itunes.apple.com/search?term=inwestowanie&country=PL&media=podcast&entity=podcast&limit=12"
+   },
+   "feedCheckedAt": "2026-11-21T16:20:46.886619+00:00",
+   "feedLanguage": "pl",
+   "feedUrl": "https://www.spreaker.com/show/3289358/episodes/feed",
+   "firstDiscoveredAt": "2026-11-21T15:55:08.258910+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "apple-podcasts:1449711708",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Giełda, biznes, inwestowanie - maklerska",
+   "platform": "apple-podcasts",
+   "publisher": "Giełda, biznes, inwestycje",
+   "qualification": "polish_feed",
+   "url": "https://podcasts.apple.com/pl/podcast/id1449711708"
+  },
+  {
+   "discoveredVia": "Apple Podcasts · portfel ETF",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.285649+00:00",
+    "query": "portfel ETF",
+    "rank": 2,
+    "responseSha256": "7b3d6310768822dbee0468dc7b00014490151c20916de1580c604843893190be",
+    "sourceUrl": "https://itunes.apple.com/search?term=portfel+ETF&country=PL&media=podcast&entity=podcast&limit=12"
+   },
+   "feedCheckedAt": "2026-11-21T16:09:06.610248+00:00",
+   "feedLanguage": "pl",
+   "feedUrl": "https://www.spreaker.com/show/4086863/episodes/feed",
+   "firstDiscoveredAt": "2026-11-21T15:55:08.285649+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "apple-podcasts:1482028362",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Stockbroker - Artur Wiśniewski",
+   "platform": "apple-podcasts",
+   "publisher": "Artur Wiśniewski",
+   "qualification": "polish_feed",
+   "url": "https://podcasts.apple.com/pl/podcast/id1482028362"
+  },
+  {
+   "discoveredVia": "Apple Podcasts · inwestowanie",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.258910+00:00",
+    "query": "inwestowanie",
+    "rank": 5,
+    "responseSha256": "aa7ad985dc208fc486d44ae3b8721051ec393cf11c455e8c4ef920966c446073",
+    "sourceUrl": "https://itunes.apple.com/search?term=inwestowanie&country=PL&media=podcast&entity=podcast&limit=12"
+   },
+   "feedCheckedAt": "2026-11-21T16:20:46.001748+00:00",
+   "feedLanguage": "pl",
+   "feedUrl": "https://anchor.fm/s/23845a30/podcast/rss",
+   "firstDiscoveredAt": "2026-11-21T15:55:08.258910+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "apple-podcasts:1506475429",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Inwestomat – oszczędzanie, inwestowanie i wolność finansowa",
+   "platform": "apple-podcasts",
+   "publisher": "Mateusz Samołyk",
+   "qualification": "polish_feed",
+   "url": "https://podcasts.apple.com/pl/podcast/id1506475429"
+  },
+  {
+   "discoveredVia": "Apple Podcasts · inwestowanie",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.258910+00:00",
+    "query": "inwestowanie",
+    "rank": 7,
+    "responseSha256": "aa7ad985dc208fc486d44ae3b8721051ec393cf11c455e8c4ef920966c446073",
+    "sourceUrl": "https://itunes.apple.com/search?term=inwestowanie&country=PL&media=podcast&entity=podcast&limit=12"
+   },
+   "feedCheckedAt": "2026-11-21T16:20:45.698824+00:00",
+   "feedLanguage": "pl",
+   "feedUrl": "https://www.spreaker.com/show/5536843/episodes/feed",
+   "firstDiscoveredAt": "2026-11-21T15:55:08.258910+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "apple-podcasts:1621248711",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Inwestowanie w mieszkania",
+   "platform": "apple-podcasts",
+   "publisher": "Kasia i Jeremiasz Gorzędowscy",
+   "qualification": "polish_feed",
+   "url": "https://podcasts.apple.com/pl/podcast/id1621248711"
+  },
+  {
+   "discoveredVia": "Apple Podcasts · portfel ETF",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.285649+00:00",
+    "query": "portfel ETF",
+    "rank": 1,
+    "responseSha256": "7b3d6310768822dbee0468dc7b00014490151c20916de1580c604843893190be",
+    "sourceUrl": "https://itunes.apple.com/search?term=portfel+ETF&country=PL&media=podcast&entity=podcast&limit=12"
+   },
+   "feedCheckedAt": "2026-11-21T16:20:46.266221+00:00",
+   "feedLanguage": "pl",
+   "feedUrl": "https://www.spreaker.com/show/6039609/episodes/feed",
+   "firstDiscoveredAt": "2026-11-21T15:55:08.285649+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "apple-podcasts:1724408193",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "ETF Café",
+   "platform": "apple-podcasts",
+   "publisher": "atlasETF",
+   "qualification": "polish_feed",
+   "url": "https://podcasts.apple.com/pl/podcast/id1724408193"
+  },
+  {
+   "discoveredVia": "Apple Podcasts · inwestowanie",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.258910+00:00",
+    "query": "inwestowanie",
+    "rank": 4,
+    "responseSha256": "aa7ad985dc208fc486d44ae3b8721051ec393cf11c455e8c4ef920966c446073",
+    "sourceUrl": "https://itunes.apple.com/search?term=inwestowanie&country=PL&media=podcast&entity=podcast&limit=12"
+   },
+   "feedCheckedAt": "2026-11-21T16:20:46.491850+00:00",
+   "feedLanguage": "pl",
+   "feedUrl": "https://rss.buzzsprout.com/2251827.rss",
+   "firstDiscoveredAt": "2026-11-21T15:55:08.258910+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "apple-podcasts:1815233151",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Bliżej Rynków - Inwestowanie, Analizy Rynkowe, Edukacja",
+   "platform": "apple-podcasts",
+   "publisher": "XTB Polska",
+   "qualification": "polish_feed",
+   "url": "https://podcasts.apple.com/pl/podcast/id1815233151"
+  },
+  {
+   "discoveredVia": "Apple Podcasts · portfel ETF",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.285649+00:00",
+    "query": "portfel ETF",
+    "rank": 4,
+    "responseSha256": "7b3d6310768822dbee0468dc7b00014490151c20916de1580c604843893190be",
+    "sourceUrl": "https://itunes.apple.com/search?term=portfel+ETF&country=PL&media=podcast&entity=podcast&limit=12"
+   },
+   "feedCheckedAt": "2026-11-21T16:20:46.653130+00:00",
+   "feedLanguage": "pl",
+   "feedUrl": "https://www.spreaker.com/show/6644600/episodes/feed",
+   "firstDiscoveredAt": "2026-11-21T15:55:08.285649+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "apple-podcasts:1818755324",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Jak ochronić majątek?",
+   "platform": "apple-podcasts",
+   "publisher": "Rafał",
+   "qualification": "polish_feed",
+   "url": "https://podcasts.apple.com/pl/podcast/id1818755324"
+  },
+  {
+   "discoveredVia": "Apple Podcasts · obligacje",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.259971+00:00",
+    "query": "obligacje",
+    "rank": 1,
+    "responseSha256": "313e7af66558fac1c312a5bff0f6145e85371606247ecad9d9dd6b0609932d9a",
+    "sourceUrl": "https://itunes.apple.com/search?term=obligacje&country=PL&media=podcast&entity=podcast&limit=12"
+   },
+   "feedCheckedAt": "2026-11-21T16:20:46.710962+00:00",
+   "feedLanguage": "pl",
+   "feedUrl": "https://static.rmf.pl/portal/podcasts/xml/oszczednosciowe-obligacje-skarbowe-jak-inwestowac-rozsadnie.xml",
+   "firstDiscoveredAt": "2026-11-21T15:55:08.259971+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "apple-podcasts:1896858547",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Oszczędnościowe obligacje skarbowe – jak inwestować rozsądnie",
+   "platform": "apple-podcasts",
+   "publisher": "Radio Muzyka Fakty",
+   "qualification": "polish_feed",
+   "url": "https://podcasts.apple.com/pl/podcast/id1896858547"
+  },
+  {
+   "discoveredVia": "Apple Podcasts · inwestowanie",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.258910+00:00",
+    "query": "inwestowanie",
+    "rank": 2,
+    "responseSha256": "aa7ad985dc208fc486d44ae3b8721051ec393cf11c455e8c4ef920966c446073",
+    "sourceUrl": "https://itunes.apple.com/search?term=inwestowanie&country=PL&media=podcast&entity=podcast&limit=12"
+   },
+   "feedCheckedAt": "2026-11-21T16:20:47.773961+00:00",
+   "feedLanguage": "pl",
+   "feedUrl": "https://jakoszczedzacpieniadze.pl/feed/podcast",
+   "firstDiscoveredAt": "2026-11-21T15:55:08.258910+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "apple-podcasts:629003560",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "WNOP: Więcej niż oszczędzanie pieniędzy: Finanse osobiste | Zarabianie | Inwestowanie | Przedsiębiorczość",
+   "platform": "apple-podcasts",
+   "publisher": "Michał Szafrański",
+   "qualification": "polish_feed",
+   "url": "https://podcasts.apple.com/pl/podcast/id629003560"
+  },
+  {
+   "discoveredVia": "Apple Podcasts · inwestowanie",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.258910+00:00",
+    "query": "inwestowanie",
+    "rank": 3,
+    "responseSha256": "aa7ad985dc208fc486d44ae3b8721051ec393cf11c455e8c4ef920966c446073",
+    "sourceUrl": "https://itunes.apple.com/search?term=inwestowanie&country=PL&media=podcast&entity=podcast&limit=12"
+   },
+   "feedCheckedAt": "2026-11-21T16:09:07.778878+00:00",
+   "feedLanguage": "pl",
+   "feedUrl": "https://rss.libsyn.com/shows/60678/destinations/234534.xml",
+   "firstDiscoveredAt": "2026-11-21T15:55:08.258910+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "apple-podcasts:946719109",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Finanse Bardzo Osobiste: oszczędzanie | inwestowanie | pieniądze | dobre życie",
+   "platform": "apple-podcasts",
+   "publisher": "Marcin Iwuć",
+   "qualification": "polish_feed",
+   "url": "https://podcasts.apple.com/pl/podcast/id946719109"
+  },
+  {
+   "discoveredVia": "PeerTube · kryptowaluty",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.597134+00:00",
+    "query": "kryptowaluty",
+    "rank": 2,
+    "responseSha256": "9b09cfba4b04cb9d0437ae2df95addabca8e5527ea990d2e7d0c63c68401f279",
+    "sourceUrl": "https://sepiasearch.org/api/v1/search/videos?search=kryptowaluty&count=10&sort=-publishedAt&languageOneOf=pl"
+   },
+   "firstDiscoveredAt": "2026-11-21T15:55:08.597134+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "peertube:play.kontrabanda.net/shorts",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Kontrabanda Shorts",
+   "platform": "peertube",
+   "qualification": "topic_match",
+   "url": "https://play.kontrabanda.net/video-channels/shorts"
+  },
+  {
+   "discoveredVia": "PeerTube · kryptowaluty",
+   "discovery": {
+    "observedAt": "2026-11-21T15:55:08.597134+00:00",
+    "query": "kryptowaluty",
+    "rank": 1,
+    "responseSha256": "9b09cfba4b04cb9d0437ae2df95addabca8e5527ea990d2e7d0c63c68401f279",
+    "sourceUrl": "https://sepiasearch.org/api/v1/search/videos?search=kryptowaluty&count=10&sort=-publishedAt&languageOneOf=pl"
+   },
+   "firstDiscoveredAt": "2026-11-21T15:55:08.597134+00:00",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "peertube:video.internet-czas-dzialac.pl/internet_czas_dzialac",
+   "isNew": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Internet. Czas działać!",
+   "platform": "peertube",
+   "qualification": "topic_match",
+   "url": "https://video.internet-czas-dzialac.pl/video-channels/internet_czas_dzialac"
+  },
+  {
+   "discoveredVia": "Profil monitorowany",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "tiktok:comparic.pl",
+   "isNew": false,
+   "isSeed": true,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.455+00:00",
+   "mode": "live",
+   "name": "Comparic.pl",
+   "platform": "tiktok",
+   "url": "https://www.tiktok.com/@comparic.pl"
+  },
+  {
+   "discoveredVia": "Profil monitorowany",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "tiktok:tradewarspl",
+   "isNew": false,
+   "isSeed": true,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.455+00:00",
+   "mode": "live",
+   "name": "Trade Wars",
+   "platform": "tiktok",
+   "url": "https://www.tiktok.com/@tradewarspl"
+  },
+  {
+   "discoveredVia": "Domena na liście monitorowanej",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "www:bossa.pl",
+   "isNew": false,
+   "isSeed": true,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "DM BOŚ",
+   "platform": "web",
+   "url": "https://bossa.pl/"
+  },
+  {
+   "discoveredVia": "Domena na liście monitorowanej",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "www:financewell.pl",
+   "isNew": false,
+   "isSeed": true,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "FinanceWell",
+   "platform": "web",
+   "url": "https://financewell.pl/"
+  },
+  {
+   "discoveredVia": "Domena na liście monitorowanej",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "www:www.bdm.pl",
+   "isNew": false,
+   "isSeed": true,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "Dom Maklerski BDM",
+   "platform": "web",
+   "url": "https://www.bdm.pl/"
+  },
+  {
+   "discoveredVia": "Domena na liście monitorowanej",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "www:www.xtb.com",
+   "isNew": false,
+   "isSeed": true,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.456+00:00",
+   "mode": "live",
+   "name": "XTB",
+   "platform": "web",
+   "url": "https://www.xtb.com/pl"
+  },
+  {
+   "crosslinkDiscovery": {
+    "description": "Autor filmu według YouTube oEmbed; odnośnik nie dowodzi własności konta przez autora opisu.",
+    "discoveredAt": "2026-11-21T16:20:48.830937+00:00",
+    "method": "youtube_oembed",
+    "profileUrl": "https://www.youtube.com/@zainwestowani",
+    "references": [
+     {
+      "captureId": "apple-podcasts:1621248711:episode:340f0248dfb96ab50d476433983104fb",
+      "creatorId": "apple-podcasts:1621248711",
+      "url": "https://www.spreaker.com/episode/59-deweloper-na-obcasach-od-korporacji-do-deweloperki-gosc-marta-stryjniak--71363342"
+     }
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=gPv19SFBprA"
+   },
+   "discoveredVia": "Autor filmu wskazanego w opisie (YouTube oEmbed)",
+   "firstMode": "live",
+   "firstSeen": "2026-11-21T16:21:02.457+00:00",
+   "id": "youtube-candidate:358c94bc17f8d97afee2",
+   "isNew": true,
+   "isSeed": false,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.457+00:00",
+   "mode": "live",
+   "name": "Katarzyna i Jeremiasz Gorzędowscy",
+   "platform": "youtube",
+   "profileVerified": false,
+   "qualification": "candidate",
+   "status": "candidate",
+   "url": "https://www.youtube.com/@zainwestowani"
+  },
+  {
+   "discoveredVia": "Profil monitorowany",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "youtube:UCelOnoH_P-vJgAHSAcMKQiw",
+   "isNew": false,
+   "isSeed": true,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.455+00:00",
+   "mode": "live",
+   "name": "Comparic Rynki",
+   "platform": "youtube",
+   "url": "https://www.youtube.com/channel/UCelOnoH_P-vJgAHSAcMKQiw"
+  },
+  {
+   "discoveredVia": "Profil monitorowany",
+   "firstMode": "replay",
+   "firstSeen": "2026-11-21T16:03:05.777+00:00",
+   "id": "youtube:UCnmJzS-tFT7DlxIMFxYGcHw",
+   "isNew": false,
+   "isSeed": true,
+   "lastMode": "live",
+   "lastSeen": "2026-11-21T16:21:02.455+00:00",
+   "mode": "live",
+   "name": "DETERMINACJA",
+   "platform": "youtube",
+   "url": "https://www.youtube.com/channel/UCnmJzS-tFT7DlxIMFxYGcHw"
+  }
+ ],
+ "sources": [
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 1,
+   "creatorIds": [
+    "apple-podcasts:1506475429"
+   ],
+   "id": "apple-search:akcje dywidendowe",
+   "lastSuccessAt": "2026-11-21T16:20:44.293949+00:00",
+   "mode": "live",
+   "name": "Apple Podcasts · akcje dywidendowe",
+   "newCreators": 0,
+   "observedAt": "2026-11-21T16:20:44.293949+00:00",
+   "rawCount": 1,
+   "scope": "Katalog podcastów w polskim sklepie",
+   "status": "ok",
+   "url": "https://itunes.apple.com/search?term=akcje+dywidendowe&country=PL&media=podcast&entity=podcast&limit=12"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 7,
+   "creatorIds": [
+    "apple-podcasts:1449711708",
+    "apple-podcasts:629003560",
+    "apple-podcasts:946719109",
+    "apple-podcasts:1815233151",
+    "apple-podcasts:1506475429",
+    "apple-podcasts:1122194778",
+    "apple-podcasts:1621248711"
+   ],
+   "id": "apple-search:inwestowanie",
+   "lastSuccessAt": "2026-11-21T16:20:44.292209+00:00",
+   "mode": "live",
+   "name": "Apple Podcasts · inwestowanie",
+   "newCreators": 0,
+   "observedAt": "2026-11-21T16:20:44.292209+00:00",
+   "rawCount": 7,
+   "scope": "Katalog podcastów w polskim sklepie",
+   "status": "ok",
+   "url": "https://itunes.apple.com/search?term=inwestowanie&country=PL&media=podcast&entity=podcast&limit=12"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 1,
+   "creatorIds": [
+    "apple-podcasts:1896858547"
+   ],
+   "id": "apple-search:obligacje",
+   "lastSuccessAt": "2026-11-21T16:20:44.282483+00:00",
+   "mode": "live",
+   "name": "Apple Podcasts · obligacje",
+   "newCreators": 0,
+   "observedAt": "2026-11-21T16:20:44.282483+00:00",
+   "rawCount": 1,
+   "scope": "Katalog podcastów w polskim sklepie",
+   "status": "ok",
+   "url": "https://itunes.apple.com/search?term=obligacje&country=PL&media=podcast&entity=podcast&limit=12"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 4,
+   "creatorIds": [
+    "apple-podcasts:1724408193",
+    "apple-podcasts:1482028362",
+    "apple-podcasts:1506475429",
+    "apple-podcasts:1818755324"
+   ],
+   "id": "apple-search:portfel ETF",
+   "lastSuccessAt": "2026-11-21T16:20:44.284620+00:00",
+   "mode": "live",
+   "name": "Apple Podcasts · portfel ETF",
+   "newCreators": 0,
+   "observedAt": "2026-11-21T16:20:44.284620+00:00",
+   "rawCount": 12,
+   "scope": "Katalog podcastów w polskim sklepie",
+   "status": "ok",
+   "url": "https://itunes.apple.com/search?term=portfel+ETF&country=PL&media=podcast&entity=podcast&limit=12"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 1,
+   "error": "Nie sprawdzono w pełni 7 profili; kandydaci do potwierdzenia: 1. Szczegóły w statusach źródeł.",
+   "id": "crosslink-discovery",
+   "lastSuccessAt": null,
+   "mode": "live",
+   "name": "Odkrywanie profili z opisów",
+   "observedAt": "2026-11-21T16:20:48.831020+00:00",
+   "rawCount": 8,
+   "scope": "Publiczne odnośniki w opisach; brak domniemania własności",
+   "status": "partial",
+   "url": "https://www.youtube.com/"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 0,
+   "error": "HTTP 302",
+   "httpStatus": 302,
+   "id": "crosslink:0e31410b48dfd3b4a4f0",
+   "lastSuccessAt": null,
+   "mode": "live",
+   "name": "Odkrywanie profilu",
+   "observedAt": "2026-11-21T16:20:47.941571+00:00",
+   "scope": "Odnośnik w opisie publikacji",
+   "status": "error",
+   "url": "https://www.youtube.com/@ComparicRynki"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 0,
+   "error": "HTTP 302",
+   "httpStatus": 302,
+   "id": "crosslink:2be7748d081fb0d61dd6",
+   "lastSuccessAt": null,
+   "mode": "live",
+   "name": "Odkrywanie profilu",
+   "observedAt": "2026-11-21T16:20:48.069996+00:00",
+   "scope": "Odnośnik w opisie publikacji",
+   "status": "error",
+   "url": "https://www.youtube.com/@ComparicGlobalMarkets"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 0,
+   "error": "HTTP 302",
+   "httpStatus": 302,
+   "id": "crosslink:4f6dee4da491fe5d2ec8",
+   "lastSuccessAt": null,
+   "mode": "live",
+   "name": "Odkrywanie profilu",
+   "observedAt": "2026-11-21T16:20:48.740943+00:00",
+   "scope": "Odnośnik w opisie publikacji",
+   "status": "error",
+   "url": "https://www.youtube.com/c/maklerskaTV"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 0,
+   "error": "HTTP 302",
+   "httpStatus": 302,
+   "id": "crosslink:596cc8efc44580dfdabd",
+   "lastSuccessAt": null,
+   "mode": "live",
+   "name": "Odkrywanie profilu",
+   "observedAt": "2026-11-21T16:20:48.613731+00:00",
+   "scope": "Odnośnik w opisie publikacji",
+   "status": "error",
+   "url": "https://www.youtube.com/@ComparicGlobalnie"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 0,
+   "error": "HTTP 302",
+   "httpStatus": 302,
+   "id": "crosslink:5b0afce61dd74b29ad4c",
+   "lastSuccessAt": null,
+   "mode": "live",
+   "name": "Odkrywanie profilu",
+   "observedAt": "2026-11-21T16:20:48.339242+00:00",
+   "scope": "Odnośnik w opisie publikacji",
+   "status": "error",
+   "url": "https://www.youtube.com/@ComparicGielda"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 0,
+   "error": "HTTP 302",
+   "httpStatus": 302,
+   "id": "crosslink:9178ce25a57df40cf589",
+   "lastSuccessAt": null,
+   "mode": "live",
+   "name": "Odkrywanie profilu",
+   "observedAt": "2026-11-21T16:20:48.483259+00:00",
+   "scope": "Odnośnik w opisie publikacji",
+   "status": "error",
+   "url": "https://www.youtube.com/@PortfelPolaka"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 0,
+   "error": "HTTP 302",
+   "httpStatus": 302,
+   "id": "crosslink:ade5b5a6e75ff1f844dc",
+   "lastSuccessAt": null,
+   "mode": "live",
+   "name": "Odkrywanie profilu",
+   "observedAt": "2026-11-21T16:20:48.194271+00:00",
+   "scope": "Odnośnik w opisie publikacji",
+   "status": "error",
+   "url": "https://www.youtube.com/@ComparicBlockchainSpace"
+  },
+  {
+   "attempts": 1,
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 3,
+   "id": "local-public-asr",
+   "lastSuccessAt": "2026-11-21T16:21:02.458+00:00",
+   "mode": "live",
+   "name": "Odsłuch nowych podcastów · pierwsze 45 s",
+   "newSamples": 1,
+   "reused": 2,
+   "scope": "Do jednego nowego wycinka na skan. Reszta audycji poza zakresem.",
+   "status": "ok"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 1,
+   "id": "oembed:gPv19SFBprA",
+   "lastSuccessAt": "2026-11-21T16:20:48.830976+00:00",
+   "mode": "live",
+   "name": "Autor filmu YouTube",
+   "observedAt": "2026-11-21T16:20:48.830976+00:00",
+   "scope": "Autor z oEmbed; konto do potwierdzenia",
+   "status": "candidate",
+   "url": "https://www.youtube.com/watch?v=gPv19SFBprA"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 0,
+   "creatorIds": [],
+   "id": "peertube-search:ETF",
+   "indexedTotal": 0,
+   "lastSuccessAt": "2026-11-21T16:20:44.740019+00:00",
+   "mode": "live",
+   "name": "PeerTube · ETF",
+   "newCreators": 0,
+   "observedAt": "2026-11-21T16:20:44.740019+00:00",
+   "rawCount": 0,
+   "scope": "Tytuł i opis zaindeksowany przez Sepia Search",
+   "status": "empty",
+   "url": "https://sepiasearch.org/api/v1/search/videos?search=ETF&count=10&sort=-publishedAt&languageOneOf=pl"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 2,
+   "creatorIds": [
+    "peertube:video.internet-czas-dzialac.pl/internet_czas_dzialac",
+    "peertube:play.kontrabanda.net/shorts"
+   ],
+   "id": "peertube-search:kryptowaluty",
+   "indexedTotal": 2,
+   "lastSuccessAt": "2026-11-21T16:20:44.760448+00:00",
+   "mode": "live",
+   "name": "PeerTube · kryptowaluty",
+   "newCreators": 0,
+   "observedAt": "2026-11-21T16:20:44.760448+00:00",
+   "rawCount": 2,
+   "scope": "Tytuł i opis zaindeksowany przez Sepia Search",
+   "status": "ok",
+   "url": "https://sepiasearch.org/api/v1/search/videos?search=kryptowaluty&count=10&sort=-publishedAt&languageOneOf=pl"
+  },
+  {
+   "checkedAt": "2026-11-21T16:09:19.785+00:00",
+   "count": 3,
+   "id": "rss:apple-podcasts:1122194778",
+   "language": "pl",
+   "lastSuccessAt": "2026-11-21T16:09:06.613178+00:00",
+   "mode": "live",
+   "name": "RSS · Pytania do Eksperta (PDE) - Inwestowanie | Spekulacja | Analiza techniczna i fundamentalna | Psychologia inwestowania | Zarz",
+   "observedAt": "2026-11-21T16:09:06.613178+00:00",
+   "rawCount": 3,
+   "scope": "Tytuł i opis odcinka RSS",
+   "status": "ok",
+   "url": "https://feeds.soundcloud.com/users/soundcloud:users:230274228/sounds.rss"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 3,
+   "id": "rss:apple-podcasts:1449711708",
+   "language": "pl",
+   "lastSuccessAt": "2026-11-21T16:20:46.886619+00:00",
+   "mode": "live",
+   "name": "RSS · Giełda, biznes, inwestowanie - maklerska",
+   "observedAt": "2026-11-21T16:20:46.886619+00:00",
+   "rawCount": 58,
+   "scope": "Tytuł i opis odcinka RSS",
+   "status": "ok",
+   "url": "https://www.spreaker.com/show/3289358/episodes/feed"
+  },
+  {
+   "checkedAt": "2026-11-21T16:09:19.785+00:00",
+   "count": 3,
+   "id": "rss:apple-podcasts:1482028362",
+   "language": "pl",
+   "lastSuccessAt": "2026-11-21T16:09:06.610248+00:00",
+   "mode": "live",
+   "name": "RSS · Stockbroker - Artur Wiśniewski",
+   "observedAt": "2026-11-21T16:09:06.610248+00:00",
+   "rawCount": 93,
+   "scope": "Tytuł i opis odcinka RSS",
+   "status": "ok",
+   "url": "https://www.spreaker.com/show/4086863/episodes/feed"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 3,
+   "id": "rss:apple-podcasts:1506475429",
+   "language": "pl",
+   "lastSuccessAt": "2026-11-21T16:20:46.001748+00:00",
+   "mode": "live",
+   "name": "RSS · Inwestomat – oszczędzanie, inwestowanie i wolność finansowa",
+   "observedAt": "2026-11-21T16:20:46.001748+00:00",
+   "rawCount": 283,
+   "scope": "Tytuł i opis odcinka RSS",
+   "status": "ok",
+   "url": "https://anchor.fm/s/23845a30/podcast/rss"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 3,
+   "id": "rss:apple-podcasts:1621248711",
+   "language": "pl",
+   "lastSuccessAt": "2026-11-21T16:20:45.698824+00:00",
+   "mode": "live",
+   "name": "RSS · Inwestowanie w mieszkania",
+   "observedAt": "2026-11-21T16:20:45.698824+00:00",
+   "rawCount": 64,
+   "scope": "Tytuł i opis odcinka RSS",
+   "status": "ok",
+   "url": "https://www.spreaker.com/show/5536843/episodes/feed"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 3,
+   "id": "rss:apple-podcasts:1724408193",
+   "language": "pl",
+   "lastSuccessAt": "2026-11-21T16:20:46.266221+00:00",
+   "mode": "live",
+   "name": "RSS · ETF Café",
+   "observedAt": "2026-11-21T16:20:46.266221+00:00",
+   "rawCount": 106,
+   "scope": "Tytuł i opis odcinka RSS",
+   "status": "ok",
+   "url": "https://www.spreaker.com/show/6039609/episodes/feed"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 3,
+   "id": "rss:apple-podcasts:1815233151",
+   "language": "pl",
+   "lastSuccessAt": "2026-11-21T16:20:46.491850+00:00",
+   "mode": "live",
+   "name": "RSS · Bliżej Rynków - Inwestowanie, Analizy Rynkowe, Edukacja",
+   "observedAt": "2026-11-21T16:20:46.491850+00:00",
+   "rawCount": 108,
+   "scope": "Tytuł i opis odcinka RSS",
+   "status": "ok",
+   "url": "https://rss.buzzsprout.com/2251827.rss"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 3,
+   "id": "rss:apple-podcasts:1818755324",
+   "language": "pl",
+   "lastSuccessAt": "2026-11-21T16:20:46.653130+00:00",
+   "mode": "live",
+   "name": "RSS · Jak ochronić majątek?",
+   "observedAt": "2026-11-21T16:20:46.653130+00:00",
+   "rawCount": 31,
+   "scope": "Tytuł i opis odcinka RSS",
+   "status": "ok",
+   "url": "https://www.spreaker.com/show/6644600/episodes/feed"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.458+00:00",
+   "count": 2,
+   "id": "rss:apple-podcasts:1896858547",
+   "language": "pl",
+   "lastSuccessAt": "2026-11-21T16:20:46.710962+00:00",
+   "mode": "live",
+   "name": "RSS · Oszczędnościowe obligacje skarbowe – jak inwestować rozsądnie",
+   "observedAt": "2026-11-21T16:20:46.710962+00:00",
+   "rawCount": 2,
+   "scope": "Tytuł i opis odcinka RSS",
+   "status": "ok",
+   "url": "https://static.rmf.pl/portal/podcasts/xml/oszczednosciowe-obligacje-skarbowe-jak-inwestowac-rozsadnie.xml"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 3,
+   "id": "rss:apple-podcasts:629003560",
+   "language": "pl",
+   "lastSuccessAt": "2026-11-21T16:20:47.773961+00:00",
+   "mode": "live",
+   "name": "RSS · WNOP: Więcej niż oszczędzanie pieniędzy: Finanse osobiste | Zarabianie | Inwestowanie | Przedsiębiorczość",
+   "observedAt": "2026-11-21T16:20:47.773961+00:00",
+   "rawCount": 149,
+   "scope": "Tytuł i opis odcinka RSS",
+   "status": "ok",
+   "url": "https://jakoszczedzacpieniadze.pl/feed/podcast"
+  },
+  {
+   "checkedAt": "2026-11-21T16:09:19.785+00:00",
+   "count": 3,
+   "id": "rss:apple-podcasts:946719109",
+   "language": "pl",
+   "lastSuccessAt": "2026-11-21T16:09:07.778878+00:00",
+   "mode": "live",
+   "name": "RSS · Finanse Bardzo Osobiste: oszczędzanie | inwestowanie | pieniądze | dobre życie",
+   "observedAt": "2026-11-21T16:09:07.778878+00:00",
+   "rawCount": 362,
+   "scope": "Tytuł i opis odcinka RSS",
+   "status": "ok",
+   "url": "https://rss.libsyn.com/shows/60678/destinations/234534.xml"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 10,
+   "id": "tiktok:comparic.pl",
+   "lastSuccessAt": "2026-11-21T15:40:46.569420+00:00",
+   "mode": "live",
+   "name": "Comparic.pl",
+   "observedAt": "2026-11-21T15:40:46.569420+00:00",
+   "rawCount": 10,
+   "scope": "tiktok_embed_caption",
+   "status": "ok",
+   "transport": "watch_sqlite",
+   "url": "https://www.tiktok.com/embed/@comparic.pl"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 10,
+   "id": "tiktok:tradewarspl",
+   "lastSuccessAt": "2026-11-21T15:40:47.305416+00:00",
+   "mode": "live",
+   "name": "Trade Wars",
+   "observedAt": "2026-11-21T15:40:47.305416+00:00",
+   "rawCount": 10,
+   "scope": "tiktok_embed_caption",
+   "status": "ok",
+   "transport": "watch_sqlite",
+   "url": "https://www.tiktok.com/embed/@tradewarspl"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 0,
+   "id": "www:bossa.pl",
+   "lastSuccessAt": "2026-11-21T16:20:46.099873+00:00",
+   "mode": "live",
+   "name": "DM BOŚ",
+   "observedAt": "2026-11-21T16:20:46.099873+00:00",
+   "rawCount": 0,
+   "scope": "Tekst HTML strony firmy · jeden poziom od strony głównej",
+   "status": "empty",
+   "url": "https://bossa.pl/"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 1,
+   "id": "www:financewell.pl",
+   "lastSuccessAt": "2026-11-21T16:20:46.970218+00:00",
+   "mode": "live",
+   "name": "FinanceWell",
+   "observedAt": "2026-11-21T16:20:46.970218+00:00",
+   "rawCount": 2,
+   "scope": "Tekst HTML strony firmy · jeden poziom od strony głównej",
+   "status": "ok",
+   "url": "https://financewell.pl/"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 1,
+   "id": "www:www.bdm.pl",
+   "lastSuccessAt": "2026-11-21T16:20:46.570378+00:00",
+   "mode": "live",
+   "name": "Dom Maklerski BDM",
+   "observedAt": "2026-11-21T16:20:46.570378+00:00",
+   "rawCount": 2,
+   "scope": "Tekst HTML strony firmy · jeden poziom od strony głównej",
+   "status": "ok",
+   "url": "https://www.bdm.pl/"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 1,
+   "id": "www:www.xtb.com",
+   "lastSuccessAt": "2026-11-21T16:20:45.391912+00:00",
+   "mode": "live",
+   "name": "XTB",
+   "observedAt": "2026-11-21T16:20:45.391912+00:00",
+   "rawCount": 3,
+   "scope": "Tekst HTML strony firmy · jeden poziom od strony głównej",
+   "status": "ok",
+   "url": "https://www.xtb.com/pl"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 15,
+   "id": "youtube:UCelOnoH_P-vJgAHSAcMKQiw",
+   "lastSuccessAt": "2026-11-21T15:40:46.087767+00:00",
+   "mode": "live",
+   "name": "Comparic Rynki",
+   "observedAt": "2026-11-21T15:40:46.087767+00:00",
+   "rawCount": 15,
+   "scope": "youtube_atom_title_description",
+   "status": "ok",
+   "transport": "watch_sqlite",
+   "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCelOnoH_P-vJgAHSAcMKQiw"
+  },
+  {
+   "checkedAt": "2026-11-21T16:21:02.457+00:00",
+   "count": 15,
+   "id": "youtube:UCnmJzS-tFT7DlxIMFxYGcHw",
+   "lastSuccessAt": "2026-11-21T15:40:46.031996+00:00",
+   "mode": "live",
+   "name": "DETERMINACJA",
+   "observedAt": "2026-11-21T15:40:46.031996+00:00",
+   "rawCount": 15,
+   "scope": "youtube_atom_title_description",
+   "status": "ok",
+   "transport": "watch_sqlite",
+   "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnmJzS-tFT7DlxIMFxYGcHw"
+  }
+ ],
+ "scans": [
+  {
+   "id": "887f077481d240b28397afa28587ea60",
+   "scanId": "887f077481d240b28397afa28587ea60",
+   "mode": "live",
+   "status": "partial",
+   "createdAt": "2026-11-21T16:20:43.636+00:00",
+   "updatedAt": "2026-11-21T16:21:02.483+00:00",
+   "attempts": 1,
+   "captures": 78,
+   "changedFindings": 42,
+   "creatorsSeen": 22,
+   "firstLiveCreators": 1,
+   "newCreators": 1,
+   "warnings": [
+    "HTTP 302",
+    "HTTP 302",
+    "HTTP 302",
+    "HTTP 302",
+    "HTTP 302",
+    "HTTP 302",
+    "HTTP 302",
+    "Nie sprawdzono w pełni 7 profili; kandydaci do potwierdzenia: 1. Szczegóły w statusach źródeł."
+   ]
+  },
+  {
+   "id": "3d61118006c64181b8e8f60a995648ac",
+   "scanId": "3d61118006c64181b8e8f60a995648ac",
+   "mode": "live",
+   "status": "done",
+   "createdAt": "2026-11-21T16:09:01.737+00:00",
+   "updatedAt": "2026-11-21T16:09:19.810+00:00",
+   "attempts": 1,
+   "captures": 78,
+   "changedFindings": 77,
+   "creatorsSeen": 21,
+   "firstLiveCreators": 0,
+   "newCreators": 0
+  },
+  {
+   "id": "fc9d0b5dcd95477ba663c13632bc71c4",
+   "scanId": "fc9d0b5dcd95477ba663c13632bc71c4",
+   "mode": "replay",
+   "status": "done",
+   "createdAt": "2026-11-21T16:09:00.871+00:00",
+   "updatedAt": "2026-11-21T16:09:03.231+00:00",
+   "attempts": 1,
+   "captures": 17,
+   "changedFindings": 8,
+   "creatorsSeen": 21,
+   "firstLiveCreators": 0,
+   "newCreators": 0
+  },
+  {
+   "id": "522b1506fa0d4a538640794cf47c8820",
+   "scanId": "522b1506fa0d4a538640794cf47c8820",
+   "mode": "live",
+   "status": "done",
+   "createdAt": "2026-11-21T16:03:05.518+00:00",
+   "updatedAt": "2026-11-21T16:03:14.034+00:00",
+   "attempts": 1,
+   "captures": 78,
+   "changedFindings": 77,
+   "creatorsSeen": 21,
+   "newCreators": 0
+  },
+  {
+   "id": "d2e8e40222b245ed8ce231a291bd082b",
+   "scanId": "d2e8e40222b245ed8ce231a291bd082b",
+   "mode": "replay",
+   "status": "done",
+   "createdAt": "2026-11-21T16:03:05.508+00:00",
+   "updatedAt": "2026-11-21T16:03:05.781+00:00",
+   "attempts": 1,
+   "captures": 16,
+   "changedFindings": 16,
+   "creatorsSeen": 21,
+   "newCreators": 13
+  }
+ ],
+ "events": [
+  {
+   "id": 230,
+   "at": "2026-11-21T16:21:02.483+00:00",
+   "kind": "scan",
+   "ref": "887f077481d240b28397afa28587ea60",
+   "message": "Skan zakończony"
+  },
+  {
+   "id": 229,
+   "at": "2026-11-21T16:21:02.481+00:00",
+   "kind": "finding",
+   "ref": "apple-podcasts:1815233151:episode:1ca2a7601ef7837b1ca4af73c23ff747",
+   "message": "Jak Trump przegrał wybory? | Michał Stajniak"
+  },
+  {
+   "id": 228,
+   "at": "2026-11-21T16:21:02.480+00:00",
+   "kind": "finding",
+   "ref": "apple-podcasts:1724408193:episode:973c1877b4d5e1f72cd1fa023d8058a9",
+   "message": "Prawda czy ściema? Jak początkujący inwestor ma się nie pogubić"
+  },
+  {
+   "id": 227,
+   "at": "2026-11-21T16:21:02.480+00:00",
+   "kind": "finding",
+   "ref": "apple-podcasts:629003560:episode:278b6a9deb67ce79d0b77ae5da53d1c6",
+   "message": "Jak inflacja zmusiła Olę do leniwego pasywnego inwestowania [WNOP 147]"
+  },
+  {
+   "id": 226,
+   "at": "2026-11-21T16:21:02.480+00:00",
+   "kind": "finding",
+   "ref": "apple-podcasts:629003560:episode:dd717f53475e40aa4fd32508665d0b35",
+   "message": "Długa droga z karetki do… inwestowania – historia ratownika medycznego [WNOP 148]"
+  },
+  {
+   "id": 225,
+   "at": "2026-11-21T16:21:02.479+00:00",
+   "kind": "finding",
+   "ref": "apple-podcasts:629003560:episode:a349dd33058b81e8bacadbfd76b4e548",
+   "message": "Dlaczego warto przeczytać książkę o inwestowaniu „Po prostu kupuj” [WNOP 149]"
+  },
+  {
+   "id": 224,
+   "at": "2026-11-21T16:21:02.479+00:00",
+   "kind": "finding",
+   "ref": "apple-podcasts:1506475429:episode:d6dc07b5acf91a0eb0aeefad627c5f7f",
+   "message": "[#277] Strategia Momentum ze złotem . +20% rocznie w długim terminie!"
+  },
+  {
+   "id": 223,
+   "at": "2026-11-21T16:21:02.479+00:00",
+   "kind": "finding",
+   "ref": "apple-podcasts:1506475429:episode:b266151c4a5122ce38269eb57de19bc1",
+   "message": "[#278] Jaki ETF na bitcoina kupić? Ranking ETF i ETP 2026"
+  },
+  {
+   "id": 222,
+   "at": "2026-11-21T16:21:02.479+00:00",
+   "kind": "finding",
+   "ref": "apple-podcasts:1506475429:episode:7e697fd7bfc0beacda822f0be5470848",
+   "message": "[#279] Kredyt hipoteczny na 30 lat jest lepszy niż na 20. Niższa rata to większe bezpieczeństwo"
+  },
+  {
+   "id": 221,
+   "at": "2026-11-21T16:21:02.478+00:00",
+   "kind": "finding",
+   "ref": "apple-podcasts:1621248711:episode:340f0248dfb96ab50d476433983104fb",
+   "message": "#59 Deweloper na obcasach. Od korporacji do deweloperki.  | gość: Marta Stryjniak"
+  },
+  {
+   "id": 220,
+   "at": "2026-11-21T16:21:02.478+00:00",
+   "kind": "finding",
+   "ref": "apple-podcasts:1621248711:episode:76458ddb5155f2dc78ea96d730b79d8d",
+   "message": "#60 Jak sprzedaje się nieruchomości zabytkowe? | gość: Dominika Dąbrowska"
+  },
+  {
+   "id": 219,
+   "at": "2026-11-21T16:21:02.478+00:00",
+   "kind": "finding",
+   "ref": "apple-podcasts:1621248711:episode:b8e0ef4af5a6b174cf1caf7e373966f5",
+   "message": "#61 Od etatu w IT do własnej firmy w nieruchomościach | gość: Marcin Szczawiński"
+  }
+ ],
+ "calibration": {
+  "datasetId": "868efb7e2016",
+  "threshold": 60,
+  "tp": 5,
+  "fp": 1,
+  "tn": 4,
+  "fn": 3,
+  "n": 13,
+  "publicExamples": 4,
+  "syntheticExamples": 9,
+  "cost": 7,
+  "examples": [
+   {
+    "id": "yt-partner",
+    "title": "Partner odcinka DETERMINACJI",
+    "module": "M1",
+    "score": 94,
+    "expected": true,
+    "outcome": "tp",
+    "origin": "publiczny",
+    "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M",
+    "text": "Partnerem odcinka jest XTB"
+   },
+   {
+    "id": "kod",
+    "title": "Odsyłacz afiliacyjny",
+    "module": "M1",
+    "score": 66,
+    "expected": true,
+    "outcome": "tp",
+    "origin": "syntetyczny",
+    "url": null,
+    "text": "W opisie jest link afiliacyjny do założenia rachunku."
+   },
+   {
+    "id": "wynagrodzenie",
+    "title": "Rozliczenie za otwarcie rachunku",
+    "module": "M1",
+    "score": 12,
+    "expected": true,
+    "outcome": "fn",
+    "origin": "syntetyczny",
+    "url": null,
+    "text": "Przelew od domu maklerskiego dostaję za każdy nowy rachunek otwarty przez mój formularz."
+   },
+   {
+    "id": "krytyka",
+    "title": "Krytyczna wzmianka o marce",
+    "module": "M1",
+    "score": 24,
+    "expected": false,
+    "outcome": "tn",
+    "origin": "syntetyczny",
+    "url": null,
+    "text": "Porównuję XTB z konkurencją i krytykuję czas realizacji."
+   },
+   {
+    "id": "odmowa",
+    "title": "Zaprzeczenie partnerstwu",
+    "module": "M1",
+    "score": 12,
+    "expected": false,
+    "outcome": "tn",
+    "origin": "syntetyczny",
+    "url": null,
+    "text": "To nie jest reklama. Sam kupiłem kurs i oceniam jego koszty."
+   },
+   {
+    "id": "cytat",
+    "title": "Cytat z nieaktualnym kodem",
+    "module": "M1",
+    "score": 66,
+    "expected": false,
+    "outcome": "fp",
+    "origin": "syntetyczny",
+    "url": null,
+    "text": "Kiedyś na stronie widniał kod rabatowy, lecz cytuję go wyłącznie jako przykład z archiwum."
+   },
+   {
+    "id": "dom-etf",
+    "title": "Początkowy widok oferty ETF",
+    "module": "M2",
+    "score": 60,
+    "expected": true,
+    "outcome": "tp",
+    "origin": "publiczny",
+    "url": "https://www.xtb.com/pl/etf",
+    "text": "Inwestuj w fundusze ETF z prowizją 0%"
+   },
+   {
+    "id": "gwarancja",
+    "title": "Gwarancja organu",
+    "module": "M2",
+    "score": 88,
+    "expected": true,
+    "outcome": "tp",
+    "origin": "syntetyczny",
+    "url": null,
+    "text": "Reklama. Fikcyjny Dom S.A. KNF gwarantuje bezpieczeństwo środków."
+   },
+   {
+    "id": "neutralny-nadzor",
+    "title": "Neutralna informacja o nadzorze",
+    "module": "M2",
+    "score": 20,
+    "expected": false,
+    "outcome": "tn",
+    "origin": "syntetyczny",
+    "url": null,
+    "text": "Reklama. Fikcyjny Dom S.A. podlega nadzorowi KNF."
+   },
+   {
+    "id": "M3-portfel",
+    "title": "Oferta do sprawdzenia",
+    "module": "M3",
+    "score": 83,
+    "expected": true,
+    "outcome": "tp",
+    "origin": "syntetyczny",
+    "url": null,
+    "text": "Po ankiecie dobiorę dla ciebie konkretne akcje."
+   },
+   {
+    "id": "M3-edukacja",
+    "title": "Edukacja grupowa",
+    "module": "M3",
+    "score": 15,
+    "expected": false,
+    "outcome": "tn",
+    "origin": "syntetyczny",
+    "url": null,
+    "text": "Na przykładzie koszyka pokazujemy, czym jest dywersyfikacja. Nie dobieramy instrumentów dla konkretnych klientów."
+   },
+   {
+    "id": "M3-boś",
+    "title": "Zarejestrowany dom maklerski",
+    "module": "M3",
+    "score": 58,
+    "expected": true,
+    "outcome": "fn",
+    "origin": "publiczny",
+    "url": "https://bossa.pl/oferta/doradztwo-inwestycyjne",
+    "text": "Klienci usługi otrzymują wyselekcjonowaną listę papierów wartościowych składających się na portfel rekomendowany odpowiedni dla profilu inwestycyjnego Klienta."
+   },
+   {
+    "id": "M3-agent",
+    "title": "Kolizja nazw w wykazie agentów",
+    "module": "M3",
+    "score": 52,
+    "expected": true,
+    "outcome": "fn",
+    "origin": "publiczny",
+    "url": "https://financewell.pl/o-nas/",
+    "text": "jako agent firmy inwestycyjnej EVO Domu Maklerskiego S.A."
+   }
+  ],
+  "errors": [
+   {
+    "id": "wynagrodzenie",
+    "title": "Rozliczenie za otwarcie rachunku",
+    "module": "M1",
+    "score": 12,
+    "expected": true,
+    "outcome": "fn",
+    "origin": "syntetyczny",
+    "url": null,
+    "text": "Przelew od domu maklerskiego dostaję za każdy nowy rachunek otwarty przez mój formularz."
+   },
+   {
+    "id": "cytat",
+    "title": "Cytat z nieaktualnym kodem",
+    "module": "M1",
+    "score": 66,
+    "expected": false,
+    "outcome": "fp",
+    "origin": "syntetyczny",
+    "url": null,
+    "text": "Kiedyś na stronie widniał kod rabatowy, lecz cytuję go wyłącznie jako przykład z archiwum."
+   },
+   {
+    "id": "M3-boś",
+    "title": "Zarejestrowany dom maklerski",
+    "module": "M3",
+    "score": 58,
+    "expected": true,
+    "outcome": "fn",
+    "origin": "publiczny",
+    "url": "https://bossa.pl/oferta/doradztwo-inwestycyjne",
+    "text": "Klienci usługi otrzymują wyselekcjonowaną listę papierów wartościowych składających się na portfel rekomendowany odpowiedni dla profilu inwestycyjnego Klienta."
+   },
+   {
+    "id": "M3-agent",
+    "title": "Kolizja nazw w wykazie agentów",
+    "module": "M3",
+    "score": 52,
+    "expected": true,
+    "outcome": "fn",
+    "origin": "publiczny",
+    "url": "https://financewell.pl/o-nas/",
+    "text": "jako agent firmy inwestycyjnej EVO Domu Maklerskiego S.A."
+   }
+  ],
+  "description": "Próba ilustracyjna. Etykiety robocze autora reguł; brak niezależnej walidacji na przyszłym ruchu."
+ },
+ "legacyFindings": [
+  {
+   "contentHash": "f4a9940ed0b625754015a171c9528fd115f3e7f999a97d6c94c1fc3beaf1e921",
+   "creatorId": "youtube:UCelOnoH_P-vJgAHSAcMKQiw",
+   "description": "📢 Kolejna edycja Invest Cuffs w Krakowie 9-10 kwietnia, 2027 r. \n🎟️ https://tobilet.pl/kongres-invest-cuffs-krakow-2027 \n🎁 Kod \"Comparic\" daje 10% zniżki\n\nZobacz więcej ▶ https://www.youtube.com/playlist?list=PL9FSoLpeYDp4MybxPYOOIBjQ1l_laL5Iy\nSubskrybuj kanał 🔔 https://youtube.com/@ComparicRynki?sub_confirmation=1\nWSZYSTKIE FILMY ➡️ https://www.youtube.com/playlist?list=PL9FSoLpeYDp4fGs4qU4qfjOvWie8lPx1A\nRYNKI NA ŻYWO 🛑 https://youtube.com/@ComparicRynki/streams\n\n🔴 Strona internetowa: https://comparic.pl\n🔴 Facebook: https://facebook.com/ComparicPL \n🔴 Instagram: https://instagram.com/comparic.pl\n🔴 LinkedIn: https://linkedin.com/company/comparic-pl\n🔴 TikTok: https://tiktok.com/@comparic.pl\n🔴 ",
+   "descriptionDisclosureStatus": "not_found",
+   "descriptionScore": 12,
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "📢 Kolejna edycja Invest Cuffs w Krakowie 9-10 kwietnia, 2027 r.",
+     "url": "https://www.youtube.com/watch?v=AE02IBR__H4"
+    }
+   ],
+   "id": "youtube:AE02IBR__H4",
+   "materialType": "youtube_atom_title_description",
+   "mode": "live",
+   "module": "M1",
+   "observedAt": "2026-11-21T15:40:13.871623+00:00",
+   "platform": "youtube",
+   "possibleUndisclosedPromotion": false,
+   "provenance": {
+    "mode": "live",
+    "observedAt": "2026-11-21T15:40:13.871623+00:00",
+    "originalTextSha256": "f4a9940ed0b625754015a171c9528fd115f3e7f999a97d6c94c1fc3beaf1e921",
+    "responseSha256": "5faa437a27e2fc9944d196da158208cf6968001fff2ff144baf7e638c1c77742",
+    "scope": "youtube_atom_title_description",
+    "sourceUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCelOnoH_P-vJgAHSAcMKQiw",
+    "sourceVersion": 1,
+    "storage": "watch_sqlite",
+    "truncated": false
+   },
+   "publishedAt": "2026-11-21T12:39:21.000000+00:00",
+   "rulesVersion": "investwatch-rules-pl-1.2",
+   "score": 12,
+   "semantic": {
+    "class": "neutral",
+    "cosineSimilarity": 0.816889,
+    "evidence": {
+     "field": "description",
+     "kind": "semantic",
+     "text": "🎁 Kod \"Comparic\" daje 10% zniżki",
+     "url": "https://www.youtube.com/watch?v=AE02IBR__H4"
+    },
+    "fragment": "🎁 Kod \"Comparic\" daje 10% zniżki",
+    "label": "Neutralna wzmianka",
+    "leadingClass": "neutral",
+    "margin": 0.039977,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "partnership",
+     "cosineSimilarity": 0.776913
+    },
+    "scope": {
+     "fragments": 16,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "signalType": "none",
+   "speechOnlySignal": false,
+   "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+   "title": "ITR DROŻSZY W EUROPIE",
+   "url": "https://www.youtube.com/watch?v=AE02IBR__H4",
+   "version": 4,
+   "status": "new",
+   "revision": 4,
+   "updatedAt": "2026-11-21T16:21:02.468+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:03:05.779+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    },
+    {
+     "at": "2026-11-21T16:03:14.023+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":2}",
+     "version": 2
+    },
+    {
+     "at": "2026-11-21T16:09:19.796+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":3}",
+     "version": 3
+    },
+    {
+     "at": "2026-11-21T16:21:02.468+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":4}",
+     "version": 4
+    }
+   ]
+  },
+  {
+   "audioExcerptAvailable": true,
+   "audioHost": "api.spreaker.com",
+   "audioMimeType": "audio/mpeg",
+   "audioUrl": "https://api.spreaker.com/download/episode/75806332/moj_portfel_2026_v2_mp3.mp3",
+   "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "creatorId": "apple-podcasts:1482028362",
+   "description": "",
+   "descriptionDisclosureStatus": "unavailable",
+   "descriptionScore": 0,
+   "evidence": [],
+   "id": "apple-podcasts:1482028362:episode:6e1d815df49f36b62c5f3dfc766a42db",
+   "materialType": "podcast_rss_title_description",
+   "mode": "live",
+   "module": "M1",
+   "observedAt": "2026-11-21T16:09:06.610248+00:00",
+   "platform": "apple-podcasts",
+   "possibleUndisclosedPromotion": false,
+   "provenance": {
+    "itemGuid": "https://api.spreaker.com/episode/75806332",
+    "mode": "live",
+    "observedAt": "2026-11-21T16:09:06.610248+00:00",
+    "publicLinkScope": "episode",
+    "responseSha256": "a81bba97a850ac3711d9a53ea250ad101eafca3bada164ea40e69962a8df7723",
+    "scope": "podcast_rss_title_description",
+    "sourceUrl": "https://www.spreaker.com/show/4086863/episodes/feed",
+    "truncated": false
+   },
+   "publishedAt": "2026-10-16T06:58:30.000000+00:00",
+   "publisher": "Artur Wiśniewski",
+   "rulesVersion": "investwatch-rules-pl-1.1",
+   "score": 0,
+   "semantic": {
+    "class": "uncertain",
+    "cosineSimilarity": 0.852832,
+    "evidence": {
+     "field": "title",
+     "kind": "semantic",
+     "text": "#92 | Mój portfel 2026 - sukcesy i porażki",
+     "url": "https://www.spreaker.com/episode/92-moj-portfel-2026-sukcesy-i-porazki--75806332"
+    },
+    "fragment": "#92 | Mój portfel 2026 - sukcesy i porażki",
+    "label": "Zbliżone podobieństwa",
+    "leadingClass": "neutral",
+    "margin": 0.011803,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "no_partnership",
+     "cosineSimilarity": 0.841029
+    },
+    "scope": {
+     "fragments": 1,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "signalType": "none",
+   "speechOnlySignal": false,
+   "summary": "Brak treści do oceny w zbadanym zakresie.",
+   "title": "#92 | Mój portfel 2026 - sukcesy i porażki",
+   "transcriptSource": {
+    "language": "pl",
+    "mediaType": "text/plain",
+    "scope": "publisher_link",
+    "url": "https://stockbroker.pl/moj-portfel-2026-sukcesy-i-porazki/"
+   },
+   "url": "https://www.spreaker.com/episode/92-moj-portfel-2026-sukcesy-i-porazki--75806332",
+   "version": 2,
+   "status": "new",
+   "revision": 2,
+   "updatedAt": "2026-11-21T16:09:19.809+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:03:14.033+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    },
+    {
+     "at": "2026-11-21T16:09:19.809+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":2}",
+     "version": 2
+    }
+   ]
+  },
+  {
+   "contentHash": "382e2676a6a489a6a69846162113993be919307a269d8207ea86679b27ea90da",
+   "creatorId": "tiktok:comparic.pl",
+   "description": "ITR DROŻSZY W EUROPIE",
+   "descriptionDisclosureStatus": "not_found",
+   "descriptionScore": 12,
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "ITR DROŻSZY W EUROPIE",
+     "url": "https://www.tiktok.com/@comparic.pl/video/7709883346628693270"
+    }
+   ],
+   "id": "tiktok:7709883346628693270",
+   "materialType": "tiktok_embed_caption",
+   "mode": "live",
+   "module": "M1",
+   "observedAt": "2026-11-21T15:40:14.389382+00:00",
+   "platform": "tiktok",
+   "possibleUndisclosedPromotion": false,
+   "provenance": {
+    "mode": "live",
+    "observedAt": "2026-11-21T15:40:14.389382+00:00",
+    "originalTextSha256": "382e2676a6a489a6a69846162113993be919307a269d8207ea86679b27ea90da",
+    "responseSha256": "cf990fee6dee1cf6893577ccc72701545925fa0c2623f1d44457e9eb62f25638",
+    "scope": "tiktok_embed_caption",
+    "sourceUrl": "https://www.tiktok.com/embed/@comparic.pl",
+    "sourceVersion": 1,
+    "storage": "watch_sqlite",
+    "truncated": false
+   },
+   "publishedAt": null,
+   "rulesVersion": "investwatch-rules-pl-1.1",
+   "score": 12,
+   "semantic": {
+    "class": "uncertain",
+    "cosineSimilarity": 0.834677,
+    "evidence": {
+     "field": "title",
+     "kind": "semantic",
+     "text": "ITR DROŻSZY W EUROPIE",
+     "url": "https://www.tiktok.com/@comparic.pl/video/7709883346628693270"
+    },
+    "fragment": "ITR DROŻSZY W EUROPIE",
+    "label": "Zbliżone podobieństwa",
+    "leadingClass": "partnership",
+    "margin": 0.003984,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "neutral",
+     "cosineSimilarity": 0.830693
+    },
+    "scope": {
+     "fragments": 1,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "signalType": "none",
+   "speechOnlySignal": false,
+   "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+   "title": "ITR DROŻSZY W EUROPIE",
+   "url": "https://www.tiktok.com/@comparic.pl/video/7709883346628693270",
+   "version": 2,
+   "status": "new",
+   "revision": 2,
+   "updatedAt": "2026-11-21T16:09:19.800+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:03:14.027+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    },
+    {
+     "at": "2026-11-21T16:09:19.800+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":2}",
+     "version": 2
+    }
+   ]
+  },
+  {
+   "brand": "FinanceWell",
+   "contentHash": "b10e846e128f0e8fbd1f607cac8ff3f4c07eb5ff530c5106c3f5ca410afdf3f6",
+   "creatorId": "www:financewell.pl",
+   "description": "O nas | Financewell\nUporządkuj rodzinny majątek.\nFinanceWell jest kancelarią Familly Office, uprawnioną do wykonywania czynności pośrednictwa, w tym zawierania umów oraz odbierania oświadczeń woli, w zakresie działalności maklerskiej, jako agent firmy inwestycyjnej EVO Domu Maklerskiego S.A. mieszczącego się przy ul. Jana Pankiewicza 3 w Warszawie.\nFinancewell jest wpisany do rejestru agentów firm inwestycyjnych prowadzonych przez Komisję Nadzoru Finansowego oraz podlega kontroli przez Komisję Nadzoru Finansowego.\nGłówną przewagą Family Office jest całościowe spojrzenie na majątek klienta oraz koncentracja i koordynacja usług. Doświadczony i kompetentny zespół ludzi zapewnia umiejętność spro",
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "O nas | Financewell\nUporządkuj rodzinny majątek.\nFinanceWell jest kancelarią Familly Office, uprawnioną do wykonywania czynności pośrednictwa, w tym zawierania umów oraz odbierania oświadczeń woli, w zakresie działalnośc",
+     "url": "https://financewell.pl/o-nas/"
+    }
+   ],
+   "id": "web:financewell.pl/o-nas",
+   "materialType": "public_html_text",
+   "mode": "live",
+   "module": "M3",
+   "observedAt": "2026-11-21T16:20:46.970047+00:00",
+   "platform": "web",
+   "provenance": {
+    "discoveredFrom": "https://financewell.pl/",
+    "indexSha256": "990662f732081d59db8566bca25046ea3b4b585564f608d24d489fb03eb235e2",
+    "mode": "live",
+    "observedAt": "2026-11-21T16:20:46.970047+00:00",
+    "responseSha256": "1683ea83f9922edbf21be80a1e66e93f891aaebc726146f9bd70310392db04c2",
+    "scope": "public_html_text",
+    "sourceUrl": "https://financewell.pl/o-nas/",
+    "truncated": false
+   },
+   "publishedAt": null,
+   "rulesVersion": "investwatch-rules-pl-1.1",
+   "score": 18,
+   "semantic": {
+    "class": "personalized_advice",
+    "cosineSimilarity": 0.901085,
+    "evidence": {
+     "field": "description",
+     "kind": "semantic",
+     "text": "Naszymi parterami między innymi są czołowe Towarzystwa Funduszy Inwestycyjnych zarówno na rynku polskim jak i zagranicznym.",
+     "url": "https://financewell.pl/o-nas/"
+    },
+    "fragment": "Naszymi parterami między innymi są czołowe Towarzystwa Funduszy Inwestycyjnych zarówno na rynku polskim jak i zagranicznym.",
+    "label": "Wzmianka o indywidualnej rekomendacji",
+    "leadingClass": "personalized_advice",
+    "margin": 0.036584,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "general_education",
+     "cosineSimilarity": 0.864501
+    },
+    "scope": {
+     "fragments": 16,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "summary": "W dostępnym fragmencie brak jednoznacznej oferty indywidualnego doboru instrumentów.",
+   "title": "O nas | Financewell",
+   "url": "https://financewell.pl/o-nas/",
+   "version": 2,
+   "status": "new",
+   "revision": 2,
+   "updatedAt": "2026-11-21T16:09:19.788+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:03:14.018+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    },
+    {
+     "at": "2026-11-21T16:09:19.788+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":2}",
+     "version": 2
+    }
+   ]
+  },
+  {
+   "brand": "Dom Maklerski BDM",
+   "checkCounts": {
+    "brak danych": 19
+   },
+   "checks": [
+    {
+     "evidence": "Potrzebna nazwa prawna zweryfikowana dla tego wydawcy.",
+     "id": "1",
+     "label": "Nazwa prawna firmy",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "W dostępnym tekście brak jednoznacznej etykiety reklamy.",
+     "id": "2",
+     "label": "Rozpoznawalność reklamy",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Pozwala na stały kontakt z rynkiem przez bezpłatne aplikacje, materiały pomocnicze oraz doświadczonych maklerów. Sprawdź, czy ostrzeżenie dotyczy tego samego produktu i jest obok korzyści.",
+     "id": "3",
+     "label": "Korzyść a istotne ryzyko",
+     "mode": "wspomagany",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak pełnego rozkładu rozmiarów widocznych znaków w obszarze reklamy.",
+     "id": "4",
+     "label": "Ostrzeżenie a dominujący krój pisma",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak potwierdzonych kolorów tła, tekstu i stanu przesłonięcia.",
+     "id": "5",
+     "label": "Widoczność i kontrast",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak hierarchii elementu i potwierdzenia roli stopki lub przypisu.",
+     "id": "6",
+     "label": "Stopka i przypisy",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak dwóch stanów elementu przed interakcją i po niej.",
+     "id": "7",
+     "label": "Dostęp po interakcji",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak porównywalnych pomiarów na telefonie, tablecie i komputerze.",
+     "id": "8",
+     "label": "Ekran odbiorcy",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Adresat: nieustalony. Potrzebna ocena rozumienia przekazu przez odbiorcę.",
+     "id": "9",
+     "label": "Zrozumiałość dla adresata",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak rozpoznania języka dla obu jednoznacznie wydzielonych fragmentów.",
+     "id": "10",
+     "label": "Język materiału i ostrzeżenia",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "11",
+     "label": "Źródło i założenia porównania",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "12a",
+     "label": "Okres i źródło wyników historycznych",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak potwierdzenia prezentacji historii w walucie obcej lub brutto.",
+     "id": "12b",
+     "label": "Waluta i koszty wyniku historycznego",
+     "mode": "wspomagany",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "13",
+     "label": "Ekspozycja wyników historycznych",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "14",
+     "label": "Ostrzeżenie przy wynikach historycznych",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "15",
+     "label": "Prognoza i ostrzeżenie",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "16",
+     "label": "Zastrzeżenia podatkowe",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak jednoznacznej formuły w analizowanym zakresie.",
+     "id": "17",
+     "label": "Sugestia aprobaty przez organ",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    {
+     "evidence": "Brak jednoznacznej formuły w analizowanym zakresie.",
+     "id": "18",
+     "label": "Bezpieczeństwo dzięki nadzorowi",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    }
+   ],
+   "contentHash": "6103ced0bb680eb9a44d0c2bbe69280f2d607aaeac3d8b87e539382b07361fff",
+   "creatorId": "www:www.bdm.pl",
+   "description": "Rachunek inwestycyjny - BDM\nOstrzeżenie przed próbami wyłudzenia. Sprawdź.\nWybierz rachunek dopasowany do Twoich potrzeb\nRachunek inwestycyjny to bardzo wygodna forma zarządzania swoimi inwestycji.\nPozwala na stały kontakt z rynkiem przez bezpłatne aplikacje, materiały pomocnicze oraz doświadczonych maklerów.\nBDM OKI\nBDM OKI\nrachunek inwestycyjny\njuż wkrótce\nzapisz się aby być na bieżąco\nBDM Podstawowy\nBDM Podstawowy\nrachunek inwestycyjny\n0zł - prowadzenie rachunku przy jednej transakcji miesięcznie, 0,28% na akcje\nBDM ŻAK\nBDM ŻAK\noferta dla studentów do 26 roku życia\n0zł - prowadzenie rachunku,\n0,24% na akcje\nBDM Daytrader\nBDM Daytrader\njeśli kupujesz i sprzedajesz jednego dnia\n0,24% na akc",
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "Rachunek inwestycyjny - BDM\nOstrzeżenie przed próbami wyłudzenia. Sprawdź.\nWybierz rachunek dopasowany do Twoich potrzeb\nRachunek inwestycyjny to bardzo wygodna forma zarządzania swoimi inwestycji.\nPozwala na stały konta",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    }
+   ],
+   "id": "web:www.bdm.pl/rachunek-inwestycyjny",
+   "materialType": "public_html_text",
+   "mode": "live",
+   "module": "M2",
+   "observedAt": "2026-11-21T16:20:46.570229+00:00",
+   "platform": "web",
+   "provenance": {
+    "discoveredFrom": "https://www.bdm.pl/",
+    "indexSha256": "05ffaf9bc28d8cf8ce400d81c7631c7aa18d69edb85da70c9d866d01f63825d2",
+    "mode": "live",
+    "observedAt": "2026-11-21T16:20:46.570229+00:00",
+    "responseSha256": "708d8bbc032021f80ea8a562aa0f521331d5ccbc01ff597531965193ea53ee28",
+    "scope": "public_html_text",
+    "sourceUrl": "https://www.bdm.pl/rachunek-inwestycyjny",
+    "truncated": false
+   },
+   "publishedAt": null,
+   "rulesVersion": "investwatch-rules-pl-1.1",
+   "score": 20,
+   "semantic": {
+    "class": "benefit",
+    "cosineSimilarity": 0.889448,
+    "evidence": {
+     "field": "description",
+     "kind": "semantic",
+     "text": "0zł - prowadzenie rachunku przy jednej transakcji miesięcznie, 0,28% na akcje",
+     "url": "https://www.bdm.pl/rachunek-inwestycyjny"
+    },
+    "fragment": "0zł - prowadzenie rachunku przy jednej transakcji miesięcznie, 0,28% na akcje",
+    "label": "Deklaracja korzyści",
+    "leadingClass": "benefit",
+    "margin": 0.033272,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "risk_warning",
+     "cosineSimilarity": 0.856176
+    },
+    "scope": {
+     "fragments": 14,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "summary": "Katalog 19 kontroli. Obserwacje do przeglądu: 0. Brak danych: 19.",
+   "title": "Rachunek inwestycyjny - BDM",
+   "url": "https://www.bdm.pl/rachunek-inwestycyjny",
+   "version": 3,
+   "status": "new",
+   "revision": 3,
+   "updatedAt": "2026-11-21T16:09:19.788+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:03:05.779+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    },
+    {
+     "at": "2026-11-21T16:03:14.018+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":2}",
+     "version": 2
+    },
+    {
+     "at": "2026-11-21T16:09:19.788+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":3}",
+     "version": 3
+    }
+   ]
+  },
+  {
+   "brand": "XTB",
+   "checkCounts": {
+    "brak danych": 18,
+    "obserwacja": 1
+   },
+   "checks": [
+    {
+     "evidence": "Potrzebna nazwa prawna zweryfikowana dla tego wydawcy.",
+     "id": "1",
+     "label": "Nazwa prawna firmy",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "W dostępnym tekście brak jednoznacznej etykiety reklamy.",
+     "id": "2",
+     "label": "Rozpoznawalność reklamy",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Inwestuj w akcje Apple, Allegro i wiele innych z prowizją 0% wykorzystania CFD należy jednak pamiętać o zwiększonym ryzyku straty, jeśli inwestycja nie przyniesie oczekiwanych wyników. Sprawdź, czy ostrzeżenie dotyczy tego samego produktu i jest obok korzyści.",
+     "id": "3",
+     "label": "Korzyść a istotne ryzyko",
+     "mode": "wspomagany",
+     "state": "obserwacja",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak pełnego rozkładu rozmiarów widocznych znaków w obszarze reklamy.",
+     "id": "4",
+     "label": "Ostrzeżenie a dominujący krój pisma",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak potwierdzonych kolorów tła, tekstu i stanu przesłonięcia.",
+     "id": "5",
+     "label": "Widoczność i kontrast",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak hierarchii elementu i potwierdzenia roli stopki lub przypisu.",
+     "id": "6",
+     "label": "Stopka i przypisy",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak dwóch stanów elementu przed interakcją i po niej.",
+     "id": "7",
+     "label": "Dostęp po interakcji",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak porównywalnych pomiarów na telefonie, tablecie i komputerze.",
+     "id": "8",
+     "label": "Ekran odbiorcy",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Adresat: nieustalony. Inwestuj w spadki cen i wykorzystaj mechanizm dźwigni finansowej",
+     "id": "9",
+     "label": "Zrozumiałość dla adresata",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak rozpoznania języka dla obu jednoznacznie wydzielonych fragmentów.",
+     "id": "10",
+     "label": "Język materiału i ostrzeżenia",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "11",
+     "label": "Źródło i założenia porównania",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "12a",
+     "label": "Okres i źródło wyników historycznych",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak potwierdzenia prezentacji historii w walucie obcej lub brutto.",
+     "id": "12b",
+     "label": "Waluta i koszty wyniku historycznego",
+     "mode": "wspomagany",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "13",
+     "label": "Ekspozycja wyników historycznych",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "14",
+     "label": "Ostrzeżenie przy wynikach historycznych",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "15",
+     "label": "Prognoza i ostrzeżenie",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "16",
+     "label": "Zastrzeżenia podatkowe",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak jednoznacznej formuły w analizowanym zakresie.",
+     "id": "17",
+     "label": "Sugestia aprobaty przez organ",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    {
+     "evidence": "Brak jednoznacznej formuły w analizowanym zakresie.",
+     "id": "18",
+     "label": "Bezpieczeństwo dzięki nadzorowi",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/akcje"
+    }
+   ],
+   "contentHash": "d44b1bbdd923b6a173d481e79192c3295a35d64afb750645a3232e7633b1d06b",
+   "creatorId": "www:www.xtb.com",
+   "description": "Akcje – kupno i handel akcjami w aplikacji XTB | XTB\nAkcje\nETF-y\nSurowce\nKrypto\nIndeksy\nForex\n7300+ akcji\n16 najpopularniejszych giełd\nInwestuj w akcje Apple, Allegro i wiele innych z prowizją 0%\nKupuj akcje swoich ulubionych spółek i ciesz się prowizją 0% do kwoty 100 000 EUR obrotu miesięcznie dla rachunków w dowolnej walucie.*\nOtwórz bezpłatnie konto\nPobierz aplikację\n*Transakcje powyżej tego limitu zostaną obciążone prowizją w wysokości 0,2% (min.10 EUR). Może mieć zastosowanie 0,5% koszt przewalutowania.\nBrak prowizji\nKupuj akcje spółek z całego świata bez przepłacania.\nInwestowanie już od kwoty 1 PLN\nZamień nawet niewielkie kwoty w aktywa, które będą dla Ciebie pracować.\nSzeroki wybór ",
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "Akcje – kupno i handel akcjami w aplikacji XTB | XTB\nAkcje\nETF-y\nSurowce\nKrypto\nIndeksy\nForex\n7300+ akcji\n16 najpopularniejszych giełd\nInwestuj w akcje Apple, Allegro i wiele innych z prowizją 0%\nKupuj akcje swoich ulubi",
+     "url": "https://www.xtb.com/pl/akcje"
+    }
+   ],
+   "id": "web:www.xtb.com/pl/akcje",
+   "materialType": "public_html_text",
+   "mode": "live",
+   "module": "M2",
+   "observedAt": "2026-11-21T16:20:45.391175+00:00",
+   "platform": "web",
+   "provenance": {
+    "discoveredFrom": "https://www.xtb.com/pl",
+    "indexSha256": "1f69b33584ebb8d54525d25dc3a3fc55dc2124944b5e8e45e61270030d231bd8",
+    "mode": "live",
+    "observedAt": "2026-11-21T16:20:45.391175+00:00",
+    "responseSha256": "cce593fb3493b354db0c23f4dc270f3ccc5c453c52823ef482aa830217592828",
+    "scope": "public_html_text",
+    "sourceUrl": "https://www.xtb.com/pl/akcje",
+    "truncated": false
+   },
+   "publishedAt": null,
+   "rulesVersion": "investwatch-rules-pl-1.1",
+   "score": 51,
+   "semantic": {
+    "class": "benefit",
+    "cosineSimilarity": 0.894598,
+    "evidence": {
+     "field": "description",
+     "kind": "semantic",
+     "text": "Kupuj akcje spółek z całego świata bez przepłacania.",
+     "url": "https://www.xtb.com/pl/akcje"
+    },
+    "fragment": "Kupuj akcje spółek z całego świata bez przepłacania.",
+    "label": "Deklaracja korzyści",
+    "leadingClass": "benefit",
+    "margin": 0.047414,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "neutral",
+     "cosineSimilarity": 0.847184
+    },
+    "scope": {
+     "fragments": 16,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "summary": "Katalog 19 kontroli. Obserwacje do przeglądu: 1. Brak danych: 18.",
+   "title": "Akcje – kupno i handel akcjami w aplikacji XTB | XTB",
+   "url": "https://www.xtb.com/pl/akcje",
+   "version": 2,
+   "status": "new",
+   "revision": 2,
+   "updatedAt": "2026-11-21T16:09:19.787+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:03:14.018+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    },
+    {
+     "at": "2026-11-21T16:09:19.787+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":2}",
+     "version": 2
+    }
+   ]
+  },
+  {
+   "creatorId": "studio:pracownia",
+   "creatorName": "Pracownia edukacyjna",
+   "description": "Na przykładzie koszyka pokazujemy, czym jest dywersyfikacja. Nie dobieramy instrumentów dla konkretnych klientów.",
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "Na przykładzie koszyka pokazujemy, czym jest dywersyfikacja. Nie dobieramy instrumentów dla konkretnych klientów.",
+     "url": ""
+    }
+   ],
+   "id": "demo-pracownia-edukacja",
+   "mode": "replay",
+   "module": "M3",
+   "platform": "Studio",
+   "provenance": "Kontrola edukacyjna napisana przez zespół.",
+   "rulesVersion": "investwatch-rules-pl-1.1",
+   "score": 15,
+   "semantic": {
+    "class": "general_education",
+    "cosineSimilarity": 0.918639,
+    "evidence": {
+     "field": "description",
+     "kind": "semantic",
+     "text": "Nie dobieramy instrumentów dla konkretnych klientów.",
+     "url": ""
+    },
+    "fragment": "Nie dobieramy instrumentów dla konkretnych klientów.",
+    "label": "Edukacja lub zaprzeczenie doradztwu",
+    "leadingClass": "general_education",
+    "margin": 0.049392,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "personalized_advice",
+     "cosineSimilarity": 0.869248
+    },
+    "scope": {
+     "fragments": 3,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "summary": "Autor wyłącza indywidualne rekomendacje. Zachowaj zakres cytatu.",
+   "synthetic": true,
+   "title": "Warsztat o dywersyfikacji",
+   "url": "",
+   "version": 2,
+   "status": "new",
+   "revision": 2,
+   "updatedAt": "2026-11-21T16:09:03.231+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:03:05.781+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    },
+    {
+     "at": "2026-11-21T16:09:03.231+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":2}",
+     "version": 2
+    }
+   ]
+  },
+  {
+   "brand": "DM BOŚ",
+   "creatorId": "www:bossa.pl",
+   "creatorName": "DM BOŚ",
+   "description": "Klienci usługi otrzymują wyselekcjonowaną listę papierów wartościowych składających się na portfel rekomendowany odpowiedni dla profilu inwestycyjnego Klienta.",
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "owaną listę papierów wartościowych składających się na portfel rekomendowany odpowiedni dla profilu inwestycyjnego Klienta.",
+     "url": "https://bossa.pl/oferta/doradztwo-inwestycyjne"
+    },
+    {
+     "kind": "registry",
+     "observedAt": "2026-11-21",
+     "text": "DOM MAKLERSKI BANKU OCHRONY ŚRODOWISKA  S.A. · ID 8353437",
+     "url": "https://www.knf.gov.pl/api/podmioty-children?parentId=19&type=COMPANY&pageSize=100"
+    }
+   ],
+   "id": "public-bos-profil",
+   "mode": "replay",
+   "module": "M3",
+   "platform": "WWW",
+   "provenance": "Publiczna oferta, wycinek strony firmy i archiwalny wykaz krajowych domów maklerskich z 21 XI 2026.",
+   "registry": {
+    "checkedAt": "2026-11-21",
+    "entries": [
+     {
+      "category": "Firmy inwestycyjne - Domy maklerskie",
+      "id": 8353437,
+      "name": "DOM MAKLERSKI BANKU OCHRONY ŚRODOWISKA  S.A."
+     }
+    ],
+    "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+    "status": "do wyjaśnienia",
+    "url": "https://www.knf.gov.pl/api/podmioty-children?parentId=19&type=COMPANY&pageSize=100"
+   },
+   "rulesVersion": "investwatch-rules-pl-1.1",
+   "score": 58,
+   "semantic": {
+    "class": "personalized_advice",
+    "cosineSimilarity": 0.888283,
+    "evidence": {
+     "field": "description",
+     "kind": "semantic",
+     "text": "Klienci usługi otrzymują wyselekcjonowaną listę papierów wartościowych składających się na portfel rekomendowany odpowiedni dla profilu inwestycyjnego Klienta.",
+     "url": "https://bossa.pl/oferta/doradztwo-inwestycyjne"
+    },
+    "fragment": "Klienci usługi otrzymują wyselekcjonowaną listę papierów wartościowych składających się na portfel rekomendowany odpowiedni dla profilu inwestycyjnego Klienta.",
+    "label": "Wzmianka o indywidualnej rekomendacji",
+    "leadingClass": "personalized_advice",
+    "margin": 0.028283,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "general_education",
+     "cosineSimilarity": 0.86
+    },
+    "scope": {
+     "fragments": 2,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "summary": "Oferta spersonalizowana. Potwierdzono tożsamość w wykazie, zakres usługi wymaga weryfikacji.",
+   "title": "DM BOŚ · portfel rekomendowany",
+   "url": "https://bossa.pl/oferta/doradztwo-inwestycyjne",
+   "version": 2,
+   "status": "new",
+   "revision": 2,
+   "updatedAt": "2026-11-21T16:09:03.231+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:03:05.781+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    },
+    {
+     "at": "2026-11-21T16:09:03.231+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":2}",
+     "version": 2
+    }
+   ]
+  },
+  {
+   "brand": "FinanceWell",
+   "creatorId": "www:financewell.pl",
+   "creatorName": "FinanceWell",
+   "description": "jako agent firmy inwestycyjnej EVO Domu Maklerskiego S.A.",
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "jako agent firmy inwestycyjnej EVO Domu Maklerskiego S.A.",
+     "url": "https://financewell.pl/o-nas/"
+    },
+    {
+     "kind": "registry",
+     "observedAt": "2026-11-21",
+     "text": "FINANCEWELL SP. Z O.O. · ID 4844186 · EVO Dom Maklerski S.A.",
+     "url": "https://www.knf.gov.pl/api/podmioty-children?parentId=6&type=COMPANY&pageSize=100"
+    },
+    {
+     "kind": "registry",
+     "observedAt": "2026-11-21",
+     "text": "FINANCEWELL SP. Z O.O. SP.K. · ID 4844187 · EVO Dom Maklerski S.A.",
+     "url": "https://www.knf.gov.pl/api/podmioty-children?parentId=6&type=COMPANY&pageSize=100"
+    }
+   ],
+   "id": "public-financewell-agent",
+   "mode": "replay",
+   "module": "M3",
+   "platform": "WWW",
+   "provenance": "Publiczna strona o firmie. Wycinek opisu i krajowy wykaz agentów z sondy 21 XI 2026.",
+   "registry": {
+    "checkedAt": "2026-11-21",
+    "entries": [
+     {
+      "category": "Agenci firm inwestycyjnych - osoby prawne i jednostki organizacyjne nieposiadające osobowości prawnej",
+      "id": 4844186,
+      "name": "FINANCEWELL SP. Z O.O.",
+      "principal": "EVO Dom Maklerski S.A."
+     },
+     {
+      "category": "Agenci firm inwestycyjnych - osoby prawne i jednostki organizacyjne nieposiadające osobowości prawnej",
+      "id": 4844187,
+      "name": "FINANCEWELL SP. Z O.O. SP.K.",
+      "principal": "EVO Dom Maklerski S.A."
+     }
+    ],
+    "sourceFile": "data/probe-snapshots/knf/knf_agenci_prawne.json",
+    "status": "do wyjaśnienia",
+    "url": "https://www.knf.gov.pl/api/podmioty-children?parentId=6&type=COMPANY&pageSize=100"
+   },
+   "rulesVersion": "investwatch-rules-pl-1.1",
+   "score": 52,
+   "semantic": {
+    "class": "uncertain",
+    "cosineSimilarity": 0.851429,
+    "evidence": {
+     "field": "title",
+     "kind": "semantic",
+     "text": "FinanceWell · ustalenie tożsamości",
+     "url": "https://financewell.pl/o-nas/"
+    },
+    "fragment": "FinanceWell · ustalenie tożsamości",
+    "label": "Zbliżone podobieństwa",
+    "leadingClass": "personalized_advice",
+    "margin": 0.010049,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "neutral",
+     "cosineSimilarity": 0.841379
+    },
+    "scope": {
+     "fragments": 2,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "summary": "Dwa podmioty o podobnej nazwie. Ustal operatora i zakres czynności agenta.",
+   "title": "FinanceWell · ustalenie tożsamości",
+   "url": "https://financewell.pl/o-nas/",
+   "version": 2,
+   "status": "new",
+   "revision": 2,
+   "updatedAt": "2026-11-21T16:09:03.231+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:03:05.780+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    },
+    {
+     "at": "2026-11-21T16:09:03.231+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":2}",
+     "version": 2
+    }
+   ]
+  },
+  {
+   "asrModel": "vosk-model-small-pl-0.22",
+   "brand": "Aurora",
+   "creatorId": "studio:pracownia",
+   "creatorName": "Pracownia rynku",
+   "description": "Krótka wskazówka dla początkujących uczestników rynku.",
+   "descriptionDisclosureStatus": "not_found",
+   "descriptionScore": 12,
+   "evidence": [
+    {
+     "confidence": 0.991,
+     "end": 3.6,
+     "kind": "audio",
+     "start": 0.33,
+     "text": "pobierz aplikację aurora i otwórz rachunek",
+     "url": "/media/wezwanie.mp4#t=0.33,3.6"
+    },
+    {
+     "kind": "description",
+     "text": "Krótka wskazówka dla początkujących uczestników rynku.",
+     "url": "/media/wezwanie.mp4"
+    }
+   ],
+   "id": "demo-aurora-kod",
+   "mediaSha256": "a1d84acd1f86d14b4ea1e03e6c3434f6a6e35f924dfa86fe17564ce84392d208",
+   "mediaUrl": "/media/wezwanie.mp4",
+   "modalityComparison": {
+    "delta": 62,
+    "descriptionOnly": 12,
+    "withAudio": 74
+   },
+   "mode": "replay",
+   "module": "M1",
+   "platform": "Studio",
+   "possibleUndisclosedPromotion": true,
+   "provenance": "Fikcyjny materiał zespołu. Polski głos syntetyczny i pojedyncza wzmianka w nagraniu. Rzeczywisty odczyt Vosk PL z dołączonego MP4.",
+   "rulesVersion": "investwatch-rules-pl-1.1",
+   "score": 74,
+   "segments": [
+    {
+     "confidence": 0.991,
+     "end": 3.6,
+     "start": 0.33,
+     "text": "pobierz aplikację aurora i otwórz rachunek"
+    }
+   ],
+   "semantic": {
+    "class": "uncertain",
+    "cosineSimilarity": 0.877855,
+    "evidence": {
+     "field": "description",
+     "kind": "semantic",
+     "text": "Krótka wskazówka dla początkujących uczestników rynku.",
+     "url": "/media/wezwanie.mp4"
+    },
+    "fragment": "Krótka wskazówka dla początkujących uczestników rynku.",
+    "label": "Zbliżone podobieństwa",
+    "leadingClass": "neutral",
+    "margin": 0.014126,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "partnership",
+     "cosineSimilarity": 0.86373
+    },
+    "scope": {
+     "fragments": 2,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "signalType": "brand_cta",
+   "speechOnlySignal": true,
+   "summary": "Zachęta do działania przy wzmiance o marce w nagraniu. W zbadanym opisie nie wykryto oznaczenia. Sprawdź charakter relacji.",
+   "synthetic": true,
+   "title": "Od czego zacząć?",
+   "url": "/media/wezwanie.mp4",
+   "version": 1,
+   "status": "new",
+   "revision": 1,
+   "updatedAt": "2026-11-21T16:09:03.230+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:09:03.230+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    }
+   ]
+  },
+  {
+   "brand": "XTB",
+   "checkCounts": {
+    "brak danych": 17,
+    "obserwacja": 2
+   },
+   "checks": [
+    {
+     "evidence": "W dostępnej treści nie znaleziono ustalonej nazwy prawnej.",
+     "id": "1",
+     "label": "Nazwa prawna firmy",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "W dostępnym tekście brak jednoznacznej etykiety reklamy.",
+     "id": "2",
+     "label": "Rozpoznawalność reklamy",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Inwestuj w fundusze ETF z prowizją 0% Sprawdź, czy ostrzeżenie dotyczy tego samego produktu i jest obok korzyści.",
+     "id": "3",
+     "label": "Korzyść a istotne ryzyko",
+     "mode": "wspomagany",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak pełnego rozkładu rozmiarów widocznych znaków w obszarze reklamy.",
+     "id": "4",
+     "label": "Ostrzeżenie a dominujący krój pisma",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Element zawierający frazę „ryzyk” w początkowym układzie. 1440×900 / 16px / y=1955 · 768×1024 / 14px / y=1719 · 390×844 / 14px / y=1935. Kontrast i zasłonięcie wymagają osobnego pomiaru.",
+     "id": "5",
+     "label": "Widoczność i kontrast",
+     "measurements": [
+      {
+       "bbox": [
+        198,
+        1955,
+        315,
+        120
+       ],
+       "domUrl": "/evidence/browser/xtb-1440.json",
+       "inFrame": false,
+       "px": "16px",
+       "url": "/evidence/browser/xtb-1440.png",
+       "viewport": "1440×900"
+      },
+      {
+       "bbox": [
+        116,
+        1719,
+        504,
+        60
+       ],
+       "domUrl": "/evidence/browser/xtb-768.json",
+       "inFrame": false,
+       "px": "14px",
+       "url": "/evidence/browser/xtb-768.png",
+       "viewport": "768×1024"
+      },
+      {
+       "bbox": [
+        64,
+        1935,
+        230,
+        140
+       ],
+       "domUrl": "/evidence/browser/xtb-390.json",
+       "inFrame": false,
+       "px": "14px",
+       "url": "/evidence/browser/xtb-390.png",
+       "viewport": "390×844"
+      }
+     ],
+     "mode": "wspomagany",
+     "state": "obserwacja",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak hierarchii elementu i potwierdzenia roli stopki lub przypisu.",
+     "id": "6",
+     "label": "Stopka i przypisy",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak dwóch stanów elementu przed interakcją i po niej.",
+     "id": "7",
+     "label": "Dostęp po interakcji",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "1440×900 / 16px / y=1955 · 768×1024 / 14px / y=1719 · 390×844 / 14px / y=1935. Zweryfikuj czytelność po przewinięciu na każdym ekranie.",
+     "id": "8",
+     "label": "Ekran odbiorcy",
+     "measurements": [
+      {
+       "bbox": [
+        198,
+        1955,
+        315,
+        120
+       ],
+       "domUrl": "/evidence/browser/xtb-1440.json",
+       "inFrame": false,
+       "px": "16px",
+       "url": "/evidence/browser/xtb-1440.png",
+       "viewport": "1440×900"
+      },
+      {
+       "bbox": [
+        116,
+        1719,
+        504,
+        60
+       ],
+       "domUrl": "/evidence/browser/xtb-768.json",
+       "inFrame": false,
+       "px": "14px",
+       "url": "/evidence/browser/xtb-768.png",
+       "viewport": "768×1024"
+      },
+      {
+       "bbox": [
+        64,
+        1935,
+        230,
+        140
+       ],
+       "domUrl": "/evidence/browser/xtb-390.json",
+       "inFrame": false,
+       "px": "14px",
+       "url": "/evidence/browser/xtb-390.png",
+       "viewport": "390×844"
+      }
+     ],
+     "mode": "wspomagany",
+     "state": "obserwacja",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Adresat: nieustalony. Potrzebna ocena rozumienia przekazu przez odbiorcę.",
+     "id": "9",
+     "label": "Zrozumiałość dla adresata",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak rozpoznania języka dla obu jednoznacznie wydzielonych fragmentów.",
+     "id": "10",
+     "label": "Język materiału i ostrzeżenia",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "11",
+     "label": "Źródło i założenia porównania",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "12a",
+     "label": "Okres i źródło wyników historycznych",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak potwierdzenia prezentacji historii w walucie obcej lub brutto.",
+     "id": "12b",
+     "label": "Waluta i koszty wyniku historycznego",
+     "mode": "wspomagany",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "13",
+     "label": "Ekspozycja wyników historycznych",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "14",
+     "label": "Ostrzeżenie przy wynikach historycznych",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "15",
+     "label": "Prognoza i ostrzeżenie",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak tego kontekstu w dostępnym fragmencie.",
+     "id": "16",
+     "label": "Zastrzeżenia podatkowe",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak jednoznacznej formuły w analizowanym zakresie.",
+     "id": "17",
+     "label": "Sugestia aprobaty przez organ",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "evidence": "Brak jednoznacznej formuły w analizowanym zakresie.",
+     "id": "18",
+     "label": "Bezpieczeństwo dzięki nadzorowi",
+     "mode": "ręczny",
+     "state": "brak danych",
+     "url": "https://www.xtb.com/pl/etf"
+    }
+   ],
+   "creatorId": "www:xtb.com",
+   "creatorName": "XTB",
+   "description": "Inwestuj w fundusze ETF z prowizją 0%",
+   "evidence": [
+    {
+     "kind": "description",
+     "text": "Inwestuj w fundusze ETF z prowizją 0%",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    {
+     "domUrl": "/evidence/browser/xtb-1440.json",
+     "kind": "screenshot",
+     "sha256": "190ea12e24765f99d47e98ff5d73ac423cdb93cb8a200d63696e920b82e72d39",
+     "text": "Pierwszy widok strony · 1440 × 900 px",
+     "url": "/evidence/browser/xtb-1440.png"
+    },
+    {
+     "domUrl": "/evidence/browser/xtb-768.json",
+     "kind": "screenshot",
+     "sha256": "95c6c422d42899a270138e490d1db1a9e107be1e8029c284ff95da199b64b571",
+     "text": "Pierwszy widok strony · 768 × 1024 px",
+     "url": "/evidence/browser/xtb-768.png"
+    },
+    {
+     "domUrl": "/evidence/browser/xtb-390.json",
+     "kind": "screenshot",
+     "sha256": "c33ed1efdb6eefd9a5747e412f3c11b2725333e9513f1965d003bb7101438a6f",
+     "text": "Pierwszy widok strony · 390 × 844 px",
+     "url": "/evidence/browser/xtb-390.png"
+    }
+   ],
+   "id": "dom-xtb-etf",
+   "legalName": "XTB S.A.",
+   "mode": "replay",
+   "module": "M2",
+   "observedAt": "2026-11-21T15:17:41.787Z",
+   "platform": "WWW",
+   "provenance": "Publiczna strona firmy. Nagłówek z DOM i trzy rzeczywiste zrzuty Chromium z 21 XI 2026.",
+   "rulesVersion": "investwatch-rules-pl-1.1",
+   "score": 60,
+   "semantic": {
+    "class": "benefit",
+    "cosineSimilarity": 0.884927,
+    "evidence": {
+     "field": "description",
+     "kind": "semantic",
+     "text": "Inwestuj w fundusze ETF z prowizją 0%",
+     "url": "https://www.xtb.com/pl/etf"
+    },
+    "fragment": "Inwestuj w fundusze ETF z prowizją 0%",
+    "label": "Deklaracja korzyści",
+    "leadingClass": "benefit",
+    "margin": 0.030965,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "risk_warning",
+     "cosineSimilarity": 0.853962
+    },
+    "scope": {
+     "fragments": 2,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "summary": "Katalog 19 kontroli. Obserwacje do przeglądu: 2. Brak danych: 17.",
+   "title": "Fundusze ETF z prowizją 0%",
+   "url": "https://www.xtb.com/pl/etf",
+   "version": 2,
+   "views": [
+    {
+     "domExtractFile": "browser/xtb-1440.json",
+     "domExtractHash": "f2eb7e2c8b54eedab4f4c9ada159bc0c8b64de9298076d6b5acdbc9aad3290f3",
+     "domHash": "4817725396970a74a6841ded892c8eb40b9e61d2eebbd8e17eebd4f93c850e68",
+     "height": 900,
+     "http": 200,
+     "measurement": [
+      {
+       "bbox": [
+        198,
+        1955,
+        315,
+        120
+       ],
+       "pattern": "ryzyk",
+       "px": "16px",
+       "sample": "Łatwo kupuj i sprzedawaj fundusze ETF oraz sprawdzaj wa",
+       "tag": "P"
+      },
+      {
+       "bbox": [
+        88,
+        360,
+        500,
+        222
+       ],
+       "pattern": "inwestuj w fundusze",
+       "px": "72px",
+       "sample": "Inwestuj w fundusze ETF z prowizją 0%",
+       "tag": "H1"
+      }
+     ],
+     "screenshotFile": "browser/xtb-1440.png",
+     "screenshotHash": "190ea12e24765f99d47e98ff5d73ac423cdb93cb8a200d63696e920b82e72d39",
+     "title": "Fundusze ETF w aplikacji XTB - inwestowanie online | XTB",
+     "url": "https://www.xtb.com/pl/etf",
+     "width": 1440
+    },
+    {
+     "domExtractFile": "browser/xtb-768.json",
+     "domExtractHash": "9d3fdb58c64fa3ad5b260afd6e30cfa68565283dc637494a49c6828c8b696770",
+     "domHash": "1b3cb220bfda8d4cfe3c1a5f2b96d3220a00c00f77417e8354bc3e9fc938bea8",
+     "height": 1024,
+     "http": 200,
+     "measurement": [
+      {
+       "bbox": [
+        116,
+        1719,
+        504,
+        60
+       ],
+       "pattern": "ryzyk",
+       "px": "14px",
+       "sample": "Łatwo kupuj i sprzedawaj fundusze ETF oraz sprawdzaj wa",
+       "tag": "P"
+      },
+      {
+       "bbox": [
+        -205,
+        3650,
+        341,
+        80
+       ],
+       "pattern": "inwestuj w fundusze",
+       "px": "14px",
+       "sample": "Inwestuj w fundusze z dowolnego kraju, niezależnie od w",
+       "tag": "P"
+      }
+     ],
+     "screenshotFile": "browser/xtb-768.png",
+     "screenshotHash": "95c6c422d42899a270138e490d1db1a9e107be1e8029c284ff95da199b64b571",
+     "title": "Fundusze ETF w aplikacji XTB - inwestowanie online | XTB",
+     "url": "https://www.xtb.com/pl/etf",
+     "width": 768
+    },
+    {
+     "domExtractFile": "browser/xtb-390.json",
+     "domExtractHash": "f2bafc9519c693e18aabd8d103c22051021f740e643434b953cbbf297fef1a86",
+     "domHash": "b521b6d6ae7f6cb01c824bf279e0ca1afe6f2537f2e3e25decad12f480788fe0",
+     "height": 844,
+     "http": 200,
+     "measurement": [
+      {
+       "bbox": [
+        64,
+        1935,
+        230,
+        140
+       ],
+       "pattern": "ryzyk",
+       "px": "14px",
+       "sample": "Łatwo kupuj i sprzedawaj fundusze ETF oraz sprawdzaj wa",
+       "tag": "P"
+      },
+      {
+       "bbox": [
+        -273,
+        3830,
+        260,
+        100
+       ],
+       "pattern": "inwestuj w fundusze",
+       "px": "14px",
+       "sample": "Inwestuj w fundusze z dowolnego kraju, niezależnie od w",
+       "tag": "P"
+      }
+     ],
+     "screenshotFile": "browser/xtb-390.png",
+     "screenshotHash": "c33ed1efdb6eefd9a5747e412f3c11b2725333e9513f1965d003bb7101438a6f",
+     "title": "Fundusze ETF w aplikacji XTB - inwestowanie online | XTB",
+     "url": "https://www.xtb.com/pl/etf",
+     "width": 390
+    }
+   ],
+   "status": "new",
+   "revision": 2,
+   "updatedAt": "2026-11-21T16:09:03.230+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:03:05.780+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    },
+    {
+     "at": "2026-11-21T16:09:03.230+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":2}",
+     "version": 2
+    }
+   ]
+  },
+  {
+   "asrModel": "vosk-model-small-pl-0.22",
+   "brand": "Aurora",
+   "contractDemo": true,
+   "creatorId": "studio:aurora",
+   "creatorName": "Studio Aurora",
+   "description": "Jak działa konto inwestycyjne? Krótki przewodnik dla początkujących.",
+   "descriptionDisclosureStatus": "not_found",
+   "descriptionScore": 12,
+   "evidence": [
+    {
+     "confidence": 1.0,
+     "end": 7.26,
+     "kind": "audio",
+     "start": 4.35,
+     "text": "partnerem programu jest firma aurora",
+     "url": "/media/studio.mp4#t=4.35,7.26"
+    },
+    {
+     "confidence": 1.0,
+     "end": 12.51,
+     "kind": "audio",
+     "start": 8.61,
+     "text": "ten materiał powstał we współpracy z firmą aurora",
+     "url": "/media/studio.mp4#t=8.61,12.51"
+    },
+    {
+     "kind": "description",
+     "text": "Jak działa konto inwestycyjne?",
+     "url": "/media/studio.mp4"
+    }
+   ],
+   "id": "demo-studio-aurora",
+   "mediaSha256": "bae1577259da1028cad79ba091af3751062a0ba65f5557747af63b2d090e6f4c",
+   "mediaUrl": "/media/studio.mp4",
+   "modalityComparison": {
+    "delta": 82,
+    "descriptionOnly": 12,
+    "withAudio": 94
+   },
+   "mode": "replay",
+   "module": "M1",
+   "platform": "Studio",
+   "possibleUndisclosedPromotion": false,
+   "provenance": "Fikcyjna publikacja zespołu. Polski głos syntetyczny, rzeczywisty odczyt Vosk z pliku MP4. Data publikacji stanowi część scenariusza.",
+   "publishedAt": "2026-11-18",
+   "rulesVersion": "investwatch-rules-pl-1.1",
+   "score": 94,
+   "segments": [
+    {
+     "confidence": 1.0,
+     "end": 3.03,
+     "start": 0.33,
+     "text": "dzisiaj porozmawiamy o inwestowaniu"
+    },
+    {
+     "confidence": 1.0,
+     "end": 7.26,
+     "start": 4.35,
+     "text": "partnerem programu jest firma aurora"
+    },
+    {
+     "confidence": 1.0,
+     "end": 12.51,
+     "start": 8.61,
+     "text": "ten materiał powstał we współpracy z firmą aurora"
+    }
+   ],
+   "semantic": {
+    "class": "partnership",
+    "cosineSimilarity": 0.924877,
+    "evidence": {
+     "end": 12.51,
+     "field": "transcript",
+     "kind": "semantic",
+     "start": 8.61,
+     "text": "ten materiał powstał we współpracy z firmą aurora",
+     "url": "/media/studio.mp4"
+    },
+    "fragment": "ten materiał powstał we współpracy z firmą aurora",
+    "label": "Deklaracja partnerstwa",
+    "leadingClass": "partnership",
+    "margin": 0.060191,
+    "minimumMargin": 0.02,
+    "model": "Xenova/multilingual-e5-small",
+    "runnerUp": {
+     "class": "no_partnership",
+     "cosineSimilarity": 0.864685
+    },
+    "scope": {
+     "fragments": 5,
+     "sampledUpToChars": 6000,
+     "tokensPerFragment": 128
+    },
+    "status": "ready",
+    "version": "761b726dd34f-int8-e0554f948527"
+   },
+   "signalType": "declaration",
+   "speechOnlySignal": true,
+   "summary": "Deklaracja reklamy lub partnerstwa w nagraniu. Opis nie ujawnia tego sygnału.",
+   "synthetic": true,
+   "title": "Jak działa konto inwestycyjne?",
+   "url": "/media/studio.mp4",
+   "version": 2,
+   "status": "new",
+   "revision": 2,
+   "updatedAt": "2026-11-21T16:09:03.229+00:00",
+   "history": [
+    {
+     "at": "2026-11-21T16:03:05.780+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":1}",
+     "version": 1
+    },
+    {
+     "at": "2026-11-21T16:09:03.230+00:00",
+     "action": "capture",
+     "note": "Zachowano wersję materiału",
+     "details": "{\"version\":2}",
+     "version": 2
+    }
+   ]
+  }
+ ]
+}

@@ -14,8 +14,8 @@ root_kb=$(df -Pk / | awk 'NR==2 {print $4}')
 project_kb=$(df -Pk /home/codexdev/projects | awk 'NR==2 {print $4}')
 [ "$root_kb" -ge 5242880 ] && [ "$project_kb" -ge 10485760 ] || { echo 'Za mało wolnego miejsca na wolumenach.' >&2; exit 1; }
 fi
-[ "$(uname -m)" = x86_64 ] || { echo 'Wymagany Linux x86_64.' >&2; exit 1; }
-[ "$(uname -s)" = Linux ] || { echo 'Wymagany Linux.' >&2; exit 1; }
+case "$(uname -m)" in x86_64|aarch64) ;; *) echo 'Wymagany Linux x86_64 lub aarch64. Na macOS uruchom sh ops/demo/bootstrap.sh (przygotowanie w kontenerze linux/arm64).' >&2; exit 1;; esac
+[ "$(uname -s)" = Linux ] || { echo 'Wymagany Linux. Na macOS uruchom sh ops/demo/bootstrap.sh (przygotowanie w kontenerze linux/arm64).' >&2; exit 1; }
 RUNTIME="$ROOT/.runtime/demo"
 WHEELS=${WHEELHOUSE:-"$ROOT/.runtime/build/wheels"}
 PYTHON=${PREPARE_PYTHON:-"$ROOT/.runtime/venv/bin/python"}
@@ -28,6 +28,8 @@ mkdir -p "$RUNTIME/deps" "$RUNTIME/ffmpeg/bin" "$RUNTIME/ffmpeg/lib" "$RUNTIME/s
 chmod 700 "$RUNTIME" "$RUNTIME/state"
 # Installer and its cache are scoped to the project volume. The wheelhouse is read-only input.
 TMPDIR="$RUNTIME/tmp" XDG_CACHE_HOME="$RUNTIME/cache" PIP_CACHE_DIR="$RUNTIME/cache" "$PYTHON" -m pip install --no-index --no-deps --find-links "$WHEELS" --target "$RUNTIME/deps" --upgrade -r "$ROOT/api/requirements.lock"
+# Natywne rozszerzenia montowane do kontenera musza miec architekture kontenera (np. nie Mach-O z macOS).
+sh "$ROOT/ops/mac/arch-guard.sh" "$(uname -m)" "$RUNTIME/deps" "$ROOT/.runtime/semantic/deps" "$ROOT/.runtime/asr/vosk" || exit 1
 ff=$(command -v ffmpeg)
 ldd "$ff" > "$RUNTIME/ffmpeg/ldd.txt"
 if grep -q 'not found' "$RUNTIME/ffmpeg/ldd.txt"; then echo 'Niekompletne zależności systemowego ffmpeg.' >&2; exit 1; fi
@@ -42,6 +44,6 @@ exec /opt/investwatch/ffmpeg/lib/ld-linux.so --library-path /opt/investwatch/ffm
 WRAPPER
 chmod 755 "$RUNTIME/ffmpeg/bin/ffmpeg"
 "$RUNTIME/ffmpeg/lib/ld-linux.so" --library-path "$RUNTIME/ffmpeg/lib" "$RUNTIME/ffmpeg/bin/ffmpeg.real" -version >/dev/null
-printf 'INVESTWATCH_UID=%s\nINVESTWATCH_GID=%s\n' "$(id -u)" "$(id -g)" > "$RUNTIME/compose.env"
+printf 'INVESTWATCH_UID=%s\nINVESTWATCH_GID=%s\n' "${PREPARE_UID:-$(id -u)}" "${PREPARE_GID:-$(id -g)}" > "$RUNTIME/compose.env"
 chmod 600 "$RUNTIME/compose.env"
 echo 'Gotowe. Uruchom: sh ops/demo/start.sh'

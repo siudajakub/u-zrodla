@@ -1,0 +1,65 @@
+{
+  "protocol": "PROTOKOL.md",
+  "protocolVersion": "1.0",
+  "frozenAt": "2026-11-21T18:46:53+00:00",
+  "frozenDate": "2026-11-21",
+  "protocolSha256": "b39bf39f6717f59c544550cfcbcc147db351517493c5faaaa9b41c067b7e6a57",
+  "frozenBy": "agent G (claude-opus-5-5) na zlecenie Fable; bez commita",
+  "codeCommitAtFreeze": "491094d",
+  "testCutoff": {
+    "T_cut": "2026-11-21T18:46:53+00:00",
+    "rule": "Do zamkniętego testu wchodzą wyłącznie kampanie z pierwszą obserwacją po T_cut, nieobecne w q-v1 (PROTOKOL §6)."
+  },
+  "files": {
+    "PROTOKOL.md": "b39bf39f6717f59c544550cfcbcc147db351517493c5faaaa9b41c067b7e6a57",
+    "INWENTARZ.md": "e0c722e558eb317c35951f0d2eab238e402bd862736ce0196c03ecc4c3eb64f2",
+    "y-reference/README.md": "e0e4d9192dd39dab725957db71c60dfe4efd6ec49a01ddff3fce8d691564147d",
+    "y-reference/channels.json": "99cb111e9f913b6ed60ec05b0d0259ff59272d4c3f9311a8debbe1895d697a7b",
+    "q-v1/README.md": "232f82cfa32c9d535a1d3452bac61c13aa8aa23f33f3d182ff2f1876673802e3",
+    "q-v1/materialy.json": "1bd9ed942f4e3a37819bda729b23e3811a93c84fdc0b3a18b86881f2b822c404",
+    "q-v1/kampanie.json": "9a3ecfd6b22e68041d9d2296be1aaac797163231708f443872f440ce06095713",
+    "q-v1/oceny-agentow.jsonl": "188f3e63a18a5a17a596609aa0020e0d39f9fbcad01aaac012ae9962c59cbfdd",
+    "q-v1/etykiety-agentow.jsonl": "32ab8a41460c4e8473b5743b04c10a2b79463ecf50743782a72323e6e622a91b",
+    "q-v1/predykcje-reguly-1.2.jsonl": "c8a9007752771e76bf12bb6975b2604948341c3cc92e510bc36ac4f191b6f7ef",
+    "q-v1/predykcje-szablon-reguly-qwen.jsonl": "5dae25f2b6651f48544c4055745faf2758029d4310116772f5de201bafc4ceed",
+    "q-v1/wynik-reguly-1.2.json": "ea017212d0f435a133afcd5e5014772858219f1cc5d44f8b0b4d4767380d9530"
+  },
+  "testUsageLog": [
+    {
+      "at": "2026-11-21",
+      "set": "y-reference/channels.json",
+      "by": "agent G (claude-opus-5-5)",
+      "use": "Porównanie po skanie B (youtube-api-2026-11-21, żądania 1-46) według protokołu 1.0; wynik y-reference/WYNIK-Y-2026-11-21.md: top-5 3/5, niezaliczone.",
+      "hashesVerified": "PROTOKOL.md, y-reference/README.md, y-reference/channels.json zgodne z files",
+      "consequence": "Po wglądzie w braki zaproponowano dodatkowe zapytania. Skan z nimi jest strojeniem; kolejna niezależna próba Y wymaga nowej listy zamrożonej przed skanem."
+    },
+    {
+      "at": "2026-11-21T20:06:22+00:00",
+      "set": "q-v2 (M1, zbiór strojenia)",
+      "by": "agent G (claude-opus-5-5) + oceniający B (claude-sonnet-5-5)",
+      "use": "Zamrożenie ocen i etykiet q-v2 przed uruchomieniem wariantów rules_1_2 i qual_d na tych materiałach.",
+      "hashes": {
+        "q-v2/oceny-agentow.jsonl": "1cd13f1c25e06793589ecd35a97321ed73eff8baaa2d9492b3b72bdff5b1fbc2",
+        "q-v2/etykiety-agentow.jsonl": "a3ee25d1aea295bfa052831ef6f93dd00492b638af6e2ba919096e7c9e5f8a1f"
+      },
+      "consequence": "q-v2 to zbiór strojenia (13 z 17 filmów widział autor reguł D); nie jest odłożonym testem."
+    },
+    {
+      "at": "2026-11-21T20:12:26+00:00",
+      "set": "q-v2 (M1, zbiór strojenia) + losowa próba s4-live",
+      "by": "agent G (claude-opus-5-5)",
+      "use": "Predykcje rules_1_2 i qual_d (analysis.engine.analyze) na q-v2 po zamrożeniu etykiet; losowanie 30 z 348 no_signal (ziarno 20261121) i ocena po opisie.",
+      "hashesVerified": "q-v2/oceny-agentow.jsonl i q-v2/etykiety-agentow.jsonl zgodne z wpisem zamrożenia",
+      "hashes": {
+        "q-v2/wynik-M1-2026-11-21.json": "5b5bf9bdd8aea654d19ac87d837213cb3cf0acce3c1004d2ed597d1adfdfc823",
+        "q-v2/losowa-proba-etykiety.jsonl": "6439e8669fbfa2380b9641ccf567a27ad75e3083e49dd60953f25958fb2c22cb"
+      },
+      "consequence": "Wynik dokumentuje strojenie. Odłożony test M1 nadal liczy 0 kampanii."
+    }
+  ],
+  "notes": [
+    "q-v1 to zbiór strojenia z ocenami agentów; odłożony test: 0 kampanii.",
+    "y-reference: zakaz przekazywania do wyszukiwarki i seedów.",
+    "Zmiana któregokolwiek pliku po zamrożeniu wymaga nowej wersji i wpisu tutaj."
+  ]
+}

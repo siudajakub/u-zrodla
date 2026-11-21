@@ -1,0 +1,329 @@
+{
+  "mode": "confirm",
+  "finishedAt": "2026-11-21T18:33:58+00:00",
+  "seededChannels": [
+    "UCelOnoH_P-vJgAHSAcMKQiw",
+    "UCnmJzS-tFT7DlxIMFxYGcHw"
+  ],
+  "routes": {
+    "oembed": {
+      "requests": 4,
+      "ok": 3,
+      "errors": [
+        "oembed aaaaaaaaaaa: 400"
+      ],
+      "results": 4
+    },
+    "atom": {
+      "requests": 2,
+      "ok": 2,
+      "errors": [],
+      "results": 30
+    }
+  },
+  "results": 34,
+  "uniqueChannels": 2,
+  "uniqueVideos": 31,
+  "promoWithBrand": [
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "o2GfnmVVkO8",
+      "url": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+      "title": "Gdybym miał włożyć cały majątek tylko w 3 spółki z USA, wybrałbym te!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "freedom24"
+        ]
+      },
+      "stats": {
+        "views": 1700,
+        "ratingCount": 114,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "ePfzHQVf-lc",
+      "url": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+      "title": "Kupiłem te spółki za 40 tysięcy zł. To Wy zbudowaliście ten portfel! | PORTFEL WIDZÓW 02",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 50586,
+        "ratingCount": 840,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "_aqCM37gK1U",
+      "url": "https://www.youtube.com/watch?v=_aqCM37gK1U",
+      "title": "Kupujesz za późno i sprzedajesz za wcześnie? To nie jest przypadek!",
+      "signals": {
+        "promo": [
+          "współpraca",
+          "współpracę"
+        ],
+        "brands": [
+          "Saxo",
+          "saxo"
+        ]
+      },
+      "stats": {
+        "views": 43817,
+        "ratingCount": 789,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "gTOdRoCxG_w",
+      "url": "https://www.youtube.com/watch?v=gTOdRoCxG_w",
+      "title": "Kurs polskiej fabryki gier na 7-letnim dnie. Rynek nie widzi w PlayWay tego, co ja!",
+      "signals": {
+        "promo": [
+          "reklama",
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 26167,
+        "ratingCount": 408,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "vBYn7IvDQsc",
+      "url": "https://www.youtube.com/watch?v=vBYn7IvDQsc",
+      "title": "Te 4 wskaźniki zapowiadały recesję i żaden nie trafił! Dlaczego przestały działać?",
+      "signals": {
+        "promo": [
+          "współpraca",
+          "współpracę"
+        ],
+        "brands": [
+          "Saxo",
+          "saxo"
+        ]
+      },
+      "stats": {
+        "views": 51239,
+        "ratingCount": 803,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "uM24ZsvzgV8",
+      "url": "https://www.youtube.com/watch?v=uM24ZsvzgV8",
+      "title": "Orlen się sypie, a Allegro wygrywa wojnę z InPostem. Dwa giganty GPW idą w przeciwnych kierunkach!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 54849,
+        "ratingCount": 899,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "9Fcwo1jlwe4",
+      "url": "https://www.youtube.com/watch?v=9Fcwo1jlwe4",
+      "title": "Nvidia traci Jensena i zalicza krach. Czy hossa AI właśnie się zmienia?",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "Freedom24",
+          "freedom24"
+        ]
+      },
+      "stats": {
+        "views": 89107,
+        "ratingCount": 1885,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "39ctNbOSdYg",
+      "url": "https://www.youtube.com/watch?v=39ctNbOSdYg",
+      "title": "3 rzeczy, które rynek dziś źle wycenia. Tu widzę ciekawe okazje!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "freedom24"
+        ]
+      },
+      "stats": {
+        "views": 51532,
+        "ratingCount": 898,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "J__KfKHCLDI",
+      "url": "https://www.youtube.com/watch?v=J__KfKHCLDI",
+      "title": "Anthropic wchodzi na giełdę. Czy kupię akcje najszybciej rosnącej firmy świata?",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "freedom24"
+        ]
+      },
+      "stats": {
+        "views": 81450,
+        "ratingCount": 1268,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "1Q_7itaSuwA",
+      "url": "https://www.youtube.com/watch?v=1Q_7itaSuwA",
+      "title": "Boisz się spadków? Wahania kursu to nie ryzyko - zobacz jak wykorzystuję zmienność",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 51491,
+        "ratingCount": 1032,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "-HpCSKp9bqk",
+      "url": "https://www.youtube.com/watch?v=-HpCSKp9bqk",
+      "title": "Nadchodzi bessa na rynku nieruchomości? Mieszkania przestały być pewną inwestycją!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 221266,
+        "ratingCount": 2507,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "g7Y6TaD0QTk",
+      "url": "https://www.youtube.com/watch?v=g7Y6TaD0QTk",
+      "title": "Branża, w którą nie zainwestuję. Świetne produkty, koszmarne inwestycje!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 36147,
+        "ratingCount": 618,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "a6uh7LnRCTQ",
+      "url": "https://www.youtube.com/watch?v=a6uh7LnRCTQ",
+      "title": "GPW bije rekordy i… spada, a na giełdę szykuje się gigant zbrojeniowy z 30 mld wyceny!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 59980,
+        "ratingCount": 937,
+        "statsObservedAt": "2026-11-21T18:33:52+00:00"
+      },
+      "seeded": false
+    }
+  ],
+  "note": "channelId znormalizowane do prefiksu UC po przebiegu (bez nowych żądań); duże pliki .html/.xml spakowane gzip, sha256 w requests.jsonl dotyczy treści nieskompresowanej."
+}

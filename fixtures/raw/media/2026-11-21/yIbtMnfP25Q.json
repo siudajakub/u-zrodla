@@ -1,0 +1,290 @@
+{
+ "videoId": "yIbtMnfP25Q",
+ "url": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+ "channel": "Dywidendowy Inwestor",
+ "firm": "XTB",
+ "observedAt": "2026-11-21T19:20:06+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Tak teraz wygląda MÓJ PORTFEL ROSNĄCYCH DYWIDEND! Aktualizacja Q3 2026.",
+  "channel": "Dividend Investor",
+  "duration": 1098,
+  "uploadDate": "20261005",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 2517,
+ "descriptionSha256": "55db31c04c6a0eca858236a3a173dbf222f387e0abfd6f29fef52b66b1315b17",
+ "paidPromotionFlagApi": false,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 578,
+  "spanSec": [
+   0.12,
+   1095.679
+  ],
+  "captionsSha256": "ef8091f27516947618af67d018608769dc8b8bfc0be9958fa914e9f333a4d7ba",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 386058,
+  "segments": 578,
+  "captionsWallSeconds": 2.2,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 2517,
+    "originalTextSha256": "55db31c04c6a0eca858236a3a173dbf222f387e0abfd6f29fef52b66b1315b17"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 1098
+     }
+    ],
+    "durationSec": 1098,
+    "reason": null,
+    "spanSec": [
+     0.12,
+     1095.679
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 2517 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 1098
+    }
+   ],
+   "durationSec": 1098,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": false,
+  "quote": null
+ },
+ "markingInSpeech": [
+  {
+   "start": 55,
+   "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=55s",
+   "kind": "partner",
+   "quote": "Jeżeli chcecie zacząć inwestować, to ja do tego celu używam i polecam konto XTB, które jest partnerem mojego kanału. W"
+  }
+ ],
+ "markersLexical": [
+  {
+   "start": 57.079,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "do tego celu używam i polecam konto XTB,",
+   "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=57s"
+  },
+  {
+   "start": 59.32,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "które jest partnerem mojego kanału. W",
+   "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=59s"
+  },
+  {
+   "start": 61.0,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "XTB założyłem swoje pierwsze konto",
+   "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=61s"
+  },
+  {
+   "start": 65.28,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "zainteresowanych kontem w opisie odcinka",
+   "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=65s"
+  },
+  {
+   "start": 199.64,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "jest zainteresowany appką, to w opisie",
+   "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=199s"
+  }
+ ],
+ "frames": [
+  {
+   "time": 59.0,
+   "requestedTime": 59.0,
+   "method": "stream_ffmpeg_360p",
+   "path": ".runtime/media-cache/yIbtMnfP25Q/frames/stream_360p_000059.jpg",
+   "sha256": "288fc4e12507b38905ed317cf4da71c4eb7b90d8d22f7daf7e12ab43da494433",
+   "width": 640,
+   "height": 360,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=59s",
+   "observation": "Plansza XTB „Inwestuj w akcje i ETF-y bez prowizji”, „DOŁĄCZ DO XTB”, ostrzeżenie o ryzyku. Brak słowa reklama ani współpraca w obrazie."
+  },
+  {
+   "time": 65.0,
+   "requestedTime": 65.0,
+   "method": "stream_ffmpeg_360p",
+   "path": ".runtime/media-cache/yIbtMnfP25Q/frames/stream_360p_000065.jpg",
+   "sha256": "2f3f9d3ed223260776be49881e0c97b55d2040d6e91b5e43463174602ec50fdf",
+   "width": 640,
+   "height": 360,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=65s",
+   "observation": "Ta sama plansza XTB, bez etykiety reklamy."
+  },
+  {
+   "time": 199.0,
+   "requestedTime": 199.0,
+   "method": "stream_ffmpeg_360p",
+   "path": ".runtime/media-cache/yIbtMnfP25Q/frames/stream_360p_000199.jpg",
+   "sha256": "7163a1790f4f1467817f66f484392c21ad3355419b38019252b1dac8e665aecf",
+   "width": 640,
+   "height": 360,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=199s",
+   "observation": "Tabela portfela, brak oznaczeń."
+  }
+ ],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://link-pso.xtb.com/pso/WtGV9” w opisie (znaki 732–766).",
+    "Dodatkowy dowód relacji (creator_code): „Teraz, rejestrując się w XTB z kodem \"DYWIDENDOWY \" otrzymacie pełny kurs edukacyjny dedykowany pocz” w opisie (znaki 833–954).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+    "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+    "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+     "evidenceId": "ev-2",
+     "locator": {
+      "field": "description",
+      "charStart": 732,
+      "charEnd": 766,
+      "occurrences": 1
+     }
+    },
+    {
+     "start": null,
+     "end": null,
+     "label": "Dowód relacji handlowej",
+     "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+     "evidenceId": "ev-4",
+     "locator": {
+      "field": "description",
+      "charStart": 833,
+      "charEnd": 954,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 85,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": [
+    "U1"
+   ]
+  },
+  "descriptionSpeechFrames": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://link-pso.xtb.com/pso/WtGV9” w opisie (znaki 732–766).",
+    "Dodatkowy dowód relacji (creator_code): „Teraz, rejestrując się w XTB z kodem \"DYWIDENDOWY \" otrzymacie pełny kurs edukacyjny dedykowany pocz” w opisie (znaki 833–954).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres), mowie (pełny zakres), kadrach (wybrane momenty).",
+    "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+     "evidenceId": "ev-2",
+     "locator": {
+      "field": "description",
+      "charStart": 732,
+      "charEnd": 766,
+      "occurrences": 1
+     }
+    },
+    {
+     "start": null,
+     "end": null,
+     "label": "Dowód relacji handlowej",
+     "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+     "evidenceId": "ev-4",
+     "locator": {
+      "field": "description",
+      "charStart": 833,
+      "charEnd": 954,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 100,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+   "premises": [
+    "U1"
+   ]
+  }
+ }
+}

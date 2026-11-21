@@ -1,0 +1,4508 @@
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "TWQF0QNRWQ-v4uFQVCpWCMckVXI",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "odZRyEfBvkX_Xyh6_7DW_pEd9J4",
+      "id": "nDiqt15QiVQ",
+      "snippet": {
+        "publishedAt": "2026-11-20T21:22:53Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Closing Bell panel weighs whether the selloff is a buying opportunity",
+        "description": "Cameron Dawson, NewEdge Wealth CIO, and Kevin Gordon, Schwab Center for Financial Research, join 'Closing Bell' with reaction the the day's selloff.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nDiqt15QiVQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nDiqt15QiVQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nDiqt15QiVQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nDiqt15QiVQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nDiqt15QiVQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "Closing Bell",
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips",
+          "financial news",
+          "stock market news",
+          "stocks"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Closing Bell panel weighs whether the selloff is a buying opportunity",
+          "description": "Cameron Dawson, NewEdge Wealth CIO, and Kevin Gordon, Schwab Center for Financial Research, join 'Closing Bell' with reaction the the day's selloff."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT5M16S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "311424",
+        "likeCount": "972",
+        "favoriteCount": "0",
+        "commentCount": "357"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "w5oeF0dWEQFFmLYyfBIcr5_Q4fo",
+      "id": "jeweqVGk3M8",
+      "snippet": {
+        "publishedAt": "2026-11-20T21:00:20Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Alphabet outperforms Mag 7 peers amid tech sell-off",
+        "description": "CNBC’s MacKenzie Sigalos reports on why Alphabet is holding up better than its Mag 7 peers amid a sharp tech sell-off.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jeweqVGk3M8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jeweqVGk3M8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jeweqVGk3M8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jeweqVGk3M8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jeweqVGk3M8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Alphabet outperforms Mag 7 peers amid tech sell-off",
+          "description": "CNBC’s MacKenzie Sigalos reports on why Alphabet is holding up better than its Mag 7 peers amid a sharp tech sell-off."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M8S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "6817",
+        "likeCount": "43",
+        "favoriteCount": "0",
+        "commentCount": "4"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "ZjKhpz7v0b7EWkmfBPXP1-LIlsY",
+      "id": "ar9X778_Kjw",
+      "snippet": {
+        "publishedAt": "2026-11-20T20:59:09Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "'We Have To Know Why': Philanthropist Priscilla Chan’s Bold Bet On Rare Disease",
+        "description": "In just a decade, rare disease groups have gone from not understanding certain genetic mutations to bringing gene therapies into clinical trials. Priscilla Chan joins Becky Quick to discuss rare disease research, personalized medicine and how AI could help advance biomedicine and science.\n\nChan and her husband, Mark Zuckerberg, the founder of Meta, co-founded the Chan Zuckerberg Initiative (CZI) and Biohub, both with a core mission of curing, preventing, or managing all disease. Drawing on her background as a pediatrician, Chan explains how rare disease groups are building research programs, patient registries and clinical trials, and how this work could point to new approaches for treating diseases more broadly.\n\nIn this episode:\n00:26 Introduction\n03:02 Priscilla’s Road to Rare\n13:07 Building the Chan Zuckerberg Initiative\n20:20 Getting Back to Basics\n30:30 Funding Rare Disease Pioneers\n\nFollow Becky:\nX: https://x.com/BeckyQuick\nInstagram: https://www.instagram.com/beckyquickcnbc/\nFacebook: https://www.facebook.com/BeckyQuickCNBC/\nLinkedIn: https://www.linkedin.com/in/beckyquick/\n\nSign up for the CNBC Cures newsletter: https://www.cnbc.com/cnbc-cures-newsletter/\nJoin us in advancing awareness and understanding of rare diseases: https://www.cnbc.com/cures/\n\nWatch the latest episodes on The Path: https://www.youtube.com/playlist?list=PLVbP054jv0Ko-hAZBSDwZaejelC-FMjc_\nSubscribe to CNBC: https://www.youtube.com/@CNBCtelevision\n\nListen to The Path\nhttps://podcasts.apple.com/us/podcast/the-path-with-becky-quick/id6831346026\nhttps://open.spotify.com/show/0rTL1ejEwLchTMObIsMoDv\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n\n'We Have To Know Why': Philanthropist Priscilla Chan’s Bold Bet On Rare Disease",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ar9X778_Kjw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ar9X778_Kjw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ar9X778_Kjw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ar9X778_Kjw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ar9X778_Kjw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/ar9X778_Kjw/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "priscilla chan",
+          "mark zuckerberg",
+          "chan zuckerberg initiative",
+          "social media",
+          "mental health",
+          "silicon valley"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "'We Have To Know Why': Philanthropist Priscilla Chan’s Bold Bet On Rare Disease",
+          "description": "In just a decade, rare disease groups have gone from not understanding certain genetic mutations to bringing gene therapies into clinical trials. Priscilla Chan joins Becky Quick to discuss rare disease research, personalized medicine and how AI could help advance biomedicine and science.\n\nChan and her husband, Mark Zuckerberg, the founder of Meta, co-founded the Chan Zuckerberg Initiative (CZI) and Biohub, both with a core mission of curing, preventing, or managing all disease. Drawing on her background as a pediatrician, Chan explains how rare disease groups are building research programs, patient registries and clinical trials, and how this work could point to new approaches for treating diseases more broadly.\n\nIn this episode:\n00:26 Introduction\n03:02 Priscilla’s Road to Rare\n13:07 Building the Chan Zuckerberg Initiative\n20:20 Getting Back to Basics\n30:30 Funding Rare Disease Pioneers\n\nFollow Becky:\nX: https://x.com/BeckyQuick\nInstagram: https://www.instagram.com/beckyquickcnbc/\nFacebook: https://www.facebook.com/BeckyQuickCNBC/\nLinkedIn: https://www.linkedin.com/in/beckyquick/\n\nSign up for the CNBC Cures newsletter: https://www.cnbc.com/cnbc-cures-newsletter/\nJoin us in advancing awareness and understanding of rare diseases: https://www.cnbc.com/cures/\n\nWatch the latest episodes on The Path: https://www.youtube.com/playlist?list=PLVbP054jv0Ko-hAZBSDwZaejelC-FMjc_\nSubscribe to CNBC: https://www.youtube.com/@CNBCtelevision\n\nListen to The Path\nhttps://podcasts.apple.com/us/podcast/the-path-with-becky-quick/id6831346026\nhttps://open.spotify.com/show/0rTL1ejEwLchTMObIsMoDv\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n\n'We Have To Know Why': Philanthropist Priscilla Chan’s Bold Bet On Rare Disease"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT41M47S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "7000",
+        "likeCount": "20",
+        "favoriteCount": "0",
+        "commentCount": "7"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "7YjiRMMuMHyEdc0CiawsKag8gSU",
+      "id": "w_bkVIHqnEE",
+      "snippet": {
+        "publishedAt": "2026-11-20T20:30:03Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Holiday deals: Can you trust AI to find them?",
+        "description": "Artificial intelligence shopping tools can help consumers compare prices and find gift ideas, but experts say shoppers still need to verify unfamiliar retailers and sellers before buying. Scammers can use AI to make fake stores, product photos and reviews look convincing.\n\nCNBC's Sharon Epperson has the latest on how to avoid AI scammers this holiday season.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/w_bkVIHqnEE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/w_bkVIHqnEE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/w_bkVIHqnEE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/w_bkVIHqnEE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/w_bkVIHqnEE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Holiday deals: Can you trust AI to find them?",
+          "description": "Artificial intelligence shopping tools can help consumers compare prices and find gift ideas, but experts say shoppers still need to verify unfamiliar retailers and sellers before buying. Scammers can use AI to make fake stores, product photos and reviews look convincing.\n\nCNBC's Sharon Epperson has the latest on how to avoid AI scammers this holiday season."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT2M26S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "664",
+        "likeCount": "9",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "xnFK1Z4KgvjiGwbXkFoZjXj_h0w",
+      "id": "jvSpZhK9QfY",
+      "snippet": {
+        "publishedAt": "2026-11-20T20:28:55Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Without a recession, this is a correction not a bear market, says Ed Yardeni",
+        "description": "Ed Yardeni, Yardeni Research President, and David Lefkowitz, UBS Global Wealth Management head of equities Americas, joins 'Power Lunch' with reaction to the day's selloff.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jvSpZhK9QfY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jvSpZhK9QfY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jvSpZhK9QfY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jvSpZhK9QfY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jvSpZhK9QfY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "Business",
+          "News",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips",
+          "financial news",
+          "stock market news",
+          "stocks",
+          "Power Lunch"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Without a recession, this is a correction not a bear market, says Ed Yardeni",
+          "description": "Ed Yardeni, Yardeni Research President, and David Lefkowitz, UBS Global Wealth Management head of equities Americas, joins 'Power Lunch' with reaction to the day's selloff."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT4M39S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "172073",
+        "likeCount": "651",
+        "favoriteCount": "0",
+        "commentCount": "278"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "pFRz6Cl9LOEt-55bj55I5ycSl9A",
+      "id": "2da3M3l3sfU",
+      "snippet": {
+        "publishedAt": "2026-11-20T20:15:10Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "The Pentagon's Emil Michael on AI and cyber efforts",
+        "description": "Emil Michael, Undersecretary of Defense for Research and Engineering, joins CNBC's “Squawk on the Street” to discuss the administrations cyber efforts and how they plan on improving within the next quarter.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2da3M3l3sfU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2da3M3l3sfU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2da3M3l3sfU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2da3M3l3sfU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2da3M3l3sfU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "The Pentagon's Emil Michael on AI and cyber efforts",
+          "description": "Emil Michael, Undersecretary of Defense for Research and Engineering, joins CNBC's “Squawk on the Street” to discuss the administrations cyber efforts and how they plan on improving within the next quarter."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M17S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1882",
+        "likeCount": "6",
+        "favoriteCount": "0",
+        "commentCount": "3"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "jN86oO58Wpc-SReM1AD97Gm1h2k",
+      "id": "7yuxLar3WEA",
+      "snippet": {
+        "publishedAt": "2026-11-20T20:04:00Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Navigating a falling market: The Investment Committee's strategy",
+        "description": "The Investment Committee debate how to trade a falling market following the historic Anthropic IPO and Nvidia's continued weakness amid it's various scandals.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7yuxLar3WEA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7yuxLar3WEA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7yuxLar3WEA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7yuxLar3WEA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/7yuxLar3WEA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "Fast Money Halftime Report",
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips",
+          "financial news",
+          "stock market news",
+          "stocks"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Navigating a falling market: The Investment Committee's strategy",
+          "description": "The Investment Committee debate how to trade a falling market following the historic Anthropic IPO and Nvidia's continued weakness amid it's various scandals."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT9M32S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "110446",
+        "likeCount": "475",
+        "favoriteCount": "0",
+        "commentCount": "156"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "MIibWIIWp393uXgevHUX4eznKqA",
+      "id": "P-Aej5E1S0A",
+      "snippet": {
+        "publishedAt": "2026-11-20T20:01:02Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Would be unprecedented to see final bottom on S&P with Apple where it is: BTIG’s Jonathan Krinsky",
+        "description": "Jonathan Krinsky, BTIG chief market technician, joins 'The Exchange' to discuss Apple stock, market volatility and more.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/P-Aej5E1S0A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/P-Aej5E1S0A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/P-Aej5E1S0A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/P-Aej5E1S0A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/P-Aej5E1S0A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "News",
+          "breaking news",
+          "business",
+          "cnbc",
+          "economy",
+          "financing",
+          "investing",
+          "kelly evans",
+          "money",
+          "news room",
+          "politics",
+          "stocks",
+          "the exchange",
+          "wall street"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Would be unprecedented to see final bottom on S&P with Apple where it is: BTIG’s Jonathan Krinsky",
+          "description": "Jonathan Krinsky, BTIG chief market technician, joins 'The Exchange' to discuss Apple stock, market volatility and more."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT5M2S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "70738",
+        "likeCount": "215",
+        "favoriteCount": "0",
+        "commentCount": "57"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "WKvAbV2jczb1M14qmq6nfZPP0Q8",
+      "id": "XC02cQqB5Uk",
+      "snippet": {
+        "publishedAt": "2026-11-20T19:58:26Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Top tech investor Dan Niles on Anthropic: You can make an argument that IPO didn't go great",
+        "description": "Dan Niles, Niles Investment Management founder and portfolio manager, joins 'Squawk on the Street' to discuss the S&P and Nasdaq pacing for the worst month since March 2025, Anthropic's share price, and more.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XC02cQqB5Uk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XC02cQqB5Uk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XC02cQqB5Uk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/XC02cQqB5Uk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/XC02cQqB5Uk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "Squawk on the Street",
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips",
+          "financial news",
+          "stock market news",
+          "stocks"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Top tech investor Dan Niles on Anthropic: You can make an argument that IPO didn't go great",
+          "description": "Dan Niles, Niles Investment Management founder and portfolio manager, joins 'Squawk on the Street' to discuss the S&P and Nasdaq pacing for the worst month since March 2025, Anthropic's share price, and more."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT4M35S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "70928",
+        "likeCount": "317",
+        "favoriteCount": "0",
+        "commentCount": "67"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "fExkMGc2Rtu9Nq5ZLnF2rAJQ1Y4",
+      "id": "HePmHD3xZuM",
+      "snippet": {
+        "publishedAt": "2026-11-20T19:41:52Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'",
+        "description": "President Donald Trump on Friday said U.S. companies will either be banned from building data centers in other countries, or will face a “tremendous tax” penalty if they do so.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HePmHD3xZuM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HePmHD3xZuM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HePmHD3xZuM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HePmHD3xZuM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HePmHD3xZuM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'",
+          "description": "President Donald Trump on Friday said U.S. companies will either be banned from building data centers in other countries, or will face a “tremendous tax” penalty if they do so."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT28S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "8699",
+        "likeCount": "46",
+        "favoriteCount": "0",
+        "commentCount": "19"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "9ixtZMriAJrJFc6kzdichY4IrNo",
+      "id": "djyc-rPqBV4",
+      "snippet": {
+        "publishedAt": "2026-11-20T19:18:01Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Nvidia's legal woes are adding up: What you should know",
+        "description": "CNBC's Seema Mody joins 'The Exchange' to discuss Nivida's legal woes and how Wall Street is responding.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/djyc-rPqBV4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/djyc-rPqBV4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/djyc-rPqBV4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/djyc-rPqBV4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/djyc-rPqBV4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "app",
+          "business news",
+          "cnbc",
+          "digital",
+          "disrupt",
+          "funding",
+          "innovation",
+          "investors",
+          "nasdaq",
+          "nyse",
+          "online",
+          "silicon valley",
+          "startup",
+          "stock market",
+          "tech",
+          "techcheck",
+          "technology",
+          "venture",
+          "wall street"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Nvidia's legal woes are adding up: What you should know",
+          "description": "CNBC's Seema Mody joins 'The Exchange' to discuss Nivida's legal woes and how Wall Street is responding."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M39S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "64581",
+        "likeCount": "142",
+        "favoriteCount": "0",
+        "commentCount": "72"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "jyaORO1d1B4q21HNwB8Hb64p9KI",
+      "id": "1jSLdV-Aocs",
+      "snippet": {
+        "publishedAt": "2026-11-20T19:00:00Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Anthropic stock falls in first full day of trading following record-breaking IPO",
+        "description": "Anthropic shares fell on Friday after a historic Nasdaq debut, as concerns about artificial intelligence trade continued to drag tech stocks lower.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1jSLdV-Aocs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1jSLdV-Aocs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1jSLdV-Aocs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1jSLdV-Aocs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1jSLdV-Aocs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Anthropic stock falls in first full day of trading following record-breaking IPO",
+          "description": "Anthropic shares fell on Friday after a historic Nasdaq debut, as concerns about artificial intelligence trade continued to drag tech stocks lower."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT32S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "6310",
+        "likeCount": "26",
+        "favoriteCount": "0",
+        "commentCount": "9"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "RZl5Yj4RgYJs2xm7saYCiWkh5n0",
+      "id": "xKDzMYHi-uw",
+      "snippet": {
+        "publishedAt": "2026-11-20T18:59:04Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "President Trump holds a news conference at the White House after Asia trip — 11/20/2026",
+        "description": "President Donald Trump on Friday holds a news conference from the White House after returning from the APEC summit. \n\nThe highlight of this week’s APEC summit in Shenzhen was a trilateral meeting Thursday between Trump, Chinese President Xi Jinping and Russian President Vladimir Putin. The three leaders, meeting together for the first time, reaffirmed interests in reducing nuclear risks and plans to increase oil production.\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#cnbctv \n\nPresident Trump holds a news conference at the White House after Asia trip — 11/20/2026",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xKDzMYHi-uw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xKDzMYHi-uw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xKDzMYHi-uw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xKDzMYHi-uw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xKDzMYHi-uw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/xKDzMYHi-uw/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips",
+          "white house",
+          "press secretary",
+          "biden",
+          "joe biden",
+          "biden administration",
+          "president biden",
+          "congress",
+          "GOP",
+          "republicans",
+          "jobs",
+          "unemployment",
+          "federal reserve",
+          "rate hike",
+          "interest rates",
+          "jerome powell",
+          "jay powell",
+          "fed chair",
+          "fed",
+          "interest rate hike"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "President Trump holds a news conference at the White House after Asia trip — 11/20/2026",
+          "description": "President Donald Trump on Friday holds a news conference from the White House after returning from the APEC summit. \n\nThe highlight of this week’s APEC summit in Shenzhen was a trilateral meeting Thursday between Trump, Chinese President Xi Jinping and Russian President Vladimir Putin. The three leaders, meeting together for the first time, reaffirmed interests in reducing nuclear risks and plans to increase oil production.\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#cnbctv \n\nPresident Trump holds a news conference at the White House after Asia trip — 11/20/2026"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1H28M19S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "63342",
+        "likeCount": "207",
+        "favoriteCount": "0",
+        "commentCount": "197"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "iLYsMNrgqvejZPpkjNITvhmjq1o",
+      "id": "XGA2XC0_DMU",
+      "snippet": {
+        "publishedAt": "2026-11-20T18:47:06Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Squawk Pod: Walmart’s new CEO John Furner - 11/20/26 | Audio Only",
+        "description": "The morning after Anthropic’s historic IPO, shares of the AI company traded down in the pre-market. CNBC’s Leslie Picker reports on the giant Nasdaq listing, the money made, and the Anthropic stock’s drop from the IPO pop. Becky Quick traveled to Bentonville, Arkansas for a look at Walmart’s earnings at the company’s new corporate campus with CEO John Furner, only the 6th CEO in the company’s 64 year history. Plus, Andrew Ross Sorkin recaps some of Elon Musk’s most newsworthy comments from the New York Times DealBook Summit this week. \n\nIn this episode:\nJoe Kernen, @JoeSquawk\nBecky Quick, @BeckyQuick\nAndrew Ross Sorkin, @andrewrsorkin\nLeslie Picker, @LesliePicker\nKatie Kramer, @Kramer_Katie\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#CNBCTV",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XGA2XC0_DMU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XGA2XC0_DMU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XGA2XC0_DMU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/XGA2XC0_DMU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/XGA2XC0_DMU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Squawk Pod: Walmart’s new CEO John Furner - 11/20/26 | Audio Only",
+          "description": "The morning after Anthropic’s historic IPO, shares of the AI company traded down in the pre-market. CNBC’s Leslie Picker reports on the giant Nasdaq listing, the money made, and the Anthropic stock’s drop from the IPO pop. Becky Quick traveled to Bentonville, Arkansas for a look at Walmart’s earnings at the company’s new corporate campus with CEO John Furner, only the 6th CEO in the company’s 64 year history. Plus, Andrew Ross Sorkin recaps some of Elon Musk’s most newsworthy comments from the New York Times DealBook Summit this week. \n\nIn this episode:\nJoe Kernen, @JoeSquawk\nBecky Quick, @BeckyQuick\nAndrew Ross Sorkin, @andrewrsorkin\nLeslie Picker, @LesliePicker\nKatie Kramer, @Kramer_Katie\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#CNBCTV"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT48M21S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3729",
+        "likeCount": "12",
+        "favoriteCount": "0",
+        "commentCount": "17"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "1LgMlrn5rfkmoRWOc1kwN2FSPLc",
+      "id": "WQRHH_2zUa0",
+      "snippet": {
+        "publishedAt": "2026-11-20T18:45:39Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Apple job posting shows plans to reportedly build its own AI agent",
+        "description": "Apple is reportedly developing its own AI agent to browse the web, control apps and write code, according to a job posting since pulled down.\n\nCNBC’s MacKenzie Sigalos has the latest.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WQRHH_2zUa0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WQRHH_2zUa0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WQRHH_2zUa0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WQRHH_2zUa0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WQRHH_2zUa0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Apple job posting shows plans to reportedly build its own AI agent",
+          "description": "Apple is reportedly developing its own AI agent to browse the web, control apps and write code, according to a job posting since pulled down.\n\nCNBC’s MacKenzie Sigalos has the latest."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M11S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "7915",
+        "likeCount": "10",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "uZ3VrszRqxMVaBA1gyW393zP27s",
+      "id": "t_peqMdovds",
+      "snippet": {
+        "publishedAt": "2026-11-20T18:30:36Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Family offices are moving more into stocks, hedging against AI bubble",
+        "description": "Family offices continued to boost their stock holdings in the third quarter, although they hedged the AI trade with a larger bet on financials, according to the CNBC Family Office Portfolio Tracker. CNBC’s Robert Frank reports.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/t_peqMdovds/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/t_peqMdovds/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/t_peqMdovds/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/t_peqMdovds/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/t_peqMdovds/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Family offices are moving more into stocks, hedging against AI bubble",
+          "description": "Family offices continued to boost their stock holdings in the third quarter, although they hedged the AI trade with a larger bet on financials, according to the CNBC Family Office Portfolio Tracker. CNBC’s Robert Frank reports."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT50S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2992",
+        "likeCount": "20",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "F6uAS8o48S61D3BQDJ_72BDpwgo",
+      "id": "i6f7Skh2oHc",
+      "snippet": {
+        "publishedAt": "2026-11-20T18:15:24Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Treasury Sec. Bessent: Humans should be involved in any military decision",
+        "description": "Treasury Secretary Scott Bessent tells CNBC’s “Squawk on the Street” that both the U.S. and China agreed no major military operation should be launched without human involvement.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/i6f7Skh2oHc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/i6f7Skh2oHc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/i6f7Skh2oHc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/i6f7Skh2oHc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/i6f7Skh2oHc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Treasury Sec. Bessent: Humans should be involved in any military decision",
+          "description": "Treasury Secretary Scott Bessent tells CNBC’s “Squawk on the Street” that both the U.S. and China agreed no major military operation should be launched without human involvement."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT55S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1460",
+        "likeCount": "14",
+        "favoriteCount": "0",
+        "commentCount": "10"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "YyCf1JdU6QrBCXkjCv0uH8uThCI",
+      "id": "qDX28S5SzLQ",
+      "snippet": {
+        "publishedAt": "2026-11-20T18:03:13Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Madonna's manager: Elon Musk, Dario Amodei and Sam Altman all are rock stars",
+        "description": "Guy Oseary, Sound Ventures co-founder and general partner, joins “Squawk Box” to discuss his early investment in Anthropic and how many AI founders’ stories are “like music” to him.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qDX28S5SzLQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qDX28S5SzLQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qDX28S5SzLQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qDX28S5SzLQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qDX28S5SzLQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Madonna's manager: Elon Musk, Dario Amodei and Sam Altman all are rock stars",
+          "description": "Guy Oseary, Sound Ventures co-founder and general partner, joins “Squawk Box” to discuss his early investment in Anthropic and how many AI founders’ stories are “like music” to him."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT37S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3731",
+        "likeCount": "9",
+        "favoriteCount": "0",
+        "commentCount": "3"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "71SjCpRXUmaUa5yqh71MQf5zk48",
+      "id": "KacrX0Ndcss",
+      "snippet": {
+        "publishedAt": "2026-11-20T17:45:16Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Rep. John Moolenaar: Sale of AI chips to Chinese companies 'completely unacceptable'",
+        "description": "House China Select Committee Chairman Rep. John Moolenaar (R-Mich.) joined “Squawk Box” to discuss newly released Congressional documents showing the Commerce Department approved the sale of U.S. chips to China.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KacrX0Ndcss/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KacrX0Ndcss/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KacrX0Ndcss/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KacrX0Ndcss/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KacrX0Ndcss/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Rep. John Moolenaar: Sale of AI chips to Chinese companies 'completely unacceptable'",
+          "description": "House China Select Committee Chairman Rep. John Moolenaar (R-Mich.) joined “Squawk Box” to discuss newly released Congressional documents showing the Commerce Department approved the sale of U.S. chips to China."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT59S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1509",
+        "likeCount": "17",
+        "favoriteCount": "0",
+        "commentCount": "6"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "cyMmzyS2mLb1vPdUPLIVJXnaloE",
+      "id": "b9m_sgVjwzw",
+      "snippet": {
+        "publishedAt": "2026-11-20T17:38:05Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Market Midday: Stocks Sell Off, Nasdaq Turns Negative for 2026, Ant Falls • 11/20/26",
+        "description": "CNBC Business News Update with Jessica Ettinger - Markets & Business News With Expert Analysis From Top Business Names. Visit CNBC.com For More.\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#CNBCTV",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b9m_sgVjwzw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b9m_sgVjwzw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b9m_sgVjwzw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/b9m_sgVjwzw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Market Midday: Stocks Sell Off, Nasdaq Turns Negative for 2026, Ant Falls • 11/20/26",
+          "description": "CNBC Business News Update with Jessica Ettinger - Markets & Business News With Expert Analysis From Top Business Names. Visit CNBC.com For More.\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#CNBCTV"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT3M49S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "14970",
+        "likeCount": "60",
+        "favoriteCount": "0",
+        "commentCount": "66"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "scJwYXH1VgcqyN3huJAlgSCD78U",
+      "id": "27MG4A2_usM",
+      "snippet": {
+        "publishedAt": "2026-11-20T17:30:22Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "White House replaces cyber director Sean Cairncross amid widespread tech outages",
+        "description": "White House National Cyber Director Sean Cairncross is leaving his post, and Pentagon CIO Kirsten Davies is set to serve as acting director.\n\nThe change follows a week of major U.S. technology outages affecting aviation, Microsoft services and government systems.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/27MG4A2_usM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/27MG4A2_usM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/27MG4A2_usM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/27MG4A2_usM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/27MG4A2_usM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "White House replaces cyber director Sean Cairncross amid widespread tech outages",
+          "description": "White House National Cyber Director Sean Cairncross is leaving his post, and Pentagon CIO Kirsten Davies is set to serve as acting director.\n\nThe change follows a week of major U.S. technology outages affecting aviation, Microsoft services and government systems."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M11S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "28808",
+        "likeCount": "57",
+        "favoriteCount": "0",
+        "commentCount": "14"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "X-f_7zY3IRTJmz_Tvk1ZL1qaLEA",
+      "id": "eUIBmd42RbM",
+      "snippet": {
+        "publishedAt": "2026-11-20T17:15:13Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Cathie Wood's ARK Invest 'quite optimistic' after Anthropic IPO",
+        "description": "Cathie Wood, ARK Invest CEO, was a major buyer of Anthropic following its debut Thursday on the Nasdaq, buying shares in all her major funds.\n\n“We’re climbing a wall of worry,” said Wood, however she remains “quite optimistic.”",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eUIBmd42RbM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eUIBmd42RbM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eUIBmd42RbM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/eUIBmd42RbM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/eUIBmd42RbM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Cathie Wood's ARK Invest 'quite optimistic' after Anthropic IPO",
+          "description": "Cathie Wood, ARK Invest CEO, was a major buyer of Anthropic following its debut Thursday on the Nasdaq, buying shares in all her major funds.\n\n“We’re climbing a wall of worry,” said Wood, however she remains “quite optimistic.”"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M16S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "6385",
+        "likeCount": "26",
+        "favoriteCount": "0",
+        "commentCount": "11"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "5lmFdRnzQqs0IDR1byI1SkCmgGo",
+      "id": "JRMWQ3M0GPE",
+      "snippet": {
+        "publishedAt": "2026-11-20T16:26:47Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Apple job posting shows plans to build its own AI agent: Report",
+        "description": "Apple is reportedly developing its own AI agent to browse the web, control apps and write code, according to a job posting since pulled down. CNBC's MacKenzie Sigalos reports.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JRMWQ3M0GPE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JRMWQ3M0GPE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JRMWQ3M0GPE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JRMWQ3M0GPE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JRMWQ3M0GPE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "app",
+          "business news",
+          "cnbc",
+          "digital",
+          "disrupt",
+          "funding",
+          "innovation",
+          "investors",
+          "nasdaq",
+          "nyse",
+          "online",
+          "silicon valley",
+          "startup",
+          "stock market",
+          "tech",
+          "techcheck",
+          "technology",
+          "venture",
+          "wall street"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Apple job posting shows plans to build its own AI agent: Report",
+          "description": "Apple is reportedly developing its own AI agent to browse the web, control apps and write code, according to a job posting since pulled down. CNBC's MacKenzie Sigalos reports."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT2M",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "8341",
+        "likeCount": "40",
+        "favoriteCount": "0",
+        "commentCount": "27"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "TkhTAiMYzXBK2UihhyGZoj0RZE8",
+      "id": "a2ldTfRrpEI",
+      "snippet": {
+        "publishedAt": "2026-11-20T16:00:32Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Lossdog CEO Tom Sosnoff: Bitcoin, ETH and Solana have held up 'pretty well'",
+        "description": "Tom Sosnoff, co-founder and CEO of Lossdog, discusses Bitcoin weakness and liquidity risks at MicroStrategy and Coinbase.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/a2ldTfRrpEI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/a2ldTfRrpEI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/a2ldTfRrpEI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/a2ldTfRrpEI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/a2ldTfRrpEI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Lossdog CEO Tom Sosnoff: Bitcoin, ETH and Solana have held up 'pretty well'",
+          "description": "Tom Sosnoff, co-founder and CEO of Lossdog, discusses Bitcoin weakness and liquidity risks at MicroStrategy and Coinbase."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M16S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1621",
+        "likeCount": "7",
+        "favoriteCount": "0",
+        "commentCount": "4"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "ziNH4hlzIg4PwdCskhLjVjJ5I7Q",
+      "id": "SjnZVwiip7s",
+      "snippet": {
+        "publishedAt": "2026-11-20T15:45:00Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "The AI trade could be 'running out of gas': Ivanhoe Mines founder after Anthropic IPO",
+        "description": "Robert Friedland, Ivanhoe Mines Founder, told CNBC’s Morgan Brennan that the “whole AI trade looks like it’s running out of gas,” following Anthropic’s IPO.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SjnZVwiip7s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SjnZVwiip7s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SjnZVwiip7s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SjnZVwiip7s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SjnZVwiip7s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "The AI trade could be 'running out of gas': Ivanhoe Mines founder after Anthropic IPO",
+          "description": "Robert Friedland, Ivanhoe Mines Founder, told CNBC’s Morgan Brennan that the “whole AI trade looks like it’s running out of gas,” following Anthropic’s IPO."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT35S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2447",
+        "likeCount": "22",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "F09uaXCvygleZWAoxEQkD1SiyGg",
+      "id": "_jLms9NDqX0",
+      "snippet": {
+        "publishedAt": "2026-11-20T15:41:15Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Warner Music Group CEO Robert Kyncl: We view AI as an opportunity",
+        "description": "Warner Music CEO Robert Kyncl joins 'Squawk on the Street' to discuss company quarterly earnings, plans for the rest of the fiscal year, AI incorporation, and more.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_jLms9NDqX0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_jLms9NDqX0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_jLms9NDqX0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_jLms9NDqX0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_jLms9NDqX0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "Squawk on the Street",
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips",
+          "financial news",
+          "stock market news",
+          "stocks"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Warner Music Group CEO Robert Kyncl: We view AI as an opportunity",
+          "description": "Warner Music CEO Robert Kyncl joins 'Squawk on the Street' to discuss company quarterly earnings, plans for the rest of the fiscal year, AI incorporation, and more."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT5M3S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3590",
+        "likeCount": "15",
+        "favoriteCount": "0",
+        "commentCount": "5"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "k0aCVc0zckKkyMFpMl4l0wYHMc8",
+      "id": "rKPAvYk4-_I",
+      "snippet": {
+        "publishedAt": "2026-11-20T15:40:53Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Treasury Secretary Bessent: Jensen Huang did not come up in Trump's talks in China",
+        "description": "Treasury Secretary Scott Bessent is fresh off his trip to Asia with President Trump, and he joins 'Squawk on the Street' to discuss key takeaways from the trip.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rKPAvYk4-_I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rKPAvYk4-_I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rKPAvYk4-_I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rKPAvYk4-_I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rKPAvYk4-_I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "Squawk on the Street",
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips",
+          "financial news",
+          "stock market news",
+          "stocks"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Treasury Secretary Bessent: Jensen Huang did not come up in Trump's talks in China",
+          "description": "Treasury Secretary Scott Bessent is fresh off his trip to Asia with President Trump, and he joins 'Squawk on the Street' to discuss key takeaways from the trip."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT4M34S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "61098",
+        "likeCount": "193",
+        "favoriteCount": "0",
+        "commentCount": "112"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "PmMqoUlsD8_WDVNVC0KvcOJGUs8",
+      "id": "5RirIOGyYCw",
+      "snippet": {
+        "publishedAt": "2026-11-20T15:36:38Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Lossdog CEO Tom Sosnoff: Bitcoin, ETH and Solana have held up pretty well",
+        "description": "Tom Sosnoff, Co-Founder and CEO of Lossdog, discusses Anthropic's IPO, retail investor selling, AI stock buying opportunities, Bitcoin weakness and liquidity risks at MicroStrategy and Coinbase.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5RirIOGyYCw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5RirIOGyYCw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5RirIOGyYCw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5RirIOGyYCw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5RirIOGyYCw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "business news",
+          "cnbc",
+          "investing",
+          "market",
+          "morgan brennan",
+          "morning call",
+          "news",
+          "stocks"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Lossdog CEO Tom Sosnoff: Bitcoin, ETH and Solana have held up pretty well",
+          "description": "Tom Sosnoff, Co-Founder and CEO of Lossdog, discusses Anthropic's IPO, retail investor selling, AI stock buying opportunities, Bitcoin weakness and liquidity risks at MicroStrategy and Coinbase."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT4M28S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "regionRestriction": {
+          "allowed": [
+            "AS",
+            "GU",
+            "MP",
+            "PR",
+            "US",
+            "VI"
+          ]
+        },
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "8483",
+        "likeCount": "36",
+        "favoriteCount": "0",
+        "commentCount": "19"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "8iw0UxXSNJhh5T7AmuJoYp6vOQo",
+      "id": "BMsWa3gYmY8",
+      "snippet": {
+        "publishedAt": "2026-11-20T15:30:38Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Foxconn chairman says he sees no AI overcapacity",
+        "description": "Foxconn Chairman Young Liu sees no signs of AI infrastructure overcapacity despite concerns about a potential AI bubble.\n\nSpeaking to CNBC’s Christine Tan, Liu said demand remains strong, with governments and enterprises yet to fully embrace AI. He also explained how Foxconn’s diversified customer base helps it monitor shifts in AI spending.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BMsWa3gYmY8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BMsWa3gYmY8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BMsWa3gYmY8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BMsWa3gYmY8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BMsWa3gYmY8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Foxconn chairman says he sees no AI overcapacity",
+          "description": "Foxconn Chairman Young Liu sees no signs of AI infrastructure overcapacity despite concerns about a potential AI bubble.\n\nSpeaking to CNBC’s Christine Tan, Liu said demand remains strong, with governments and enterprises yet to fully embrace AI. He also explained how Foxconn’s diversified customer base helps it monitor shifts in AI spending."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M48S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2674",
+        "likeCount": "29",
+        "favoriteCount": "0",
+        "commentCount": "8"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "9dfJwWufAp_Pfq1r_XEZm7Ofc4M",
+      "id": "OEcPO8t7Fpw",
+      "snippet": {
+        "publishedAt": "2026-11-20T15:15:40Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Stablecoins will play 'a significant role' in AI agent payments: Payward CEO",
+        "description": "What happens when AI agents begin buying, selling and paying for services on their own? Payward co-CEO Dave Ripley says stablecoins could play a major role — and points to Reap, the payments business Payward recently acquired, as an early test case.\n\nWatch the full episode of The Tech Download wherever you get your podcasts.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OEcPO8t7Fpw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OEcPO8t7Fpw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OEcPO8t7Fpw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OEcPO8t7Fpw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OEcPO8t7Fpw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Stablecoins will play 'a significant role' in AI agent payments: Payward CEO",
+          "description": "What happens when AI agents begin buying, selling and paying for services on their own? Payward co-CEO Dave Ripley says stablecoins could play a major role — and points to Reap, the payments business Payward recently acquired, as an early test case.\n\nWatch the full episode of The Tech Download wherever you get your podcasts."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT53S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2658",
+        "likeCount": "33",
+        "favoriteCount": "0",
+        "commentCount": "7"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "aEa4YR1YinxN0X4uuWgDS2bxewc",
+      "id": "DyDjvvPlTx0",
+      "snippet": {
+        "publishedAt": "2026-11-20T15:03:35Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Market Open: Stocks Mixed, Anthropic Falls, AI Can Recommend Scam Shopping Sites • 11/20/26",
+        "description": "CNBC Business News Update with Jessica Ettinger - Markets & Business News With Expert Analysis From Top Business Names. Visit CNBC.com For More.\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#CNBCTV",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DyDjvvPlTx0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DyDjvvPlTx0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DyDjvvPlTx0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DyDjvvPlTx0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DyDjvvPlTx0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Market Open: Stocks Mixed, Anthropic Falls, AI Can Recommend Scam Shopping Sites • 11/20/26",
+          "description": "CNBC Business News Update with Jessica Ettinger - Markets & Business News With Expert Analysis From Top Business Names. Visit CNBC.com For More.\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#CNBCTV"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT4M29S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "14419",
+        "likeCount": "16",
+        "favoriteCount": "0",
+        "commentCount": "36"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "5yM1ufLzhAzndnwI9XSkqsLlUKQ",
+      "id": "zATXk3p1Tms",
+      "snippet": {
+        "publishedAt": "2026-11-20T15:00:07Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "ARK's Brett Winton: We passed on lots of 'me too' deals after Anthropic, OpenAI took off",
+        "description": "Brett Winton, Chief Futurist at ARK Investment Management, discusses the highly anticipated Anthropic IPO against the backdrop of a global market sell off.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zATXk3p1Tms/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zATXk3p1Tms/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zATXk3p1Tms/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zATXk3p1Tms/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zATXk3p1Tms/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "ARK's Brett Winton: We passed on lots of 'me too' deals after Anthropic, OpenAI took off",
+          "description": "Brett Winton, Chief Futurist at ARK Investment Management, discusses the highly anticipated Anthropic IPO against the backdrop of a global market sell off."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M2S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2545",
+        "likeCount": "24",
+        "favoriteCount": "0",
+        "commentCount": "4"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "pGfOq1R5LihJ1G8kPazl_3e-Sw8",
+      "id": "3qRYSP-LdiU",
+      "snippet": {
+        "publishedAt": "2026-11-20T14:45:11Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "DAMAC Group founder says early Anthropic bet now worth billions",
+        "description": "DAMAC Group founder Hussain Sajwani tells CNBC’s Dan Murphy his Anthropic stake is worth billions.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3qRYSP-LdiU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3qRYSP-LdiU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3qRYSP-LdiU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3qRYSP-LdiU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3qRYSP-LdiU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "DAMAC Group founder says early Anthropic bet now worth billions",
+          "description": "DAMAC Group founder Hussain Sajwani tells CNBC’s Dan Murphy his Anthropic stake is worth billions."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT2M9S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3262",
+        "likeCount": "47",
+        "favoriteCount": "0",
+        "commentCount": "9"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "sx552MWw4XEYPnoEz1TfaxROhAI",
+      "id": "3-dauheCl_4",
+      "snippet": {
+        "publishedAt": "2026-11-20T14:32:01Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Sound Ventures' Guy Oseary on his early Anthropic investment: A lot of people thought we were crazy",
+        "description": "Guy Oseary, Sound Ventures co-founder and general partner, joins 'Squawk Box' to discuss his early investment in Anthropic, Anthropic's IPO offering, company growth outlook, Anthropic vs. OpenAI, Nvidia spy scandal fallout, and more.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3-dauheCl_4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3-dauheCl_4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3-dauheCl_4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3-dauheCl_4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3-dauheCl_4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "Squawk Box U.S.",
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips",
+          "financial news",
+          "stock market news",
+          "stocks"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Sound Ventures' Guy Oseary on his early Anthropic investment: A lot of people thought we were crazy",
+          "description": "Guy Oseary, Sound Ventures co-founder and general partner, joins 'Squawk Box' to discuss his early investment in Anthropic, Anthropic's IPO offering, company growth outlook, Anthropic vs. OpenAI, Nvidia spy scandal fallout, and more."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT9M16S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "18788",
+        "likeCount": "68",
+        "favoriteCount": "0",
+        "commentCount": "44"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "W35REaeYrSgHfOWjQzRc6lpw6ME",
+      "id": "ko7jtJY2ihs",
+      "snippet": {
+        "publishedAt": "2026-11-20T14:30:18Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Michael Irvin on Troy Aikman and Joe Buck",
+        "description": "NFL Hall of Famer and Dallas Cowboys legend Michael Irvin talks to CNBC’s Alex Sherman about Troy Aikman’s ESPN contract dispute.\n\nWatch the full interview on the CNBC Sport podcast in related video.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ko7jtJY2ihs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ko7jtJY2ihs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ko7jtJY2ihs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ko7jtJY2ihs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ko7jtJY2ihs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Michael Irvin on Troy Aikman and Joe Buck",
+          "description": "NFL Hall of Famer and Dallas Cowboys legend Michael Irvin talks to CNBC’s Alex Sherman about Troy Aikman’s ESPN contract dispute.\n\nWatch the full interview on the CNBC Sport podcast in related video."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M1S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "21641",
+        "likeCount": "49",
+        "favoriteCount": "0",
+        "commentCount": "12"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "BjR5w2iwlfS2GJG9CyO52fF4A0o",
+      "id": "LSU6Jz9axpU",
+      "snippet": {
+        "publishedAt": "2026-11-20T14:15:39Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Inside the card-grading empire shaping the price of Pokémon cards",
+        "description": "The trading card scene is big business, and grading is an important part of the puzzle, with Professional Sports Authenticator (PSA) leading the pack in that industry.\n\nCNBC’s Matthew Tan explores how PSA came to dominate the billion-dollar card-grading market — and why engaging the firm can come at a cost for collectors.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LSU6Jz9axpU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LSU6Jz9axpU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LSU6Jz9axpU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LSU6Jz9axpU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LSU6Jz9axpU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Inside the card-grading empire shaping the price of Pokémon cards",
+          "description": "The trading card scene is big business, and grading is an important part of the puzzle, with Professional Sports Authenticator (PSA) leading the pack in that industry.\n\nCNBC’s Matthew Tan explores how PSA came to dominate the billion-dollar card-grading market — and why engaging the firm can come at a cost for collectors."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M25S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "4619",
+        "likeCount": "6",
+        "favoriteCount": "0",
+        "commentCount": "7"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "vrhfiIYaF3q1mo6zgzzWq-KxPHU",
+      "id": "elfnJfdu24A",
+      "snippet": {
+        "publishedAt": "2026-11-20T14:00:19Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Paris Hilton on partnership with Loti to help detect anyone's likeness being used online",
+        "description": "Paris Hilton talks with CNBC’s Julia Boorstin about her partnership with Loti to help detect and remove deepfake images online.\n\nWatch the full interview on the CNBC Changemakers podcast in related video.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/elfnJfdu24A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/elfnJfdu24A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/elfnJfdu24A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/elfnJfdu24A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/elfnJfdu24A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Paris Hilton on partnership with Loti to help detect anyone's likeness being used online",
+          "description": "Paris Hilton talks with CNBC’s Julia Boorstin about her partnership with Loti to help detect and remove deepfake images online.\n\nWatch the full interview on the CNBC Changemakers podcast in related video."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M18S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2191",
+        "likeCount": "10",
+        "favoriteCount": "0",
+        "commentCount": "6"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "kM8yt35MHcomGquEYbYvppekT60",
+      "id": "1NnowEtMlNo",
+      "snippet": {
+        "publishedAt": "2026-11-20T13:45:00Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Where U.S.-China relations stand after APEC summit",
+        "description": "CNBC’s Evelyn Cheng assesses the state of U.S.-China relations following the leaders’ meeting in Shenzhen and in the wake of “Jensen-Gate.” Can the two sides sustain the momentum towards greater strategic stability?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1NnowEtMlNo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1NnowEtMlNo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1NnowEtMlNo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1NnowEtMlNo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1NnowEtMlNo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Where U.S.-China relations stand after APEC summit",
+          "description": "CNBC’s Evelyn Cheng assesses the state of U.S.-China relations following the leaders’ meeting in Shenzhen and in the wake of “Jensen-Gate.” Can the two sides sustain the momentum towards greater strategic stability?"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M52S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "578",
+        "likeCount": "2",
+        "favoriteCount": "0",
+        "commentCount": "7"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "7b17NLXjrosCkSWAfIq9FWvYCPI",
+      "id": "MVYJHflLpDI",
+      "snippet": {
+        "publishedAt": "2026-11-20T13:30:10Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "'A bear case for anything': Ross Gerber on the risks facing Anthropic",
+        "description": "In an interview with CNBC’s Sri Jegarajah, President and CEO of Gerber Kawasaki Ross Gerber points out the risks investors should consider when evaluating Anthropic.\n\nIn this Squawk Box Asia discussion, he also explains why diversification remains essential, even when investing in high-conviction opportunities.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MVYJHflLpDI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MVYJHflLpDI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MVYJHflLpDI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MVYJHflLpDI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MVYJHflLpDI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "'A bear case for anything': Ross Gerber on the risks facing Anthropic",
+          "description": "In an interview with CNBC’s Sri Jegarajah, President and CEO of Gerber Kawasaki Ross Gerber points out the risks investors should consider when evaluating Anthropic.\n\nIn this Squawk Box Asia discussion, he also explains why diversification remains essential, even when investing in high-conviction opportunities."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M26S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2753",
+        "likeCount": "27",
+        "favoriteCount": "0",
+        "commentCount": "6"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "MogBWueglR6gBiMGC25RAS1C0H8",
+      "id": "5q8V5mwbfys",
+      "snippet": {
+        "publishedAt": "2026-11-20T13:13:13Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Anthropic shares fall in premarkets amid AI selloff",
+        "description": "Anthropic shares fell after a strong IPO debut as tech stocks slid amid wider market concerns. CNBC’s Karen Tso reports.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5q8V5mwbfys/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5q8V5mwbfys/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5q8V5mwbfys/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5q8V5mwbfys/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5q8V5mwbfys/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Anthropic shares fall in premarkets amid AI selloff",
+          "description": "Anthropic shares fell after a strong IPO debut as tech stocks slid amid wider market concerns. CNBC’s Karen Tso reports."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M3S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "6889",
+        "likeCount": "30",
+        "favoriteCount": "0",
+        "commentCount": "7"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "AEXkW1bKrsxKpuAYCTmGWmhFS60",
+      "id": "9s_ufgiiyLY",
+      "snippet": {
+        "publishedAt": "2026-11-20T13:06:38Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Cathie Wood on ARK's Anthropic position: Our confidence has grown with time",
+        "description": "Cathie Wood, Ark Invest CEO and CIO, joins 'Squawk Box' to discuss Anthropic's IPO debut, ARK's Anthropic investment, state of the AI trade, future of SpaceX, potential SpaceX-Tesla merger, and more.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9s_ufgiiyLY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9s_ufgiiyLY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9s_ufgiiyLY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9s_ufgiiyLY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9s_ufgiiyLY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "Squawk Box U.S.",
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips",
+          "financial news",
+          "stock market news",
+          "stocks"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Cathie Wood on ARK's Anthropic position: Our confidence has grown with time",
+          "description": "Cathie Wood, Ark Invest CEO and CIO, joins 'Squawk Box' to discuss Anthropic's IPO debut, ARK's Anthropic investment, state of the AI trade, future of SpaceX, potential SpaceX-Tesla merger, and more."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT9M37S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "67608",
+        "likeCount": "339",
+        "favoriteCount": "0",
+        "commentCount": "154"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "fGDhRKzEK-jBSqxi2huj8BT7XHM",
+      "id": "PQHIqe_ZK0E",
+      "snippet": {
+        "publishedAt": "2026-11-20T13:02:22Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "The Fed risks hiking into an AI capex slowdown, says Peter Boockvar",
+        "description": "Peter Boockvar, OnePoint BFG Wealth Partners CIO, joins 'Squawk Box' to discuss the latest market trends, state of the AI trade, impact of Fed rate hikes, and more.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PQHIqe_ZK0E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PQHIqe_ZK0E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PQHIqe_ZK0E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PQHIqe_ZK0E/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PQHIqe_ZK0E/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "Squawk Box U.S.",
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips",
+          "financial news",
+          "stock market news",
+          "stocks"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "The Fed risks hiking into an AI capex slowdown, says Peter Boockvar",
+          "description": "Peter Boockvar, OnePoint BFG Wealth Partners CIO, joins 'Squawk Box' to discuss the latest market trends, state of the AI trade, impact of Fed rate hikes, and more."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT5M51S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "36404",
+        "likeCount": "129",
+        "favoriteCount": "0",
+        "commentCount": "69"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "pnGk4zjXt2UxnrKoAySAHZccr5E",
+      "id": "XSGNjLBS9vg",
+      "snippet": {
+        "publishedAt": "2026-11-20T08:00:15Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "AI Wedding Planning 11/20/26",
+        "description": "Your 60-second money minute. Today’s topic: AI Wedding Planning\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#CNBCTV",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XSGNjLBS9vg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XSGNjLBS9vg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XSGNjLBS9vg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/XSGNjLBS9vg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/XSGNjLBS9vg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "AI Wedding Planning 11/20/26",
+          "description": "Your 60-second money minute. Today’s topic: AI Wedding Planning\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#CNBCTV"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3622",
+        "likeCount": "25",
+        "favoriteCount": "0",
+        "commentCount": "19"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "8FXivoOQQJ7ubWzQ1_pbQ3R09J4",
+      "id": "IoNPAqeu_-8",
+      "snippet": {
+        "publishedAt": "2026-11-20T01:06:53Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "The combination with Marvell is going to be very powerful, says Lumentum CEO Hurlston",
+        "description": "Lumentum president and CEO Michael Hurlston joins 'Mad Money' host Jim Cramer to talk the future of the data center buildout, the AI sector, the company's growth outlook, and more.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IoNPAqeu_-8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IoNPAqeu_-8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IoNPAqeu_-8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IoNPAqeu_-8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IoNPAqeu_-8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "Mad Money",
+          "invest",
+          "investing",
+          "stock market",
+          "jim cramer",
+          "cramer",
+          "kramer",
+          "wall street",
+          "lightning round",
+          "investment strategy",
+          "retirement"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "The combination with Marvell is going to be very powerful, says Lumentum CEO Hurlston",
+          "description": "Lumentum president and CEO Michael Hurlston joins 'Mad Money' host Jim Cramer to talk the future of the data center buildout, the AI sector, the company's growth outlook, and more."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT1M54S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "13800",
+        "likeCount": "35",
+        "favoriteCount": "0",
+        "commentCount": "10"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "CSYC2lmIkm0eMvLkgdZlud8qHnE",
+      "id": "sHWTbaNakd8",
+      "snippet": {
+        "publishedAt": "2026-11-20T00:34:08Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Mad Money 11/19/26 | Audio Only",
+        "description": "Listen to Jim Cramer’s personal guide through the confusing jungle of Wall Street investing, navigating through opportunities and pitfalls with one goal in mind - to help you make money.\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#CNBCTV",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sHWTbaNakd8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sHWTbaNakd8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sHWTbaNakd8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sHWTbaNakd8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sHWTbaNakd8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Mad Money 11/19/26 | Audio Only",
+          "description": "Listen to Jim Cramer’s personal guide through the confusing jungle of Wall Street investing, navigating through opportunities and pitfalls with one goal in mind - to help you make money.\n\nFor access to live and exclusive video from CNBC subscribe to CNBC PRO: https://cnb.cx/42d859g\n\n» Subscribe to CNBC TV: https://cnb.cx/SubscribeCNBCtelevision\n» Subscribe to CNBC: https://cnb.cx/SubscribeCNBC\n» Watch CNBC on the go with CNBC+: https://www.cnbc.com/WatchCNBCPlus\n\n\nTurn to CNBC TV for the latest stock market news and analysis. From market futures to live price updates CNBC is the leader in business news worldwide.\n\nConnect with CNBC News Online\nGet the latest news: http://www.cnbc.com/\nFollow CNBC on LinkedIn: https://cnb.cx/LinkedInCNBC\nFollow CNBC News on Instagram: https://cnb.cx/InstagramCNBC\nFollow CNBC News on Facebook: https://cnb.cx/LikeCNBC\nFollow CNBC on Threads: https://cnb.cx/threads\nFollow CNBC News on X: https://cnb.cx/FollowCNBC\nFollow CNBC on WhatsApp: https://cnb.cx/WhatsAppCNBC\n\nhttps://www.cnbc.com/select/best-credit-cards/ \n\n#CNBC\n#CNBCTV"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT44M23S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "19706",
+        "likeCount": "119",
+        "favoriteCount": "0",
+        "commentCount": "51"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "H3TUzMRECbBPNslVVhIbLJe89Sw",
+      "id": "doU4I20ewsc",
+      "snippet": {
+        "publishedAt": "2026-11-19T22:20:50Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "Elon Musk highlights from the NYT DealBook Summit",
+        "description": "SpaceX and Tesla CEO Elon Musk joined Andrew Ross Sorkin at The New York Times’ DealBook Summit on Wednesday to discuss Nvidia's ousted CEO Jensen Huang, the results of the midterm elections, why a Tesla-SpaceX merger would make sense for both companies and more.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/doU4I20ewsc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/doU4I20ewsc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/doU4I20ewsc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/doU4I20ewsc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/doU4I20ewsc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/doU4I20ewsc/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "tags": [
+          "CNBC",
+          "business news",
+          "finance stock",
+          "stock market",
+          "news channel",
+          "news station",
+          "breaking news",
+          "us news",
+          "world news",
+          "cable",
+          "cable news",
+          "finance news",
+          "money",
+          "money tips",
+          "financial news",
+          "stock market news",
+          "stocks"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Elon Musk highlights from the NYT DealBook Summit",
+          "description": "SpaceX and Tesla CEO Elon Musk joined Andrew Ross Sorkin at The New York Times’ DealBook Summit on Wednesday to discuss Nvidia's ousted CEO Jensen Huang, the results of the midterm elections, why a Tesla-SpaceX merger would make sense for both companies and more."
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT2M58S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "12399",
+        "likeCount": "38",
+        "favoriteCount": "0",
+        "commentCount": "38"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "jyyJBnK2Pa5JF0csJVPpkxZe98Y",
+      "id": "ZPapN7B6O-I",
+      "snippet": {
+        "publishedAt": "2026-11-21T17:08:31Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "How to Lock In For The Winter Arc",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZPapN7B6O-I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZPapN7B6O-I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZPapN7B6O-I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZPapN7B6O-I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZPapN7B6O-I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/ZPapN7B6O-I/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "How to Lock In For The Winter Arc",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT21S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "64875",
+        "likeCount": "5903",
+        "favoriteCount": "0",
+        "commentCount": "175"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "jM_0bumHuyWCyScGb32nlpdxbPY",
+      "id": "xltwfZoetSQ",
+      "snippet": {
+        "publishedAt": "2026-11-20T19:48:16Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "What You CAN vs. CAN’T Take From Hotel Rooms",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xltwfZoetSQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xltwfZoetSQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xltwfZoetSQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xltwfZoetSQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xltwfZoetSQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/xltwfZoetSQ/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "What You CAN vs. CAN’T Take From Hotel Rooms",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT25S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1681219",
+        "likeCount": "48396",
+        "favoriteCount": "0",
+        "commentCount": "254"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "yiisAx1IhsouDcwZmYB0knDYxxc",
+      "id": "93I4KGUThmM",
+      "snippet": {
+        "publishedAt": "2026-11-20T16:33:54Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "20 Tech Items That Improve Your Daily Life",
+        "description": "70mai is doing up to 40% discount starting November 19 in the US. Grab your dashcam early at Black Friday prices! \n\nUS A900:https://amzn.to/4sEcKhM\nUS Hardwire kit: https://amzn.to/3UaSibH\n \nUp to 34% discount in the CA\nCA A900:https://amzn.to/4swzPmj\nCA Hardwire kit:https://amzn.to/4zfX2vB \n\nClick here to subscribe - @dalati \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nWhich tech gadgets are actually worth buying? Here are 20 tech items that can improve your daily life, from a 3-in-1 wireless charger that clears up your nightstand to a portable tire inflator that saves you a trip to the gas station.\n\nI break down everyday tech essentials, desk setup upgrades, smart home gadgets, and fitness tech. Whether you’re always losing your keys, switching between tabs on your laptop, or guessing your portions in the kitchen, I’ll show you which upgrades solve those problems and why they’re worth the money.\n\nWhich one would you use every day?\n\nTimestamps:\n0:00 - Intro\n0:36 - Daily Tech Essentials\n5:27 - On The Go Tech\n10:03 - Productivity Tech\n13:48 - Health Tech",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/93I4KGUThmM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/93I4KGUThmM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/93I4KGUThmM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/93I4KGUThmM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/93I4KGUThmM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "tags": [
+          "20 tech items that improve your daily life",
+          "tech items to buy",
+          "best tech items to buy",
+          "best tech gadgets 2027",
+          "tech gadgets worth buying",
+          "gadgets that make life easier",
+          "everyday tech essentials",
+          "tech items for the holidays",
+          "best tech gifts 2027",
+          "holiday tech gift ideas",
+          "tech gifts for men",
+          "Christmas tech gifts",
+          "desk setup accessories",
+          "productivity gadgets",
+          "smart home gadgets",
+          "car gadgets",
+          "fitness tech",
+          "iPhone accessories",
+          "tech",
+          "affordable tech",
+          "tech items",
+          "tech essentials"
+        ],
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "20 Tech Items That Improve Your Daily Life",
+          "description": "70mai is doing up to 40% discount starting November 19 in the US. Grab your dashcam early at Black Friday prices! \n\nUS A900:https://amzn.to/4sEcKhM\nUS Hardwire kit: https://amzn.to/3UaSibH\n \nUp to 34% discount in the CA\nCA A900:https://amzn.to/4swzPmj\nCA Hardwire kit:https://amzn.to/4zfX2vB \n\nClick here to subscribe - @dalati \n\nMy Spotify: https://open.spotify.com/show/07vw5qLi8kE1pjMbL9Oguu?si=XCjMaapmQOSZZxhWCfhnkg\n\nEmail for Business inquiries: contact.dalati@gmail.com\n\nWhich tech gadgets are actually worth buying? Here are 20 tech items that can improve your daily life, from a 3-in-1 wireless charger that clears up your nightstand to a portable tire inflator that saves you a trip to the gas station.\n\nI break down everyday tech essentials, desk setup upgrades, smart home gadgets, and fitness tech. Whether you’re always losing your keys, switching between tabs on your laptop, or guessing your portions in the kitchen, I’ll show you which upgrades solve those problems and why they’re worth the money.\n\nWhich one would you use every day?\n\nTimestamps:\n0:00 - Intro\n0:36 - Daily Tech Essentials\n5:27 - On The Go Tech\n10:03 - Productivity Tech\n13:48 - Health Tech"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT16M47S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "71312",
+        "likeCount": "1558",
+        "favoriteCount": "0",
+        "commentCount": "94"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "mft35cQjQ5cCGRiYp7Nasl7spLE",
+      "id": "POKA9dw7cKg",
+      "snippet": {
+        "publishedAt": "2026-11-19T18:26:42Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "How to Start an Online Business in 2027",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/POKA9dw7cKg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/POKA9dw7cKg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/POKA9dw7cKg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/POKA9dw7cKg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/POKA9dw7cKg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/POKA9dw7cKg/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "categoryId": "26",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "How to Start an Online Business in 2027",
+          "description": ""
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT40S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "488127",
+        "likeCount": "31750",
+        "favoriteCount": "0",
+        "commentCount": "279"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 50,
+    "resultsPerPage": 50
+  }
+}

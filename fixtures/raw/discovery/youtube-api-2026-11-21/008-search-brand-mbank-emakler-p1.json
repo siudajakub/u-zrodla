@@ -1,0 +1,2227 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "Wq9Nq4hPIVoReEIuwPuhd4D_9tM",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 129,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CznJB87CeFC7FLu2i9U6ebDYCls",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "rcwGPxQHcko"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T11:28:42Z",
+        "channelId": "UCaZp5WJb0e_f0Sz7Uqt2nUw",
+        "title": "Sprawdź, jak wpłacić środki na konto IKE IKZE eMakler",
+        "description": "Inwestowanie wiąże się z ryzykiem.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rcwGPxQHcko/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rcwGPxQHcko/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rcwGPxQHcko/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rcwGPxQHcko/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rcwGPxQHcko/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/rcwGPxQHcko/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "mBank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T11:28:42Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Rcypw7mes8-rQBHP-XWDIrId38M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dNmPLz9b5iA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T12:48:08Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dNmPLz9b5iA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dNmPLz9b5iA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dNmPLz9b5iA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dNmPLz9b5iA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dNmPLz9b5iA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T12:48:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hwZ9blxPNH3NrcVntJIchRtjfYs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "z4m58lQ3ShQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T11:58:38Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/z4m58lQ3ShQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/z4m58lQ3ShQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/z4m58lQ3ShQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/z4m58lQ3ShQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/z4m58lQ3ShQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T11:58:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5K9tm99gZoLSDUFy_sZNdaJbN8s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UCkGPkYr8nQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-09T12:28:00Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UCkGPkYr8nQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UCkGPkYr8nQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UCkGPkYr8nQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/UCkGPkYr8nQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/UCkGPkYr8nQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-09T12:28:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DtFcYCZqnsaLE84DauO4cFBSy7w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mnDMJoyvCq0"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-27T11:30:01Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mnDMJoyvCq0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mnDMJoyvCq0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mnDMJoyvCq0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mnDMJoyvCq0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mnDMJoyvCq0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-27T11:30:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CEPCc73QcNOLilwaqfe8VKoD2ac",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fP3slV4ma1c"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-15T15:00:22Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "Koszty zakupu ETF: XTB vs Interactive Brokers vs mBank #etf #inwestowanie #giełda",
+        "description": "Ten sam ETF za 1000 zł: 5 zł w XTB, 20 zł u innych. Przy 50 000 zł ranking się odwraca. Ściągawka w wideo. Od jakiej kwoty ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fP3slV4ma1c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fP3slV4ma1c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fP3slV4ma1c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fP3slV4ma1c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fP3slV4ma1c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-15T15:00:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "W5mLrQDMeJZ7JuI1z3LCDCGvKmI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UoTDKOmhfy8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T11:35:25Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "XTB: Korekta wg schematu",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UoTDKOmhfy8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UoTDKOmhfy8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UoTDKOmhfy8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/UoTDKOmhfy8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/UoTDKOmhfy8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T11:35:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rObqi_FA3lL9aIBkiTZ0Wl_a4KI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Ly8AbSLq2Hw"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T11:50:28Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ly8AbSLq2Hw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ly8AbSLq2Hw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ly8AbSLq2Hw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Ly8AbSLq2Hw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Ly8AbSLq2Hw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T11:50:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "29myrty8bpWGjMJFr1Yji6oq98Q",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jdrea0t5EI0"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-12T11:12:46Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jdrea0t5EI0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jdrea0t5EI0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jdrea0t5EI0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jdrea0t5EI0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jdrea0t5EI0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-12T11:12:46Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kwpKC0taSXTTP4Pr7bIs3PR9p-E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wrQugn7vi-Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-09T12:52:14Z",
+        "channelId": "UCz8a1NE7jDQQYnL-ByH4W4w",
+        "title": "Jak założyć konto w mBanku krok po kroku (eKonto do usług)",
+        "description": "Przejście wniosku krok po kroku, nagrane z ekranu. Pełne warunki tej promocji, terminy i koszt utrzymania konta: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wrQugn7vi-Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wrQugn7vi-Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wrQugn7vi-Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wrQugn7vi-Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wrQugn7vi-Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/wrQugn7vi-Y/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "obrotomierz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-09T12:52:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QdJUQTHEqpWj-sH_7fegigRxfAM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "js2ePgqfMg8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-21T10:18:50Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Modivo zwraca na siebie uwagę - pułapka hossy czy zmiana trendu?",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/js2ePgqfMg8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/js2ePgqfMg8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/js2ePgqfMg8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/js2ePgqfMg8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/js2ePgqfMg8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-21T10:18:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "geNCiGPwaqnbu00w6AsY22pThg0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2Mapmcy5QK4"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-21T11:08:35Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2Mapmcy5QK4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2Mapmcy5QK4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2Mapmcy5QK4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2Mapmcy5QK4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2Mapmcy5QK4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-21T11:08:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "o3m5WykA-nJjdc65bn_ftLKDnJo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Xru-qTkoaLc"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-07T11:19:29Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Xru-qTkoaLc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Xru-qTkoaLc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Xru-qTkoaLc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Xru-qTkoaLc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Xru-qTkoaLc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-07T11:19:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Qi6cSXqEXZqgs0a12G1t1KabAOw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QCLAVvtai7c"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-16T11:40:57Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Jedna decyzja Fed może zmienić wszystko - korelacja US10Y vs Nasdaq",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QCLAVvtai7c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QCLAVvtai7c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QCLAVvtai7c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QCLAVvtai7c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QCLAVvtai7c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-16T11:40:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RRFgCRv7Mt3GxzDRVOY5VwNOlLw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zcMlxgf3lVY"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-13T11:45:47Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "PEKAO jeszcze w konsolidacji, ale WIG-banki puka pod ATH",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zcMlxgf3lVY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zcMlxgf3lVY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zcMlxgf3lVY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zcMlxgf3lVY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zcMlxgf3lVY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-13T11:45:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "y4RroFU2vnP2o9P53oxbwq3SEYg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Cxgp_AVAM4Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-24T11:27:14Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Cognor – każdy kanał ma swój koniec.",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Cxgp_AVAM4Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Cxgp_AVAM4Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Cxgp_AVAM4Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Cxgp_AVAM4Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Cxgp_AVAM4Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-24T11:27:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XuR89I7yg_IjfwStW0X1f9Hsq08",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "g5Uo7r9ZlYc"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-10T09:53:28Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "KGHM – schemat, o jakim się Murphem’u nie śniło",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/g5Uo7r9ZlYc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/g5Uo7r9ZlYc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/g5Uo7r9ZlYc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/g5Uo7r9ZlYc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/g5Uo7r9ZlYc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-10T09:53:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "X96lZPhx_nCyxigXMri2E-cumgw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QECdUuod5WE"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-14T11:00:18Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QECdUuod5WE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QECdUuod5WE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QECdUuod5WE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QECdUuod5WE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QECdUuod5WE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-14T11:00:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Cj3_R_WrzXnaK1P4pqKaUC8h-CI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "21kvh0ud_vk"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-20T11:53:09Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/21kvh0ud_vk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/21kvh0ud_vk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/21kvh0ud_vk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/21kvh0ud_vk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/21kvh0ud_vk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-20T11:53:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9Cj3moiuD7Db54Mpk5GH2EJkidU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OGo5zINNFwU"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-11T07:25:07Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Cyfrowy Polsat - porządki nad linią trendu spadkowego",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OGo5zINNFwU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OGo5zINNFwU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OGo5zINNFwU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OGo5zINNFwU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OGo5zINNFwU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-11T07:25:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "VrDxZ9tFc8wVHO_RTs-bifXoG7s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LTtf_ibI7b8"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-31T10:21:30Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z GPW i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LTtf_ibI7b8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LTtf_ibI7b8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LTtf_ibI7b8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LTtf_ibI7b8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LTtf_ibI7b8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-31T10:21:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "k3BAx__jmK5mmjwj2EZkITiGJRY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5XOfDh6KbPk"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-03T11:49:08Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5XOfDh6KbPk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5XOfDh6KbPk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5XOfDh6KbPk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5XOfDh6KbPk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5XOfDh6KbPk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-03T11:49:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "m_lEH7lL_fAkmTOHSf9QH91XZW8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ce14bW_Cq7o"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-14T08:45:36Z",
+        "channelId": "UCIaJlmP7LuENMtTiQ47Dc0g",
+        "title": "Inwestujesz w mBanku? Dziś rano przerwa. Sprawdź, czy Cię dotyczy",
+        "description": "W sobotę, 14 listopada, od 9:00 do 11:00 eMakler, mInwestor i mBank Giełda nie będą działać, bo to zaplanowane prace. Źródło: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ce14bW_Cq7o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ce14bW_Cq7o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ce14bW_Cq7o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ce14bW_Cq7o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ce14bW_Cq7o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/ce14bW_Cq7o/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Prosta Sprawa",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-14T08:45:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9hyPa419B6k2oNiNhFW0vTWV1QA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "RwyKz6K-vWg"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-05T11:46:33Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RwyKz6K-vWg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RwyKz6K-vWg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RwyKz6K-vWg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RwyKz6K-vWg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RwyKz6K-vWg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-05T11:46:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XJNNBpiXWgh4NBMqZBphXmuCnDU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LQo7C0kJKG4"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-28T11:15:01Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LQo7C0kJKG4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LQo7C0kJKG4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LQo7C0kJKG4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LQo7C0kJKG4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LQo7C0kJKG4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-28T11:15:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UeIvGdQeq5ZGKs1Hm2_npMsjSxk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ytrGKi0AKAg"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-12T10:30:43Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Poranny przegląd rynku 12.10.2026",
+        "description": "Ten materiał został sporządzony w Biurze maklerskim mBanku i stanowi publikację handlową w rozumieniu art. 24 ust.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ytrGKi0AKAg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ytrGKi0AKAg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ytrGKi0AKAg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ytrGKi0AKAg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ytrGKi0AKAg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-12T10:30:43Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "e99YtRSFiOG8gYdAb0glEuaq7fA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "reyyqDoXeCU"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-16T11:46:27Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Text wraca do gry? W długim terminie byki walczą o zmianę trendu",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/reyyqDoXeCU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/reyyqDoXeCU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/reyyqDoXeCU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/reyyqDoXeCU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/reyyqDoXeCU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-16T11:46:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dSRLnzSZ-dIAMOElCLjbSiW0nU4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Mrvs9OvIaxM"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-26T12:23:08Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Mrvs9OvIaxM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Mrvs9OvIaxM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Mrvs9OvIaxM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Mrvs9OvIaxM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Mrvs9OvIaxM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-26T12:23:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "X3j6jhK6AAihtVkn-0FEMmPztss",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Sj77XUOvTnI"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-03T11:53:13Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "CD Projekt – to tylko pułapka bessy czy może jednak głębsza korekta?",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Sj77XUOvTnI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Sj77XUOvTnI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Sj77XUOvTnI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Sj77XUOvTnI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Sj77XUOvTnI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-03T11:53:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Um6WON0jxQ_hHxZy_26erv2bqB4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "aHGBIXNQtbQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-29T11:18:02Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Millennium Bank – rekordy i apetyt na więcej. 100s z Piotrem Neidkiem",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aHGBIXNQtbQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aHGBIXNQtbQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aHGBIXNQtbQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/aHGBIXNQtbQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/aHGBIXNQtbQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-29T11:18:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Fyqm2Nad9vIu4bZV7Qfbm4bMCog",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ar3rVIqPsfs"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-29T18:32:12Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Włosi biorą Commerzbank. mBank skacze o 8%",
+        "description": "Kolejna edycja Invest Cuffs w Krakowie 9-10 kwietnia, 2027 r. 🎟️ https://tobilet.pl/kongres-invest-cuffs-krakow-2027 Kod ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ar3rVIqPsfs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ar3rVIqPsfs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ar3rVIqPsfs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ar3rVIqPsfs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ar3rVIqPsfs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-29T18:32:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KMlGHsAT9Yk79jJsINf6qoAiwEQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8N1Prtiiu2o"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-15T09:50:48Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8N1Prtiiu2o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8N1Prtiiu2o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8N1Prtiiu2o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8N1Prtiiu2o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8N1Prtiiu2o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-15T09:50:48Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1vpnXwdww00yoTzhzI1QSzw1I98",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "rxd54iyMSEc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T11:59:19Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "KGHM, surowce i indeks - wybuchowa mieszanka",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rxd54iyMSEc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rxd54iyMSEc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rxd54iyMSEc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rxd54iyMSEc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rxd54iyMSEc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T11:59:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sntenScB8LClT1S8aGkdTLVxKh8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BTTXHocYKU0"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T12:23:26Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Allegro łamie prawa fizyki, ale wykupienie jest już historycznie wysokie",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BTTXHocYKU0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BTTXHocYKU0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BTTXHocYKU0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BTTXHocYKU0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BTTXHocYKU0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T12:23:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "pUoHZRKM81EaaOTOlGWu1i3ft_4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ag6hqYb7VW8"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-17T10:31:51Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Polimex aktywuje flagę - bykom się wyjątkowo uda? 100s+ analizy technicznej z Piotrem Neidkiem",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ag6hqYb7VW8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ag6hqYb7VW8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ag6hqYb7VW8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ag6hqYb7VW8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ag6hqYb7VW8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-17T10:31:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2neK73lgOKyV5oBLiJ--4N6Kl10",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KoIngHhFLFc"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-01T11:27:51Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KoIngHhFLFc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KoIngHhFLFc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KoIngHhFLFc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KoIngHhFLFc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KoIngHhFLFc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-01T11:27:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2AE0r2tFPxtWVMPdRmQzR_YSTsQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "g321fMrolbo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-06T10:58:06Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Wyniki Modivo pomogą rozkręcić short squeeze?",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/g321fMrolbo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/g321fMrolbo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/g321fMrolbo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/g321fMrolbo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/g321fMrolbo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-06T10:58:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "munpcdHVrUXJL703zeUkOX9U7E0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "c0RSUAnZABc"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-10T10:48:08Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/c0RSUAnZABc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/c0RSUAnZABc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/c0RSUAnZABc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/c0RSUAnZABc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/c0RSUAnZABc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-10T10:48:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lq-YsMwu8OhGfiU6k6m00E-fRX8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wQBhvTnE0As"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-24T11:29:54Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Rynek spada a XTB wciąż przy szczytach - wybicie z trójkąta jest utrzymane. 100s analizy technicznej",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wQBhvTnE0As/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wQBhvTnE0As/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wQBhvTnE0As/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wQBhvTnE0As/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wQBhvTnE0As/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-24T11:29:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ZZVXM6tmYFCf1K7HWOgXTVcXDj8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "e661BB2iD_g"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-12T10:52:34Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Text wraca do gry?",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/e661BB2iD_g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/e661BB2iD_g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/e661BB2iD_g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/e661BB2iD_g/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/e661BB2iD_g/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-12T10:52:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Uj9GMj3nX7b3g1cwaKM1YtnmeGE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Fd8tVL3BCyI"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-29T12:17:12Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Poranny przegląd rynku 29.09.2026",
+        "description": "Ten materiał został sporządzony w Biurze maklerskim mBanku i stanowi publikację handlową w rozumieniu art. 24 ust.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Fd8tVL3BCyI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Fd8tVL3BCyI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Fd8tVL3BCyI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Fd8tVL3BCyI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Fd8tVL3BCyI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-29T12:17:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-n03At-WkUASRZRuFmuiwwVcYyQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PAU-UXTofw4"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-25T10:38:31Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Rainbow Tours – konsolidacja nie pomaga, klin zbiera żniwa",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PAU-UXTofw4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PAU-UXTofw4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PAU-UXTofw4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PAU-UXTofw4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PAU-UXTofw4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-25T10:38:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "o6qorMFro03iYOc034_v1a-vCbs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DC-jN2e-_qU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-04T12:27:18Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Pepco nieśmiało się broni, skup akcji pomaga, a ATH na horyzoncie",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DC-jN2e-_qU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DC-jN2e-_qU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DC-jN2e-_qU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DC-jN2e-_qU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DC-jN2e-_qU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-04T12:27:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Um3OXxHQO_HBJv-35dCRF_emR2o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "egZ6GI2U1fY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-02T11:42:55Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "WIG-banki wracają po załamanym wybiciu z klina",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/egZ6GI2U1fY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/egZ6GI2U1fY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/egZ6GI2U1fY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/egZ6GI2U1fY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/egZ6GI2U1fY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-02T11:42:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ltaGcjRW-dtPDuGFKadiyVduWYs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PLMVXqvYI1c"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-27T11:30:57Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Auto Partner – kierunek obrany, hossa trwa a ATH czeka. 100s z Piotrem Neidkiem",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PLMVXqvYI1c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PLMVXqvYI1c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PLMVXqvYI1c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PLMVXqvYI1c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PLMVXqvYI1c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-27T11:30:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yDfU0NObPekUgOkMEcoh8Zr_q38",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iGf9YduX0bM"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-22T11:13:47Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Perspektywy rynku – przegląd spółek z mWIG40, WIG20 i indeksów",
+        "description": "Cotygodniowa analiza sytuacji technicznej spółek z WIG30 i kluczowych instrumentów finansowych. Prowadzona przez Piotra ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iGf9YduX0bM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iGf9YduX0bM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iGf9YduX0bM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/iGf9YduX0bM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iGf9YduX0bM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-22T11:13:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "F0CIxmami9DZNhF5WUSWwl7cLNg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mVzyBKIe4bw"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-18T11:39:13Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Geometria pomaga Pepco, ale wiedźmy mogą popsuć bykom plany",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mVzyBKIe4bw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mVzyBKIe4bw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mVzyBKIe4bw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mVzyBKIe4bw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mVzyBKIe4bw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-18T11:39:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8QrtH5OSIBKpwTE1Hr9_AjV7bHE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HzrFN-QwEms"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-13T11:17:21Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Poranny przegląd rynku 13.10.2026",
+        "description": "Ten materiał został sporządzony w Biurze maklerskim mBanku i stanowi publikację handlową w rozumieniu art. 24 ust.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HzrFN-QwEms/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HzrFN-QwEms/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HzrFN-QwEms/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HzrFN-QwEms/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HzrFN-QwEms/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-13T11:17:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "OUCvRY51L1Q6H-YSA0z-dgqK75Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "eSxa0lTTo9Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-05T07:44:10Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "Enea testuje kanał, PGE wybija trójkąt - energetyka wraca na salony?",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eSxa0lTTo9Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eSxa0lTTo9Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eSxa0lTTo9Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/eSxa0lTTo9Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/eSxa0lTTo9Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-05T07:44:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GiObiSyuPejy6hnxTVGaZ0QlQ0M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AOMDp-0_ejg"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-19T11:06:17Z",
+        "channelId": "UCBohPqQw-Ffm8_G2IuaW2UA",
+        "title": "USDPLN łapie szczyt czy może jednak zmienia trend?",
+        "description": "Analiza techniczna wybranych instrumentów finansowych. Najciekawsze momenty na rynku, incydentalne sytuacje techniczne, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AOMDp-0_ejg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AOMDp-0_ejg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AOMDp-0_ejg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AOMDp-0_ejg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AOMDp-0_ejg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biuro maklerskie mBanku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-19T11:06:17Z"
+      }
+    }
+  ]
+}

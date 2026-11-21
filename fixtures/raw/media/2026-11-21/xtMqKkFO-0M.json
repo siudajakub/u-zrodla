@@ -1,0 +1,225 @@
+{
+ "videoId": "xtMqKkFO-0M",
+ "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M",
+ "observedAt": "2026-11-21T18:52:52+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Dokupiłem Netflix za 200 zł... Efekt mnie rozbawił 😂 | Portfel inwestycyjny",
+  "channel": "DETERMINACJA",
+  "duration": 204,
+  "uploadDate": "20261115",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 3731,
+ "descriptionSha256": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716",
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 75,
+  "spanSec": [
+   0.2,
+   188.192
+  ],
+  "captionsSha256": "bb6de6ef588ae0f2a6110617972a7d87099f929d740f2f3ba65f21fd04834337",
+  "files": {
+   "xtMqKkFO-0M.pl-orig.vtt": {
+    "bytes": 21593,
+    "sha256": "bb6de6ef588ae0f2a6110617972a7d87099f929d740f2f3ba65f21fd04834337"
+   },
+   "xtMqKkFO-0M.pl.vtt": {
+    "bytes": 21593,
+    "sha256": "bb6de6ef588ae0f2a6110617972a7d87099f929d740f2f3ba65f21fd04834337"
+   }
+  },
+  "caveat": "auto-napisy: błędy w nazwach własnych i liczbach są możliwe; cytaty niżej nie są poprawiane"
+ },
+ "measurement": {
+  "captionsWallSeconds": 2.01,
+  "requests": 1,
+  "captionBytes": 21593,
+  "note": "bajty = jeden plik napisów; ruch ekstraktora yt-dlp (strona + player API) niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 3731,
+    "originalTextSha256": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 204
+     }
+    ],
+    "durationSec": 204,
+    "reason": null,
+    "spanSec": [
+     0.2,
+     188.192
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 3731 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 204
+    }
+   ],
+   "durationSec": 204,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markers": [
+  {
+   "start": 31.8,
+   "end": 37.09,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "XTB 1% straty. Srebro 6% straty.",
+   "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=31s",
+   "assessment": null
+  },
+  {
+   "start": 82.0,
+   "end": 84.29,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "to nie na XTB.",
+   "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=82s",
+   "assessment": null
+  },
+  {
+   "start": 109.6,
+   "end": 112.09,
+   "kinds": [
+    "partner",
+    "kod",
+    "broker"
+   ],
+   "quote": "Partnerem odcinka jest XTB, a z kodem",
+   "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=109s",
+   "assessment": "mowa: jawna deklaracja partnera odcinka XTB i kodu DETERMINACJA"
+  }
+ ],
+ "descriptionMarkers": [
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "🟢https://geolink.xtb.com/WfOMP"
+  },
+  {
+   "kinds": [
+    "kod"
+   ],
+   "quote": "🎁 Wpisz przy rejestracji kod DETERMINACJA, aby otrzymać darmowy kurs! 🎁"
+  },
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "🟢Konto demo (XTB), które polecam: https://geolink.xtb.com/i7lt9"
+  },
+  {
+   "kinds": [
+    "kod"
+   ],
+   "quote": "🎁 Wpisz przy rejestracji kod DETERMINACJA, aby otrzymać darmowy kurs! 🎁"
+  },
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "🟢Konto maklerskie (XTB), które polecam: https://geolink.xtb.com/Q93hp"
+  },
+  {
+   "kinds": [
+    "wspolpraca",
+    "broker"
+   ],
+   "quote": "#xtb #współpraca"
+  },
+  {
+   "kinds": [
+    "partner",
+    "broker"
+   ],
+   "quote": "📢Partnerem odcinka jest XTB"
+  },
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "⛔️ XTB S.A. umożliwia automatyczne, cykliczne składanie zleceń zakupu Instrumentów Finansowych lub Akcji Ułamkowych zgodnie ze stworzonym przez Ciebie Planem Inwestycyjnym. Decyzje inwestycyjne, w tym tworzenie Planu Inwestycyjnego, alokacja środków, częstotliwość i wartość płatności oraz składanie "
+  },
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "⛔️ Oprocentowanie z tytułu posiadania wolnych środków na koncie, to oprocentowanie w skali roku. Oferta przeznaczona dla nowych klientów i ograniczona do 90 dni od daty zawarcia umowy. Oprocentowanie dla klientów długoterminowych różni się od przedstawionego. Aktualne stawki dostępne na https://www."
+  }
+ ],
+ "frames": [
+  {
+   "kind": "frame",
+   "method": "storyboard_320x180",
+   "time": 109.85,
+   "requestedTime": 109.0,
+   "path": ".runtime/media-cache/xtMqKkFO-0M/frames/storyboard_320x180_000109.jpg",
+   "sha256": "97e2c98a3428386f3d40afdc9109117e48c3a70b25d57af119563402a5047366",
+   "width": 320,
+   "height": 180,
+   "bytesFile": 19628,
+   "deepLink": "https://www.youtube.com/watch?v=xtMqKkFO-0M&t=109s",
+   "sourceVersion": {
+    "videoId": "xtMqKkFO-0M",
+    "readAt": "2026-11-21T18:52:52+00:00",
+    "source": "youtube-captions-v1",
+    "captionsSha256": "bb6de6ef588ae0f2a6110617972a7d87099f929d740f2f3ba65f21fd04834337",
+    "descriptionSha256": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716",
+    "ytDlpVersion": "2026.10.26"
+   },
+   "bytesFetchedLive": 47434,
+   "observation": "Plansza „Z kodem: DETERMINACJA”, „Partnerem kanału jest XTB”, ostrzeżenie o ryzyku. Deklaracja partnerstwa WIDOCZNA (320x180, czytelna)."
+  }
+ ]
+}

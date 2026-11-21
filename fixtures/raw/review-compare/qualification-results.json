@@ -1,0 +1,5358 @@
+{
+ "purpose": "Wejście dla G: stara decyzja reguł 1.2 (tylko opis) i nowa kwalifikacja D na tych samych realnych materiałach; dla 4 filmów także stan po dodaniu pełnej mowy (auto-napisy) i kadrów od agenta C. Bez etykiet. Fala 3 (D, 2026-11-21 ok. 20:00 UTC): przeliczone reguły kwalifikacji po poprawkach (okna mowy, siła ujawnienia, skrócone linki, flaga płatnej promocji) i 13 filmów pakietu C2 (opis oraz opis+mowa+kadry+flaga B). Fala 3 (D, 2026-11-21 ok. 20:00 UTC): przeliczone reguły kwalifikacji po poprawkach (okna mowy, siła ujawnienia, skrócone linki, flaga płatnej promocji) i 13 filmów pakietu C2 (opis oraz opis+mowa+kadry+flaga B).",
+ "gitHead": "491094da62c100cc562ca422534ff360ebddee5b",
+ "uncommitted": true,
+ "qualificationSha256": "cc42fae22f9f99375c7a0696417636b809c5808bacaf89a286b73e96eb9d4397",
+ "firmIndexSha256": "c00117cd5ed72ef7f3a2c89f770d22622d7d1c36292e0dc96ddf963c8fbffa3b",
+ "inputsSha256": "36480107b08417c60e2897bd8a56a260b7c31ed709b205498a64de39373b855d",
+ "mediaExcerptsSha256": "0696233efa2975114c7202c5cb96d676965673944c9037bb1729ec7dc54fcfa1",
+ "oldEngine": "analysis.engine.analyze + analysis.semantic.review_suggestion(semantic unavailable), tylko opis",
+ "items": [
+  {
+   "label": "XTB DETERMINACJA, krótki opis (fikstura)",
+   "inputScope": "opis",
+   "id": "youtube:xtMqKkFO-0M",
+   "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M",
+   "contentHash": "d245bd33bc2209dda4e312e8c2e9508fbc42b3eb36386d6b33a61663ba15d108",
+   "source": {
+    "kind": "fixture",
+    "file": "fixtures/raw/discovery/2026-11-21.json",
+    "fileSha256": "3651cd835e82f93448769471dbab3036f47124eb4acea2ab080bf513568680b6",
+    "note": "Rekord bez zmian. Opis to 26-znakowy wycinek (sampled, truncated)."
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 94,
+    "signalType": "declaration",
+    "reviewSuggestion": "review",
+    "summary": "Deklaracja współpracy lub partnerstwa. Ustal warunki współpracy z firmą.",
+    "quote": "Partnerem odcinka jest XTB"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "complete",
+    "completeReason": "transcript_unavailable",
+    "reason": "Relacja reklamowa (declared) z XTB; treść mowy niezbadana.",
+    "reasons": [],
+    "moments": [],
+    "missing": [
+     "pełna transkrypcja mowy",
+     "pełny opis"
+    ],
+    "reviewScore": {
+     "state": "withheld",
+     "value": null,
+     "band": null,
+     "notComputableReason": "wniosek o braku przesłanki wymaga pełnego opisu i pełnej transkrypcji"
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "Partnerem odcinka jest XTB",
+      "evidenceId": "ev-1",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ],
+      "kind": "partner_mention",
+      "kinds": [
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "youtube:UCnmJzS-tFT7DlxIMFxYGcHw|XTB",
+     "firstObservedAt": "2026-11-21T15:40:13.808887+00:00",
+     "disclosureKind": "partner_mention"
+    },
+    "premises": [],
+    "coverage": {
+     "state": "minimal",
+     "label": "Zbadano: opis (fragment), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "XTB DETERMINACJA, pełny opis (podgląd)",
+   "inputScope": "opis",
+   "id": "youtube:xtMqKkFO-0M",
+   "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M",
+   "contentHash": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716",
+   "source": {
+    "kind": "preview_db",
+    "url": "http://localhost:8769/v1/state",
+    "readAt": "2026-11-21T18:36:01Z",
+    "stateSha256": "33e635cb62a04b799ec83b982b2141986cf6525899f56d88f726b94969cc83f5",
+    "note": "Ten sam film, pełny opis z bazy podglądu. Pola analizy usunięte."
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 94,
+    "signalType": "declaration",
+    "reviewSuggestion": "review",
+    "summary": "Deklaracja współpracy lub partnerstwa. Ustal warunki współpracy z firmą.",
+    "quote": "📢Partnerem odcinka jest XTB"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "complete",
+    "completeReason": "transcript_unavailable",
+    "reason": "Relacja reklamowa (declared) z XTB; treść mowy niezbadana.",
+    "reasons": [],
+    "moments": [],
+    "missing": [
+     "pełna transkrypcja mowy"
+    ],
+    "reviewScore": {
+     "state": "withheld",
+     "value": null,
+     "band": null,
+     "notComputableReason": "wniosek o braku przesłanki wymaga pełnego opisu i pełnej transkrypcji"
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": false,
+      "reason": "Nazwa prawna w materiale wskazuje jeden wpis.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "#współpraca",
+      "evidenceId": "ev-7",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ],
+      "kind": "explicit_ad",
+      "kinds": [
+       "explicit_ad",
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "youtube:UCnmJzS-tFT7DlxIMFxYGcHw|XTB",
+     "firstObservedAt": "2026-11-21T15:40:13.808887+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "Comparic Rynki / XTB (1)",
+   "inputScope": "opis",
+   "id": "youtube:CDk20n4u9Kk",
+   "url": "https://www.youtube.com/watch?v=CDk20n4u9Kk",
+   "contentHash": "17916af3c9d62a052b62462a1b795b8eff97ca126deb58e40ed977d40097ac6a",
+   "source": {
+    "kind": "preview_db",
+    "url": "http://localhost:8769/v1/state",
+    "readAt": "2026-11-21T18:36:01Z",
+    "stateSha256": "33e635cb62a04b799ec83b982b2141986cf6525899f56d88f726b94969cc83f5"
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "💰 Inwestowanie z XTB - Sprawdź XTB"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/GFTfa” w opisie (znaki 218–252).",
+     "Dodatkowy dowód relacji (creator_code): „Kod „COMPARIC” przy rejestracji = darmowy kurs inwestowania.” w opisie (znaki 365–425).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny); flaga płatnej promocji niesprawdzona."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk",
+      "evidenceId": "ev-3",
+      "locator": {
+       "field": "description",
+       "charStart": 218,
+       "charEnd": 252,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": null,
+      "end": null,
+      "label": "Dowód relacji handlowej",
+      "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk",
+      "evidenceId": "ev-4",
+      "locator": {
+       "field": "description",
+       "charStart": 365,
+       "charEnd": 425,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 85,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "creator_code, tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "youtube:UCelOnoH_P-vJgAHSAcMKQiw|XTB",
+     "firstObservedAt": "2026-11-21T15:40:13.871623+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/GFTfa",
+      "claim": "Dowód relacji handlowej z XTB (creator_code, tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 85,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "Comparic Rynki / XTB (2)",
+   "inputScope": "opis",
+   "id": "youtube:eQYmvRfHtr8",
+   "url": "https://www.youtube.com/watch?v=eQYmvRfHtr8",
+   "contentHash": "a86e7808210abe8dd4a1ec6c8576659d655263721f902cc0ec79e864482e23d4",
+   "source": {
+    "kind": "preview_db",
+    "url": "http://localhost:8769/v1/state",
+    "readAt": "2026-11-21T18:36:01Z",
+    "stateSha256": "33e635cb62a04b799ec83b982b2141986cf6525899f56d88f726b94969cc83f5"
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "💰 Inwestowanie z XTB - Sprawdź XTB"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/GFTfa” w opisie (znaki 343–377).",
+     "Dodatkowy dowód relacji (creator_code): „Kod „COMPARIC” przy rejestracji = darmowy kurs inwestowania.” w opisie (znaki 490–550).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny); flaga płatnej promocji niesprawdzona."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8",
+      "evidenceId": "ev-4",
+      "locator": {
+       "field": "description",
+       "charStart": 343,
+       "charEnd": 377,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": null,
+      "end": null,
+      "label": "Dowód relacji handlowej",
+      "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8",
+      "evidenceId": "ev-5",
+      "locator": {
+       "field": "description",
+       "charStart": 490,
+       "charEnd": 550,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 85,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "creator_code, tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ]
+     }
+    },
+    "otherRelations": [
+     {
+      "status": "none",
+      "basis": "wzmianka o marce",
+      "firm": {
+       "mention": "InvestingPro",
+       "identityStatus": "unresolved",
+       "candidates": [],
+       "crossBorder": "unresolved",
+       "reason": "Podmiot spoza zakresu M1: narzędzie analityczne, nie firma inwestycyjna.",
+       "inScope": false,
+       "outOfScopeReason": "narzędzie analityczne, nie firma inwestycyjna"
+      },
+      "adRegistry": "none"
+     }
+    ],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "youtube:UCelOnoH_P-vJgAHSAcMKQiw|XTB",
+     "firstObservedAt": "2026-11-21T15:40:13.871623+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/GFTfa",
+      "claim": "Dowód relacji handlowej z XTB (creator_code, tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 85,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "Comparic Rynki / XTB (3)",
+   "inputScope": "opis",
+   "id": "youtube:YQH4FEP9exI",
+   "url": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+   "contentHash": "10f47e27b570009b95b5ff7c9e11111229c30cf9fe2e38e718b189f099e55bb9",
+   "source": {
+    "kind": "preview_db",
+    "url": "http://localhost:8769/v1/state",
+    "readAt": "2026-11-21T18:36:01Z",
+    "stateSha256": "33e635cb62a04b799ec83b982b2141986cf6525899f56d88f726b94969cc83f5"
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "💰 Inwestowanie z XTB - Sprawdź XTB"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/GFTfa” w opisie (znaki 232–266).",
+     "Dodatkowy dowód relacji (creator_code): „Kod „COMPARIC” przy rejestracji = darmowy kurs inwestowania.” w opisie (znaki 379–439).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny); flaga płatnej promocji niesprawdzona."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+      "evidenceId": "ev-3",
+      "locator": {
+       "field": "description",
+       "charStart": 232,
+       "charEnd": 266,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": null,
+      "end": null,
+      "label": "Dowód relacji handlowej",
+      "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+      "evidenceId": "ev-4",
+      "locator": {
+       "field": "description",
+       "charStart": 379,
+       "charEnd": 439,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 85,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "creator_code, tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "youtube:UCelOnoH_P-vJgAHSAcMKQiw|XTB",
+     "firstObservedAt": "2026-11-21T15:40:13.871623+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/GFTfa",
+      "claim": "Dowód relacji handlowej z XTB (creator_code, tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 85,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "FBO 347",
+   "inputScope": "opis",
+   "id": "apple-podcasts:946719109:episode:4fc2b0570420fe40059c934c7a8f6dad",
+   "url": "https://marciniwuc.libsyn.com/fbo-347-ike-ikze-czy-oki-nie-wystarczy-wybra-konto-wane-co-na-nim-trzymasz",
+   "contentHash": "c7bdedbc00f4ec4449ba08d7349a7bf5c45f6bf87f5c4861cc1841797272d36b",
+   "source": {
+    "kind": "preview_db",
+    "url": "http://localhost:8769/v1/state",
+    "readAt": "2026-11-21T18:36:01Z",
+    "stateSha256": "33e635cb62a04b799ec83b982b2141986cf6525899f56d88f726b94969cc83f5"
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 66,
+    "signalType": "affiliate_code",
+    "reviewSuggestion": "no_signal",
+    "summary": "Kod lub link polecający. W zbadanym opisie nie wykryto oznaczenia. Sprawdź charakter relacji.",
+    "quote": "👉 Zwycięzca rankingu IKE/IKZE eMakler w mBanku (link partnerski): https://marciniwuc.com/eMakler3/"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "complete",
+    "completeReason": "identity_unresolved",
+    "reason": "Promowany podmiot bez wpisu w przejrzanych wykazach: do uzupełnienia przed oceną.",
+    "reasons": [],
+    "moments": [],
+    "missing": [
+     "aktualny wpis w wykazie dla Saxo Bank"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 35,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "mBank",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 7410390,
+        "name": "mBANK S.A. Biuro Maklerskie mBank",
+        "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+        "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": false,
+      "reason": "Jeden wpis w wykazie dla tej nazwy.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "link partnerski",
+      "evidenceId": "ev-3",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ],
+      "kind": "affiliate_link_mention",
+      "kinds": [
+       "affiliate_link_mention",
+       "explicit_ad"
+      ]
+     }
+    },
+    "otherRelations": [
+     {
+      "status": "declared",
+      "basis": "oznaczenie z nazwą lub przy marce",
+      "firm": {
+       "mention": "Saxo Bank",
+       "identityStatus": "no_registry_entry",
+       "candidates": [],
+       "crossBorder": "unresolved",
+       "reason": "Brak wpisu w przejrzanych kopiach wykazów KNF z 2026-11-21.",
+       "inScope": true
+      },
+      "adRegistry": "included"
+     },
+     {
+      "status": "declared",
+      "basis": "oznaczenie z nazwą lub przy marce",
+      "firm": {
+       "mention": "3deals",
+       "identityStatus": "unresolved",
+       "candidates": [],
+       "crossBorder": "unresolved",
+       "reason": "Podmiot spoza zakresu M1: porównywarka lokat bankowych.",
+       "inScope": false,
+       "outOfScopeReason": "porównywarka lokat bankowych"
+      },
+      "adRegistry": "none"
+     }
+    ],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "apple-podcasts:946719109|mBank",
+     "firstObservedAt": "2026-11-21T16:09:07.778878+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [
+     {
+      "type": "U3",
+      "status": "conditional",
+      "quote": "[reklama_SAXO_Bank]",
+      "claim": "Promowany podmiot Saxo Bank bez wpisu w przejrzanych kopiach wykazów.",
+      "points": 35,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "FBO 348",
+   "inputScope": "opis",
+   "id": "apple-podcasts:946719109:episode:513e25a3c0134fdc84dd2ee0bf499ea4",
+   "url": "https://marciniwuc.libsyn.com/fbo-348-stae-oprocentowanie-kredytu-coraz-drosze-czy-warto-za-nie-dopaca",
+   "contentHash": "40fb0bb75beb97215793b4474493312206e3b87e60e685b49044c72d5c9073ef",
+   "source": {
+    "kind": "preview_db",
+    "url": "http://localhost:8769/v1/state",
+    "readAt": "2026-11-21T18:36:01Z",
+    "stateSha256": "33e635cb62a04b799ec83b982b2141986cf6525899f56d88f726b94969cc83f5"
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 94,
+    "signalType": "declaration",
+    "reviewSuggestion": "review",
+    "summary": "Deklaracja współpracy lub partnerstwa. Ustal warunki współpracy z firmą.",
+    "quote": "💡Ranking KH powstał we współpracy z firmą Sebastiana Bilskiego Hipoteka Direct sp."
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Reklamowany podmiot spoza zakresu M1: pośrednictwo kredytu hipotecznego, nie firma inwestycyjna.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "Hipoteka Direct",
+      "identityStatus": "unresolved",
+      "candidates": [],
+      "crossBorder": "unresolved",
+      "reason": "Podmiot spoza zakresu M1: pośrednictwo kredytu hipotecznego, nie firma inwestycyjna.",
+      "inScope": false,
+      "outOfScopeReason": "pośrednictwo kredytu hipotecznego, nie firma inwestycyjna"
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "[reklama_Hipoteka_Direct]",
+      "evidenceId": "ev-2",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ],
+      "kind": "explicit_ad",
+      "kinds": [
+       "explicit_ad"
+      ]
+     }
+    },
+    "otherRelations": [
+     {
+      "status": "declared",
+      "basis": "oznaczenie z nazwą lub przy marce",
+      "firm": {
+       "mention": "3deals",
+       "identityStatus": "unresolved",
+       "candidates": [],
+       "crossBorder": "unresolved",
+       "reason": "Podmiot spoza zakresu M1: porównywarka lokat bankowych.",
+       "inScope": false,
+       "outOfScopeReason": "porównywarka lokat bankowych"
+      },
+      "adRegistry": "none"
+     },
+     {
+      "status": "declared",
+      "basis": "oznaczenie z nazwą lub przy marce",
+      "firm": {
+       "mention": "Sebastiana",
+       "identityStatus": "unresolved",
+       "candidates": [],
+       "crossBorder": "unresolved",
+       "reason": "Podmiot spoza zakresu M1: nierozpoznany reklamodawca bez kontekstu inwestycyjnego.",
+       "inScope": false,
+       "outOfScopeReason": "nierozpoznany reklamodawca bez kontekstu inwestycyjnego"
+      },
+      "adRegistry": "none"
+     }
+    ],
+    "adRegistry": {
+     "state": "none"
+    },
+    "premises": [],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "FBO 349",
+   "inputScope": "opis",
+   "id": "apple-podcasts:946719109:episode:df389aac821dcd427da696a2fad70f78",
+   "url": "https://marciniwuc.libsyn.com/fbo-349-gdzie-zaoy-ike-lub-ikze-w-2026-tych-kont-unikaj-jak-ognia-ranking-ike-ikze-2026",
+   "contentHash": "773f1d80fe636d1b4cd3202d647e97bbb80042a21c171315aaf36fe2fcb14c64",
+   "source": {
+    "kind": "preview_db",
+    "url": "http://localhost:8769/v1/state",
+    "readAt": "2026-11-21T18:36:01Z",
+    "stateSha256": "33e635cb62a04b799ec83b982b2141986cf6525899f56d88f726b94969cc83f5"
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 66,
+    "signalType": "affiliate_code",
+    "reviewSuggestion": "no_signal",
+    "summary": "Kod lub link polecający. W zbadanym opisie nie wykryto oznaczenia. Sprawdź charakter relacji.",
+    "quote": "👉 Zwycięzca rankingu IKE/IKZE eMakler w mBanku (link partnerski): https://marciniwuc.com/eMakler3/ [reklama_mBank] Link mBanku wstawiamy w ramach płatnej"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "complete",
+    "completeReason": "identity_unresolved",
+    "reason": "Promowany podmiot bez wpisu w przejrzanych wykazach: do uzupełnienia przed oceną.",
+    "reasons": [],
+    "moments": [],
+    "missing": [
+     "aktualny wpis w wykazie dla Saxo Bank"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 35,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "mBank",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 7410390,
+        "name": "mBANK S.A. Biuro Maklerskie mBank",
+        "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+        "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": false,
+      "reason": "Jeden wpis w wykazie dla tej nazwy.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "[reklama_mBank] Link mBanku wstawiamy w ramach płatnej współpracy.",
+      "evidenceId": "ev-2",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ],
+      "kind": "explicit_ad",
+      "kinds": [
+       "affiliate_link_mention",
+       "explicit_ad"
+      ]
+     }
+    },
+    "otherRelations": [
+     {
+      "status": "declared",
+      "basis": "oznaczenie z nazwą lub przy marce",
+      "firm": {
+       "mention": "XTB",
+       "identityStatus": "candidates",
+       "candidates": [
+        {
+         "registryId": 6884980,
+         "name": "XTB S.A.",
+         "category": "Firmy inwestycyjne - Domy maklerskie",
+         "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+         "checkedAt": "2026-11-21"
+        },
+        {
+         "registryId": 9439233,
+         "name": "XTB Ltd",
+         "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+         "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+         "checkedAt": "2026-11-21"
+        }
+       ],
+       "crossBorder": "unresolved",
+       "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+       "inScope": true
+      },
+      "adRegistry": "included"
+     },
+     {
+      "status": "declared",
+      "basis": "oznaczenie z nazwą lub przy marce",
+      "firm": {
+       "mention": "Saxo Bank",
+       "identityStatus": "no_registry_entry",
+       "candidates": [],
+       "crossBorder": "unresolved",
+       "reason": "Brak wpisu w przejrzanych kopiach wykazów KNF z 2026-11-21.",
+       "inScope": true
+      },
+      "adRegistry": "included"
+     },
+     {
+      "status": "declared",
+      "basis": "oznaczenie z nazwą lub przy marce",
+      "firm": {
+       "mention": "3deals",
+       "identityStatus": "unresolved",
+       "candidates": [],
+       "crossBorder": "unresolved",
+       "reason": "Podmiot spoza zakresu M1: porównywarka lokat bankowych.",
+       "inScope": false,
+       "outOfScopeReason": "porównywarka lokat bankowych"
+      },
+      "adRegistry": "none"
+     }
+    ],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "apple-podcasts:946719109|mBank",
+     "firstObservedAt": "2026-11-21T16:09:07.778878+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [
+     {
+      "type": "U3",
+      "status": "conditional",
+      "quote": "[reklama_SAXO_Bank] Link SAXO wstawiamy w ramach płatnej współpracy.",
+      "claim": "Promowany podmiot Saxo Bank bez wpisu w przejrzanych kopiach wykazów.",
+      "points": 35,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "Freedom24 (kanał UCgw_3Ep…)",
+   "inputScope": "opis",
+   "id": "youtube:o2GfnmVVkO8",
+   "url": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+   "contentHash": "e6cadfe2a5429ccae84bd935aa1c4010c3c53d7da39bd5f264ff4621ddb3e37f",
+   "source": {
+    "kind": "probe_fixture",
+    "file": "fixtures/raw/discovery/youtube-probe-2026-11-21/055-atom-ucgw-3epv7swquszymdjyhtg.xml",
+    "fileSha256": "4f6c2eb9f6bc6bae0e6ba5cd8fe8e900b4a7f3e37c884c35ec0eda23e66951f4",
+    "note": "Atom z sondy B; observedAt z summary-confirm.json"
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 12,
+    "signalType": "none",
+    "reviewSuggestion": "no_signal",
+    "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+    "quote": "Inwestuj globalnie i odbierz do 20 darmowych akcji na start:"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=2111” w opisie (znaki 61–113).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: Freedom24; kandydaci z wykazu KNF: [9439434].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny); flaga płatnej promocji niesprawdzona."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+      "evidenceId": "ev-1",
+      "locator": {
+       "field": "description",
+       "charStart": 61,
+       "charEnd": 113,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 75,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "tracking_link",
+     "firm": {
+      "mention": "Freedom24",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 9439434,
+        "name": "Freedom Finance Europe Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": true,
+      "reason": "Jeden wpis w wykazie dla tej nazwy.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "youtube:UCgw_3Epv7swquSZyMDjYHTg|Freedom24",
+     "firstObservedAt": "2026-11-21T18:33:52+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=2111",
+      "claim": "Dowód relacji handlowej z Freedom24 (tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 75,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "XTB (kanał UCgw_3Ep…, Cymcyk)",
+   "inputScope": "opis",
+   "id": "youtube:ePfzHQVf-lc",
+   "url": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+   "contentHash": "bac51c665e53e826b337054845af09c34da2b7899e506a333a9d5a515327a38d",
+   "source": {
+    "kind": "probe_fixture",
+    "file": "fixtures/raw/discovery/youtube-probe-2026-11-21/055-atom-ucgw-3epv7swquszymdjyhtg.xml",
+    "fileSha256": "4f6c2eb9f6bc6bae0e6ba5cd8fe8e900b4a7f3e37c884c35ec0eda23e66951f4",
+    "note": "Atom z sondy B; observedAt z summary-confirm.json"
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "Zacznij razem z aplikacją XTB — https://link-pso.xtb.com/pso/kdg44"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/kdg44” w opisie (znaki 79–113).",
+     "Dodatkowy dowód relacji (creator_code): „Rejestrując się na XTB z kodem DNARYNKOW otrzymasz specjalny kurs zarządzania finansami od podstaw.” w opisie (znaki 115–214).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny); flaga płatnej promocji niesprawdzona."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+      "evidenceId": "ev-2",
+      "locator": {
+       "field": "description",
+       "charStart": 79,
+       "charEnd": 113,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": null,
+      "end": null,
+      "label": "Dowód relacji handlowej",
+      "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+      "evidenceId": "ev-3",
+      "locator": {
+       "field": "description",
+       "charStart": 115,
+       "charEnd": 214,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 85,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "creator_code, tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "youtube:UCgw_3Epv7swquSZyMDjYHTg|XTB",
+     "firstObservedAt": "2026-11-21T18:33:52+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/kdg44",
+      "claim": "Dowód relacji handlowej z XTB (creator_code, tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 85,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "Saxo Bank (kanał UCgw_3Ep…)",
+   "inputScope": "opis",
+   "id": "youtube:_aqCM37gK1U",
+   "url": "https://www.youtube.com/watch?v=_aqCM37gK1U",
+   "contentHash": "ef74931baef2fb74f8a557130298fb909e4729a00d2f92dbca5510116d6f355e",
+   "source": {
+    "kind": "probe_fixture",
+    "file": "fixtures/raw/discovery/youtube-probe-2026-11-21/055-atom-ucgw-3epv7swquszymdjyhtg.xml",
+    "fileSha256": "4f6c2eb9f6bc6bae0e6ba5cd8fe8e900b4a7f3e37c884c35ec0eda23e66951f4",
+    "note": "Atom z sondy B; observedAt z summary-confirm.json"
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 12,
+    "signalType": "none",
+    "reviewSuggestion": "no_signal",
+    "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+    "quote": "Otwórz konto w Saxo Banku przez: https://www.home.saxo/pl-pl/campaigns/commission-credits/ffpl5 i zyskaj 250 euro bonusu!"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "complete",
+    "completeReason": "identity_unresolved",
+    "reason": "Promowany podmiot bez wpisu w przejrzanych wykazach: do uzupełnienia przed oceną.",
+    "reasons": [],
+    "moments": [],
+    "missing": [
+     "aktualny wpis w wykazie dla Saxo Bank"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 35,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "Saxo Bank",
+      "identityStatus": "no_registry_entry",
+      "candidates": [],
+      "crossBorder": "unresolved",
+      "reason": "Brak wpisu w przejrzanych kopiach wykazów KNF z 2026-11-21.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "Partnerem publikacji jest Saxo Bank",
+      "evidenceId": "ev-4",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ],
+      "kind": "partner_mention",
+      "kinds": [
+       "explicit_ad",
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "youtube:UCgw_3Epv7swquSZyMDjYHTg|Saxo Bank",
+     "firstObservedAt": "2026-11-21T18:33:52+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [
+     {
+      "type": "U3",
+      "status": "conditional",
+      "quote": "Partnerem publikacji jest Saxo Bank",
+      "claim": "Promowany podmiot Saxo Bank bez wpisu w przejrzanych kopiach wykazów.",
+      "points": 35,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "Freedom24 (kanał UCgw_3Ep…, 9Fcwo1jlwe4)",
+   "inputScope": "opis",
+   "id": "youtube:9Fcwo1jlwe4",
+   "url": "https://www.youtube.com/watch?v=9Fcwo1jlwe4",
+   "contentHash": "5a9233e7640c78a8ec8e8e84fc4c77b1b76849233cac40b70f19992c0b39f4a6",
+   "source": {
+    "kind": "probe_fixture",
+    "file": "fixtures/raw/discovery/youtube-probe-2026-11-21/055-atom-ucgw-3epv7swquszymdjyhtg.xml",
+    "fileSha256": "4f6c2eb9f6bc6bae0e6ba5cd8fe8e900b4a7f3e37c884c35ec0eda23e66951f4"
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 12,
+    "signalType": "none",
+    "reviewSuggestion": "no_signal",
+    "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+    "quote": "Inwestuj globalnie i odbierz do 20 darmowych akcji na start:"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=1511” w opisie (znaki 62–114).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: Freedom24; kandydaci z wykazu KNF: [9439434].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny); flaga płatnej promocji niesprawdzona."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4",
+      "evidenceId": "ev-1",
+      "locator": {
+       "field": "description",
+       "charStart": 62,
+       "charEnd": 114,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 75,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "tracking_link",
+     "firm": {
+      "mention": "Freedom24",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 9439434,
+        "name": "Freedom Finance Europe Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": true,
+      "reason": "Jeden wpis w wykazie dla tej nazwy.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "youtube:UCgw_3Epv7swquSZyMDjYHTg|Freedom24",
+     "firstObservedAt": "2026-11-21T18:33:52+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=1511",
+      "claim": "Dowód relacji handlowej z Freedom24 (tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 75,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "XTB (kanał UCgw_3Ep…, -HpCSKp9bqk)",
+   "inputScope": "opis",
+   "id": "youtube:-HpCSKp9bqk",
+   "url": "https://www.youtube.com/watch?v=-HpCSKp9bqk",
+   "contentHash": "ded32e0ac38865c3850991c95a0ced87170af71946156de5b4e05dec2515d523",
+   "source": {
+    "kind": "probe_fixture",
+    "file": "fixtures/raw/discovery/youtube-probe-2026-11-21/055-atom-ucgw-3epv7swquszymdjyhtg.xml",
+    "fileSha256": "4f6c2eb9f6bc6bae0e6ba5cd8fe8e900b4a7f3e37c884c35ec0eda23e66951f4"
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "Zacznij razem z aplikacją XTB — https://link-pso.xtb.com/pso/kdg44"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/kdg44” w opisie (znaki 79–113).",
+     "Dodatkowy dowód relacji (creator_code): „Rejestrując się na XTB z kodem DNARYNKOW otrzymasz specjalny kurs zarządzania finansami od podstaw.” w opisie (znaki 115–214).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny); flaga płatnej promocji niesprawdzona."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk",
+      "evidenceId": "ev-2",
+      "locator": {
+       "field": "description",
+       "charStart": 79,
+       "charEnd": 113,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": null,
+      "end": null,
+      "label": "Dowód relacji handlowej",
+      "deepLink": "https://www.youtube.com/watch?v=-HpCSKp9bqk",
+      "evidenceId": "ev-3",
+      "locator": {
+       "field": "description",
+       "charStart": 115,
+       "charEnd": 214,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 85,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "creator_code, tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "youtube:UCgw_3Epv7swquSZyMDjYHTg|XTB",
+     "firstObservedAt": "2026-11-21T18:33:52+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/kdg44",
+      "claim": "Dowód relacji handlowej z XTB (creator_code, tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 85,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "Comparic Rynki / XTB (1)",
+   "inputScope": "opis+mowa+kadry",
+   "id": "youtube:CDk20n4u9Kk",
+   "url": "https://www.youtube.com/watch?v=CDk20n4u9Kk",
+   "contentHash": "17916af3c9d62a052b62462a1b795b8eff97ca126deb58e40ed977d40097ac6a",
+   "source": {
+    "kind": "preview_db",
+    "url": "http://localhost:8769/v1/state",
+    "readAt": "2026-11-21T18:36:01Z",
+    "stateSha256": "33e635cb62a04b799ec83b982b2141986cf6525899f56d88f726b94969cc83f5",
+    "media": {
+     "fixture": "fixtures/raw/media/2026-11-21/CDk20n4u9Kk.json",
+     "transcript": ".runtime/media-cache/CDk20n4u9Kk/transcript.json (pełny, poza Gitem)",
+     "captionsSha256": "a2fc9171060ae7e2a1d6bc8733ae24acd7032340f896f233e323f095b7e71ab2",
+     "segments": 434
+    }
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "💰 Inwestowanie z XTB - Sprawdź XTB"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_speech",
+      "where": "transcript",
+      "text": "znajdziecie u partnera tego odcinka XTB.",
+      "evidenceId": "ev-1",
+      "checked": [
+       "description",
+       "transcript",
+       "frames"
+      ],
+      "notChecked": [
+       "platformFlags"
+      ],
+      "kind": "partner_mention",
+      "kinds": [
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "youtube:UCelOnoH_P-vJgAHSAcMKQiw|XTB",
+     "firstObservedAt": "2026-11-21T15:40:13.871623+00:00",
+     "disclosureKind": "partner_mention"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://link-pso.xtb.com/pso/GFTfa",
+      "claim": "Dowód relacji handlowej z XTB (oznaczenie z nazwą lub przy marce) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "znajdziecie u partnera tego odcinka XTB.",
+       "REKLAMA"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "XTB DETERMINACJA, pełny opis (podgląd)",
+   "inputScope": "opis+mowa+kadry",
+   "id": "youtube:xtMqKkFO-0M",
+   "url": "https://www.youtube.com/watch?v=xtMqKkFO-0M",
+   "contentHash": "f88d4e266c32f2d0861b1ac693dcf1987117ccaa50fa887f74a042f202662716",
+   "source": {
+    "kind": "preview_db",
+    "url": "http://localhost:8769/v1/state",
+    "readAt": "2026-11-21T18:36:01Z",
+    "stateSha256": "33e635cb62a04b799ec83b982b2141986cf6525899f56d88f726b94969cc83f5",
+    "note": "Ten sam film, pełny opis z bazy podglądu. Pola analizy usunięte.",
+    "media": {
+     "fixture": "fixtures/raw/media/2026-11-21/xtMqKkFO-0M.json",
+     "transcript": ".runtime/media-cache/xtMqKkFO-0M/transcript.json (pełny, poza Gitem)",
+     "captionsSha256": "bb6de6ef588ae0f2a6110617972a7d87099f929d740f2f3ba65f21fd04834337",
+     "segments": 75
+    }
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 94,
+    "signalType": "declaration",
+    "reviewSuggestion": "review",
+    "summary": "Deklaracja współpracy lub partnerstwa. Ustal warunki współpracy z firmą.",
+    "quote": "📢Partnerem odcinka jest XTB"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Relacja reklamowa bez przesłanki do kontroli w opisie i mowie; wpis w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": false,
+      "reason": "Nazwa prawna w materiale wskazuje jeden wpis.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "#współpraca",
+      "evidenceId": "ev-8",
+      "checked": [
+       "description",
+       "transcript",
+       "frames"
+      ],
+      "notChecked": [
+       "platformFlags"
+      ],
+      "kind": "explicit_ad",
+      "kinds": [
+       "explicit_ad",
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "youtube:UCnmJzS-tFT7DlxIMFxYGcHw|XTB",
+     "firstObservedAt": "2026-11-21T15:40:13.808887+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "XTB (kanał UCgw_3Ep…, -HpCSKp9bqk)",
+   "inputScope": "opis+mowa+kadry",
+   "id": "youtube:-HpCSKp9bqk",
+   "url": "https://www.youtube.com/watch?v=-HpCSKp9bqk",
+   "contentHash": "ded32e0ac38865c3850991c95a0ced87170af71946156de5b4e05dec2515d523",
+   "source": {
+    "kind": "probe_fixture",
+    "file": "fixtures/raw/discovery/youtube-probe-2026-11-21/055-atom-ucgw-3epv7swquszymdjyhtg.xml",
+    "fileSha256": "4f6c2eb9f6bc6bae0e6ba5cd8fe8e900b4a7f3e37c884c35ec0eda23e66951f4",
+    "media": {
+     "fixture": "fixtures/raw/media/2026-11-21/-HpCSKp9bqk.json",
+     "transcript": ".runtime/media-cache/-HpCSKp9bqk/transcript.json (pełny, poza Gitem)",
+     "captionsSha256": "06d2db1abf93b73ab5e7589276805a1626e800718f93f512ef71a40793a8abb4",
+     "segments": 516
+    }
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "Zacznij razem z aplikacją XTB — https://link-pso.xtb.com/pso/kdg44"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_speech",
+      "where": "transcript",
+      "text": "dzięki partnerowi tego odcinka, jakim",
+      "evidenceId": "ev-1",
+      "checked": [
+       "description",
+       "transcript",
+       "frames"
+      ],
+      "notChecked": [
+       "platformFlags"
+      ],
+      "kind": "partner_mention",
+      "kinds": [
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "youtube:UCgw_3Epv7swquSZyMDjYHTg|XTB",
+     "firstObservedAt": "2026-11-21T18:33:52+00:00",
+     "disclosureKind": "partner_mention"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://link-pso.xtb.com/pso/kdg44",
+      "claim": "Dowód relacji handlowej z XTB (oznaczenie z nazwą lub przy marce) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "dzięki partnerowi tego odcinka, jakim",
+       "PARTNEREM ODCINKA JEST XTB",
+       "reklama"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "Freedom24 (kanał UCgw_3Ep…, 9Fcwo1jlwe4)",
+   "inputScope": "opis+mowa+kadry",
+   "id": "youtube:9Fcwo1jlwe4",
+   "url": "https://www.youtube.com/watch?v=9Fcwo1jlwe4",
+   "contentHash": "5a9233e7640c78a8ec8e8e84fc4c77b1b76849233cac40b70f19992c0b39f4a6",
+   "source": {
+    "kind": "probe_fixture",
+    "file": "fixtures/raw/discovery/youtube-probe-2026-11-21/055-atom-ucgw-3epv7swquszymdjyhtg.xml",
+    "fileSha256": "4f6c2eb9f6bc6bae0e6ba5cd8fe8e900b4a7f3e37c884c35ec0eda23e66951f4",
+    "media": {
+     "fixture": "fixtures/raw/media/2026-11-21/9Fcwo1jlwe4.json",
+     "transcript": ".runtime/media-cache/9Fcwo1jlwe4/transcript.json (pełny, poza Gitem)",
+     "captionsSha256": "0606c04d157f4989856e79c8a7561b3777f2fccfd9de781a2f4d31d670007f72",
+     "segments": 975
+    }
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 12,
+    "signalType": "none",
+    "reviewSuggestion": "no_signal",
+    "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+    "quote": "Inwestuj globalnie i odbierz do 20 darmowych akcji na start:"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie ogólne przy dowodzie relacji handlowej",
+     "firm": {
+      "mention": "Freedom24",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 9439434,
+        "name": "Freedom Finance Europe Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": true,
+      "reason": "Jeden wpis w wykazie dla tej nazwy.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_speech",
+      "where": "transcript",
+      "text": "freedom, partnera, partnera tego kanału,",
+      "evidenceId": "ev-1",
+      "checked": [
+       "description",
+       "transcript",
+       "frames"
+      ],
+      "notChecked": [
+       "platformFlags"
+      ],
+      "kind": "partner_mention",
+      "kinds": [
+       "explicit_ad",
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "youtube:UCgw_3Epv7swquSZyMDjYHTg|Freedom24",
+     "firstObservedAt": "2026-11-21T18:33:52+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=1511",
+      "claim": "Dowód relacji handlowej z Freedom24 (oznaczenie ogólne przy dowodzie relacji handlowej) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "freedom, partnera, partnera tego kanału,",
+       "REKLAMA"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   }
+  },
+  {
+   "label": "C2 7M0rC6-Rueo",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:7M0rC6-Rueo",
+   "url": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/7M0rC6-Rueo/meta.json",
+    "descriptionSha256": "f3cb0b2b2016e62c497cbfdb7ebfd2b6ded7d82996bcabecaa1ff67681484f87",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "✅Konto maklerskie (XTB) (z kodem \" WYPRAWA \"): https://link-pso.xtb.com/pso/7SA9k"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 178–212).",
+     "Dodatkowy dowód relacji (creator_code): „✅Konto maklerskie (XTB) (z kodem \" WYPRAWA \"): https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 131–212).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+      "evidenceId": "ev-3",
+      "locator": {
+       "field": "description",
+       "charStart": 178,
+       "charEnd": 212,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": null,
+      "end": null,
+      "label": "Dowód relacji handlowej",
+      "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+      "evidenceId": "ev-2",
+      "locator": {
+       "field": "description",
+       "charStart": 131,
+       "charEnd": 212,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 90,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "creator_code, tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ]
+     }
+    },
+    "otherRelations": [
+     {
+      "status": "probable",
+      "basis": "creator_code",
+      "firm": {
+       "mention": "Pekao",
+       "identityStatus": "established",
+       "candidates": [
+        {
+         "registryId": 7976968,
+         "name": "BANK PEKAO S.A. (BANK POLSKA KASA OPIEKI S.A.) iuro Maklerskie PEKAO",
+         "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+         "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+         "checkedAt": "2026-11-21"
+        }
+       ],
+       "crossBorder": false,
+       "reason": "Nazwa prawna w materiale wskazuje jeden wpis.",
+       "inScope": true
+      },
+      "adRegistry": "candidate"
+     }
+    ],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:06+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/7SA9k",
+      "claim": "Dowód relacji handlowej z XTB (creator_code, tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 85,
+      "found": []
+     },
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "✅Konto maklerskie (XTB) (z kodem \" WYPRAWA \"): https://link-pso.xtb.com/pso/7SA9k",
+      "claim": "Dowód relacji handlowej z Pekao (creator_code) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 70,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 7M0rC6-Rueo",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:7M0rC6-Rueo",
+   "url": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/7M0rC6-Rueo/transcript.json",
+    "captionsSha256": "d63c5d000d1e00039b094bf09f342df6353f2993ae210ee3ac322bb6f35dcf8d",
+    "segments": 408,
+    "package": "fixtures/raw/media/2026-11-21/7M0rC6-Rueo.json",
+    "paidPromotionFlag": false
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "✅Konto maklerskie (XTB) (z kodem \" WYPRAWA \"): https://link-pso.xtb.com/pso/7SA9k"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 178–212).",
+     "Dodatkowy dowód relacji (creator_code): „✅Konto maklerskie (XTB) (z kodem \" WYPRAWA \"): https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 131–212).",
+     "Nie znaleziono oznaczenia reklamy w opisie, w całej transkrypcji (0–886 s) i w 3 kadrach.",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+      "evidenceId": "ev-3",
+      "locator": {
+       "field": "description",
+       "charStart": 178,
+       "charEnd": 212,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": null,
+      "end": null,
+      "label": "Dowód relacji handlowej",
+      "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+      "evidenceId": "ev-2",
+      "locator": {
+       "field": "description",
+       "charStart": 131,
+       "charEnd": 212,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 100,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "creator_code, tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description",
+       "transcript",
+       "frames"
+      ],
+      "notChecked": []
+     }
+    },
+    "otherRelations": [
+     {
+      "status": "probable",
+      "basis": "creator_code",
+      "firm": {
+       "mention": "Pekao",
+       "identityStatus": "established",
+       "candidates": [
+        {
+         "registryId": 7976968,
+         "name": "BANK PEKAO S.A. (BANK POLSKA KASA OPIEKI S.A.) iuro Maklerskie PEKAO",
+         "category": "Firmy inwestycyjne - Banki prowadzące działalność maklerską",
+         "sourceFile": "data/probe-snapshots/knf/knf_banki_maklerskie.json",
+         "checkedAt": "2026-11-21"
+        }
+       ],
+       "crossBorder": false,
+       "reason": "Nazwa prawna w materiale wskazuje jeden wpis.",
+       "inScope": true
+      },
+      "adRegistry": "candidate"
+     }
+    ],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:06+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/7SA9k",
+      "claim": "Dowód relacji handlowej z XTB (creator_code, tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 100,
+      "found": []
+     },
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "✅Konto maklerskie (XTB) (z kodem \" WYPRAWA \"): https://link-pso.xtb.com/pso/7SA9k",
+      "claim": "Dowód relacji handlowej z Pekao (creator_code) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 85,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "refer"
+  },
+  {
+   "label": "C2 OIyPE0z2mng",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:OIyPE0z2mng",
+   "url": "https://www.youtube.com/watch?v=OIyPE0z2mng",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/OIyPE0z2mng/meta.json",
+    "descriptionSha256": "10a66ec4c60174832126ee8bdc15072b1f0918d7474450c0bc1dbf776d342c6c",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 66,
+    "signalType": "affiliate_code",
+    "reviewSuggestion": "no_signal",
+    "summary": "Kod lub link polecający. W zbadanym opisie nie wykryto oznaczenia. Sprawdź charakter relacji.",
+    "quote": "Pobierz aplikację i podczas rejestracji wpisz kod promocyjny: wojtek50 – Twój pierwszy rachunek zostanie automatycznie obniżony o 50 zł!"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 786–820).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng",
+      "evidenceId": "ev-5",
+      "locator": {
+       "field": "description",
+       "charStart": 786,
+       "charEnd": 820,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 75,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/u0V2g",
+      "claim": "Dowód relacji handlowej z XTB (tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 75,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 OIyPE0z2mng",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:OIyPE0z2mng",
+   "url": "https://www.youtube.com/watch?v=OIyPE0z2mng",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/OIyPE0z2mng/transcript.json",
+    "captionsSha256": "f021037c8d55e573253b602dec53a4e6d635e7f4096238266b769c692f3ebc71",
+    "segments": 28,
+    "package": "fixtures/raw/media/2026-11-21/OIyPE0z2mng.json",
+    "paidPromotionFlag": false
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 66,
+    "signalType": "affiliate_code",
+    "reviewSuggestion": "no_signal",
+    "summary": "Kod lub link polecający. W zbadanym opisie nie wykryto oznaczenia. Sprawdź charakter relacji.",
+    "quote": "Pobierz aplikację i podczas rejestracji wpisz kod promocyjny: wojtek50 – Twój pierwszy rachunek zostanie automatycznie obniżony o 50 zł!"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 786–820).",
+     "Nie znaleziono oznaczenia reklamy w opisie, w całej transkrypcji (0–58 s) i w 4 kadrach.",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng",
+      "evidenceId": "ev-5",
+      "locator": {
+       "field": "description",
+       "charStart": 786,
+       "charEnd": 820,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 90,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description",
+       "transcript",
+       "frames"
+      ],
+      "notChecked": []
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/u0V2g",
+      "claim": "Dowód relacji handlowej z XTB (tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 90,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "refer"
+  },
+  {
+   "label": "C2 ZJrT-X08Xwc",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:ZJrT-X08Xwc",
+   "url": "https://www.youtube.com/watch?v=ZJrT-X08Xwc",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/ZJrT-X08Xwc/meta.json",
+    "descriptionSha256": "6daf4dc4ab5dbc3a9eff7eec5530d77966411e19b9f7f3dd8c8c1010def154ab",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 66,
+    "signalType": "affiliate_code",
+    "reviewSuggestion": "no_signal",
+    "summary": "Kod lub link polecający. W zbadanym opisie nie wykryto oznaczenia. Sprawdź charakter relacji.",
+    "quote": "Pobierz aplikację i podczas rejestracji wpisz kod promocyjny: wojtek50 – Twój pierwszy rachunek zostanie automatycznie obniżony o 50 zł!"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 601–635).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc",
+      "evidenceId": "ev-5",
+      "locator": {
+       "field": "description",
+       "charStart": 601,
+       "charEnd": 635,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 75,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/u0V2g",
+      "claim": "Dowód relacji handlowej z XTB (tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 75,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 ZJrT-X08Xwc",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:ZJrT-X08Xwc",
+   "url": "https://www.youtube.com/watch?v=ZJrT-X08Xwc",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/ZJrT-X08Xwc/transcript.json",
+    "captionsSha256": "acbbe0ea32191c441c95d0e127569706cb71e92e788412ecbdef97465ccf05af",
+    "segments": 9,
+    "package": "fixtures/raw/media/2026-11-21/ZJrT-X08Xwc.json",
+    "paidPromotionFlag": false
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 66,
+    "signalType": "affiliate_code",
+    "reviewSuggestion": "no_signal",
+    "summary": "Kod lub link polecający. W zbadanym opisie nie wykryto oznaczenia. Sprawdź charakter relacji.",
+    "quote": "Pobierz aplikację i podczas rejestracji wpisz kod promocyjny: wojtek50 – Twój pierwszy rachunek zostanie automatycznie obniżony o 50 zł!"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 601–635).",
+     "Nie znaleziono oznaczenia reklamy w opisie, w całej transkrypcji (0–20 s) i w 3 kadrach.",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc",
+      "evidenceId": "ev-5",
+      "locator": {
+       "field": "description",
+       "charStart": 601,
+       "charEnd": 635,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 90,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description",
+       "transcript",
+       "frames"
+      ],
+      "notChecked": []
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/u0V2g",
+      "claim": "Dowód relacji handlowej z XTB (tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 90,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "refer"
+  },
+  {
+   "label": "C2 AqXHkxDzSDI",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:AqXHkxDzSDI",
+   "url": "https://www.youtube.com/watch?v=AqXHkxDzSDI",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/AqXHkxDzSDI/meta.json",
+    "descriptionSha256": "2144d81f759df2052b601dd64c02cc6f3df4022df79768a3770abae3d3f895dd",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "🥇XTB: https://bit.ly/44BfO3V (Użyj kodu \"TRADEXTB\", aby uzyskać materiały edukacyjne)"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://bit.ly/44BfO3V” w opisie (znaki 28–50).",
+     "Dodatkowy dowód relacji (creator_code): „🥇XTB: https://bit.ly/44BfO3V (Użyj kodu \"TRADEXTB\", aby uzyskać materiały edukacyjne)” w opisie (znaki 22–107).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI",
+      "evidenceId": "ev-2",
+      "locator": {
+       "field": "description",
+       "charStart": 28,
+       "charEnd": 50,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": null,
+      "end": null,
+      "label": "Dowód relacji handlowej",
+      "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI",
+      "evidenceId": "ev-3",
+      "locator": {
+       "field": "description",
+       "charStart": 22,
+       "charEnd": 107,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 80,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "creator_code, short_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ]
+     }
+    },
+    "otherRelations": [
+     {
+      "status": "none",
+      "basis": "wzmianka o marce",
+      "firm": {
+       "mention": "Freedom24",
+       "identityStatus": "established",
+       "candidates": [
+        {
+         "registryId": 9439434,
+         "name": "Freedom Finance Europe Ltd",
+         "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+         "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+         "checkedAt": "2026-11-21"
+        }
+       ],
+       "crossBorder": true,
+       "reason": "Jeden wpis w wykazie dla tej nazwy.",
+       "inScope": true
+      },
+      "adRegistry": "none"
+     }
+    ],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:06+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://bit.ly/44BfO3V",
+      "claim": "Dowód relacji handlowej z XTB (creator_code, short_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 80,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 AqXHkxDzSDI",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:AqXHkxDzSDI",
+   "url": "https://www.youtube.com/watch?v=AqXHkxDzSDI",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/AqXHkxDzSDI/transcript.json",
+    "captionsSha256": "159ac067cdefac815e93a785b472a84192aa229da3df802155e199eed03fd6ba",
+    "segments": 81,
+    "package": "fixtures/raw/media/2026-11-21/AqXHkxDzSDI.json",
+    "paidPromotionFlag": false
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "🥇XTB: https://bit.ly/44BfO3V (Użyj kodu \"TRADEXTB\", aby uzyskać materiały edukacyjne)"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://bit.ly/44BfO3V” w opisie (znaki 28–50).",
+     "Dodatkowy dowód relacji (creator_code): „🥇XTB: https://bit.ly/44BfO3V (Użyj kodu \"TRADEXTB\", aby uzyskać materiały edukacyjne)” w opisie (znaki 22–107).",
+     "Nie znaleziono oznaczenia reklamy w opisie, w całej transkrypcji (0–204 s) i w 3 kadrach.",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI",
+      "evidenceId": "ev-2",
+      "locator": {
+       "field": "description",
+       "charStart": 28,
+       "charEnd": 50,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": null,
+      "end": null,
+      "label": "Dowód relacji handlowej",
+      "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI",
+      "evidenceId": "ev-3",
+      "locator": {
+       "field": "description",
+       "charStart": 22,
+       "charEnd": 107,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": 15.679,
+      "end": 20.91,
+      "label": "Wezwanie w mowie do linku w opisie",
+      "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=15s",
+      "evidenceId": "ev-5",
+      "kind": "time"
+     }
+    ],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 95,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "creator_code, short_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description",
+       "transcript",
+       "frames"
+      ],
+      "notChecked": []
+     }
+    },
+    "otherRelations": [
+     {
+      "status": "none",
+      "basis": "wzmianka o marce",
+      "firm": {
+       "mention": "Freedom24",
+       "identityStatus": "established",
+       "candidates": [
+        {
+         "registryId": 9439434,
+         "name": "Freedom Finance Europe Ltd",
+         "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+         "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+         "checkedAt": "2026-11-21"
+        }
+       ],
+       "crossBorder": true,
+       "reason": "Jeden wpis w wykazie dla tej nazwy.",
+       "inScope": true
+      },
+      "adRegistry": "none"
+     }
+    ],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:06+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://bit.ly/44BfO3V",
+      "claim": "Dowód relacji handlowej z XTB (creator_code, short_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 95,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "refer"
+  },
+  {
+   "label": "C2 yIbtMnfP25Q",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:yIbtMnfP25Q",
+   "url": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/yIbtMnfP25Q/meta.json",
+    "descriptionSha256": "55db31c04c6a0eca858236a3a173dbf222f387e0abfd6f29fef52b66b1315b17",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "✅Konto maklerskie, które polecam (XTB): https://link-pso.xtb.com/pso/WtGV9"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/WtGV9” w opisie (znaki 732–766).",
+     "Dodatkowy dowód relacji (creator_code): „Teraz, rejestrując się w XTB z kodem \"DYWIDENDOWY \" otrzymacie pełny kurs edukacyjny dedykowany pocz” w opisie (znaki 833–954).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+      "evidenceId": "ev-2",
+      "locator": {
+       "field": "description",
+       "charStart": 732,
+       "charEnd": 766,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": null,
+      "end": null,
+      "label": "Dowód relacji handlowej",
+      "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+      "evidenceId": "ev-4",
+      "locator": {
+       "field": "description",
+       "charStart": 833,
+       "charEnd": 954,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 85,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "creator_code, tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:06+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/WtGV9",
+      "claim": "Dowód relacji handlowej z XTB (creator_code, tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 85,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 yIbtMnfP25Q",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:yIbtMnfP25Q",
+   "url": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/yIbtMnfP25Q/transcript.json",
+    "captionsSha256": "ef8091f27516947618af67d018608769dc8b8bfc0be9958fa914e9f333a4d7ba",
+    "segments": 578,
+    "package": "fixtures/raw/media/2026-11-21/yIbtMnfP25Q.json",
+    "paidPromotionFlag": false
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "✅Konto maklerskie, które polecam (XTB): https://link-pso.xtb.com/pso/WtGV9"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_speech",
+      "where": "transcript",
+      "text": "które jest partnerem mojego kanału. W",
+      "evidenceId": "ev-1",
+      "checked": [
+       "description",
+       "transcript",
+       "frames"
+      ],
+      "notChecked": [],
+      "kind": "partner_mention",
+      "kinds": [
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:06+00:00",
+     "disclosureKind": "partner_mention"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://link-pso.xtb.com/pso/WtGV9",
+      "claim": "Dowód relacji handlowej z XTB (oznaczenie z nazwą lub przy marce) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "które jest partnerem mojego kanału. W"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "no_signal"
+  },
+  {
+   "label": "C2 O5YmmKadQQw",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:O5YmmKadQQw",
+   "url": "https://www.youtube.com/watch?v=O5YmmKadQQw",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/O5YmmKadQQw/meta.json",
+    "descriptionSha256": "0ce6f37e7efe9347b3e80e9bb427a8b5007ce239d8b3f7add7286fe04a70bb68",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "W tym odcinku robimy praktyczną część eToro krok po kroku!"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://tinyurl.com/WladcaEtoro” w opisie (znaki 960–991).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: eToro; kandydaci z wykazu KNF: [9651212].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw",
+      "evidenceId": "ev-2",
+      "locator": {
+       "field": "description",
+       "charStart": 960,
+       "charEnd": 991,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 70,
+     "band": "moderate",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "short_link",
+     "firm": {
+      "mention": "eToro",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 9651212,
+        "name": "Etoro (Europe) Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": true,
+      "reason": "Jeden wpis w wykazie dla tej nazwy.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "None|eToro",
+     "firstObservedAt": "2026-11-21T19:20:06+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://tinyurl.com/WladcaEtoro",
+      "claim": "Dowód relacji handlowej z eToro (short_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 70,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 O5YmmKadQQw",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:O5YmmKadQQw",
+   "url": "https://www.youtube.com/watch?v=O5YmmKadQQw",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/O5YmmKadQQw/transcript.json",
+    "captionsSha256": "2ef2eadf68bfbcdaf699d41e6a6aeae265f3f12fcf503b2c8621f10f53e5278e",
+    "segments": 398,
+    "package": "fixtures/raw/media/2026-11-21/O5YmmKadQQw.json",
+    "paidPromotionFlag": false
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "W tym odcinku robimy praktyczną część eToro krok po kroku!"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie ogólne przy dowodzie relacji handlowej",
+     "firm": {
+      "mention": "eToro",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 9651212,
+        "name": "Etoro (Europe) Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": true,
+      "reason": "Jeden wpis w wykazie dla tej nazwy.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_speech",
+      "where": "transcript",
+      "text": "linku partnerskiego to jak najbardziej",
+      "evidenceId": "ev-1",
+      "checked": [
+       "description",
+       "transcript",
+       "frames"
+      ],
+      "notChecked": [],
+      "kind": "affiliate_link_mention",
+      "kinds": [
+       "affiliate_link_mention"
+      ]
+     }
+    },
+    "otherRelations": [
+     {
+      "status": "none",
+      "basis": "wzmianka o marce",
+      "firm": {
+       "mention": "XTB",
+       "identityStatus": "candidates",
+       "candidates": [
+        {
+         "registryId": 6884980,
+         "name": "XTB S.A.",
+         "category": "Firmy inwestycyjne - Domy maklerskie",
+         "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+         "checkedAt": "2026-11-21"
+        },
+        {
+         "registryId": 9439233,
+         "name": "XTB Ltd",
+         "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+         "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+         "checkedAt": "2026-11-21"
+        }
+       ],
+       "crossBorder": "unresolved",
+       "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+       "inScope": true
+      },
+      "adRegistry": "none"
+     }
+    ],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|eToro",
+     "firstObservedAt": "2026-11-21T19:20:06+00:00",
+     "disclosureKind": "affiliate_link_mention"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://tinyurl.com/WladcaEtoro",
+      "claim": "Dowód relacji handlowej z eToro (oznaczenie ogólne przy dowodzie relacji handlowej) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "linku partnerskiego to jak najbardziej",
+       "dalej, jeżeli się z mojego linku partnerskiego, jest to tylko i wyłącznie",
+       "potraktowane, że weszliście z linku partnerskiego, ale generalnie są jakieś",
+       "która też jest w programie partnerskim",
+       "linku partnerskiego"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "no_signal"
+  },
+  {
+   "label": "C2 eQYmvRfHtr8",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:eQYmvRfHtr8",
+   "url": "https://www.youtube.com/watch?v=eQYmvRfHtr8",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/eQYmvRfHtr8/meta.json",
+    "descriptionSha256": "a86e7808210abe8dd4a1ec6c8576659d655263721f902cc0ec79e864482e23d4",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "💰 Inwestowanie z XTB - Sprawdź XTB"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "flaga płatnej promocji YouTube",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "platform_flag",
+      "where": "platform",
+      "text": "oznaczenie płatnej promocji YouTube (API, odczyt 2026-11-21T19:20:07+00:00)",
+      "evidenceId": "ev-8",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ],
+      "kind": "platform_flag",
+      "kinds": [
+       "platform_flag"
+      ]
+     }
+    },
+    "otherRelations": [
+     {
+      "status": "none",
+      "basis": "wzmianka o marce",
+      "firm": {
+       "mention": "InvestingPro",
+       "identityStatus": "unresolved",
+       "candidates": [],
+       "crossBorder": "unresolved",
+       "reason": "Podmiot spoza zakresu M1: narzędzie analityczne, nie firma inwestycyjna.",
+       "inScope": false,
+       "outOfScopeReason": "narzędzie analityczne, nie firma inwestycyjna"
+      },
+      "adRegistry": "none"
+     }
+    ],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "platform_flag"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://link-pso.xtb.com/pso/GFTfa",
+      "claim": "Dowód relacji handlowej z XTB (flaga płatnej promocji YouTube) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "oznaczenie płatnej promocji YouTube (API, odczyt 2026-11-21T19:20:07+00:00)"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": true
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 eQYmvRfHtr8",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:eQYmvRfHtr8",
+   "url": "https://www.youtube.com/watch?v=eQYmvRfHtr8",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/eQYmvRfHtr8/transcript.json",
+    "captionsSha256": "b344a9111345af2a0cb1f86934eecf6461ae77edafa3b3b56da5d35955123ff6",
+    "segments": 438,
+    "package": "fixtures/raw/media/2026-11-21/eQYmvRfHtr8.json",
+    "paidPromotionFlag": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "💰 Inwestowanie z XTB - Sprawdź XTB"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_speech",
+      "where": "transcript",
+      "text": "je oczywiście u partnera tego odcinka",
+      "evidenceId": "ev-1",
+      "checked": [
+       "description",
+       "transcript"
+      ],
+      "notChecked": [
+       "frames"
+      ],
+      "kind": "partner_mention",
+      "kinds": [
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [
+     {
+      "status": "none",
+      "basis": "wzmianka o marce",
+      "firm": {
+       "mention": "InvestingPro",
+       "identityStatus": "unresolved",
+       "candidates": [],
+       "crossBorder": "unresolved",
+       "reason": "Podmiot spoza zakresu M1: narzędzie analityczne, nie firma inwestycyjna.",
+       "inScope": false,
+       "outOfScopeReason": "narzędzie analityczne, nie firma inwestycyjna"
+      },
+      "adRegistry": "none"
+     }
+    ],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "partner_mention"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://link-pso.xtb.com/pso/GFTfa",
+      "claim": "Dowód relacji handlowej z XTB (oznaczenie z nazwą lub przy marce) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "je oczywiście u partnera tego odcinka",
+       "oznaczenie płatnej promocji YouTube (API, odczyt 2026-11-21T19:20:07+00:00)"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": true
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "no_signal"
+  },
+  {
+   "label": "C2 YQH4FEP9exI",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:YQH4FEP9exI",
+   "url": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/YQH4FEP9exI/meta.json",
+    "descriptionSha256": "10f47e27b570009b95b5ff7c9e11111229c30cf9fe2e38e718b189f099e55bb9",
+    "bRecord": false
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "💰 Inwestowanie z XTB - Sprawdź XTB"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "refer",
+    "completeReason": null,
+    "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+    "reasons": [
+     "Znaleziono: „https://link-pso.xtb.com/pso/GFTfa” w opisie (znaki 232–266).",
+     "Dodatkowy dowód relacji (creator_code): „Kod „COMPARIC” przy rejestracji = darmowy kurs inwestowania.” w opisie (znaki 379–439).",
+     "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+     "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+     "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny); flaga płatnej promocji niesprawdzona."
+    ],
+    "moments": [
+     {
+      "start": null,
+      "end": null,
+      "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+      "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+      "evidenceId": "ev-3",
+      "locator": {
+       "field": "description",
+       "charStart": 232,
+       "charEnd": 266,
+       "occurrences": 1
+      },
+      "kind": "text"
+     },
+     {
+      "start": null,
+      "end": null,
+      "label": "Dowód relacji handlowej",
+      "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+      "evidenceId": "ev-4",
+      "locator": {
+       "field": "description",
+       "charStart": 379,
+       "charEnd": 439,
+       "occurrences": 1
+      },
+      "kind": "text"
+     }
+    ],
+    "missing": [
+     "transkrypcja mowy",
+     "kadry z momentów dowodu (opcjonalnie)"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 85,
+     "band": "strong",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "probable",
+     "basis": "creator_code, tracking_link",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "not_found_in_scope",
+      "where": null,
+      "text": null,
+      "evidenceId": null,
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames",
+       "platformFlags"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "candidate",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "documented",
+      "quote": "https://link-pso.xtb.com/pso/GFTfa",
+      "claim": "Dowód relacji handlowej z XTB (creator_code, tracking_link) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 85,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 YQH4FEP9exI",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:YQH4FEP9exI",
+   "url": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/YQH4FEP9exI/transcript.json",
+    "captionsSha256": "1847ca83f53aad9b9b8c293288905b469e242c91ef7c917fe3f08698de179f51",
+    "segments": 342,
+    "package": "fixtures/raw/media/2026-11-21/YQH4FEP9exI.json",
+    "paidPromotionFlag": null
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "💰 Inwestowanie z XTB - Sprawdź XTB"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_speech",
+      "where": "transcript",
+      "text": "macie u partnera tego odcinka XTB, a z",
+      "evidenceId": "ev-2",
+      "checked": [
+       "description",
+       "transcript"
+      ],
+      "notChecked": [
+       "frames",
+       "platformFlags"
+      ],
+      "kind": "partner_mention",
+      "kinds": [
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "partner_mention"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://link-pso.xtb.com/pso/GFTfa",
+      "claim": "Dowód relacji handlowej z XTB (oznaczenie z nazwą lub przy marce) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "macie u partnera tego odcinka XTB, a z",
+       "jeden z partnerów tego odcinka to"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "unavailable",
+      "paidPromotion": null
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "no_signal"
+  },
+  {
+   "label": "C2 ePfzHQVf-lc",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:ePfzHQVf-lc",
+   "url": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/ePfzHQVf-lc/meta.json",
+    "descriptionSha256": "bac51c665e53e826b337054845af09c34da2b7899e506a333a9d5a515327a38d",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "Zacznij razem z aplikacją XTB — https://link-pso.xtb.com/pso/kdg44"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "flaga płatnej promocji YouTube",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "platform_flag",
+      "where": "platform",
+      "text": "oznaczenie płatnej promocji YouTube (API, odczyt 2026-11-21T19:20:07+00:00)",
+      "evidenceId": "ev-7",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ],
+      "kind": "platform_flag",
+      "kinds": [
+       "platform_flag"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "platform_flag"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://link-pso.xtb.com/pso/kdg44",
+      "claim": "Dowód relacji handlowej z XTB (flaga płatnej promocji YouTube) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "oznaczenie płatnej promocji YouTube (API, odczyt 2026-11-21T19:20:07+00:00)"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": true
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 ePfzHQVf-lc",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:ePfzHQVf-lc",
+   "url": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/ePfzHQVf-lc/transcript.json",
+    "captionsSha256": "dcc13b2e40a69ba34acbe364e881c839557bda902667d85fbcc2b5a1685c4e37",
+    "segments": 706,
+    "package": "fixtures/raw/media/2026-11-21/ePfzHQVf-lc.json",
+    "paidPromotionFlag": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 24,
+    "signalType": "neutral_mention",
+    "reviewSuggestion": "no_signal",
+    "summary": "Wzmianka o marce w zbadanym zakresie.",
+    "quote": "Zacznij razem z aplikacją XTB — https://link-pso.xtb.com/pso/kdg44"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_speech",
+      "where": "transcript",
+      "text": "niewielkie. Partnerem tego odcinka jest",
+      "evidenceId": "ev-1",
+      "checked": [
+       "description",
+       "transcript"
+      ],
+      "notChecked": [
+       "frames"
+      ],
+      "kind": "partner_mention",
+      "kinds": [
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "partner_mention"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://link-pso.xtb.com/pso/kdg44",
+      "claim": "Dowód relacji handlowej z XTB (oznaczenie z nazwą lub przy marce) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "niewielkie. Partnerem tego odcinka jest",
+       "oznaczenie płatnej promocji YouTube (API, odczyt 2026-11-21T19:20:07+00:00)"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": true
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "no_signal"
+  },
+  {
+   "label": "C2 o2GfnmVVkO8",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:o2GfnmVVkO8",
+   "url": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/o2GfnmVVkO8/meta.json",
+    "descriptionSha256": "e6cadfe2a5429ccae84bd935aa1c4010c3c53d7da39bd5f264ff4621ddb3e37f",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 12,
+    "signalType": "none",
+    "reviewSuggestion": "no_signal",
+    "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+    "quote": "Inwestuj globalnie i odbierz do 20 darmowych akcji na start:"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "flaga płatnej promocji YouTube",
+     "firm": {
+      "mention": "Freedom24",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 9439434,
+        "name": "Freedom Finance Europe Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": true,
+      "reason": "Jeden wpis w wykazie dla tej nazwy.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "platform_flag",
+      "where": "platform",
+      "text": "oznaczenie płatnej promocji YouTube (API, odczyt 2026-11-21T19:20:07+00:00)",
+      "evidenceId": "ev-6",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ],
+      "kind": "platform_flag",
+      "kinds": [
+       "platform_flag"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|Freedom24",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "platform_flag"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=2111",
+      "claim": "Dowód relacji handlowej z Freedom24 (flaga płatnej promocji YouTube) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "oznaczenie płatnej promocji YouTube (API, odczyt 2026-11-21T19:20:07+00:00)"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": true
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 o2GfnmVVkO8",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:o2GfnmVVkO8",
+   "url": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/o2GfnmVVkO8/transcript.json",
+    "captionsSha256": "5a88c1257e0c939d7bacab2599605c38b17f717e00d602611045acf31cf9e169",
+    "segments": 501,
+    "package": "fixtures/raw/media/2026-11-21/o2GfnmVVkO8.json",
+    "paidPromotionFlag": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 12,
+    "signalType": "none",
+    "reviewSuggestion": "no_signal",
+    "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+    "quote": "Inwestuj globalnie i odbierz do 20 darmowych akcji na start:"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "flaga płatnej promocji YouTube",
+     "firm": {
+      "mention": "Freedom24",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 9439434,
+        "name": "Freedom Finance Europe Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": true,
+      "reason": "Jeden wpis w wykazie dla tej nazwy.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_speech",
+      "where": "transcript",
+      "text": "koniecznie Freedom partnera tego odcinka. Masa instrumentów tam jest",
+      "evidenceId": "ev-1",
+      "checked": [
+       "description",
+       "transcript"
+      ],
+      "notChecked": [
+       "frames"
+      ],
+      "kind": "partner_mention",
+      "kinds": [
+       "partner_mention",
+       "platform_flag"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|Freedom24",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "platform_flag"
+    },
+    "premises": [
+     {
+      "type": "U1",
+      "status": "refuted",
+      "quote": "https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=2111",
+      "claim": "Dowód relacji handlowej z Freedom24 (flaga płatnej promocji YouTube) bez oznaczenia reklamy w zbadanym zakresie.",
+      "points": 0,
+      "found": [
+       "koniecznie Freedom partnera tego odcinka. Masa instrumentów tam jest",
+       "oznaczenie płatnej promocji YouTube (API, odczyt 2026-11-21T19:20:07+00:00)"
+      ]
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": true
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "no_signal"
+  },
+  {
+   "label": "C2 p_ui_fqLdV0",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:p_ui_fqLdV0",
+   "url": "https://www.youtube.com/watch?v=p_ui_fqLdV0",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/p_ui_fqLdV0/meta.json",
+    "descriptionSha256": "95761fc86b889cb996395e626e2931849457253fe8cec6b6eef52773c2cdc0e4",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 74,
+    "signalType": "brand_cta",
+    "reviewSuggestion": "review",
+    "summary": "Zachęta do działania przy wzmiance o marce. W zbadanym opisie nie wykryto oznaczenia. Sprawdź charakter relacji.",
+    "quote": "⚫️[reklama] Zarejestruj się w XTB z kodem KONOP i zgarnij darmowy kurs inwestowania od podsta"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "complete",
+    "completeReason": "transcript_unavailable",
+    "reason": "Relacja reklamowa (declared) z XTB; treść mowy niezbadana.",
+    "reasons": [],
+    "moments": [],
+    "missing": [
+     "pełna transkrypcja mowy"
+    ],
+    "reviewScore": {
+     "state": "withheld",
+     "value": null,
+     "band": null,
+     "notComputableReason": "wniosek o braku przesłanki wymaga pełnego opisu i pełnej transkrypcji"
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie ogólne przy dowodzie relacji handlowej",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "[reklama] Zarejestruj się w XTB z kodem KONOP i zgarnij darmowy kurs inwestowania od podstaw | Inwestowanie jest ryzykowne.",
+      "evidenceId": "ev-1",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ],
+      "kind": "explicit_ad",
+      "kinds": [
+       "explicit_ad"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 p_ui_fqLdV0",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:p_ui_fqLdV0",
+   "url": "https://www.youtube.com/watch?v=p_ui_fqLdV0",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/p_ui_fqLdV0/transcript.json",
+    "captionsSha256": "d3b54438f5f236906fd20410ed9689b708b7ff648cb212a9dd93cdb097bbec8f",
+    "segments": 928,
+    "package": "fixtures/raw/media/2026-11-21/p_ui_fqLdV0.json",
+    "paidPromotionFlag": false
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 74,
+    "signalType": "brand_cta",
+    "reviewSuggestion": "review",
+    "summary": "Zachęta do działania przy wzmiance o marce. W zbadanym opisie nie wykryto oznaczenia. Sprawdź charakter relacji.",
+    "quote": "⚫️[reklama] Zarejestruj się w XTB z kodem KONOP i zgarnij darmowy kurs inwestowania od podsta"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Relacja reklamowa bez przesłanki do kontroli w opisie i mowie; wpis w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie ogólne przy dowodzie relacji handlowej",
+     "firm": {
+      "mention": "XTB",
+      "identityStatus": "candidates",
+      "candidates": [
+       {
+        "registryId": 6884980,
+        "name": "XTB S.A.",
+        "category": "Firmy inwestycyjne - Domy maklerskie",
+        "sourceFile": "data/probe-snapshots/knf/knf_domy_maklerskie.json",
+        "checkedAt": "2026-11-21"
+       },
+       {
+        "registryId": 9439233,
+        "name": "XTB Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": "unresolved",
+      "reason": "Nazwa marki pasuje do kilku wpisów; materiał nie rozstrzyga operatora.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "[reklama] Zarejestruj się w XTB z kodem KONOP i zgarnij darmowy kurs inwestowania od podstaw | Inwestowanie jest ryzykowne.",
+      "evidenceId": "ev-3",
+      "checked": [
+       "description",
+       "transcript"
+      ],
+      "notChecked": [
+       "frames"
+      ],
+      "kind": "explicit_ad",
+      "kinds": [
+       "explicit_ad",
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|XTB",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": false
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "no_signal"
+  },
+  {
+   "label": "C2 i3QxMqyRlks",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:i3QxMqyRlks",
+   "url": "https://www.youtube.com/watch?v=i3QxMqyRlks",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/i3QxMqyRlks/meta.json",
+    "descriptionSha256": "c4b0cc61ebefd3922bfb73ab3a5dcf460be3768bbdc897c6b103d5d9ee841754",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 12,
+    "signalType": "none",
+    "reviewSuggestion": "no_signal",
+    "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+    "quote": "Inwestuj z poniższego linku i odbierz do 20 darmowych akcji na start:"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "complete",
+    "completeReason": "transcript_unavailable",
+    "reason": "Relacja reklamowa (declared) z Freedom24; treść mowy niezbadana.",
+    "reasons": [],
+    "moments": [],
+    "missing": [
+     "pełna transkrypcja mowy"
+    ],
+    "reviewScore": {
+     "state": "withheld",
+     "value": null,
+     "band": null,
+     "notComputableReason": "wniosek o braku przesłanki wymaga pełnego opisu i pełnej transkrypcji"
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "flaga płatnej promocji YouTube",
+     "firm": {
+      "mention": "Freedom24",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 9439434,
+        "name": "Freedom Finance Europe Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": true,
+      "reason": "Jeden wpis w wykazie dla tej nazwy.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "Materiał sponsorowany",
+      "evidenceId": "ev-3",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ],
+      "kind": "explicit_ad",
+      "kinds": [
+       "explicit_ad",
+       "platform_flag"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|Freedom24",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": true
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 i3QxMqyRlks",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:i3QxMqyRlks",
+   "url": "https://www.youtube.com/watch?v=i3QxMqyRlks",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/i3QxMqyRlks/transcript.json",
+    "captionsSha256": "146a58ea1f2fffccc0bd25f7186208b216a063429989c551c28ec79ef9e102e4",
+    "segments": 460,
+    "package": "fixtures/raw/media/2026-11-21/i3QxMqyRlks.json",
+    "paidPromotionFlag": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 12,
+    "signalType": "none",
+    "reviewSuggestion": "no_signal",
+    "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+    "quote": "Inwestuj z poniższego linku i odbierz do 20 darmowych akcji na start:"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "no_signal",
+    "completeReason": null,
+    "reason": "Relacja reklamowa bez przesłanki do kontroli w opisie i mowie; wpis w rejestrze reklam.",
+    "reasons": [],
+    "moments": [],
+    "missing": [],
+    "reviewScore": {
+     "state": "computed",
+     "value": 0,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "flaga płatnej promocji YouTube",
+     "firm": {
+      "mention": "Freedom24",
+      "identityStatus": "established",
+      "candidates": [
+       {
+        "registryId": 9439434,
+        "name": "Freedom Finance Europe Ltd",
+        "category": "Notyfikacje zagranicznych firm inwestycyjnych na terytorium RP",
+        "sourceFile": "data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json",
+        "checkedAt": "2026-11-21"
+       }
+      ],
+      "crossBorder": true,
+      "reason": "Jeden wpis w wykazie dla tej nazwy.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "Materiał sponsorowany",
+      "evidenceId": "ev-3",
+      "checked": [
+       "description",
+       "transcript"
+      ],
+      "notChecked": [
+       "frames"
+      ],
+      "kind": "explicit_ad",
+      "kinds": [
+       "explicit_ad",
+       "platform_flag"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|Freedom24",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": true
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "no_signal"
+  },
+  {
+   "label": "C2 _aqCM37gK1U",
+   "package": "C2",
+   "inputScope": "opis+flaga",
+   "id": "youtube:_aqCM37gK1U",
+   "url": "https://www.youtube.com/watch?v=_aqCM37gK1U",
+   "source": {
+    "kind": "media_cache",
+    "meta": ".runtime/media-cache/_aqCM37gK1U/meta.json",
+    "descriptionSha256": "ef74931baef2fb74f8a557130298fb909e4729a00d2f92dbca5510116d6f355e",
+    "bRecord": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 12,
+    "signalType": "none",
+    "reviewSuggestion": "no_signal",
+    "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+    "quote": "Otwórz konto w Saxo Banku przez: https://www.home.saxo/pl-pl/campaigns/commission-credits/ffpl5 i zyskaj 250 euro bonusu!"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "complete",
+    "completeReason": "identity_unresolved",
+    "reason": "Promowany podmiot bez wpisu w przejrzanych wykazach: do uzupełnienia przed oceną.",
+    "reasons": [],
+    "moments": [],
+    "missing": [
+     "aktualny wpis w wykazie dla Saxo Bank"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 35,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "Saxo Bank",
+      "identityStatus": "no_registry_entry",
+      "candidates": [],
+      "crossBorder": "unresolved",
+      "reason": "Brak wpisu w przejrzanych kopiach wykazów KNF z 2026-11-21.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "Partnerem publikacji jest Saxo Bank",
+      "evidenceId": "ev-4",
+      "checked": [
+       "description"
+      ],
+      "notChecked": [
+       "transcript",
+       "frames"
+      ],
+      "kind": "partner_mention",
+      "kinds": [
+       "explicit_ad",
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|Saxo Bank",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [
+     {
+      "type": "U3",
+      "status": "conditional",
+      "quote": "Partnerem publikacji jest Saxo Bank",
+      "claim": "Promowany podmiot Saxo Bank bez wpisu w przejrzanych kopiach wykazów.",
+      "points": 35,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "partial",
+     "label": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "blocksConclusion": true,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": true
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": null
+  },
+  {
+   "label": "C2 _aqCM37gK1U",
+   "package": "C2",
+   "inputScope": "opis+mowa+kadry+flaga",
+   "id": "youtube:_aqCM37gK1U",
+   "url": "https://www.youtube.com/watch?v=_aqCM37gK1U",
+   "source": {
+    "kind": "media_cache",
+    "transcript": ".runtime/media-cache/_aqCM37gK1U/transcript.json",
+    "captionsSha256": "08c25767149b9c1d39f4e3d37dcf0cca040900679dc0b19aa1f42a3e9f8ae3fa",
+    "segments": 562,
+    "package": "fixtures/raw/media/2026-11-21/_aqCM37gK1U.json",
+    "paidPromotionFlag": true
+   },
+   "old": {
+    "rulesVersion": "investwatch-rules-pl-1.2",
+    "inputScope": "opis",
+    "score": 12,
+    "signalType": "none",
+    "reviewSuggestion": "no_signal",
+    "summary": "Brak jednoznacznego sygnału współpracy w zbadanym zakresie.",
+    "quote": "Otwórz konto w Saxo Banku przez: https://www.home.saxo/pl-pl/campaigns/commission-credits/ffpl5 i zyskaj 250 euro bonusu!"
+   },
+   "new": {
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "route": "complete",
+    "completeReason": "identity_unresolved",
+    "reason": "Promowany podmiot bez wpisu w przejrzanych wykazach: do uzupełnienia przed oceną.",
+    "reasons": [],
+    "moments": [],
+    "missing": [
+     "aktualny wpis w wykazie dla Saxo Bank"
+    ],
+    "reviewScore": {
+     "state": "computed",
+     "value": 35,
+     "band": "weak",
+     "notComputableReason": null
+    },
+    "adRelationship": {
+     "status": "declared",
+     "basis": "oznaczenie z nazwą lub przy marce",
+     "firm": {
+      "mention": "Saxo Bank",
+      "identityStatus": "no_registry_entry",
+      "candidates": [],
+      "crossBorder": "unresolved",
+      "reason": "Brak wpisu w przejrzanych kopiach wykazów KNF z 2026-11-21.",
+      "inScope": true
+     },
+     "disclosure": {
+      "state": "in_description",
+      "where": "description",
+      "text": "Partnerem publikacji jest Saxo Bank",
+      "evidenceId": "ev-5",
+      "checked": [
+       "description",
+       "transcript"
+      ],
+      "notChecked": [
+       "frames"
+      ],
+      "kind": "partner_mention",
+      "kinds": [
+       "explicit_ad",
+       "partner_mention"
+      ]
+     }
+    },
+    "otherRelations": [],
+    "adRegistry": {
+     "state": "included",
+     "campaignKey": "None|Saxo Bank",
+     "firstObservedAt": "2026-11-21T19:20:07+00:00",
+     "disclosureKind": "explicit_ad"
+    },
+    "premises": [
+     {
+      "type": "U3",
+      "status": "conditional",
+      "quote": "partnerem tego materiału jest Saxo Bank.",
+      "claim": "Promowany podmiot Saxo Bank bez wpisu w przejrzanych kopiach wykazów.",
+      "points": 35,
+      "found": []
+     }
+    ],
+    "coverage": {
+     "state": "full",
+     "label": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "blocksConclusion": false,
+     "platformFlags": {
+      "state": "observed",
+      "paidPromotion": true
+     }
+    },
+    "quotesVerifiedInInput": true
+   },
+   "expectedRoute": "complete"
+  }
+ ],
+ "mediaPackage2Sha256": "57914397aea6b2a20f9c29e615ec5b3b356483238eac30d485e4f6a57c152e18"
+}

@@ -1,0 +1,2312 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "GdQAX_GnxyeQkOQuhbx87xPHnUg",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 412164,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "txmvz_rwQ9ETWIWUK37EfpQ_Qkk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qO_65kOMy6A"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-15T17:00:05Z",
+        "channelId": "UCWLKTf_GTd1SEjFEoTALkxA",
+        "title": "SzybkiHajs x eToro: Bonus, ETF-y i pierwsze kroki! 💵",
+        "description": "Siemanko, z tej strony Władca Monet W tym odcinku sprawdzamy eToro z perspektywy Polaka, który chce zacząć inwestować ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qO_65kOMy6A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qO_65kOMy6A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qO_65kOMy6A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qO_65kOMy6A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qO_65kOMy6A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Krypto Królestwo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-15T17:00:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rwrvQN1cFl4_RX4HkG09RQ-dIZg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xBbpmTt_OkU"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-03T01:30:15Z",
+        "channelId": "UCzHeCFkVN2IOWjc57uOuvSw",
+        "title": "Czy warto handlować z eToro? Czy eToro jest wiarygodne czy to oszustwo? [0407]",
+        "description": "Czy warto handlować na eToro? Link rejestracyjny eToro: https://trading68.com/eToro —————— Otwórz konto u 3 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xBbpmTt_OkU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xBbpmTt_OkU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xBbpmTt_OkU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xBbpmTt_OkU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xBbpmTt_OkU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/xBbpmTt_OkU/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Recenzje brokerów Forex | 0615",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-03T01:30:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QobmbJFTE7KHmQa0TafzQ4QvaTw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "O5YmmKadQQw"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-19T17:00:11Z",
+        "channelId": "UCWLKTf_GTd1SEjFEoTALkxA",
+        "title": "eToro UPDATE część praktyczna: bonus, BLIK, KYC i ETF-y 💵",
+        "description": "Siemanko, z tej strony Władca Monet W tym odcinku robimy praktyczną część eToro krok po kroku! Poprzednio było więcej ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/O5YmmKadQQw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/O5YmmKadQQw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/O5YmmKadQQw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/O5YmmKadQQw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/O5YmmKadQQw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Krypto Królestwo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-19T17:00:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IjBZ81A4hjv6VhUeW0figcoeCsY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tKxXgKQgavE"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-01T17:00:32Z",
+        "channelId": "UCzHeCFkVN2IOWjc57uOuvSw",
+        "title": "Recenzja eToro | Czy eToro to dobry broker? Zalety i wady [0307]",
+        "description": "Recenzja brokera eToro Link rejestracyjny eToro: https://trading68.com/eToro —————— Otwórz konto u 3 najlepszych ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tKxXgKQgavE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tKxXgKQgavE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tKxXgKQgavE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tKxXgKQgavE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tKxXgKQgavE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/tKxXgKQgavE/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Recenzje brokerów Forex | 0615",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-01T17:00:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XWZzOPnsHN6TWvlMhb0JWsB940A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "epMHxWJvu48"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-19T10:09:51Z",
+        "channelId": "UCJahEB_PF7lbvowjbW7P-wA",
+        "title": "eToro Οδηγός για Αρχάριους: Πώς να Αγοράσετε και να Πουλήσετε Μετοχές (Tutorial 2026)",
+        "description": "Σύνδεσμος eToro με 100.000 $ σε εικονικά κεφάλαια : https://tiny.cc/m-etoro-el Η eToro είναι μια πλατφόρμα επενδύσεων σε πολλά ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/epMHxWJvu48/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/epMHxWJvu48/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/epMHxWJvu48/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/epMHxWJvu48/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/epMHxWJvu48/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Trading για Αρχάριους TUTO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-19T10:09:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "VVFVe5b-Mf-VVBpI3SwY5OukDbU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YFy3zEM9k6M"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-19T10:21:25Z",
+        "channelId": "UCv57yO0ZDdQ5wzyeG3msqIA",
+        "title": "eToro Konto eröffnen 2026: Anmeldung (+ 50€ Aktien-Bonus 🎁)",
+        "description": "eToro Konto eröffnen 2026: Anmeldung + Gebühren-Trick Jetzt 50 € Aktienbonus bei eToro sichern* ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YFy3zEM9k6M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YFy3zEM9k6M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YFy3zEM9k6M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YFy3zEM9k6M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YFy3zEM9k6M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Lean Invest Ruben Altmann",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-19T10:21:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8fcdPAD8oibqef_KPh8z0f8n8J0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vD3aFmFMpdI"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-17T14:09:19Z",
+        "channelId": "UCN2u90hRiUX9GBtLTzL2pAQ",
+        "title": "eToro APP Trading Tutorial for Beginners 2026 | UPDATED! 2027",
+        "description": "BONUS up to €50: Sign up through the link below, deposit €200, and get an asset worth up to €50 added to your portfolio.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vD3aFmFMpdI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vD3aFmFMpdI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vD3aFmFMpdI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vD3aFmFMpdI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vD3aFmFMpdI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Platformrank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-17T14:09:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "OGLYDriVKyqHYG66_uhsHbMd6Ms",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IBbKr_b59aY"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-25T14:15:31Z",
+        "channelId": "UCSLMeWefau1o94H4GHaXNaw",
+        "title": "Wall Street Is SELLING; Here&#39;s What I&#39;m DOING with eToro",
+        "description": "This Could Be A Major Turning Point For eToro, as its down 60% from ATHs This Will Change Everything For UNH eToro Fiscal AI ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IBbKr_b59aY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IBbKr_b59aY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IBbKr_b59aY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IBbKr_b59aY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IBbKr_b59aY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Value Investor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-25T14:15:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "axeE4pQ91ywrJnnyNsSAk7DLyGI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ibGJjBVQWeM"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-30T13:00:39Z",
+        "channelId": "UCOWpILn7g9B5q7XKHiRkKYw",
+        "title": "Cum să Cumperi Acțiuni pe eToro (Tutorial Complet A-Z pentru Începători)",
+        "description": "Link eToro cu 100.000 $ în fonduri virtuale : https://tiny.cc/m-etoro-ro eToro este o platformă de investiții multi-active. Valoarea ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ibGJjBVQWeM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ibGJjBVQWeM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ibGJjBVQWeM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ibGJjBVQWeM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ibGJjBVQWeM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Trading de la Zero",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-30T13:00:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "oibwcim57UP2gqgZJKBokfwYTRY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "93tBMOgIA7Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-04T14:45:34Z",
+        "channelId": "UCTj8BSdkY6gKFnSM499ryVA",
+        "title": "How To Use eToro for Beginners [2026 Complete Guide]",
+        "description": "In today's video, I'll show you how to use eToro for beginners step by step. Whether you're new to investing, copy trading, stocks, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/93tBMOgIA7Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/93tBMOgIA7Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/93tBMOgIA7Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/93tBMOgIA7Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/93tBMOgIA7Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/93tBMOgIA7Q/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Ampvoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-04T14:45:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vJE2R7LnrHWK2gvgwqa4Fw6L_HQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bZ9vr_kFWRs"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-27T12:30:44Z",
+        "channelId": "UCqa8ET6heNnWWl0d6_JWWXQ",
+        "title": "eToro Forex Broker Review 2026 | Pros, Cons &amp; Final Verdict",
+        "description": "eToro is a well-known, globally regulated broker best recognised for pioneering social and copy trading, offering forex, CFDs, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bZ9vr_kFWRs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bZ9vr_kFWRs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bZ9vr_kFWRs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/bZ9vr_kFWRs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/bZ9vr_kFWRs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CompareForexBrokers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-27T12:30:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LJvWhcgEN_d7d4yGYDq483f7ScQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "reaI2uNoGSk"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-18T14:04:51Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak KUPIĆ ETF na eToro (Kompletny Poradnik dla Początkujących od A do Z)",
+        "description": "Link do eToro z 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl eToro to platforma inwestycyjna oferująca wiele ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/reaI2uNoGSk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/reaI2uNoGSk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/reaI2uNoGSk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/reaI2uNoGSk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/reaI2uNoGSk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-18T14:04:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ugee5y-07Z8pGMB-cIHzvm5tPoU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "c9w7uCOfM68"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T11:27:04Z",
+        "channelId": "UCaQbkbbr35GXYsJTjeI-Ahg",
+        "title": "etoro Summit 2026",
+        "description": "This time last week, we were in sunny Cyprus with etoro Pro Investors from 37 countries. Different investors, diverse strategies and ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/c9w7uCOfM68/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/c9w7uCOfM68/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/c9w7uCOfM68/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/c9w7uCOfM68/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "etoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T11:27:04Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kHdlp5MEPfFojIqdbxZfPPOKvGQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zcpNvBmB_6E"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-04T22:00:07Z",
+        "channelId": "UCTj8BSdkY6gKFnSM499ryVA",
+        "title": "eToro Tutorial for Beginners — Complete Guide [2026 Full Tutorial]",
+        "description": "In today's video, I'll show you how to use eToro from start to finish. Whether you're completely new to investing, interested in ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zcpNvBmB_6E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zcpNvBmB_6E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zcpNvBmB_6E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zcpNvBmB_6E/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zcpNvBmB_6E/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/zcpNvBmB_6E/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Ampvoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-04T22:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jlvL1wOuO4fhgmMWosLi5Zj3JUI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IcPiLGimZcM"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-22T00:02:05Z",
+        "channelId": "UCJn8rB-zqxfn1oOHiMB8y2w",
+        "title": "Wall Street Is IGNORING eToro&#39;s Global Business",
+        "description": "Yoni Assia says he's constantly surprised by how US-centric the US market really is. When it comes to valuing eToro, he tells ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IcPiLGimZcM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IcPiLGimZcM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IcPiLGimZcM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IcPiLGimZcM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IcPiLGimZcM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Best of Pomp",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-22T00:02:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-QTAH5DIQo6UR93hmrmbc29UdnI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "maQ0ClkW0XE"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-22T16:41:15Z",
+        "channelId": "UC3fvxcqhSy3a2szvI6yoP6w",
+        "title": "eToro’s Biggest Update Yet. Is It Better?",
+        "description": "See My Full Portfolio (Free and Live) → https://go.smartmoneywithkai.com/my-portfolio All My Tools, Brokers & Bonuses ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/maQ0ClkW0XE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/maQ0ClkW0XE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/maQ0ClkW0XE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/maQ0ClkW0XE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/maQ0ClkW0XE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Smart Money with Kai",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-22T16:41:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TumBUHw6JTKffGX6Js5Pccpgg2Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nQ_ONVFGZzM"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-13T15:00:12Z",
+        "channelId": "UC8Ymbs8znOAFmcCvWeHxZHQ",
+        "title": "Portfel Inwestycyjny na eToro - Moja Strategia 1084 zł Miesięcznie",
+        "description": "Portfel Inwestycyjny na eToro - Moja Strategia 1084zł Miesięcznie Psychologia inwestowania i najczęstsze błędy, które kosztują ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nQ_ONVFGZzM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nQ_ONVFGZzM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nQ_ONVFGZzM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nQ_ONVFGZzM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nQ_ONVFGZzM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tomasz Pawlik",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-13T15:00:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0jAvxAtvTff3Meo-BSWVIQIYjI8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "h8zxoCkfTZQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-15T17:40:05Z",
+        "channelId": "UC0LDrGxdQdTZ2YnjWYManVg",
+        "title": "HOW TO COPY A TRADER ON ETORO (STEP-BY-STEP GUIDE 2026)",
+        "description": "How to copy a trader on eToro in 2026. In this step-by-step tutorial, you'll learn how to copy a trader on eToro by finding investors, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/h8zxoCkfTZQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/h8zxoCkfTZQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/h8zxoCkfTZQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/h8zxoCkfTZQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/h8zxoCkfTZQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Learn Mode Lab",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-15T17:40:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "j8A8ngVDmYHt2hOeWVit_aMF-to",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mKINyqknRKE"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-04T07:15:07Z",
+        "channelId": "UCTj8BSdkY6gKFnSM499ryVA",
+        "title": "How to Day Trade on eToro [2026 Beginner Guide]",
+        "description": "In today's video, I'll show you how to day trade on eToro step by step. Whether you're new to day trading or looking to improve ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mKINyqknRKE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mKINyqknRKE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mKINyqknRKE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mKINyqknRKE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mKINyqknRKE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/mKINyqknRKE/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Ampvoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-04T07:15:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "u08fexb1T6AoRmywljT7aj6HQ-c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gYOaC0SqH4o"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-10T09:00:23Z",
+        "channelId": "UCE2O_opSLhcetwSfpaMueOw",
+        "title": "eToro Avis 2026 : Arnaque ou Meilleur Broker ? (Mon Test Honnête)",
+        "description": "La meilleure offre du moment chez Etoro: https://moneyradar.org/go/etoro-rev-yt Notre avis détaillé sur eToro ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gYOaC0SqH4o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gYOaC0SqH4o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gYOaC0SqH4o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gYOaC0SqH4o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gYOaC0SqH4o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/gYOaC0SqH4o/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "MoneyRadar Avis",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-10T09:00:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kRRb308nwdeHSktrZQZm1e6q-Us",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YS8gaeiBXt0"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-07T14:35:36Z",
+        "channelId": "UCaQbkbbr35GXYsJTjeI-Ahg",
+        "title": "Intelligence in Motion | eToro Livestreamed Event | July 7, 2026",
+        "description": "Live from London: eToro CEO Yoni Assia leads a show-and-tell under the theme Intelligence in Motion: human insight ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YS8gaeiBXt0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YS8gaeiBXt0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YS8gaeiBXt0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YS8gaeiBXt0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YS8gaeiBXt0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "etoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-07T14:35:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "N6JF5kyqxYZddNLCuZRpiMPzbn8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Zbb_PP-88u0"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-14T15:04:08Z",
+        "channelId": "UC1gZGqfj0ZjRMiKqeXyuyNQ",
+        "title": "eToro Review [UPDATED] - They Don&#39;t Tell You This!",
+        "description": "eToro Review: eToro is a beginner-friendly investing platform known for CopyTrader, and the catch is the fee stack and the fine ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Zbb_PP-88u0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Zbb_PP-88u0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Zbb_PP-88u0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Zbb_PP-88u0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Zbb_PP-88u0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Answer This",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-14T15:04:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "L4dMPsQ_vo5rUYAQ6ZH1uEUJOME",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "g-4eaUZnIv8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-11T02:37:57Z",
+        "channelId": "UCaQbkbbr35GXYsJTjeI-Ahg",
+        "title": "etoro Group Ltd Q3 2026 Earnings Call",
+        "description": "etoro, the social trading and investing platform, will be releasing its Q3 2026 earnings report today. Watch as CEO Yoni Assia and ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/g-4eaUZnIv8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/g-4eaUZnIv8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/g-4eaUZnIv8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/g-4eaUZnIv8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/g-4eaUZnIv8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/g-4eaUZnIv8/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "etoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-11T02:37:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Pgak-3zSnXEs0ujdqWG950cz358",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gKMiH1w-AeM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-10T07:09:31Z",
+        "channelId": "UCfyT0vgNHQsZj34cv7f7bnQ",
+        "title": "eToro Review | Best Social Investing Company in 2026?",
+        "description": "eToro Review: Explore features, fees, trading tools, and usability to see if eToro is the right platform for your investing needs.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gKMiH1w-AeM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gKMiH1w-AeM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gKMiH1w-AeM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gKMiH1w-AeM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gKMiH1w-AeM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Smart Spending",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-10T07:09:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HNWw5QmWaCLYbSLWY_xheojrdFI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "89JWvZWXjSQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-18T11:04:19Z",
+        "channelId": "UCN2u90hRiUX9GBtLTzL2pAQ",
+        "title": "eToro Trading Platform Tutorial for Beginners 2026 | Complete eToro Guide",
+        "description": "BONUS up to €50: Sign up through the link below, deposit €200, and get an asset worth up to €50 added to your portfolio.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/89JWvZWXjSQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/89JWvZWXjSQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/89JWvZWXjSQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/89JWvZWXjSQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/89JWvZWXjSQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Platformrank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-18T11:04:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "fbBeVBQZQNOpIzHqjC-VjbGEUuU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gofFycI_rGE"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-02T09:51:41Z",
+        "channelId": "UCzkk89ICssXp491NKAv-Edg",
+        "title": "Avis sur eToro | eToro est-il un bon broker ? Avantages et inconvénients [0307]",
+        "description": "Avis sur le courtier eToro Lien d'inscription eToro: https://trading68.com/eToro —————— Ouvrez un compte auprès des 3 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gofFycI_rGE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gofFycI_rGE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gofFycI_rGE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gofFycI_rGE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gofFycI_rGE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/gofFycI_rGE/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Avis sur les courtiers Forex | 0608",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-02T09:51:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ErhEkhZF_EhG0mwyy69w-hVMgvk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LRGkhS3E2dY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-16T13:30:32Z",
+        "channelId": "UCkbZUA2yo1teuFuaLqK5FFA",
+        "title": "Cómo usar la APP de ETORO en el Móvil (explicación resumida)",
+        "description": "Curso Completo GRATIS de ETORO: https://www.youtube.com/watch?v=145hFI4hYGI En este vídeo te explico cómo funciona la ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LRGkhS3E2dY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LRGkhS3E2dY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LRGkhS3E2dY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LRGkhS3E2dY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LRGkhS3E2dY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/LRGkhS3E2dY/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "GabiTUTOS",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-16T13:30:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "wIsb2yGPRu53pNdGBdFWR6Bv8m0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TiTvTkUogz8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-24T14:15:29Z",
+        "channelId": "UCTj8BSdkY6gKFnSM499ryVA",
+        "title": "How to Start Investing on eToro [2026 Full Tutorial]",
+        "description": "In today's video, I'll show you how to start investing on eToro step by step. This is useful when you're new to the platform and want ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TiTvTkUogz8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TiTvTkUogz8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TiTvTkUogz8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TiTvTkUogz8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TiTvTkUogz8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/TiTvTkUogz8/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Ampvoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-24T14:15:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "H-yT2mPrORpCJmOvoY9nMo9F_2Q",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FScnWZxydKI"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-28T22:00:06Z",
+        "channelId": "UCTN9fTJtgm9zpDRuZxcJkUg",
+        "title": "Investir dans eToro depuis la France est-il judicieux ?",
+        "description": "eToro: https://bit.ly/4fmqp54.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FScnWZxydKI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FScnWZxydKI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FScnWZxydKI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/FScnWZxydKI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/FScnWZxydKI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/FScnWZxydKI/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "PlanèteTech",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-28T22:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WeebL3l1SzYVgDJBQYe2Wlx9_kQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "eCU-1zm9uK8"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-18T08:08:59Z",
+        "channelId": "UCf00Yct6GTd9wQuNHIHcwHQ",
+        "title": "Claude Can Now Research Investments Through etoro",
+        "description": "You can now connect your eToro account to Claude and use AI to research markets, analyse investments, monitor important ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eCU-1zm9uK8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eCU-1zm9uK8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eCU-1zm9uK8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/eCU-1zm9uK8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/eCU-1zm9uK8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "The Anxious Investor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-18T08:08:59Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MkfAKNUQigNBI4gyK_x98jDtwis",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JNsae00g-hE"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-11T17:09:36Z",
+        "channelId": "UCrp_UI8XtuYfpiqluWLD7Lw",
+        "title": "eToro CEO: Customers are using AI agents to trade 24/7 in their accounts",
+        "description": "Yoni Assia, eToro CEO, joins 'Squawk on the Street' to discuss the company's quarterly earnings results, the outlook for digital ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JNsae00g-hE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JNsae00g-hE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JNsae00g-hE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JNsae00g-hE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JNsae00g-hE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC Television",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-11T17:09:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ZYmgiGhabdaCEMCLD889GLrPhvE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "WcxTXhdIBzQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-04T07:00:20Z",
+        "channelId": "UCTj8BSdkY6gKFnSM499ryVA",
+        "title": "How to Copy Trade on eToro for Beginners [2026 Beginner Tutorial]",
+        "description": "In today's video, I'll show you how to copy trade on eToro for beginners step by step. Whether you're new to investing or interested ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WcxTXhdIBzQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WcxTXhdIBzQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WcxTXhdIBzQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WcxTXhdIBzQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WcxTXhdIBzQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/WcxTXhdIBzQ/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Ampvoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-04T07:00:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dngtK83u2grcU7e9ofjgB1KM7d8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3gBOsTo0q64"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-03T22:30:33Z",
+        "channelId": "UCTj8BSdkY6gKFnSM499ryVA",
+        "title": "How To Buy ETFs on eToro [2026 Guide]",
+        "description": "In today's video, I'll show you how to buy ETFs on eToro step by step. Whether you're building a diversified portfolio, investing for ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3gBOsTo0q64/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3gBOsTo0q64/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3gBOsTo0q64/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3gBOsTo0q64/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3gBOsTo0q64/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/3gBOsTo0q64/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Ampvoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-03T22:30:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1a8lXKPghUV-9jxmph2dsCsFbWM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "L9JHcsJJj-8"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-26T14:45:17Z",
+        "channelId": "UCTj8BSdkY6gKFnSM499ryVA",
+        "title": "How to Trade Forex on eToro [2026 Step By Step Guide]",
+        "description": "In today's video, I'll show you how to trade forex on eToro step by step. Whether you're interested in major currency pairs or want ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/L9JHcsJJj-8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/L9JHcsJJj-8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/L9JHcsJJj-8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/L9JHcsJJj-8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/L9JHcsJJj-8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/L9JHcsJJj-8/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Ampvoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-26T14:45:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "S_5S8I_hMxngetutQ5acvPxr1Ao",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Yr6rAddZwdg"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-13T15:46:53Z",
+        "channelId": "UCuJj9-wwoCQgRUuUyAlobmw",
+        "title": "Is This The Best Trading App for Beginners? eToro Review 2026",
+        "description": "Here's our full review of eToro. Investing expert George Sweeneys covers all the pros and cons of this investing app. Read our ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Yr6rAddZwdg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Yr6rAddZwdg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Yr6rAddZwdg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Yr6rAddZwdg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Yr6rAddZwdg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/Yr6rAddZwdg/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Finder - UK",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-13T15:46:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5KNgHLM1UMr7I5ZF7lusdu9ePrs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jeYxpoU4rFk"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-15T10:42:15Z",
+        "channelId": "UC-KOx2SOWDYZtLBKts2RQkA",
+        "title": "How to SHORT a STOCK on eToro (Easy Guide)",
+        "description": "How to SHORT on eToro (Easy Guide) – Learn how to short on eToro, open a sell position, manage your trades, and understand ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jeYxpoU4rFk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jeYxpoU4rFk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jeYxpoU4rFk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jeYxpoU4rFk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jeYxpoU4rFk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/jeYxpoU4rFk/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "FluxGuide",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-15T10:42:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "je0OP9vKjMKeR1LdVVjg8tSV0mk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TrkQXJNPImE"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-04T13:15:19Z",
+        "channelId": "UCTj8BSdkY6gKFnSM499ryVA",
+        "title": "How to Unlock CFD on eToro [2026 Step By Step Guide]",
+        "description": "In today's video, I'll show you how to unlock CFD trading on eToro step by step. Whether you're interested in leveraged trading or ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TrkQXJNPImE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TrkQXJNPImE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TrkQXJNPImE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TrkQXJNPImE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TrkQXJNPImE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/TrkQXJNPImE/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Ampvoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-04T13:15:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1yLJoIYuXFYobk8YyZJ87XlSyKI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vz1AkSscoS8"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-05T17:00:33Z",
+        "channelId": "UCpV0XmgENVKxMtyf362jCuA",
+        "title": "Mary Udonsek - Etoro (Official Video)",
+        "description": "Mary Udonsek – Etoro || Official Music Video \"Etoro\" is a powerful song of praise, gratitude, faith, and glory to God. Through this ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vz1AkSscoS8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vz1AkSscoS8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vz1AkSscoS8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vz1AkSscoS8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vz1AkSscoS8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Mary Udonsek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-05T17:00:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4e7b9t9RCkNNov9sR0v9M5t0r2k",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-MpNdmNzVHY"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-30T15:57:39Z",
+        "channelId": "UCaQbkbbr35GXYsJTjeI-Ahg",
+        "title": "eToro’s AI Agent Makes Investing Feel More Understandable",
+        "description": "Watch the full conversation on our channel to hear more from Callum Ryan at our Intelligence in Motion event, where he reacts to ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-MpNdmNzVHY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-MpNdmNzVHY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-MpNdmNzVHY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-MpNdmNzVHY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-MpNdmNzVHY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "etoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-30T15:57:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NHnOoWzEcrDMK57Jwohrc9WTDlc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ziJ_Xjny6zk"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-23T11:11:26Z",
+        "channelId": "UCaQbkbbr35GXYsJTjeI-Ahg",
+        "title": "The countdown begins... we can’t wait to see you all at the etoro Summit on November 3rd!",
+        "description": "Make sure you subscribe and follow eToro on social media: YouTube: https://www.youtube.com/@etoro?sub_confirmation=1 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ziJ_Xjny6zk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ziJ_Xjny6zk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ziJ_Xjny6zk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ziJ_Xjny6zk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ziJ_Xjny6zk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "etoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-23T11:11:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "j-BYVCMs1TKUHatOa_CBYwR2wsM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "k-fORfciGwg"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-22T03:06:32Z",
+        "channelId": "UCt6QZQrPURNW5EzzpVH4PYQ",
+        "title": "How to Sign Up for eToro (2026) | Step-by-Step",
+        "description": "Learning how to sign up for eToro is straightforward once you know the exact steps to follow. In this tutorial, you'll learn how to ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/k-fORfciGwg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/k-fORfciGwg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/k-fORfciGwg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/k-fORfciGwg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/k-fORfciGwg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/k-fORfciGwg/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "ECOM KNTRL",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-22T03:06:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IzcPU1Sq8_DC8LTgj2luu2_J_nE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ysRd-DFgqwo"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-06T12:04:45Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak Kupić Akcje na eToro (2026) - Poradnik dla Początkujących od A do Z",
+        "description": "Link do eToro z 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl eToro to platforma inwestycyjna oferująca wiele ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ysRd-DFgqwo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ysRd-DFgqwo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ysRd-DFgqwo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ysRd-DFgqwo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ysRd-DFgqwo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-06T12:04:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yKmZznhqxksPkbSeufwY3xKxTTs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pXY79WrJ814"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-16T15:00:24Z",
+        "channelId": "UCRqBu-grVX1p97WaX4d-OuQ",
+        "title": "Another Crash Before the 2027 Crypto Rally? eToro CEO Explains",
+        "description": "Is another crypto crash coming before the next rally? At TOKEN2049, Cointelegraph sits down with Yoni Assia, co-founder and ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pXY79WrJ814/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pXY79WrJ814/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pXY79WrJ814/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pXY79WrJ814/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pXY79WrJ814/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Cointelegraph",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-16T15:00:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7LB7DFkntu32IZERJRm0rPv32is",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HEDVfa22dng"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-10T02:00:35Z",
+        "channelId": "UCWWH72Cynj0fhuJXAxoPUWg",
+        "title": "The One Reason to Choose eToro Over XTB",
+        "description": "XTB wins the eToro head-to-head for most long-term European investors — cheaper stock and FX-conversion costs, xStation 5 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HEDVfa22dng/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HEDVfa22dng/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HEDVfa22dng/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HEDVfa22dng/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HEDVfa22dng/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/HEDVfa22dng/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Brokerchampion",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-10T02:00:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "668mSpmzKJSzcMzYgwwchUSCpok",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qH7OWBnCsbM"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-04T15:15:23Z",
+        "channelId": "UCTj8BSdkY6gKFnSM499ryVA",
+        "title": "How to Use the eToro Virtual Portfolio (Demo Account) [2026 Beginner Tutorial]",
+        "description": "In today's video, I'll show you how to use the eToro Virtual Portfolio (Demo Account) step by step. Whether you're learning the ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qH7OWBnCsbM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qH7OWBnCsbM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qH7OWBnCsbM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qH7OWBnCsbM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qH7OWBnCsbM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/qH7OWBnCsbM/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Ampvoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-04T15:15:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QD1rQDwiBx2fN6AfnAUT5NMyGpA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8e0pbrn-R-w"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-23T23:15:20Z",
+        "channelId": "UCTj8BSdkY6gKFnSM499ryVA",
+        "title": "How to Buy the S&amp;P 500 on eToro [2026 Full Tutorial]",
+        "description": "In today's video, I'll show you how to buy exposure to the S&P 500 on eToro step by step. This is useful when you want to find an ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8e0pbrn-R-w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8e0pbrn-R-w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8e0pbrn-R-w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8e0pbrn-R-w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8e0pbrn-R-w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/8e0pbrn-R-w/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Ampvoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-23T23:15:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KdJfUWzhmT6U-YKxRPYOqOJ7XUc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "H9laAQYlXBo"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-09T15:05:44Z",
+        "channelId": "UCv57yO0ZDdQ5wzyeG3msqIA",
+        "title": "eToro Copy-Trading: 30 Tage Test &amp; Ergebnis | deutsch",
+        "description": "Lohnt sich eToro Copy Trading wirklich? Meine Erfahrungen aus 30 Tagen Test! Jetzt 50 € Aktienbonus bei eToro sichern* ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/H9laAQYlXBo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/H9laAQYlXBo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/H9laAQYlXBo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/H9laAQYlXBo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/H9laAQYlXBo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Lean Invest Ruben Altmann",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-09T15:05:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kpK_6G7z3w0NVB3Ez3y3mmvNBzs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ACpvVabmGUI"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-29T13:18:21Z",
+        "channelId": "UCaQbkbbr35GXYsJTjeI-Ahg",
+        "title": "eToro’s New AI Investing Tools Passed the Vibe Check",
+        "description": "Make sure you subscribe and follow eToro on social media: YouTube: https://www.youtube.com/@etoro?sub_confirmation=1 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ACpvVabmGUI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ACpvVabmGUI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ACpvVabmGUI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ACpvVabmGUI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ACpvVabmGUI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "etoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-29T13:18:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WmI88H-eKn5AXGf36Zc7N8LVzO4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PhQxR07e_gw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T03:54:22Z",
+        "channelId": "UCaQbkbbr35GXYsJTjeI-Ahg",
+        "title": "Copy Tank | Six Strategies. $1 million in virtual money. You decide who you copy.",
+        "description": "Allocate your $1000000 in virtual money across the strategies you'd choose to copy: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PhQxR07e_gw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PhQxR07e_gw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PhQxR07e_gw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PhQxR07e_gw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PhQxR07e_gw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "etoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T03:54:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "R8Vn4Q4VEY9Rocip2uChLY9z6io",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3NZolqk5IJQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-09T12:34:48Z",
+        "channelId": "UCaQbkbbr35GXYsJTjeI-Ahg",
+        "title": "Follow the Signals | etoro. Know better.",
+        "description": "Everyone has the same stocks. The same charts. The same news. So why do some investors always seem to know better?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3NZolqk5IJQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3NZolqk5IJQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3NZolqk5IJQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3NZolqk5IJQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3NZolqk5IJQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "etoro",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-09T12:34:48Z"
+      }
+    }
+  ]
+}

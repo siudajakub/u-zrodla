@@ -1,0 +1,333 @@
+{
+ "videoId": "9Fcwo1jlwe4",
+ "url": "https://www.youtube.com/watch?v=9Fcwo1jlwe4",
+ "observedAt": "2026-11-21T18:52:52+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Nvidia traci Jensena i zalicza krach. Czy hossa AI właśnie się zmienia?",
+  "channel": "Piotr Cymcyk - Merytorycznie o Finansach",
+  "duration": 2128,
+  "uploadDate": "20261115",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 4997,
+ "descriptionSha256": "5a9233e7640c78a8ec8e8e84fc4c77b1b76849233cac40b70f19992c0b39f4a6",
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 975,
+  "spanSec": [
+   1.16,
+   2110.28
+  ],
+  "captionsSha256": "0606c04d157f4989856e79c8a7561b3777f2fccfd9de781a2f4d31d670007f72",
+  "files": {
+   "9Fcwo1jlwe4.pl.vtt": {
+    "bytes": 320229,
+    "sha256": "0606c04d157f4989856e79c8a7561b3777f2fccfd9de781a2f4d31d670007f72"
+   },
+   "9Fcwo1jlwe4.pl-orig.vtt": {
+    "bytes": 320229,
+    "sha256": "0606c04d157f4989856e79c8a7561b3777f2fccfd9de781a2f4d31d670007f72"
+   }
+  },
+  "caveat": "auto-napisy: błędy w nazwach własnych i liczbach są możliwe; cytaty niżej nie są poprawiane"
+ },
+ "measurement": {
+  "captionsWallSeconds": 2.18,
+  "requests": 1,
+  "captionBytes": 320229,
+  "note": "bajty = jeden plik napisów; ruch ekstraktora yt-dlp (strona + player API) niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 4997,
+    "originalTextSha256": "5a9233e7640c78a8ec8e8e84fc4c77b1b76849233cac40b70f19992c0b39f4a6"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 2128
+     }
+    ],
+    "durationSec": 2128,
+    "reason": null,
+    "spanSec": [
+     1.16,
+     2110.28
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 4997 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 2128
+    }
+   ],
+   "durationSec": 2128,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markers": [
+  {
+   "start": 62.879,
+   "end": 65.49,
+   "kinds": [
+    "wspolpraca"
+   ],
+   "quote": "współpracowniczkami.",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=62s",
+   "assessment": null
+  },
+  {
+   "start": 192.04,
+   "end": 195.229,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "freedom, partnera, partnera tego kanału,",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=192s",
+   "assessment": "mowa: Freedom24 jako partner kanału, link w opisie, 20 darmowych akcji; kadr 195 s ma etykietę REKLAMA"
+  },
+  {
+   "start": 213.599,
+   "end": 216.47,
+   "kinds": [
+    "promocja"
+   ],
+   "quote": "opisie, spełnić warunki promocji. Klik.",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=213s",
+   "assessment": null
+  },
+  {
+   "start": 216.48,
+   "end": 218.63,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "A partnerem technologicznym jest Lantre.",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=216s",
+   "assessment": null
+  },
+  {
+   "start": 233.439,
+   "end": 235.03,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "korzystając z kodu DN na 100 macie 100",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=233s",
+   "assessment": null
+  },
+  {
+   "start": 239.079,
+   "end": 240.47,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "wszystko jest partnerem kanału jest",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=239s",
+   "assessment": null
+  },
+  {
+   "start": 411.4,
+   "end": 413.39,
+   "kinds": [
+    "promocja"
+   ],
+   "quote": "Nie dla promocji Sodomi.",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=411s",
+   "assessment": null
+  },
+  {
+   "start": 744.079,
+   "end": 746.03,
+   "kinds": [
+    "wspolpraca"
+   ],
+   "quote": "Obie firmy współpracują tak od ponad 10",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=744s",
+   "assessment": null
+  },
+  {
+   "start": 812.8,
+   "end": 815.47,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "infrastrukturalną niż reklamową i oni",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=812s",
+   "assessment": null
+  },
+  {
+   "start": 892.199,
+   "end": 893.47,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "partnerów strategicznych, która jest",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=892s",
+   "assessment": null
+  },
+  {
+   "start": 1065.76,
+   "end": 1067.99,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "jej zabrakło, gdyby nie Kawa. Partnerem",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=1065s",
+   "assessment": null
+  },
+  {
+   "start": 1345.96,
+   "end": 1347.75,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "w opisie. Masa rynków niedostępnych",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=1345s",
+   "assessment": null
+  },
+  {
+   "start": 1359.6,
+   "end": 1361.63,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "dobrego. Link w opisie. No nie przeraża",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=1359s",
+   "assessment": null
+  },
+  {
+   "start": 1556.36,
+   "end": 1559.31,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "największego partnera handlowego,",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=1556s",
+   "assessment": null
+  },
+  {
+   "start": 2089.079,
+   "end": 2090.629,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "filmiku, który powstał dzięki partnerowi",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=2089s",
+   "assessment": null
+  },
+  {
+   "start": 2103.96,
+   "end": 2105.15,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "oczywiście w opisie tego materiału. W",
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=2103s",
+   "assessment": null
+  }
+ ],
+ "descriptionMarkers": [
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=1511"
+  },
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "👉 Portfel publiczny Freedom: https://www.fundstat.pl/pl/wallets/portfel-publiczny-freedom24-fc6be7856b?utm_source=dna&utm_medium=yt"
+  },
+  {
+   "kinds": [
+    "promocja"
+   ],
+   "quote": "* Promocja WELCOME podlega regulaminowi i warunkom oferty. Darmowe akcje są przydzielane losowo spośród wybranych akcji objętych promocją, przy czym akcje o wyższej wartości przyznawane są rzadziej."
+  },
+  {
+   "kinds": [
+    "kod"
+   ],
+   "quote": "Z kodem DNA100 otrzymasz 100 zł rabatu na zakupy od 3999 zł: https://bit.ly/DNARynkow-x-Lantre"
+  },
+  {
+   "kinds": [
+    "wspolpraca"
+   ],
+   "quote": "✉️ Współpraca: biuro@dnarynkow.pl"
+  },
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "- jak publiczny portfel agresywny Freedom24 zszedł z obsunięcia 22% do 12% i co zrobiłem w prywatnych portfelach,"
+  }
+ ],
+ "frames": [
+  {
+   "kind": "frame",
+   "method": "stream_ffmpeg_360p",
+   "time": 195.0,
+   "requestedTime": 195.0,
+   "path": ".runtime/media-cache/9Fcwo1jlwe4/frames/stream_360p_000195.jpg",
+   "sha256": "16da6c11f50e32d68e52e85f34fa2cf191a02629fc1c5534bc77bd7cfe5cb179",
+   "width": 640,
+   "height": 360,
+   "bytesFile": 64746,
+   "deepLink": "https://www.youtube.com/watch?v=9Fcwo1jlwe4&t=195s",
+   "sourceVersion": {
+    "videoId": "9Fcwo1jlwe4",
+    "readAt": "2026-11-21T18:52:52+00:00",
+    "source": "youtube-captions-v1",
+    "captionsSha256": "0606c04d157f4989856e79c8a7561b3777f2fccfd9de781a2f4d31d670007f72",
+    "descriptionSha256": "5a9233e7640c78a8ec8e8e84fc4c77b1b76849233cac40b70f19992c0b39f4a6",
+    "ytDlpVersion": "2026.10.26"
+   },
+   "bytesFetchedLive": 206057,
+   "observation": "Dolny pasek z etykietą „REKLAMA” (mały druk), logo FREEDOM, QR „Zeskanuj kod i załóż konto”, „Otwórz konto już teraz”. Oznaczenie reklamy WIDOCZNE na ekranie."
+  }
+ ]
+}

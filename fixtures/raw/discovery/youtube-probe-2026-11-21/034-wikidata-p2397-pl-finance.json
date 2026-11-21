@@ -1,0 +1,27 @@
+{
+  "head" : {
+    "vars" : [ "item", "label", "yt", "desc" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q140120455"
+      },
+      "yt" : {
+        "type" : "literal",
+        "value" : "UCGmVQD9cLlehBVxydvKkQYw"
+      },
+      "label" : {
+        "xml:lang" : "pl",
+        "type" : "literal",
+        "value" : "Tomasz Felpel"
+      },
+      "desc" : {
+        "xml:lang" : "pl",
+        "type" : "literal",
+        "value" : "inwestor i przedsiębiorca na rynkach prywatnych i w ochronie zdrowia; założyciel Value Alpha i Sonnerie VC"
+      }
+    } ]
+  }
+}

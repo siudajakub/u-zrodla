@@ -1,0 +1,226 @@
+{
+ "videoId": "OIyPE0z2mng",
+ "url": "https://www.youtube.com/watch?v=OIyPE0z2mng",
+ "channel": "Wojtek Smart",
+ "firm": "XTB",
+ "observedAt": "2026-11-21T19:20:07+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Jak znaleźć pierwsze oszczędności gdy brakuje na wszystko",
+  "channel": "FinanseOsobisteOnline",
+  "duration": 58,
+  "uploadDate": "20261031",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 1983,
+ "descriptionSha256": "10a66ec4c60174832126ee8bdc15072b1f0918d7474450c0bc1dbf776d342c6c",
+ "paidPromotionFlagApi": false,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 28,
+  "spanSec": [
+   0.04,
+   59.84
+  ],
+  "captionsSha256": "f021037c8d55e573253b602dec53a4e6d635e7f4096238266b769c692f3ebc71",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 18154,
+  "segments": 28,
+  "captionsWallSeconds": 2.13,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 1983,
+    "originalTextSha256": "10a66ec4c60174832126ee8bdc15072b1f0918d7474450c0bc1dbf776d342c6c"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 58
+     }
+    ],
+    "durationSec": 58,
+    "reason": null,
+    "spanSec": [
+     0.04,
+     59.84
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 1983 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 58
+    }
+   ],
+   "durationSec": 58,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": false,
+  "quote": null
+ },
+ "markingInSpeech": [],
+ "markersLexical": [],
+ "frames": [
+  {
+   "time": 4.83,
+   "requestedTime": 4.83,
+   "method": "storyboard_101x180",
+   "path": ".runtime/media-cache/OIyPE0z2mng/frames/storyboard_101x180_000004.jpg",
+   "sha256": "cdff653f16be91c272c4d9d6298e93e1305c1a90c0d2000d4de04deafa5c5fde",
+   "width": 100,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng&t=4s",
+   "observation": "Prowadzący, napisy wypalone w obrazie; brak XTB i etykiet (kadr 101x180, drobny druk nieczytelny)."
+  },
+  {
+   "time": 29.97,
+   "requestedTime": 29.97,
+   "method": "storyboard_101x180",
+   "path": ".runtime/media-cache/OIyPE0z2mng/frames/storyboard_101x180_000029.jpg",
+   "sha256": "b9c59d9f875f7a759e666b939fae4af4b76b5b5407688d11f9dbbe976c7ebb07",
+   "width": 100,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng&t=29s",
+   "observation": "Prowadzący, napisy wypalone; brak etykiet."
+  },
+  {
+   "time": 55.1,
+   "requestedTime": 55.1,
+   "method": "storyboard_101x180",
+   "path": ".runtime/media-cache/OIyPE0z2mng/frames/storyboard_101x180_000055.jpg",
+   "sha256": "f94341f507b6ad6d781761f4ee0b8b4961557cf8906eae9dacd93b4f4f085dc8",
+   "width": 100,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng&t=55s",
+   "observation": "Plansza „JAK ZBUDOWAĆ PODUSZKĘ FINANSOWĄ?”; brak XTB i etykiet."
+  },
+  {
+   "time": 56.0,
+   "requestedTime": 56.0,
+   "method": "stream_ffmpeg_360p",
+   "path": ".runtime/media-cache/OIyPE0z2mng/frames/stream_360p_000056.jpg",
+   "sha256": "e56b87fa8c3d3bf2aee0d388eba50df1c8f799ef2f00236d31e55610e946aa99",
+   "width": 144,
+   "height": 256,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng&t=56s",
+   "observation": "Plansza „JAK ZBUDOWAĆ PODUSZKĘ FINANSOWĄ?” (144x256), brak XTB, brak etykiety."
+  }
+ ],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 786–820).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+    "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+    "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng",
+     "evidenceId": "ev-5",
+     "locator": {
+      "field": "description",
+      "charStart": 786,
+      "charEnd": 820,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 75,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": [
+    "U1"
+   ]
+  },
+  "descriptionSpeechFrames": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 786–820).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres), mowie (pełny zakres), kadrach (wybrane momenty).",
+    "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng",
+     "evidenceId": "ev-5",
+     "locator": {
+      "field": "description",
+      "charStart": 786,
+      "charEnd": 820,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 90,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+   "premises": [
+    "U1"
+   ]
+  }
+ }
+}

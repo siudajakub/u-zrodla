@@ -1,0 +1,2444 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "K_4mTk9xfHmv02J9EKIZufWA-hM",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 9522,
+    "resultsPerPage": 53
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ywIVOf2U65sSuIeboQc4VMIPZu4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Gfwp6ZML-bQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-31T17:00:39Z",
+        "channelId": "UCarSdldjMo1Cq_Xgy4kOoOQ",
+        "title": "TOP 3 niedowartościowane Polskie spółki dywidendowe",
+        "description": "Czy na GPW wciąż można znaleźć niedowartościowane spółki dywidendowe? W tym odcinku analizuję akcje PZU, Murapolu i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Gfwp6ZML-bQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Gfwp6ZML-bQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Gfwp6ZML-bQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Gfwp6ZML-bQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Gfwp6ZML-bQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestor z Ulicy akcje ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-31T17:00:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MaNcWMIrTrFUFrm-CKG1kt3fkts",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pTb2zBJ4Q6I"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-13T17:00:37Z",
+        "channelId": "UCarSdldjMo1Cq_Xgy4kOoOQ",
+        "title": "TOP 3 Spółki Dywidendowe z GPW! Fundament pod Twój portfel",
+        "description": "Szukasz stabilnych spółek dywidendowe na polskiej giełdzie? W tym materiale analizuję TOP 3 spółki dywidendowe z GPW, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pTb2zBJ4Q6I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pTb2zBJ4Q6I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pTb2zBJ4Q6I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pTb2zBJ4Q6I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pTb2zBJ4Q6I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestor z Ulicy akcje ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-13T17:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7o2QoqpEF5WWPB4zRWMb9U8IZHA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KeRZbGrZQHs"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-08T16:35:29Z",
+        "channelId": "UCOiMJpkQSXDspWRMoI2B6CQ",
+        "title": "JAKIE AKCJE DYWIDENDOWE KUPIŁEM ZA 20 TYS ZŁ w Maju 2026 ?",
+        "description": "Buduję dochód pasywny z dywidend ! Dołącz do osób, które co niedzielę wieczorem otrzymują dawkę konkretnych przemyśleń i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KeRZbGrZQHs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KeRZbGrZQHs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KeRZbGrZQHs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KeRZbGrZQHs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KeRZbGrZQHs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/KeRZbGrZQHs/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Dywidendowy Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-08T16:35:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CmK7I8rjHgc3wasVkIkI2X7VAmY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YDVI-nXyN24"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-16T16:00:06Z",
+        "channelId": "UC816J_EZEICUYOhjTnk3o7Q",
+        "title": "Inwestowanie dywidendowe - od spółki do “pasywnego” portfela | Mateusz Mucha, Beta ETF",
+        "description": "Inwestowanie dywidendowe polaryzuje inwestorów jak mało który temat. Jedni widzą w regularnym cash flow dowód na zdrowe ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YDVI-nXyN24/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YDVI-nXyN24/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YDVI-nXyN24/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YDVI-nXyN24/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YDVI-nXyN24/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "StockWatch.pl",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-16T16:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UhWEStbIoNLzJTfTGhepH4LL2Zk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CcM6YijntQQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-06T18:00:28Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "6 ŚWIETNYCH spółek dywidendowych z GPW na 2027!? (Dywidenda + wzrost)",
+        "description": "Wysoka dywidenda to najszybsza droga do straty pieniędzy na giełdzie, MOIM ZDANIEM. W tym filmie pokazuję 6 spółek z GPW ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CcM6YijntQQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CcM6YijntQQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CcM6YijntQQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CcM6YijntQQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CcM6YijntQQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/CcM6YijntQQ/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-06T18:00:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "f2McWaBw-ekbDGUBJ7XEb3qSPOw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZSzZQ6P6p54"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-05T16:15:36Z",
+        "channelId": "UCAH85XhPoXCxSXUKdwsm0Ig",
+        "title": "Spółki Dywidendowe Które Rosną!",
+        "description": "Największa Promocja -60% oraz dodatkowo -15% na InvestingPRO: https://www.investing-referral.com/konradksiazak ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZSzZQ6P6p54/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZSzZQ6P6p54/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZSzZQ6P6p54/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZSzZQ6P6p54/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZSzZQ6P6p54/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Konrad Książak - Giełda, Pieniądze, Inwestycje",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-05T16:15:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "340DsOurCOkxZqSI8n2C72I36_A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Lx32VE1jFVQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-29T15:34:00Z",
+        "channelId": "UCyoAC1lcq324t7Oyno5XmYA",
+        "title": "Czy warto kupować spółki dywidendowe?",
+        "description": "Śledź projekt „Od 3000 zł do miliona” https://mrwawrzyniuk.pl/milion Czy warto kupować spółki dywidendowe? A może lepiej ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Lx32VE1jFVQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Lx32VE1jFVQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Lx32VE1jFVQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Lx32VE1jFVQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Lx32VE1jFVQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "MrWawrzyniuk",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-29T15:34:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Sdf3f54wT5t2UDnHmH_9__nbvIc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zpvQdvyt8fo"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-14T16:13:50Z",
+        "channelId": "UC4Qc_TYL6BsqiqXXorBFoaA",
+        "title": "Spółki dywidendowe i dywidendy w 2026 roku – Piotr Kwestarz | Procent Składany",
+        "description": "Zapisz się na alerty dywidendowe https://strefainwestorow.pl/skuteczny-inwestor-dywidendowy Rok 2026 będzie rekordowy pod ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zpvQdvyt8fo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zpvQdvyt8fo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zpvQdvyt8fo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zpvQdvyt8fo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zpvQdvyt8fo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Strefa Inwestorów",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-14T16:13:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6IP2NaLLCbUs0EJZZ6Tmb9-mHZA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SHkkqWVWAoM"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-11T17:17:09Z",
+        "channelId": "UCAH85XhPoXCxSXUKdwsm0Ig",
+        "title": "Najlepsze Spółki Dywidendowe Na Giełdzie!",
+        "description": "Wszyscy szukają amerykańskich dywidendowych legend, podczas gdy na GPW po cichu wyrosły spółki z ponad 15-letnią historią ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SHkkqWVWAoM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SHkkqWVWAoM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SHkkqWVWAoM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SHkkqWVWAoM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SHkkqWVWAoM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Konrad Książak - Giełda, Pieniądze, Inwestycje",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-11T17:17:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "tDl_B-xfZFFN5JNKwcoi2lwH-Rw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "eDdbAHl2Cu4"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-20T15:00:17Z",
+        "channelId": "UC10qxFITc-6-ByP5DXd1TRQ",
+        "title": "3 tanie akcje z USA, które  pozwolą żyć z dywidend (według Morningstar)",
+        "description": "Załóż konto Trade Republic: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eDdbAHl2Cu4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eDdbAHl2Cu4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eDdbAHl2Cu4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/eDdbAHl2Cu4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/eDdbAHl2Cu4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/eDdbAHl2Cu4/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Rankia Polska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-20T15:00:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kfUTMZ45NtrdJtc8CsIKljcZTcE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "c5bcL5uWvcw"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-14T16:00:36Z",
+        "channelId": "UCMh0w6OpVi085p81jK5TnzQ",
+        "title": "Inwestowanie dywidendowe: podatek, który nakładasz sam na siebie",
+        "description": "EXCEL „Prawdziwy koszt dywidendy”: https://www.tradingforaliving.pl/inwestowanie-w-spolki-dywidendowe/ (wpisz wartość ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Tomasz Trela – Twój człowiek na Wall Street",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-14T16:00:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Wnih8HGj6EuEor2fTB80IAiA124",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "n-kDas_Fhwk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T16:14:54Z",
+        "channelId": "UCmcV2iOk4C9nzox3jzGR_Og",
+        "title": "Piotr Andrusyna: Inwestowanie dywidendowe to mistrzostwo świata",
+        "description": "Piotr Andrusyna, autor kanału @MojeIKE jest orędownikiem inwestowania dywidendowego. Od marca 2019 roku prowadzi swój ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/n-kDas_Fhwk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/n-kDas_Fhwk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/n-kDas_Fhwk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/n-kDas_Fhwk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/n-kDas_Fhwk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/n-kDas_Fhwk/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "GK Immobile",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T16:14:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "SqYy0BsLQQhnEufYAs9CdzgUTnE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZX5W09oe_Zc"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-18T15:41:47Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "Jak stopniowo zbudowałem na giełdzie 58k dochodu pasywnego? SKUTECZNE inwestowanie dywidendowe.",
+        "description": "Jak buduję swój dochód pasywny i wolność finansową? Dlaczego nadal ważne są dla mnie dywidendy? Jak myśleć o ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZX5W09oe_Zc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZX5W09oe_Zc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZX5W09oe_Zc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZX5W09oe_Zc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZX5W09oe_Zc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-18T15:41:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WvqL6iCdr5hZsAlA8hKSH53UCtw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MAIPMPtah0c"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-04T15:45:10Z",
+        "channelId": "UCRT4nqdvE5Q_uKah3LDONCQ",
+        "title": "REKORDOWE DYWIDENDY W 2027?! 5 SPÓŁEK Z GPW, KTÓRE MOGĄ ZASKOCZYĆ!",
+        "description": "REKORDOWE DYWIDENDY W 2027?! 5 SPÓŁEK Z GPW, KTÓRE MOGĄ ZASKOCZYĆ! Czy 2027 rok będzie rekordowy dla ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MAIPMPtah0c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MAIPMPtah0c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MAIPMPtah0c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MAIPMPtah0c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MAIPMPtah0c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Szybki TEST",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-04T15:45:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zvGQCW-rDwnf46Drkdd4arURVHQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "aoqG3hrPSls"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-21T19:11:25Z",
+        "channelId": "UC816J_EZEICUYOhjTnk3o7Q",
+        "title": "Gotowy portfel dywidendowy z GPW. Sprawdzamy Beta ETF Dywidenda Plus (ETFBDIVPL)",
+        "description": "Zbudowanie portfela kilkudziesięciu polskich spółek dywidendowych wymaga czasu, wiedzy i regularnego nadzoru. Beta ETF ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aoqG3hrPSls/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aoqG3hrPSls/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aoqG3hrPSls/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/aoqG3hrPSls/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/aoqG3hrPSls/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/aoqG3hrPSls/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "StockWatch.pl",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-21T19:11:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Cdc3UcCiN8v4NYVCcfvX9ikBSPU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gvK-NKXCBOo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T16:00:18Z",
+        "channelId": "UCbcGARiE4aPFIDTkwQmWMCQ",
+        "title": "Dywidendy bez podatku 💰 Zbuduj własną trzynastkę na OKI",
+        "description": "Własna trzynastka z dywidend — dodatkowa wypłata co roku, choćby na wakacje. Jak zbudować taki portfel i wykorzystać ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gvK-NKXCBOo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gvK-NKXCBOo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gvK-NKXCBOo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gvK-NKXCBOo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gvK-NKXCBOo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Holi inwestuje | Piotr Bochnia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T16:00:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MAtioot7awE6rJ1bABFvEFtbAp4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KhuTcA9MYdU"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-13T16:00:18Z",
+        "channelId": "UCOiMJpkQSXDspWRMoI2B6CQ",
+        "title": "Co kupilłem za 18 tys PLN ? Akcje dywidendowe ! Czerwiec 2026.",
+        "description": "Buduję dochód pasywny z dywidend ! Dołącz do osób, które co niedzielę wieczorem otrzymują dawkę konkretnych przemyśleń i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KhuTcA9MYdU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KhuTcA9MYdU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KhuTcA9MYdU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KhuTcA9MYdU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KhuTcA9MYdU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/KhuTcA9MYdU/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Dywidendowy Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-13T16:00:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gNEq37lViVE0GHz97ZjYLh_pDAs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JLVP0ggut-8"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-29T14:44:31Z",
+        "channelId": "UCEK_g_v3-VhfLuFi-5eXCsQ",
+        "title": "Inwestowanie dywidendowe bez pułapek. Spółki czy ETF? | Mateusz Mucha na ForFin 2025",
+        "description": "Jak inwestować w spółki dywidendowe i nie wpaść w pułapkę wysokiej stopy dywidendy? Mateusz Mucha wyjaśnia, dlaczego ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JLVP0ggut-8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JLVP0ggut-8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JLVP0ggut-8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JLVP0ggut-8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JLVP0ggut-8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Stowarzyszenie Inwestorów Indywidualnych",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-29T14:44:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "iHczcmTNtS3scZEpoiY3_qoSHHU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tZd4TNKyF48"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-12T16:00:35Z",
+        "channelId": "UCLmFjtUdzo1eMvSnF8xFJYg",
+        "title": "Akcje Dywidendowe vs Wzrostowe vs S&amp;P 500. Już wiem co wygrywa!",
+        "description": "Spółki dywidendowe czy spółki wzrostowe — która strategia przyniosła wyższe stopy zwrotu? Porównuję inwestowanie w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tZd4TNKyF48/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tZd4TNKyF48/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tZd4TNKyF48/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tZd4TNKyF48/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tZd4TNKyF48/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "5mlnPL",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-12T16:00:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "R3o3xg-jCP147ThdD-JBLXnzwbM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "RYqozKbEyNY"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-06T06:00:32Z",
+        "channelId": "UC_7EBLV1_TS0NFv5D6VipRg",
+        "title": "500 zł MIESIĘCZNIE z DYWIDEND. Ile trzeba mieć? #dywidendy #inwestowanie #giełda #shorts",
+        "description": "Dywidendy nie sprawią, że rzucisz pracę po roku. Ale regularny dochód z inwestycji zaczyna zmieniać sposób myślenia o ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RYqozKbEyNY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RYqozKbEyNY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RYqozKbEyNY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RYqozKbEyNY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RYqozKbEyNY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Investologia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-06T06:00:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6IsnU-VgHF1RU0ce3Drfst4i1dA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NARkExNId80"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-06T15:00:19Z",
+        "channelId": "UCbcGARiE4aPFIDTkwQmWMCQ",
+        "title": "📉 XTB spada, a ja KUPUJĘ! Dywidenda 13 zł?",
+        "description": "XTB spada, a ja kupuję! Czy spółka mogłaby wypłacić około 13 zł dywidendy na akcję? Sprawdzam liczby, perspektywy i ryzyka.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NARkExNId80/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NARkExNId80/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NARkExNId80/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/NARkExNId80/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/NARkExNId80/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Holi inwestuje | Piotr Bochnia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-06T15:00:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gfUVBDC2SDpZnUSqfYClRYw659Q",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kLPxaAliCgk"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-15T20:28:17Z",
+        "channelId": "UCLmFjtUdzo1eMvSnF8xFJYg",
+        "title": "Akcje dywidendowe, czy wzrostowe? Znam odpowiedź  #dywidendy #inwestowanie #gpw",
+        "description": "5mlnpl⁩ Czy 30 lat czekania na dywidendy to przepis na sukces czy kosztowny błąd? Pokazuję, jak portfel inwestycyjny Kasi ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kLPxaAliCgk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kLPxaAliCgk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kLPxaAliCgk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kLPxaAliCgk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kLPxaAliCgk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/kLPxaAliCgk/sardefault.jpg",
+            "width": 529,
+            "height": 941
+          }
+        },
+        "channelTitle": "5mlnPL",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-15T20:28:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "m6IROie1Ln4iOPUcOGmeJ5t5yds",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "819j5QHP1Ps"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-02T05:00:07Z",
+        "channelId": "UCxReMzw4vJ9ZlTkkgIue00w",
+        "title": "Jak wybierać spółki dywidendowe? 7 rzeczy, które musisz sprawdzić | Inwestowanie przy kawie #20",
+        "description": "Czy inwestowanie w spółki dywidendowe naprawdę daje przewagę? Dowiedz się, jak wybierać dobre spółki, dlaczego sama ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/819j5QHP1Ps/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/819j5QHP1Ps/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/819j5QHP1Ps/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/819j5QHP1Ps/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/819j5QHP1Ps/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/819j5QHP1Ps/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Mądre Inwestycje | Marcin Tuszkiewicz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-02T05:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Trs6XrduBuN1O5g9WNjlDhP8yWU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "lsMiGqzXLSc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T13:23:02Z",
+        "channelId": "UCk9ck6KbU_HMhE41H8JLmhw",
+        "title": "SBI Bank + HDFC Bank, ITC, ONGC ogłosiły wysoką dywidendę, premię i podział",
+        "description": "SBI Bank + HDFC Bank, ITC, ONGC zadeklarowały wysoką dywidendę, bonus i split premia dywidenda podzielona akcje dywidendowe akcje dywidendowe ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lsMiGqzXLSc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lsMiGqzXLSc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lsMiGqzXLSc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/lsMiGqzXLSc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/lsMiGqzXLSc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/lsMiGqzXLSc/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "FinoStocks - Aarush Chopra",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T13:23:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dNd6ROig8QRrb2MBtvUSDKtIg3w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "y17aVeKw55U"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-21T16:00:04Z",
+        "channelId": "UCOiMJpkQSXDspWRMoI2B6CQ",
+        "title": "JAKIE AKCJE dywidendowe KUPIŁEM za 22 000 PLN w Sierpniu 2026 ?",
+        "description": "Buduję dochód pasywny z dywidend ! Dołącz do osób, które co niedzielę wieczorem otrzymują dawkę konkretnych przemyśleń i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/y17aVeKw55U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/y17aVeKw55U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/y17aVeKw55U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/y17aVeKw55U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/y17aVeKw55U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/y17aVeKw55U/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Dywidendowy Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-21T16:00:04Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9sgZq-1zgo1jmD13CrjVxDbw2JU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_WQ1hi1QFBo"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-31T15:00:28Z",
+        "channelId": "UCjde5S2ruiZh-t6ndYB68Iw",
+        "title": "DYWIDENDY SIERPIEŃ 2026: Pancerne zyski czy pułapka? Sprawdź przed zakupem!",
+        "description": "TIER LISTA DYWIDEND NA SIERPIEŃ 2026! Wybieramy PANCERNE spółki i ostrzegamy przed PUŁAPKAMI! Sierpień na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_WQ1hi1QFBo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_WQ1hi1QFBo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_WQ1hi1QFBo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_WQ1hi1QFBo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_WQ1hi1QFBo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełdowe Laboratorium",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-31T15:00:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nQygMKY7UWl2xsEc_ITGuREcfnA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1KGk67F9_Og"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-02T05:10:24Z",
+        "channelId": "UCLmFjtUdzo1eMvSnF8xFJYg",
+        "title": "Dywidendy w październiku: 7 spółek z GPW, tylko 2 warte uwagi",
+        "description": "Dywidendy na GPW w październiku: analizuję 7 spółek i wyjaśniam, dlaczego w większość nie zainwestuje. Sprawdzam, czy ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1KGk67F9_Og/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1KGk67F9_Og/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1KGk67F9_Og/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1KGk67F9_Og/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1KGk67F9_Og/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "5mlnPL",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-02T05:10:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Fi8OrWi6Vpow91RGJF13jCVu6iQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Ux9i2IKWv40"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-29T17:41:02Z",
+        "channelId": "UCuZtZUUAp_Qw1akwHFPGc5A",
+        "title": "Najlepsze spółki dywidendowe #inwestycje #finanse",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ux9i2IKWv40/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ux9i2IKWv40/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ux9i2IKWv40/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Ux9i2IKWv40/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Ux9i2IKWv40/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "osobisty_makler",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-29T17:41:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bfg7RYWp82CcL80YAuzf7jiIjvc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "rH7idPcK6mQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-30T20:05:00Z",
+        "channelId": "UCjde5S2ruiZh-t6ndYB68Iw",
+        "title": "DYWIDENDY GPW - LIPIEC 2026: 8% ZYSKU ALBO PUŁAPKA? ⚠️ CZĘŚĆ 1",
+        "description": "Lipiec 2026 roku przynosi potężną falę odcięć dywidend na GPW oraz NewConnect! W tym materiale w Giełdowym Laboratorium ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rH7idPcK6mQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rH7idPcK6mQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rH7idPcK6mQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rH7idPcK6mQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rH7idPcK6mQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełdowe Laboratorium",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-30T20:05:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "u8OXdt9ipnjlpFf-PQHS_xqJYh4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IcgeuHIyjUo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-14T16:00:10Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "Dywidendy na GPW: mój model wyrzucił PKO, Orlen i PZU #dywidendy #GPW #Shorts",
+        "description": "Napisz „model” w komentarzu, a wyślę Ci nazwę numeru 1 z mojego modelu dywidendowego na GPW* i analizę całej piątki ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IcgeuHIyjUo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IcgeuHIyjUo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IcgeuHIyjUo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IcgeuHIyjUo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IcgeuHIyjUo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-14T16:00:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "c2nIAqFXxIIli-oBv6ZsTw1u31c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7fgBwvCMCrA"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-27T19:12:20Z",
+        "channelId": "UCe0HPbE-Dod3lRRb-JHUuEA",
+        "title": "Kupiłem PZU na górce. BŁĄD czy OKAZJA?",
+        "description": "Kupiłem PZU na górce. Zaczynam giełdowy eksperyment. Czy kupowanie akcji lidera polskiego rynku po blisko 65 złotych to błąd ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7fgBwvCMCrA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7fgBwvCMCrA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7fgBwvCMCrA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7fgBwvCMCrA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/7fgBwvCMCrA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Procent Składany",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-27T19:12:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "842E86K959E1K6KAZEPQdY_3x0k",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8fNlw7O4j24"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-13T17:00:06Z",
+        "channelId": "UC9J9JyhNzrcehLdsU0qJvPg",
+        "title": "Mieszkanie w Warszawie daje 4% rocznie. Dlaczego Albert woli spółki dywidendowe?",
+        "description": "Jak analizować spółki, żeby analiza miała sens, a nie tylko dawała dobre samopoczucie? Albert Rokicki z longterm.pl mówi, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8fNlw7O4j24/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8fNlw7O4j24/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8fNlw7O4j24/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8fNlw7O4j24/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8fNlw7O4j24/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "ZYSKOWNA STRONA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-13T17:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kNeGl9JdAbmZAxEpxmukCqhmU4I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "M9ReTC1tQzk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T16:18:40Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "Krach na akcjach XTB. Zakupy za 25 000 PLN. Wyniki królowej AI, Synektiku, Cyberfolks i Vercomu.",
+        "description": "Jak inwestować na giełdzie? Jak inwestować w akcje? Seria o inwestowaniu w akcje dywidendowe, budowaniu dochodu ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/M9ReTC1tQzk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/M9ReTC1tQzk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/M9ReTC1tQzk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/M9ReTC1tQzk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/M9ReTC1tQzk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T16:18:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bPnvmmmFe77L6Sfs8UXs4H3iuqI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TfIlIusi1AE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:00:30Z",
+        "channelId": "UCLesNX-Yc1bb7mSMefESgSw",
+        "title": "Oceniłem 10 najlepszych akcji dywidendowych",
+        "description": "Arystokraci dywidendy to firmy, które nie tylko wypłacały, ale i zwiększały dywidendę przez 25 kolejnych lat. Królowie dywidendy...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TfIlIusi1AE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TfIlIusi1AE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TfIlIusi1AE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TfIlIusi1AE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TfIlIusi1AE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Nanalyze",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:00:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6peBBkHfSh_4PuWe-X-WA62owCI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pdtszKyKGKs"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-10T13:31:15Z",
+        "channelId": "UCe0HPbE-Dod3lRRb-JHUuEA",
+        "title": "Ile trzeba mieć, żeby ŻYĆ z DYWIDEND? Konkretne kwoty (1000, 3000, 5000 zł/mc)",
+        "description": "Ile trzeba zainwestować, żeby dywidendy płaciły Ci 1000, 3000 albo 5000 zł miesięcznie? W tym filmie dostajesz konkretne kwoty ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pdtszKyKGKs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pdtszKyKGKs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pdtszKyKGKs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pdtszKyKGKs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pdtszKyKGKs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/pdtszKyKGKs/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Procent Składany",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-10T13:31:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "SnwdvQFHapM7B2_r6aRY35-6WTk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "XWPqFUHdQcQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-20T16:30:12Z",
+        "channelId": "UC8iGIiu18pw3wsBOVQ97Z5A",
+        "title": "sa16/Spółki dywidendowe GPW: które dają 8% rocznie w 2026?#dywidendy #inwestowanie #gpw",
+        "description": "dywidendy #inwestowanie #gpw PZU wypłaca 4,80 zł na akcję w 2026 roku. 100 akcji = 480 zł w październiku. Automatycznie.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XWPqFUHdQcQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XWPqFUHdQcQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XWPqFUHdQcQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/XWPqFUHdQcQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/XWPqFUHdQcQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Nowy Ekspert Finansów",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-20T16:30:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PZlIqGJIplVYz2NvGMRX34X_l5U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "D5Dz91I5ciw"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-06T13:39:47Z",
+        "channelId": "UCeCqF_8l5SJQmf8jBe-BzxA",
+        "title": "7 spółek dywidendowych na długi termin - sprawdź mój portfel",
+        "description": "Partnerem tego programu jest XTB. Załóż konto w XTB i wpisz kod: LONGTERM przy rejestracji aby otrzymać darmowy kurs ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/D5Dz91I5ciw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/D5Dz91I5ciw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/D5Dz91I5ciw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/D5Dz91I5ciw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/D5Dz91I5ciw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Albert Rokicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-06T13:39:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2PpVrudK7knfldqRR_L1jFv9kY4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oH3fGjm-zsg"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-15T17:00:24Z",
+        "channelId": "UCFsnIQ3q3GCEh0vE8rHhGzw",
+        "title": "TOP 3 spółki dywidendowe z GPW. Nawet ponad 10% rocznie #shorts",
+        "description": "PZU, Pekao i Bank Handlowy: ile wypłaciły za 2025 rok i jaka to stopa dywidendy przy kursach z 13.11.2026. Plus przykład: ile ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oH3fGjm-zsg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oH3fGjm-zsg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oH3fGjm-zsg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oH3fGjm-zsg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oH3fGjm-zsg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/oH3fGjm-zsg/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Centruminwestowania",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-15T17:00:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "s9OPs6Cbr0OqV8miheSYtvkpiqQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kuYFTfE2GtI"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-05T17:08:51Z",
+        "channelId": "UCTyt5JYXghR3TNJjspt8diw",
+        "title": "🔥Spółki dywidendowe 2026",
+        "description": "Która z tych 5 spółek ma według Ciebie najlepsze perspektywy na kolejne lata? Materiał ma charakter wyłącznie edukacyjny i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kuYFTfE2GtI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kuYFTfE2GtI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kuYFTfE2GtI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kuYFTfE2GtI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kuYFTfE2GtI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jędrzej Maciejewski - Inwestowanie Długoterminowe",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-05T17:08:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vCklejpDF-roa71BZCydth_bSV8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CKl7Bk_xepM"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-15T15:45:08Z",
+        "channelId": "UCF0Cxpd-HD_an4LRSgu0fNA",
+        "title": "Spółki Dywidendowe - Stabilne Zyski i Przewidywalne Dywidendy",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CKl7Bk_xepM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CKl7Bk_xepM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CKl7Bk_xepM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CKl7Bk_xepM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CKl7Bk_xepM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Paweł Szpakowicz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-15T15:45:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lH_r98LMcOSphc3MlLVy_36qF_I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YcR2sQHzKus"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T15:17:22Z",
+        "channelId": "UClLyc3C2K3C-RAh7eEJAwyg",
+        "title": "Akcje AI spadają — 3 kupuję, 1 sprzedaję",
+        "description": "Akcje spółek AI spadają. Oceniłem je na 14 pozycji od „mocnego kupna” do „sprzedaży”, aby ustalić, które 3 akcje kupiłbym jako pierwsze, które sprzedałbym i gdzie bym je umieścił…",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YcR2sQHzKus/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YcR2sQHzKus/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YcR2sQHzKus/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YcR2sQHzKus/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YcR2sQHzKus/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Dividend Talks",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T15:17:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "P9MVXSsB4WXVxvB-b6HjJFmyDsw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3ZKeVKavVuE"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-10T16:00:11Z",
+        "channelId": "UCOiMJpkQSXDspWRMoI2B6CQ",
+        "title": "6 MIESIĘCY Inwestowania DYWIDENDOWEGO priorytezując EPSY - w praktyce!",
+        "description": "Buduję dochód pasywny z dywidend ! Dołącz do osób, które co niedzielę wieczorem otrzymują dawkę konkretnych przemyśleń i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3ZKeVKavVuE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3ZKeVKavVuE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3ZKeVKavVuE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3ZKeVKavVuE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3ZKeVKavVuE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/3ZKeVKavVuE/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Dywidendowy Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-10T16:00:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HdXfWWxvPZsatMsLZyJ6xDJ_mlw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Kxz_AzOEB10"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-11T06:30:09Z",
+        "channelId": "UCarSdldjMo1Cq_Xgy4kOoOQ",
+        "title": "1000 zł miesięcznie z dywidendy PZU — ile musisz zainwestować? 💰",
+        "description": "Ile trzeba zainwestować w akcje PZU, żeby otrzymywać średnio 1000 zł miesięcznie z dywidendy? Przy założeniu dywidendy 4 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Kxz_AzOEB10/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Kxz_AzOEB10/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Kxz_AzOEB10/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Kxz_AzOEB10/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Kxz_AzOEB10/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/Kxz_AzOEB10/sardefault.jpg",
+            "width": 579,
+            "height": 1030
+          }
+        },
+        "channelTitle": "Inwestor z Ulicy akcje ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-11T06:30:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_AYqgLd7EaSh-7FmCXWndgujG-U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HeIDoYZdCw0"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-15T11:07:07Z",
+        "channelId": "UCVK5sOPiHl9dPd4QvFBkm9Q",
+        "title": "Spółki dywidendowe na radarze",
+        "description": "Kolejna edycja Invest Cuffs już 5-6.10 w Poznaniu 🎟️ https://investcuffs.pl/invest-cuffs-poznan-2026/ Bilety o 30% tańsze już ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HeIDoYZdCw0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HeIDoYZdCw0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HeIDoYZdCw0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HeIDoYZdCw0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HeIDoYZdCw0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Global Markets ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-15T11:07:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "OvEIuG1UNT5sofDlssAJCPi87L4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yIbtMnfP25Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-05T16:00:37Z",
+        "channelId": "UCOiMJpkQSXDspWRMoI2B6CQ",
+        "title": "Tak teraz wygląda MÓJ PORTFEL ROSNĄCYCH DYWIDEND! Aktualizacja Q3 2026.",
+        "description": "Buduję dochód pasywny z dywidend ! Dołącz do osób, które co niedzielę wieczorem otrzymują dawkę konkretnych przemyśleń i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yIbtMnfP25Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yIbtMnfP25Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yIbtMnfP25Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yIbtMnfP25Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yIbtMnfP25Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/yIbtMnfP25Q/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Dywidendowy Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-05T16:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GiCCFJIcbzJH09XV2HTybXwAPGs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bwz0v9Fy9ek"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-01T16:00:20Z",
+        "channelId": "UCOiMJpkQSXDspWRMoI2B6CQ",
+        "title": "Jak INWESTOWANIE DYWIDENDOWE wygląda w praktyce? Podsumowanie portfela/Maj 2026.",
+        "description": "Buduję dochód pasywny z dywidend ! Dołącz do osób, które co niedzielę wieczorem otrzymują dawkę konkretnych przemyśleń i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bwz0v9Fy9ek/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bwz0v9Fy9ek/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bwz0v9Fy9ek/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/bwz0v9Fy9ek/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/bwz0v9Fy9ek/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/bwz0v9Fy9ek/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Dywidendowy Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-01T16:00:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cE753RuWzPWIKxtjMoE3us5i6sw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ohP5Que8Syc"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-17T21:00:12Z",
+        "channelId": "UCXB1StgfveHUAsLZ8hUr5RQ",
+        "title": "Jak wyszukać DOBRE spółki DYWIDENDOWE? #inwestycje #giełda #dywidendy #etf #xtb #inwestowanie",
+        "description": "Odkryj sekrety wyszukiwania najlepszych spółek dywidendowych na giełdzie. W tym filmie dowiesz się, jak wybrać odpowiednie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ohP5Que8Syc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ohP5Que8Syc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ohP5Que8Syc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ohP5Que8Syc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ohP5Que8Syc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "jachu",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-17T21:00:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TdyxK2NbJlS7SK0B4jRWZ9g_Xpg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Z8DlKae_d2Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-06T05:00:05Z",
+        "channelId": "UCjde5S2ruiZh-t6ndYB68Iw",
+        "title": "Text wypłaca 2,13 zł. Dlaczego zysk spółki tąpnął o 30%?  #inwestowanie  #gpw  #giełda #dywidenda",
+        "description": "Dzisiaj (wtorek, 6 października) mija ostateczny termin sesyjny na zakup akcji Text S.A. z prawem do zamykającej transzy ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Z8DlKae_d2Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Z8DlKae_d2Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Z8DlKae_d2Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Z8DlKae_d2Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Z8DlKae_d2Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/Z8DlKae_d2Y/sardefault.jpg",
+            "width": 1536,
+            "height": 2731
+          }
+        },
+        "channelTitle": "Giełdowe Laboratorium",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-06T05:00:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Zy7Eh0VRfJXQpk0stO-rxWTejPE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oc8hh9r2Dks"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-02T15:30:11Z",
+        "channelId": "UCqRcpPTUqX75WwCV0TFxi1A",
+        "title": "Dywidendy lipiec 2026: ranking 64 spółek z GPW od najniższej do najwyższej stopy!",
+        "description": "W lipcu 2026 roku na rachunki inwestorów trafią kolejne dywidendy ze spółek notowanych na GPW i NewConnect. W tym odcinku ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oc8hh9r2Dks/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oc8hh9r2Dks/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oc8hh9r2Dks/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oc8hh9r2Dks/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oc8hh9r2Dks/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestor po godzinach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-02T15:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4k7M7UJ0FsKSm0VYq9XQq7wUmyY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "rs6i5TcX5-8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-05T13:45:22Z",
+        "channelId": "UCarSdldjMo1Cq_Xgy4kOoOQ",
+        "title": "1000 zł miesięcznie z dywidendy LPP? Tyle musisz zainwestować! 💰",
+        "description": "Ile trzeba zainwestować w akcje LPP, żeby otrzymywać średnio 1000 zł miesięcznie z dywidendy? Sprawdzamy, ile akcji ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rs6i5TcX5-8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rs6i5TcX5-8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rs6i5TcX5-8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rs6i5TcX5-8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rs6i5TcX5-8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/rs6i5TcX5-8/sardefault.jpg",
+            "width": 584,
+            "height": 1038
+          }
+        },
+        "channelTitle": "Inwestor z Ulicy akcje ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-05T13:45:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0EKxOETG4WJv5qptLeSc17RLJVU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "uy2JLqwiZpU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T14:01:56Z",
+        "channelId": "UCxgAuX3XZROujMmGphN_scA",
+        "title": "7 Passive Income Ideas for 2027 (Up to $1,000/Day)",
+        "description": "Get Your FREE AI-Store Builder (BuildYourStore): https://www.buildyourstore.ai/jrk8 AutoDS 3-day trial for $1: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uy2JLqwiZpU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uy2JLqwiZpU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uy2JLqwiZpU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uy2JLqwiZpU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uy2JLqwiZpU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/uy2JLqwiZpU/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Mark Tilbury",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T14:01:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "aj_KoFXwJRzDajcc2r_jSr86Y4Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PfM6ZWqkqPQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-23T11:00:11Z",
+        "channelId": "UCqRcpPTUqX75WwCV0TFxi1A",
+        "title": "TOP 3 spółki Dywidendowe na GPW – Q3 2026 #asbis #synektik #xtb #gpw #akcje #dywidenda",
+        "description": "TOP 3 spółki dywidendowe z GPW na Q3 2026! W moim zestawieniu znalazły się ASBIS, Synektik oraz XTB. Sprawdź, która ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PfM6ZWqkqPQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PfM6ZWqkqPQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PfM6ZWqkqPQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PfM6ZWqkqPQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PfM6ZWqkqPQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestor po godzinach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-23T11:00:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "m8sLb7C5hmxZ-WYiuYWKUe-2wSQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1ia2ihWRy9M"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-16T13:00:33Z",
+        "channelId": "UCF0Cxpd-HD_an4LRSgu0fNA",
+        "title": "Spółki Dywidendowe - Klucz do Stabilnych Fundamentów Finansowych",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1ia2ihWRy9M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1ia2ihWRy9M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1ia2ihWRy9M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1ia2ihWRy9M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1ia2ihWRy9M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Paweł Szpakowicz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-16T13:00:33Z"
+      }
+    }
+  ]
+}

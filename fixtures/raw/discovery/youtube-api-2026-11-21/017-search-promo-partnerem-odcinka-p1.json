@@ -1,0 +1,2297 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "NDzyBPbV1O_0-vPPJt5Cub0LogM",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 362530,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "P4yh60FQMYDF5ueqHuAmh76K_Bk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DIzTfrn7x3w"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T14:30:02Z",
+        "channelId": "UC2MQ1TRVmCnslmwlgqayVrw",
+        "title": "Dlaczego BOGACI KUPUJĄ na MASOWĄ SKALĘ GRUNT - Na to się szykują",
+        "description": "Partnerem odcinka jest ZdrowyCatering.pl – catering dietetyczny dla tych, którzy cenią swój czas! Codzienne zakupy, planowanie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DIzTfrn7x3w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DIzTfrn7x3w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DIzTfrn7x3w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DIzTfrn7x3w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DIzTfrn7x3w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/DIzTfrn7x3w/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Globalista TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T14:30:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "laDglJuPTq7R7-IOPy-DABCQivY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4p7w0xZyHos"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-24T10:00:24Z",
+        "channelId": "UC16y5xkzIplJDo5rsZ6d6HQ",
+        "title": "Beata Pawlikowska o manipulacji w związku! Partnerem odcinka jest Apart",
+        "description": "Obserwuj nas: serwis → https://www.kozaczek.pl instagram → https://www.instagram.com/kozaczek.poland/ tiktok ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4p7w0xZyHos/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4p7w0xZyHos/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4p7w0xZyHos/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4p7w0xZyHos/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4p7w0xZyHos/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kozaczek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-24T10:00:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3jBDOlzyLWZeCfSkRqQfosKzio4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OUOxuhsXUBA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T19:00:07Z",
+        "channelId": "UCw6m0T0_F5DLfPzJHumplDw",
+        "title": "Rakiety na Polskę! Tusk ujawnia: USA nie chcą eskalacji z Rosją! — Radosław Pyffel i Piotr Zychowicz",
+        "description": "Premier Tusk ogłosił, że atak rakietowo-dronowy Rosji na Polskę wymaga odpowiedzi. Ale nasz amerykański sojusznik wzywa do ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OUOxuhsXUBA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OUOxuhsXUBA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OUOxuhsXUBA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OUOxuhsXUBA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OUOxuhsXUBA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/OUOxuhsXUBA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "HISTORIA REALNA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T19:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yz1AuquwflMjSOvvIDGvJuuTo-o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "x58AZakjQDo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:55:09Z",
+        "channelId": "UCDkRIqf-m3wPylGmG26AbUQ",
+        "title": "NIE MÓGŁ MIEĆ DZIECI, A JEDNAK SIĘ RODZIŁY. JAK MĄŻ DAISY TUSZOWAŁ ROMANS SYNA I SWOJEJ DRUGIEJ ŻONY",
+        "description": "Black Weeks w Militaria.pl https://mltr.pl/Hi!HistoryBW2026 Na rodzinnej fotografii z 1916 roku księżna Daisy i Jan Henryk XV ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/x58AZakjQDo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/x58AZakjQDo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/x58AZakjQDo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/x58AZakjQDo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/x58AZakjQDo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/x58AZakjQDo/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Hi!History Joanna Lamparska",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:55:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TPdOFZuVTBb8wZ_eJKGgfwXjtog",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8xks7QUG6Xk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T15:38:33Z",
+        "channelId": "UCb4KZzyxv9-PL_BcKOrpFyQ",
+        "title": "BABCIA GRA NA OFFICIALU NA ESEA!",
+        "description": "NOWY KONKURS Z MOIM KODEM ➡️ ANGELKACS z PARTNEREM ODCINKA GIVEAWAY NA DC ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8xks7QUG6Xk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8xks7QUG6Xk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8xks7QUG6Xk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8xks7QUG6Xk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8xks7QUG6Xk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/8xks7QUG6Xk/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "angelkacs",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T15:38:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YXKtz45KPloJMJ7OrZluRrgHg7c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FRh8G9y6hWE"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-24T12:00:31Z",
+        "channelId": "UC16y5xkzIplJDo5rsZ6d6HQ",
+        "title": "Beata Pawlikowska zdradza sekret asertywności! Partnerem odcinka jest Apart",
+        "description": "Obserwuj nas: serwis → https://www.kozaczek.pl instagram → https://www.instagram.com/kozaczek.poland/ tiktok ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FRh8G9y6hWE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FRh8G9y6hWE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FRh8G9y6hWE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/FRh8G9y6hWE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/FRh8G9y6hWE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kozaczek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-24T12:00:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0ZCrTny2fHsPzu5gpdDxPLlDd7w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "q-pwIe85SmA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T16:00:38Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "Jedyny film o IKE i IKZE, jakiego potrzebujesz",
+        "description": "współpraca XTB [współpraca] Tutaj Kupisz Akcje i ETFy (XTB): https://link-pso.xtb.com/pso/DwCbZ Zapisz się za darmo na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T16:00:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "d6KAW8ToSf6aN-cpHIf6vT0HDwY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "P_-4ZWcUgEI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T15:16:18Z",
+        "channelId": "UCmsxFRm1zRgueucG2Pc9Kzg",
+        "title": "TEASER czwartego odcinka PC Masters 🔥 Będzie naprawdę gorąco! #PCMasters #xkom",
+        "description": "Witajcie w PC Masters – programie x-kom, w którym szukamy prawdziwego mistrza komputerów! W walce o tytuł PC Mastera ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/P_-4ZWcUgEI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/P_-4ZWcUgEI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/P_-4ZWcUgEI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/P_-4ZWcUgEI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/P_-4ZWcUgEI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "x-kom",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T15:16:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "xIUA36p7OSfk_GP0XroYAt3e2_Q",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cxCrRVP0Jj0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T16:00:08Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Powstanie wielkopolskie 1806. Jak Dąbrowski i Wybicki pomogli Napoleonowi odbudować polskie wojsko?",
+        "description": "Prof. Hieronim Grala opowiada o pierwszym zwycięskim powstaniu wielkopolskim z 1806 roku - wydarzeniu dziś pozostającym w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cxCrRVP0Jj0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cxCrRVP0Jj0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cxCrRVP0Jj0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cxCrRVP0Jj0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cxCrRVP0Jj0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T16:00:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kQgttdlBDsOkHpO0wTH3X9PfMbI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wV9xFUZhw10"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-21T12:00:23Z",
+        "channelId": "UC16y5xkzIplJDo5rsZ6d6HQ",
+        "title": "Czy Patryk Strzałka-Trzeciak i jego partner Przemysław są milionerami?",
+        "description": "Czy Patryk Strzałka-Trzeciak i jego partner Przemysław są milionerami? Influencer otwarcie poruszył temat swoich zarobków ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wV9xFUZhw10/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wV9xFUZhw10/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wV9xFUZhw10/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wV9xFUZhw10/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wV9xFUZhw10/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kozaczek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-21T12:00:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "b0Z69p4-vfLLUmutFjyxXy6EpfQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OENj7HSzQAE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T07:36:47Z",
+        "channelId": "UCk1qY09hkqTworXLBKd5M-w",
+        "title": "„Nieskończoność nie istnieje”. Polski fizyk obala mit początku Wszechświata | Ryszard Stroynowski",
+        "description": "Partnerem tego odcinka jest YA!&SODA - zamień zwykłą wodę gazowaną w swój ulubiony smak w kilka sekund: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OENj7HSzQAE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OENj7HSzQAE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OENj7HSzQAE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OENj7HSzQAE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OENj7HSzQAE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "This Is IT - Maciej Kawecki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T07:36:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zH47H_5PdQcBCHN4UfDhdodqbhk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MSXs8PXVWVA"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-24T08:00:21Z",
+        "channelId": "UC16y5xkzIplJDo5rsZ6d6HQ",
+        "title": "Beata Pawlikowska obala mit o asertywności! Partnerem odcinka jest Apart",
+        "description": "Obserwuj nas: serwis → https://www.kozaczek.pl instagram → https://www.instagram.com/kozaczek.poland/ tiktok ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MSXs8PXVWVA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MSXs8PXVWVA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MSXs8PXVWVA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MSXs8PXVWVA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MSXs8PXVWVA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kozaczek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-24T08:00:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "D2uS3mhhRu772Rc4doPgD7r2DQI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IV0Fk2xSagI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-04T14:00:18Z",
+        "channelId": "UC16y5xkzIplJDo5rsZ6d6HQ",
+        "title": "Cała rozmowa na naszym kanale! Partnerem odcinka jest Apart",
+        "description": "Obserwuj nas: serwis → https://www.kozaczek.pl instagram → https://www.instagram.com/kozaczek.poland/ tiktok ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IV0Fk2xSagI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IV0Fk2xSagI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IV0Fk2xSagI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IV0Fk2xSagI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IV0Fk2xSagI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kozaczek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-04T14:00:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GYVCZjRpnggpxHZrI3EusiAu2zY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-rRhXSL1W04"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T17:44:44Z",
+        "channelId": "UCmBXFnaLaIRIxOVFR5PBBgw",
+        "title": "Podcast SAMIEC BETA bawi i uczy. Dzisiaj: PSYCHOONKOLOGIA",
+        "description": "Podcast SAMIEC BETA bawi i uczy. Dzisiaj: PSYCHOONKOLOGIA. Co to? Czym jest rak, czyli choroba nowotworowa? To nie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-rRhXSL1W04/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-rRhXSL1W04/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-rRhXSL1W04/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-rRhXSL1W04/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-rRhXSL1W04/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "SAMIEC BETA PODCAST",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T17:44:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zIvIZT0YLUmOUDCj7sbN2bVJnW8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZVrPx3_Chvc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T12:53:34Z",
+        "channelId": "UCw6m0T0_F5DLfPzJHumplDw",
+        "title": "Wojna czy pokój? Xî, Trump i Putin podzielą świat na strefy wpływów? — Piotr Zychowicz Q&amp;A",
+        "description": "W chińskim Shenzhen na marginesie szczytu APEC odbywa się szczyt trzech globalnych przywódców super-mocarstw.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZVrPx3_Chvc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZVrPx3_Chvc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZVrPx3_Chvc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZVrPx3_Chvc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZVrPx3_Chvc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/ZVrPx3_Chvc/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "HISTORIA REALNA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T12:53:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-cOvKCoe3yqdZb-j-0xmsNDvWpk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NtF3D7rLnlo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T12:46:26Z",
+        "channelId": "UCw6m0T0_F5DLfPzJHumplDw",
+        "title": "Alarm w Polsce! Kolejna rakieta uderzyła w nasze terytorium? Pomyłka czy prowokacja— Piotr Zychowicz",
+        "description": "Znowu! Niezidentyfikowany obiekt spadł na pole w miejscowości Nowy Lipowiec w powiecie biłgorajskim. Około 6:30 doszło do ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NtF3D7rLnlo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NtF3D7rLnlo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NtF3D7rLnlo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/NtF3D7rLnlo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/NtF3D7rLnlo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/NtF3D7rLnlo/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "HISTORIA REALNA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T12:46:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Jhk9DU1G1PQKVuCKr3y-sFKzuww",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QE3kdokC1QY"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T12:00:07Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Płk Piotr Lewandowski analizuje front: Ukraina uderzyła w Most Krymski. Rosja przegrywa ofensywę?",
+        "description": "Ukraina przeprowadziła skuteczny atak na Most Krymski. Część przeprawy została zniszczona, a rosyjska obrona przeciwlotnicza ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QE3kdokC1QY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QE3kdokC1QY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QE3kdokC1QY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QE3kdokC1QY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QE3kdokC1QY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T12:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0NTSvQ7QShOZ-cN669bh5bZvilE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VH6Q5OdTz1Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T17:00:24Z",
+        "channelId": "UCasAWAQtPwEvYfs7Zt0omKA",
+        "title": "IEL CZASU POTRZEBA NA ZMIANĘ",
+        "description": "Dlaczego tak bardzo chcemy, żeby zmiana wydarzyła się szybko? Wyznaczamy sobie cele, oczekujemy efektów, a kiedy po kilku ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VH6Q5OdTz1Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VH6Q5OdTz1Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VH6Q5OdTz1Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VH6Q5OdTz1Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VH6Q5OdTz1Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gośka Serafin- BEZ FARBOWANIA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T17:00:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UbcuAHMkjkeSn7PyYiVhZramyjs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "t-P5rjM_Dys"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T20:10:34Z",
+        "channelId": "UCkLz7tYMxBTZyzJ1D4NLTEw",
+        "title": "AGNIESZKA CHYLIŃSKA - KIM NAPRAWDĘ JEST?",
+        "description": "Agnieszka Chylińska to kultowa polska wokalistka. Niegdyś znana przede wszystkim z zespołu O.N.A., teraz z kariery solowej, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/t-P5rjM_Dys/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/t-P5rjM_Dys/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/t-P5rjM_Dys/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/t-P5rjM_Dys/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/t-P5rjM_Dys/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/t-P5rjM_Dys/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pełna Kulturka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T20:10:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "322hZDG4LRVvsvddTftFGDPZPRQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2oYpSAyHk1g"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T15:42:56Z",
+        "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+        "title": "Rozdaliśmy WAM 500 000 zł",
+        "description": "[materiał sponsorowany] Partnerem odcinka jest pracuj.pl #ProjektGrant Dziękujemy @samsungpolska za przekazanie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2oYpSAyHk1g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2oYpSAyHk1g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2oYpSAyHk1g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2oYpSAyHk1g/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2oYpSAyHk1g/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Patecki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T15:42:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Df1Kec8RMXBDP7lUQTJg8kHzVx0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "00dnju7PMIQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T15:46:34Z",
+        "channelId": "UCWgnwrjLcAAyCwRmq-iWTVw",
+        "title": "Używana &quot;Trójka&quot; sprzedaje się lepiej niż Passat???",
+        "description": "Partnerem odcinka jest Mr.VIN Kupujesz używane auto? Pobierz raport pojazdu z 30% rabatem!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/00dnju7PMIQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/00dnju7PMIQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/00dnju7PMIQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/00dnju7PMIQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/00dnju7PMIQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/00dnju7PMIQ/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Motokomentator",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T15:46:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cBHjrjjgMI0hJ2GwrqOB1yoNYrw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "roheiMf_jVM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T19:00:10Z",
+        "channelId": "UCw6m0T0_F5DLfPzJHumplDw",
+        "title": "Eskalacja Zeleńskiego! Jak Putin zemści się za atak na Most Krymski? — Adam Eberhardt i Zychowicz",
+        "description": "Partnerem odcinka jest Dom Maklerski BOŚ – właściciel marki bossa.pl. Twarde dane, chłodna analiza, konkretna oferta i książka ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/roheiMf_jVM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/roheiMf_jVM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/roheiMf_jVM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/roheiMf_jVM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/roheiMf_jVM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/roheiMf_jVM/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "HISTORIA REALNA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T19:00:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XaF9YoZQE4WXWvjDpy6qqiVdaZo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "H6HXWPWqebw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T07:00:33Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Nawrocki na gali, której nie było, Murański w Sejmie i tron dla Trumpa - Odloty Tygodnia",
+        "description": "Politycy znowu dostarczyli nam powodów do zdumienia. Fikcyjna gala bokserska z Karolem Nawrockim w roli głównej, Szymon ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/H6HXWPWqebw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/H6HXWPWqebw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/H6HXWPWqebw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/H6HXWPWqebw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/H6HXWPWqebw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T07:00:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_E89I8gZTucIA-3UMgf0llDkx-s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yolL0u55VwE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T12:33:50Z",
+        "channelId": "UCw6m0T0_F5DLfPzJHumplDw",
+        "title": "Putin w szoku! Ukraińcy zwalili łuk Mostu Krymskiego i zablokowali cieśninę — Piotr Zychowicz",
+        "description": "Wydanie Specjalne LIVE! Po wielu próbach Ukraińcom — za pomocą rakiet — udało się zniszczyć „oczko w głowie” Putina.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yolL0u55VwE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yolL0u55VwE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yolL0u55VwE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yolL0u55VwE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yolL0u55VwE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/yolL0u55VwE/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "HISTORIA REALNA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T12:33:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RZSg1g4hOC4PQhYW0ASaDAaWeXQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Jlpqa76JOjo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T17:18:30Z",
+        "channelId": "UCmsxFRm1zRgueucG2Pc9Kzg",
+        "title": "KTO ODPADŁ W TRZECIM ODCINKU? 🤐 | PC Masters #shorts",
+        "description": "Witajcie w PC Masters – programie x-kom, w którym szukamy prawdziwego mistrza komputerów! W walce o tytuł PC Mastera ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Jlpqa76JOjo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Jlpqa76JOjo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Jlpqa76JOjo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Jlpqa76JOjo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Jlpqa76JOjo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "x-kom",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T17:18:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MaM0-nSyJrkGGRVtWFbbn0DPfIc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ifegacI-0mo"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-06T13:27:27Z",
+        "channelId": "UCSjmkHMG-epgP9XSnLHFE_Q",
+        "title": "Czy tracisz kasę ładując w ten sposób? [Partnerem odcinka jest marka refurbed] #techbusters #energia",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ifegacI-0mo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ifegacI-0mo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ifegacI-0mo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ifegacI-0mo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ifegacI-0mo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "TechBusters",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-06T13:27:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QLlKzPwd-ACEEIAzXvIe76nVfOA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "6Jnqi-cw_dk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T17:00:27Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Płk Piotr Lewandowski: Rosyjska ofensywa nie przebiegła zgodnie z planem #shorts",
+        "description": "Zamów książkę \"Pacjent Zero\" za autografem Łukasza Szumowskiego: https://booksider.pl/premiera/pacjent-zero Aplikuj do ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6Jnqi-cw_dk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6Jnqi-cw_dk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6Jnqi-cw_dk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6Jnqi-cw_dk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6Jnqi-cw_dk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T17:00:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9DCYeaILuc2AR7Rf3Lvx-Zc41Js",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "giQd4SFkeU0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-15T18:15:08Z",
+        "channelId": "UChFr0plZ7_23KlTMFEKlMlA",
+        "title": "Ostatnia wyprawa Jerzego Kukuczki i Wojciecha Kurtyki. Co wydarzyło się na Manaslu w 1986 roku?",
+        "description": "Partnerem odcinka jest sklep sportowy Sportano. Odkryj najszerszą ofertę sportową online w aplikacji Sportano. Najlepsze marki ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/giQd4SFkeU0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/giQd4SFkeU0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/giQd4SFkeU0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/giQd4SFkeU0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/giQd4SFkeU0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Szczytomaniak",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-15T18:15:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jwczDk9j9LZzQpvAevSC-_46fkk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UN_tqoj8MzQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:00:10Z",
+        "channelId": "UCCT_JGIn9I9FS6OTzzqWEew",
+        "title": "„Pula i Poreč &quot; - ROBERT MAKŁOWICZ ISTRIA odc.304",
+        "description": "W tym odcinku pokażemy wprzódy Pulę, największe miasto na całym półwyspie Istria. W czasach weneckich był to jedynie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UN_tqoj8MzQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UN_tqoj8MzQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UN_tqoj8MzQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/UN_tqoj8MzQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/UN_tqoj8MzQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/UN_tqoj8MzQ/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Robert Makłowicz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:00:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_MaeKe1KiXqe8BkLa_paU3qZGjs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QhSxR43g_r0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T19:00:05Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Płk Piotr Lewandowski: Ukraińcy wykorzystali odpowiedni moment #shorts",
+        "description": "Zamów książkę \"Pacjent Zero\" za autografem Łukasza Szumowskiego: https://booksider.pl/premiera/pacjent-zero Aplikuj do ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QhSxR43g_r0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QhSxR43g_r0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QhSxR43g_r0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QhSxR43g_r0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QhSxR43g_r0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T19:00:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "z0U41HFjOolcyCde8aaPpV7cRi0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cuy22iXIGxU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-15T09:25:14Z",
+        "channelId": "UCmodyDWBnEMvu7uLASNQNvg",
+        "title": "Domowy makaron za 200 czy 4000 zł? Pojedynek maszynek do makaronu",
+        "description": "Partnerem dzisiejszego odcinka jest Trade Republic. Jeśli chcesz poznać ofertę Trade Republic, możesz założyć konto ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cuy22iXIGxU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cuy22iXIGxU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cuy22iXIGxU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cuy22iXIGxU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cuy22iXIGxU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/cuy22iXIGxU/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Think About | Piotr Opulski",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-15T09:25:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kvKudQIZiiReQid-0HvSsg-K34E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "b0nf9c6o6bk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T09:11:20Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Potężny cios Ukraińców, Most Krymski zniszczony - Igor Janke #shorts",
+        "description": "Zamów książkę \"Pacjent Zero\" za autografem Łukasza Szumowskiego: https://booksider.pl/premiera/pacjent-zero Aplikuj do ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b0nf9c6o6bk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b0nf9c6o6bk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b0nf9c6o6bk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/b0nf9c6o6bk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/b0nf9c6o6bk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T09:11:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RKQOXbQK3WQ0KN_mm4xL5I2opdk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qxiOGU9MDUE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T07:00:24Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Czy Nawrocki zastąpi Kaczyńskiego? Ziemkiewicz i Sadura o wyborach 2027 - fragment debaty",
+        "description": "Fragment debaty. Całość: https://youtu.be/EG6yCBYW3sI?si=0jVTVl_24OOZFWgb Zamów książkę \"Pacjent Zero\" za autografem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qxiOGU9MDUE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qxiOGU9MDUE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qxiOGU9MDUE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qxiOGU9MDUE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qxiOGU9MDUE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T07:00:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DLJTkp_6xRAdmGVDZQNjSmYQAzI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ge_N-ykBUfQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T15:57:05Z",
+        "channelId": "UCrKY6A2xsHXgw3MK9mkan5w",
+        "title": "#611 Gdzie Kończy Się Lenistwo, a Zaczyna Choroba? - prof. dr hab. med. Paweł Bogdański",
+        "description": "prof. dr hab. med. Paweł Bogdański – lekarz internista, hipertensjolog, lipidolog i obesitolog. Kieruje Katedrą i Zakładem Leczenia ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ge_N-ykBUfQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ge_N-ykBUfQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ge_N-ykBUfQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ge_N-ykBUfQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ge_N-ykBUfQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Przemek Górczyk Podcast",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T15:57:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kwHrFu1fs3T0-gWubpU5CrCmR3w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xDQJ0mfk3p0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T15:00:53Z",
+        "channelId": "UCKGrbEJp8wgNrR4Q3OeO4bw",
+        "title": "Najdziwniejsza katastrofa okrętu podwodnego! Thetis!",
+        "description": "W 1939 roku brytyjski okręt podwodny HMS Thetis wyruszył w swój pierwszy próbny rejs. Na pokładzie znajdowało się 103 ludzi.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xDQJ0mfk3p0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xDQJ0mfk3p0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xDQJ0mfk3p0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xDQJ0mfk3p0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xDQJ0mfk3p0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/xDQJ0mfk3p0/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "OdwróconaLekcja",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T15:00:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "j15EKXSSii6quBcA7aA_5VYRmiE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BAhuc628SNk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:00:35Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "Bitcoin, złoto i akcje w dół! Wygrywa tylko dolar. Co dalej?",
+        "description": "współpraca OKX Załóż konto na giełdzie OKX: https://my.okx.com/join/55025594 Giełda kryptowalut z licencją MiCA działająca ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BAhuc628SNk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BAhuc628SNk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BAhuc628SNk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BAhuc628SNk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BAhuc628SNk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/BAhuc628SNk/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:00:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bjUNkOrHHZDCgVHLWWYf6aj4W9U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-mb8hWvwx7Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:00:10Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Rosja testuje Polskę? Gen. Tomasz Piotrowski o rakietach i dronie",
+        "description": "Dwie rosyjskie rakiety i dron spadły na terytorium Polski. Czy był to efekt zmasowanego ataku na Ukrainę, czy celowe testowanie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-mb8hWvwx7Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-mb8hWvwx7Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-mb8hWvwx7Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-mb8hWvwx7Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-mb8hWvwx7Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:00:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "aD6X41GF6UcEQZu2fp0zxTU8JkI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iNxWr9MiWbI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-03T16:00:37Z",
+        "channelId": "UC16y5xkzIplJDo5rsZ6d6HQ",
+        "title": "Robert Stockinger nie został zaproszony na ślub Filipa Chajzera! „Myślałem, że to pod kliki”",
+        "description": "Partnerem odcinka jest @apart Obserwuj nas: serwis → https://www.kozaczek.pl instagram ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iNxWr9MiWbI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iNxWr9MiWbI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iNxWr9MiWbI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/iNxWr9MiWbI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iNxWr9MiWbI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kozaczek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-03T16:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Tb_HRukt-ycPfFlq_FCtgubBbjs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2vD9_9f8kpM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T06:45:29Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Prof. Andrew Michta: Karol Nawrocki jako jedyny w Polsce dobrze rozegrał relacje z Trumpem #shorts",
+        "description": "Zamów książkę \"Pacjent Zero\" za autografem Łukasza Szumowskiego: https://booksider.pl/premiera/pacjent-zero Aplikuj do ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2vD9_9f8kpM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2vD9_9f8kpM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2vD9_9f8kpM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2vD9_9f8kpM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2vD9_9f8kpM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T06:45:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "G0MhYK83pxeRG0AMRXvukFdrecs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Sh7NXM9BiNE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T06:49:31Z",
+        "channelId": "UCBEGi9VJj43G_ISUDRFEsAA",
+        "title": "💥Fatalne Nastroje o Poranku💥",
+        "description": "Partnerem odcinka jest DM XTB - XTB Investing Masterclass 2026 ➡➡ zobacz ➡➡ https://link-pso.xtb.com/pso/Muvvm Fatalne ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Sh7NXM9BiNE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Sh7NXM9BiNE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Sh7NXM9BiNE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Sh7NXM9BiNE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "AceMarketU-TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T06:49:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3LG0j6B7jfZmf0kVXrw1OULeiSA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "0cXqb4zu5q0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T15:50:38Z",
+        "channelId": "UCF5Ug3YNz41qauWNMacdLgw",
+        "title": "12 000 ZŁ za HEKTAR?! Karczowanie lasu mulczerem i koparką z gilotyną | Do Roboty",
+        "description": "Koparka z głowicą tnącą, mulczer wgłębny oraz forwarder Ponsse w akcji – Dzisiaj sprawdzam, jak wygląda mechaniczna ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0cXqb4zu5q0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0cXqb4zu5q0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0cXqb4zu5q0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/0cXqb4zu5q0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/0cXqb4zu5q0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/0cXqb4zu5q0/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Do Roboty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T15:50:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GJm2q6DBH5SGNe7ZLRt3cMPY2fg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "n6aAz6MgtS0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:00:36Z",
+        "channelId": "UC9xk_5_H7e5Ec2uNKNVhMZA",
+        "title": "APS-C czy pełna klatka? 3 różnice na prawdziwych zdjęciach",
+        "description": "Pełna klatka czy APS-C na pierwsze płatne zlecenia? Pokazuję zdjęcia z obu matryc i jeden warunek, przy którym mniejsza ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/n6aAz6MgtS0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/n6aAz6MgtS0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/n6aAz6MgtS0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/n6aAz6MgtS0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/n6aAz6MgtS0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/n6aAz6MgtS0/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Jacek Sierżyński Fotografia Ślubna",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:00:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yO8H5NI0qHn_9anwF4_H8Iv0eqI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "y-5FWZQvzIs"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T17:00:10Z",
+        "channelId": "UCasAWAQtPwEvYfs7Zt0omKA",
+        "title": "DLACZEGO MÓZG LUBI NAGRODY",
+        "description": "Chcemy zmiany, ale nasz mózg lubi to, co zna i co przynosi mu przewidywalną korzyść. Dlatego tak ważne jest nie tylko stawianie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/y-5FWZQvzIs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/y-5FWZQvzIs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/y-5FWZQvzIs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/y-5FWZQvzIs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/y-5FWZQvzIs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gośka Serafin- BEZ FARBOWANIA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T17:00:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "l7BGw34H2KsRe7JHWw5BBbILBrw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "p2Yyd8nl5GI"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-27T22:00:25Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Trzeba pochwalić polityków za wzmocnienie granicy - Igor Janke #shorts",
+        "description": "Aplikuj do Szkoły Przywództwa Instytutu Wolności: https://szkolaprzywodztwa.pl PŁATNA WSPÓŁPRACA]: Partner odcinka: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/p2Yyd8nl5GI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/p2Yyd8nl5GI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/p2Yyd8nl5GI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/p2Yyd8nl5GI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/p2Yyd8nl5GI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-27T22:00:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0ZM0PTLPbbBtGd9MvAPJkmKSvdM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "RZW7J3PhWsk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T16:12:32Z",
+        "channelId": "UCjNAEz3CLPuTmR5CIzf1f7g",
+        "title": "ŚMIESZNE FILMIKI TYGODNIA #15 Spróbuj bez śmiechu!",
+        "description": "challenge, czy dasz rade się nie zaśmiać? Partnerem odcinka jest www.genzify.pl.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RZW7J3PhWsk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RZW7J3PhWsk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RZW7J3PhWsk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RZW7J3PhWsk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RZW7J3PhWsk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Statystyczny Facet",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T16:12:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7pjWStHnJAQCTqUKgByrwz9soEY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gdR4ZXeFVEA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T13:20:24Z",
+        "channelId": "UChqVjLVciDeMlKA0bB42HXA",
+        "title": "Garmin Fenix 9 Pro - recenzja. NIE POPEŁNIJ BŁĘDU",
+        "description": "Garmin Fenix 9 Pro po 2 miesiącach i 44 treningach. Najlepszy i piękny, ale nadal w wielu kwestiach rozczarowuje (nie tylko ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gdR4ZXeFVEA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gdR4ZXeFVEA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gdR4ZXeFVEA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gdR4ZXeFVEA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gdR4ZXeFVEA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/gdR4ZXeFVEA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kanał o technologii",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T13:20:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Abg6IN-RubFQe46jT1cjVMi38Q4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "up9deH2sPVQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-27T21:00:02Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Dzisiaj językiem sarmackim mówi tylko jeden malutki kraj - prof. Gościwit Malinowski #shorts",
+        "description": "Aplikuj do Szkoły Przywództwa Instytutu Wolności: https://szkolaprzywodztwa.pl PŁATNA WSPÓŁPRACA]: Partner odcinka: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/up9deH2sPVQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/up9deH2sPVQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/up9deH2sPVQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/up9deH2sPVQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/up9deH2sPVQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-27T21:00:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PZDrT42MZedmoYkwWuMlw2wcq2s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PIf8aGW3fEE"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-20T14:30:00Z",
+        "channelId": "UC16y5xkzIplJDo5rsZ6d6HQ",
+        "title": "Patryk Strzała-Trzeciak o pieniądzach, pracy i swoim wizerunku w sieci!",
+        "description": "Partnerem odcinka jest @apart Obserwuj nas: serwis → https://www.kozaczek.pl instagram ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PIf8aGW3fEE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PIf8aGW3fEE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PIf8aGW3fEE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PIf8aGW3fEE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PIf8aGW3fEE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kozaczek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-20T14:30:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "j-2lw9POWUwCQArWIl3ipGoLj7M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SSf30qolkC8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-23T18:00:27Z",
+        "channelId": "UC16y5xkzIplJDo5rsZ6d6HQ",
+        "title": "„Żyjemy od jednej przyjemności do drugiej”. 😳 Beata Pawlikowska ostro ocenia!",
+        "description": "Żyjemy od jednej przyjemności do drugiej”. Beata Pawlikowska ostro ocenia współczesne społeczeństwo! Partnerem odcinka ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SSf30qolkC8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SSf30qolkC8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SSf30qolkC8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SSf30qolkC8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SSf30qolkC8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kozaczek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-23T18:00:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cm3VooTTFbHGfmXWejlw8u72wbw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "A6Scfahj5A0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T18:00:20Z",
+        "channelId": "UCuAOJnMr905iKjURUsffDgA",
+        "title": "Dlaczego Wybicki pisał o Wiśle i Warcie? Prof. Hieronim Grala #shorts",
+        "description": "Zamów książkę \"Pacjent Zero\" za autografem Łukasza Szumowskiego: https://booksider.pl/premiera/pacjent-zero Aplikuj do ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/A6Scfahj5A0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/A6Scfahj5A0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/A6Scfahj5A0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/A6Scfahj5A0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/A6Scfahj5A0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kanał Otwarty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T18:00:20Z"
+      }
+    }
+  ]
+}

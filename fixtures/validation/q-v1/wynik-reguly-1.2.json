@@ -1,0 +1,1328 @@
+{
+  "protocol": "fixtures/validation/PROTOKOL.md",
+  "referenceKind": "agent",
+  "referenceNote": "oceny agentów — nie są niezależnym wzorcem eksperckim",
+  "split": "tuning",
+  "thresholds": [
+    30,
+    60,
+    80
+  ],
+  "run": {
+    "variant": "reguly",
+    "rulesVersion": "investwatch-rules-pl-1.2 (M1, M3); investwatch-m2-rendered-1 (M2)",
+    "codeCommit": "491094da62c100cc562ca422534ff360ebddee5b",
+    "modelId": null,
+    "provider": null,
+    "weightsDigest": null,
+    "quantization": null,
+    "parameters": {
+      "semantic": "niedostępny (E5 nie uruchomiony)"
+    },
+    "promptMethod": null,
+    "startedAt": "2026-11-21T18:43:14+00:00",
+    "finishedAt": "2026-11-21T18:43:14+00:00",
+    "durationSeconds": null,
+    "tokens": null,
+    "cost": {
+      "amount": 0,
+      "currency": "PLN",
+      "source": "brak zewnętrznych wywołań"
+    },
+    "environment": {
+      "host": "devbox Linux x86_64",
+      "python": "3.12.3",
+      "path": "collectors.discovery.discover('replay') + collectors.m2_archive replay + analysis.engine.demo_captures; analysis.engine.analyze; review_suggestion bez modelu"
+    }
+  },
+  "runMetadataMissing": [],
+  "excludedSynthetic": 0,
+  "excludedOtherReference": 0,
+  "unmatchedPredictions": 0,
+  "overall": [
+    {
+      "threshold": 30,
+      "labels": 17,
+      "undetermined": 1,
+      "evaluated": 16,
+      "tp": 1,
+      "fp": 4,
+      "tn": 10,
+      "fn": 1,
+      "precision": 0.2,
+      "precisionCI95": [
+        0.0362,
+        0.6245
+      ],
+      "recall": 0.5,
+      "recallCI95": [
+        0.0945,
+        0.9055
+      ],
+      "withheld": 0,
+      "withheldRate": 0.0,
+      "missingPredictions": 0,
+      "cost": 6,
+      "referredCampaigns": 3,
+      "truePositiveCampaigns": 1,
+      "independentCampaigns": 14,
+      "campaignLevel": {
+        "tp": 1,
+        "fp": 2,
+        "tn": 10,
+        "fn": 1
+      },
+      "registryNegatives": 5,
+      "registryInQueue": 4,
+      "errors": [
+        {
+          "materialId": "web:www.xtb.com/pl/akcje",
+          "outcome": "fn",
+          "label": "skieruj",
+          "campaignId": "C-M2-XTB-AKCJE",
+          "withheld": false
+        },
+        {
+          "materialId": "public-bos-profil",
+          "outcome": "fp",
+          "label": "rejestr",
+          "campaignId": "C-M3-BOS-DORADZTWO",
+          "withheld": false
+        },
+        {
+          "materialId": "web:bossa.pl/oferta/doradztwo",
+          "outcome": "fp",
+          "label": "rejestr",
+          "campaignId": "C-M3-BOS-DORADZTWO",
+          "withheld": false
+        },
+        {
+          "materialId": "youtube:04mmNbAlHFo",
+          "outcome": "fp",
+          "label": "rejestr",
+          "campaignId": "C-M1-DETERMINACJA-XTB",
+          "withheld": false
+        },
+        {
+          "materialId": "youtube:xtMqKkFO-0M",
+          "outcome": "fp",
+          "label": "rejestr",
+          "campaignId": "C-M1-DETERMINACJA-XTB",
+          "withheld": false
+        }
+      ]
+    },
+    {
+      "threshold": 60,
+      "labels": 17,
+      "undetermined": 1,
+      "evaluated": 16,
+      "tp": 1,
+      "fp": 2,
+      "tn": 12,
+      "fn": 1,
+      "precision": 0.3333,
+      "precisionCI95": [
+        0.0615,
+        0.7923
+      ],
+      "recall": 0.5,
+      "recallCI95": [
+        0.0945,
+        0.9055
+      ],
+      "withheld": 0,
+      "withheldRate": 0.0,
+      "missingPredictions": 0,
+      "cost": 4,
+      "referredCampaigns": 2,
+      "truePositiveCampaigns": 1,
+      "independentCampaigns": 14,
+      "campaignLevel": {
+        "tp": 1,
+        "fp": 1,
+        "tn": 11,
+        "fn": 1
+      },
+      "registryNegatives": 5,
+      "registryInQueue": 2,
+      "errors": [
+        {
+          "materialId": "web:www.xtb.com/pl/akcje",
+          "outcome": "fn",
+          "label": "skieruj",
+          "campaignId": "C-M2-XTB-AKCJE",
+          "withheld": false
+        },
+        {
+          "materialId": "youtube:04mmNbAlHFo",
+          "outcome": "fp",
+          "label": "rejestr",
+          "campaignId": "C-M1-DETERMINACJA-XTB",
+          "withheld": false
+        },
+        {
+          "materialId": "youtube:xtMqKkFO-0M",
+          "outcome": "fp",
+          "label": "rejestr",
+          "campaignId": "C-M1-DETERMINACJA-XTB",
+          "withheld": false
+        }
+      ]
+    },
+    {
+      "threshold": 80,
+      "labels": 17,
+      "undetermined": 1,
+      "evaluated": 16,
+      "tp": 0,
+      "fp": 2,
+      "tn": 12,
+      "fn": 2,
+      "precision": 0.0,
+      "precisionCI95": [
+        0.0,
+        0.6576
+      ],
+      "recall": 0.0,
+      "recallCI95": [
+        0.0,
+        0.6576
+      ],
+      "withheld": 0,
+      "withheldRate": 0.0,
+      "missingPredictions": 0,
+      "cost": 6,
+      "referredCampaigns": 1,
+      "truePositiveCampaigns": 0,
+      "independentCampaigns": 14,
+      "campaignLevel": {
+        "tp": 0,
+        "fp": 1,
+        "tn": 11,
+        "fn": 2
+      },
+      "registryNegatives": 5,
+      "registryInQueue": 2,
+      "errors": [
+        {
+          "materialId": "dom-xtb-etf",
+          "outcome": "fn",
+          "label": "skieruj",
+          "campaignId": "C-M2-XTB-ETF",
+          "withheld": false
+        },
+        {
+          "materialId": "web:www.xtb.com/pl/akcje",
+          "outcome": "fn",
+          "label": "skieruj",
+          "campaignId": "C-M2-XTB-AKCJE",
+          "withheld": false
+        },
+        {
+          "materialId": "youtube:04mmNbAlHFo",
+          "outcome": "fp",
+          "label": "rejestr",
+          "campaignId": "C-M1-DETERMINACJA-XTB",
+          "withheld": false
+        },
+        {
+          "materialId": "youtube:xtMqKkFO-0M",
+          "outcome": "fp",
+          "label": "rejestr",
+          "campaignId": "C-M1-DETERMINACJA-XTB",
+          "withheld": false
+        }
+      ]
+    }
+  ],
+  "byModule": {
+    "M1": [
+      {
+        "threshold": 30,
+        "labels": 10,
+        "undetermined": 0,
+        "evaluated": 10,
+        "tp": 0,
+        "fp": 2,
+        "tn": 8,
+        "fn": 0,
+        "precision": 0.0,
+        "precisionCI95": [
+          0.0,
+          0.6576
+        ],
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 2,
+        "referredCampaigns": 1,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 9,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 1,
+          "tn": 8,
+          "fn": 0
+        },
+        "registryNegatives": 2,
+        "registryInQueue": 2,
+        "errors": [
+          {
+            "materialId": "youtube:04mmNbAlHFo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:xtMqKkFO-0M",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          }
+        ]
+      },
+      {
+        "threshold": 60,
+        "labels": 10,
+        "undetermined": 0,
+        "evaluated": 10,
+        "tp": 0,
+        "fp": 2,
+        "tn": 8,
+        "fn": 0,
+        "precision": 0.0,
+        "precisionCI95": [
+          0.0,
+          0.6576
+        ],
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 2,
+        "referredCampaigns": 1,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 9,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 1,
+          "tn": 8,
+          "fn": 0
+        },
+        "registryNegatives": 2,
+        "registryInQueue": 2,
+        "errors": [
+          {
+            "materialId": "youtube:04mmNbAlHFo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:xtMqKkFO-0M",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          }
+        ]
+      },
+      {
+        "threshold": 80,
+        "labels": 10,
+        "undetermined": 0,
+        "evaluated": 10,
+        "tp": 0,
+        "fp": 2,
+        "tn": 8,
+        "fn": 0,
+        "precision": 0.0,
+        "precisionCI95": [
+          0.0,
+          0.6576
+        ],
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 2,
+        "referredCampaigns": 1,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 9,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 1,
+          "tn": 8,
+          "fn": 0
+        },
+        "registryNegatives": 2,
+        "registryInQueue": 2,
+        "errors": [
+          {
+            "materialId": "youtube:04mmNbAlHFo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:xtMqKkFO-0M",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          }
+        ]
+      }
+    ],
+    "M2": [
+      {
+        "threshold": 30,
+        "labels": 3,
+        "undetermined": 0,
+        "evaluated": 3,
+        "tp": 1,
+        "fp": 0,
+        "tn": 1,
+        "fn": 1,
+        "precision": 1.0,
+        "precisionCI95": [
+          0.2065,
+          1.0
+        ],
+        "recall": 0.5,
+        "recallCI95": [
+          0.0945,
+          0.9055
+        ],
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 2,
+        "referredCampaigns": 1,
+        "truePositiveCampaigns": 1,
+        "independentCampaigns": 3,
+        "campaignLevel": {
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1
+        },
+        "registryNegatives": 1,
+        "registryInQueue": 0,
+        "errors": [
+          {
+            "materialId": "web:www.xtb.com/pl/akcje",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-AKCJE",
+            "withheld": false
+          }
+        ]
+      },
+      {
+        "threshold": 60,
+        "labels": 3,
+        "undetermined": 0,
+        "evaluated": 3,
+        "tp": 1,
+        "fp": 0,
+        "tn": 1,
+        "fn": 1,
+        "precision": 1.0,
+        "precisionCI95": [
+          0.2065,
+          1.0
+        ],
+        "recall": 0.5,
+        "recallCI95": [
+          0.0945,
+          0.9055
+        ],
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 2,
+        "referredCampaigns": 1,
+        "truePositiveCampaigns": 1,
+        "independentCampaigns": 3,
+        "campaignLevel": {
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1
+        },
+        "registryNegatives": 1,
+        "registryInQueue": 0,
+        "errors": [
+          {
+            "materialId": "web:www.xtb.com/pl/akcje",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-AKCJE",
+            "withheld": false
+          }
+        ]
+      },
+      {
+        "threshold": 80,
+        "labels": 3,
+        "undetermined": 0,
+        "evaluated": 3,
+        "tp": 0,
+        "fp": 0,
+        "tn": 1,
+        "fn": 2,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": 0.0,
+        "recallCI95": [
+          0.0,
+          0.6576
+        ],
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 4,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 3,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 2
+        },
+        "registryNegatives": 1,
+        "registryInQueue": 0,
+        "errors": [
+          {
+            "materialId": "dom-xtb-etf",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-ETF",
+            "withheld": false
+          },
+          {
+            "materialId": "web:www.xtb.com/pl/akcje",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-AKCJE",
+            "withheld": false
+          }
+        ]
+      }
+    ],
+    "M3": [
+      {
+        "threshold": 30,
+        "labels": 4,
+        "undetermined": 1,
+        "evaluated": 3,
+        "tp": 0,
+        "fp": 2,
+        "tn": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "precisionCI95": [
+          0.0,
+          0.6576
+        ],
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 2,
+        "referredCampaigns": 1,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 2,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 1,
+          "tn": 1,
+          "fn": 0
+        },
+        "registryNegatives": 2,
+        "registryInQueue": 2,
+        "errors": [
+          {
+            "materialId": "public-bos-profil",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M3-BOS-DORADZTWO",
+            "withheld": false
+          },
+          {
+            "materialId": "web:bossa.pl/oferta/doradztwo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M3-BOS-DORADZTWO",
+            "withheld": false
+          }
+        ]
+      },
+      {
+        "threshold": 60,
+        "labels": 4,
+        "undetermined": 1,
+        "evaluated": 3,
+        "tp": 0,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 2,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 2,
+          "fn": 0
+        },
+        "registryNegatives": 2,
+        "registryInQueue": 0,
+        "errors": []
+      },
+      {
+        "threshold": 80,
+        "labels": 4,
+        "undetermined": 1,
+        "evaluated": 3,
+        "tp": 0,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 2,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 2,
+          "fn": 0
+        },
+        "registryNegatives": 2,
+        "registryInQueue": 0,
+        "errors": []
+      }
+    ]
+  },
+  "byDiscoveryChannel": {
+    "apple-podcasts-wyszukiwanie": [
+      {
+        "threshold": 30,
+        "labels": 3,
+        "undetermined": 0,
+        "evaluated": 3,
+        "tp": 0,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 3,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 0
+        },
+        "registryNegatives": 0,
+        "registryInQueue": 0,
+        "errors": []
+      },
+      {
+        "threshold": 60,
+        "labels": 3,
+        "undetermined": 0,
+        "evaluated": 3,
+        "tp": 0,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 3,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 0
+        },
+        "registryNegatives": 0,
+        "registryInQueue": 0,
+        "errors": []
+      },
+      {
+        "threshold": 80,
+        "labels": 3,
+        "undetermined": 0,
+        "evaluated": 3,
+        "tp": 0,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 3,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 0
+        },
+        "registryNegatives": 0,
+        "registryInQueue": 0,
+        "errors": []
+      }
+    ],
+    "domena-monitorowana": [
+      {
+        "threshold": 30,
+        "labels": 7,
+        "undetermined": 1,
+        "evaluated": 6,
+        "tp": 1,
+        "fp": 2,
+        "tn": 2,
+        "fn": 1,
+        "precision": 0.3333,
+        "precisionCI95": [
+          0.0615,
+          0.7923
+        ],
+        "recall": 0.5,
+        "recallCI95": [
+          0.0945,
+          0.9055
+        ],
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 4,
+        "referredCampaigns": 2,
+        "truePositiveCampaigns": 1,
+        "independentCampaigns": 5,
+        "campaignLevel": {
+          "tp": 1,
+          "fp": 1,
+          "tn": 2,
+          "fn": 1
+        },
+        "registryNegatives": 3,
+        "registryInQueue": 2,
+        "errors": [
+          {
+            "materialId": "web:www.xtb.com/pl/akcje",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-AKCJE",
+            "withheld": false
+          },
+          {
+            "materialId": "public-bos-profil",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M3-BOS-DORADZTWO",
+            "withheld": false
+          },
+          {
+            "materialId": "web:bossa.pl/oferta/doradztwo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M3-BOS-DORADZTWO",
+            "withheld": false
+          }
+        ]
+      },
+      {
+        "threshold": 60,
+        "labels": 7,
+        "undetermined": 1,
+        "evaluated": 6,
+        "tp": 1,
+        "fp": 0,
+        "tn": 4,
+        "fn": 1,
+        "precision": 1.0,
+        "precisionCI95": [
+          0.2065,
+          1.0
+        ],
+        "recall": 0.5,
+        "recallCI95": [
+          0.0945,
+          0.9055
+        ],
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 2,
+        "referredCampaigns": 1,
+        "truePositiveCampaigns": 1,
+        "independentCampaigns": 5,
+        "campaignLevel": {
+          "tp": 1,
+          "fp": 0,
+          "tn": 3,
+          "fn": 1
+        },
+        "registryNegatives": 3,
+        "registryInQueue": 0,
+        "errors": [
+          {
+            "materialId": "web:www.xtb.com/pl/akcje",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-AKCJE",
+            "withheld": false
+          }
+        ]
+      },
+      {
+        "threshold": 80,
+        "labels": 7,
+        "undetermined": 1,
+        "evaluated": 6,
+        "tp": 0,
+        "fp": 0,
+        "tn": 4,
+        "fn": 2,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": 0.0,
+        "recallCI95": [
+          0.0,
+          0.6576
+        ],
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 4,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 5,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 2
+        },
+        "registryNegatives": 3,
+        "registryInQueue": 0,
+        "errors": [
+          {
+            "materialId": "dom-xtb-etf",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-ETF",
+            "withheld": false
+          },
+          {
+            "materialId": "web:www.xtb.com/pl/akcje",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-AKCJE",
+            "withheld": false
+          }
+        ]
+      }
+    ],
+    "peertube-wyszukiwanie": [
+      {
+        "threshold": 30,
+        "labels": 2,
+        "undetermined": 0,
+        "evaluated": 2,
+        "tp": 0,
+        "fp": 0,
+        "tn": 2,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 2,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 2,
+          "fn": 0
+        },
+        "registryNegatives": 0,
+        "registryInQueue": 0,
+        "errors": []
+      },
+      {
+        "threshold": 60,
+        "labels": 2,
+        "undetermined": 0,
+        "evaluated": 2,
+        "tp": 0,
+        "fp": 0,
+        "tn": 2,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 2,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 2,
+          "fn": 0
+        },
+        "registryNegatives": 0,
+        "registryInQueue": 0,
+        "errors": []
+      },
+      {
+        "threshold": 80,
+        "labels": 2,
+        "undetermined": 0,
+        "evaluated": 2,
+        "tp": 0,
+        "fp": 0,
+        "tn": 2,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 2,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 2,
+          "fn": 0
+        },
+        "registryNegatives": 0,
+        "registryInQueue": 0,
+        "errors": []
+      }
+    ],
+    "profil-monitorowany": [
+      {
+        "threshold": 30,
+        "labels": 5,
+        "undetermined": 0,
+        "evaluated": 5,
+        "tp": 0,
+        "fp": 2,
+        "tn": 3,
+        "fn": 0,
+        "precision": 0.0,
+        "precisionCI95": [
+          0.0,
+          0.6576
+        ],
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 2,
+        "referredCampaigns": 1,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 4,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 1,
+          "tn": 3,
+          "fn": 0
+        },
+        "registryNegatives": 2,
+        "registryInQueue": 2,
+        "errors": [
+          {
+            "materialId": "youtube:04mmNbAlHFo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:xtMqKkFO-0M",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          }
+        ]
+      },
+      {
+        "threshold": 60,
+        "labels": 5,
+        "undetermined": 0,
+        "evaluated": 5,
+        "tp": 0,
+        "fp": 2,
+        "tn": 3,
+        "fn": 0,
+        "precision": 0.0,
+        "precisionCI95": [
+          0.0,
+          0.6576
+        ],
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 2,
+        "referredCampaigns": 1,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 4,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 1,
+          "tn": 3,
+          "fn": 0
+        },
+        "registryNegatives": 2,
+        "registryInQueue": 2,
+        "errors": [
+          {
+            "materialId": "youtube:04mmNbAlHFo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:xtMqKkFO-0M",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          }
+        ]
+      },
+      {
+        "threshold": 80,
+        "labels": 5,
+        "undetermined": 0,
+        "evaluated": 5,
+        "tp": 0,
+        "fp": 2,
+        "tn": 3,
+        "fn": 0,
+        "precision": 0.0,
+        "precisionCI95": [
+          0.0,
+          0.6576
+        ],
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 2,
+        "referredCampaigns": 1,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 4,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 1,
+          "tn": 3,
+          "fn": 0
+        },
+        "registryNegatives": 2,
+        "registryInQueue": 2,
+        "errors": [
+          {
+            "materialId": "youtube:04mmNbAlHFo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:xtMqKkFO-0M",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          }
+        ]
+      }
+    ]
+  },
+  "byStratum": {
+    "dostepne-2026-11-21": [
+      {
+        "threshold": 30,
+        "labels": 17,
+        "undetermined": 1,
+        "evaluated": 16,
+        "tp": 1,
+        "fp": 4,
+        "tn": 10,
+        "fn": 1,
+        "precision": 0.2,
+        "precisionCI95": [
+          0.0362,
+          0.6245
+        ],
+        "recall": 0.5,
+        "recallCI95": [
+          0.0945,
+          0.9055
+        ],
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 6,
+        "referredCampaigns": 3,
+        "truePositiveCampaigns": 1,
+        "independentCampaigns": 14,
+        "campaignLevel": {
+          "tp": 1,
+          "fp": 2,
+          "tn": 10,
+          "fn": 1
+        },
+        "registryNegatives": 5,
+        "registryInQueue": 4,
+        "errors": [
+          {
+            "materialId": "web:www.xtb.com/pl/akcje",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-AKCJE",
+            "withheld": false
+          },
+          {
+            "materialId": "public-bos-profil",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M3-BOS-DORADZTWO",
+            "withheld": false
+          },
+          {
+            "materialId": "web:bossa.pl/oferta/doradztwo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M3-BOS-DORADZTWO",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:04mmNbAlHFo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:xtMqKkFO-0M",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          }
+        ]
+      },
+      {
+        "threshold": 60,
+        "labels": 17,
+        "undetermined": 1,
+        "evaluated": 16,
+        "tp": 1,
+        "fp": 2,
+        "tn": 12,
+        "fn": 1,
+        "precision": 0.3333,
+        "precisionCI95": [
+          0.0615,
+          0.7923
+        ],
+        "recall": 0.5,
+        "recallCI95": [
+          0.0945,
+          0.9055
+        ],
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 4,
+        "referredCampaigns": 2,
+        "truePositiveCampaigns": 1,
+        "independentCampaigns": 14,
+        "campaignLevel": {
+          "tp": 1,
+          "fp": 1,
+          "tn": 11,
+          "fn": 1
+        },
+        "registryNegatives": 5,
+        "registryInQueue": 2,
+        "errors": [
+          {
+            "materialId": "web:www.xtb.com/pl/akcje",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-AKCJE",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:04mmNbAlHFo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:xtMqKkFO-0M",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          }
+        ]
+      },
+      {
+        "threshold": 80,
+        "labels": 17,
+        "undetermined": 1,
+        "evaluated": 16,
+        "tp": 0,
+        "fp": 2,
+        "tn": 12,
+        "fn": 2,
+        "precision": 0.0,
+        "precisionCI95": [
+          0.0,
+          0.6576
+        ],
+        "recall": 0.0,
+        "recallCI95": [
+          0.0,
+          0.6576
+        ],
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 6,
+        "referredCampaigns": 1,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 14,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 1,
+          "tn": 11,
+          "fn": 2
+        },
+        "registryNegatives": 5,
+        "registryInQueue": 2,
+        "errors": [
+          {
+            "materialId": "dom-xtb-etf",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-ETF",
+            "withheld": false
+          },
+          {
+            "materialId": "web:www.xtb.com/pl/akcje",
+            "outcome": "fn",
+            "label": "skieruj",
+            "campaignId": "C-M2-XTB-AKCJE",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:04mmNbAlHFo",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          },
+          {
+            "materialId": "youtube:xtMqKkFO-0M",
+            "outcome": "fp",
+            "label": "rejestr",
+            "campaignId": "C-M1-DETERMINACJA-XTB",
+            "withheld": false
+          }
+        ]
+      }
+    ]
+  },
+  "gate": {
+    "threshold": 60,
+    "status": "nie dotyczy: oceny agentów nie są wzorcem eksperckim"
+  },
+  "raterAgreement": {
+    "pairs": 17,
+    "observed": 1.0,
+    "kappa": 1.0,
+    "disagreements": []
+  }
+}

@@ -1,0 +1,2273 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "L-UBwV7kAOM5XdnHid_3cQlWad8",
+  "nextPageToken": "CGQQAA",
+  "prevPageToken": "CDIQAQ",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "S9dHmxgmK6ji2HglO9NxMuK1fVE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bo0vWp9TiF4"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-02T15:00:03Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "Lepsze od Nvidii? Pięć spółek z mojego systemu #giełda #akcje #inwestowanie",
+        "description": "Napisz „jeden”, a wyślę Ci spółkę numer 1 z mojego systemu. AppLovin, Arm, TSMC i Seagate zarabiają na Twoim telefonie, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bo0vWp9TiF4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bo0vWp9TiF4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bo0vWp9TiF4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/bo0vWp9TiF4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/bo0vWp9TiF4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-02T15:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bmEn-zol4UKkc7Oak_CpybqT1co",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nPNS4AsRY6A"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-04T13:00:33Z",
+        "channelId": "UCfe0OYz3DK6mVNoQBw2Z5EA",
+        "title": "🏦 IKE czy IKZE – co wybrać? #finanseosobiste #inwestowanie",
+        "description": "IKE czy IKZE – co wybrać? To jedno z najczęściej zadawanych pytań przez osoby, które zaczynają inwestować.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nPNS4AsRY6A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nPNS4AsRY6A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nPNS4AsRY6A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nPNS4AsRY6A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nPNS4AsRY6A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Leveluje",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-04T13:00:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "iBEuTs64HOMjHGdGMvsY6Vy3dx8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PpWhmezsTzM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T17:26:34Z",
+        "channelId": "UC9J9JyhNzrcehLdsU0qJvPg",
+        "title": "Spanikował i sprzedał wszystko. Kto robi to najczęściej?",
+        "description": "Według badania, które przytacza Tomasz Trela, 30% inwestorów przyznało, że w panice sprzedało ponad 90% portfela.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PpWhmezsTzM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PpWhmezsTzM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PpWhmezsTzM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PpWhmezsTzM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PpWhmezsTzM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "ZYSKOWNA STRONA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T17:26:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "SlNVhk0K4aGGofCGt_ma36oT5p4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TOR2xVM_cQo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-03T10:25:11Z",
+        "channelId": "UCMh0w6OpVi085p81jK5TnzQ",
+        "title": "Jak przygotować się na krach na giełdzie? #akcje #giełda #inwestowanie",
+        "description": "Od 1950 roku S&P 500 spada o co najmniej 20% średnio raz na sześć lat. I nikogo to nie obchodzi. A przynajmniej nie powinno.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/sardefault.jpg",
+            "width": 1366,
+            "height": 2428
+          }
+        },
+        "channelTitle": "Tomasz Trela – Twój człowiek na Wall Street",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-03T10:25:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "tLeimQGCFM3lsVTVAcgwk3-tRbA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "p7EGXPBRU0k"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T17:44:22Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "Inwestowanie małych kwot ma sens, ale NIE da dużych pieniędzy",
+        "description": "Chcesz mieć więcej pieniędzy? Przeczytaj moją książkę: https://inwestokracja.pl/yt Chcesz otrzymywać DARMOWE lekcje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/p7EGXPBRU0k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/p7EGXPBRU0k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/p7EGXPBRU0k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/p7EGXPBRU0k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/p7EGXPBRU0k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T17:44:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hYqHx8fdOPlDeBrtl6SLsM-CdNE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Nn3n-tJHFHw"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-22T10:01:37Z",
+        "channelId": "UCTZzZ14jQSFN5darS2NOsqQ",
+        "title": "Nigdy nie jest za późno na inwestowanie",
+        "description": "Największy event o inwestowaniu w Polsce organizowany przez osobę, która sama zaczęła inwestować dopiero dwa lata temu.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Nn3n-tJHFHw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Nn3n-tJHFHw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Nn3n-tJHFHw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Nn3n-tJHFHw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Nn3n-tJHFHw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "BETA ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-22T10:01:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-QVm4R3PyHRCRaGfSkPhPAZehDk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DEkZR_JmMFI"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-25T05:00:02Z",
+        "channelId": "UC9SqKQ22YCmbR3kw6eIeU8w",
+        "title": "💰 IKZE — czym właściwie jest? #ikze #ike #inwestowanie",
+        "description": "IKZE — czym właściwie jest? IKZE, czyli Indywidualne Konto Zabezpieczenia Emerytalnego, to rozwiązanie stworzone z myślą o ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DEkZR_JmMFI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DEkZR_JmMFI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DEkZR_JmMFI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DEkZR_JmMFI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DEkZR_JmMFI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Prowizja i Kapitał",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-25T05:00:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4Hji2jmzZuJX1MKn_Sq1zdymfag",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cfZnDiM2DOA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T14:15:26Z",
+        "channelId": "UCXumRsXVGTYQNH7l9hlPpkA",
+        "title": "Jak wygląda inwestowanie w nieruchomości bez wychodzenia z fotela?",
+        "description": "Jak wygląda inwestowanie w nieruchomości bez wychodzenia z fotela? W skrócie: kupujesz, a całą resztę zostawiasz nam.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/sardefault.jpg",
+            "width": 603,
+            "height": 1072
+          }
+        },
+        "channelTitle": "Kamienica Piłkarza",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T14:15:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NtUVm-agtL72RWpF5iuTXS95fZk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iNNDz-f2Bb4"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-06T20:38:13Z",
+        "channelId": "UCG4bnFHQ57omG3vIITyFbjg",
+        "title": "Dlaczego nie chcę dywidend? #akcje #giełda #inwestor #inwestycje #inwestowanie #finanse",
+        "description": "Wolę, żeby spółka reinwestowała zyski w rozwój, zamiast wypłacać je akcjonariuszom. Dzięki temu więcej kapitału może dalej ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iNNDz-f2Bb4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iNNDz-f2Bb4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iNNDz-f2Bb4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/iNNDz-f2Bb4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iNNDz-f2Bb4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Od zera do klasy średniej",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-06T20:38:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Foz_g4FRUjTaeVkpGRTqDtEfR7I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tuUGLTUhA70"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T12:37:46Z",
+        "channelId": "UCSh-cOuTJ0XqlOEwAKx6nzA",
+        "title": "Którą metodę inwestowania wybierzesz?",
+        "description": "Ten sam flip. To samo mieszkanie za 500 tys. zł. Ponad pół miliona różnicy na starcie. Rynek wtórny Kupujesz starsze ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tuUGLTUhA70/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tuUGLTUhA70/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tuUGLTUhA70/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tuUGLTUhA70/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tuUGLTUhA70/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Flip Na Pierwotnym",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T12:37:46Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0W2lnOaY_SqkOyDVn3I67WbEH00",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "I6w5msJhsx8"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-27T12:00:07Z",
+        "channelId": "UCxHo-kM44ZVuTqVJoDceyMQ",
+        "title": "Skuteczność 95% #finanse #inwestowanie #giełda #akcje",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/I6w5msJhsx8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/I6w5msJhsx8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/I6w5msJhsx8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/I6w5msJhsx8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/I6w5msJhsx8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "W TOWARZYSTWIE KAPITAŁU",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-27T12:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NAc7a-ELse25Lq6yX72VQbY0Pok",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "aXcVDMvutVk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-10T08:00:23Z",
+        "channelId": "UC3VmJNIm-BObGz_SPuZLVSA",
+        "title": "Bullpost, dublowanie ETF #akcje #gpw #inwestowanie",
+        "description": "Dołącz do nas na bullpost.pl.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aXcVDMvutVk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aXcVDMvutVk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aXcVDMvutVk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/aXcVDMvutVk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/aXcVDMvutVk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/aXcVDMvutVk/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Bullpost",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-10T08:00:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "k8HgGyzcM4diKSaYXaqG1x0J0ic",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_1tqHpAGWtk"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T17:36:31Z",
+        "channelId": "UCDFfsEchxoi_FeaoJePjzLw",
+        "title": "Przyszłość może przynieść różne wartości stopy zwrotu #inwestowanie #giełda #etf #oszczędzanie",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_1tqHpAGWtk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_1tqHpAGWtk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_1tqHpAGWtk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_1tqHpAGWtk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_1tqHpAGWtk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestor Amator",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T17:36:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KcUhdPGo526JS-lHas3RmwA2X3A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-ebXFm9zfEI"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-19T16:50:34Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "Jak nie płacić podatków, legalnie. #pieniądze #inwestowanie #akcje #złoto #giełda",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-ebXFm9zfEI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-ebXFm9zfEI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-ebXFm9zfEI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-ebXFm9zfEI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-ebXFm9zfEI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-19T16:50:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NJth-PsuvrGkMpxMi12yKXQuRm0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8N098DxJC48"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-18T15:41:01Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "Audyt portfela kursanta: 3 błędy inwestora ETF, które robisz i Ty #inwestowanie #etf #portfel",
+        "description": "Rozkładam portfel kursanta i pokazuję trzy błędy prawie każdego inwestora ETF: iluzję dywersyfikacji, gonienie za wynikiem i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8N098DxJC48/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8N098DxJC48/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8N098DxJC48/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8N098DxJC48/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8N098DxJC48/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-18T15:41:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LRaMnQHlUDCks87ZbIB5ZXuWKOw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_Xc4va5ej4k"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-18T05:00:39Z",
+        "channelId": "UCxReMzw4vJ9ZlTkkgIue00w",
+        "title": "Inwestowanie w USD, EUR i PLN – jak uniknąć ryzyka walutowego. | Inwestowanie Przy Kawie #30",
+        "description": "Kupujesz amerykańskie akcje lub ETF-y? Dowiedz się, jak ryzyko walutowe i koszty przewalutowania wpływają na Twoje zyski.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_Xc4va5ej4k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_Xc4va5ej4k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_Xc4va5ej4k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_Xc4va5ej4k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_Xc4va5ej4k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/_Xc4va5ej4k/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Mądre Inwestycje | Marcin Tuszkiewicz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-18T05:00:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Az6wJA_MxZXOb4zcRQGDpLp6DXs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "clxYw7rof7A"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-14T16:55:31Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "Ranking Filmów nr. 3 #pieniądze #giełda #akcje #inwestowanie #inwestycje",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/clxYw7rof7A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/clxYw7rof7A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/clxYw7rof7A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/clxYw7rof7A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/clxYw7rof7A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-14T16:55:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "utJKemFiE87T8eFGniLrxzIwJuA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zadEHNr8LfA"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-14T22:00:21Z",
+        "channelId": "UCXB1StgfveHUAsLZ8hUr5RQ",
+        "title": "Dlaczego WARTO zacząć inwestować jak najwcześniej? #giełda #etf #inwestowanie",
+        "description": "Dlaczego warto zacząć inwestować jak najwcześniej? W tym filmie omawiamy korzyści z wczesnego rozpoczęcia inwestowania ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zadEHNr8LfA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zadEHNr8LfA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zadEHNr8LfA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zadEHNr8LfA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zadEHNr8LfA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "jachu",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-14T22:00:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WS2kdrEsRL_bm2pBbQcqd-jQkw8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Q7kRfURNdZ0"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-22T12:00:01Z",
+        "channelId": "UCrKY6A2xsHXgw3MK9mkan5w",
+        "title": "Dlaczego Nie Warto Aktywnie Inwestować – ft. Tomasz Jaroszek",
+        "description": "Rozmawiamy o tym, dlaczego inwestowanie nie jest tak trudne, jak się wydaje, i czemu często tylko wydaje nam się, że wiemy coś ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Q7kRfURNdZ0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Q7kRfURNdZ0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Q7kRfURNdZ0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Q7kRfURNdZ0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Q7kRfURNdZ0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Przemek Górczyk Podcast",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-22T12:00:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Y2vbd0YuWWbpwZuT7hcNK7O8MQs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Mpk_Tlvnvh8"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-02T17:52:10Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "Zobacz, na czym polega ta różnica.#ETF #SP500 #DowJones #Inwestowanie #Giełda",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Mpk_Tlvnvh8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Mpk_Tlvnvh8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Mpk_Tlvnvh8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Mpk_Tlvnvh8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Mpk_Tlvnvh8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-02T17:52:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "eO2mHbFy-lEaBFAe_ttkmdIMFOQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7L957f-0s9c"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-28T16:58:40Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "5 ETF-ÒW które musisz znać. #etf #giełda #inwestowanie #inwestycje #akcje",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7L957f-0s9c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7L957f-0s9c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7L957f-0s9c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7L957f-0s9c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/7L957f-0s9c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-28T16:58:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Ya06aEesxhKhePssb80-ZI42rSs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qoxlDSwUq-s"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-27T15:00:23Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "Rebalancing portfela: dlaczego 60/40 samo zamienia się w 80/20 #inwestowanie #etf #finanse",
+        "description": "Portfel 60/40, którego nikt nie rusza, po ponad trzydziestu latach ma 80 procent akcji. Vanguard policzył też, ile pracy wymaga ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qoxlDSwUq-s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qoxlDSwUq-s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qoxlDSwUq-s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qoxlDSwUq-s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qoxlDSwUq-s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-27T15:00:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "C77QYrTeDg3_lJe9-1nWkI9D6wg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "lW0_qyRBEvE"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-22T16:00:22Z",
+        "channelId": "UC7H4toyjtd1e8g4OA5TxqAg",
+        "title": "Czy własny dom to Twoja największa strata finansowa? #nieruchomosci #inwestowanie #finanse",
+        "description": "Czy zakup domu to zawsze dobra decyzja finansowa? Sprawdź, dlaczego wynajem może być lepszym rozwiązaniem dla ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lW0_qyRBEvE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lW0_qyRBEvE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lW0_qyRBEvE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/lW0_qyRBEvE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/lW0_qyRBEvE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Psychologia Sukcesu",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-22T16:00:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9fHuXgj45Sx9coGG_V2FdgUPI1U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "0QzSssZp3v4"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-05T14:35:23Z",
+        "channelId": "UC65BgRPz27OfaozBf_NtAdg",
+        "title": "vistra czyli mój wybór pod sektor energetyczny.  #stockmarket #etf #finanse #inwestowanie #vistra",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0QzSssZp3v4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0QzSssZp3v4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0QzSssZp3v4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/0QzSssZp3v4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/0QzSssZp3v4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Portevo-Finanse-Portfel ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-05T14:35:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-UJQELPfQy-2StXBe2_hgxM5kUg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "rIf5ZIYvv0k"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-07T08:58:35Z",
+        "channelId": "UCncwT-5nfGttxQyV7UxM9Nw",
+        "title": "Kurs akcji Sandisk - 6.11  #akcje #trading #inwestowanie #xtb",
+        "description": "Niniejszy materiał nie jest poradą inwestycyjną. Inwestuj odpowiedzialnie.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rIf5ZIYvv0k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rIf5ZIYvv0k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rIf5ZIYvv0k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rIf5ZIYvv0k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rIf5ZIYvv0k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/rIf5ZIYvv0k/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Akcje Świata",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-07T08:58:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ohTZ3MJoSIa270gdO34LXcwIJqM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iOjl3LPbi-U"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T14:25:16Z",
+        "channelId": "UCVK5sOPiHl9dPd4QvFBkm9Q",
+        "title": "ZARZUTY WOBEC OPENAI",
+        "description": "Kolejna edycja Invest Cuffs w Krakowie 9-10 kwietnia, 2027 r. 🎟️ https://tobilet.pl/kongres-invest-cuffs-krakow-2027 Kod ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iOjl3LPbi-U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iOjl3LPbi-U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iOjl3LPbi-U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/iOjl3LPbi-U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iOjl3LPbi-U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/iOjl3LPbi-U/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Comparic Global Markets ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T14:25:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NEoeLr9gOV7tFeK4UJmajeYzrtA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "y8zkRHOjaKY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-25T06:00:28Z",
+        "channelId": "UCxReMzw4vJ9ZlTkkgIue00w",
+        "title": "Kiedy sprzedać akcje? Najpierw plan, potem zakup | Inwestowanie Przy Kawie #31",
+        "description": "Wiesz, co kupić, ale kiedy sprzedać? Marcin Tuszkiewicz pokazuje, jak stworzyć plan inwestycyjny, unikać owczego pędu i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/y8zkRHOjaKY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/y8zkRHOjaKY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/y8zkRHOjaKY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/y8zkRHOjaKY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/y8zkRHOjaKY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/y8zkRHOjaKY/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Mądre Inwestycje | Marcin Tuszkiewicz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-25T06:00:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "iszl5U63m6rNnUuFKWpErXb03R0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TtTR9FDmsSg"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T15:30:27Z",
+        "channelId": "UCgxDZQ6GnLVRkUL8W9g85uA",
+        "title": "Czy Asbis to tylko pośrednik w sprzedaży sprzętu?  #inwestowanie #gpw #ai  #akcje",
+        "description": "Kupujesz laptopa. Zanim trafi do sklepu, często przechodzi przez pośrednika, takiego jak Asbis. Ile pośrednik na tym zarabia?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TtTR9FDmsSg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TtTR9FDmsSg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TtTR9FDmsSg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TtTR9FDmsSg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TtTR9FDmsSg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/TtTR9FDmsSg/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Ecrumena- inwestycje, giełda, gospodarka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T15:30:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kfUTMZ45NtrdJtc8CsIKljcZTcE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "c5bcL5uWvcw"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-14T16:00:36Z",
+        "channelId": "UCMh0w6OpVi085p81jK5TnzQ",
+        "title": "Inwestowanie dywidendowe: podatek, który nakładasz sam na siebie",
+        "description": "EXCEL „Prawdziwy koszt dywidendy”: https://www.tradingforaliving.pl/inwestowanie-w-spolki-dywidendowe/ (wpisz wartość ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/c5bcL5uWvcw/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Tomasz Trela – Twój człowiek na Wall Street",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-14T16:00:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "uTreeg7p8yrHn54eRs_3b-Lpu4M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xYJRWZKDaA8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T16:59:01Z",
+        "channelId": "UCoPYlABqb3uQGqVH2Cjl8ww",
+        "title": "Kierowniku poratuj groszem 🙏",
+        "description": "900 zł miesięcznie nie brzmi jak droga do miliona. A jednak przy regularnym inwestowaniu przez 30 lat procent składany robi ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xYJRWZKDaA8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xYJRWZKDaA8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xYJRWZKDaA8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xYJRWZKDaA8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xYJRWZKDaA8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jacek Niedałtowski - NiedałtowskiFinanse",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T16:59:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NT61V6zpDsQaQcuPJWEqkzYe5jk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pMt2l1gxdas"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-26T14:19:35Z",
+        "channelId": "UCoE28kXPYb2FP8rZB50RQJA",
+        "title": "Inwestowanie + Trading. Tak łączę oba podejścia",
+        "description": "Inwestowanie wiąże się z ryzykiem straty kapitału. Treści mają charakter wyłącznie edukacyjny i nie stanowią porady finansowej.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pMt2l1gxdas/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pMt2l1gxdas/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pMt2l1gxdas/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pMt2l1gxdas/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pMt2l1gxdas/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kierunek Zysk",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-26T14:19:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4XP6M57d92zRR_sUp6_OaZPLCoU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "u78fRB9EaGg"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-23T16:37:23Z",
+        "channelId": "UCx9jY1pc5tRA2Gt_fEhBYoA",
+        "title": "ZŁOTO: kupować czy jeszcze czekać? #gold #xauusd #złoto  #inwestowanie  #analizatechniczna  #shorts",
+        "description": "Złoto mocno spadło, a inwestorzy zadają sobie jedno pytanie: To już koniec spadków czy dopiero początek większego ruchu w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/u78fRB9EaGg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/u78fRB9EaGg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/u78fRB9EaGg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/u78fRB9EaGg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/u78fRB9EaGg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Od Amatora do Inwestora",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-23T16:37:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7-ZAMnEggNczXWkblyV5632nmwM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OadB1eEDDv4"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-17T11:56:14Z",
+        "channelId": "UCh4M8NU-d_dbfisUaSgnWBg",
+        "title": "Pepco WYLATUJE z indeksu MSCI — i nie wchodzi nigdzie 🐻 #inwestowanie #giełda #pepco",
+        "description": "MSCI ogłosiło rewizję indeksów: Asbis i GPW wchodzą do koszyka małych spółek, a Pepco i Grupa Azoty z niego wypadają.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OadB1eEDDv4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OadB1eEDDv4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OadB1eEDDv4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OadB1eEDDv4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OadB1eEDDv4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Byk & Miś",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-17T11:56:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LvLMy3mVZqLtLsWFTQABerJJZpY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4R9bvKWTIIg"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-29T18:37:56Z",
+        "channelId": "UCiYZEcMWrBNAKzaJpbKrZUA",
+        "title": "−400 MLD $ W JEDEN WIECZÓR #akcje #giełda #inwestowanie",
+        "description": "Czterysta miliardów dolarów. Tyle rynek skasował w jeden wieczór z dwóch firm, które właśnie pokazały rekordowe przychody.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4R9bvKWTIIg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4R9bvKWTIIg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4R9bvKWTIIg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4R9bvKWTIIg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4R9bvKWTIIg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/4R9bvKWTIIg/sardefault.jpg",
+            "width": 720,
+            "height": 1280
+          }
+        },
+        "channelTitle": "Żubr z Wall Street",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-29T18:37:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IJ6G3WbUplhvnjpJ8G_ul9FmAwQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "L9UoCcTx0CM"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-21T16:10:09Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "6 ETF-ów 5 lat. #inwestycja #inwestowanie #finanse #inwestycje #akcje",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/L9UoCcTx0CM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/L9UoCcTx0CM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/L9UoCcTx0CM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/L9UoCcTx0CM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/L9UoCcTx0CM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-21T16:10:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "m0-iT2aPp9spBVUbmq2i-QqSu9U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-8Ygosj6dgc"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T16:00:36Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "Dywidendy są matematycznie gorsze, a mogą Ci się opłacić #dywidendy #inwestowanie #etf",
+        "description": "Dywidendy przegrywają z reinwestowaniem w rachunku, ale fundusze w USA dały 8,2%* rocznie, a ich inwestorzy tylko 7,0%*.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-8Ygosj6dgc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-8Ygosj6dgc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-8Ygosj6dgc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-8Ygosj6dgc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-8Ygosj6dgc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T16:00:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vOTNrT8poLY2tX5vms3SZKOCIKg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HRh3hPD9o4Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-09T14:00:06Z",
+        "channelId": "UCFkzfh0MRC3p_vTCwH2Joew",
+        "title": " ZŁOTO WRACA DO GRY! Banki centralne kupują! #złoto #srebro #inwestowanie ",
+        "description": "Czy złoto przygotowuje się do kolejnej fali wzrostów? Banki centralne kupiły w trzecim kwartale 2026 roku aż 321 ton złota, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HRh3hPD9o4Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HRh3hPD9o4Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HRh3hPD9o4Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HRh3hPD9o4Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HRh3hPD9o4Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Rekin Srebra",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-09T14:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PY0wC7vG2bKuyDUt6prHnHhbww0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FaCscGRLB9E"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-16T09:30:08Z",
+        "channelId": "UCAH85XhPoXCxSXUKdwsm0Ig",
+        "title": "Moja Największa Pozycja W Portfelu Spada!#giełda #inwestowanie #dywidenda",
+        "description": "Prezentowane treści mają wyłącznie charakter informacyjny i prezentują opinie własne autora i nie jest to rekomendacja ani ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FaCscGRLB9E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FaCscGRLB9E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FaCscGRLB9E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/FaCscGRLB9E/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/FaCscGRLB9E/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Konrad Książak - Giełda, Pieniądze, Inwestycje",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-16T09:30:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4eJExxApiAiCP9xunLwj4XB0u8I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Q2von2CBCME"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-19T05:00:16Z",
+        "channelId": "UCjde5S2ruiZh-t6ndYB68Iw",
+        "title": "Pancerny S-Tier i 6% stopy! Dlaczego podwoili wypłatę?  #inwestowanie  #giełda #dywidenda #gpw",
+        "description": "Prześwietlamy 6% stopy dywidendy, kluczowy termin zakupu do 19 sierpnia oraz powody, dla których spółka wskoczyła prosto do ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Q2von2CBCME/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Q2von2CBCME/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Q2von2CBCME/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Q2von2CBCME/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Q2von2CBCME/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/Q2von2CBCME/sardefault.jpg",
+            "width": 1536,
+            "height": 2731
+          }
+        },
+        "channelTitle": "Giełdowe Laboratorium",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-19T05:00:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rWlXOaGhc3HbvabzYG4T5jf9ldE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9q8_nxNMAm8"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-26T16:54:53Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "5 wskaźnikòw, które pomogą Ci inwestować mądrzej.  #giełda #pieniądze #inwestowanie #inwestycje",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9q8_nxNMAm8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9q8_nxNMAm8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9q8_nxNMAm8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9q8_nxNMAm8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9q8_nxNMAm8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-26T16:54:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gB5Nul2ftZ615SkOAsumWvBKi2o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7jx7qH1nHeo"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-13T06:30:39Z",
+        "channelId": "UCh4M8NU-d_dbfisUaSgnWBg",
+        "title": "SpaceX +19% na debiucie! Największe IPO w historii 🚀 #inwestowanie #spacex #giełda #starlink",
+        "description": "SpaceX wszedł na Nasdaq (ticker SPCX) po 135$ i zamknął pierwszy dzień na 160,95$ — wzrost o 19% i wycena ponad 2 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7jx7qH1nHeo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7jx7qH1nHeo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7jx7qH1nHeo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7jx7qH1nHeo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/7jx7qH1nHeo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Byk & Miś",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-13T06:30:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7cKWiAK9YsKstWfC-ZaQapVs48Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nvX1GjrrqM8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T15:00:27Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "Cztery decyzje przed pierwszym ETF: dwie naprawisz w minutę #ETF #IKE #inwestowanie",
+        "description": "Napisz START w komentarzu, a wyślę Ci przewodnik, jak zacząć inwestować w 5 krokach. Cztery decyzje przed pierwszym ETF: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nvX1GjrrqM8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nvX1GjrrqM8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nvX1GjrrqM8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nvX1GjrrqM8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nvX1GjrrqM8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T15:00:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Vc9aKkQ5EVxFDFmHvt7B8npe-6M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "USzKu25GJec"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-15T17:35:25Z",
+        "channelId": "UCidKgp12nL2NhtFVy9R46rg",
+        "title": "Ta sama wpłata. Trzykrotna różnica#pieniądze #finanse #finanseosobiste #inwestowanie #oszczędzanie",
+        "description": "Dwie pary zarabiają identycznie: on 8 000 zł, ona 6 000 zł brutto. Obie pensje poniżej średniej krajowej, na rękę razem około 10 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/USzKu25GJec/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/USzKu25GJec/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/USzKu25GJec/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/USzKu25GJec/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/USzKu25GJec/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/USzKu25GJec/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Tomasz_Kudla",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-15T17:35:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-cTvVZMXEi8YE4Xwo3fpgO-GRvY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "edC5Qeik2Vs"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-28T15:00:07Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "3 błędy w portfelu kursanta (masz je u siebie?) #inwestowanie #etf #shorts",
+        "description": "Audyt prawdziwego portfela: trzy ETF-y, które są jedną inwestycją, kupowanie tego, co już urosło, i „przewaga\" z własnej pracy.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/edC5Qeik2Vs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/edC5Qeik2Vs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/edC5Qeik2Vs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/edC5Qeik2Vs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/edC5Qeik2Vs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-28T15:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zODZax6vwGI-OYM5gncJ9DeFqUU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "upRrExgKAEU"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-24T20:21:56Z",
+        "channelId": "UCoPYlABqb3uQGqVH2Cjl8ww",
+        "title": "Kredyt czy inwestowanie? 🤔",
+        "description": "Większość osób automatycznie nadpłaca kredyt hipoteczny, bo daje to poczucie bezpieczeństwa. Problem w tym, że procent ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/upRrExgKAEU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/upRrExgKAEU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/upRrExgKAEU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/upRrExgKAEU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/upRrExgKAEU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jacek Niedałtowski - NiedałtowskiFinanse",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-24T20:21:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "y-WYsfSFvx8guTvFpD805c8BFtA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Wp0_enV7-Vc"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-02T14:35:24Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Dlaczego warto sprawdzić opłaty ETF? 🚨 #etf #inwestowanie",
+        "description": "Każdy ETF na dany indeks odtwarza te same aktywa jednak nie każdy z tych ETF'ow pobiera takie same opłaty, etf od ishares ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Wp0_enV7-Vc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Wp0_enV7-Vc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Wp0_enV7-Vc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Wp0_enV7-Vc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Wp0_enV7-Vc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-02T14:35:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Q1JDaX-c517xBGTOu6fmKEvF6bs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DW_dwRXYQnY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-15T13:59:54Z",
+        "channelId": "UCG4bnFHQ57omG3vIITyFbjg",
+        "title": "Zmieniłem system dopłat do portfela  #inwestowaniedługoterminowe #akcje #inwestowanie #giełda",
+        "description": "Zmieniłem system dopłat do mojego portfela inwestycyjnego. Zamiast przeznaczać całą dodatkową kwotę na najtańsze spółki, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DW_dwRXYQnY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DW_dwRXYQnY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DW_dwRXYQnY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DW_dwRXYQnY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DW_dwRXYQnY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Od zera do klasy średniej",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-15T13:59:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nT2-f_hLk0nnslZAbaI6MJdrOVY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nxeG3i2RKjk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T20:25:10Z",
+        "channelId": "UC65BgRPz27OfaozBf_NtAdg",
+        "title": "Wszytko co musisz wiedzieć w tym tygodniu na giełdzie w minute.  #inwestowanie #finanse #akcje #etf",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nxeG3i2RKjk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nxeG3i2RKjk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nxeG3i2RKjk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nxeG3i2RKjk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nxeG3i2RKjk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Portevo-Finanse-Portfel ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T20:25:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "y-pV-RpRWsuGtHlntSrw4Y6ITuA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "0KzF_QaR9xo"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-25T10:33:00Z",
+        "channelId": "UCbTF4d45LiEhP3L13OHycqw",
+        "title": "Co Buffett wie, a my nie? #buffett #inwestowanie #gielda",
+        "description": "Proporcja gotówki i krótkoterminowych papierów skarbowych do wszystkich aktywów Berkshire Hathaway Warrena Buffetta ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0KzF_QaR9xo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0KzF_QaR9xo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0KzF_QaR9xo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/0KzF_QaR9xo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/0KzF_QaR9xo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Real Trade",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-25T10:33:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "wzY_frBDllZDmkeDVd6BSxPL4EM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IGeQQgHVkkY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-20T09:30:10Z",
+        "channelId": "UCAH85XhPoXCxSXUKdwsm0Ig",
+        "title": "Tego Nikt Się Nie Spodziewał!#giełda #inwestowanie #dywidenda",
+        "description": "Prezentowane treści mają wyłącznie charakter informacyjny i prezentują opinie własne autora i nie jest to rekomendacja ani ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IGeQQgHVkkY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IGeQQgHVkkY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IGeQQgHVkkY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IGeQQgHVkkY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IGeQQgHVkkY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Konrad Książak - Giełda, Pieniądze, Inwestycje",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-20T09:30:10Z"
+      }
+    }
+  ]
+}

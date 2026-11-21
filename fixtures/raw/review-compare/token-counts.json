@@ -1,0 +1,10 @@
+{
+ "method": "Czysty Python: byte-level BPE na tokenizer.json Qwen/Qwen3.5-9B (sha256 5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42), pre-tokenizer przybliżony wyrażeniem re zamiast \\p{L}/\\p{N}. Prompt z analysis.openrouter_review.review_messages, opakowanie ChatML przybliżone. Schemat response_format liczony osobno. Kontrola: 'Hello world, this is a test.' = 8 tokenów.",
+ "countedAt": "2026-11-21T18:39Z",
+ "counts": {
+  "case-a-xtb-declaration": {"prompt": 569, "system": 511, "user": 45},
+  "case-b-comparic-xtb-referral": {"prompt": 2181, "system": 511, "user": 1657},
+  "case-a-live-xtb-declaration": {"prompt": 1711, "system": 511, "user": 1187},
+  "responseSchemaM1": 101
+ }
+}

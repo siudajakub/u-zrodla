@@ -1,0 +1,18 @@
+{"type": "run", "variant": "reguly", "rulesVersion": "investwatch-rules-pl-1.2 (M1, M3); investwatch-m2-rendered-1 (M2)", "codeCommit": "491094da62c100cc562ca422534ff360ebddee5b", "modelId": null, "provider": null, "weightsDigest": null, "quantization": null, "parameters": {"semantic": "niedostępny (E5 nie uruchomiony)"}, "promptMethod": null, "startedAt": "2026-11-21T18:43:14+00:00", "finishedAt": "2026-11-21T18:43:14+00:00", "durationSeconds": null, "tokens": null, "cost": {"amount": 0, "currency": "PLN", "source": "brak zewnętrznych wywołań"}, "environment": {"host": "devbox Linux x86_64", "python": "3.12.3", "path": "collectors.discovery.discover('replay') + collectors.m2_archive replay + analysis.engine.demo_captures; analysis.engine.analyze; review_suggestion bez modelu"}}
+{"materialId": "apple-podcasts:1449711708:episode:5122e67b823309d706dc5b70c3cd88aa", "score": 12, "queueState": "no_signal", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "apple-podcasts:1506475429:episode:b266151c4a5122ce38269eb57de19bc1", "score": 12, "queueState": "no_signal", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "apple-podcasts:1724408193:episode:cdd48442a32aee651d4ca098f1b4e745", "score": 12, "queueState": "no_signal", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "dom-xtb-etf", "score": 60, "queueState": "review", "rulesVersion": "investwatch-m2-rendered-1", "evidenceQuote": "Rozszerz swoje źródła dochodu o dywidendy wypłacane przez fundusze ETF w które zainwestowałeś."}
+{"materialId": "peertube:39fb23f2-c689-416e-a2a8-2f8a06b96a67", "score": 12, "queueState": "no_signal", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "peertube:959e5bcc-8562-4a2c-9d78-6b8b83d8d306", "score": 12, "queueState": "no_signal", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "public-bos-profil", "score": 58, "queueState": "unavailable", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "public-financewell-agent", "score": 52, "queueState": "unavailable", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "tiktok:7686164801038355744", "score": 12, "queueState": "no_signal", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "tiktok:7709518231387524374", "score": 12, "queueState": "no_signal", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "web:bossa.pl/edukacja/rynek-i-inwestycje/instrumenty-finansowe", "score": 18, "queueState": "unavailable", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "web:bossa.pl/oferta/doradztwo", "score": 58, "queueState": "unavailable", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "web:www.bdm.pl/rachunek-inwestycyjny", "score": 20, "queueState": "no_signal", "rulesVersion": "investwatch-m2-rendered-1", "evidenceQuote": null}
+{"materialId": "web:www.xtb.com/pl/akcje", "score": 20, "queueState": "no_signal", "rulesVersion": "investwatch-m2-rendered-1", "evidenceQuote": null}
+{"materialId": "youtube:04mmNbAlHFo", "score": 94, "queueState": "review", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": "Partnerem odcinka jest XTB"}
+{"materialId": "youtube:AE02IBR__H4", "score": 12, "queueState": "no_signal", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": null}
+{"materialId": "youtube:xtMqKkFO-0M", "score": 94, "queueState": "review", "rulesVersion": "investwatch-rules-pl-1.2", "evidenceQuote": "Partnerem odcinka jest XTB"}

@@ -1,0 +1,513 @@
+{
+  "mode": "rankings",
+  "finishedAt": "2026-11-21T18:32:40+00:00",
+  "seededChannels": [
+    "UCelOnoH_P-vJgAHSAcMKQiw",
+    "UCnmJzS-tFT7DlxIMFxYGcHw"
+  ],
+  "routes": {
+    "channel_page": {
+      "requests": 11,
+      "ok": 8,
+      "errors": [
+        "profile @MerytorycznieOFinansach: 404",
+        "profile @MarcinIwuc: 404",
+        "profile @jakoszczedzacpieniadze: 404"
+      ],
+      "results": 0
+    },
+    "ranking_handles": {
+      "requests": 0,
+      "ok": 0,
+      "errors": [],
+      "results": 11
+    },
+    "atom": {
+      "requests": 8,
+      "ok": 8,
+      "errors": [],
+      "results": 105
+    }
+  },
+  "results": 116,
+  "uniqueChannels": 8,
+  "uniqueVideos": 105,
+  "promoWithBrand": [
+    {
+      "route": "atom",
+      "channelId": "UCwKvys5yPdbGrotJHA_B3DQ",
+      "author": "Damian Olszewski - Praktycznie o pieniądzach",
+      "videoId": "ENmAgu0s8nA",
+      "url": "https://www.youtube.com/watch?v=ENmAgu0s8nA",
+      "title": "WIELKI BLACKOUT, EUROPA pozbywa się IMIGRANTÓW, a MUSK podbija KOSMOS! #BizWeek",
+      "signals": {
+        "promo": [
+          "sponsorowany"
+        ],
+        "brands": [
+          "Pekao"
+        ]
+      },
+      "stats": {
+        "views": 426893,
+        "ratingCount": 9119,
+        "statsObservedAt": "2026-11-21T18:32:14+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCwKvys5yPdbGrotJHA_B3DQ",
+      "author": "Damian Olszewski - Praktycznie o pieniądzach",
+      "videoId": "m1NFqnC4lZo",
+      "url": "https://www.youtube.com/watch?v=m1NFqnC4lZo",
+      "title": "ATAK w KRAKOWIE, KRYZYS w PARAGWAJU, a AI ZASTĘPUJE RELACJE! #BizWeek",
+      "signals": {
+        "promo": [
+          "sponsorowany"
+        ],
+        "brands": [
+          "Pekao"
+        ]
+      },
+      "stats": {
+        "views": 330920,
+        "ratingCount": 9113,
+        "statsObservedAt": "2026-11-21T18:32:14+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCwKvys5yPdbGrotJHA_B3DQ",
+      "author": "Damian Olszewski - Praktycznie o pieniądzach",
+      "videoId": "ITgledzKf74",
+      "url": "https://www.youtube.com/watch?v=ITgledzKf74",
+      "title": "WIELKA PORAŻKA TRUMPA, WOJNA o TRYBUNAŁ i WZROST ZŁOTA! #BizWeek",
+      "signals": {
+        "promo": [
+          "sponsorowany"
+        ],
+        "brands": [
+          "Pekao"
+        ]
+      },
+      "stats": {
+        "views": 360165,
+        "ratingCount": 10326,
+        "statsObservedAt": "2026-11-21T18:32:14+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCNT3teib54LOt98CSlpzxjQ",
+      "author": "Prosta Ekonomia",
+      "videoId": "b2UbWnDA9zs",
+      "url": "https://www.youtube.com/watch?v=b2UbWnDA9zs",
+      "title": "JAK DZIAŁAJĄ RAJE PODATKOWE? 🤔",
+      "signals": {
+        "promo": [
+          "partnerem odcinka"
+        ],
+        "brands": [
+          "Pekao"
+        ]
+      },
+      "stats": {
+        "views": 30418,
+        "ratingCount": 1096,
+        "statsObservedAt": "2026-11-21T18:32:26+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCNT3teib54LOt98CSlpzxjQ",
+      "author": "Prosta Ekonomia",
+      "videoId": "s4FRBNawzJw",
+      "url": "https://www.youtube.com/watch?v=s4FRBNawzJw",
+      "title": "KIOSKI RUCHu: DLACZEGO UPADŁY? (Po 100 latach!)",
+      "signals": {
+        "promo": [
+          "partnerem odcinka"
+        ],
+        "brands": [
+          "Pekao"
+        ]
+      },
+      "stats": {
+        "views": 116905,
+        "ratingCount": 3016,
+        "statsObservedAt": "2026-11-21T18:32:26+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCNT3teib54LOt98CSlpzxjQ",
+      "author": "Prosta Ekonomia",
+      "videoId": "opVIyX99FbI",
+      "url": "https://www.youtube.com/watch?v=opVIyX99FbI",
+      "title": "PODATKI w POLSCE to KOSZMAR. Jak to zmienić? 🧐",
+      "signals": {
+        "promo": [
+          "partnerem odcinka"
+        ],
+        "brands": [
+          "Pekao"
+        ]
+      },
+      "stats": {
+        "views": 9814,
+        "ratingCount": 505,
+        "statsObservedAt": "2026-11-21T18:32:26+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCNT3teib54LOt98CSlpzxjQ",
+      "author": "Prosta Ekonomia",
+      "videoId": "CRMmToYqbDw",
+      "url": "https://www.youtube.com/watch?v=CRMmToYqbDw",
+      "title": "DLACZEGO TRUMP STAWIA NA CŁA? 🤔 PROTEKCJONIZM w PRAKTYCE",
+      "signals": {
+        "promo": [
+          "partnerem odcinka"
+        ],
+        "brands": [
+          "Pekao"
+        ]
+      },
+      "stats": {
+        "views": 25123,
+        "ratingCount": 914,
+        "statsObservedAt": "2026-11-21T18:32:26+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCNT3teib54LOt98CSlpzxjQ",
+      "author": "Prosta Ekonomia",
+      "videoId": "uUlY7frEcrM",
+      "url": "https://www.youtube.com/watch?v=uUlY7frEcrM",
+      "title": "DO KOGO NALEŻĄ BANKI W POLSCE? 🤔",
+      "signals": {
+        "promo": [
+          "reklama"
+        ],
+        "brands": [
+          "Pekao"
+        ]
+      },
+      "stats": {
+        "views": 11707,
+        "ratingCount": 595,
+        "statsObservedAt": "2026-11-21T18:32:26+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "o2GfnmVVkO8",
+      "url": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+      "title": "Gdybym miał włożyć cały majątek tylko w 3 spółki z USA, wybrałbym te!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "freedom24"
+        ]
+      },
+      "stats": {
+        "views": 1038,
+        "ratingCount": 68,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "ePfzHQVf-lc",
+      "url": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+      "title": "Kupiłem te spółki za 40 tysięcy zł. To Wy zbudowaliście ten portfel! | PORTFEL WIDZÓW 02",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 50354,
+        "ratingCount": 839,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "_aqCM37gK1U",
+      "url": "https://www.youtube.com/watch?v=_aqCM37gK1U",
+      "title": "Kupujesz za późno i sprzedajesz za wcześnie? To nie jest przypadek!",
+      "signals": {
+        "promo": [
+          "współpraca",
+          "współpracę"
+        ],
+        "brands": [
+          "Saxo",
+          "saxo"
+        ]
+      },
+      "stats": {
+        "views": 43793,
+        "ratingCount": 789,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "gTOdRoCxG_w",
+      "url": "https://www.youtube.com/watch?v=gTOdRoCxG_w",
+      "title": "Kurs polskiej fabryki gier na 7-letnim dnie. Rynek nie widzi w PlayWay tego, co ja!",
+      "signals": {
+        "promo": [
+          "reklama",
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 26167,
+        "ratingCount": 408,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "vBYn7IvDQsc",
+      "url": "https://www.youtube.com/watch?v=vBYn7IvDQsc",
+      "title": "Te 4 wskaźniki zapowiadały recesję i żaden nie trafił! Dlaczego przestały działać?",
+      "signals": {
+        "promo": [
+          "współpraca",
+          "współpracę"
+        ],
+        "brands": [
+          "Saxo",
+          "saxo"
+        ]
+      },
+      "stats": {
+        "views": 51227,
+        "ratingCount": 803,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "uM24ZsvzgV8",
+      "url": "https://www.youtube.com/watch?v=uM24ZsvzgV8",
+      "title": "Orlen się sypie, a Allegro wygrywa wojnę z InPostem. Dwa giganty GPW idą w przeciwnych kierunkach!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 54849,
+        "ratingCount": 899,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "9Fcwo1jlwe4",
+      "url": "https://www.youtube.com/watch?v=9Fcwo1jlwe4",
+      "title": "Nvidia traci Jensena i zalicza krach. Czy hossa AI właśnie się zmienia?",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "Freedom24",
+          "freedom24"
+        ]
+      },
+      "stats": {
+        "views": 89107,
+        "ratingCount": 1885,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "39ctNbOSdYg",
+      "url": "https://www.youtube.com/watch?v=39ctNbOSdYg",
+      "title": "3 rzeczy, które rynek dziś źle wycenia. Tu widzę ciekawe okazje!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "freedom24"
+        ]
+      },
+      "stats": {
+        "views": 51532,
+        "ratingCount": 898,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "J__KfKHCLDI",
+      "url": "https://www.youtube.com/watch?v=J__KfKHCLDI",
+      "title": "Anthropic wchodzi na giełdę. Czy kupię akcje najszybciej rosnącej firmy świata?",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "freedom24"
+        ]
+      },
+      "stats": {
+        "views": 81431,
+        "ratingCount": 1268,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "1Q_7itaSuwA",
+      "url": "https://www.youtube.com/watch?v=1Q_7itaSuwA",
+      "title": "Boisz się spadków? Wahania kursu to nie ryzyko - zobacz jak wykorzystuję zmienność",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 51491,
+        "ratingCount": 1032,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "-HpCSKp9bqk",
+      "url": "https://www.youtube.com/watch?v=-HpCSKp9bqk",
+      "title": "Nadchodzi bessa na rynku nieruchomości? Mieszkania przestały być pewną inwestycją!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 221247,
+        "ratingCount": 2507,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "g7Y6TaD0QTk",
+      "url": "https://www.youtube.com/watch?v=g7Y6TaD0QTk",
+      "title": "Branża, w którą nie zainwestuję. Świetne produkty, koszmarne inwestycje!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 36147,
+        "ratingCount": 618,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    },
+    {
+      "route": "atom",
+      "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+      "author": "Piotr Cymcyk - Merytorycznie o Finansach",
+      "videoId": "a6uh7LnRCTQ",
+      "url": "https://www.youtube.com/watch?v=a6uh7LnRCTQ",
+      "title": "GPW bije rekordy i… spada, a na giełdę szykuje się gigant zbrojeniowy z 30 mld wyceny!",
+      "signals": {
+        "promo": [
+          "współpraca"
+        ],
+        "brands": [
+          "XTB",
+          "xtb"
+        ]
+      },
+      "stats": {
+        "views": 59980,
+        "ratingCount": 937,
+        "statsObservedAt": "2026-11-21T18:32:34+00:00"
+      },
+      "seeded": false
+    }
+  ],
+  "note": "channelId znormalizowane do prefiksu UC po przebiegu (bez nowych żądań); duże pliki .html/.xml spakowane gzip, sha256 w requests.jsonl dotyczy treści nieskompresowanej."
+}

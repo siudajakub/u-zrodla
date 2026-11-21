@@ -1,0 +1,890 @@
+{
+ "document": "fixtures/validation/q-v2/WYNIK-M1-2026-11-21.md",
+ "generatedAt": "2026-11-21T20:12:26+00:00",
+ "protocol": "fixtures/validation/PROTOKOL.md (1.0)",
+ "referenceKind": "agent",
+ "referenceNote": "oceny agentów — nie są niezależnym wzorcem eksperckim",
+ "split": "tuning",
+ "raters": {
+  "G-A": "claude-opus-5-5 (agent G)",
+  "G-B": "claude-sonnet-5-5 (świeży podagent, wyłącznie pakiety materiałów)"
+ },
+ "agreement": {
+  "pairs": 17,
+  "observed": 1.0,
+  "kappa": 1.0,
+  "disagreements": []
+ },
+ "denominators": {
+  "materials": 26,
+  "undetermined": 0,
+  "independentUnits": 20,
+  "positiveMaterials": 4,
+  "positiveCampaigns": 3,
+  "positiveAdvertisers": 1,
+  "registryMaterials": 14,
+  "registryCampaigns": 9,
+  "noSignalUnits": 8,
+  "mediaVideos": 17,
+  "mediaCampaigns": 12,
+  "seenByRuleAuthorMedia": 13,
+  "unseenByRuleAuthor": [
+   "youtube:-HpCSKp9bqk",
+   "youtube:9Fcwo1jlwe4",
+   "youtube:CDk20n4u9Kk"
+  ]
+ },
+ "fullCoverage": {
+  "rules_1_2": [
+   {
+    "threshold": 30,
+    "evaluated": 26,
+    "tp": 0,
+    "fp": 7,
+    "tn": 15,
+    "fn": 4,
+    "precision": 0.0,
+    "precisionCI95": [
+     0.0,
+     0.3543
+    ],
+    "recall": 0.0,
+    "recallCI95": [
+     0.0,
+     0.4899
+    ],
+    "withheld": 1,
+    "withheldRate": 0.0385,
+    "cost": 15,
+    "referredCampaigns": 6,
+    "truePositiveCampaigns": 0,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 0,
+     "fp": 6,
+     "tn": 11,
+     "fn": 3
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 7,
+    "errors": [
+     {
+      "materialId": "youtube:7M0rC6-Rueo",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-INWESTYCYJNAWYPRAWA-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:AqXHkxDzSDI",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FOREXMIND-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:OIyPE0z2mng",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:ZJrT-X08Xwc",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:-HpCSKp9bqk",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:9Fcwo1jlwe4",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-FREEDOM24",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:_aqCM37gK1U",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-SAXO",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:ePfzHQVf-lc",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:i3QxMqyRlks",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-BADZNABIEZACO-FREEDOM24",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:p_ui_fqLdV0",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-KONOPSKYY-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:xtMqKkFO-0M",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DETERMINACJA-XTB",
+      "withheld": false
+     }
+    ]
+   },
+   {
+    "threshold": 60,
+    "evaluated": 26,
+    "tp": 0,
+    "fp": 7,
+    "tn": 15,
+    "fn": 4,
+    "precision": 0.0,
+    "precisionCI95": [
+     0.0,
+     0.3543
+    ],
+    "recall": 0.0,
+    "recallCI95": [
+     0.0,
+     0.4899
+    ],
+    "withheld": 1,
+    "withheldRate": 0.0385,
+    "cost": 15,
+    "referredCampaigns": 6,
+    "truePositiveCampaigns": 0,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 0,
+     "fp": 6,
+     "tn": 11,
+     "fn": 3
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 7,
+    "errors": [
+     {
+      "materialId": "youtube:7M0rC6-Rueo",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-INWESTYCYJNAWYPRAWA-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:AqXHkxDzSDI",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FOREXMIND-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:OIyPE0z2mng",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:ZJrT-X08Xwc",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:-HpCSKp9bqk",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:9Fcwo1jlwe4",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-FREEDOM24",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:_aqCM37gK1U",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-SAXO",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:ePfzHQVf-lc",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:i3QxMqyRlks",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-BADZNABIEZACO-FREEDOM24",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:p_ui_fqLdV0",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-KONOPSKYY-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:xtMqKkFO-0M",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DETERMINACJA-XTB",
+      "withheld": false
+     }
+    ]
+   },
+   {
+    "threshold": 80,
+    "evaluated": 26,
+    "tp": 0,
+    "fp": 6,
+    "tn": 16,
+    "fn": 4,
+    "precision": 0.0,
+    "precisionCI95": [
+     0.0,
+     0.3903
+    ],
+    "recall": 0.0,
+    "recallCI95": [
+     0.0,
+     0.4899
+    ],
+    "withheld": 1,
+    "withheldRate": 0.0385,
+    "cost": 14,
+    "referredCampaigns": 5,
+    "truePositiveCampaigns": 0,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 0,
+     "fp": 5,
+     "tn": 12,
+     "fn": 3
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 6,
+    "errors": [
+     {
+      "materialId": "youtube:7M0rC6-Rueo",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-INWESTYCYJNAWYPRAWA-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:AqXHkxDzSDI",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FOREXMIND-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:OIyPE0z2mng",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:ZJrT-X08Xwc",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:-HpCSKp9bqk",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:9Fcwo1jlwe4",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-FREEDOM24",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:_aqCM37gK1U",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-SAXO",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:ePfzHQVf-lc",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DNARYNKOW-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:i3QxMqyRlks",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-BADZNABIEZACO-FREEDOM24",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:xtMqKkFO-0M",
+      "outcome": "fp",
+      "label": "rejestr",
+      "campaignId": "C-M1-DETERMINACJA-XTB",
+      "withheld": false
+     }
+    ]
+   }
+  ],
+  "qual_d": [
+   {
+    "threshold": 60,
+    "evaluated": 26,
+    "tp": 4,
+    "fp": 0,
+    "tn": 22,
+    "fn": 0,
+    "precision": 1.0,
+    "precisionCI95": [
+     0.5101,
+     1.0
+    ],
+    "recall": 1.0,
+    "recallCI95": [
+     0.5101,
+     1.0
+    ],
+    "withheld": 2,
+    "withheldRate": 0.0769,
+    "cost": 0,
+    "referredCampaigns": 3,
+    "truePositiveCampaigns": 3,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 3,
+     "fp": 0,
+     "tn": 17,
+     "fn": 0
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 0,
+    "errors": []
+   },
+   {
+    "threshold": 80,
+    "evaluated": 26,
+    "tp": 4,
+    "fp": 0,
+    "tn": 22,
+    "fn": 0,
+    "precision": 1.0,
+    "precisionCI95": [
+     0.5101,
+     1.0
+    ],
+    "recall": 1.0,
+    "recallCI95": [
+     0.5101,
+     1.0
+    ],
+    "withheld": 2,
+    "withheldRate": 0.0769,
+    "cost": 0,
+    "referredCampaigns": 3,
+    "truePositiveCampaigns": 3,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 3,
+     "fp": 0,
+     "tn": 17,
+     "fn": 0
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 0,
+    "errors": []
+   },
+   {
+    "threshold": 95,
+    "evaluated": 26,
+    "tp": 2,
+    "fp": 0,
+    "tn": 22,
+    "fn": 2,
+    "precision": 1.0,
+    "precisionCI95": [
+     0.3424,
+     1.0
+    ],
+    "recall": 0.5,
+    "recallCI95": [
+     0.15,
+     0.85
+    ],
+    "withheld": 2,
+    "withheldRate": 0.0769,
+    "cost": 4,
+    "referredCampaigns": 2,
+    "truePositiveCampaigns": 2,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 2,
+     "fp": 0,
+     "tn": 17,
+     "fn": 1
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 0,
+    "errors": [
+     {
+      "materialId": "youtube:OIyPE0z2mng",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:ZJrT-X08Xwc",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     }
+    ]
+   }
+  ]
+ },
+ "descriptionOnly": {
+  "rules_1_2": [
+   {
+    "threshold": 30,
+    "evaluated": 26,
+    "tp": 0,
+    "fp": 0,
+    "tn": 22,
+    "fn": 4,
+    "precision": "brak podstaw do obliczenia",
+    "precisionCI95": "brak podstaw do obliczenia",
+    "recall": 0.0,
+    "recallCI95": [
+     0.0,
+     0.4899
+    ],
+    "withheld": 3,
+    "withheldRate": 0.1154,
+    "cost": 8,
+    "referredCampaigns": 0,
+    "truePositiveCampaigns": 0,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 0,
+     "fp": 0,
+     "tn": 17,
+     "fn": 3
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 0,
+    "errors": [
+     {
+      "materialId": "youtube:7M0rC6-Rueo",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-INWESTYCYJNAWYPRAWA-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:AqXHkxDzSDI",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FOREXMIND-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:OIyPE0z2mng",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:ZJrT-X08Xwc",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     }
+    ]
+   },
+   {
+    "threshold": 60,
+    "evaluated": 26,
+    "tp": 0,
+    "fp": 0,
+    "tn": 22,
+    "fn": 4,
+    "precision": "brak podstaw do obliczenia",
+    "precisionCI95": "brak podstaw do obliczenia",
+    "recall": 0.0,
+    "recallCI95": [
+     0.0,
+     0.4899
+    ],
+    "withheld": 3,
+    "withheldRate": 0.1154,
+    "cost": 8,
+    "referredCampaigns": 0,
+    "truePositiveCampaigns": 0,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 0,
+     "fp": 0,
+     "tn": 17,
+     "fn": 3
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 0,
+    "errors": [
+     {
+      "materialId": "youtube:7M0rC6-Rueo",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-INWESTYCYJNAWYPRAWA-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:AqXHkxDzSDI",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FOREXMIND-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:OIyPE0z2mng",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:ZJrT-X08Xwc",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     }
+    ]
+   },
+   {
+    "threshold": 80,
+    "evaluated": 26,
+    "tp": 0,
+    "fp": 0,
+    "tn": 22,
+    "fn": 4,
+    "precision": "brak podstaw do obliczenia",
+    "precisionCI95": "brak podstaw do obliczenia",
+    "recall": 0.0,
+    "recallCI95": [
+     0.0,
+     0.4899
+    ],
+    "withheld": 3,
+    "withheldRate": 0.1154,
+    "cost": 8,
+    "referredCampaigns": 0,
+    "truePositiveCampaigns": 0,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 0,
+     "fp": 0,
+     "tn": 17,
+     "fn": 3
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 0,
+    "errors": [
+     {
+      "materialId": "youtube:7M0rC6-Rueo",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-INWESTYCYJNAWYPRAWA-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:AqXHkxDzSDI",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FOREXMIND-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:OIyPE0z2mng",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     },
+     {
+      "materialId": "youtube:ZJrT-X08Xwc",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": false
+     }
+    ]
+   }
+  ],
+  "qual_d": [
+   {
+    "threshold": 60,
+    "evaluated": 26,
+    "tp": 0,
+    "fp": 0,
+    "tn": 22,
+    "fn": 4,
+    "precision": "brak podstaw do obliczenia",
+    "precisionCI95": "brak podstaw do obliczenia",
+    "recall": 0.0,
+    "recallCI95": [
+     0.0,
+     0.4899
+    ],
+    "withheld": 13,
+    "withheldRate": 0.5,
+    "cost": 8,
+    "referredCampaigns": 0,
+    "truePositiveCampaigns": 0,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 0,
+     "fp": 0,
+     "tn": 17,
+     "fn": 3
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 0,
+    "errors": [
+     {
+      "materialId": "youtube:7M0rC6-Rueo",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-INWESTYCYJNAWYPRAWA-XTB",
+      "withheld": true
+     },
+     {
+      "materialId": "youtube:AqXHkxDzSDI",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FOREXMIND-XTB",
+      "withheld": true
+     },
+     {
+      "materialId": "youtube:OIyPE0z2mng",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": true
+     },
+     {
+      "materialId": "youtube:ZJrT-X08Xwc",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": true
+     }
+    ]
+   },
+   {
+    "threshold": 80,
+    "evaluated": 26,
+    "tp": 0,
+    "fp": 0,
+    "tn": 22,
+    "fn": 4,
+    "precision": "brak podstaw do obliczenia",
+    "precisionCI95": "brak podstaw do obliczenia",
+    "recall": 0.0,
+    "recallCI95": [
+     0.0,
+     0.4899
+    ],
+    "withheld": 13,
+    "withheldRate": 0.5,
+    "cost": 8,
+    "referredCampaigns": 0,
+    "truePositiveCampaigns": 0,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 0,
+     "fp": 0,
+     "tn": 17,
+     "fn": 3
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 0,
+    "errors": [
+     {
+      "materialId": "youtube:7M0rC6-Rueo",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-INWESTYCYJNAWYPRAWA-XTB",
+      "withheld": true
+     },
+     {
+      "materialId": "youtube:AqXHkxDzSDI",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FOREXMIND-XTB",
+      "withheld": true
+     },
+     {
+      "materialId": "youtube:OIyPE0z2mng",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": true
+     },
+     {
+      "materialId": "youtube:ZJrT-X08Xwc",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": true
+     }
+    ]
+   },
+   {
+    "threshold": 95,
+    "evaluated": 26,
+    "tp": 0,
+    "fp": 0,
+    "tn": 22,
+    "fn": 4,
+    "precision": "brak podstaw do obliczenia",
+    "precisionCI95": "brak podstaw do obliczenia",
+    "recall": 0.0,
+    "recallCI95": [
+     0.0,
+     0.4899
+    ],
+    "withheld": 13,
+    "withheldRate": 0.5,
+    "cost": 8,
+    "referredCampaigns": 0,
+    "truePositiveCampaigns": 0,
+    "independentCampaigns": 20,
+    "campaignLevel": {
+     "tp": 0,
+     "fp": 0,
+     "tn": 17,
+     "fn": 3
+    },
+    "registryNegatives": 14,
+    "registryInQueue": 0,
+    "errors": [
+     {
+      "materialId": "youtube:7M0rC6-Rueo",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-INWESTYCYJNAWYPRAWA-XTB",
+      "withheld": true
+     },
+     {
+      "materialId": "youtube:AqXHkxDzSDI",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FOREXMIND-XTB",
+      "withheld": true
+     },
+     {
+      "materialId": "youtube:OIyPE0z2mng",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": true
+     },
+     {
+      "materialId": "youtube:ZJrT-X08Xwc",
+      "outcome": "fn",
+      "label": "skieruj",
+      "campaignId": "C-M1-FINANSEOSOBISTEONLINE-XTB",
+      "withheld": true
+     }
+    ]
+   }
+  ],
+  "speechGate": "qual_d: 8 materiałów z trasą refer z samego opisu wstrzymanych (complete/transcript_pending): 4 pozytywy i 4 reklamy ujawnione dopiero w mowie (CDk20n4u9Kk, O5YmmKadQQw, YQH4FEP9exI, yIbtMnfP25Q). rules_1_2: 3 wstrzymane (04mmNbAlHFo, p_ui_fqLdV0, xtMqKkFO-0M)."
+ },
+ "campaignLevelCI95": {
+  "qual_d_precision_3of3": [
+   0.4385,
+   1.0
+  ],
+  "qual_d_recall_3of3": [
+   0.4385,
+   1.0
+  ],
+  "rules_1_2_precision_0of6": [
+   0.0,
+   0.3903
+  ]
+ },
+ "sensitivity": "qual_d na 17 filmach bez kadrów C i/lub bez flagi płatnej promocji: trasy bez zmian; wynik refer 85–100.",
+ "randomSample": {
+  "population": 348,
+  "sampled": 30,
+  "seed": 20261121,
+  "missedUndisclosed": 0,
+  "rate": 0.0,
+  "rateCI95": [
+   0.0,
+   0.1135
+  ],
+  "upperBoundMaterials": 39.5,
+  "registryInSample": 8,
+  "labels": "q-v2/losowa-proba-etykiety.jsonl",
+  "draw": "q-v2/losowa-proba-losowanie.json"
+ },
+ "gate": {
+  "status": "nie dotyczy / brak podstaw do oceny",
+  "reason": "oceny agentów, zbiór strojenia, 3 skierowane kampanie (wymagane ≥20 w odłożonym teście z wzorcem eksperckim)"
+ },
+ "recommendation": "Na dostępnych danych przełączenie M1 z rules_1_2 na qual_d (próg 60) zmniejsza koszt 2×FN+FP z 15 do 0 i liczbę prawidłowych reklam w kolejce z 7/14 do 0/14. To wynik strojenia, nie walidacja.",
+ "files": {
+  "etykiety-agentow.jsonl": "a3ee25d1aea295bfa052831ef6f93dd00492b638af6e2ba919096e7c9e5f8a1f",
+  "oceny-agentow.jsonl": "1cd13f1c25e06793589ecd35a97321ed73eff8baaa2d9492b3b72bdff5b1fbc2",
+  "predykcje-rules_1_2-pelne.jsonl": "e82e64a7dad4b4ab3f455cff3b952f441297f63f026355c44dad56838dbcb0ec",
+  "predykcje-qual_d-pelne.jsonl": "8e0dc2fbbbd0e0fcfc3ddcf4f513da4a8356c16410cff105ab9d569abf93d6d4",
+  "predykcje-rules_1_2-opis.jsonl": "c5464b69c557bc58b4652499e2a7705da2ada05d4c892df2e17d0957efa5da9c",
+  "predykcje-qual_d-opis.jsonl": "5db39a3c0bd987d6ec4ec12efbcc74c622f97fd9e0bb67c13b2a1136ac9106d4",
+  "losowa-proba-etykiety.jsonl": "6439e8669fbfa2380b9641ccf567a27ad75e3083e49dd60953f25958fb2c22cb",
+  "losowa-proba-losowanie.json": "78e1978f691ad98bfa7717add549462c543164f95d0a203dbb6501e921a01ae5",
+  "uruchom_warianty.py": "17eda392b8ab8b07d14513bca91217242b36cf5b6f14935d2d6fe28a7dd09359"
+ }
+}

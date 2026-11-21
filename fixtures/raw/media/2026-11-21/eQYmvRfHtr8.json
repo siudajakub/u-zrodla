@@ -1,0 +1,278 @@
+{
+ "videoId": "eQYmvRfHtr8",
+ "url": "https://www.youtube.com/watch?v=eQYmvRfHtr8",
+ "channel": "Comparic Rynki",
+ "firm": "XTB",
+ "observedAt": "2026-11-21T19:20:07+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "KUPIŁEŚ NA OTWARCIU? Wieczorem byłeś 13% pod kreską. Debiut Anthropic",
+  "channel": "Comparic Rynki",
+  "duration": 1108,
+  "uploadDate": "20261120",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 4916,
+ "descriptionSha256": "a86e7808210abe8dd4a1ec6c8576659d655263721f902cc0ec79e864482e23d4",
+ "paidPromotionFlagApi": true,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 438,
+  "spanSec": [
+   0.04,
+   1109.799
+  ],
+  "captionsSha256": "b344a9111345af2a0cb1f86934eecf6461ae77edafa3b3b56da5d35955123ff6",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 292026,
+  "segments": 438,
+  "captionsWallSeconds": 3.78,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 4916,
+    "originalTextSha256": "a86e7808210abe8dd4a1ec6c8576659d655263721f902cc0ec79e864482e23d4"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 1108
+     }
+    ],
+    "durationSec": 1108,
+    "reason": null,
+    "spanSec": [
+     0.04,
+     1109.799
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 4916 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 1108
+    }
+   ],
+   "durationSec": 1108,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": false,
+  "quote": null
+ },
+ "markingInSpeech": [
+  {
+   "start": 751,
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=751s",
+   "kind": "partner",
+   "quote": "je oczywiście u partnera tego odcinka XTB, a z kodem Comparik, jak będziecie zakładać konto, no to dorzucają jeszcze"
+  }
+ ],
+ "markersLexical": [
+  {
+   "start": 169.8,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "reszta to umowa z wielkimi partnerami",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=169s"
+  },
+  {
+   "start": 173.8,
+   "kinds": [
+    "wspolpraca"
+   ],
+   "quote": "współpracują z Antropikiem na co dzień.",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=173s"
+  },
+  {
+   "start": 397.479,
+   "kinds": [
+    "promocja"
+   ],
+   "quote": "A teraz w listopadowej promocji plany",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=397s"
+  },
+  {
+   "start": 403.36,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "z kodem Comparik. Dostajecie do tego",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=403s"
+  },
+  {
+   "start": 410.36,
+   "kinds": [
+    "promocja"
+   ],
+   "quote": "Promocja trwa do 24 listopada, a link",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=410s"
+  },
+  {
+   "start": 551.88,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "pisał kod, obsługiwał klientów albo",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=551s"
+  },
+  {
+   "start": 633.12,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "pieniędzmi. A polskie potwierdzenie XTB",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=633s"
+  },
+  {
+   "start": 751.56,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "je oczywiście u partnera tego odcinka",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=751s"
+  },
+  {
+   "start": 753.72,
+   "kinds": [
+    "kod",
+    "broker"
+   ],
+   "quote": "XTB, a z kodem Comparik, jak będziecie",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=753s"
+  },
+  {
+   "start": 866.72,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "za to, żeby jego model pisał kod i",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=866s"
+  },
+  {
+   "start": 1077.08,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "2027. Kod Blackweck pisany razem daje",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=1077s"
+  },
+  {
+   "start": 1098.48,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "użyjcie tego kodu. Ja nazywam się Marcin",
+   "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=1098s"
+  }
+ ],
+ "frames": [],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://link-pso.xtb.com/pso/GFTfa” w opisie (znaki 343–377).",
+    "Dodatkowy dowód relacji (creator_code): „Kod „COMPARIC” przy rejestracji = darmowy kurs inwestowania.” w opisie (znaki 490–550).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+    "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+    "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8",
+     "evidenceId": "ev-4",
+     "locator": {
+      "field": "description",
+      "charStart": 343,
+      "charEnd": 377,
+      "occurrences": 1
+     }
+    },
+    {
+     "start": null,
+     "end": null,
+     "label": "Dowód relacji handlowej",
+     "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8",
+     "evidenceId": "ev-5",
+     "locator": {
+      "field": "description",
+      "charStart": 490,
+      "charEnd": 550,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 85,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": [
+    "U1"
+   ]
+  },
+  "descriptionSpeechFrames": {
+   "route": "no_signal",
+   "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+   "reasons": [],
+   "moments": [],
+   "completeReason": null,
+   "relationship": "declared",
+   "score": 0,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+   "premises": [
+    "U1"
+   ]
+  }
+ }
+}

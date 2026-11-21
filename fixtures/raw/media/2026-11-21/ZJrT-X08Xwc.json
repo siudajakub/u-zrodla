@@ -1,0 +1,214 @@
+{
+ "videoId": "ZJrT-X08Xwc",
+ "url": "https://www.youtube.com/watch?v=ZJrT-X08Xwc",
+ "channel": "Wojtek Smart",
+ "firm": "XTB",
+ "observedAt": "2026-11-21T19:20:07+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Największy błąd początkujących inwestorów.",
+  "channel": "FinanseOsobisteOnline",
+  "duration": 20,
+  "uploadDate": "20261025",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 1945,
+ "descriptionSha256": "6daf4dc4ab5dbc3a9eff7eec5530d77966411e19b9f7f3dd8c8c1010def154ab",
+ "paidPromotionFlagApi": false,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 9,
+  "spanSec": [
+   0.68,
+   21.64
+  ],
+  "captionsSha256": "acbbe0ea32191c441c95d0e127569706cb71e92e788412ecbdef97465ccf05af",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 5868,
+  "segments": 9,
+  "captionsWallSeconds": 1.86,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 1945,
+    "originalTextSha256": "6daf4dc4ab5dbc3a9eff7eec5530d77966411e19b9f7f3dd8c8c1010def154ab"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 20
+     }
+    ],
+    "durationSec": 20,
+    "reason": null,
+    "spanSec": [
+     0.68,
+     21.64
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 1945 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 20
+    }
+   ],
+   "durationSec": 20,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": false,
+  "quote": null
+ },
+ "markingInSpeech": [],
+ "markersLexical": [],
+ "frames": [
+  {
+   "time": 2.86,
+   "requestedTime": 2.86,
+   "method": "storyboard_101x180",
+   "path": ".runtime/media-cache/ZJrT-X08Xwc/frames/storyboard_101x180_000002.jpg",
+   "sha256": "a7af2546289fb0c050187194239a4baae0844f3d7d36f7a77defa253c6ba05de",
+   "width": 100,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc&t=2s",
+   "observation": "Prowadzący z monetą; brak XTB i etykiet."
+  },
+  {
+   "time": 18.1,
+   "requestedTime": 18.1,
+   "method": "storyboard_101x180",
+   "path": ".runtime/media-cache/ZJrT-X08Xwc/frames/storyboard_101x180_000018.jpg",
+   "sha256": "e5606dadf8e081b1b1417211d6f5621f5659fbf3e32dbb19912b1cc847f7e259",
+   "width": 100,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc&t=18s",
+   "observation": "Prowadzący; brak XTB i etykiet."
+  },
+  {
+   "time": 19.0,
+   "requestedTime": 19.0,
+   "method": "stream_ffmpeg_360p",
+   "path": ".runtime/media-cache/ZJrT-X08Xwc/frames/stream_360p_000019.jpg",
+   "sha256": "b3e01b87503cdcbb0d9944a1b609b93a14599e40ab8656e814440fbe252c5589",
+   "width": 144,
+   "height": 256,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc&t=19s",
+   "observation": "Prowadzący (144x256); brak XTB i etykiety."
+  }
+ ],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 601–635).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+    "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+    "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc",
+     "evidenceId": "ev-5",
+     "locator": {
+      "field": "description",
+      "charStart": 601,
+      "charEnd": 635,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 75,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": [
+    "U1"
+   ]
+  },
+  "descriptionSpeechFrames": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 601–635).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres), mowie (pełny zakres), kadrach (wybrane momenty).",
+    "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc",
+     "evidenceId": "ev-5",
+     "locator": {
+      "field": "description",
+      "charStart": 601,
+      "charEnd": 635,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 90,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+   "premises": [
+    "U1"
+   ]
+  }
+ }
+}

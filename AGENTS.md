@@ -10,6 +10,8 @@ InvestWatch automatycznie odkrywa i flaguje materiały z polskiego rynku. Źród
 
 ## Orkiestracja i odbiór
 
+W sesji Claude Code prowadzonej na polecenie J obowiązuje [prompt Fable](START_PROMPT.md) i [plan Opus/Sonnet](docs/fable/REALIZACJA.md). Fable wyłącznie orkiestruje, a wykonanie i niezależny odbiór deleguje Opus i Sonnet. Poniższy przydział dotyczy sesji Codex.
+
 ASTRA pełni wyłącznie rolę orkiestratora. Wyznacza cel, rozdziela zakresy, uzgadnia kontrakty, ocenia dowody, koordynuje integrację i komunikuje wynik J. Wykonanie, test i niezależny przegląd deleguje agentom SOL i TERRA. Historyczne nazwy gałęzi opisują poprzednią rundę.
 
 Każdą falę prowadź z agentami. Do rutynowych zmian i odtwarzalnych sprawdzeń wybieraj niższy lub średni reasoning, do diagnoz, niejednoznacznych danych i architektury wysoki. Przy spornej hipotezie niech jeden agent ją sprawdzi, drugi spróbuje obalić na tym samym materiale. Zapisz kontrprzykład, decyzję i test rozstrzygający. Do oceny angażuj osobnych sędziów SOL i TERRA, zanim poznają nawzajem swoje punkty. Dbaj o limit zasobów hosta.

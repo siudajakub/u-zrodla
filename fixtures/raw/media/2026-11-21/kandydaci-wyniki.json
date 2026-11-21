@@ -1,0 +1,1340 @@
+{
+ "generatedAt": "2026-11-21T19:19:39+00:00",
+ "adapter": "collectors/media.py",
+ "qualify": "analysis.qualification.qualify",
+ "note": "Cytaty z auto-napisów YouTube, nie poprawiane. markingInSpeech.kind: partner = słowo partner odcinka/kanału bez słów reklama/współpraca; affiliate = link partnerski; None = promocja bez oznaczenia.",
+ "results": [
+  {
+   "videoId": "O5YmmKadQQw",
+   "url": "https://www.youtube.com/watch?v=O5YmmKadQQw",
+   "channel": "Krypto Królestwo",
+   "firm": "eToro",
+   "title": "eToro UPDATE część praktyczna: bonus, BLIK, KYC i ETF-y 💵",
+   "durationSec": 857,
+   "paidPromotionFlagApi": false,
+   "markingInDescription": {
+    "found": false,
+    "quote": null
+   },
+   "markingInSpeech": [
+    {
+     "start": 121,
+     "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=121s",
+     "kind": "affiliate",
+     "quote": "Oczywiście jeżeli rejestrujcie się z linku partnerskiego to jak najbardziej was to uprawnia do bonusu. Dlatego"
+    }
+   ],
+   "frames": [
+    {
+     "time": 84.21,
+     "requestedTime": 84.21,
+     "method": "storyboard_320x180",
+     "path": ".runtime/media-cache/O5YmmKadQQw/frames/storyboard_320x180_000084.jpg",
+     "sha256": "987235361cd52af62170eed63fdd7da4073bf1eb2cf2e6763cb6175c4d36e532",
+     "width": 320,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=84s",
+     "observation": "Zrzut strony szybkihajs.pl z tytułem „eToro 2026 — do $500 w darmowych akcjach”; prowadzący w rogu. Brak etykiety reklamy lub współpracy na wideo."
+    },
+    {
+     "time": 123.84,
+     "requestedTime": 123.84,
+     "method": "storyboard_320x180",
+     "path": ".runtime/media-cache/O5YmmKadQQw/frames/storyboard_320x180_000123.jpg",
+     "sha256": "0073399af326335eb1b8c84e22231f8c9e5d38ce92822259562a622a02fe6004",
+     "width": 320,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=123s",
+     "observation": "Ta sama strona (progi bonusu), prowadzący w rogu. Brak etykiety."
+    },
+    {
+     "time": 584.54,
+     "requestedTime": 584.54,
+     "method": "storyboard_320x180",
+     "path": ".runtime/media-cache/O5YmmKadQQw/frames/storyboard_320x180_000584.jpg",
+     "sha256": "0c33525bf71c4fc681e3b8ef5843756cc922314f0b1dd18a9eafc00ce2749752",
+     "width": 320,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=584s",
+     "observation": "Okno rejestracji. Brak etykiety."
+    },
+    {
+     "time": 87.0,
+     "requestedTime": 87.0,
+     "method": "stream_ffmpeg_360p",
+     "path": ".runtime/media-cache/O5YmmKadQQw/frames/stream_360p_000087.jpg",
+     "sha256": "2780e2f19acbff878582da856fc61b1586f8906218f4666bc67a385143b451d9",
+     "width": 640,
+     "height": 360,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=O5YmmKadQQw&t=87s",
+     "observation": "Czytelny zrzut strony „eToro 2026 — do $500 w darmowych akcjach”, przycisk „Zobacz co teraz wypłaca”. Brak etykiety reklamy lub współpracy w obrazie."
+    }
+   ],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "no_signal",
+     "reason": "Wzmianka o firmie bez relacji reklamowej (poza kolejką M1).",
+     "reasons": [],
+     "moments": [],
+     "completeReason": null,
+     "relationship": "none",
+     "score": null,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": []
+    },
+    "descriptionSpeechFrames": {
+     "route": "no_signal",
+     "reason": "Wzmianka o firmie bez relacji reklamowej (poza kolejką M1).",
+     "reasons": [],
+     "moments": [],
+     "completeReason": null,
+     "relationship": "none",
+     "score": 0,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "premises": []
+    }
+   },
+   "measurement": {
+    "captionBytes": 256996,
+    "segments": 398,
+    "captionsWallSeconds": 2.02,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "AqXHkxDzSDI",
+   "url": "https://www.youtube.com/watch?v=AqXHkxDzSDI",
+   "channel": "ForexMind",
+   "firm": "XTB",
+   "title": "Freedom24 Alternatywy: Którego brokera wybrać? (2026)",
+   "durationSec": 204,
+   "paidPromotionFlagApi": false,
+   "markingInDescription": {
+    "found": false,
+    "quote": null
+   },
+   "markingInSpeech": [
+    {
+     "start": 13,
+     "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=13s",
+     "kind": null,
+     "quote": "24. A jeśli chcesz otworzyć konto, znajdziesz linki do specjalnych ofert w"
+    },
+    {
+     "start": 186,
+     "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=186s",
+     "kind": null,
+     "quote": "wyborem. W opisie znajdziesz linki do specjalnych ofert dla obu brokerów, więc"
+    }
+   ],
+   "frames": [
+    {
+     "time": 15.84,
+     "requestedTime": 15.84,
+     "method": "storyboard_320x180",
+     "path": ".runtime/media-cache/AqXHkxDzSDI/frames/storyboard_320x180_000015.jpg",
+     "sha256": "3a8f04cf9cd2f92ef57641a0d2df4c40b71bb946753ce8265e49329b39c91ab7",
+     "width": 320,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=15s",
+     "observation": "Prowadzący przy biurku, napisy wypalone w obrazie powtarzają mowę. Brak etykiety reklamy lub współpracy."
+    },
+    {
+     "time": 59.42,
+     "requestedTime": 59.42,
+     "method": "storyboard_320x180",
+     "path": ".runtime/media-cache/AqXHkxDzSDI/frames/storyboard_320x180_000059.jpg",
+     "sha256": "a711782a7d7f34ed7f29b1b4a2b0858cdc40fe68d510b5062da26558afd906eb",
+     "width": 320,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=59s",
+     "observation": "Platforma handlowa i kod QR. Brak etykiety."
+    },
+    {
+     "time": 186.17,
+     "requestedTime": 186.17,
+     "method": "storyboard_320x180",
+     "path": ".runtime/media-cache/AqXHkxDzSDI/frames/storyboard_320x180_000186.jpg",
+     "sha256": "26c33a97287a38682ab2d2aa00000988d8e324533eb38829a5d3a622e76ee449",
+     "width": 320,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=AqXHkxDzSDI&t=186s",
+     "observation": "Prowadzący, napisy wypalone w obrazie powtarzają mowę. Brak etykiety."
+    }
+   ],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "no_signal",
+     "reason": "Wzmianka o firmie bez relacji reklamowej (poza kolejką M1).",
+     "reasons": [],
+     "moments": [],
+     "completeReason": null,
+     "relationship": "none",
+     "score": null,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": []
+    },
+    "descriptionSpeechFrames": {
+     "route": "no_signal",
+     "reason": "Wzmianka o firmie bez relacji reklamowej (poza kolejką M1).",
+     "reasons": [],
+     "moments": [],
+     "completeReason": null,
+     "relationship": "none",
+     "score": 0,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "premises": []
+    }
+   },
+   "measurement": {
+    "captionBytes": 49594,
+    "segments": 81,
+    "captionsWallSeconds": 1.84,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "yIbtMnfP25Q",
+   "url": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+   "channel": "Dywidendowy Inwestor",
+   "firm": "XTB",
+   "title": "Tak teraz wygląda MÓJ PORTFEL ROSNĄCYCH DYWIDEND! Aktualizacja Q3 2026.",
+   "durationSec": 1098,
+   "paidPromotionFlagApi": false,
+   "markingInDescription": {
+    "found": false,
+    "quote": null
+   },
+   "markingInSpeech": [
+    {
+     "start": 55,
+     "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=55s",
+     "kind": "partner",
+     "quote": "Jeżeli chcecie zacząć inwestować, to ja do tego celu używam i polecam konto XTB, które jest partnerem mojego kanału. W"
+    }
+   ],
+   "frames": [
+    {
+     "time": 59.0,
+     "requestedTime": 59.0,
+     "method": "stream_ffmpeg_360p",
+     "path": ".runtime/media-cache/yIbtMnfP25Q/frames/stream_360p_000059.jpg",
+     "sha256": "288fc4e12507b38905ed317cf4da71c4eb7b90d8d22f7daf7e12ab43da494433",
+     "width": 640,
+     "height": 360,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=59s",
+     "observation": "Plansza XTB „Inwestuj w akcje i ETF-y bez prowizji”, „DOŁĄCZ DO XTB”, ostrzeżenie o ryzyku. Brak słowa reklama ani współpraca w obrazie."
+    },
+    {
+     "time": 65.0,
+     "requestedTime": 65.0,
+     "method": "stream_ffmpeg_360p",
+     "path": ".runtime/media-cache/yIbtMnfP25Q/frames/stream_360p_000065.jpg",
+     "sha256": "2f3f9d3ed223260776be49881e0c97b55d2040d6e91b5e43463174602ec50fdf",
+     "width": 640,
+     "height": 360,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=65s",
+     "observation": "Ta sama plansza XTB, bez etykiety reklamy."
+    },
+    {
+     "time": 199.0,
+     "requestedTime": 199.0,
+     "method": "stream_ffmpeg_360p",
+     "path": ".runtime/media-cache/yIbtMnfP25Q/frames/stream_360p_000199.jpg",
+     "sha256": "7163a1790f4f1467817f66f484392c21ad3355419b38019252b1dac8e665aecf",
+     "width": 640,
+     "height": 360,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q&t=199s",
+     "observation": "Tabela portfela, brak oznaczeń."
+    }
+   ],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://link-pso.xtb.com/pso/WtGV9” w opisie (znaki 732–766).",
+      "Dodatkowy dowód relacji (creator_code): „Teraz, rejestrując się w XTB z kodem \"DYWIDENDOWY \" otrzymacie pełny kurs edukacyjny dedykowany pocz” w opisie (znaki 833–954).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+      "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+      "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+       "evidenceId": "ev-2",
+       "locator": {
+        "field": "description",
+        "charStart": 732,
+        "charEnd": 766,
+        "occurrences": 1
+       }
+      },
+      {
+       "start": null,
+       "end": null,
+       "label": "Dowód relacji handlowej",
+       "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+       "evidenceId": "ev-4",
+       "locator": {
+        "field": "description",
+        "charStart": 833,
+        "charEnd": 954,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 85,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": [
+      "U1"
+     ]
+    },
+    "descriptionSpeechFrames": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://link-pso.xtb.com/pso/WtGV9” w opisie (znaki 732–766).",
+      "Dodatkowy dowód relacji (creator_code): „Teraz, rejestrując się w XTB z kodem \"DYWIDENDOWY \" otrzymacie pełny kurs edukacyjny dedykowany pocz” w opisie (znaki 833–954).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres), mowie (pełny zakres), kadrach (wybrane momenty).",
+      "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+       "evidenceId": "ev-2",
+       "locator": {
+        "field": "description",
+        "charStart": 732,
+        "charEnd": 766,
+        "occurrences": 1
+       }
+      },
+      {
+       "start": null,
+       "end": null,
+       "label": "Dowód relacji handlowej",
+       "deepLink": "https://www.youtube.com/watch?v=yIbtMnfP25Q",
+       "evidenceId": "ev-4",
+       "locator": {
+        "field": "description",
+        "charStart": 833,
+        "charEnd": 954,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 100,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "premises": [
+      "U1"
+     ]
+    }
+   },
+   "measurement": {
+    "captionBytes": 386058,
+    "segments": 578,
+    "captionsWallSeconds": 2.2,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "7M0rC6-Rueo",
+   "url": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+   "channel": "Inwestycyjna wyprawa",
+   "firm": "XTB",
+   "title": "Ile trzeba mieć, żeby zacząć inwestować? 2 lata inwestowania. Brutalna prawda.",
+   "durationSec": 886,
+   "paidPromotionFlagApi": false,
+   "markingInDescription": {
+    "found": false,
+    "quote": null
+   },
+   "markingInSpeech": [],
+   "frames": [
+    {
+     "time": 9.9,
+     "requestedTime": 9.9,
+     "method": "storyboard_320x180",
+     "path": ".runtime/media-cache/7M0rC6-Rueo/frames/storyboard_320x180_000009.jpg",
+     "sha256": "66f139aa853d8136e515fa1382950d12bf79b43ff3ce8168a14e688ce469a10e",
+     "width": 320,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo&t=9s",
+     "observation": "Prowadzący z kartą „PUBLICZNY PORTFEL”; brak XTB i etykiet."
+    },
+    {
+     "time": 440.53,
+     "requestedTime": 440.53,
+     "method": "storyboard_320x180",
+     "path": ".runtime/media-cache/7M0rC6-Rueo/frames/storyboard_320x180_000440.jpg",
+     "sha256": "bf17e6d52fe80868ee7cd63fd833443c263d88b0dd315ea77d0c0e332459e8ed",
+     "width": 320,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo&t=440s",
+     "observation": "Wykresy portfela; brak XTB i etykiet."
+    },
+    {
+     "time": 871.15,
+     "requestedTime": 871.15,
+     "method": "storyboard_320x180",
+     "path": ".runtime/media-cache/7M0rC6-Rueo/frames/storyboard_320x180_000871.jpg",
+     "sha256": "915b884aa8ee230c8ec2a6c040d86798d4a824e549f7c985b49d82facec8fa0a",
+     "width": 320,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo&t=871s",
+     "observation": "Wykres portfela; brak XTB i etykiet."
+    }
+   ],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 178–212).",
+      "Dodatkowy dowód relacji (creator_code): „✅Konto maklerskie (XTB) (z kodem \" WYPRAWA \"): https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 131–212).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+      "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+      "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+       "evidenceId": "ev-3",
+       "locator": {
+        "field": "description",
+        "charStart": 178,
+        "charEnd": 212,
+        "occurrences": 1
+       }
+      },
+      {
+       "start": null,
+       "end": null,
+       "label": "Dowód relacji handlowej",
+       "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+       "evidenceId": "ev-2",
+       "locator": {
+        "field": "description",
+        "charStart": 131,
+        "charEnd": 212,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 90,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": [
+      "U1",
+      "U1"
+     ]
+    },
+    "descriptionSpeechFrames": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 178–212).",
+      "Dodatkowy dowód relacji (creator_code): „✅Konto maklerskie (XTB) (z kodem \" WYPRAWA \"): https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 131–212).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres), mowie (pełny zakres), kadrach (wybrane momenty).",
+      "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+       "evidenceId": "ev-3",
+       "locator": {
+        "field": "description",
+        "charStart": 178,
+        "charEnd": 212,
+        "occurrences": 1
+       }
+      },
+      {
+       "start": null,
+       "end": null,
+       "label": "Dowód relacji handlowej",
+       "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+       "evidenceId": "ev-2",
+       "locator": {
+        "field": "description",
+        "charStart": 131,
+        "charEnd": 212,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 100,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "premises": [
+      "U1",
+      "U1"
+     ]
+    }
+   },
+   "measurement": {
+    "captionBytes": 272624,
+    "segments": 408,
+    "captionsWallSeconds": 1.98,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "OIyPE0z2mng",
+   "url": "https://www.youtube.com/watch?v=OIyPE0z2mng",
+   "channel": "Wojtek Smart",
+   "firm": "XTB",
+   "title": "Jak znaleźć pierwsze oszczędności gdy brakuje na wszystko",
+   "durationSec": 58,
+   "paidPromotionFlagApi": false,
+   "markingInDescription": {
+    "found": false,
+    "quote": null
+   },
+   "markingInSpeech": [],
+   "frames": [
+    {
+     "time": 4.83,
+     "requestedTime": 4.83,
+     "method": "storyboard_101x180",
+     "path": ".runtime/media-cache/OIyPE0z2mng/frames/storyboard_101x180_000004.jpg",
+     "sha256": "cdff653f16be91c272c4d9d6298e93e1305c1a90c0d2000d4de04deafa5c5fde",
+     "width": 100,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng&t=4s",
+     "observation": "Prowadzący, napisy wypalone w obrazie; brak XTB i etykiet (kadr 101x180, drobny druk nieczytelny)."
+    },
+    {
+     "time": 29.97,
+     "requestedTime": 29.97,
+     "method": "storyboard_101x180",
+     "path": ".runtime/media-cache/OIyPE0z2mng/frames/storyboard_101x180_000029.jpg",
+     "sha256": "b9c59d9f875f7a759e666b939fae4af4b76b5b5407688d11f9dbbe976c7ebb07",
+     "width": 100,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng&t=29s",
+     "observation": "Prowadzący, napisy wypalone; brak etykiet."
+    },
+    {
+     "time": 55.1,
+     "requestedTime": 55.1,
+     "method": "storyboard_101x180",
+     "path": ".runtime/media-cache/OIyPE0z2mng/frames/storyboard_101x180_000055.jpg",
+     "sha256": "f94341f507b6ad6d781761f4ee0b8b4961557cf8906eae9dacd93b4f4f085dc8",
+     "width": 100,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng&t=55s",
+     "observation": "Plansza „JAK ZBUDOWAĆ PODUSZKĘ FINANSOWĄ?”; brak XTB i etykiet."
+    },
+    {
+     "time": 56.0,
+     "requestedTime": 56.0,
+     "method": "stream_ffmpeg_360p",
+     "path": ".runtime/media-cache/OIyPE0z2mng/frames/stream_360p_000056.jpg",
+     "sha256": "e56b87fa8c3d3bf2aee0d388eba50df1c8f799ef2f00236d31e55610e946aa99",
+     "width": 144,
+     "height": 256,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng&t=56s",
+     "observation": "Plansza „JAK ZBUDOWAĆ PODUSZKĘ FINANSOWĄ?” (144x256), brak XTB, brak etykiety."
+    }
+   ],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 786–820).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+      "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+      "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng",
+       "evidenceId": "ev-5",
+       "locator": {
+        "field": "description",
+        "charStart": 786,
+        "charEnd": 820,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 75,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": [
+      "U1"
+     ]
+    },
+    "descriptionSpeechFrames": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 786–820).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres), mowie (pełny zakres), kadrach (wybrane momenty).",
+      "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=OIyPE0z2mng",
+       "evidenceId": "ev-5",
+       "locator": {
+        "field": "description",
+        "charStart": 786,
+        "charEnd": 820,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 90,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "premises": [
+      "U1"
+     ]
+    }
+   },
+   "measurement": {
+    "captionBytes": 18154,
+    "segments": 28,
+    "captionsWallSeconds": 2.13,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "ZJrT-X08Xwc",
+   "url": "https://www.youtube.com/watch?v=ZJrT-X08Xwc",
+   "channel": "Wojtek Smart",
+   "firm": "XTB",
+   "title": "Największy błąd początkujących inwestorów.",
+   "durationSec": 20,
+   "paidPromotionFlagApi": false,
+   "markingInDescription": {
+    "found": false,
+    "quote": null
+   },
+   "markingInSpeech": [],
+   "frames": [
+    {
+     "time": 2.86,
+     "requestedTime": 2.86,
+     "method": "storyboard_101x180",
+     "path": ".runtime/media-cache/ZJrT-X08Xwc/frames/storyboard_101x180_000002.jpg",
+     "sha256": "a7af2546289fb0c050187194239a4baae0844f3d7d36f7a77defa253c6ba05de",
+     "width": 100,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc&t=2s",
+     "observation": "Prowadzący z monetą; brak XTB i etykiet."
+    },
+    {
+     "time": 18.1,
+     "requestedTime": 18.1,
+     "method": "storyboard_101x180",
+     "path": ".runtime/media-cache/ZJrT-X08Xwc/frames/storyboard_101x180_000018.jpg",
+     "sha256": "e5606dadf8e081b1b1417211d6f5621f5659fbf3e32dbb19912b1cc847f7e259",
+     "width": 100,
+     "height": 180,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc&t=18s",
+     "observation": "Prowadzący; brak XTB i etykiet."
+    },
+    {
+     "time": 19.0,
+     "requestedTime": 19.0,
+     "method": "stream_ffmpeg_360p",
+     "path": ".runtime/media-cache/ZJrT-X08Xwc/frames/stream_360p_000019.jpg",
+     "sha256": "b3e01b87503cdcbb0d9944a1b609b93a14599e40ab8656e814440fbe252c5589",
+     "width": 144,
+     "height": 256,
+     "bytesFetched": 0,
+     "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc&t=19s",
+     "observation": "Prowadzący (144x256); brak XTB i etykiety."
+    }
+   ],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 601–635).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+      "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+      "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc",
+       "evidenceId": "ev-5",
+       "locator": {
+        "field": "description",
+        "charStart": 601,
+        "charEnd": 635,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 75,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": [
+      "U1"
+     ]
+    },
+    "descriptionSpeechFrames": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://link-pso.xtb.com/pso/u0V2g” w opisie (znaki 601–635).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres), mowie (pełny zakres), kadrach (wybrane momenty).",
+      "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=ZJrT-X08Xwc",
+       "evidenceId": "ev-5",
+       "locator": {
+        "field": "description",
+        "charStart": 601,
+        "charEnd": 635,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 90,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+     "premises": [
+      "U1"
+     ]
+    }
+   },
+   "measurement": {
+    "captionBytes": 5868,
+    "segments": 9,
+    "captionsWallSeconds": 1.86,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "eQYmvRfHtr8",
+   "url": "https://www.youtube.com/watch?v=eQYmvRfHtr8",
+   "channel": "Comparic Rynki",
+   "firm": "XTB",
+   "title": "KUPIŁEŚ NA OTWARCIU? Wieczorem byłeś 13% pod kreską. Debiut Anthropic",
+   "durationSec": 1108,
+   "paidPromotionFlagApi": true,
+   "markingInDescription": {
+    "found": false,
+    "quote": null
+   },
+   "markingInSpeech": [
+    {
+     "start": 751,
+     "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8&t=751s",
+     "kind": "partner",
+     "quote": "je oczywiście u partnera tego odcinka XTB, a z kodem Comparik, jak będziecie zakładać konto, no to dorzucają jeszcze"
+    }
+   ],
+   "frames": [],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://link-pso.xtb.com/pso/GFTfa” w opisie (znaki 343–377).",
+      "Dodatkowy dowód relacji (creator_code): „Kod „COMPARIC” przy rejestracji = darmowy kurs inwestowania.” w opisie (znaki 490–550).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+      "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+      "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8",
+       "evidenceId": "ev-4",
+       "locator": {
+        "field": "description",
+        "charStart": 343,
+        "charEnd": 377,
+        "occurrences": 1
+       }
+      },
+      {
+       "start": null,
+       "end": null,
+       "label": "Dowód relacji handlowej",
+       "deepLink": "https://www.youtube.com/watch?v=eQYmvRfHtr8",
+       "evidenceId": "ev-5",
+       "locator": {
+        "field": "description",
+        "charStart": 490,
+        "charEnd": 550,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 85,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": [
+      "U1"
+     ]
+    },
+    "descriptionSpeechFrames": {
+     "route": "no_signal",
+     "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+     "reasons": [],
+     "moments": [],
+     "completeReason": null,
+     "relationship": "declared",
+     "score": 0,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "premises": [
+      "U1"
+     ]
+    }
+   },
+   "measurement": {
+    "captionBytes": 292026,
+    "segments": 438,
+    "captionsWallSeconds": 3.78,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "YQH4FEP9exI",
+   "url": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+   "channel": "Comparic Rynki",
+   "firm": "XTB",
+   "title": "NIEMCY PĘKAJĄ Z TRZECH STRON NARAZ. A czwarta strona to Polska",
+   "durationSec": 871,
+   "paidPromotionFlagApi": null,
+   "markingInDescription": {
+    "found": false,
+    "quote": null
+   },
+   "markingInSpeech": [
+    {
+     "start": 697,
+     "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI&t=697s",
+     "kind": "partner",
+     "quote": "macie u partnera tego odcinka XTB, a z kodem COMPARYK dorzucają jeszcze darmowy"
+    }
+   ],
+   "frames": [],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://link-pso.xtb.com/pso/GFTfa” w opisie (znaki 232–266).",
+      "Dodatkowy dowód relacji (creator_code): „Kod „COMPARIC” przy rejestracji = darmowy kurs inwestowania.” w opisie (znaki 379–439).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+      "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+      "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny); flaga płatnej promocji niesprawdzona."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+       "evidenceId": "ev-3",
+       "locator": {
+        "field": "description",
+        "charStart": 232,
+        "charEnd": 266,
+        "occurrences": 1
+       }
+      },
+      {
+       "start": null,
+       "end": null,
+       "label": "Dowód relacji handlowej",
+       "deepLink": "https://www.youtube.com/watch?v=YQH4FEP9exI",
+       "evidenceId": "ev-4",
+       "locator": {
+        "field": "description",
+        "charStart": 379,
+        "charEnd": 439,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 85,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": [
+      "U1"
+     ]
+    },
+    "descriptionSpeechFrames": {
+     "route": "no_signal",
+     "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+     "reasons": [],
+     "moments": [],
+     "completeReason": null,
+     "relationship": "declared",
+     "score": 0,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "premises": [
+      "U1"
+     ]
+    }
+   },
+   "measurement": {
+    "captionBytes": 219670,
+    "segments": 342,
+    "captionsWallSeconds": 3.53,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "o2GfnmVVkO8",
+   "url": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+   "channel": "Piotr Cymcyk - Merytorycznie o Finansach",
+   "firm": "Freedom24",
+   "title": "Gdybym miał włożyć cały majątek tylko w 3 spółki z USA, wybrałbym te!",
+   "durationSec": 1032,
+   "paidPromotionFlagApi": true,
+   "markingInDescription": {
+    "found": false,
+    "quote": null
+   },
+   "markingInSpeech": [
+    {
+     "start": 77,
+     "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8&t=77s",
+     "kind": "partner",
+     "quote": "koniecznie Freedom partnera tego odcinka. Masa instrumentów tam jest"
+    }
+   ],
+   "frames": [],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=2111” w opisie (znaki 61–113).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+      "Firma: Freedom24; kandydaci z wykazu KNF: [9439434].",
+      "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+       "evidenceId": "ev-1",
+       "locator": {
+        "field": "description",
+        "charStart": 61,
+        "charEnd": 113,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 75,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": [
+      "U1"
+     ]
+    },
+    "descriptionSpeechFrames": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://c.freedom24.com/?a=t9fkwo&i=fvk7z5&ref1=2111” w opisie (znaki 61–113).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres), mowie (pełny zakres).",
+      "Firma: Freedom24; kandydaci z wykazu KNF: [9439434].",
+      "Niezbadane: kadrów nie zbadano (krok opcjonalny)."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=o2GfnmVVkO8",
+       "evidenceId": "ev-1",
+       "locator": {
+        "field": "description",
+        "charStart": 61,
+        "charEnd": 113,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 85,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "premises": [
+      "U1"
+     ]
+    }
+   },
+   "measurement": {
+    "captionBytes": 331538,
+    "segments": 501,
+    "captionsWallSeconds": 1.84,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "ePfzHQVf-lc",
+   "url": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+   "channel": "Piotr Cymcyk - Merytorycznie o Finansach",
+   "firm": "XTB",
+   "title": "Kupiłem te spółki za 40 tysięcy zł. To Wy zbudowaliście ten portfel! | PORTFEL WIDZÓW 02",
+   "durationSec": 1507,
+   "paidPromotionFlagApi": true,
+   "markingInDescription": {
+    "found": false,
+    "quote": null
+   },
+   "markingInSpeech": [
+    {
+     "start": 98,
+     "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=98s",
+     "kind": "partner",
+     "quote": "niewielkie. Partnerem tego odcinka jest XTB, polska aplikacja inwestycyjna, w"
+    }
+   ],
+   "frames": [],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "refer",
+     "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+     "reasons": [
+      "Znaleziono: „https://link-pso.xtb.com/pso/kdg44” w opisie (znaki 79–113).",
+      "Dodatkowy dowód relacji (creator_code): „Rejestrując się na XTB z kodem DNARYNKOW otrzymasz specjalny kurs zarządzania finansami od podstaw.” w opisie (znaki 115–214).",
+      "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+      "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+      "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+     ],
+     "moments": [
+      {
+       "start": null,
+       "end": null,
+       "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+       "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+       "evidenceId": "ev-2",
+       "locator": {
+        "field": "description",
+        "charStart": 79,
+        "charEnd": 113,
+        "occurrences": 1
+       }
+      },
+      {
+       "start": null,
+       "end": null,
+       "label": "Dowód relacji handlowej",
+       "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+       "evidenceId": "ev-3",
+       "locator": {
+        "field": "description",
+        "charStart": 115,
+        "charEnd": 214,
+        "occurrences": 1
+       }
+      }
+     ],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 85,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": [
+      "U1"
+     ]
+    },
+    "descriptionSpeechFrames": {
+     "route": "no_signal",
+     "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+     "reasons": [],
+     "moments": [],
+     "completeReason": null,
+     "relationship": "declared",
+     "score": 0,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "premises": [
+      "U1"
+     ]
+    }
+   },
+   "measurement": {
+    "captionBytes": 473420,
+    "segments": 706,
+    "captionsWallSeconds": 2.2,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "_aqCM37gK1U",
+   "url": "https://www.youtube.com/watch?v=_aqCM37gK1U",
+   "channel": "Piotr Cymcyk - Merytorycznie o Finansach",
+   "firm": "Saxo Bank",
+   "title": "Kupujesz za późno i sprzedajesz za wcześnie? To nie jest przypadek!",
+   "durationSec": 1173,
+   "paidPromotionFlagApi": true,
+   "markingInDescription": {
+    "found": true,
+    "quote": "Partnerem publikacji jest Saxo Bank, z którym serwis prowadzi płatną współpracę marketingową. #PłatnaWspółpraca / Saxo Bank"
+   },
+   "markingInSpeech": [
+    {
+     "start": 85,
+     "deepLink": "https://www.youtube.com/watch?v=_aqCM37gK1U&t=85s",
+     "kind": "partner+reklamowy",
+     "quote": "partnerem tego materiału jest Saxo Bank. Tadam! Pojawił się też kaseton reklamowy. Duński bank dla inwestorów,"
+    }
+   ],
+   "frames": [],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "complete",
+     "reason": "Promowany podmiot bez wpisu w przejrzanych wykazach: do uzupełnienia przed oceną.",
+     "reasons": [],
+     "moments": [],
+     "completeReason": "identity_unresolved",
+     "relationship": "declared",
+     "score": 35,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": [
+      "U3"
+     ]
+    },
+    "descriptionSpeechFrames": {
+     "route": "complete",
+     "reason": "Promowany podmiot bez wpisu w przejrzanych wykazach: do uzupełnienia przed oceną.",
+     "reasons": [],
+     "moments": [],
+     "completeReason": "identity_unresolved",
+     "relationship": "declared",
+     "score": 35,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "premises": [
+      "U3"
+     ]
+    }
+   },
+   "measurement": {
+    "captionBytes": 363960,
+    "segments": 562,
+    "captionsWallSeconds": 2.08,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "p_ui_fqLdV0",
+   "url": "https://www.youtube.com/watch?v=p_ui_fqLdV0",
+   "channel": "Konopskyy",
+   "firm": "XTB",
+   "title": "PIERWSZY YOUTUBER SKAZANY ZA PANDORA GATE! (CHAJZER, WOJEWÓDZKI, STUU, ZONDA CRYPTO, ZAORSKI, MULTI)",
+   "durationSec": 2043,
+   "paidPromotionFlagApi": false,
+   "markingInDescription": {
+    "found": true,
+    "quote": "⚫️[reklama] Zarejestruj się w XTB z kodem KONOP i zgarnij darmowy kurs inwestowania od podstaw"
+   },
+   "markingInSpeech": [
+    {
+     "start": 56,
+     "deepLink": "https://www.youtube.com/watch?v=p_ui_fqLdV0&t=56s",
+     "kind": null,
+     "quote": "wasze zamówienia. XCB to polska aplikacja inwestycyjna. Przy rejestracji z kodem Konop otrzymacie darmowy kurs"
+    }
+   ],
+   "frames": [],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "complete",
+     "reason": "Relacja reklamowa (declared) z XTB; treść mowy niezbadana.",
+     "reasons": [],
+     "moments": [],
+     "completeReason": "transcript_unavailable",
+     "relationship": "declared",
+     "score": null,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": []
+    },
+    "descriptionSpeechFrames": {
+     "route": "no_signal",
+     "reason": "Relacja reklamowa bez przesłanki do kontroli w opisie i mowie; wpis w rejestrze reklam.",
+     "reasons": [],
+     "moments": [],
+     "completeReason": null,
+     "relationship": "declared",
+     "score": 0,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "premises": []
+    }
+   },
+   "measurement": {
+    "captionBytes": 597610,
+    "segments": 928,
+    "captionsWallSeconds": 1.91,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  },
+  {
+   "videoId": "i3QxMqyRlks",
+   "url": "https://www.youtube.com/watch?v=i3QxMqyRlks",
+   "channel": "Bądź Na Bieżąco",
+   "firm": "Freedom24",
+   "title": "Z Ostatniej Chwili! Kolejne Rakiety SPADAJĄ Na Polskę! Kraj NATO Zamyka Granice",
+   "durationSec": 1112,
+   "paidPromotionFlagApi": true,
+   "markingInDescription": {
+    "found": true,
+    "quote": "*Materiał sponsorowany przez Freedom."
+   },
+   "markingInSpeech": [
+    {
+     "start": 44,
+     "deepLink": "https://www.youtube.com/watch?v=i3QxMqyRlks&t=44s",
+     "kind": "partner",
+     "quote": "zaczniemy, partnerem kanału jest Freedom, międzynarodowy broker, u"
+    }
+   ],
+   "frames": [],
+   "qualification": {
+    "descriptionOnly": {
+     "route": "complete",
+     "reason": "Relacja reklamowa (probable) z Freedom24; treść mowy niezbadana.",
+     "reasons": [],
+     "moments": [],
+     "completeReason": "transcript_unavailable",
+     "relationship": "probable",
+     "score": null,
+     "coverageState": "partial",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+     "premises": []
+    },
+    "descriptionSpeechFrames": {
+     "route": "no_signal",
+     "reason": "Relacja reklamowa bez przesłanki do kontroli w opisie i mowie; wpis w rejestrze reklam.",
+     "reasons": [],
+     "moments": [],
+     "completeReason": null,
+     "relationship": "probable",
+     "score": 0,
+     "coverageState": "full",
+     "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+     "premises": []
+    }
+   },
+   "measurement": {
+    "captionBytes": 293326,
+    "segments": 460,
+    "captionsWallSeconds": 1.92,
+    "requests": 1,
+    "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+   }
+  }
+ ],
+ "totals": {
+  "captionsWallSeconds": 29.3,
+  "captionBytes": 3560844,
+  "framesWallSeconds": 61.1,
+  "framesBytesFetched": 1076902,
+  "note": "kadry: 2 serie (storyboard i stream 360p) razem; ASR nie uruchamiano"
+ }
+}

@@ -1,0 +1,6636 @@
+{
+ "main": {
+  "top5": {
+   "found": 3,
+   "denominator": 5,
+   "excludedSeeded": 0,
+   "foundIds": [
+    "UCe8VykA_qDCBmg_08eIA8iQ",
+    "UC7MTGFfIn1Hht3ZMQxnZBhA",
+    "UCG4T6bLDq2TdAdRAp2GDOCw"
+   ]
+  },
+  "top10": {
+   "found": 7,
+   "denominator": 9,
+   "excludedSeeded": 1,
+   "foundIds": [
+    "UCe8VykA_qDCBmg_08eIA8iQ",
+    "UC7MTGFfIn1Hht3ZMQxnZBhA",
+    "UCG4T6bLDq2TdAdRAp2GDOCw",
+    "UCMh0w6OpVi085p81jK5TnzQ",
+    "UCCJJbk-s8G0HM-3IK9CnzEg",
+    "UCtTpDSRTegHewCxP9GTUaXQ",
+    "UCgw_3Epv7swquSZyMDjYHTg"
+   ]
+  },
+  "top20": {
+   "found": 10,
+   "denominator": 19,
+   "excludedSeeded": 1,
+   "foundIds": [
+    "UCe8VykA_qDCBmg_08eIA8iQ",
+    "UC7MTGFfIn1Hht3ZMQxnZBhA",
+    "UCG4T6bLDq2TdAdRAp2GDOCw",
+    "UCMh0w6OpVi085p81jK5TnzQ",
+    "UCCJJbk-s8G0HM-3IK9CnzEg",
+    "UCtTpDSRTegHewCxP9GTUaXQ",
+    "UCgw_3Epv7swquSZyMDjYHTg",
+    "UCh9IhKUDYhf0-IyJII0VClg",
+    "UC2uGYk6qOnd2EtXGXszNijw",
+    "UCoVF7lPMKO2HYXfdkcHqEpQ"
+   ]
+  },
+  "all69": {
+   "found": 33,
+   "denominator": 68,
+   "excludedSeeded": 1,
+   "foundIds": [
+    "UCe8VykA_qDCBmg_08eIA8iQ",
+    "UC7MTGFfIn1Hht3ZMQxnZBhA",
+    "UCG4T6bLDq2TdAdRAp2GDOCw",
+    "UCMh0w6OpVi085p81jK5TnzQ",
+    "UCCJJbk-s8G0HM-3IK9CnzEg",
+    "UCtTpDSRTegHewCxP9GTUaXQ",
+    "UCgw_3Epv7swquSZyMDjYHTg",
+    "UCh9IhKUDYhf0-IyJII0VClg",
+    "UC2uGYk6qOnd2EtXGXszNijw",
+    "UCoVF7lPMKO2HYXfdkcHqEpQ",
+    "UCcJq-5bSAMp2ZCOR8kacfmA",
+    "UC3JgUN78v4RX3saWqmCEV1g",
+    "UCAH85XhPoXCxSXUKdwsm0Ig",
+    "UCVK5sOPiHl9dPd4QvFBkm9Q",
+    "UCBEGi9VJj43G_ISUDRFEsAA",
+    "UC4Qc_TYL6BsqiqXXorBFoaA",
+    "UChLwJNFJURZxzAAPEsrnxfQ",
+    "UCHv11ztykFWf_0dhTEMLO6A",
+    "UCv6mTV4iQMOeixAWz47bP4Q",
+    "UCQdae3gqmjZTBqqAgX5gbrg",
+    "UCeCqF_8l5SJQmf8jBe-BzxA",
+    "UC9J9JyhNzrcehLdsU0qJvPg",
+    "UCdiAORc5zDcFqhojS9LNT0w",
+    "UCEK_g_v3-VhfLuFi-5eXCsQ",
+    "UCL8l0qKn8uO0Pea-yBbZDQA",
+    "UCeCGxJV5ECqBQEydmeLmY4w",
+    "UCYjxwFqTUwO5cja6xi5mvUg",
+    "UCAl0XDWVK5_dNrrwl4da3jA",
+    "UC816J_EZEICUYOhjTnk3o7Q",
+    "UCOiMJpkQSXDspWRMoI2B6CQ",
+    "UCFiObcDqkjNjNsvA6M0xLzQ",
+    "UCmi2y00F2ayFD5rg8HEQTmQ",
+    "UCncwT-5nfGttxQyV7UxM9Nw"
+   ]
+  }
+ },
+ "noCrypto": {
+  "top5": {
+   "found": 4,
+   "denominator": 5,
+   "excludedSeeded": 0,
+   "foundIds": [
+    "UCe8VykA_qDCBmg_08eIA8iQ",
+    "UC7MTGFfIn1Hht3ZMQxnZBhA",
+    "UCG4T6bLDq2TdAdRAp2GDOCw",
+    "UCMh0w6OpVi085p81jK5TnzQ"
+   ]
+  },
+  "top10": {
+   "found": 8,
+   "denominator": 9,
+   "excludedSeeded": 1,
+   "foundIds": [
+    "UCe8VykA_qDCBmg_08eIA8iQ",
+    "UC7MTGFfIn1Hht3ZMQxnZBhA",
+    "UCG4T6bLDq2TdAdRAp2GDOCw",
+    "UCMh0w6OpVi085p81jK5TnzQ",
+    "UCCJJbk-s8G0HM-3IK9CnzEg",
+    "UCtTpDSRTegHewCxP9GTUaXQ",
+    "UCgw_3Epv7swquSZyMDjYHTg",
+    "UCh9IhKUDYhf0-IyJII0VClg"
+   ]
+  },
+  "top20": {
+   "found": 14,
+   "denominator": 19,
+   "excludedSeeded": 1,
+   "foundIds": [
+    "UCe8VykA_qDCBmg_08eIA8iQ",
+    "UC7MTGFfIn1Hht3ZMQxnZBhA",
+    "UCG4T6bLDq2TdAdRAp2GDOCw",
+    "UCMh0w6OpVi085p81jK5TnzQ",
+    "UCCJJbk-s8G0HM-3IK9CnzEg",
+    "UCtTpDSRTegHewCxP9GTUaXQ",
+    "UCgw_3Epv7swquSZyMDjYHTg",
+    "UCh9IhKUDYhf0-IyJII0VClg",
+    "UC2uGYk6qOnd2EtXGXszNijw",
+    "UCcJq-5bSAMp2ZCOR8kacfmA",
+    "UC3JgUN78v4RX3saWqmCEV1g",
+    "UCAH85XhPoXCxSXUKdwsm0Ig",
+    "UCVK5sOPiHl9dPd4QvFBkm9Q",
+    "UCBEGi9VJj43G_ISUDRFEsAA"
+   ]
+  },
+  "all": {
+   "found": 32,
+   "denominator": 48,
+   "excludedSeeded": 1,
+   "foundIds": [
+    "UCe8VykA_qDCBmg_08eIA8iQ",
+    "UC7MTGFfIn1Hht3ZMQxnZBhA",
+    "UCG4T6bLDq2TdAdRAp2GDOCw",
+    "UCMh0w6OpVi085p81jK5TnzQ",
+    "UCCJJbk-s8G0HM-3IK9CnzEg",
+    "UCtTpDSRTegHewCxP9GTUaXQ",
+    "UCgw_3Epv7swquSZyMDjYHTg",
+    "UCh9IhKUDYhf0-IyJII0VClg",
+    "UC2uGYk6qOnd2EtXGXszNijw",
+    "UCcJq-5bSAMp2ZCOR8kacfmA",
+    "UC3JgUN78v4RX3saWqmCEV1g",
+    "UCAH85XhPoXCxSXUKdwsm0Ig",
+    "UCVK5sOPiHl9dPd4QvFBkm9Q",
+    "UCBEGi9VJj43G_ISUDRFEsAA",
+    "UC4Qc_TYL6BsqiqXXorBFoaA",
+    "UChLwJNFJURZxzAAPEsrnxfQ",
+    "UCHv11ztykFWf_0dhTEMLO6A",
+    "UCv6mTV4iQMOeixAWz47bP4Q",
+    "UCQdae3gqmjZTBqqAgX5gbrg",
+    "UCeCqF_8l5SJQmf8jBe-BzxA",
+    "UC9J9JyhNzrcehLdsU0qJvPg",
+    "UCdiAORc5zDcFqhojS9LNT0w",
+    "UCEK_g_v3-VhfLuFi-5eXCsQ",
+    "UCL8l0qKn8uO0Pea-yBbZDQA",
+    "UCeCGxJV5ECqBQEydmeLmY4w",
+    "UCYjxwFqTUwO5cja6xi5mvUg",
+    "UCAl0XDWVK5_dNrrwl4da3jA",
+    "UC816J_EZEICUYOhjTnk3o7Q",
+    "UCOiMJpkQSXDspWRMoI2B6CQ",
+    "UCFiObcDqkjNjNsvA6M0xLzQ",
+    "UCmi2y00F2ayFD5rg8HEQTmQ",
+    "UCncwT-5nfGttxQyV7UxM9Nw"
+   ]
+  }
+ },
+ "broadAllTabs": {
+  "top5": {
+   "found": 2,
+   "denominator": 5,
+   "excludedSeeded": 0,
+   "foundIds": [
+    "UC2MQ1TRVmCnslmwlgqayVrw",
+    "UCNvSk-U6X9mOJHr7wz_xCWw"
+   ]
+  },
+  "top10": {
+   "found": 4,
+   "denominator": 10,
+   "excludedSeeded": 0,
+   "foundIds": [
+    "UC2MQ1TRVmCnslmwlgqayVrw",
+    "UCNvSk-U6X9mOJHr7wz_xCWw",
+    "UCe8VykA_qDCBmg_08eIA8iQ",
+    "UC7MTGFfIn1Hht3ZMQxnZBhA"
+   ]
+  },
+  "top20": {
+   "found": 10,
+   "denominator": 19,
+   "excludedSeeded": 1,
+   "foundIds": [
+    "UC2MQ1TRVmCnslmwlgqayVrw",
+    "UCNvSk-U6X9mOJHr7wz_xCWw",
+    "UCe8VykA_qDCBmg_08eIA8iQ",
+    "UC7MTGFfIn1Hht3ZMQxnZBhA",
+    "UCG4T6bLDq2TdAdRAp2GDOCw",
+    "UCMh0w6OpVi085p81jK5TnzQ",
+    "UCCJJbk-s8G0HM-3IK9CnzEg",
+    "UCtTpDSRTegHewCxP9GTUaXQ",
+    "UCgw_3Epv7swquSZyMDjYHTg",
+    "UCh9IhKUDYhf0-IyJII0VClg"
+   ]
+  },
+  "all82": {
+   "found": 36,
+   "denominator": 81,
+   "excludedSeeded": 1,
+   "foundIds": [
+    "UC2MQ1TRVmCnslmwlgqayVrw",
+    "UCNvSk-U6X9mOJHr7wz_xCWw",
+    "UCe8VykA_qDCBmg_08eIA8iQ",
+    "UC7MTGFfIn1Hht3ZMQxnZBhA",
+    "UCG4T6bLDq2TdAdRAp2GDOCw",
+    "UCMh0w6OpVi085p81jK5TnzQ",
+    "UCCJJbk-s8G0HM-3IK9CnzEg",
+    "UCtTpDSRTegHewCxP9GTUaXQ",
+    "UCgw_3Epv7swquSZyMDjYHTg",
+    "UCh9IhKUDYhf0-IyJII0VClg",
+    "UC2uGYk6qOnd2EtXGXszNijw",
+    "UCoVF7lPMKO2HYXfdkcHqEpQ",
+    "UCcJq-5bSAMp2ZCOR8kacfmA",
+    "UC3JgUN78v4RX3saWqmCEV1g",
+    "UCAH85XhPoXCxSXUKdwsm0Ig",
+    "UCVK5sOPiHl9dPd4QvFBkm9Q",
+    "UCBEGi9VJj43G_ISUDRFEsAA",
+    "UC4Qc_TYL6BsqiqXXorBFoaA",
+    "UChLwJNFJURZxzAAPEsrnxfQ",
+    "UC4IuBQ0i0z4l1jnHEHVcelQ",
+    "UCHv11ztykFWf_0dhTEMLO6A",
+    "UCv6mTV4iQMOeixAWz47bP4Q",
+    "UCQdae3gqmjZTBqqAgX5gbrg",
+    "UCeCqF_8l5SJQmf8jBe-BzxA",
+    "UC9J9JyhNzrcehLdsU0qJvPg",
+    "UCdiAORc5zDcFqhojS9LNT0w",
+    "UCEK_g_v3-VhfLuFi-5eXCsQ",
+    "UCL8l0qKn8uO0Pea-yBbZDQA",
+    "UCeCGxJV5ECqBQEydmeLmY4w",
+    "UCYjxwFqTUwO5cja6xi5mvUg",
+    "UCAl0XDWVK5_dNrrwl4da3jA",
+    "UC816J_EZEICUYOhjTnk3o7Q",
+    "UCOiMJpkQSXDspWRMoI2B6CQ",
+    "UCFiObcDqkjNjNsvA6M0xLzQ",
+    "UCmi2y00F2ayFD5rg8HEQTmQ",
+    "UCncwT-5nfGttxQyV7UxM9Nw"
+   ]
+  }
+ },
+ "broadTop5Names": [
+  "Globalista TV",
+  "Damian Olszewski - Praktycznie o pieniądzach",
+  "Maciej Wieczorek - Expert w Bentleyu",
+  "namzalezy.pl",
+  "didaskalia - Patrycjusz Wyżga"
+ ],
+ "noCryptoTop5Names": [
+  "Marcin Iwuć",
+  "Pankracy",
+  "Zawód Inwestor",
+  "Independent Trader",
+  "Tomasz Trela – Twój człowiek na Wall Street"
+ ],
+ "perFamily": {
+  "brand": {
+   "searchUnits": 800,
+   "pages": [
+    "XTB p1",
+    "XTB p2",
+    "eToro p1",
+    "Trading 212 p1",
+    "Freedom24 p1",
+    "Interactive Brokers p1",
+    "Saxo Bank p1",
+    "mBank eMakler p1"
+   ],
+   "top5": 2,
+   "top10": 4,
+   "top20": 5,
+   "all69": 15,
+   "onlyThisFamily69": 1,
+   "all69Per100Units": 1.88,
+   "page1Units": 700,
+   "all69Page1Only": 14,
+   "top20Page1Only": 5,
+   "noCryptoTop5": 2,
+   "broadTop5": 0,
+   "broadAll82": 16
+  },
+  "topic": {
+   "searchUnits": 800,
+   "pages": [
+    "inwestowanie p1",
+    "inwestowanie p2",
+    "giełda p1",
+    "ETF p1",
+    "akcje dywidendowe p1",
+    "obligacje skarbowe p1",
+    "IKE IKZE p1",
+    "jak zacząć inwestować p1"
+   ],
+   "top5": 3,
+   "top10": 7,
+   "top20": 9,
+   "all69": 31,
+   "onlyThisFamily69": 14,
+   "all69Per100Units": 3.88,
+   "page1Units": 700,
+   "all69Page1Only": 30,
+   "top20Page1Only": 9,
+   "noCryptoTop5": 4,
+   "broadTop5": 2,
+   "broadAll82": 33
+  },
+  "promo": {
+   "searchUnits": 300,
+   "pages": [
+    "partnerem odcinka p1",
+    "kod promocyjny konto maklerskie p1",
+    "link w opisie darmowe akcje p1"
+   ],
+   "top5": 1,
+   "top10": 4,
+   "top20": 6,
+   "all69": 10,
+   "onlyThisFamily69": 1,
+   "all69Per100Units": 3.33,
+   "page1Units": 300,
+   "all69Page1Only": 10,
+   "top20Page1Only": 6,
+   "noCryptoTop5": 1,
+   "broadTop5": 1,
+   "broadAll82": 11
+  }
+ },
+ "equalBudget300": {
+  "brand": {
+   "pages": [
+    "XTB p1",
+    "XTB p2",
+    "eToro p1"
+   ],
+   "units": 300,
+   "all69": 11,
+   "top20": 3
+  },
+  "topic": {
+   "pages": [
+    "inwestowanie p1",
+    "inwestowanie p2",
+    "giełda p1"
+   ],
+   "units": 300,
+   "all69": 21,
+   "top20": 10
+  },
+  "promo": {
+   "pages": [
+    "partnerem odcinka p1",
+    "kod promocyjny konto maklerskie p1",
+    "link w opisie darmowe akcje p1"
+   ],
+   "units": 300,
+   "all69": 10,
+   "top20": 7
+  }
+ },
+ "perQuery": [
+  {
+   "n": 1,
+   "family": "brand",
+   "query": "XTB",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:45+00:00",
+   "items": 50,
+   "totalResults": 458217,
+   "channels": 25,
+   "yQualifiedHits": 10,
+   "yQualifiedRanks": [
+    4,
+    8,
+    9,
+    24,
+    26,
+    37,
+    39,
+    41,
+    42,
+    48
+   ]
+  },
+  {
+   "n": 2,
+   "family": "brand",
+   "query": "XTB",
+   "page": 2,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:46+00:00",
+   "items": 50,
+   "totalResults": 458219,
+   "channels": 22,
+   "yQualifiedHits": 9,
+   "yQualifiedRanks": [
+    8,
+    9,
+    24,
+    26,
+    37,
+    41,
+    42,
+    48,
+    63
+   ]
+  },
+  {
+   "n": 3,
+   "family": "brand",
+   "query": "eToro",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:46+00:00",
+   "items": 50,
+   "totalResults": 412164,
+   "channels": 29,
+   "yQualifiedHits": 0,
+   "yQualifiedRanks": []
+  },
+  {
+   "n": 4,
+   "family": "brand",
+   "query": "Trading 212",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:47+00:00",
+   "items": 50,
+   "totalResults": 685116,
+   "channels": 36,
+   "yQualifiedHits": 0,
+   "yQualifiedRanks": []
+  },
+  {
+   "n": 5,
+   "family": "brand",
+   "query": "Freedom24",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:48+00:00",
+   "items": 50,
+   "totalResults": 71009,
+   "channels": 33,
+   "yQualifiedHits": 3,
+   "yQualifiedRanks": [
+    9,
+    12,
+    24
+   ]
+  },
+  {
+   "n": 6,
+   "family": "brand",
+   "query": "Interactive Brokers",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:49+00:00",
+   "items": 50,
+   "totalResults": 569399,
+   "channels": 37,
+   "yQualifiedHits": 0,
+   "yQualifiedRanks": []
+  },
+  {
+   "n": 7,
+   "family": "brand",
+   "query": "Saxo Bank",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:49+00:00",
+   "items": 50,
+   "totalResults": 129423,
+   "channels": 32,
+   "yQualifiedHits": 4,
+   "yQualifiedRanks": [
+    1,
+    9,
+    43,
+    52
+   ]
+  },
+  {
+   "n": 8,
+   "family": "brand",
+   "query": "mBank eMakler",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:50+00:00",
+   "items": 50,
+   "totalResults": 129,
+   "channels": 6,
+   "yQualifiedHits": 1,
+   "yQualifiedRanks": [
+    41
+   ]
+  },
+  {
+   "n": 9,
+   "family": "topic",
+   "query": "inwestowanie",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:51+00:00",
+   "items": 53,
+   "totalResults": 1000000,
+   "channels": 32,
+   "yQualifiedHits": 11,
+   "yQualifiedRanks": [
+    1,
+    3,
+    4,
+    7,
+    8,
+    9,
+    12,
+    14,
+    24,
+    25,
+    37
+   ]
+  },
+  {
+   "n": 10,
+   "family": "topic",
+   "query": "inwestowanie",
+   "page": 2,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:52+00:00",
+   "items": 50,
+   "totalResults": 1000000,
+   "channels": 33,
+   "yQualifiedHits": 6,
+   "yQualifiedRanks": [
+    3,
+    6,
+    26,
+    29,
+    47,
+    67
+   ]
+  },
+  {
+   "n": 11,
+   "family": "topic",
+   "query": "giełda",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:52+00:00",
+   "items": 50,
+   "totalResults": 1000000,
+   "channels": 21,
+   "yQualifiedHits": 12,
+   "yQualifiedRanks": [
+    6,
+    8,
+    9,
+    12,
+    25,
+    32,
+    37,
+    41,
+    47,
+    48,
+    50,
+    55
+   ]
+  },
+  {
+   "n": 12,
+   "family": "topic",
+   "query": "ETF",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:53+00:00",
+   "items": 50,
+   "totalResults": 1000000,
+   "channels": 29,
+   "yQualifiedHits": 9,
+   "yQualifiedRanks": [
+    1,
+    3,
+    7,
+    9,
+    12,
+    29,
+    41,
+    57,
+    63
+   ]
+  },
+  {
+   "n": 13,
+   "family": "topic",
+   "query": "akcje dywidendowe",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:54+00:00",
+   "items": 53,
+   "totalResults": 9522,
+   "channels": 34,
+   "yQualifiedHits": 10,
+   "yQualifiedRanks": [
+    4,
+    6,
+    26,
+    29,
+    35,
+    43,
+    47,
+    49,
+    57,
+    58
+   ]
+  },
+  {
+   "n": 14,
+   "family": "topic",
+   "query": "obligacje skarbowe",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:54+00:00",
+   "items": 53,
+   "totalResults": 705234,
+   "channels": 40,
+   "yQualifiedHits": 6,
+   "yQualifiedRanks": [
+    1,
+    3,
+    7,
+    24,
+    39,
+    57
+   ]
+  },
+  {
+   "n": 15,
+   "family": "topic",
+   "query": "IKE IKZE",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:55+00:00",
+   "items": 50,
+   "totalResults": 18266,
+   "channels": 37,
+   "yQualifiedHits": 10,
+   "yQualifiedRanks": [
+    1,
+    3,
+    4,
+    7,
+    12,
+    24,
+    37,
+    51,
+    52,
+    57
+   ]
+  },
+  {
+   "n": 16,
+   "family": "topic",
+   "query": "jak zacząć inwestować",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:56+00:00",
+   "items": 53,
+   "totalResults": 199606,
+   "channels": 44,
+   "yQualifiedHits": 7,
+   "yQualifiedRanks": [
+    1,
+    3,
+    4,
+    7,
+    24,
+    48,
+    65
+   ]
+  },
+  {
+   "n": 17,
+   "family": "promo",
+   "query": "partnerem odcinka",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:56+00:00",
+   "items": 50,
+   "totalResults": 362530,
+   "channels": 25,
+   "yQualifiedHits": 2,
+   "yQualifiedRanks": [
+    7,
+    32
+   ]
+  },
+  {
+   "n": 18,
+   "family": "promo",
+   "query": "kod promocyjny konto maklerskie",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:57+00:00",
+   "items": 50,
+   "totalResults": 85821,
+   "channels": 11,
+   "yQualifiedHits": 5,
+   "yQualifiedRanks": [
+    4,
+    12,
+    17,
+    26,
+    63
+   ]
+  },
+  {
+   "n": 19,
+   "family": "promo",
+   "query": "link w opisie darmowe akcje",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:58+00:00",
+   "items": 50,
+   "totalResults": 1000000,
+   "channels": 42,
+   "yQualifiedHits": 6,
+   "yQualifiedRanks": [
+    7,
+    8,
+    9,
+    12,
+    17,
+    25
+   ]
+  }
+ ],
+ "outsideY": {
+  "polish100kTotal": 41,
+  "polish100kNotInY": 30,
+  "polish100kNotInYWithFirmPromo": 10,
+  "items": [
+   {
+    "channelId": "UClhEl4bMD8_escGCCTmRAYg",
+    "name": "Kanał Zero",
+    "subscribers": 2420000,
+    "firmPromotionVideos": 12,
+    "videosFound": 51,
+    "query": "link w opisie darmowe akcje",
+    "family": "promo",
+    "position": 13,
+    "exampleTitle": "RAKIETY I DRON W POLSCE, FIASKO RESETU WS. TK? DOMAŃSKI WICEPREMIEREM – PRZEKAZ DNIA"
+   },
+   {
+    "channelId": "UCR7uLtPuXsDpN8N6ocFQyeg",
+    "name": "Konopskyy",
+    "subscribers": 2130000,
+    "firmPromotionVideos": 50,
+    "videosFound": 50,
+    "query": "link w opisie darmowe akcje",
+    "family": "promo",
+    "position": 33,
+    "exampleTitle": "NOWE USTALENIA O TRAGEDII W KRAKOWIE"
+   },
+   {
+    "channelId": "UCYsZvmJGPzTMSBXES06-2lg",
+    "name": "Patecki",
+    "subscribers": 1980000,
+    "firmPromotionVideos": 0,
+    "videosFound": 50,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 20,
+    "exampleTitle": "Rozdaliśmy WAM 500 000 zł"
+   },
+   {
+    "channelId": "UCw6m0T0_F5DLfPzJHumplDw",
+    "name": "HISTORIA REALNA",
+    "subscribers": 778000,
+    "firmPromotionVideos": 5,
+    "videosFound": 5,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 3,
+    "exampleTitle": "Rakiety na Polskę! Tusk ujawnia: USA nie chcą eskalacji z Rosją! — Radosław Pyffel i Piotr Zychowicz"
+   },
+   {
+    "channelId": "UCCT_JGIn9I9FS6OTzzqWEew",
+    "name": "Robert Makłowicz",
+    "subscribers": 702000,
+    "firmPromotionVideos": 0,
+    "videosFound": 1,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 29,
+    "exampleTitle": "„Pula i Poreč &quot; - ROBERT MAKŁOWICZ ISTRIA odc.304"
+   },
+   {
+    "channelId": "UCrKY6A2xsHXgw3MK9mkan5w",
+    "name": "Przemek Górczyk Podcast",
+    "subscribers": 666000,
+    "firmPromotionVideos": 0,
+    "videosFound": 3,
+    "query": "inwestowanie",
+    "family": "topic",
+    "position": 69,
+    "exampleTitle": "Dlaczego Nie Warto Aktywnie Inwestować – ft. Tomasz Jaroszek"
+   },
+   {
+    "channelId": "UCF5Ug3YNz41qauWNMacdLgw",
+    "name": "Do Roboty",
+    "subscribers": 646000,
+    "firmPromotionVideos": 0,
+    "videosFound": 1,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 41,
+    "exampleTitle": "12 000 ZŁ za HEKTAR?! Karczowanie lasu mulczerem i koparką z gilotyną | Do Roboty"
+   },
+   {
+    "channelId": "UCTVB8m2FcbwBsi6DHsGSuVw",
+    "name": "CANAL+ SPORT",
+    "subscribers": 646000,
+    "firmPromotionVideos": 1,
+    "videosFound": 1,
+    "query": "XTB",
+    "family": "brand",
+    "position": 35,
+    "exampleTitle": "XTB KSW 123 | STUDIO + DWIE DARMOWE WALKI"
+   },
+   {
+    "channelId": "UCv_fwQqff6zEFDxfJh_03fg",
+    "name": "KSW",
+    "subscribers": 626000,
+    "firmPromotionVideos": 0,
+    "videosFound": 2,
+    "query": "XTB",
+    "family": "brand",
+    "position": 1,
+    "exampleTitle": "STUDIO + DWIE DARMOWE WALKI + OTWARCIE GALI XTB KSW 123 W SZCZECINIE"
+   },
+   {
+    "channelId": "UCTAAUHQl0sN6w0RpAUzs-Bg",
+    "name": "Bądź Na Bieżąco",
+    "subscribers": 562000,
+    "firmPromotionVideos": 2,
+    "videosFound": 2,
+    "query": "Freedom24",
+    "family": "brand",
+    "position": 1,
+    "exampleTitle": "FREEDOM24 - SZCZERA RECENZJA I PORADNIK. CZY WARTO?"
+   },
+   {
+    "channelId": "UCH5UB8PulkZ75fOHgcSGt2g",
+    "name": "naTemat",
+    "subscribers": 536000,
+    "firmPromotionVideos": 1,
+    "videosFound": 3,
+    "query": "XTB",
+    "family": "brand",
+    "position": 29,
+    "exampleTitle": "&quot;Czy moje pieniądze są tam bezpieczne?&quot;. Prezes XTB odpowiada wprost na obawy Polaków"
+   },
+   {
+    "channelId": "UCxhAfhXu0ECIbt_2AN-NdHw",
+    "name": "Biznes Misja",
+    "subscribers": 506000,
+    "firmPromotionVideos": 0,
+    "videosFound": 2,
+    "query": "inwestowanie",
+    "family": "topic",
+    "position": 8,
+    "exampleTitle": "W co inwestować małe kwoty? Inwestowanie na 2027! Mateusz Mucha - Beta ETF"
+   },
+   {
+    "channelId": "UCblCfbJ9YCBU11ngfsZKlWg",
+    "name": "Mieczaki AJ",
+    "subscribers": 372000,
+    "firmPromotionVideos": 0,
+    "videosFound": 1,
+    "query": "link w opisie darmowe akcje",
+    "family": "promo",
+    "position": 30,
+    "exampleTitle": "BUNT PRZECIWKO DOWÓDCY (WOJSKO DZIEŃ 3) - MIĘCZAKI S01E56"
+   },
+   {
+    "channelId": "UCk1qY09hkqTworXLBKd5M-w",
+    "name": "This Is IT - Maciej Kawecki",
+    "subscribers": 347000,
+    "firmPromotionVideos": 0,
+    "videosFound": 1,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 11,
+    "exampleTitle": "„Nieskończoność nie istnieje”. Polski fizyk obala mit początku Wszechświata | Ryszard Stroynowski"
+   },
+   {
+    "channelId": "UCMI9Cw5EiT9I1IjetPEXl8Q",
+    "name": "DzikPlus",
+    "subscribers": 338000,
+    "firmPromotionVideos": 0,
+    "videosFound": 1,
+    "query": "link w opisie darmowe akcje",
+    "family": "promo",
+    "position": 46,
+    "exampleTitle": "WSZYSTKIE KLASY *ZA DARMO* w ANIMAL HOSPITAL! 🏥"
+   },
+   {
+    "channelId": "UC6SinQiw2eDU6k9tEXpZv9g",
+    "name": "Kuba Midel",
+    "subscribers": 325000,
+    "firmPromotionVideos": 3,
+    "videosFound": 5,
+    "query": "Freedom24",
+    "family": "brand",
+    "position": 7,
+    "exampleTitle": "Dlaczego inwestuję przez Freedom?"
+   },
+   {
+    "channelId": "UCjkNubkfecaFLZbHnnsz6pw",
+    "name": "Onet Rano",
+    "subscribers": 310000,
+    "firmPromotionVideos": 0,
+    "videosFound": 1,
+    "query": "jak zacząć inwestować",
+    "family": "topic",
+    "position": 15,
+    "exampleTitle": "Jak zacząć inwestować i nie stracić pieniędzy?"
+   },
+   {
+    "channelId": "UCGTkoYHU9n1Ec2Z4s5kdgVg",
+    "name": "Koniec Świata - Arleta Bojke",
+    "subscribers": 309000,
+    "firmPromotionVideos": 1,
+    "videosFound": 1,
+    "query": "link w opisie darmowe akcje",
+    "family": "promo",
+    "position": 25,
+    "exampleTitle": "KREML MARZY O PRZYWRÓCENIU PRACY NORD STREAM. GAZOCIĄG BYŁ FASCYNACJĄ PUTINA [WYCISZKIEWICZ I BOJKE]"
+   },
+   {
+    "channelId": "UCmsxFRm1zRgueucG2Pc9Kzg",
+    "name": "x-kom",
+    "subscribers": 303000,
+    "firmPromotionVideos": 0,
+    "videosFound": 2,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 8,
+    "exampleTitle": "TEASER czwartego odcinka PC Masters 🔥 Będzie naprawdę gorąco! #PCMasters #xkom"
+   },
+   {
+    "channelId": "UCKGrbEJp8wgNrR4Q3OeO4bw",
+    "name": "OdwróconaLekcja",
+    "subscribers": 289000,
+    "firmPromotionVideos": 0,
+    "videosFound": 1,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 35,
+    "exampleTitle": "Najdziwniejsza katastrofa okrętu podwodnego! Thetis!"
+   },
+   {
+    "channelId": "UCuAOJnMr905iKjURUsffDgA",
+    "name": "Kanał Otwarty",
+    "subscribers": 229000,
+    "firmPromotionVideos": 0,
+    "videosFound": 12,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 9,
+    "exampleTitle": "Powstanie wielkopolskie 1806. Jak Dąbrowski i Wybicki pomogli Napoleonowi odbudować polskie wojsko?"
+   },
+   {
+    "channelId": "UCEPr3huxC4mEPN8NtIKVmxA",
+    "name": "Gosia Ohme",
+    "subscribers": 215000,
+    "firmPromotionVideos": 1,
+    "videosFound": 3,
+    "query": "ETF",
+    "family": "topic",
+    "position": 16,
+    "exampleTitle": "ETF-y dla początkujących. Jak inwestować na całym świecie? | Gosia Ohme Podcast"
+   },
+   {
+    "channelId": "UCmodyDWBnEMvu7uLASNQNvg",
+    "name": "Think About | Piotr Opulski",
+    "subscribers": 195000,
+    "firmPromotionVideos": 0,
+    "videosFound": 1,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 31,
+    "exampleTitle": "Domowy makaron za 200 czy 4000 zł? Pojedynek maszynek do makaronu"
+   },
+   {
+    "channelId": "UChFr0plZ7_23KlTMFEKlMlA",
+    "name": "Szczytomaniak",
+    "subscribers": 181000,
+    "firmPromotionVideos": 0,
+    "videosFound": 1,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 28,
+    "exampleTitle": "Ostatnia wyprawa Jerzego Kukuczki i Wojciecha Kurtyki. Co wydarzyło się na Manaslu w 1986 roku?"
+   },
+   {
+    "channelId": "UCE3d89daLWhqWKYUMMw3bsA",
+    "name": "fuziak",
+    "subscribers": 169000,
+    "firmPromotionVideos": 0,
+    "videosFound": 1,
+    "query": "giełda",
+    "family": "topic",
+    "position": 50,
+    "exampleTitle": "Giełda wytłumaczona w Minecraft 💰"
+   },
+   {
+    "channelId": "UC5SCWle5EgiN7vzMMwPOpug",
+    "name": "Kiszak",
+    "subscribers": 143000,
+    "firmPromotionVideos": 1,
+    "videosFound": 1,
+    "query": "XTB",
+    "family": "brand",
+    "position": 50,
+    "exampleTitle": "NA GRACH MOŻNA ZARABIAĆ #reklama #xtb"
+   },
+   {
+    "channelId": "UCoPYlABqb3uQGqVH2Cjl8ww",
+    "name": "Jacek Niedałtowski - NiedałtowskiFinanse",
+    "subscribers": 137000,
+    "firmPromotionVideos": 0,
+    "videosFound": 3,
+    "query": "inwestowanie",
+    "family": "topic",
+    "position": 34,
+    "exampleTitle": "Przeczytaj to zanim zaczniesz inwestować 😎"
+   },
+   {
+    "channelId": "UC16y5xkzIplJDo5rsZ6d6HQ",
+    "name": "Kozaczek",
+    "subscribers": 134000,
+    "firmPromotionVideos": 0,
+    "videosFound": 8,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 2,
+    "exampleTitle": "Beata Pawlikowska o manipulacji w związku! Partnerem odcinka jest Apart"
+   },
+   {
+    "channelId": "UChqVjLVciDeMlKA0bB42HXA",
+    "name": "Kanał o technologii",
+    "subscribers": 124000,
+    "firmPromotionVideos": 0,
+    "videosFound": 2,
+    "query": "partnerem odcinka",
+    "family": "promo",
+    "position": 46,
+    "exampleTitle": "Garmin Fenix 9 Pro - recenzja. NIE POPEŁNIJ BŁĘDU"
+   },
+   {
+    "channelId": "UChOvmL8dWH58agSskvgEcRg",
+    "name": "Daniel Siwiec",
+    "subscribers": 107000,
+    "firmPromotionVideos": 0,
+    "videosFound": 1,
+    "query": "jak zacząć inwestować",
+    "family": "topic",
+    "position": 47,
+    "exampleTitle": "Jak bezpiecznie zacząć inwestować?"
+   }
+  ],
+  "classification": {
+   "nicheCandidates": [
+    "Gosia Ohme",
+    "Jacek Niedałtowski - NiedałtowskiFinanse",
+    "Biznes Misja",
+    "Kuba Midel",
+    "Przemek Górczyk Podcast",
+    "Daniel Siwiec"
+   ],
+   "generalWithFirmPromo": [
+    "Kanał Zero",
+    "Konopskyy",
+    "HISTORIA REALNA",
+    "Bądź Na Bieżąco",
+    "naTemat",
+    "CANAL+ SPORT",
+    "Koniec Świata - Arleta Bojke",
+    "Kiszak"
+   ],
+   "generalNoInvestmentLink": "pozostałe (Patecki, Makłowicz, Do Roboty, KSW, Mieczaki AJ, This Is IT, DzikPlus, Onet Rano, x-kom, OdwróconaLekcja, Kanał Otwarty, Think About, Szczytomaniak, fuziak, Kozaczek, Kanał o technologii)"
+  }
+ },
+ "scanTotals": {
+  "channels": 380,
+  "polish": 209,
+  "hiddenSubscribers": 0,
+  "channelsFromSearch1to19": 380,
+  "yFoundAnyStatus": 37
+ },
+ "records": [
+  {
+   "rankQualified": null,
+   "name": "Globalista TV",
+   "channelId": "UC2MQ1TRVmCnslmwlgqayVrw",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 928000,
+   "subscribersYReadAt": "2026-11-21T18:28:55+00:00",
+   "found": true,
+   "families": [
+    "promo",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 1,
+    "position": 26,
+    "videoId": "SgiHKuGQVac",
+    "observedAt": "2026-11-21T19:03:51+00:00",
+    "title": "Nowe WIELKIE INWESTYCJE IDĄ do POLSKI - Zobacz jak dużo się zmieni",
+    "publishedAt": "2026-11-03T14:00:09Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "promo",
+    "query": "partnerem odcinka",
+    "page": 1,
+    "position": 1,
+    "videoId": "DIzTfrn7x3w",
+    "observedAt": "2026-11-21T19:03:56+00:00",
+    "title": "Dlaczego BOGACI KUPUJĄ na MASOWĄ SKALĘ GRUNT - Na to się szykują",
+    "publishedAt": "2026-11-21T14:30:02Z",
+    "isShort": false
+   },
+   "hitCount": 4,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 26,
+     "videoId": "SgiHKuGQVac",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-03T14:00:09Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "partnerem odcinka",
+     "page": 1,
+     "position": 1,
+     "videoId": "DIzTfrn7x3w",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-11-21T14:30:02Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 10,
+     "videoId": "ZvpG9Sd7NWU",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-07-28T15:10:59Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "link w opisie darmowe akcje",
+     "page": 1,
+     "position": 21,
+     "videoId": "FoOrUl5mOV0",
+     "observedAt": "2026-11-21T19:03:58+00:00",
+     "publishedAt": "2026-11-16T14:30:07Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 928000,
+   "subscribersScanAt": "2026-11-21T19:04:08+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "inwestowanie",
+    "position": 26,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:51+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": null,
+   "name": "Damian Olszewski - Praktycznie o pieniądzach",
+   "channelId": "UCwKvys5yPdbGrotJHA_B3DQ",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 661000,
+   "subscribersYReadAt": "2026-11-21T18:28:37+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": null,
+   "name": "Maciej Wieczorek - Expert w Bentleyu",
+   "channelId": "UCNvSk-U6X9mOJHr7wz_xCWw",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE"
+   ],
+   "subscribersY": 534000,
+   "subscribersYReadAt": "2026-11-21T18:29:26+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 1,
+    "position": 15,
+    "videoId": "6a0YbVL3CO0",
+    "observedAt": "2026-11-21T19:03:51+00:00",
+    "title": "Jeśli zaczynałbym inwestowanie od ZERA, oto co bym zrobił. Omar Arnaout [Expert w Bentleyu]",
+    "publishedAt": "2026-07-02T16:00:14Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 1,
+    "position": 15,
+    "videoId": "6a0YbVL3CO0",
+    "observedAt": "2026-11-21T19:03:51+00:00",
+    "title": "Jeśli zaczynałbym inwestowanie od ZERA, oto co bym zrobił. Omar Arnaout [Expert w Bentleyu]",
+    "publishedAt": "2026-07-02T16:00:14Z",
+    "isShort": false
+   },
+   "hitCount": 2,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 15,
+     "videoId": "6a0YbVL3CO0",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-07-02T16:00:14Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 24,
+     "videoId": "6a0YbVL3CO0",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-07-02T16:00:14Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 534000,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "inwestowanie",
+    "position": 15,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:51+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": null,
+   "name": "namzalezy.pl",
+   "channelId": "UC7jDnr-ZAjQ94lf46eTcTAQ",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 520000,
+   "subscribersYReadAt": "2026-11-21T18:30:41+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": null,
+   "name": "didaskalia - Patrycjusz Wyżga",
+   "channelId": "UCvO1VxAIoV3E7IhQ6EAXxyQ",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 454000,
+   "subscribersYReadAt": "2026-11-21T18:30:33+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 1,
+   "name": "Marcin Iwuć",
+   "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 446000,
+   "subscribersYReadAt": "2026-11-21T18:29:28+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "Saxo Bank",
+    "page": 1,
+    "position": 2,
+    "videoId": "-UIS_LY3k3s",
+    "observedAt": "2026-11-21T19:03:49+00:00",
+    "title": "Jak inwestować pieniądze za granicą? [Saxo Bank z bonusem 250 EUR]",
+    "publishedAt": "2026-08-04T16:09:34Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "brand",
+    "query": "Saxo Bank",
+    "page": 1,
+    "position": 2,
+    "videoId": "-UIS_LY3k3s",
+    "observedAt": "2026-11-21T19:03:49+00:00",
+    "title": "Jak inwestować pieniądze za granicą? [Saxo Bank z bonusem 250 EUR]",
+    "publishedAt": "2026-08-04T16:09:34Z",
+    "isShort": false
+   },
+   "hitCount": 14,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "Saxo Bank",
+     "page": 1,
+     "position": 2,
+     "videoId": "-UIS_LY3k3s",
+     "observedAt": "2026-11-21T19:03:49+00:00",
+     "publishedAt": "2026-08-04T16:09:34Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 21,
+     "videoId": "cRIsPDRoTRM",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-10-19T18:27:41Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 24,
+     "videoId": "AQaGrQ7Dp90",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-10-20T14:30:17Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 28,
+     "videoId": "wnhJpVADnwI",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-08-12T14:31:14Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "obligacje skarbowe",
+     "page": 1,
+     "position": 22,
+     "videoId": "EjM_IlCXSog",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-10-15T14:45:28Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "obligacje skarbowe",
+     "page": 1,
+     "position": 30,
+     "videoId": "6gvNYnOBIIM",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-08-25T18:35:57Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "obligacje skarbowe",
+     "page": 1,
+     "position": 38,
+     "videoId": "OuV3V7yZnhg",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-09-08T14:31:18Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "obligacje skarbowe",
+     "page": 1,
+     "position": 43,
+     "videoId": "MiKSvx9KbU4",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-07-30T15:52:25Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 3,
+     "videoId": "Fu8P_wcaiM0",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-11-16T17:01:39Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 8,
+     "videoId": "ccydVgRN3yU",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-11-05T16:56:47Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 13,
+     "videoId": "9HZtkA2Ld-Q",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-11-03T16:50:12Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 38,
+     "videoId": "sG0RzNbl0wE",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-10-26T16:51:00Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 43,
+     "videoId": "SEygcKvt1Qc",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-11-18T15:30:22Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 3,
+     "videoId": "MZAgnk1AP7U",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-08-18T15:04:06Z",
+     "isShort": null
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 446000,
+   "subscribersScanAt": "2026-11-21T19:04:10+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "Saxo Bank",
+    "position": 2,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:49+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": null,
+   "name": "Phil Konieczny",
+   "channelId": "UCQpBmjL9kJ768fty4tbqa6Q",
+   "status": "wątpliwy",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "WEB3"
+   ],
+   "subscribersY": 414000,
+   "subscribersYReadAt": "2026-11-21T18:29:50+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": null,
+   "name": "Tomasz Bednarski - Świat Pieniędzy",
+   "channelId": "UCBzwL9_xdp7QUARIDSw8cKA",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 407000,
+   "subscribersYReadAt": "2026-11-21T18:30:21+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 2,
+   "name": "Piotr Ostapowicz",
+   "channelId": "UCXasJkcS9vY8X4HgzReo10A",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "TRADING",
+    "WEB3"
+   ],
+   "subscribersY": 219000,
+   "subscribersYReadAt": "2026-11-21T18:29:54+00:00",
+   "found": false,
+   "likelyCause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+  },
+  {
+   "rankQualified": 3,
+   "name": "Pankracy",
+   "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 212000,
+   "subscribersYReadAt": "2026-11-21T18:29:44+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 1,
+    "position": 2,
+    "videoId": "ryZCguUDZeI",
+    "observedAt": "2026-11-21T19:03:51+00:00",
+    "title": "W co inwestować na IKE oraz IKZE: akcje, obligacje, ETF-y?",
+    "publishedAt": "2026-11-20T16:00:15Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "ETF",
+    "page": 1,
+    "position": 1,
+    "videoId": "ryZCguUDZeI",
+    "observedAt": "2026-11-21T19:03:53+00:00",
+    "title": "W co inwestować na IKE oraz IKZE: akcje, obligacje, ETF-y?",
+    "publishedAt": "2026-11-20T16:00:15Z",
+    "isShort": false
+   },
+   "hitCount": 14,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 2,
+     "videoId": "ryZCguUDZeI",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-20T16:00:15Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 7,
+     "videoId": "K1Ykw5XZg9U",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-06T16:00:29Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 12,
+     "videoId": "BljdXvMnNYw",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-06-12T15:00:38Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 27,
+     "videoId": "tyTN1HjwK3s",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-09-25T15:19:51Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 2,
+     "position": 55,
+     "videoId": "p7EGXPBRU0k",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-12T17:44:22Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 1,
+     "videoId": "ryZCguUDZeI",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-11-20T16:00:15Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 4,
+     "videoId": "NB9g-uJmK8g",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-10-30T16:00:15Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 9,
+     "videoId": "QudodCw0giY",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-08-21T15:00:18Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "obligacje skarbowe",
+     "page": 1,
+     "position": 9,
+     "videoId": "ryZCguUDZeI",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-11-20T16:00:15Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 1,
+     "videoId": "ryZCguUDZeI",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-11-20T16:00:15Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 8,
+     "videoId": "ryZCguUDZeI",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-11-20T16:00:15Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 13,
+     "videoId": "BljdXvMnNYw",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-06-12T15:00:38Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 19,
+     "videoId": "QudodCw0giY",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-08-21T15:00:18Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 21,
+     "videoId": "K1Ykw5XZg9U",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-11-06T16:00:29Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 212000,
+   "subscribersScanAt": "2026-11-21T19:04:08+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "inwestowanie",
+    "position": 2,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:51+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 4,
+   "name": "Zawód Inwestor",
+   "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 208000,
+   "subscribersYReadAt": "2026-11-21T18:30:29+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "promo",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 4,
+    "videoId": "M9ReTC1tQzk",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Krach na akcjach XTB. Zakupy za 25 000 PLN. Wyniki królowej AI, Synektiku, Cyberfolks i Vercomu.",
+    "publishedAt": "2026-11-19T16:18:40Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 4,
+    "videoId": "M9ReTC1tQzk",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Krach na akcjach XTB. Zakupy za 25 000 PLN. Wyniki królowej AI, Synektiku, Cyberfolks i Vercomu.",
+    "publishedAt": "2026-11-19T16:18:40Z",
+    "isShort": false
+   },
+   "hitCount": 15,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 4,
+     "videoId": "M9ReTC1tQzk",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-11-19T16:18:40Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 9,
+     "videoId": "4zfaHuorug8",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-13T16:56:09Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 14,
+     "videoId": "B8TYcM5WKp0",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-09-11T14:05:01Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 30,
+     "videoId": "pqKSXwfsf6M",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-07-11T09:32:59Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 33,
+     "videoId": "JmSeHIA2jjc",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-07-26T08:40:05Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 41,
+     "videoId": "M6OBaYX5MLU",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-05T19:26:35Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 46,
+     "videoId": "TZ0gbo0QVNU",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-10-28T16:44:33Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 47,
+     "videoId": "JEHSwjM-_Zo",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-06-04T14:39:23Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 13,
+     "videoId": "ZX5W09oe_Zc",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-09-18T15:41:47Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 33,
+     "videoId": "M9ReTC1tQzk",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-11-19T16:18:40Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 31,
+     "videoId": "v-yHR7kOeVs",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-06-09T10:50:12Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 14,
+     "videoId": "JmSeHIA2jjc",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-07-26T08:40:05Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 23,
+     "videoId": "B8TYcM5WKp0",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-09-11T14:05:01Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "kod promocyjny konto maklerskie",
+     "page": 1,
+     "position": 32,
+     "videoId": "4zfaHuorug8",
+     "observedAt": "2026-11-21T19:03:57+00:00",
+     "publishedAt": "2026-11-13T16:56:09Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "kod promocyjny konto maklerskie",
+     "page": 1,
+     "position": 45,
+     "videoId": "B8TYcM5WKp0",
+     "observedAt": "2026-11-21T19:03:57+00:00",
+     "publishedAt": "2026-09-11T14:05:01Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 208000,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 4,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:45+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 5,
+   "name": "Independent Trader",
+   "channelId": "UC5i9ec-XjBw1iWkRtSxAieg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 201000,
+   "subscribersYReadAt": "2026-11-21T18:29:01+00:00",
+   "found": false,
+   "likelyCause": "Tematyka makro/metale szlachetne/geopolityka; brak w zestawie fraz 'złoto', 'srebro', 'inflacja', 'kryzys'. Na 'inwestowanie' (2 strony, 103 wyniki) i 'giełda' (50) nie wypłynął w trafności YouTube; kanał nie reklamuje brokerów z listy markowej (nie wynika z danych skanu, tylko z braku trafień)."
+  },
+  {
+   "rankQualified": 6,
+   "name": "Tomasz Trela – Twój człowiek na Wall Street",
+   "channelId": "UCMh0w6OpVi085p81jK5TnzQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 177000,
+   "subscribersYReadAt": "2026-11-21T18:30:23+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 30,
+    "videoId": "TOR2xVM_cQo",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "Jak przygotować się na krach na giełdzie? #akcje #giełda #inwestowanie",
+    "publishedAt": "2026-11-03T10:25:11Z",
+    "isShort": null
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "akcje dywidendowe",
+    "page": 1,
+    "position": 11,
+    "videoId": "c5bcL5uWvcw",
+    "observedAt": "2026-11-21T19:03:54+00:00",
+    "title": "Inwestowanie dywidendowe: podatek, który nakładasz sam na siebie",
+    "publishedAt": "2026-10-14T16:00:36Z",
+    "isShort": false
+   },
+   "hitCount": 4,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 30,
+     "videoId": "TOR2xVM_cQo",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-03T10:25:11Z",
+     "isShort": null
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 2,
+     "position": 54,
+     "videoId": "TOR2xVM_cQo",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-03T10:25:11Z",
+     "isShort": null
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 2,
+     "position": 79,
+     "videoId": "c5bcL5uWvcw",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-14T16:00:36Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 11,
+     "videoId": "c5bcL5uWvcw",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-10-14T16:00:36Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 177000,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "giełda",
+    "position": 30,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:52+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 7,
+   "name": "Kacper Snela",
+   "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 135000,
+   "subscribersYReadAt": "2026-11-21T18:29:11+00:00",
+   "found": true,
+   "families": [
+    "promo",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 1,
+    "position": 23,
+    "videoId": "puNF4JbToxA",
+    "observedAt": "2026-11-21T19:03:51+00:00",
+    "title": "Oto co bym zrobił, gdybym zaczynał inwestowanie od zera!",
+    "publishedAt": "2026-10-02T15:00:17Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "jak zacząć inwestować",
+    "page": 1,
+    "position": 1,
+    "videoId": "puNF4JbToxA",
+    "observedAt": "2026-11-21T19:03:56+00:00",
+    "title": "Oto co bym zrobił, gdybym zaczynał inwestowanie od zera!",
+    "publishedAt": "2026-10-02T15:00:17Z",
+    "isShort": false
+   },
+   "hitCount": 12,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 23,
+     "videoId": "puNF4JbToxA",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-10-02T15:00:17Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 11,
+     "videoId": "3TdtwBe7WxU",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-07-04T14:00:20Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 26,
+     "videoId": "jdSZMvPCDlc",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-08-01T14:00:29Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 33,
+     "videoId": "W1WMMKLnmOA",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-07-11T14:00:22Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 37,
+     "videoId": "M2py02n83_U",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-09-26T14:00:06Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "obligacje skarbowe",
+     "page": 1,
+     "position": 47,
+     "videoId": "6AC_7O1Yt0Y",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-09-29T15:00:37Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 2,
+     "videoId": "q-pwIe85SmA",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-11-21T16:00:38Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 1,
+     "videoId": "puNF4JbToxA",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-10-02T15:00:17Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "partnerem odcinka",
+     "page": 1,
+     "position": 7,
+     "videoId": "q-pwIe85SmA",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-11-21T16:00:38Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "partnerem odcinka",
+     "page": 1,
+     "position": 36,
+     "videoId": "BAhuc628SNk",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-11-20T16:00:35Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 39,
+     "videoId": "f3p9jes3Vhw",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-06-06T14:00:21Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "link w opisie darmowe akcje",
+     "page": 1,
+     "position": 4,
+     "videoId": "q-pwIe85SmA",
+     "observedAt": "2026-11-21T19:03:58+00:00",
+     "publishedAt": "2026-11-21T16:00:38Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 135000,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "inwestowanie",
+    "position": 23,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:51+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 8,
+   "name": "FXMAG - tłumaczymy świat finansów",
+   "channelId": "UCtTpDSRTegHewCxP9GTUaXQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "INWESTOWANIE",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 126000,
+   "subscribersYReadAt": "2026-11-21T18:28:45+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "promo",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 13,
+    "videoId": "DkDhwg31SoI",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "XTB -20%. SZOK NA NVIDII. Debiut Anthropic. Już jest GTA VI i dolar po 4 złote. Dzieje się!",
+    "publishedAt": "2026-11-18T17:15:53Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 1,
+    "videoId": "tVrt5iN1vX8",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "GIEŁDA W PANICE. Anthropic BIJE REKORDY! Xi Jinping UPOKORZYŁ Putina",
+    "publishedAt": "2026-11-20T15:26:19Z",
+    "isShort": false
+   },
+   "hitCount": 6,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 13,
+     "videoId": "DkDhwg31SoI",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-11-18T17:15:53Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 95,
+     "videoId": "M2B1_4BnXwk",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-11-17T13:33:42Z",
+     "isShort": null
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 11,
+     "videoId": "DkDhwg31SoI",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-18T17:15:53Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 1,
+     "videoId": "tVrt5iN1vX8",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-20T15:26:19Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 34,
+     "videoId": "r1vgQtAwu1U",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-06-10T13:20:31Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "link w opisie darmowe akcje",
+     "page": 1,
+     "position": 10,
+     "videoId": "tVrt5iN1vX8",
+     "observedAt": "2026-11-21T19:03:58+00:00",
+     "publishedAt": "2026-11-20T15:26:19Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 127000,
+   "subscribersScanAt": "2026-11-21T19:04:11+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 13,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:45+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.8
+  },
+  {
+   "rankQualified": 9,
+   "name": "Piotr Cymcyk - Merytorycznie o Finansach",
+   "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 122000,
+   "subscribersYReadAt": "2026-11-21T18:29:52+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "promo",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 30,
+    "videoId": "2VGzRX12RXM",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Krach akcji Polsatu - szykują sprzedaż spółki? XTB bije prognozy, a kurs stoi",
+    "publishedAt": "2026-11-02T18:08:19Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "brand",
+    "query": "Freedom24",
+    "page": 1,
+    "position": 6,
+    "videoId": "o2GfnmVVkO8",
+    "observedAt": "2026-11-21T19:03:48+00:00",
+    "title": "Gdybym miał włożyć cały majątek tylko w 3 spółki z USA, wybrałbym te!",
+    "publishedAt": "2026-11-21T17:57:47Z",
+    "isShort": false
+   },
+   "hitCount": 9,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 30,
+     "videoId": "2VGzRX12RXM",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-11-02T18:08:19Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 58,
+     "videoId": "j4amiLUeeJE",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-09-01T17:00:08Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 6,
+     "videoId": "o2GfnmVVkO8",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-11-21T17:57:47Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "Saxo Bank",
+     "page": 1,
+     "position": 12,
+     "videoId": "_aqCM37gK1U",
+     "observedAt": "2026-11-21T19:03:49+00:00",
+     "publishedAt": "2026-11-19T18:00:07Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 20,
+     "videoId": "uM24ZsvzgV8",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-16T18:00:14Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 32,
+     "videoId": "_aqCM37gK1U",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-19T18:00:07Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 10,
+     "videoId": "ePfzHQVf-lc",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-20T17:59:32Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 46,
+     "videoId": "BaDo7u2Hve0",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-09-01T12:45:35Z",
+     "isShort": null
+    },
+    {
+     "family": "promo",
+     "query": "link w opisie darmowe akcje",
+     "page": 1,
+     "position": 7,
+     "videoId": "ePfzHQVf-lc",
+     "observedAt": "2026-11-21T19:03:58+00:00",
+     "publishedAt": "2026-11-20T17:59:32Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 122000,
+   "subscribersScanAt": "2026-11-21T19:04:11+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 30,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:45+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 10,
+   "name": "Comparic Rynki - Marcin Wenus",
+   "channelId": "UCelOnoH_P-vJgAHSAcMKQiw",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": true,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 114000,
+   "subscribersYReadAt": "2026-11-21T18:28:31+00:00",
+   "found": true,
+   "families": [
+    "promo",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 1,
+    "position": 25,
+    "videoId": "PoUCJ4xODMU",
+    "observedAt": "2026-11-21T19:03:51+00:00",
+    "title": "ZŁOTO DLA DEBILI?! W co inwestować? Radek Pogoda o mieszkaniach, biznesie i kruszcach",
+    "publishedAt": "2026-10-03T15:54:21Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "promo",
+    "query": "link w opisie darmowe akcje",
+    "page": 1,
+    "position": 9,
+    "videoId": "eQYmvRfHtr8",
+    "observedAt": "2026-11-21T19:03:58+00:00",
+    "title": "KUPIŁEŚ NA OTWARCIU? Wieczorem byłeś 13% pod kreską. Debiut Anthropic",
+    "publishedAt": "2026-11-20T10:54:35Z",
+    "isShort": false
+   },
+   "hitCount": 5,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 25,
+     "videoId": "PoUCJ4xODMU",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-10-03T15:54:21Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 40,
+     "videoId": "AE02IBR__H4",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-21T12:39:21Z",
+     "isShort": true
+    },
+    {
+     "family": "promo",
+     "query": "kod promocyjny konto maklerskie",
+     "page": 1,
+     "position": 30,
+     "videoId": "eQYmvRfHtr8",
+     "observedAt": "2026-11-21T19:03:57+00:00",
+     "publishedAt": "2026-11-20T10:54:35Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "link w opisie darmowe akcje",
+     "page": 1,
+     "position": 9,
+     "videoId": "eQYmvRfHtr8",
+     "observedAt": "2026-11-21T19:03:58+00:00",
+     "publishedAt": "2026-11-20T10:54:35Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "link w opisie darmowe akcje",
+     "page": 1,
+     "position": 16,
+     "videoId": "-BOQj0WSs5w",
+     "observedAt": "2026-11-21T19:03:58+00:00",
+     "publishedAt": "2026-11-17T14:54:35Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 114000,
+   "subscribersScanAt": "2026-11-21T19:04:10+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "inwestowanie",
+    "position": 25,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:51+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": null,
+   "name": "Rzeczpospolita",
+   "channelId": "UCpchzx2u5Ab8YASeJsR1WIw",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 114000,
+   "subscribersYReadAt": "2026-11-21T18:30:04+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 11,
+   "name": "Kryptowaluty dla Początkujących",
+   "channelId": "UCoOy6bcpbJA2WRiZgea0c7Q",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "TRADING",
+    "WEB3"
+   ],
+   "subscribersY": 114000,
+   "subscribersYReadAt": "2026-11-21T18:29:23+00:00",
+   "found": false,
+   "likelyCause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+  },
+  {
+   "rankQualified": 12,
+   "name": "Giełda Inwestycje Trading",
+   "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 106000,
+   "subscribersYReadAt": "2026-11-21T18:28:51+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "promo",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "Freedom24",
+    "page": 1,
+    "position": 8,
+    "videoId": "7UvMx2jOGKI",
+    "observedAt": "2026-11-21T19:03:48+00:00",
+    "title": "Lepiej kupić GTA VI czy akcje producenta gry? #współpraca #freedom24",
+    "publishedAt": "2026-11-10T09:05:23Z",
+    "isShort": null
+   },
+   "bestPosition": {
+    "family": "promo",
+    "query": "link w opisie darmowe akcje",
+    "page": 1,
+    "position": 5,
+    "videoId": "nYHaxY9BJh4",
+    "observedAt": "2026-11-21T19:03:58+00:00",
+    "title": "Nvidia bez Huanga?! Początek końca giganta AI? #GITnews",
+    "publishedAt": "2026-11-15T14:00:32Z",
+    "isShort": false
+   },
+   "hitCount": 25,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 8,
+     "videoId": "7UvMx2jOGKI",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-11-10T09:05:23Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 9,
+     "videoId": "5B2ZqgW4gB0",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-10-17T13:05:22Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 10,
+     "videoId": "21jaIngzkXU",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-10-02T12:09:38Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 11,
+     "videoId": "GopJKZMxRz4",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-10-21T13:20:10Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 14,
+     "videoId": "MlvgA8eMp98",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-10-28T08:40:35Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 15,
+     "videoId": "p6oYcdtPCz4",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-10-09T08:25:53Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 16,
+     "videoId": "-QblC84ZMRM",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-11-13T15:11:21Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 17,
+     "videoId": "fBs3HCH1qpM",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-10-31T10:08:23Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 21,
+     "videoId": "wvQfT9WSXXo",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-10-29T08:43:51Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 24,
+     "videoId": "42CV4iJOAUw",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-10-07T11:31:02Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 36,
+     "videoId": "wz6fQ2b6w78",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-06-05T15:01:16Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 44,
+     "videoId": "7IS0Rk9b15o",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-11-02T10:16:49Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 48,
+     "videoId": "9qoSBrsWclk",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-10-14T16:53:17Z",
+     "isShort": null
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 28,
+     "videoId": "1_3siGN-NC4",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-08T14:00:33Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 29,
+     "videoId": "5e0D6XJUF84",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-09-16T13:00:37Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 37,
+     "videoId": "74S9gSnDiT0",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-12T14:00:03Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 13,
+     "videoId": "eFqQOcHo7Bs",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-30T14:00:23Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 19,
+     "videoId": "nYHaxY9BJh4",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-15T14:00:32Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 35,
+     "videoId": "74S9gSnDiT0",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-12T14:00:03Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 40,
+     "videoId": "2Fou-Kwa2uo",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-17T15:00:26Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 44,
+     "videoId": "F4qS4B-YFXI",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-10T14:00:09Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 12,
+     "videoId": "ChxeXriAEgg",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-09-09T13:00:36Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 48,
+     "videoId": "190bmOY1-VA",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-10-26T16:18:00Z",
+     "isShort": null
+    },
+    {
+     "family": "promo",
+     "query": "kod promocyjny konto maklerskie",
+     "page": 1,
+     "position": 50,
+     "videoId": "nYHaxY9BJh4",
+     "observedAt": "2026-11-21T19:03:57+00:00",
+     "publishedAt": "2026-11-15T14:00:32Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "link w opisie darmowe akcje",
+     "page": 1,
+     "position": 5,
+     "videoId": "nYHaxY9BJh4",
+     "observedAt": "2026-11-21T19:03:58+00:00",
+     "publishedAt": "2026-11-15T14:00:32Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 106000,
+   "subscribersScanAt": "2026-11-21T19:04:11+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "Freedom24",
+    "position": 8,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:48+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 13,
+   "name": "Łukasz Michałek (Biblia Kryptowalut)",
+   "channelId": "UCqsF-8rzWSB0XdZ-qg6Z6sg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "TRADING",
+    "WEB3"
+   ],
+   "subscribersY": 100000,
+   "subscribersYReadAt": "2026-11-21T18:30:42+00:00",
+   "found": false,
+   "likelyCause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+  },
+  {
+   "rankQualified": 14,
+   "name": "horyzonty",
+   "channelId": "UC2uGYk6qOnd2EtXGXszNijw",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "INWESTOWANIE",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 99700,
+   "subscribersYReadAt": "2026-11-21T18:30:37+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 1,
+    "position": 42,
+    "videoId": "kdSfsqrSA68",
+    "observedAt": "2026-11-21T19:03:51+00:00",
+    "title": "To nie inwestowanie. To finansowe kasyno II Tomasz Jaroszek #76",
+    "publishedAt": "2026-08-26T17:00:06Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 1,
+    "position": 42,
+    "videoId": "kdSfsqrSA68",
+    "observedAt": "2026-11-21T19:03:51+00:00",
+    "title": "To nie inwestowanie. To finansowe kasyno II Tomasz Jaroszek #76",
+    "publishedAt": "2026-08-26T17:00:06Z",
+    "isShort": false
+   },
+   "hitCount": 1,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 42,
+     "videoId": "kdSfsqrSA68",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-08-26T17:00:06Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 99700,
+   "subscribersScanAt": "2026-11-21T19:04:08+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "inwestowanie",
+    "position": 42,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:51+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 15,
+   "name": "Inwestomat",
+   "channelId": "UCbTCMPrEGARddFKS5P9onoA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 83100,
+   "subscribersYReadAt": "2026-11-21T18:29:03+00:00",
+   "found": false,
+   "likelyCause": "Tematyka ETF/IKE/obligacje pokryta zapytaniami, ale kanał miał mało wyświetleń w X 2026 (47,9 tys. wg InvestTube) — prawdopodobnie mało nowych filmów w oknie publishedAfter=2026-05-25 i niska pozycja w trafności; 1 strona (50 wyników) na zapytanie nie sięgnęła głębiej."
+  },
+  {
+   "rankQualified": 16,
+   "name": "Jarzombek",
+   "channelId": "UCsaWU2rEXFkufFN_43jH2MA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "WEB3"
+   ],
+   "subscribersY": 81200,
+   "subscribersYReadAt": "2026-11-21T18:29:09+00:00",
+   "found": false,
+   "likelyCause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+  },
+  {
+   "rankQualified": 17,
+   "name": "Świat Krypto",
+   "channelId": "UCoVF7lPMKO2HYXfdkcHqEpQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "INWESTOWANIE",
+    "WEB3"
+   ],
+   "subscribersY": 72200,
+   "subscribersYReadAt": "2026-11-21T18:30:44+00:00",
+   "found": true,
+   "families": [
+    "promo"
+   ],
+   "firstHit": {
+    "family": "promo",
+    "query": "kod promocyjny konto maklerskie",
+    "page": 1,
+    "position": 7,
+    "videoId": "zgMwdllJ5nc",
+    "observedAt": "2026-11-21T19:03:57+00:00",
+    "title": "Bitcoin NAJTAŃSZY od 2 lat. Co dalej?",
+    "publishedAt": "2026-11-21T17:44:20Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "promo",
+    "query": "link w opisie darmowe akcje",
+    "page": 1,
+    "position": 1,
+    "videoId": "xPy04HIAV9c",
+    "observedAt": "2026-11-21T19:03:58+00:00",
+    "title": "Bitcoin NAJTAŃSZY od 2 lat. Co dalej?",
+    "publishedAt": "2026-11-21T18:08:25Z",
+    "isShort": true
+   },
+   "hitCount": 3,
+   "hits": [
+    {
+     "family": "promo",
+     "query": "kod promocyjny konto maklerskie",
+     "page": 1,
+     "position": 7,
+     "videoId": "zgMwdllJ5nc",
+     "observedAt": "2026-11-21T19:03:57+00:00",
+     "publishedAt": "2026-11-21T17:44:20Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "link w opisie darmowe akcje",
+     "page": 1,
+     "position": 1,
+     "videoId": "xPy04HIAV9c",
+     "observedAt": "2026-11-21T19:03:58+00:00",
+     "publishedAt": "2026-11-21T18:08:25Z",
+     "isShort": true
+    },
+    {
+     "family": "promo",
+     "query": "link w opisie darmowe akcje",
+     "page": 1,
+     "position": 14,
+     "videoId": "URW1Nt3qU4I",
+     "observedAt": "2026-11-21T19:03:58+00:00",
+     "publishedAt": "2026-11-18T09:00:13Z",
+     "isShort": null
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 72200,
+   "subscribersScanAt": "2026-11-21T19:04:11+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "promo",
+    "query": "kod promocyjny konto maklerskie",
+    "position": 7,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:57+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 18,
+   "name": "Mike Satoshi",
+   "channelId": "UCEX4iDKLfxtIJY6IVgMSqCQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "WEB3"
+   ],
+   "subscribersY": 71900,
+   "subscribersYReadAt": "2026-11-21T18:29:38+00:00",
+   "found": false,
+   "likelyCause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+  },
+  {
+   "rankQualified": 19,
+   "name": "321 Crypto",
+   "channelId": "UClf1NZB9mFLnMDiwVWsBi9w",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "INWESTOWANIE",
+    "WEB3"
+   ],
+   "subscribersY": 66900,
+   "subscribersYReadAt": "2026-11-21T18:28:01+00:00",
+   "found": false,
+   "likelyCause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+  },
+  {
+   "rankQualified": 20,
+   "name": "Gotowy na Krypto",
+   "channelId": "UCHJa1nHOe1u2zElYOXA_ZaA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "TRADING",
+    "WEB3"
+   ],
+   "subscribersY": 65000,
+   "subscribersYReadAt": "2026-11-21T18:28:57+00:00",
+   "found": false,
+   "likelyCause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+  },
+  {
+   "rankQualified": 21,
+   "name": "Encyklopedia Kryptowalut",
+   "channelId": "UCXfUD2z__kPrXnrMlizE18Q",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "INWESTOWANIE",
+    "WEB3"
+   ],
+   "subscribersY": 57500,
+   "subscribersYReadAt": "2026-11-21T18:28:43+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 22,
+   "name": "DoradcaTV - Tomasz Jaroszek",
+   "channelId": "UChseY2p3PZTVVg9SrQPRHog",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 56800,
+   "subscribersYReadAt": "2026-11-21T18:28:39+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 23,
+   "name": "TradingJam",
+   "channelId": "UCtgkij_zW8jUoGrpl8nCkhQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 54300,
+   "subscribersYReadAt": "2026-11-21T18:30:25+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 24,
+   "name": "Finansowa TV",
+   "channelId": "UCcJq-5bSAMp2ZCOR8kacfmA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 53800,
+   "subscribersYReadAt": "2026-11-21T18:31:25+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 40,
+    "videoId": "nOOI8BRsq_w",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Ogromny spadek XTB, kupiłem akcje za 17 000 zł!",
+    "publishedAt": "2026-10-07T14:49:21Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "brand",
+    "query": "Freedom24",
+    "page": 1,
+    "position": 3,
+    "videoId": "E3lhP8UL7wg",
+    "observedAt": "2026-11-21T19:03:48+00:00",
+    "title": "Czy Freedom24 to dobry broker?",
+    "publishedAt": "2026-10-21T13:18:29Z",
+    "isShort": false
+   },
+   "hitCount": 7,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 40,
+     "videoId": "nOOI8BRsq_w",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-10-07T14:49:21Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 72,
+     "videoId": "684MExgF5_c",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-10-12T15:14:50Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "Freedom24",
+     "page": 1,
+     "position": 3,
+     "videoId": "E3lhP8UL7wg",
+     "observedAt": "2026-11-21T19:03:48+00:00",
+     "publishedAt": "2026-10-21T13:18:29Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 19,
+     "videoId": "3RuVHbHCxFw",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-06-17T16:27:57Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "obligacje skarbowe",
+     "page": 1,
+     "position": 19,
+     "videoId": "3k4jSufkBEE",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-07-13T13:54:30Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 11,
+     "videoId": "sj9e7OP_DOA",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-10-28T16:30:09Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 18,
+     "videoId": "uVPouyBkrMI",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-06-30T16:16:55Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 53800,
+   "subscribersScanAt": "2026-11-21T19:04:10+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 40,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:45+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 25,
+   "name": "Marcin Tuszkiewicz | Inwestowanie & Trading",
+   "channelId": "UC3JgUN78v4RX3saWqmCEV1g",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 48400,
+   "subscribersYReadAt": "2026-11-21T18:29:32+00:00",
+   "found": true,
+   "families": [
+    "promo",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 1,
+    "position": 3,
+    "videoId": "oZPrbO5by48",
+    "observedAt": "2026-11-21T19:03:51+00:00",
+    "title": "Giełdy przed dużym zwrotem? Co zwiastują spadki surowców i ucieczka z technologii? | Extra Analiza",
+    "publishedAt": "2026-11-19T17:30:11Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 1,
+    "position": 3,
+    "videoId": "oZPrbO5by48",
+    "observedAt": "2026-11-21T19:03:51+00:00",
+    "title": "Giełdy przed dużym zwrotem? Co zwiastują spadki surowców i ucieczka z technologii? | Extra Analiza",
+    "publishedAt": "2026-11-19T17:30:11Z",
+    "isShort": false
+   },
+   "hitCount": 6,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 3,
+     "videoId": "oZPrbO5by48",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-19T17:30:11Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 18,
+     "videoId": "Unc7QSMrK4w",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-07T07:19:11Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 35,
+     "videoId": "U4jaBR_yK0M",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-11-21T13:46:57Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 50,
+     "videoId": "WD_lw9r0t80",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-10-31T07:24:09Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 4,
+     "videoId": "oZPrbO5by48",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-19T17:30:11Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "link w opisie darmowe akcje",
+     "page": 1,
+     "position": 8,
+     "videoId": "vuDgP0535Ss",
+     "observedAt": "2026-11-21T19:03:58+00:00",
+     "publishedAt": "2026-11-21T07:22:54Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 48400,
+   "subscribersScanAt": "2026-11-21T19:04:08+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "inwestowanie",
+    "position": 3,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:51+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 26,
+   "name": "Konrad Książak - Giełda, Pieniądze, Inwestycje",
+   "channelId": "UCAH85XhPoXCxSXUKdwsm0Ig",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 45800,
+   "subscribersYReadAt": "2026-11-21T18:29:15+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "promo",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 3,
+    "videoId": "0Nbc_JdL9Ec",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Co Się Dzieje na XTB i Co Się Będzie Działo?",
+    "publishedAt": "2026-11-18T17:48:58Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 3,
+    "videoId": "0Nbc_JdL9Ec",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Co Się Dzieje na XTB i Co Się Będzie Działo?",
+    "publishedAt": "2026-11-18T17:48:58Z",
+    "isShort": false
+   },
+   "hitCount": 14,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 3,
+     "videoId": "0Nbc_JdL9Ec",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-11-18T17:48:58Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 15,
+     "videoId": "qy8k4JSBrSA",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-09-02T19:24:45Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 28,
+     "videoId": "eINo3nbh9-I",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-10-15T16:30:35Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 34,
+     "videoId": "FH71hlXo8-c",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-10-28T17:34:30Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 49,
+     "videoId": "lOd3-syqBOE",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-07-29T17:04:37Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 55,
+     "videoId": "lOd3-syqBOE",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-07-29T17:04:37Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 63,
+     "videoId": "S9qs08XVlh0",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-10-04T16:29:06Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 74,
+     "videoId": "RW19w06iuks",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-10-15T09:30:20Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 82,
+     "videoId": "DIbMOel36h0",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-07-16T16:35:32Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 2,
+     "position": 88,
+     "videoId": "FaCscGRLB9E",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-16T09:30:08Z",
+     "isShort": null
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 2,
+     "position": 100,
+     "videoId": "IGeQQgHVkkY",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-20T09:30:10Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 6,
+     "videoId": "ZSzZQ6P6p54",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-07-05T16:15:36Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 9,
+     "videoId": "SHkkqWVWAoM",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-08-11T17:17:09Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "kod promocyjny konto maklerskie",
+     "page": 1,
+     "position": 15,
+     "videoId": "RW19w06iuks",
+     "observedAt": "2026-11-21T19:03:57+00:00",
+     "publishedAt": "2026-10-15T09:30:20Z",
+     "isShort": null
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 45800,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 3,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:45+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 27,
+   "name": "TRADE WARS - Inwestycje i Trading",
+   "channelId": "UCiSNk7mzA3cQ3UQEcP_AsYA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 44100,
+   "subscribersYReadAt": "2026-11-21T18:30:17+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 28,
+   "name": "Koszary Tradingu",
+   "channelId": "UCWVxSCZJzMSehSWbBnsNxiA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "TRADING",
+    "WEB3"
+   ],
+   "subscribersY": 39100,
+   "subscribersYReadAt": "2026-11-21T18:29:17+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 29,
+   "name": "Comparic Global Markets",
+   "channelId": "UCVK5sOPiHl9dPd4QvFBkm9Q",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 39000,
+   "subscribersYReadAt": "2026-11-21T18:28:26+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 2,
+    "position": 76,
+    "videoId": "iOjl3LPbi-U",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "ZARZUTY WOBEC OPENAI",
+    "publishedAt": "2026-11-21T14:25:16Z",
+    "isShort": true
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "ETF",
+    "page": 1,
+    "position": 6,
+    "videoId": "oqbm0jxqhuo",
+    "observedAt": "2026-11-21T19:03:53+00:00",
+    "title": "ETF-y nie dadzą Ci bogactwa. Brutalna prawda o inwestowaniu, której nikt nie chce usłyszeć",
+    "publishedAt": "2026-09-27T13:54:01Z",
+    "isShort": false
+   },
+   "hitCount": 4,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 2,
+     "position": 76,
+     "videoId": "iOjl3LPbi-U",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-21T14:25:16Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 6,
+     "videoId": "oqbm0jxqhuo",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-09-27T13:54:01Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 15,
+     "videoId": "UqX1BwW04Ao",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-11-14T11:54:04Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 44,
+     "videoId": "HeIDoYZdCw0",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-06-15T11:07:07Z",
+     "isShort": true
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 39000,
+   "subscribersScanAt": "2026-11-21T19:04:10+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "inwestowanie",
+    "position": 76,
+    "page": 2,
+    "observedAt": "2026-11-21T19:03:52+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 30,
+   "name": "Crypto Podróże",
+   "channelId": "UCYgoY20_rEXrcqMU_Mz1Pdg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "TRADING",
+    "WEB3"
+   ],
+   "subscribersY": 38300,
+   "subscribersYReadAt": "2026-11-21T18:28:33+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 31,
+   "name": "Maciej Tomczyk",
+   "channelId": "UCrdX1H_Jczk0_F9vtKpK3Cg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "WEB3"
+   ],
+   "subscribersY": 36400,
+   "subscribersYReadAt": "2026-11-21T18:29:24+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 32,
+   "name": "AceMarketU-TV",
+   "channelId": "UCBEGi9VJj43G_ISUDRFEsAA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 36300,
+   "subscribersYReadAt": "2026-11-21T18:28:05+00:00",
+   "found": true,
+   "families": [
+    "promo",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 15,
+    "videoId": "dlLPpjCAS8I",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "🔥OTWARCIE na WALL STREET: Szybki Komentarz🔥",
+    "publishedAt": "2026-11-20T15:40:31Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 15,
+    "videoId": "dlLPpjCAS8I",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "🔥OTWARCIE na WALL STREET: Szybki Komentarz🔥",
+    "publishedAt": "2026-11-20T15:40:31Z",
+    "isShort": false
+   },
+   "hitCount": 5,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 15,
+     "videoId": "dlLPpjCAS8I",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-20T15:40:31Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 21,
+     "videoId": "VE-rU8AUakk",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-14T20:45:32Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 28,
+     "videoId": "jxuUkkeQf8U",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-18T15:43:53Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 39,
+     "videoId": "8UY2xvF7V58",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-06-18T20:33:31Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "partnerem odcinka",
+     "page": 1,
+     "position": 40,
+     "videoId": "Sh7NXM9BiNE",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-11-20T06:49:31Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 36300,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "giełda",
+    "position": 15,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:52+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 33,
+   "name": "Krypto Blogger",
+   "channelId": "UCMX2Nj3mxRq0-lFto63PUSw",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "WEB3"
+   ],
+   "subscribersY": 32900,
+   "subscribersYReadAt": "2026-11-21T18:29:19+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 34,
+   "name": "Portfel Polaka",
+   "channelId": "UCNiefl7zWdGyhdYdC2NAhMQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "INWESTOWANIE",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 32200,
+   "subscribersYReadAt": "2026-11-21T18:29:57+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 35,
+   "name": "Strefa Inwestorów",
+   "channelId": "UC4Qc_TYL6BsqiqXXorBFoaA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 28100,
+   "subscribersYReadAt": "2026-11-21T18:31:10+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "akcje dywidendowe",
+    "page": 1,
+    "position": 8,
+    "videoId": "zpvQdvyt8fo",
+    "observedAt": "2026-11-21T19:03:54+00:00",
+    "title": "Spółki dywidendowe i dywidendy w 2026 roku – Piotr Kwestarz | Procent Składany",
+    "publishedAt": "2026-06-14T16:13:50Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "akcje dywidendowe",
+    "page": 1,
+    "position": 8,
+    "videoId": "zpvQdvyt8fo",
+    "observedAt": "2026-11-21T19:03:54+00:00",
+    "title": "Spółki dywidendowe i dywidendy w 2026 roku – Piotr Kwestarz | Procent Składany",
+    "publishedAt": "2026-06-14T16:13:50Z",
+    "isShort": false
+   },
+   "hitCount": 1,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 8,
+     "videoId": "zpvQdvyt8fo",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-06-14T16:13:50Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 28100,
+   "subscribersScanAt": "2026-11-21T19:04:08+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "akcje dywidendowe",
+    "position": 8,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:54+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 36,
+   "name": "Blog prezesa",
+   "channelId": "UC9m-i38PdscJRc_VvzWs-rg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "INWESTOWANIE",
+    "TRADING",
+    "WEB3"
+   ],
+   "subscribersY": 27200,
+   "subscribersYReadAt": "2026-11-21T18:31:30+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 37,
+   "name": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+   "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 27100,
+   "subscribersYReadAt": "2026-11-21T18:29:30+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 6,
+    "videoId": "LQrB-dAm8P8",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Krach na akcjach XTB! Demony z KNF i CFD wracają! #gpw #xtb",
+    "publishedAt": "2026-11-17T12:02:40Z",
+    "isShort": null
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 2,
+    "videoId": "aXdf3DzOdqE",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "Krach na Wall Street! NVIDIA -13%! GPW też słabnie! Co dalej?",
+    "publishedAt": "2026-11-21T09:00:07Z",
+    "isShort": false
+   },
+   "hitCount": 15,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 6,
+     "videoId": "LQrB-dAm8P8",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-11-17T12:02:40Z",
+     "isShort": null
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 7,
+     "videoId": "muvIRrcHZaE",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-11-17T15:41:06Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 43,
+     "videoId": "dNrw_AikSPQ",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-10-17T10:00:11Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 54,
+     "videoId": "ToDbSFwhAeM",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-10-02T10:30:09Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 70,
+     "videoId": "ymSs6Pd-tew",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-10-02T16:13:37Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 71,
+     "videoId": "XOptrP0E6FE",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-10-24T10:30:06Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 91,
+     "videoId": "WAj1d5VJrok",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-08-19T12:14:06Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 1,
+     "position": 43,
+     "videoId": "TxpJJqfvraM",
+     "observedAt": "2026-11-21T19:03:51+00:00",
+     "publishedAt": "2026-10-31T14:00:09Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 2,
+     "videoId": "aXdf3DzOdqE",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-21T09:00:07Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 17,
+     "videoId": "KhUYRUnut1Y",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-30T19:20:42Z",
+     "isShort": null
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 20,
+     "videoId": "46Rqd4HTrGE",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-14T16:00:10Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 38,
+     "videoId": "mf62wMCkQWM",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-30T09:38:11Z",
+     "isShort": null
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 42,
+     "videoId": "pGf4QqBbzOw",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-07T19:24:40Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 49,
+     "videoId": "4Ui8pfWxYxo",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-19T12:23:57Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 28,
+     "videoId": "oQyTvYzxtJQ",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-10-27T10:13:20Z",
+     "isShort": null
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 27100,
+   "subscribersScanAt": "2026-11-21T19:04:11+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 6,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:45+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 38,
+   "name": "KryptoGeopolityka - Finanse w Geopolityce",
+   "channelId": "UClyWLX26MAeN54qyDLziCrA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "INWESTOWANIE",
+    "WEB3"
+   ],
+   "subscribersY": 26800,
+   "subscribersYReadAt": "2026-11-21T18:29:21+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": null,
+   "name": "Biznes Info",
+   "channelId": "UC4IuBQ0i0z4l1jnHEHVcelQ",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 25100,
+   "subscribersYReadAt": "2026-11-21T18:28:14+00:00",
+   "found": true,
+   "families": [
+    "brand"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 45,
+    "videoId": "TozRYPrqRsg",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Czy XTB to kolos na glinianych nogach? Prezes odpowiada!",
+    "publishedAt": "2026-08-15T08:00:31Z",
+    "isShort": true
+   },
+   "bestPosition": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 45,
+    "videoId": "TozRYPrqRsg",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Czy XTB to kolos na glinianych nogach? Prezes odpowiada!",
+    "publishedAt": "2026-08-15T08:00:31Z",
+    "isShort": true
+   },
+   "hitCount": 1,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 45,
+     "videoId": "TozRYPrqRsg",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-08-15T08:00:31Z",
+     "isShort": true
+    }
+   ],
+   "onlyShorts": true,
+   "subscribersScan": 25100,
+   "subscribersScanAt": "2026-11-21T19:04:08+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 45,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:45+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 39,
+   "name": "Parkiet",
+   "channelId": "UCHv11ztykFWf_0dhTEMLO6A",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 24800,
+   "subscribersYReadAt": "2026-11-21T18:29:46+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 12,
+    "videoId": "UAoDJU0NzMc",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Prezes XTB: Mamy apetyt na więcej. I nie chodzi tylko o Polskę. Bankowość? Jesteśmy coraz bliżej",
+    "publishedAt": "2026-10-30T11:39:41Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 12,
+    "videoId": "UAoDJU0NzMc",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Prezes XTB: Mamy apetyt na więcej. I nie chodzi tylko o Polskę. Bankowość? Jesteśmy coraz bliżej",
+    "publishedAt": "2026-10-30T11:39:41Z",
+    "isShort": false
+   },
+   "hitCount": 3,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 12,
+     "videoId": "UAoDJU0NzMc",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-10-30T11:39:41Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 32,
+     "videoId": "8gYiteB1k34",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-07-27T22:29:11Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "obligacje skarbowe",
+     "page": 1,
+     "position": 16,
+     "videoId": "Lj-2TcNU-F4",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-06-09T22:32:29Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 24800,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 12,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:45+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 40,
+   "name": "Silver Star Inwestycje Kobiecym Okiem",
+   "channelId": "UCSdU_1UvdH9pPKTN273AEag",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 24300,
+   "subscribersYReadAt": "2026-11-21T18:30:05+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 41,
+   "name": "Comparic Giełda",
+   "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "POLSKA GIEŁDA",
+    "TRADING"
+   ],
+   "subscribersY": 23800,
+   "subscribersYReadAt": "2026-11-21T18:28:24+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 47,
+    "videoId": "xOhPQWtuD7s",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "CREOTECH-y, XTB, NIEWIADÓW z korektą. Inwestorzy patrzą na SpaceX i AI | Zamknięcie sesji na #GPW",
+    "publishedAt": "2026-09-10T15:24:56Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 11,
+    "videoId": "OfSaAGBF2mk",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "Nowe rozdanie na GPW! Nowy tydzień przyniesie kolejne ATH? | Otwarcie sesji na #GPW",
+    "publishedAt": "2026-11-16T08:20:06Z",
+    "isShort": false
+   },
+   "hitCount": 19,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 47,
+     "videoId": "xOhPQWtuD7s",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-09-10T15:24:56Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 88,
+     "videoId": "jPVrkH5s-aU",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-11-14T07:54:13Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 94,
+     "videoId": "KCtuV3IUe1k",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-08-21T07:00:10Z",
+     "isShort": true
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 98,
+     "videoId": "4BvlsbNU2BE",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-10-12T08:36:43Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "mBank eMakler",
+     "page": 1,
+     "position": 31,
+     "videoId": "ar3rVIqPsfs",
+     "observedAt": "2026-11-21T19:03:50+00:00",
+     "publishedAt": "2026-10-29T18:32:12Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 11,
+     "videoId": "OfSaAGBF2mk",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-16T08:20:06Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 14,
+     "videoId": "vUy5BNX-VWs",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-20T18:12:11Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 18,
+     "videoId": "QQi2sXy4RMQ",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-17T18:31:44Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 23,
+     "videoId": "3aLIodsWJZc",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-20T08:41:30Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 27,
+     "videoId": "oKrDhQD-qgc",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-17T08:28:41Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 31,
+     "videoId": "02E5f_a1FOU",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-16T16:13:57Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 33,
+     "videoId": "H3-3D4bWQos",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-22T07:39:04Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 36,
+     "videoId": "-4-gR2feaYs",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-18T17:11:15Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 37,
+     "videoId": "9AOzE91J2nQ",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-08T07:38:05Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 41,
+     "videoId": "nfu7lNhnQH8",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-12T08:34:44Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 43,
+     "videoId": "QuE-v8Zpgjo",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-27T08:31:41Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 45,
+     "videoId": "7B4StpCosEQ",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-09-29T08:36:24Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 46,
+     "videoId": "Zy9E5IyXmaw",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-13T18:54:57Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 48,
+     "videoId": "q6gH6l_MxTE",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-09-23T14:34:03Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 23800,
+   "subscribersScanAt": "2026-11-21T19:04:11+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 47,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:45+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 42,
+   "name": "Piotr Zając o rynkach",
+   "channelId": "UCQdae3gqmjZTBqqAgX5gbrg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 23300,
+   "subscribersYReadAt": "2026-11-21T18:31:17+00:00",
+   "found": true,
+   "families": [
+    "brand"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 19,
+    "videoId": "YSSw-NzFOzM",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Słowa, które załamały XTB...",
+    "publishedAt": "2026-11-17T18:04:02Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 19,
+    "videoId": "YSSw-NzFOzM",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Słowa, które załamały XTB...",
+    "publishedAt": "2026-11-17T18:04:02Z",
+    "isShort": false
+   },
+   "hitCount": 3,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 19,
+     "videoId": "YSSw-NzFOzM",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-11-17T18:04:02Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 62,
+     "videoId": "i1vhHpVWQ1o",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-09-02T16:34:49Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 97,
+     "videoId": "-w7T0qZqMw0",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-09-10T16:12:36Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 23300,
+   "subscribersScanAt": "2026-11-21T19:04:10+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 19,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:45+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 43,
+   "name": "Albert Rokicki",
+   "channelId": "UCeCqF_8l5SJQmf8jBe-BzxA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 22200,
+   "subscribersYReadAt": "2026-11-21T18:28:09+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "Saxo Bank",
+    "page": 1,
+    "position": 19,
+    "videoId": "cFKyQtd1rjk",
+    "observedAt": "2026-11-21T19:03:49+00:00",
+    "title": "W co zainwestować na OKI? Na co uważać przy przekroczeniu progu 100 tys. zł?",
+    "publishedAt": "2026-09-11T04:35:14Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "brand",
+    "query": "Saxo Bank",
+    "page": 1,
+    "position": 19,
+    "videoId": "cFKyQtd1rjk",
+    "observedAt": "2026-11-21T19:03:49+00:00",
+    "title": "W co zainwestować na OKI? Na co uważać przy przekroczeniu progu 100 tys. zł?",
+    "publishedAt": "2026-09-11T04:35:14Z",
+    "isShort": false
+   },
+   "hitCount": 2,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "Saxo Bank",
+     "page": 1,
+     "position": 19,
+     "videoId": "cFKyQtd1rjk",
+     "observedAt": "2026-11-21T19:03:49+00:00",
+     "publishedAt": "2026-09-11T04:35:14Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 37,
+     "videoId": "D5Dz91I5ciw",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-07-06T13:39:47Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 22200,
+   "subscribersScanAt": "2026-11-21T19:04:10+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "Saxo Bank",
+    "position": 19,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:49+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 44,
+   "name": "inwestorzy.tv",
+   "channelId": "UCRdUdjSCBtbld0vIUtthcgA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 20900,
+   "subscribersYReadAt": "2026-11-21T18:30:39+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 45,
+   "name": "Michal Lewicz",
+   "channelId": "UC3f_8DpB4ivBtulW02GthUw",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "TRADING",
+    "WEB3"
+   ],
+   "subscribersY": 20400,
+   "subscribersYReadAt": "2026-11-21T18:29:36+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 46,
+   "name": "Comparic Blockchain Space",
+   "channelId": "UCKaNOsKFDFFmHIdp1-j0_jg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "INWESTOWANIE",
+    "WEB3"
+   ],
+   "subscribersY": 18900,
+   "subscribersYReadAt": "2026-11-21T18:28:22+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 47,
+   "name": "ZYSKOWNA STRONA",
+   "channelId": "UC9J9JyhNzrcehLdsU0qJvPg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 16800,
+   "subscribersYReadAt": "2026-11-21T18:30:27+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 25,
+    "videoId": "h_tniU4z67g",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "Strach kosztuje więcej niż brawura. Tracisz odbicia",
+    "publishedAt": "2026-11-21T11:02:30Z",
+    "isShort": true
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 25,
+    "videoId": "h_tniU4z67g",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "Strach kosztuje więcej niż brawura. Tracisz odbicia",
+    "publishedAt": "2026-11-21T11:02:30Z",
+    "isShort": true
+   },
+   "hitCount": 3,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 25,
+     "videoId": "h_tniU4z67g",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-21T11:02:30Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 2,
+     "position": 53,
+     "videoId": "PpWhmezsTzM",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-21T17:26:34Z",
+     "isShort": true
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 32,
+     "videoId": "8fNlw7O4j24",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-11-13T17:00:06Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 16800,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "giełda",
+    "position": 25,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:52+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 48,
+   "name": "Telewizja BIZNES24",
+   "channelId": "UCdiAORc5zDcFqhojS9LNT0w",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 16700,
+   "subscribersYReadAt": "2026-11-21T18:30:19+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 2,
+    "videoId": "2GOTC2JZxyA",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Krach na akcjach XTB! Co KNF szykuje dla rynku CFD?",
+    "publishedAt": "2026-11-17T20:46:23Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 1,
+    "position": 2,
+    "videoId": "2GOTC2JZxyA",
+    "observedAt": "2026-11-21T19:03:45+00:00",
+    "title": "Krach na akcjach XTB! Co KNF szykuje dla rynku CFD?",
+    "publishedAt": "2026-11-17T20:46:23Z",
+    "isShort": false
+   },
+   "hitCount": 5,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 1,
+     "position": 2,
+     "videoId": "2GOTC2JZxyA",
+     "observedAt": "2026-11-21T19:03:45+00:00",
+     "publishedAt": "2026-11-17T20:46:23Z",
+     "isShort": false
+    },
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 59,
+     "videoId": "9phCZoGM2N0",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-11-18T10:00:09Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 12,
+     "videoId": "nhfgy1ITJ0Q",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-20T11:04:16Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 22,
+     "videoId": "0-9vFwRib-A",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-21T06:00:26Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 9,
+     "videoId": "hRiC2V0bFe8",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-11-20T20:00:37Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 16700,
+   "subscribersScanAt": "2026-11-21T19:04:10+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 2,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:45+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 49,
+   "name": "Stowarzyszenie Inwestorów Indywidualnych",
+   "channelId": "UCEK_g_v3-VhfLuFi-5eXCsQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 16000,
+   "subscribersYReadAt": "2026-11-21T18:30:11+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "akcje dywidendowe",
+    "page": 1,
+    "position": 18,
+    "videoId": "JLVP0ggut-8",
+    "observedAt": "2026-11-21T19:03:54+00:00",
+    "title": "Inwestowanie dywidendowe bez pułapek. Spółki czy ETF? | Mateusz Mucha na ForFin 2025",
+    "publishedAt": "2026-09-29T14:44:31Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "akcje dywidendowe",
+    "page": 1,
+    "position": 18,
+    "videoId": "JLVP0ggut-8",
+    "observedAt": "2026-11-21T19:03:54+00:00",
+    "title": "Inwestowanie dywidendowe bez pułapek. Spółki czy ETF? | Mateusz Mucha na ForFin 2025",
+    "publishedAt": "2026-09-29T14:44:31Z",
+    "isShort": false
+   },
+   "hitCount": 1,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 18,
+     "videoId": "JLVP0ggut-8",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-09-29T14:44:31Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 16000,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "akcje dywidendowe",
+    "position": 18,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:54+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 50,
+   "name": "Inwestowanie, gospodarka, świat. Analizy Live",
+   "channelId": "UCL8l0qKn8uO0Pea-yBbZDQA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 15900,
+   "subscribersYReadAt": "2026-11-21T18:29:07+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 6,
+    "videoId": "gB3cMg56mRU",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "Hossobessa trwa. Anthropic, Nvidia, surowce i koniec eldorado na GPW? | Analizy LIVE",
+    "publishedAt": "2026-11-20T09:22:41Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 6,
+    "videoId": "gB3cMg56mRU",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "Hossobessa trwa. Anthropic, Nvidia, surowce i koniec eldorado na GPW? | Analizy LIVE",
+    "publishedAt": "2026-11-20T09:22:41Z",
+    "isShort": false
+   },
+   "hitCount": 1,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 6,
+     "videoId": "gB3cMg56mRU",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-20T09:22:41Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 15900,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "giełda",
+    "position": 6,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:52+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 51,
+   "name": "Bankier.pl",
+   "channelId": "UCeCGxJV5ECqBQEydmeLmY4w",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "INWESTOWANIE",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 15500,
+   "subscribersYReadAt": "2026-11-21T18:28:11+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "IKE IKZE",
+    "page": 1,
+    "position": 5,
+    "videoId": "kgQ-lgpoiwU",
+    "observedAt": "2026-11-21T19:03:55+00:00",
+    "title": "Największa zaleta IKE i IKZE? 🤑",
+    "publishedAt": "2026-08-25T10:00:12Z",
+    "isShort": true
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "IKE IKZE",
+    "page": 1,
+    "position": 5,
+    "videoId": "kgQ-lgpoiwU",
+    "observedAt": "2026-11-21T19:03:55+00:00",
+    "title": "Największa zaleta IKE i IKZE? 🤑",
+    "publishedAt": "2026-08-25T10:00:12Z",
+    "isShort": true
+   },
+   "hitCount": 1,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 5,
+     "videoId": "kgQ-lgpoiwU",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-08-25T10:00:12Z",
+     "isShort": true
+    }
+   ],
+   "onlyShorts": true,
+   "subscribersScan": 15500,
+   "subscribersScanAt": "2026-11-21T19:04:10+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "IKE IKZE",
+    "position": 5,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:55+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": null,
+   "name": "Puls Biznesu",
+   "channelId": "UCUwDpaLbXDTeSdiuSQUHv-Q",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 15400,
+   "subscribersYReadAt": "2026-11-21T18:31:15+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 52,
+   "name": "Stockbroker pl",
+   "channelId": "UCYjxwFqTUwO5cja6xi5mvUg",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 11000,
+   "subscribersYReadAt": "2026-11-21T18:31:12+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "Saxo Bank",
+    "page": 1,
+    "position": 3,
+    "videoId": "A3aX1vkkWAk",
+    "observedAt": "2026-11-21T19:03:49+00:00",
+    "title": "Jak otworzyć rachunek w Saxo Bank?",
+    "publishedAt": "2026-07-31T14:16:21Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "brand",
+    "query": "Saxo Bank",
+    "page": 1,
+    "position": 3,
+    "videoId": "A3aX1vkkWAk",
+    "observedAt": "2026-11-21T19:03:49+00:00",
+    "title": "Jak otworzyć rachunek w Saxo Bank?",
+    "publishedAt": "2026-07-31T14:16:21Z",
+    "isShort": false
+   },
+   "hitCount": 2,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "Saxo Bank",
+     "page": 1,
+     "position": 3,
+     "videoId": "A3aX1vkkWAk",
+     "observedAt": "2026-11-21T19:03:49+00:00",
+     "publishedAt": "2026-07-31T14:16:21Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 10,
+     "videoId": "133DSh6e4xg",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-10-09T16:56:31Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 11000,
+   "subscribersScanAt": "2026-11-21T19:04:10+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "Saxo Bank",
+    "position": 3,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:49+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 53,
+   "name": "Paul Crow - Finanse, Krypto, Sztuczna inteligencja",
+   "channelId": "UCz4Zgd7Fh_obkBG2_f9Rn3w",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "WEB3"
+   ],
+   "subscribersY": 10700,
+   "subscribersYReadAt": "2026-11-21T18:29:48+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": null,
+   "name": "Comparic Globalnie - Justyna Bryszewska",
+   "channelId": "UCkt9JI9Sk6TrtSvGfu_URTg",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 10600,
+   "subscribersYReadAt": "2026-11-21T18:28:28+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 54,
+   "name": "Cryptonews Polska",
+   "channelId": "UCHkTbMltEjrQ2tvdtROSTaQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "INWESTOWANIE",
+    "WEB3"
+   ],
+   "subscribersY": 9840,
+   "subscribersYReadAt": "2026-11-21T18:31:27+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 55,
+   "name": "Giełda jest Prosta",
+   "channelId": "UCAl0XDWVK5_dNrrwl4da3jA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 9590,
+   "subscribersYReadAt": "2026-11-21T18:31:22+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 8,
+    "videoId": "qPol47sdDPE",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "Spadki kupuje. Wzrosty sprzedaje. + UUUU, NVDA, INTEL, ARM, AMAZON, MP, MRVL",
+    "publishedAt": "2026-11-06T08:26:38Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "giełda",
+    "page": 1,
+    "position": 8,
+    "videoId": "qPol47sdDPE",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "Spadki kupuje. Wzrosty sprzedaje. + UUUU, NVDA, INTEL, ARM, AMAZON, MP, MRVL",
+    "publishedAt": "2026-11-06T08:26:38Z",
+    "isShort": false
+   },
+   "hitCount": 4,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 8,
+     "videoId": "qPol47sdDPE",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-06T08:26:38Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 9,
+     "videoId": "ZaAWx8GKlms",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-10-30T07:09:31Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 26,
+     "videoId": "HbieU1aGvAM",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-13T07:21:21Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "giełda",
+     "page": 1,
+     "position": 32,
+     "videoId": "DiXrL4EvTj4",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-18T15:58:25Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 9590,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "giełda",
+    "position": 8,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:52+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 56,
+   "name": "Bartek Szyma",
+   "channelId": "UCBucv0pGB0lawhM15pCb5vQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 9540,
+   "subscribersYReadAt": "2026-11-21T18:28:12+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 57,
+   "name": "StockWatch.pl",
+   "channelId": "UC816J_EZEICUYOhjTnk3o7Q",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 9050,
+   "subscribersYReadAt": "2026-11-21T18:30:07+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "ETF",
+    "page": 1,
+    "position": 50,
+    "videoId": "wqz5IE_1Cpw",
+    "observedAt": "2026-11-21T19:03:53+00:00",
+    "title": "Globalny portfel akcji z zabezpieczeniem walutowym - PZU ETF MSCI World",
+    "publishedAt": "2026-10-12T17:30:44Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "akcje dywidendowe",
+    "page": 1,
+    "position": 4,
+    "videoId": "YDVI-nXyN24",
+    "observedAt": "2026-11-21T19:03:54+00:00",
+    "title": "Inwestowanie dywidendowe - od spółki do “pasywnego” portfela | Mateusz Mucha, Beta ETF",
+    "publishedAt": "2026-09-16T16:00:06Z",
+    "isShort": false
+   },
+   "hitCount": 5,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 50,
+     "videoId": "wqz5IE_1Cpw",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-10-12T17:30:44Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 4,
+     "videoId": "YDVI-nXyN24",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-09-16T16:00:06Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "obligacje skarbowe",
+     "page": 1,
+     "position": 4,
+     "videoId": "jRuOzv6YL1A",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-09-15T19:32:30Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 15,
+     "videoId": "aoqG3hrPSls",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-09-21T19:11:25Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "IKE IKZE",
+     "page": 1,
+     "position": 41,
+     "videoId": "95ixXDb6iPI",
+     "observedAt": "2026-11-21T19:03:55+00:00",
+     "publishedAt": "2026-09-18T18:45:38Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 9050,
+   "subscribersScanAt": "2026-11-21T19:04:08+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "ETF",
+    "position": 50,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:53+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 58,
+   "name": "Dywidendowy Inwestor",
+   "channelId": "UCOiMJpkQSXDspWRMoI2B6CQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 8350,
+   "subscribersYReadAt": "2026-11-21T18:28:41+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "akcje dywidendowe",
+    "page": 1,
+    "position": 3,
+    "videoId": "KeRZbGrZQHs",
+    "observedAt": "2026-11-21T19:03:54+00:00",
+    "title": "JAKIE AKCJE DYWIDENDOWE KUPIŁEM ZA 20 TYS ZŁ w Maju 2026 ?",
+    "publishedAt": "2026-06-08T16:35:29Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "akcje dywidendowe",
+    "page": 1,
+    "position": 3,
+    "videoId": "KeRZbGrZQHs",
+    "observedAt": "2026-11-21T19:03:54+00:00",
+    "title": "JAKIE AKCJE DYWIDENDOWE KUPIŁEM ZA 20 TYS ZŁ w Maju 2026 ?",
+    "publishedAt": "2026-06-08T16:35:29Z",
+    "isShort": false
+   },
+   "hitCount": 6,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 3,
+     "videoId": "KeRZbGrZQHs",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-06-08T16:35:29Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 17,
+     "videoId": "KhuTcA9MYdU",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-07-13T16:00:18Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 25,
+     "videoId": "y17aVeKw55U",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-09-21T16:00:04Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 42,
+     "videoId": "3ZKeVKavVuE",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-08-10T16:00:11Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 45,
+     "videoId": "yIbtMnfP25Q",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-10-05T16:00:37Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "akcje dywidendowe",
+     "page": 1,
+     "position": 46,
+     "videoId": "bwz0v9Fy9ek",
+     "observedAt": "2026-11-21T19:03:54+00:00",
+     "publishedAt": "2026-06-01T16:00:20Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 8350,
+   "subscribersScanAt": "2026-11-21T19:04:10+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "akcje dywidendowe",
+    "position": 3,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:54+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 59,
+   "name": "Moje IKE",
+   "channelId": "UC6ZuH6K2eblzhSNhLgzAAwA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "POLSKA GIEŁDA",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 8150,
+   "subscribersYReadAt": "2026-11-21T18:31:20+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 60,
+   "name": "atlasETF",
+   "channelId": "UCd4T9_x7PV1K1IqYJrmOm7A",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 7890,
+   "subscribersYReadAt": "2026-11-21T18:30:31+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 61,
+   "name": "forexyestrader",
+   "channelId": "UCLMRjb2lmHOrqQKVCBmxZBQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 7700,
+   "subscribersYReadAt": "2026-11-21T18:30:35+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 62,
+   "name": "Profit Investing Robert Smug",
+   "channelId": "UCUTPCv-yeoXR7dhWplPQhqw",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 7000,
+   "subscribersYReadAt": "2026-11-21T18:29:59+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 63,
+   "name": "Młody Inwestor",
+   "channelId": "UCFiObcDqkjNjNsvA6M0xLzQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 5070,
+   "subscribersYReadAt": "2026-11-21T18:29:42+00:00",
+   "found": true,
+   "families": [
+    "brand",
+    "promo",
+    "topic"
+   ],
+   "firstHit": {
+    "family": "brand",
+    "query": "XTB",
+    "page": 2,
+    "position": 66,
+    "videoId": "qoXRvOQ4bhU",
+    "observedAt": "2026-11-21T19:03:46+00:00",
+    "title": "Szokujące wyniki XTB! Co dalej z kursem?",
+    "publishedAt": "2026-07-29T20:13:03Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "promo",
+    "query": "kod promocyjny konto maklerskie",
+    "page": 1,
+    "position": 14,
+    "videoId": "XmHicDjHtjU",
+    "observedAt": "2026-11-21T19:03:57+00:00",
+    "title": "Czemu 80% nowych inwestorów wybiera XTB? #inwestowanie #xtb",
+    "publishedAt": "2026-09-19T12:49:30Z",
+    "isShort": null
+   },
+   "hitCount": 3,
+   "hits": [
+    {
+     "family": "brand",
+     "query": "XTB",
+     "page": 2,
+     "position": 66,
+     "videoId": "qoXRvOQ4bhU",
+     "observedAt": "2026-11-21T19:03:46+00:00",
+     "publishedAt": "2026-07-29T20:13:03Z",
+     "isShort": false
+    },
+    {
+     "family": "topic",
+     "query": "ETF",
+     "page": 1,
+     "position": 20,
+     "videoId": "jxxSq1ad1vw",
+     "observedAt": "2026-11-21T19:03:53+00:00",
+     "publishedAt": "2026-08-16T14:30:42Z",
+     "isShort": false
+    },
+    {
+     "family": "promo",
+     "query": "kod promocyjny konto maklerskie",
+     "page": 1,
+     "position": 14,
+     "videoId": "XmHicDjHtjU",
+     "observedAt": "2026-11-21T19:03:57+00:00",
+     "publishedAt": "2026-09-19T12:49:30Z",
+     "isShort": null
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 5070,
+   "subscribersScanAt": "2026-11-21T19:04:09+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "brand",
+    "query": "XTB",
+    "position": 66,
+    "page": 2,
+    "observedAt": "2026-11-21T19:03:46+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 64,
+   "name": "Bogusz J. Kasowski",
+   "channelId": "UCKVHjbvr0ODXXsWiJjh8VgA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 3840,
+   "subscribersYReadAt": "2026-11-21T18:28:18+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": null,
+   "name": "Business Insider Polska",
+   "channelId": "UCMrYJLhVrZAPZj8pxotN5aA",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 3760,
+   "subscribersYReadAt": "2026-11-21T18:28:20+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 65,
+   "name": "ABC Inwestowania",
+   "channelId": "UCmi2y00F2ayFD5rg8HEQTmQ",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 3140,
+   "subscribersYReadAt": "2026-11-21T18:28:03+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "jak zacząć inwestować",
+    "page": 1,
+    "position": 40,
+    "videoId": "QLQx53KqZgg",
+    "observedAt": "2026-11-21T19:03:56+00:00",
+    "title": "10 Zasad Jak Zacząć Inwestować Od Zera! 📈 Moje Wnioski i Błędy 💰",
+    "publishedAt": "2026-09-29T17:22:07Z",
+    "isShort": false
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "jak zacząć inwestować",
+    "page": 1,
+    "position": 40,
+    "videoId": "QLQx53KqZgg",
+    "observedAt": "2026-11-21T19:03:56+00:00",
+    "title": "10 Zasad Jak Zacząć Inwestować Od Zera! 📈 Moje Wnioski i Błędy 💰",
+    "publishedAt": "2026-09-29T17:22:07Z",
+    "isShort": false
+   },
+   "hitCount": 1,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "jak zacząć inwestować",
+     "page": 1,
+     "position": 40,
+     "videoId": "QLQx53KqZgg",
+     "observedAt": "2026-11-21T19:03:56+00:00",
+     "publishedAt": "2026-09-29T17:22:07Z",
+     "isShort": false
+    }
+   ],
+   "onlyShorts": false,
+   "subscribersScan": 3140,
+   "subscribersScanAt": "2026-11-21T19:04:11+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "jak zacząć inwestować",
+    "position": 40,
+    "page": 1,
+    "observedAt": "2026-11-21T19:03:56+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 66,
+   "name": "Klub Zero | Trading i Krypto",
+   "channelId": "UCkPUl2VLho_1kFEDZ_EkRPw",
+   "status": "kwalifikuje się",
+   "cryptoDominant": true,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE",
+    "TRADING",
+    "WEB3"
+   ],
+   "subscribersY": 2950,
+   "subscribersYReadAt": "2026-11-21T18:29:13+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 67,
+   "name": "Akcje Świata",
+   "channelId": "UCncwT-5nfGttxQyV7UxM9Nw",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 1800,
+   "subscribersYReadAt": "2026-11-21T18:28:07+00:00",
+   "found": true,
+   "families": [
+    "topic"
+   ],
+   "firstHit": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 2,
+    "position": 75,
+    "videoId": "rIf5ZIYvv0k",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "Kurs akcji Sandisk - 6.11  #akcje #trading #inwestowanie #xtb",
+    "publishedAt": "2026-11-07T08:58:35Z",
+    "isShort": true
+   },
+   "bestPosition": {
+    "family": "topic",
+    "query": "inwestowanie",
+    "page": 2,
+    "position": 75,
+    "videoId": "rIf5ZIYvv0k",
+    "observedAt": "2026-11-21T19:03:52+00:00",
+    "title": "Kurs akcji Sandisk - 6.11  #akcje #trading #inwestowanie #xtb",
+    "publishedAt": "2026-11-07T08:58:35Z",
+    "isShort": true
+   },
+   "hitCount": 1,
+   "hits": [
+    {
+     "family": "topic",
+     "query": "inwestowanie",
+     "page": 2,
+     "position": 75,
+     "videoId": "rIf5ZIYvv0k",
+     "observedAt": "2026-11-21T19:03:52+00:00",
+     "publishedAt": "2026-11-07T08:58:35Z",
+     "isShort": true
+    }
+   ],
+   "onlyShorts": true,
+   "subscribersScan": 1800,
+   "subscribersScanAt": "2026-11-21T19:04:11+00:00",
+   "subscribersHidden": false,
+   "scanDiscoveryRecord": {
+    "method": "data_api_search",
+    "queryKind": "topic",
+    "query": "inwestowanie",
+    "position": 75,
+    "page": 2,
+    "observedAt": "2026-11-21T19:03:52+00:00"
+   },
+   "scanPolish": true,
+   "subsDiffPct": 0.0
+  },
+  {
+   "rankQualified": 68,
+   "name": "Iceberg Trading",
+   "channelId": "UCe622FjHG7wKqKDoJa7DZcA",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "RYNKI GLOBALNE",
+    "INWESTOWANIE",
+    "TRADING"
+   ],
+   "subscribersY": 1710,
+   "subscribersYReadAt": "2026-11-21T18:28:59+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": null,
+   "name": "Forbes Polska",
+   "channelId": "UCehsJXuHe0wj0jFEg8XwArA",
+   "status": "wątpliwy",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MEDIA",
+    "MAKRO, GOSPODARKA"
+   ],
+   "subscribersY": 251,
+   "subscribersYReadAt": "2026-11-21T18:28:49+00:00",
+   "found": false
+  },
+  {
+   "rankQualified": 69,
+   "name": "Marek Gaik - Finansowy Żeglarz",
+   "channelId": "UCKjD8KK2hi6mkjGGUByEgcw",
+   "status": "kwalifikuje się",
+   "cryptoDominant": false,
+   "alreadySeededInRepo": false,
+   "tabs": [
+    "MARKI OSOBISTE",
+    "INWESTOWANIE"
+   ],
+   "subscribersY": 200,
+   "subscribersYReadAt": "2026-11-21T18:29:34+00:00",
+   "found": false
+  }
+ ],
+ "queries": [
+  {
+   "n": 1,
+   "family": "brand",
+   "query": "XTB",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:45+00:00",
+   "items": 50,
+   "totalResults": 458217,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=XTB&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 2,
+   "family": "brand",
+   "query": "XTB",
+   "page": 2,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:46+00:00",
+   "items": 50,
+   "totalResults": 458219,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=XTB&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&pageToken=CDIQAA&key=REDACTED"
+  },
+  {
+   "n": 3,
+   "family": "brand",
+   "query": "eToro",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:46+00:00",
+   "items": 50,
+   "totalResults": 412164,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=eToro&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 4,
+   "family": "brand",
+   "query": "Trading 212",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:47+00:00",
+   "items": 50,
+   "totalResults": 685116,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=Trading+212&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 5,
+   "family": "brand",
+   "query": "Freedom24",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:48+00:00",
+   "items": 50,
+   "totalResults": 71009,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=Freedom24&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 6,
+   "family": "brand",
+   "query": "Interactive Brokers",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:49+00:00",
+   "items": 50,
+   "totalResults": 569399,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=Interactive+Brokers&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 7,
+   "family": "brand",
+   "query": "Saxo Bank",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:49+00:00",
+   "items": 50,
+   "totalResults": 129423,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=Saxo+Bank&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 8,
+   "family": "brand",
+   "query": "mBank eMakler",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:50+00:00",
+   "items": 50,
+   "totalResults": 129,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=mBank+eMakler&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 9,
+   "family": "topic",
+   "query": "inwestowanie",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:51+00:00",
+   "items": 53,
+   "totalResults": 1000000,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=inwestowanie&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 10,
+   "family": "topic",
+   "query": "inwestowanie",
+   "page": 2,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:52+00:00",
+   "items": 50,
+   "totalResults": 1000000,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=inwestowanie&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&pageToken=CDIQAA&key=REDACTED"
+  },
+  {
+   "n": 11,
+   "family": "topic",
+   "query": "giełda",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:52+00:00",
+   "items": 50,
+   "totalResults": 1000000,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=gie%C5%82da&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 12,
+   "family": "topic",
+   "query": "ETF",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:53+00:00",
+   "items": 50,
+   "totalResults": 1000000,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=ETF&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 13,
+   "family": "topic",
+   "query": "akcje dywidendowe",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:54+00:00",
+   "items": 53,
+   "totalResults": 9522,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=akcje+dywidendowe&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 14,
+   "family": "topic",
+   "query": "obligacje skarbowe",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:54+00:00",
+   "items": 53,
+   "totalResults": 705234,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=obligacje+skarbowe&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 15,
+   "family": "topic",
+   "query": "IKE IKZE",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:55+00:00",
+   "items": 50,
+   "totalResults": 18266,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=IKE+IKZE&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 16,
+   "family": "topic",
+   "query": "jak zacząć inwestować",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:56+00:00",
+   "items": 53,
+   "totalResults": 199606,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=jak+zacz%C4%85%C4%87+inwestowa%C4%87&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 17,
+   "family": "promo",
+   "query": "partnerem odcinka",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:56+00:00",
+   "items": 50,
+   "totalResults": 362530,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=partnerem+odcinka&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 18,
+   "family": "promo",
+   "query": "kod promocyjny konto maklerskie",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:57+00:00",
+   "items": 50,
+   "totalResults": 85821,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=kod+promocyjny+konto+maklerskie&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  },
+  {
+   "n": 19,
+   "family": "promo",
+   "query": "link w opisie darmowe akcje",
+   "page": 1,
+   "units": 100,
+   "observedAt": "2026-11-21T19:03:58+00:00",
+   "items": 50,
+   "totalResults": 1000000,
+   "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=link+w+opisie+darmowe+akcje&type=video&maxResults=50&regionCode=PL&relevanceLanguage=pl&publishedAfter=2026-05-25T19%3A03%3A44Z&order=relevance&safeSearch=none&key=REDACTED"
+  }
+ ],
+ "inputs": {
+  "fixtures/validation/y-reference/channels.json": "99cb111e9f913b6ed60ec05b0d0259ff59272d4c3f9311a8debbe1895d697a7b",
+  "fixtures/validation/y-reference/README.md": "e0e4d9192dd39dab725957db71c60dfe4efd6ec49a01ddff3fce8d691564147d",
+  "fixtures/validation/PROTOKOL.md": "b39bf39f6717f59c544550cfcbcc147db351517493c5faaaa9b41c067b7e6a57",
+  "fixtures/raw/discovery/youtube-api-2026-11-21/channels-by-subscribers.json": "4b1958d15ed166d098ebb5f1af3010d7ca0c0f6b3f68b32f6b8a039e8d5aeaf6",
+  "fixtures/raw/discovery/youtube-api-2026-11-21/requests.jsonl": "75250e6d6c507e925255297fa379b3fba24fbf27a754435ae42d6b59d6be883f",
+  "fixtures/raw/discovery/youtube-api-2026-11-21/report.json": "800d1325a41c7babcdcc446461c35c4a45b49caabced19e2f89be1a56e4be2f5"
+ },
+ "summary": {
+  "variant": "główny (zamrożony): 69 kwalifikujących się, ranking po subskrybentach 2026-11-21",
+  "seededExcluded": "Comparic Rynki - Marcin Wenus (rank 10) jest seedem repo i wg README nie liczy się jako odkrycie; mianowniki top-10/20/69 są o 1 mniejsze.",
+  "top5": "3/5",
+  "top10": "7/9",
+  "top20": "10/19",
+  "all69": "33/68",
+  "top10TieNote": "Rank 10 (seed) i 11 (Kryptowaluty dla Początkujących, nie znaleziony) mają ten sam licznik 114 tys.; przy odwrotnym rozstrzygnięciu remisu top-10 = 7/10.",
+  "scanTotals": "380 kanałów (209 polskojęzycznych), 1900 j. search + 43 j. wzbogacenia = 1943 j.; 37 z 82 kanałów listy (z wątpliwymi) znalezionych.",
+  "missingQualified": 35,
+  "missingQualifiedCrypto": 19,
+  "missingTop20": [
+   {
+    "rank": 2,
+    "name": "Piotr Ostapowicz",
+    "crypto": true,
+    "cause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+   },
+   {
+    "rank": 5,
+    "name": "Independent Trader",
+    "crypto": false,
+    "cause": "Tematyka makro/metale szlachetne/geopolityka; brak w zestawie fraz 'złoto', 'srebro', 'inflacja', 'kryzys'. Na 'inwestowanie' (2 strony, 103 wyniki) i 'giełda' (50) nie wypłynął w trafności YouTube; kanał nie reklamuje brokerów z listy markowej (nie wynika z danych skanu, tylko z braku trafień)."
+   },
+   {
+    "rank": 11,
+    "name": "Kryptowaluty dla Początkujących",
+    "crypto": true,
+    "cause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+   },
+   {
+    "rank": 13,
+    "name": "Łukasz Michałek (Biblia Kryptowalut)",
+    "crypto": true,
+    "cause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+   },
+   {
+    "rank": 15,
+    "name": "Inwestomat",
+    "crypto": false,
+    "cause": "Tematyka ETF/IKE/obligacje pokryta zapytaniami, ale kanał miał mało wyświetleń w X 2026 (47,9 tys. wg InvestTube) — prawdopodobnie mało nowych filmów w oknie publishedAfter=2026-05-25 i niska pozycja w trafności; 1 strona (50 wyników) na zapytanie nie sięgnęła głębiej."
+   },
+   {
+    "rank": 16,
+    "name": "Jarzombek",
+    "crypto": true,
+    "cause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+   },
+   {
+    "rank": 18,
+    "name": "Mike Satoshi",
+    "crypto": true,
+    "cause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+   },
+   {
+    "rank": 19,
+    "name": "321 Crypto",
+    "crypto": true,
+    "cause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+   },
+   {
+    "rank": 20,
+    "name": "Gotowy na Krypto",
+    "crypto": true,
+    "cause": "Brak w zestawie 17 zapytań jakiejkolwiek frazy kryptowalutowej (kryptowaluty, bitcoin, giełda kryptowalut) i marki giełdy kryptowalut; kanał z zakładki WEB3, treść krypto nie wypływa na frazy o akcjach/ETF/brokerach. Zapytania tematyczne pobrały tylko 1 stronę (poza 'inwestowanie')."
+   }
+  ]
+ },
+ "subscriberDiff": {
+  "matched": 37,
+  "identical": 36,
+  "different": [
+   {
+    "name": "FXMAG - tłumaczymy świat finansów",
+    "y": 126000,
+    "scan": 127000,
+    "pct": 0.8
+   }
+  ],
+  "note": "Oba odczyty są zaokrąglone przez YouTube do 3 cyfr znaczących (strona i channels.list), odstęp ok. 30 min (18:28–18:36 vs 19:04 UTC); zgodność potwierdza tożsamość ID, nie jest niezależnym pomiarem."
+ },
+ "handling": {
+  "ties": "Jeden remis w liczniku wśród 69: rank 10/11 (114 tys.). Miejsca 3–5 bez remisu (212/208/201 tys.). Dopasowanie liczone na zbiorach ID, więc remis zmienia tylko granicę top-10.",
+  "hiddenStats": "0 ukrytych liczników subskrybentów w skanie (380/380 observed); wszystkie 69 kanałów listy mają licznik.",
+  "shorts": "Żaden kanał listy nie został znaleziony wyłącznie przez Shorts (≤60 s); InvestTube wyklucza Shorts z wyświetleń, skan je zwraca, ale na członkostwo kanału nie wpływa."
+ },
+ "verdict": {
+  "status": "niezaliczone",
+  "reason": "Wariant główny: 3/5 z top-5 przy celu roboczym ≥4/5.",
+  "sensitivity": "Bez kanałów krypto 4/5 (cel osiągnięty), wszystkie zakładki 2/5. Wariant główny zamrożono jako rozstrzygający; warianty nie zastępują wyniku."
+ },
+ "additionalQueriesProposal": {
+  "status": "propozycja, niewykonana; ułożona po wglądzie w braki, więc skan z nią to strojenie, nie niezależna próba Y",
+  "queries": [
+   {
+    "family": "topic",
+    "q": "kryptowaluty",
+    "why": "Skan nie ma żadnej frazy krypto; kryptoaktywa to duży segment detalicznych inwestycji i promocji (MiCA, giełdy transgraniczne)."
+   },
+   {
+    "family": "topic",
+    "q": "bitcoin",
+    "why": "Najczęstsza fraza produktowa krypto; uzupełnia 'kryptowaluty' o materiały analityczne/kursowe."
+   },
+   {
+    "family": "topic",
+    "q": "analiza techniczna",
+    "why": "Trading/CFD to główny obszar ryzyka M2 (ostrzeżenia CFD); żadna fraza tematyczna nie celuje w trading."
+   },
+   {
+    "family": "topic",
+    "q": "forex",
+    "why": "Jw.: CFD/forex jest typowym produktem promowanym przez twórców i objętym ostrzeżeniami KNF."
+   },
+   {
+    "family": "topic",
+    "q": "złoto srebro inwestowanie",
+    "why": "Surowce/metale i makro nie są pokryte; to osobna kategoria inwestycyjna z promocją dealerów i brokerów."
+   },
+   {
+    "family": "promo",
+    "q": "kod polecający giełda kryptowalut",
+    "why": "Odpowiednik frazy 'kod promocyjny konto maklerskie' dla segmentu krypto; rodzina promocyjna ma najwyższą wydajność kanałów ≥100 tys. na jednostkę."
+   }
+  ],
+  "budgetUnits": {
+   "search": 600,
+   "enrichmentEstimate": 20,
+   "total": 620,
+   "basis": "6 × search.list (100 j.) + videos/channels ok. 3 j. na stronę 50 wyników (1943−1900=43 j. na 19 stron w skanie)."
+  },
+  "nextIndependentTest": "Po dodaniu zapytań zmierzyć na nowej, niezależnej liście (inne źródło lub InvestTube XI 2026 zamrożony przed skanem)."
+ },
+ "limitations": [
+  "Jedno źródło członkostwa (InvestTube X 2026) i jedno źródło liczników (publiczny licznik YouTube).",
+  "Możliwy konflikt interesów źródła (współredaktor prowadzi Comparic Rynki; Invest Cuffs nagradza XTB; iKsync pośredniczy między markami a twórcami).",
+  "Sonda B (przed zamrożeniem) odwiedziła publiczne rankingi twórców, w tym artykuł o InvestTube i ranking SII; tak trafiono na Piotra Cymcyka (rank 9). Zestaw 17 zapytań skanu nie zawiera nazw kanałów, a w kodzie i seedach nie ma ID z listy poza seedem Comparic Rynki (sprawdzone grep). Zestaw zapytań rozszerzono względem sondy już po zamrożeniu (mtime collectors/youtube.py 19:13 UTC), więc nie da się dowieść, że frazy ustalono przed zamrożeniem.",
+  "Jedna data i jeden przebieg (2026-11-21 19:03:45–19:03:58 UTC); trafność YouTube jest niedeterministyczna i zależna od okna publishedAfter=2026-05-25.",
+  "Budżety rodzin nierówne (800/800/300 j.) i kolejność zapytań wpływa na porównanie przy 300 j.",
+  "Lista mierzy niszę inwestycyjną według InvestTube (aktywność w X 2026), nie całą populację twórców reklamujących firmy inwestycyjne."
+ ],
+ "schema": "investwatch-y-result-1",
+ "computedBy": "agent G (claude-opus-5-5), offline, bez sieci i modeli; skrypt jednorazowy w scratchpad",
+ "computedAt": "2026-11-21",
+ "protocolVersion": "1.0"
+}

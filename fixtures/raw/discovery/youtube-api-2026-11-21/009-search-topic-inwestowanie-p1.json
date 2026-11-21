@@ -1,0 +1,2464 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "J3cA82Z9x3nBxeuN_OAMUOWgSqE",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 53
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KBTb5fjabdf-Ve5c2rdFYl69c7I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sQxTXdBl0TA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T18:00:30Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Czy Pankracy umie inwestować? Krótko o tym jak zostać dobrym inwestorem!",
+        "description": "Pankracy i Strategia inwestycyjna oparta na ETF nie gwarantuje ponadprzeciętnych zysków. Dowiedz się, dlaczego dyscyplina to ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sQxTXdBl0TA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sQxTXdBl0TA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sQxTXdBl0TA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sQxTXdBl0TA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sQxTXdBl0TA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T18:00:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XqcPiRf_FQp2xyKTn-KSem2Iaus",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ryZCguUDZeI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:00:15Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "W co inwestować na IKE oraz IKZE: akcje, obligacje, ETF-y?",
+        "description": "Chcesz mieć więcej pieniędzy? Przeczytaj moją książkę: https://inwestokracja.pl/yt Chcesz otrzymywać DARMOWE lekcje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:00:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "e9T0He2UUXnbe2f9AsI6q-ph558",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oZPrbO5by48"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T17:30:11Z",
+        "channelId": "UC3JgUN78v4RX3saWqmCEV1g",
+        "title": "Giełdy przed dużym zwrotem? Co zwiastują spadki surowców i ucieczka z technologii? | Extra Analiza",
+        "description": "Czy debiut Anthropic odmieni sytuację na giełdach, czy czeka nas większa korekta? Marcin Tuszkiewicz analizuje wyniki spółek, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Marcin Tuszkiewicz | Inwestowanie & Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T17:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lyhcH2TbhpPZ1Lwq_TNldg7HxDg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hxXLNdF4-L4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T09:39:50Z",
+        "channelId": "UCvEV7e_zb6UsUq7BXy9cntw",
+        "title": "KNF chce zniszczyć XTB? #inwestowanie #giełda",
+        "description": "W dwie sesje z wyceny XTB zniknęło około 3,5 miliarda złotych. Powodem była zapowiedź zmian na rynku CFD. Co KNF może ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/hxXLNdF4-L4/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "kyudo | krypto & finanse",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T09:39:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "q9sL_GGpzA3EHyPcxAHjsEia-ic",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "y2ACGacCles"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-15T16:00:19Z",
+        "channelId": "UCLiEUDMA930sCb2D3inalPg",
+        "title": "Jak zacząć INWESTOWAĆ w 2027? (od 100 zł)",
+        "description": "Obejrzyj najważniejszy film: https://youtu.be/qaFRml9vw00 Instagram: https://www.instagram.com/hubert.misiag Chcesz zacząć ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/y2ACGacCles/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Hubert Misiąg",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-15T16:00:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Km6XfZ_KAx146rdUdBQMEkp8_T4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PSgUCX7czV8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-15T09:00:28Z",
+        "channelId": "UCj_IcKBn8t-9U836OHe9iQw",
+        "title": "Zaczynasz inwestować po 40? Nie próbuj nadrabiać straconego czasu",
+        "description": "Najdroższym błędem późnego startu może być próba szybkiego dogonienia tych, którzy zaczęli wcześniej. Masz 40, 45 albo 50 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PSgUCX7czV8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PSgUCX7czV8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PSgUCX7czV8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PSgUCX7czV8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PSgUCX7czV8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowy MBA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-15T09:00:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x-7ztgpW1Dh1ZzwHTN09b_kP52s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "K1Ykw5XZg9U"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-06T16:00:29Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "Co jeśli zaczniesz inwestować, a następnego dnia przyjdzie kryzys?",
+        "description": "Chcesz mieć więcej pieniędzy? Przeczytaj moją książkę: https://inwestokracja.pl/yt Chcesz otrzymywać DARMOWE lekcje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/K1Ykw5XZg9U/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-06T16:00:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "54AdkOkD2T7rgBoJBSc0OlXgJPQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Q0uzgGG6JNU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T07:37:20Z",
+        "channelId": "UCxhAfhXu0ECIbt_2AN-NdHw",
+        "title": "W co inwestować małe kwoty? Inwestowanie na 2027! Mateusz Mucha - Beta ETF",
+        "description": "W co inwestować małe kwoty? To musisz wiedzieć o ETF-ach! Mateusz Mucha - Beta ETF ▶️ Gość Mateusz Mucha: KONTAKT: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biznes Misja",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T07:37:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_oOKKc3XdHVPvvxBOAQt23gIrCU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4zfaHuorug8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-13T16:56:09Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "1000 dni inwestowania 500 PLN! ILE ZAROBIŁEM? Zaczynam od zera - w co inwestuję w czasie paniki?",
+        "description": "Jak zacząłbym inwestować na giełdzie ze swoją dzisiejszą wiedzą? Jak zacząć inwestować na giełdzie akcji? Jak inwestować w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4zfaHuorug8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4zfaHuorug8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4zfaHuorug8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4zfaHuorug8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4zfaHuorug8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-13T16:56:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1Iqq6bodv-sf1E7Cv6lOrsxePf8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2RtBBqfBQ5k"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-01T16:00:08Z",
+        "channelId": "UCUKuDA4EuAQgzvaI_9IMjYg",
+        "title": "Polacy boją się inwestować? Giełda, kryptowaluty i pułapki szybkiego zysku | Tomasz Jaroszek",
+        "description": "Zapraszam na kolejny odcinek podcastu „Pokój Przesłuchań” — przestrzeni rozmów o biznesie, technologii, prawie i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2RtBBqfBQ5k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2RtBBqfBQ5k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2RtBBqfBQ5k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2RtBBqfBQ5k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2RtBBqfBQ5k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/2RtBBqfBQ5k/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pokój Przesłuchań",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-01T16:00:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6qLwqvos95F2fVnopLjgoeOefM0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DkDhwg31SoI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T17:15:53Z",
+        "channelId": "UCtTpDSRTegHewCxP9GTUaXQ",
+        "title": "XTB -20%. SZOK NA NVIDII. Debiut Anthropic. Już jest GTA VI i dolar po 4 złote. Dzieje się!",
+        "description": "Partnerem kanału jest Sharkfutures ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DkDhwg31SoI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DkDhwg31SoI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DkDhwg31SoI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DkDhwg31SoI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DkDhwg31SoI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "FXMAG - tłumaczymy świat finansów",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T17:15:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "StZ64DgE88eULuej8ZEu0q1vm7w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BljdXvMnNYw"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-12T15:00:38Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "Nie inwestuj ani złotówki na giełdzie, dopóki tego nie obejrzysz",
+        "description": "Chcesz mieć więcej pieniędzy? Zapisz się i otrzymuj darmowe lekcje: https://pankracy.gr8.com/ ✓ Jeśli masz jakieś pytanie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/BljdXvMnNYw/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-12T15:00:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DptT_VNwYPQk6-5SHZp2a_2SkL0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CBUK8lJgeKw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T17:00:10Z",
+        "channelId": "UCvEV7e_zb6UsUq7BXy9cntw",
+        "title": "XTB wydaje fortunę na reklamy. Czy akcjonariusze na tym zarobią? #inwestowanie #akcje",
+        "description": "XTB reklamuje się wszędzie i szybko zdobywa klientów. Ale czy po przecenie akcji o około 25% to również okazja dla ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/CBUK8lJgeKw/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "kyudo | krypto & finanse",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T17:00:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Vvt4Xdm57MKq5TZ6j2lejjnoGqU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "B8TYcM5WKp0"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-11T14:05:01Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "Jak zacząłbym od zera z dzisiejszą wiedzą? Ile zarobiłem po 950 dniach inwestowania 500 złotych?",
+        "description": "Jak zacząłbym inwestować na giełdzie ze swoją dzisiejszą wiedzą? Jak zacząć inwestować na giełdzie akcji? Jak inwestować w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/B8TYcM5WKp0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/B8TYcM5WKp0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/B8TYcM5WKp0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/B8TYcM5WKp0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/B8TYcM5WKp0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-11T14:05:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "djOHL-ZfXNJxRenE9pUHmoHGjlU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "6a0YbVL3CO0"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-02T16:00:14Z",
+        "channelId": "UCNvSk-U6X9mOJHr7wz_xCWw",
+        "title": "Jeśli zaczynałbym inwestowanie od ZERA, oto co bym zrobił. Omar Arnaout [Expert w Bentleyu]",
+        "description": "TRWA BLACK BENTLEY! TERAZ −25%! ⚫⚫⚫ SUPLEMENTY • KURSY JĘZYKOWE • KSIĄŻKI ⏰ SKORZYSTAJ ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/6a0YbVL3CO0/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Maciej Wieczorek - Expert w Bentleyu",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-02T16:00:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "o2wsve_qWtusQaPBzkpo5Xg9Pq4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ugWxj3Jdb44"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-27T18:00:11Z",
+        "channelId": "UCkUYsJcZOJQlU7O-8i8ecZg",
+        "title": "Nie Inwestuj w Obligacje Skarbowe Zanim Nie Zobaczysz Tego",
+        "description": "Czy inwestowanie w obligacje skarbowe ma sens? Przez ponad 20 lat obligacje indeksowane inflacją pozwalały chronić ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Kamil Polak",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-27T18:00:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lTnrae4u8FUEP_ACdiOX-XJ19Mw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4yPa0agy7Po"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-08T06:00:15Z",
+        "channelId": "UCxReMzw4vJ9ZlTkkgIue00w",
+        "title": "Masz gotówkę na koncie? Zobacz, kiedy naprawdę warto kupować akcje! | Inwestowanie Przy Kawie #33",
+        "description": "Czy warto trzymać 50% kapitału w gotówce i czekać na giełdowe spadki? Sprawdzamy na danych z 26 lat, czy taka strategia ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4yPa0agy7Po/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4yPa0agy7Po/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4yPa0agy7Po/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4yPa0agy7Po/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4yPa0agy7Po/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/4yPa0agy7Po/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Mądre Inwestycje | Marcin Tuszkiewicz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-08T06:00:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "efvJFFF4Ournokp8uoT4TDDOoM4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Unc7QSMrK4w"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-07T07:19:11Z",
+        "channelId": "UC3JgUN78v4RX3saWqmCEV1g",
+        "title": "Czy to już okazje? Uran, technologia, krypto, złoto. Nvidia na celowniku",
+        "description": "Wyprzedaż AI po wyborach: półprzewodniki -28% w miesiąc. SOX -12,2% w tydzień (-35,8% od szczytu), Nvidia -9% w czwartek i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Unc7QSMrK4w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Unc7QSMrK4w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Unc7QSMrK4w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Unc7QSMrK4w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Unc7QSMrK4w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Tuszkiewicz | Inwestowanie & Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-07T07:19:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zUZlhwmojYq6NjOL4VQOS9la0-0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3RuVHbHCxFw"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-17T16:27:57Z",
+        "channelId": "UCcJq-5bSAMp2ZCOR8kacfmA",
+        "title": "Najlepsza kolejność inwestowania pieniędzy w 2026 roku",
+        "description": "Sprawdź możliwości inwestowania bez prowizji w XTB: https://geolink.xtb.com/wMYiO ▶️ Teraz, rejestrując się w XTB z kodem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3RuVHbHCxFw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3RuVHbHCxFw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3RuVHbHCxFw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3RuVHbHCxFw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3RuVHbHCxFw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowa TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-17T16:27:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "AAflLSMHabcw10RWOxOeH7lFrRI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "uM24ZsvzgV8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T18:00:14Z",
+        "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+        "title": "Orlen się sypie, a Allegro wygrywa wojnę z InPostem. Dwa giganty GPW idą w przeciwnych kierunkach!",
+        "description": "Znajdź swój cel, dla którego warto inwestować. Zacznij razem z aplikacją XTB — https://link-pso.xtb.com/pso/kdg44 Rejestrując ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uM24ZsvzgV8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uM24ZsvzgV8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uM24ZsvzgV8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uM24ZsvzgV8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uM24ZsvzgV8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Piotr Cymcyk - Merytorycznie o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T18:00:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "z3l1KCeL_EHaMpPxMAp4uNsBmyw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cRIsPDRoTRM"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T18:27:41Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "Co zrobić z oszczędnościami jeszcze przed końcem 2026 roku? SPRAWDŹ mój plan",
+        "description": "Zadbaj o finanse z naszym Newsletterem: https://marciniwuc.com/zapisz/?utm_source=youtube.com&utm_medium=description ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cRIsPDRoTRM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cRIsPDRoTRM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cRIsPDRoTRM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cRIsPDRoTRM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cRIsPDRoTRM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/cRIsPDRoTRM/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T18:27:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WGXFX1UB_eooyRm2nbEsSN0vg2c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yo9alfR1zu8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T15:33:36Z",
+        "channelId": "UCvEV7e_zb6UsUq7BXy9cntw",
+        "title": "Złoto Runęło! Tak miało chronić oszczędności? #inwestowanie #złoto",
+        "description": "Jeszcze niedawno kolejki po sztabki, teraz prawie 30% poniżej rekordu. Co ciąży złotu i dlaczego zakupy NBP nie oznaczają, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yo9alfR1zu8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yo9alfR1zu8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yo9alfR1zu8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yo9alfR1zu8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yo9alfR1zu8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/yo9alfR1zu8/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "kyudo | krypto & finanse",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T15:33:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KPWQsBQigyOt4L9-WvIytfkR9fI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "puNF4JbToxA"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-02T15:00:17Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "Oto co bym zrobił, gdybym zaczynał inwestowanie od zera!",
+        "description": "współpraca XTB [współpraca] Tutaj Kupisz Akcje i ETFy (XTB): https://link-pso.xtb.com/pso/DwCbZ Jak kupić akcje i ETFy?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/puNF4JbToxA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-02T15:00:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sS3zEjoj8T6wQO6IxNtj9Ge78n0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BbBk1qy01zE"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-07T13:00:05Z",
+        "channelId": "UCFkzfh0MRC3p_vTCwH2Joew",
+        "title": "Złoto spada, a wielki kapitał kupuje. Co oni wiedzą? #złoto #srebro #inwestowanie ",
+        "description": "Złoto spada, Fed ponownie straszy wyższymi stopami procentowymi, dolar się umacnia, a rentowności obligacji rosną. Mimo to ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BbBk1qy01zE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BbBk1qy01zE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BbBk1qy01zE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BbBk1qy01zE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BbBk1qy01zE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Rekin Srebra",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-07T13:00:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "JA_eqjnGh7mKvAor374nDga0tHM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PoUCJ4xODMU"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-03T15:54:21Z",
+        "channelId": "UCelOnoH_P-vJgAHSAcMKQiw",
+        "title": "ZŁOTO DLA DEBILI?! W co inwestować? Radek Pogoda o mieszkaniach, biznesie i kruszcach",
+        "description": "Kryzys w Europie uderza w zyski, więc kapitał ucieka w globalny nearshoring i sektor atomowy, a inwestorzy porzucają ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PoUCJ4xODMU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PoUCJ4xODMU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PoUCJ4xODMU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PoUCJ4xODMU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PoUCJ4xODMU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Rynki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-03T15:54:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "d_pM58J2x74p_ct6U3p4aDR20HY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SgiHKuGQVac"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-03T14:00:09Z",
+        "channelId": "UC2MQ1TRVmCnslmwlgqayVrw",
+        "title": "Nowe WIELKIE INWESTYCJE IDĄ do POLSKI - Zobacz jak dużo się zmieni",
+        "description": "Nasze sklepy: https://globier.com/ & http://tuncia.pl ➡️ Instagram: https://www.instagram.com/globalista_yt/ ➡️ Fanpage na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SgiHKuGQVac/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SgiHKuGQVac/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SgiHKuGQVac/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SgiHKuGQVac/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SgiHKuGQVac/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/SgiHKuGQVac/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Globalista TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-03T14:00:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8Mo7hfI0wiyllAxLwu931HUUf5c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tyTN1HjwK3s"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-25T15:19:51Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "7 lat inwestowania w 22 minuty (błędy, wnioski i zmiany)",
+        "description": "Chcesz mieć więcej pieniędzy? Przeczytaj moją książkę: https://inwestokracja.pl/yt Chcesz otrzymywać DARMOWE lekcje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tyTN1HjwK3s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tyTN1HjwK3s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tyTN1HjwK3s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tyTN1HjwK3s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tyTN1HjwK3s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/tyTN1HjwK3s/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-25T15:19:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "wtSSDZi9STxAS_ArjnXGg_-BzhI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1_3siGN-NC4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-08T14:00:33Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Coś złego dzieje się na giełdzie? Wyniki Apple, AMD, Novo-Nordisk. #GITnews",
+        "description": "Jedno ze starszych kont na których inwestuję - LYNX. Przy rejestracji z tego linku otrzymasz 500 € zwrotu z prowizji: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1_3siGN-NC4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1_3siGN-NC4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1_3siGN-NC4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1_3siGN-NC4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1_3siGN-NC4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/1_3siGN-NC4/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-08T14:00:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NzZVvjsM0nes7DB6W07FT5nvMxI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5e0D6XJUF84"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-16T13:00:37Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Czy OKI jeszcze więcej napędzi hossę na GPW? Jak inwestować na OKI?",
+        "description": "Tutaj do 100 tys. € miesięcznego obrotu nie płacicie prowizji za transakcje - XTB. Sam tu inwestuję: https://geolink.xtb.com/UjJpQ ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5e0D6XJUF84/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5e0D6XJUF84/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5e0D6XJUF84/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5e0D6XJUF84/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5e0D6XJUF84/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/5e0D6XJUF84/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-16T13:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "77CnKgKKKXPgjhmbog62lExoGq4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pqKSXwfsf6M"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-11T09:32:59Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "W co zainwestowałbym 100, 500 i 500 000 zł? Ile zarobiłem po 28 miesiącach inwestowania 500 PLN?",
+        "description": "W co zainwestować 100, 500, 10 000, 100 000 złotych? Jak zacząć inwestować na giełdzie? Jak inwestować w obligacje i ETFy?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pqKSXwfsf6M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pqKSXwfsf6M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pqKSXwfsf6M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pqKSXwfsf6M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pqKSXwfsf6M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-11T09:32:59Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7TEn5VBGHx6pcmDyQs9LIP9VrY8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-CMasL5P09Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-08T16:57:24Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "Chce zacząć inwestować.Mam 1000zł. #inwestowanie #giełda #ike #ikze #etf",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-CMasL5P09Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-CMasL5P09Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-CMasL5P09Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-CMasL5P09Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-CMasL5P09Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-08T16:57:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MlvHrNmeBaeTmo-5Fu0FlCc5hdo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_aqCM37gK1U"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T18:00:07Z",
+        "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+        "title": "Kupujesz za późno i sprzedajesz za wcześnie? To nie jest przypadek!",
+        "description": "Otwórz konto w Saxo Banku przez: https://www.home.saxo/pl-pl/campaigns/commission-credits/ffpl5 i zyskaj 250 euro bonusu!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_aqCM37gK1U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_aqCM37gK1U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_aqCM37gK1U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_aqCM37gK1U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_aqCM37gK1U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Piotr Cymcyk - Merytorycznie o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T18:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Gnr8JW50I-oDqFuaMLXKBASUVaE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JmSeHIA2jjc"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-26T08:40:05Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "W CO INWESTUJĘ W 2 połowie 2026? Jak zarządzam portfelem 3,7 mln. PLN, żeby wygrać z S&amp;P 500?",
+        "description": "Jak zacząć inwestować na giełdzie? Czy dziś na giełdzie jest drogo? W co sam inwestuję swoje pieniądze z jasnym celem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JmSeHIA2jjc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JmSeHIA2jjc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JmSeHIA2jjc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JmSeHIA2jjc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JmSeHIA2jjc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-26T08:40:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sVtrEt2jaZx2nUAQ4v4oVOU0pFI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GcpuuuzmVjY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-09T08:00:14Z",
+        "channelId": "UCoPYlABqb3uQGqVH2Cjl8ww",
+        "title": "Przeczytaj to zanim zaczniesz inwestować 😎",
+        "description": "W co inwestować?” to najczęstsze pytanie o pieniądze i jednocześnie zadane w złej kolejności. Ten sam produkt może być dobrą ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GcpuuuzmVjY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GcpuuuzmVjY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GcpuuuzmVjY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/GcpuuuzmVjY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/GcpuuuzmVjY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jacek Niedałtowski - NiedałtowskiFinanse",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-09T08:00:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1l2_C5JkmzwUzdRQehNwDii2uaQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "U4jaBR_yK0M"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T13:46:57Z",
+        "channelId": "UC3JgUN78v4RX3saWqmCEV1g",
+        "title": "🚀 Co łączy prezesów cyber_Folks, Creotech i prof. Ducha?",
+        "description": "Prezes cyber_Folks Jakub Dwernicki, prezes Creotech Instruments Grzegorz Brona i prof. Włodzisław Duch – łączy ich pasja do ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/U4jaBR_yK0M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/U4jaBR_yK0M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/U4jaBR_yK0M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/U4jaBR_yK0M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/U4jaBR_yK0M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Tuszkiewicz | Inwestowanie & Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T13:46:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FnF7E2uZkqT-kV4YnGYvt4QCZcg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZBKV4r6SviE"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-12T16:32:41Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "10 000 zł 5 lat temu w te ETF-y.  #inwestowanie #etfy #giełda #pieniądze #finanse",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZBKV4r6SviE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZBKV4r6SviE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZBKV4r6SviE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZBKV4r6SviE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZBKV4r6SviE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-12T16:32:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bGmpi2gyxT5LD97DrfxxO6t9MPA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "74S9gSnDiT0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T14:00:03Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Masz więcej niż przeciętny Polak?",
+        "description": "Tutaj do 100 tys. € miesięcznego obrotu nie płacicie prowizji za transakcje - XTB. Sam tu inwestuję: https://geolink.xtb.com/UjJpQ ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T14:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gF5KEstk2aGZurbOsdj8xsbWoLw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zsfT3OIO-9c"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-25T08:00:09Z",
+        "channelId": "UCTg5vw5_mXApHkPTDFz1WQA",
+        "title": "Zaczynasz inwestować? Sprawdź to, zanim wybierzesz konto!  #inwestowanie #trading #dochódpasywny",
+        "description": "Dowiedz się więcej na: https://geolink.xtb.com/eCvQb Wolność Finansowa: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zsfT3OIO-9c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zsfT3OIO-9c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zsfT3OIO-9c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zsfT3OIO-9c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zsfT3OIO-9c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/zsfT3OIO-9c/sardefault.jpg",
+            "width": 906,
+            "height": 1610
+          }
+        },
+        "channelTitle": "Matematyka Pieniądza",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-25T08:00:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QKparqpkbZh2eyMyHfKWzNHy_-U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "uK3TUOzJUCk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-01T06:00:30Z",
+        "channelId": "UCxReMzw4vJ9ZlTkkgIue00w",
+        "title": "Ile kupić akcji? Zasada, która chroni Twój kapitał | Inwestowanie przy kawie #32",
+        "description": "Jak zarządzać kapitałem i ograniczać straty na giełdzie? Dowiesz się, jak dobierać wielkość pozycji, kontrolować ryzyko i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uK3TUOzJUCk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uK3TUOzJUCk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uK3TUOzJUCk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uK3TUOzJUCk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uK3TUOzJUCk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/uK3TUOzJUCk/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Mądre Inwestycje | Marcin Tuszkiewicz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-01T06:00:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gjDfHt2LJDzl6CdyZSxbVDU52kw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AE02IBR__H4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T12:39:21Z",
+        "channelId": "UCelOnoH_P-vJgAHSAcMKQiw",
+        "title": "ITR DROŻSZY W EUROPIE",
+        "description": "Kolejna edycja Invest Cuffs w Krakowie 9-10 kwietnia, 2027 r. 🎟️ https://tobilet.pl/kongres-invest-cuffs-krakow-2027 Kod ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AE02IBR__H4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AE02IBR__H4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AE02IBR__H4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AE02IBR__H4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AE02IBR__H4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/AE02IBR__H4/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Comparic Rynki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T12:39:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TQYl087SkPoIqpReMRbhw9KxaKk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "M6OBaYX5MLU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T19:26:35Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "Czarny Czwartek na WallStreet. Zakupy za 150 000 PLN. Ogromne przeceny to okazja?",
+        "description": "Jak inwestować na giełdzie? Jak inwestować w akcje? Seria o inwestowaniu w akcje dywidendowe, budowaniu dochodu ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/M6OBaYX5MLU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/M6OBaYX5MLU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/M6OBaYX5MLU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/M6OBaYX5MLU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/M6OBaYX5MLU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T19:26:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_NTboM5BwIuoROUH5wmGkGSzvFw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kdSfsqrSA68"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-26T17:00:06Z",
+        "channelId": "UC2uGYk6qOnd2EtXGXszNijw",
+        "title": "To nie inwestowanie. To finansowe kasyno II Tomasz Jaroszek #76",
+        "description": "Czy można zarabiać 50 000 zł miesięcznie i mieć na koncie okrągłe zero? - Kiedy zakup własnego mieszkania może być błędem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kdSfsqrSA68/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kdSfsqrSA68/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kdSfsqrSA68/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kdSfsqrSA68/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kdSfsqrSA68/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "horyzonty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-26T17:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dUvKkmzDwLLAy1LPIAXF3TAYb5A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TxpJJqfvraM"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-31T14:00:09Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "Krach na Wall Street! GPW leci na oparach? Co dalej z rynkami?",
+        "description": "Myślisz o przyszłości? Sprawdź możliwości IKE i IKZE w XTB, klikając w link i wpisując w trakcie rejestracji kod “OIZ”: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TxpJJqfvraM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TxpJJqfvraM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TxpJJqfvraM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TxpJJqfvraM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TxpJJqfvraM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-31T14:00:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "s2vnsvvdLqVfpbj7NdKnVUsaY7M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "uYx9qo_5Tq0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-01T14:00:09Z",
+        "channelId": "UC6SinQiw2eDU6k9tEXpZv9g",
+        "title": "27 000 zł z apartamentów w MIESIĄC?! Sprawdzam inwestycje w Tatrach!",
+        "description": "27 000 zł po kosztach zarządzania z apartamentów w pierwszym miesiącu? 32 apartamenty kupione przez dwóch inwestorów?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uYx9qo_5Tq0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uYx9qo_5Tq0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uYx9qo_5Tq0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uYx9qo_5Tq0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uYx9qo_5Tq0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kuba Midel",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-01T14:00:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4Hji2jmzZuJX1MKn_Sq1zdymfag",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cfZnDiM2DOA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T14:15:26Z",
+        "channelId": "UCXumRsXVGTYQNH7l9hlPpkA",
+        "title": "Jak wygląda inwestowanie w nieruchomości bez wychodzenia z fotela?",
+        "description": "Jak wygląda inwestowanie w nieruchomości bez wychodzenia z fotela? W skrócie: kupujesz, a całą resztę zostawiasz nam.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/cfZnDiM2DOA/sardefault.jpg",
+            "width": 603,
+            "height": 1072
+          }
+        },
+        "channelTitle": "Kamienica Piłkarza",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T14:15:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GV3PF6aK9XaobpVtq3CRsckXJpM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TZ0gbo0QVNU"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T16:44:33Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "Spadek portfela o 380 000 PLN! Duże zmiany. Zakupy jednej spółki za 63k.",
+        "description": "Jak inwestować na giełdzie? Jak inwestować w akcje? Seria o inwestowaniu w akcje dywidendowe, budowaniu dochodu ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TZ0gbo0QVNU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TZ0gbo0QVNU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TZ0gbo0QVNU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TZ0gbo0QVNU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TZ0gbo0QVNU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T16:44:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bmuGmML_sH7EmfQ89Ty5FU0Xv38",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JEHSwjM-_Zo"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-04T14:39:23Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "Ile zarobiłem po 27 miesiącach inwestowania 500 zł? CZY TO DOBRY MOMENT NA START INWESTOWANIA?",
+        "description": "Jak zainwestować 100, 200, 500 złotych? Jak zacząć inwestować na giełdzie? Jak inwestować w obligacje i ETFy? Seria o ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JEHSwjM-_Zo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JEHSwjM-_Zo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JEHSwjM-_Zo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JEHSwjM-_Zo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JEHSwjM-_Zo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-04T14:39:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "t-vyTDfeyybAHN9h_5e51guKWq8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "WfICJP0LOV0"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-24T20:00:04Z",
+        "channelId": "UCXB1StgfveHUAsLZ8hUr5RQ",
+        "title": "Dlaczego boimy się sprawdzać stan konta POD KONIEC miesiąca? #inwestowanie #giełda",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WfICJP0LOV0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WfICJP0LOV0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WfICJP0LOV0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WfICJP0LOV0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WfICJP0LOV0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "jachu",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-24T20:00:04Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XsmS09wB4WJU7ix4OUcV9k6k2Oo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "WpQVvHIWSBs"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-07T15:14:02Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Szokujący wzrost dywidendy w Synektik #giełda #finanse #inwestowanie",
+        "description": "Synektik wypłaca dywidendę od 2020 roku. Niby nie długo ale tempo jej wzrostu zachwyca. #inwestownie #finanse #giełda.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WpQVvHIWSBs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WpQVvHIWSBs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WpQVvHIWSBs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WpQVvHIWSBs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WpQVvHIWSBs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-07T15:14:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x9h2rdhH7wlieMQVe3E_p2DEM9I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "WD_lw9r0t80"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-31T07:24:09Z",
+        "channelId": "UC3JgUN78v4RX3saWqmCEV1g",
+        "title": "Złoto poniżej 4000 USD, droga do 3500? Strach na giełdach i ucieczka z technologii",
+        "description": "Ogromne spadki technologii i rotacja do bezpiecznych aktywów trwa. Na GPW kontynuujemy wyprzedaż na małych firmach, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WD_lw9r0t80/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WD_lw9r0t80/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WD_lw9r0t80/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WD_lw9r0t80/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WD_lw9r0t80/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Tuszkiewicz | Inwestowanie & Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-31T07:24:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4jvoWZqgIJLIIAx8t9lKnBkDPsI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pdsN6vcT7to"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T21:00:39Z",
+        "channelId": "UCFBpVaKCC0ajGps1vf0AgBg",
+        "title": "Proszę (uprzejmie) o rozpoczęcie inwestowania w 2027 roku",
+        "description": "W tym filmie dowiesz się wszystkiego, co musisz wiedzieć o tym, jak zacząć inwestować. Film składa się z 7 sekcji, w tym...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pdsN6vcT7to/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pdsN6vcT7to/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pdsN6vcT7to/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pdsN6vcT7to/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pdsN6vcT7to/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Humphrey Yang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T21:00:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dRPuFKl2dFYc2yV-z_-kNBAqtZw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MC7k4ruZD5c"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-30T17:05:49Z",
+        "channelId": "UCxgAuX3XZROujMmGphN_scA",
+        "title": "Inwestowanie dla początkujących w 75 minut",
+        "description": "Aby otrzymać DARMOWE akcje o wartości 50 GBP od eToro, odwiedź stronę: https://med.etoro.com/B22426_A131573_Tclick_SinvG.aspx Twój kapitał jest zagrożony.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MC7k4ruZD5c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MC7k4ruZD5c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MC7k4ruZD5c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MC7k4ruZD5c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MC7k4ruZD5c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Mark Tilbury",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-30T17:05:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "V_WFHDU5CaTbDc9U02WI8YM8T7c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NoziXUK8lzU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T01:42:58Z",
+        "channelId": "UCWt3Cx6RrHX86_yF4I7f1LA",
+        "title": "jaki bałagan...jak teraz inwestuję [Co i gdzie kupuję]",
+        "description": "Handluj ze mną na żywo każdego dnia po otwarciu rynku i śledź WSZYSTKIE moje spostrzeżenia w czasie rzeczywistym! Zapisy zamknięte!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NoziXUK8lzU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NoziXUK8lzU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NoziXUK8lzU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/NoziXUK8lzU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/NoziXUK8lzU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/NoziXUK8lzU/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "The Traveling Trader",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T01:42:58Z"
+      }
+    }
+  ]
+}

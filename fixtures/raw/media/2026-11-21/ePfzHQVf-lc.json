@@ -1,0 +1,375 @@
+{
+ "videoId": "ePfzHQVf-lc",
+ "url": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+ "channel": "Piotr Cymcyk - Merytorycznie o Finansach",
+ "firm": "XTB",
+ "observedAt": "2026-11-21T19:20:07+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Kupiłem te spółki za 40 tysięcy zł. To Wy zbudowaliście ten portfel! | PORTFEL WIDZÓW 02",
+  "channel": "Piotr Cymcyk - Merytorycznie o Finansach",
+  "duration": 1507,
+  "uploadDate": "20261120",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 4456,
+ "descriptionSha256": "bac51c665e53e826b337054845af09c34da2b7899e506a333a9d5a515327a38d",
+ "paidPromotionFlagApi": true,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 706,
+  "spanSec": [
+   0.08,
+   1489.279
+  ],
+  "captionsSha256": "dcc13b2e40a69ba34acbe364e881c839557bda902667d85fbcc2b5a1685c4e37",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 473420,
+  "segments": 706,
+  "captionsWallSeconds": 2.2,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 4456,
+    "originalTextSha256": "bac51c665e53e826b337054845af09c34da2b7899e506a333a9d5a515327a38d"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 1507
+     }
+    ],
+    "durationSec": 1507,
+    "reason": null,
+    "spanSec": [
+     0.08,
+     1489.279
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 4456 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 1507
+    }
+   ],
+   "durationSec": 1507,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": false,
+  "quote": null
+ },
+ "markingInSpeech": [
+  {
+   "start": 98,
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=98s",
+   "kind": "partner",
+   "quote": "niewielkie. Partnerem tego odcinka jest XTB, polska aplikacja inwestycyjna, w"
+  }
+ ],
+ "markersLexical": [
+  {
+   "start": 98.119,
+   "kinds": [
+    "partner"
+   ],
+   "quote": "niewielkie. Partnerem tego odcinka jest",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=98s"
+  },
+  {
+   "start": 99.92,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "XTB, polska aplikacja inwestycyjna, w",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=99s"
+  },
+  {
+   "start": 106.759,
+   "kinds": [
+    "link_w_opisie",
+    "kod"
+   ],
+   "quote": "konto z linka w opisie, podać kod DN na",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=106s"
+  },
+  {
+   "start": 118.32,
+   "kinds": [
+    "partner",
+    "link_w_opisie"
+   ],
+   "quote": "zarabiacie. Link w opisie. A partnerem",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=118s"
+  },
+  {
+   "start": 128.28,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "chcecie z kodem DNA 100 maani, jeśli",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=128s"
+  },
+  {
+   "start": 187.599,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "Link w opisie też znajdziecie. Teraz",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=187s"
+  },
+  {
+   "start": 200.879,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "głosujący. Drugie było XTB do kupienia",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=200s"
+  },
+  {
+   "start": 308.72,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "KNF uderzył w CFD, więc XTB też spadło i",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=308s"
+  },
+  {
+   "start": 316.16,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "dwie spółki. XTB jest 17% pod kreską,",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=316s"
+  },
+  {
+   "start": 867.0,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "oprogramowanie. Piszecie kod,",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=867s"
+  },
+  {
+   "start": 1042.0,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "produktów i usług, przychody z reklam,",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1042s"
+  },
+  {
+   "start": 1078.96,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "siła. Maszynka do gotówki z reklam plus",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1078s"
+  },
+  {
+   "start": 1087.4,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "przypadku reklam się trochę zacięła.",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1087s"
+  },
+  {
+   "start": 1110.799,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "reklam, bo nie scrolluje, tylko dostaje",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1110s"
+  },
+  {
+   "start": 1115.2,
+   "kinds": [
+    "reklama"
+   ],
+   "quote": "reklam, mniej pieniędzy. Dzień potem",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1115s"
+  },
+  {
+   "start": 1151.24,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "GPW XTB i CD Projekt. Drugie miejsce w",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1151s"
+  },
+  {
+   "start": 1153.48,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "głosowaniu zdobyło właśnie XTB. Wasza",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1153s"
+  },
+  {
+   "start": 1174.96,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "XTB zarabia na CFD. Klient, który",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1174s"
+  },
+  {
+   "start": 1179.28,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "ETFY, na których XTB zarabia w zasadzie",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1179s"
+  },
+  {
+   "start": 1208.919,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "będą te same pieniądze. Mocne strony XTB",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1208s"
+  },
+  {
+   "start": 1295.72,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "dość najbardziej sceptyczny do XTB i",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1295s"
+  },
+  {
+   "start": 1406.76,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "czasie urósł, XTB stał w miejscu. Jakbym",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1406s"
+  },
+  {
+   "start": 1413.44,
+   "kinds": [
+    "broker"
+   ],
+   "quote": "na AI, 10% XTB CD Projekt. One",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1413s"
+  },
+  {
+   "start": 1483.159,
+   "kinds": [
+    "link_w_opisie"
+   ],
+   "quote": "oczywiście w opisie tego materiału. W",
+   "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc&t=1483s"
+  }
+ ],
+ "frames": [],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://link-pso.xtb.com/pso/kdg44” w opisie (znaki 79–113).",
+    "Dodatkowy dowód relacji (creator_code): „Rejestrując się na XTB z kodem DNARYNKOW otrzymasz specjalny kurs zarządzania finansami od podstaw.” w opisie (znaki 115–214).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+    "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+    "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+     "evidenceId": "ev-2",
+     "locator": {
+      "field": "description",
+      "charStart": 79,
+      "charEnd": 113,
+      "occurrences": 1
+     }
+    },
+    {
+     "start": null,
+     "end": null,
+     "label": "Dowód relacji handlowej",
+     "deepLink": "https://www.youtube.com/watch?v=ePfzHQVf-lc",
+     "evidenceId": "ev-3",
+     "locator": {
+      "field": "description",
+      "charStart": 115,
+      "charEnd": 214,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 85,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": [
+    "U1"
+   ]
+  },
+  "descriptionSpeechFrames": {
+   "route": "no_signal",
+   "reason": "Oznaczenie współpracy znalezione w mowie lub kadrze; wpis tylko w rejestrze reklam.",
+   "reasons": [],
+   "moments": [],
+   "completeReason": null,
+   "relationship": "declared",
+   "score": 0,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (niezbadane)",
+   "premises": [
+    "U1"
+   ]
+  }
+ }
+}

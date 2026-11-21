@@ -1,0 +1,244 @@
+{
+ "videoId": "7M0rC6-Rueo",
+ "url": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+ "channel": "Inwestycyjna wyprawa",
+ "firm": "XTB",
+ "observedAt": "2026-11-21T19:20:06+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "Ile trzeba mieć, żeby zacząć inwestować? 2 lata inwestowania. Brutalna prawda.",
+  "channel": "Investment expedition",
+  "duration": 886,
+  "uploadDate": "20260703",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 1598,
+ "descriptionSha256": "f3cb0b2b2016e62c497cbfdb7ebfd2b6ded7d82996bcabecaa1ff67681484f87",
+ "paidPromotionFlagApi": false,
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 408,
+  "spanSec": [
+   0.12,
+   887.8
+  ],
+  "captionsSha256": "d63c5d000d1e00039b094bf09f342df6353f2993ae210ee3ac322bb6f35dcf8d",
+  "caveat": "auto-napisy: błędy nazw własnych i liczb możliwe"
+ },
+ "measurement": {
+  "captionBytes": 272624,
+  "segments": 408,
+  "captionsWallSeconds": 1.98,
+  "requests": 1,
+  "note": "bajty = pliki VTT pl i pl-orig razem; ruch ekstraktora yt-dlp niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 1598,
+    "originalTextSha256": "f3cb0b2b2016e62c497cbfdb7ebfd2b6ded7d82996bcabecaa1ff67681484f87"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 886
+     }
+    ],
+    "durationSec": 886,
+    "reason": null,
+    "spanSec": [
+     0.12,
+     887.8
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 1598 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 886
+    }
+   ],
+   "durationSec": 886,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markingInDescription": {
+  "found": false,
+  "quote": null
+ },
+ "markingInSpeech": [],
+ "markersLexical": [],
+ "frames": [
+  {
+   "time": 9.9,
+   "requestedTime": 9.9,
+   "method": "storyboard_320x180",
+   "path": ".runtime/media-cache/7M0rC6-Rueo/frames/storyboard_320x180_000009.jpg",
+   "sha256": "66f139aa853d8136e515fa1382950d12bf79b43ff3ce8168a14e688ce469a10e",
+   "width": 320,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo&t=9s",
+   "observation": "Prowadzący z kartą „PUBLICZNY PORTFEL”; brak XTB i etykiet."
+  },
+  {
+   "time": 440.53,
+   "requestedTime": 440.53,
+   "method": "storyboard_320x180",
+   "path": ".runtime/media-cache/7M0rC6-Rueo/frames/storyboard_320x180_000440.jpg",
+   "sha256": "bf17e6d52fe80868ee7cd63fd833443c263d88b0dd315ea77d0c0e332459e8ed",
+   "width": 320,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo&t=440s",
+   "observation": "Wykresy portfela; brak XTB i etykiet."
+  },
+  {
+   "time": 871.15,
+   "requestedTime": 871.15,
+   "method": "storyboard_320x180",
+   "path": ".runtime/media-cache/7M0rC6-Rueo/frames/storyboard_320x180_000871.jpg",
+   "sha256": "915b884aa8ee230c8ec2a6c040d86798d4a824e549f7c985b49d82facec8fa0a",
+   "width": 320,
+   "height": 180,
+   "bytesFetched": 0,
+   "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo&t=871s",
+   "observation": "Wykres portfela; brak XTB i etykiet."
+  }
+ ],
+ "qualification": {
+  "descriptionOnly": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 178–212).",
+    "Dodatkowy dowód relacji (creator_code): „✅Konto maklerskie (XTB) (z kodem \" WYPRAWA \"): https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 131–212).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres).",
+    "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233].",
+    "Niezbadane: mowy nie zbadano; kadrów nie zbadano (krok opcjonalny)."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+     "evidenceId": "ev-3",
+     "locator": {
+      "field": "description",
+      "charStart": 178,
+      "charEnd": 212,
+      "occurrences": 1
+     }
+    },
+    {
+     "start": null,
+     "end": null,
+     "label": "Dowód relacji handlowej",
+     "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+     "evidenceId": "ev-2",
+     "locator": {
+      "field": "description",
+      "charStart": 131,
+      "charEnd": 212,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 90,
+   "coverageState": "partial",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (niezbadana), kadry (niezbadane)",
+   "premises": [
+    "U1",
+    "U1"
+   ]
+  },
+  "descriptionSpeechFrames": {
+   "route": "refer",
+   "reason": "Nieoznaczona współpraca z firmą inwestycyjną: przesłanka do kontroli przez analityka.",
+   "reasons": [
+    "Znaleziono: „https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 178–212).",
+    "Dodatkowy dowód relacji (creator_code): „✅Konto maklerskie (XTB) (z kodem \" WYPRAWA \"): https://link-pso.xtb.com/pso/7SA9k” w opisie (znaki 131–212).",
+    "Nie znaleziono oznaczenia reklamy w opisie (pełny zakres), mowie (pełny zakres), kadrach (wybrane momenty).",
+    "Firma: XTB; kandydaci z wykazu KNF: [6884980, 9439233]."
+   ],
+   "moments": [
+    {
+     "start": null,
+     "end": null,
+     "label": "Nieoznaczona współpraca z firmą inwestycyjną",
+     "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+     "evidenceId": "ev-3",
+     "locator": {
+      "field": "description",
+      "charStart": 178,
+      "charEnd": 212,
+      "occurrences": 1
+     }
+    },
+    {
+     "start": null,
+     "end": null,
+     "label": "Dowód relacji handlowej",
+     "deepLink": "https://www.youtube.com/watch?v=7M0rC6-Rueo",
+     "evidenceId": "ev-2",
+     "locator": {
+      "field": "description",
+      "charStart": 131,
+      "charEnd": 212,
+      "occurrences": 1
+     }
+    }
+   ],
+   "completeReason": null,
+   "relationship": "probable",
+   "score": 100,
+   "coverageState": "full",
+   "coverageLabel": "Zbadano: opis (pełny), mowa (pełny), kadry (selected_moments)",
+   "premises": [
+    "U1",
+    "U1"
+   ]
+  }
+ }
+}

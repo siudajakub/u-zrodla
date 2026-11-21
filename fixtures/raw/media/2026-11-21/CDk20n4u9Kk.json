@@ -1,0 +1,194 @@
+{
+ "videoId": "CDk20n4u9Kk",
+ "url": "https://www.youtube.com/watch?v=CDk20n4u9Kk",
+ "observedAt": "2026-11-21T18:52:52+00:00",
+ "adapter": "collectors/media.py",
+ "source": "youtube-captions-v1",
+ "meta": {
+  "title": "ARABIA SZYKUJE SIĘ NA WOJNĘ DO 2027. A ropa mimo to tanieje",
+  "channel": "Comparic Rynki",
+  "duration": 1065,
+  "uploadDate": "20261119",
+  "language": "pl",
+  "availability": "public",
+  "subtitles": [],
+  "automaticCaptions": [
+   "pl",
+   "pl-orig"
+  ],
+  "ytDlpVersion": "2026.10.26"
+ },
+ "descriptionChars": 4651,
+ "descriptionSha256": "17916af3c9d62a052b62462a1b795b8eff97ca126deb58e40ed977d40097ac6a",
+ "transcript": {
+  "method": "auto_captions",
+  "track": "pl-orig",
+  "segments": 434,
+  "spanSec": [
+   0.2,
+   1066.602
+  ],
+  "captionsSha256": "a2fc9171060ae7e2a1d6bc8733ae24acd7032340f896f233e323f095b7e71ab2",
+  "files": {
+   "CDk20n4u9Kk.pl.vtt": {
+    "bytes": 142464,
+    "sha256": "a2fc9171060ae7e2a1d6bc8733ae24acd7032340f896f233e323f095b7e71ab2"
+   },
+   "CDk20n4u9Kk.pl-orig.vtt": {
+    "bytes": 142464,
+    "sha256": "a2fc9171060ae7e2a1d6bc8733ae24acd7032340f896f233e323f095b7e71ab2"
+   }
+  },
+  "caveat": "auto-napisy: błędy w nazwach własnych i liczbach są możliwe; cytaty niżej nie są poprawiane"
+ },
+ "measurement": {
+  "captionsWallSeconds": 2.18,
+  "requests": 1,
+  "captionBytes": 142464,
+  "note": "bajty = jeden plik napisów; ruch ekstraktora yt-dlp (strona + player API) niezmierzony"
+ },
+ "coverage": {
+  "scope": "description+transcript",
+  "state": "full",
+  "checked": [
+   "description",
+   "speech"
+  ],
+  "modalities": {
+   "description": {
+    "state": "full",
+    "chars": 4651,
+    "originalTextSha256": "17916af3c9d62a052b62462a1b795b8eff97ca126deb58e40ed977d40097ac6a"
+   },
+   "transcript": {
+    "state": "full",
+    "source": "auto_captions",
+    "windows": [
+     {
+      "start": 0,
+      "end": 1065
+     }
+    ],
+    "durationSec": 1065,
+    "reason": null,
+    "spanSec": [
+     0.2,
+     1066.602
+    ]
+   },
+   "frames": {
+    "state": "not_collected",
+    "moments": [],
+    "intervalSec": null,
+    "reason": "nie zażądano"
+   }
+  },
+  "gaps": [],
+  "blocksConclusion": false,
+  "label": "opis: 4651 zn.; mowa: full (auto_captions); kadry: not_collected"
+ },
+ "mediaCoverage": {
+  "transcript": {
+   "state": "full",
+   "source": "auto_captions",
+   "windows": [
+    {
+     "start": 0,
+     "end": 1065
+    }
+   ],
+   "durationSec": 1065,
+   "reason": null
+  },
+  "frames": {
+   "state": "not_collected",
+   "moments": [],
+   "intervalSec": null
+  }
+ },
+ "markers": [
+  {
+   "start": 614.598,
+   "end": 617.388,
+   "kinds": [
+    "partner",
+    "broker"
+   ],
+   "quote": "znajdziecie u partnera tego odcinka XTB.",
+   "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=614s",
+   "assessment": "mowa: deklaracja partnera odcinka (XTB) i kod; reklama oznaczona też w obrazie (kadr 614 s)"
+  },
+  {
+   "start": 617.398,
+   "end": 619.288,
+   "kinds": [
+    "kod"
+   ],
+   "quote": "A z kodem Komparik dorzucają jeszcze",
+   "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=617s",
+   "assessment": null
+  }
+ ],
+ "descriptionMarkers": [
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "💰 Inwestowanie z XTB - Sprawdź XTB"
+  },
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "👉 https://link-pso.xtb.com/pso/GFTfa"
+  },
+  {
+   "kinds": [
+    "broker"
+   ],
+   "quote": "XTB - największy polski dom maklerski, regulowany przez KNF, notowany na GPW. Ponad 2,1 mln klientów globalnie."
+  },
+  {
+   "kinds": [
+    "kod"
+   ],
+   "quote": "Kod „COMPARIC” przy rejestracji = darmowy kurs inwestowania."
+  },
+  {
+   "kinds": [
+    "kod"
+   ],
+   "quote": "🎁 Kod \"Comparic\" daje 10% zniżki"
+  },
+  {
+   "kinds": [
+    "kod"
+   ],
+   "quote": "Comparic Premium - analizy naszego zespołu, sekcja surowców, spółki zgłaszane przez subskrybentów. Z kodem RYNKI15 macie 15% zniżki: https://premium.comparic.pl"
+  }
+ ],
+ "frames": [
+  {
+   "kind": "frame",
+   "method": "stream_ffmpeg_360p",
+   "time": 614.0,
+   "requestedTime": 614.0,
+   "path": ".runtime/media-cache/CDk20n4u9Kk/frames/stream_360p_000614.jpg",
+   "sha256": "9abf09dee670760e393fca829890fe3b779abcb45d044580697c8b3a3a6bc15d",
+   "width": 640,
+   "height": 360,
+   "bytesFile": 79486,
+   "deepLink": "https://www.youtube.com/watch?v=CDk20n4u9Kk&t=614s",
+   "sourceVersion": {
+    "videoId": "CDk20n4u9Kk",
+    "readAt": "2026-11-21T18:52:52+00:00",
+    "source": "youtube-captions-v1",
+    "captionsSha256": "a2fc9171060ae7e2a1d6bc8733ae24acd7032340f896f233e323f095b7e71ab2",
+    "descriptionSha256": "17916af3c9d62a052b62462a1b795b8eff97ca126deb58e40ed977d40097ac6a",
+    "ytDlpVersion": "2026.10.26"
+   },
+   "bytesFetchedLive": 140433,
+   "observation": "Lewy górny róg: etykieta „REKLAMA” nad banerem XTB (z kodem), u dołu pasek XTB i „Oferowane instrumenty są ryzykowne. Inwestuj odpowiedzialnie”. Oznaczenie reklamy WIDOCZNE na ekranie."
+  }
+ ]
+}

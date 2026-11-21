@@ -1,5 +1,35 @@
 # Podział pracy po rewizji UKNF
 
+W sesji Claude obowiązuje [plan Fable z priorytetem YouTube](docs/fable/REALIZACJA.md). Poniżej zachowano stan poprzedniej fali.
+
+## Tablica Fable · fala 1 (rozpoznanie), 21 XI
+
+Baza 491094d, główny checkout, rozłączne pliki, bez commitów. Model i wysiłek to wartości zamówione przy uruchomieniu podagenta. Faktyczny model potwierdza raport agenta.
+
+| ID | Agent · wysiłek | Zakres zapisu | Stan | Zależność | Próba | Dowód | Kolejny ruch |
+|---|---|---|---|---|---|---|---|
+| A | Opus high | docs/ODBIOR-UKNF.md | w toku | brak | Każde obowiązkowe wymaganie ma właściciela, walidatory przechodzą | docs/ODBIOR-UKNF.md | Odbiór rejestru przez Fable |
+| G | Opus high | fixtures/validation/, tools/eval_validation.py | w toku | brak | Zamrożony protokół, niezależna lista Y, testy narzędzia | fixtures/validation/ | Lista Y pozostaje ukryta przed B |
+| I | Opus high | docs/lanes/2026-11-21-fable-i-ux.md | w toku | brak | Obserwacja kolejki, dwa warianty, pola do kontraktu | rekord linii | Pola przekazać H |
+| B | Opus high | docs/lanes/2026-11-21-fable-b-youtube.md, fixtures/raw/discovery/youtube-probe-2026-11-21/, tools/youtube_probe.py | w toku | dostęp do Data API v3 | Status każdej drogi z próbą live, kandydaci na pierwszy pion | rekord linii | Decyzja o drodze adaptera |
+| D | Opus high | docs/lanes/2026-11-21-fable-d-kwalifikacja.md | w toku | brak | Rozstrzygnięcia wierszy próby Q dla M1, kształt pól | rekord linii | Uzgodnić z H |
+| H | Sonnet high | docs/lanes/2026-11-21-fable-h-kontrakt.md | w toku | D, I, B | Kontrakt v2 zgodny wstecz, plan testów kontraktowych | rekord linii | Scalić uwagi D, I, B |
+
+### Rejestr kosztów Fable
+
+| Data | Pozycja | Zgoda J | Wydano | Uwagi |
+|---|---|---|---|---|
+| 21 XI | OpenRouter, eksperyment porównawczy oceny reklam | do 10 USD łącznie (21 XI, potwierdzone ponownie przez J) | 0,0417 USD łącznie: 0,0086 USD za 32 wywołania Qwen3.5-9B i 0,0331 USD za 30 wywołań Qwen3.5-27B. Eksperyment zamknięty. Licznik klucza rośnie także bez naszych wywołań, więc miarą jest koszt z odpowiedzi dostawcy. | Klucz działa od 19:00 UTC. Limit na kluczu to 100 USD, zużycie startowe 18,525 USD, więc budżetu 10 USD pilnuje Fable przez odczyt zużycia przed i po każdej turze. Pierwsza tura D: najwyżej 0,50 USD i 30 wywołań. Produkt i demo pozostają lokalne. |
+| 21 XI | YouTube Data API v3 | bezpłatne, klucz po stronie J | 0 | Limit 10 000 jednostek dziennie. |
+
+### Decyzje produktowe J z 21 XI
+
+- System bada całą treść filmu przez opis i transkrypcję. Transkrypcja wystarcza do skierowania.
+- Podejrzenie nieoznaczonej współpracy trafia do sprawdzenia, także gdy nie da się go rozstrzygnąć. Wcześniej system szuka oznaczenia w mowie i w kadrach z wybranych momentów.
+- Sama opinia twórcy bez relacji z firmą pozostaje poza kolejką.
+- Karta skierowania zawiera krótkie wypunktowane uzasadnienie i momenty filmu ze znacznikami czasu.
+- Reasoning agentów domyślnie medium. Modele do oceny mają dać się hostować lokalnie.
+
 ASTRA ustala cel i kryteria odbioru, uzgadnia wspólne kontrakty, scala sprawdzony stan roboczy i przekazuje J wyniki. Każdy wykonawca rozwija i testuje swój zakres w osobnym worktree. J podejmuje decyzje produktowe i zatwierdza zgłoszenie. [Cele i kolejność prac](docs/PLAN-REALIZACJI.md)
 
 | Linia i wykonawca | Model i reasoning | Odpowiedzialność | Kontrprzykład na tym samym materiale |

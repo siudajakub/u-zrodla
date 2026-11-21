@@ -1,0 +1,323 @@
+{
+  "protocol": "fixtures/validation/PROTOKOL.md",
+  "referenceKind": "agent",
+  "referenceNote": "oceny agentów — nie są niezależnym wzorcem eksperckim",
+  "split": "(wszystkie)",
+  "thresholds": [
+    60,
+    80
+  ],
+  "run": {
+    "variant": "qual_d",
+    "rulesVersion": "investwatch-m1-qual-1.0",
+    "codeCommit": "zapis w bazie .runtime/s4-live (qualification_results), potwierdzony ponownym analyze bieżącym kodem",
+    "modelId": null,
+    "provider": null,
+    "weightsDigest": null,
+    "quantization": null,
+    "parameters": {
+      "semantic": null
+    },
+    "promptMethod": null,
+    "startedAt": null,
+    "finishedAt": null,
+    "durationSeconds": null,
+    "tokens": null,
+    "cost": {
+      "amount": 0,
+      "currency": "PLN",
+      "source": "brak zewnętrznych wywołań"
+    },
+    "environment": {
+      "path": "odczyt ro bazy s4-live"
+    }
+  },
+  "runMetadataMissing": [],
+  "excludedSynthetic": 0,
+  "excludedOtherReference": 0,
+  "unmatchedPredictions": 0,
+  "overall": [
+    {
+      "threshold": 60,
+      "labels": 30,
+      "undetermined": 0,
+      "evaluated": 30,
+      "tp": 0,
+      "fp": 0,
+      "tn": 30,
+      "fn": 0,
+      "precision": "brak podstaw do obliczenia",
+      "precisionCI95": "brak podstaw do obliczenia",
+      "recall": "brak podstaw do obliczenia",
+      "recallCI95": "brak podstaw do obliczenia",
+      "withheld": 0,
+      "withheldRate": 0.0,
+      "missingPredictions": 0,
+      "cost": 0,
+      "referredCampaigns": 0,
+      "truePositiveCampaigns": 0,
+      "independentCampaigns": 30,
+      "campaignLevel": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 30,
+        "fn": 0
+      },
+      "registryNegatives": 8,
+      "registryInQueue": 0,
+      "errors": []
+    },
+    {
+      "threshold": 80,
+      "labels": 30,
+      "undetermined": 0,
+      "evaluated": 30,
+      "tp": 0,
+      "fp": 0,
+      "tn": 30,
+      "fn": 0,
+      "precision": "brak podstaw do obliczenia",
+      "precisionCI95": "brak podstaw do obliczenia",
+      "recall": "brak podstaw do obliczenia",
+      "recallCI95": "brak podstaw do obliczenia",
+      "withheld": 0,
+      "withheldRate": 0.0,
+      "missingPredictions": 0,
+      "cost": 0,
+      "referredCampaigns": 0,
+      "truePositiveCampaigns": 0,
+      "independentCampaigns": 30,
+      "campaignLevel": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 30,
+        "fn": 0
+      },
+      "registryNegatives": 8,
+      "registryInQueue": 0,
+      "errors": []
+    }
+  ],
+  "byModule": {
+    "M1": [
+      {
+        "threshold": 60,
+        "labels": 30,
+        "undetermined": 0,
+        "evaluated": 30,
+        "tp": 0,
+        "fp": 0,
+        "tn": 30,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 30,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0
+        },
+        "registryNegatives": 8,
+        "registryInQueue": 0,
+        "errors": []
+      },
+      {
+        "threshold": 80,
+        "labels": 30,
+        "undetermined": 0,
+        "evaluated": 30,
+        "tp": 0,
+        "fp": 0,
+        "tn": 30,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 30,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0
+        },
+        "registryNegatives": 8,
+        "registryInQueue": 0,
+        "errors": []
+      }
+    ]
+  },
+  "byDiscoveryChannel": {
+    "(brak)": [
+      {
+        "threshold": 60,
+        "labels": 30,
+        "undetermined": 0,
+        "evaluated": 30,
+        "tp": 0,
+        "fp": 0,
+        "tn": 30,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 30,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0
+        },
+        "registryNegatives": 8,
+        "registryInQueue": 0,
+        "errors": []
+      },
+      {
+        "threshold": 80,
+        "labels": 30,
+        "undetermined": 0,
+        "evaluated": 30,
+        "tp": 0,
+        "fp": 0,
+        "tn": 30,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 30,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0
+        },
+        "registryNegatives": 8,
+        "registryInQueue": 0,
+        "errors": []
+      }
+    ]
+  },
+  "byStratum": {
+    "losowa-no_signal-qual_d": [
+      {
+        "threshold": 60,
+        "labels": 30,
+        "undetermined": 0,
+        "evaluated": 30,
+        "tp": 0,
+        "fp": 0,
+        "tn": 30,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 30,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0
+        },
+        "registryNegatives": 8,
+        "registryInQueue": 0,
+        "errors": []
+      },
+      {
+        "threshold": 80,
+        "labels": 30,
+        "undetermined": 0,
+        "evaluated": 30,
+        "tp": 0,
+        "fp": 0,
+        "tn": 30,
+        "fn": 0,
+        "precision": "brak podstaw do obliczenia",
+        "precisionCI95": "brak podstaw do obliczenia",
+        "recall": "brak podstaw do obliczenia",
+        "recallCI95": "brak podstaw do obliczenia",
+        "withheld": 0,
+        "withheldRate": 0.0,
+        "missingPredictions": 0,
+        "cost": 0,
+        "referredCampaigns": 0,
+        "truePositiveCampaigns": 0,
+        "independentCampaigns": 30,
+        "campaignLevel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0
+        },
+        "registryNegatives": 8,
+        "registryInQueue": 0,
+        "errors": []
+      }
+    ]
+  },
+  "gate": {
+    "threshold": 60,
+    "status": "nie dotyczy: oceny agentów nie są wzorcem eksperckim"
+  },
+  "realPrevalenceEstimate": {
+    "60": {
+      "status": "estymacja ważona, bez przedziału",
+      "precision": "brak podstaw do obliczenia",
+      "recall": "brak podstaw do obliczenia",
+      "prevalence": 0.0,
+      "weighted": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 348.0,
+        "fn": 0
+      }
+    },
+    "80": {
+      "status": "estymacja ważona, bez przedziału",
+      "precision": "brak podstaw do obliczenia",
+      "recall": "brak podstaw do obliczenia",
+      "prevalence": 0.0,
+      "weighted": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 348.0,
+        "fn": 0
+      }
+    }
+  }
+}

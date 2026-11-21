@@ -1,5 +1,7 @@
 # Przekazanie po rewizji źródeł UKNF
 
+W sesji Claude obowiązuje [plan Fable z priorytetem YouTube](fable/REALIZACJA.md). Poniżej zachowano stan poprzedniej fali.
+
 Zacznij od [pięciu dokumentów konkursowych](zrodla-uknf/README.md). [Macierz odbioru](ODBIOR-UKNF.md) określa, co można pokazać i na jakim materiale. [Plan](PLAN-REALIZACJI.md) wyjaśnia, jaki test musi przejść kolejna funkcja.
 
 | Miejsce | Co sprawdzić w kontynuacji |
