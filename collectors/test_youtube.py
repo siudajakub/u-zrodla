@@ -8,7 +8,9 @@ import unittest
 from unittest.mock import patch
 from urllib.parse import parse_qs, urlsplit
 
-from .youtube import Context, QUERIES, description_signals, detect_language, discover, load_key, rank_videos, replay
+from . import youtube
+from .youtube import (Context, QUERIES, description_signals, detect_language, discover, flag_candidates, key_id, load_key,
+                      load_keys, rank_videos, replay)
 
 KEY = "AIzaTESTKEYtestkeyTESTKEYtestkey12345"
 NOW = "2026-11-21T19:00:00+00:00"
@@ -58,6 +60,8 @@ class FakeYouTube:
         self.atom = {}
         self.calls = []
         self.quota_after = None  # number of successful API calls before quotaExceeded
+        self.key_quota = {}      # key -> successful calls before that key gets quotaExceeded (several keys)
+        self.valid_keys = {KEY}
 
     def fetch(self, url):
         parts = urlsplit(url)
@@ -66,7 +70,11 @@ class FakeYouTube:
         if parts.hostname == "www.youtube.com":
             body = self.atom.get(query["channel_id"])
             return (200, body) if body else (404, b"")
-        assert query.get("key") == KEY
+        assert query.get("key") in self.valid_keys
+        if query["key"] in self.key_quota:
+            if self.key_quota[query["key"]] <= 0:
+                return 403, json.dumps({"error": {"code": 403, "errors": [{"reason": "quotaExceeded"}]}}).encode()
+            self.key_quota[query["key"]] -= 1
         if self.quota_after is not None:
             if self.quota_after <= 0:
                 return 403, json.dumps({"error": {"code": 403, "errors": [{"reason": "quotaExceeded"}]}}).encode()
@@ -80,7 +88,8 @@ class FakeYouTube:
         elif method == "channels":
             body = {"items": [self.channels[i] for i in query["id"].split(",") if i in self.channels]}
         elif method == "playlistItems":
-            body = {"items": [{"contentDetails": {"videoId": v}} for v in self.playlists.get(query["playlistId"], [])]}
+            body = {"items": [{"contentDetails": ({"videoId": v[0], "videoPublishedAt": v[1]} if isinstance(v, tuple) else {"videoId": v})}
+                              for v in self.playlists.get(query["playlistId"], [])]}
         else:
             return 404, b"{}"
         return 200, json.dumps(body).encode()
@@ -339,6 +348,311 @@ class Signals(Offline):
 
     def test_default_queries_cover_three_families(self):
         self.assertEqual({k for k, _, _ in QUERIES}, {"brand", "promo", "topic"})
+
+
+KEY2 = "AIzaSECONDkeySECONDkeySECONDkey67890"
+CH_D = "UC" + "d" * 22
+CH_N = "UC" + "n" * 22
+
+
+def known(cid, subs, *, polish=True, promo=0, name=None):
+    return {"channelId": cid, "name": name or f"Kanał {cid[2]}", "subscribers": subs, "polish": polish,
+            "firmPromotionVideos": promo}
+
+
+def api_calls(yt, method):
+    return [q for p, q in yt.calls if p.endswith("/" + method)]
+
+
+def monitoring_world():
+    yt = world()
+    yt.videos["GGGGGGGGGGG"] = video("GGGGGGGGGGG", CH_C, "Nowy film kanału C", "Opis filmu o ETF i inwestowaniu w akcje.", 40)
+    yt.playlists["UU" + CH_A[2:]] = [("AAAAAAAAAAA", "2026-11-10T10:00:00Z"), ("FFFFFFFFFFF", "2026-11-01T10:00:00Z")]
+    yt.playlists["UU" + CH_C[2:]] = [("GGGGGGGGGGG", "2026-11-12T10:00:00Z")]
+    yt.playlists["UU" + CH_N[2:]] = ["NNNNNNNNNNN"]
+    yt.channels[CH_D] = channel(CH_D, 10)
+    return yt
+
+
+KNOWN = (known(CH_C, 900), known(CH_A, 500, promo=3), known(CH_N, 90000, polish=False))
+WINDOW = "2026-05-25T00:00:00Z"
+
+
+class QuerySet(Offline):
+    def test_default_queries_are_polish_topics_promo_and_polish_company_names(self):
+        texts = [q.lower() for _, q, _ in QUERIES]
+        for bare in ("etoro", "trading 212", "trading212", "interactive brokers"):
+            self.assertNotIn(bare, texts)
+        for kind, query, _ in QUERIES:
+            if kind == "brand":
+                self.assertGreaterEqual(len(query.split()), 2, query)  # company name only with Polish context
+        for phrase in ("XTB opinie", "konto maklerskie XTB", "Freedom24 opinie", "pasywny dochód inwestowanie",
+                       "portfel inwestycyjny", "konto maklerskie", "jak kupić akcje", "ETF na IKE", "dywidendy",
+                       "trading", "kontrakty CFD"):
+            self.assertIn(phrase, [q for _, q, _ in QUERIES])
+        self.assertEqual(len(QUERIES), len({(k, q) for k, q, _ in QUERIES}))
+        order = [k for k, _, _ in QUERIES]
+        self.assertGreater(order.index("brand"), max(i for i, k in enumerate(order) if k == "promo"))  # lowest yield last
+
+
+class Monitoring(Offline):
+    def test_known_channels_are_read_before_any_search_promotion_signal_first(self):
+        yt = monitoring_world()
+        result = run(yt, known_channels=KNOWN, playlist_channels=0, atom_channels=0)
+        paths = [p.rsplit("/", 1)[-1] for p, _ in yt.calls if p.startswith("/youtube/v3/")]
+        self.assertLess(max(i for i, m in enumerate(paths) if m == "playlistItems"),
+                        min(i for i, m in enumerate(paths) if m == "search"))
+        order = [q["playlistId"] for q in api_calls(yt, "playlistItems")]
+        self.assertEqual(order, ["UU" + CH_A[2:], "UU" + CH_C[2:]])  # signal first, then the rest
+        self.assertNotIn("UU" + CH_N[2:], order)                      # non-Polish channel: no spending
+        caps = by_id(result)
+        self.assertEqual(caps["youtube:GGGGGGGGGGG"]["discovery"][0]["reason"], "monitoring znanego kanału")
+        self.assertNotIn("youtube:FFFFFFFFFFF", [c for c in caps if caps[c]["discovery"][0]["method"] != "data_api_playlist"])
+        self.assertEqual(result["report"]["monitoring"]["channelsRead"], 2)
+        self.assertIn(CH_N, result["cursor"]["skipped"])
+        self.assertTrue(result["cursor"]["channels"][CH_A]["firmPromo"])
+
+    def test_monitoring_uses_only_its_budget_share_and_channel_limit(self):
+        yt = monitoring_world()
+        run(yt, known_channels=KNOWN, monitor_channels=1, playlist_channels=0, atom_channels=0)
+        self.assertEqual([q["playlistId"] for q in api_calls(yt, "playlistItems")], ["UU" + CH_A[2:]])
+        yt = monitoring_world()
+        result = run(yt, known_channels=KNOWN, budget=4, monitor_share=0.5, playlist_channels=0, atom_channels=0)
+        self.assertEqual(result["report"]["monitoring"]["stopped"], "budget")
+        self.assertLessEqual(result["report"]["monitoring"]["units"], 2)
+        self.assertLessEqual(result["quota"]["used"], 4)
+
+    def test_recently_read_channel_is_not_read_again_and_only_newer_films_are_fetched(self):
+        yt = monitoring_world()
+        first = run(yt, known_channels=KNOWN, playlist_channels=0, atom_channels=0, queries=())
+        state = {"cursor": first["cursor"]}
+        yt.calls.clear()
+        run(yt, state=state, playlist_channels=0, atom_channels=0, queries=())
+        self.assertEqual(api_calls(yt, "playlistItems"), [])  # read less than monitor_min_hours ago
+        yt.playlists["UU" + CH_C[2:]].insert(0, ("HHHHHHHHHHH", "2026-11-20T10:00:00Z"))
+        yt.videos["HHHHHHHHHHH"] = video("HHHHHHHHHHH", CH_C, "Jeszcze nowszy film", "Opis nowego filmu o dywidendach i akcjach.", 5)
+        later = lambda: "2026-11-22T05:00:00+00:00"
+        yt.calls.clear()
+        result = run(yt, state=state, clock=later, playlist_channels=0, atom_channels=0, queries=())
+        ids = [i for q in api_calls(yt, "videos") for i in q["id"].split(",")]
+        self.assertEqual(ids, ["HHHHHHHHHHH"])  # GGG is already covered by the stored newest date
+        self.assertEqual([c["id"] for c in result["captures"]], ["youtube:HHHHHHHHHHH"])
+
+    def test_creator_objects_of_other_platforms_are_not_seeds_and_unknown_language_is_monitored(self):
+        yt = monitoring_world()
+        rows = ({"id": f"youtube:{CH_C}", "platform": "youtube", "name": "C"}, {"id": "tiktok:abc", "platform": "tiktok"})
+        result = run(yt, known_creators=rows, playlist_channels=0, atom_channels=0, queries=())
+        self.assertEqual(list(result["cursor"]["channels"]), [CH_C])
+        self.assertEqual(len(api_calls(yt, "playlistItems")), 1)
+        self.assertEqual(result["cursor"]["channels"][CH_C]["lang"], "pl")  # unknown until its films were read
+
+
+class ChannelBase(Offline):
+    def english_world(self):
+        yt = monitoring_world()
+        yt.search[("giełda", None)] = ([hit("AAAAAAAAAAA", CH_A), hit("D1D1D1D1D1D", CH_D), hit("D2D2D2D2D2D", CH_D)], None)
+        for vid in ("D1D1D1D1D1D", "D2D2D2D2D2D"):
+            yt.videos[vid] = video(vid, CH_D, "Stock market basics", "How to invest in stocks with a broker today.", 50, audio="en")
+        return yt
+
+    def test_non_polish_channel_is_labelled_once_and_then_skipped_without_spending(self):
+        yt = self.english_world()
+        first = run(yt, queries=(("topic", "giełda", 1),), monitor_channels=0, playlist_channels=0, atom_channels=0)
+        self.assertEqual(first["cursor"]["skipped"][CH_D]["lang"], "other")
+        self.assertNotIn(CH_D, first["cursor"]["channels"])
+        self.assertEqual(sorted(i for q in api_calls(yt, "videos") for i in q["id"].split(",")), ["AAAAAAAAAAA", "D1D1D1D1D1D", "D2D2D2D2D2D"])
+        yt.calls.clear()
+        second = run(yt, queries=(("topic", "giełda", 1),), state={"cursor": first["cursor"]}, monitor_channels=0,
+                     playlist_channels=0, atom_channels=0)
+        asked = sorted(i for q in api_calls(yt, "videos") for i in q["id"].split(","))
+        self.assertEqual(asked, ["AAAAAAAAAAA"])
+        self.assertEqual(second["report"]["discovery"]["queries"][0]["skippedHits"], 2)
+        self.assertLess(second["quota"]["used"], first["quota"]["used"])
+        self.assertEqual(api_calls(yt, "channels"), [])  # nothing new to read
+
+    def test_single_foreign_sample_is_not_enough_to_skip(self):
+        yt = monitoring_world()
+        yt.search[("giełda", None)] = ([hit("BBBBBBBBBBB", CH_B)], None)
+        result = run(yt, queries=(("topic", "giełda", 1),), playlist_channels=0, atom_channels=0)
+        self.assertEqual(result["cursor"]["channels"][CH_B]["lang"], "unknown")
+        self.assertEqual(result["cursor"]["skipped"], {})
+
+    def test_state_directory_keeps_the_base_between_runs(self):
+        with TemporaryDirectory() as tmp:
+            yt = monitoring_world()
+            run(yt, state_dir=tmp, known_channels=KNOWN, queries=(), playlist_channels=0, atom_channels=0)
+            saved = json.loads((Path(tmp) / "channels.json").read_text(encoding="utf-8"))
+            self.assertEqual(set(saved["channels"]), {CH_A, CH_C})
+            self.assertEqual(saved["channels"][CH_A]["lang"], "pl")
+            self.assertTrue(saved["channels"][CH_A]["lastRead"])
+            self.assertEqual(saved["runs"], 1)
+            yt.calls.clear()
+            run(yt, state_dir=tmp, queries=(), playlist_channels=0, atom_channels=0)
+            self.assertEqual(json.loads((Path(tmp) / "channels.json").read_text(encoding="utf-8"))["runs"], 2)
+            self.assertEqual(api_calls(yt, "playlistItems"), [])
+
+    def test_run_report_has_units_yield_per_family_base_size_and_films_waiting_for_transcription(self):
+        result = run(world(), playlist_channels=1, atom_channels=1,
+                     queries=(("brand", "XTB", 2), ("topic", "giełda", 1)))
+        report = result["report"]
+        self.assertEqual(report["units"], result["quota"]["used"])
+        brand, topic = report["discovery"]["families"]["brand"], report["discovery"]["families"]["topic"]
+        self.assertEqual((brand["searchUnits"], brand["newPolishChannels"], brand["per100"]), (200, 1, 0.5))
+        self.assertEqual((topic["searchUnits"], topic["newPolishChannels"], topic["per100"]), (100, 0, 0.0))
+        base = report["channelBase"]
+        self.assertEqual((base["total"], base["polish"], base["unknown"], base["skippedNonPolish"], base["withFirmPromotion"]),
+                         (3, 2, 1, 0, 1))
+        self.assertEqual(report["waitingForTranscript"]["relationEvidence"], 1)  # XTB link and code in the description
+        self.assertEqual(report["waitingForTranscript"]["firmName"], 0)
+        self.assertEqual(report["shorts"], 1)  # Shorts are films with their own marker
+        self.assertEqual(result["cursor"]["channels"][CH_A]["firms"], ["XTB S.A."])
+
+
+class Cadence(Offline):
+    def test_query_without_new_polish_channel_in_two_runs_goes_to_a_sparser_cycle(self):
+        yt = world()
+        rows = (known(CH_A, 500), known(CH_B, 100))
+        q = (("topic", "giełda", 1),)
+        calls, state = [], {}
+        for number in range(1, 8):
+            yt.calls.clear()
+            result = run(yt, queries=q, known_channels=rows, monitor_channels=0, playlist_channels=0, atom_channels=0, state=state)
+            state = {"cursor": result["cursor"]}
+            calls.append(len(api_calls(yt, "search")))
+        self.assertEqual(calls, [1, 1, 0, 0, 0, 1, 0])  # two dry runs, then every 4th run
+        self.assertEqual(result["cursor"]["queries"]["topic|giełda"]["dry"], 3)
+        self.assertEqual(result["report"]["discovery"]["sparseSkipped"], ["giełda"])
+
+    def test_query_that_found_a_new_channel_keeps_the_normal_cycle(self):
+        yt, state, seen = world(), {}, []
+        for number in range(2):
+            result = run(yt, queries=(("topic", "giełda", 1),), monitor_channels=0, playlist_channels=0, atom_channels=0, state=state)
+            state = {"cursor": result["cursor"]}
+            row = result["cursor"]["queries"]["topic|giełda"]
+            seen.append((row["dry"], row["nextRun"], row["lastNew"]))
+        self.assertEqual(seen, [(0, 0, 2), (1, 0, 0)])  # new channels in run 1; one dry run is not yet a reason
+
+    def test_discovery_stops_when_yield_stays_below_threshold(self):
+        yt = world()
+        qs = tuple(("topic", f"pusta fraza {i}", 1) for i in range(5))
+        result = run(yt, queries=qs, min_yield=2.0, yield_streak=3, monitor_channels=0, playlist_channels=0, atom_channels=0)
+        self.assertEqual(len(api_calls(yt, "search")), 3)
+        self.assertEqual(result["report"]["discovery"]["stoppedEarly"]["afterQuery"], "pusta fraza 2")
+        self.assertEqual(result["resume"]["queryIndex"], 3)
+        self.assertEqual(result["status"], "ok")
+
+
+class DailyCache(Offline):
+    def test_date_window_is_stable_within_a_day_and_search_is_valid_for_a_day(self):
+        with TemporaryDirectory() as tmp:
+            yt = world()
+            clock = {"now": NOW}
+            options = dict(cache_dir=tmp, clock=lambda: clock["now"], monitor_channels=0, playlist_channels=0, atom_channels=0)
+            first = run(yt, **options)
+            clock["now"] = "2026-11-21T22:30:00+00:00"
+            yt.calls.clear()
+            second = run(yt, **options)
+            self.assertEqual(api_calls(yt, "search"), [])  # same day, same window: free
+            self.assertGreater(first["quota"]["used"], 0)
+            self.assertLess(second["quota"]["used"], first["quota"]["used"])  # only the cheap statistics re-read
+            self.assertTrue(first["sources"][0]["scope"]["window"]["publishedAfter"].endswith("T00:00:00Z"))
+            self.assertEqual(first["sources"][0]["scope"]["window"], second["sources"][0]["scope"]["window"])
+
+    def test_search_cache_expires_after_a_day_with_a_fixed_window(self):
+        with TemporaryDirectory() as tmp:
+            yt = world()
+            clock = {"now": NOW}
+            options = dict(cache_dir=tmp, clock=lambda: clock["now"], published_after=WINDOW, monitor_channels=0,
+                           playlist_channels=0, atom_channels=0)
+            run(yt, **options)
+            clock["now"] = "2026-11-22T17:00:00+00:00"  # 22 h later
+            yt.calls.clear()
+            run(yt, **options)
+            self.assertEqual(api_calls(yt, "search"), [])
+            clock["now"] = "2026-11-22T20:00:00+00:00"  # 25 h later
+            run(yt, **options)
+            self.assertEqual(len(api_calls(yt, "search")), 3)  # XTB p1, p2, giełda
+
+
+class MultipleKeys(Offline):
+    def setUp(self):
+        super().setUp()
+        self.yt = world()
+        self.yt.valid_keys = {KEY, KEY2}
+
+    def go(self, **extra):
+        return run(self.yt, keys=(KEY, KEY2), key=None, playlist_channels=0, atom_channels=0, monitor_channels=0, **extra)
+
+    def test_next_key_is_used_only_after_quota_exceeded_of_the_current_one(self):
+        self.yt.key_quota = {KEY: 2}
+        with TemporaryDirectory() as tmp:
+            result = self.go(raw_dir=tmp)
+            blob = json.dumps(result) + "".join(p.read_text(errors="replace") for p in Path(tmp).iterdir())
+            rows = (Path(tmp) / "requests.jsonl").read_text().splitlines()
+        self.assertEqual(result["status"], "ok")
+        used_keys = [q["key"] for p, q in self.yt.calls if p.startswith("/youtube/v3/")]
+        self.assertEqual(used_keys[:3], [KEY, KEY, KEY])           # two successes and the refusal on the first key
+        self.assertEqual(used_keys[3], KEY2)                       # the refused request is repeated on the next key
+        self.assertNotIn(KEY, used_keys[3:])
+        first, second = result["quota"]["keys"]
+        self.assertEqual((first["keyId"], second["keyId"]), (key_id(KEY), key_id(KEY2)))
+        self.assertEqual(first["used"], 201)                       # 2 search pages + the refused videos.list (charged too)
+        self.assertIsNotNone(first["exhaustedAt"])
+        self.assertIsNone(second["exhaustedAt"])
+        self.assertEqual(first["used"] + second["used"], result["quota"]["used"])
+        self.assertNotIn(KEY, blob)
+        self.assertNotIn(KEY2, blob)
+        self.assertIn(key_id(KEY2), "".join(rows))
+        self.assertNotIn(key_id(KEY2), KEY2)
+
+    def test_single_key_behaves_as_before(self):
+        result = run(self.yt, playlist_channels=0, atom_channels=0, monitor_channels=0)
+        self.assertEqual([row["keyId"] for row in result["quota"]["keys"]], [key_id(KEY)])
+        self.assertEqual(result["status"], "ok")
+
+    def test_all_keys_spent_returns_cursor_and_run_resumes_after_the_reset(self):
+        self.yt.key_quota = {KEY: 1, KEY2: 1}
+        spent = self.go()
+        self.assertEqual(spent["status"], "rate_limited")
+        self.assertEqual(spent["sources"][0]["retryAt"], "2026-11-22T08:00:00+00:00")
+        self.assertEqual({r["keyId"] for r in spent["quota"]["keys"] if r["exhaustedAt"]}, {key_id(KEY), key_id(KEY2)})
+        self.assertIsNotNone(spent["resume"])
+        # Same day, ledger remembers both keys as spent: no request leaves the process.
+        self.yt.key_quota = {}
+        self.yt.calls.clear()
+        blocked = self.go(state={"resume": spent["resume"], "cursor": spent["cursor"]})
+        self.assertEqual(blocked["status"], "rate_limited")
+        self.assertEqual([c for c in self.yt.calls if c[0].startswith("/youtube/v3/")], [])
+        # After the reset (new Pacific day) it continues from the stored cursor.
+        later = lambda: "2026-11-22T19:00:00+00:00"
+        resumed = self.go(state={"resume": spent["resume"], "cursor": spent["cursor"]}, clock=later)
+        self.assertEqual(resumed["status"], "ok")
+        first_search = api_calls(self.yt, "search")[0]
+        self.assertEqual((first_search["q"], first_search.get("pageToken")),
+                         (spent["resume"]["query"], spent["resume"]["pageToken"]))
+        self.assertTrue(all(r["used"] <= 10000 for r in resumed["quota"]["keys"]))
+
+    def test_key_files_listed_in_environment_in_order_and_repository_files_refused(self):
+        with TemporaryDirectory() as tmp:
+            one, two, empty = Path(tmp, "a.key"), Path(tmp, "b.key"), Path(tmp, "c.key")
+            one.write_text(KEY + "\n")
+            two.write_text(KEY2)
+            empty.write_text("  \n")
+            env = {"INVESTWATCH_YT_KEY_FILES": f"{one}:{two}:{empty}:{Path(tmp, 'missing.key')}:{one}"}
+            self.assertEqual(load_keys(env), [KEY, KEY2])
+            self.assertEqual(load_keys({"INVESTWATCH_YT_KEY_FILES": str(Path(__file__).resolve())}), [])
+            with patch("collectors.youtube.load_key", load_key):
+                self.assertEqual(load_keys({"YOUTUBE_API_KEY_FILE": str(two)}), [KEY2])  # no list: one key, as before
+                self.assertEqual(load_keys({"YOUTUBE_API_KEY_FILE": str(Path(tmp, 'missing.key'))}), [])
+            self.assertRegex(key_id(KEY), r"^[0-9a-f]{8}$")
+
+    def test_discover_reads_the_key_list_through_load_keys(self):
+        with patch("collectors.youtube.load_keys", return_value=[KEY, KEY2]):
+            self.yt.key_quota = {KEY: 0}
+            result = discover(Context(fetch=self.yt.fetch, clock=lambda: NOW, budget=1000, queries=QS,
+                                      playlist_channels=0, atom_channels=0))
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual([q["key"] for p, q in self.yt.calls if p.startswith("/youtube/v3/")][:2], [KEY, KEY2])
 
 
 class Replay(Offline):

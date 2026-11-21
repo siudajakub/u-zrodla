@@ -1,0 +1,2434 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "uHTa8dwYkY0jaqcLxqwftIVBNIU",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 687288,
+    "resultsPerPage": 53
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vPoo6zv1Yvq7V8hrfrTBPgd18S0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4Oc9uZgArCM"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-12T11:37:43Z",
+        "channelId": "UCXpmXAGyL3nFii74cE-aNaQ",
+        "title": "Obligacje Skarbowe 10 letnie vs 4 letnie: Ten błąd kosztuje TYSIĄCE!",
+        "description": "Obligacje skarbowe 4-letnie czy 10-letnie – które wybrać, aby zarobić najwięcej i zabezpieczyć oszczędności przed inflacją?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4Oc9uZgArCM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4Oc9uZgArCM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4Oc9uZgArCM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4Oc9uZgArCM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4Oc9uZgArCM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "ProfitLab",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-12T11:37:43Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yP7OG7g0oQpJR8l36nMTmHp_YRg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KYIGEaWywdU"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-22T06:00:06Z",
+        "channelId": "UCgOHeaGiJbTVNwJ984OEibQ",
+        "title": "Obligacje Skarbowe Vs Inflacja — Prawdziwa Matematyka (Czy Twoje Pieniądze Są Naprawdę Chronione?",
+        "description": "Czy obligacje skarbowe naprawdę chronią pieniądze przed inflacją? W tym odcinku porównujemy nominalny zysk z realną siłą ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KYIGEaWywdU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KYIGEaWywdU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KYIGEaWywdU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KYIGEaWywdU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KYIGEaWywdU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Głowa i Portfel",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-22T06:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "o2wsve_qWtusQaPBzkpo5Xg9Pq4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ugWxj3Jdb44"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-27T18:00:11Z",
+        "channelId": "UCkUYsJcZOJQlU7O-8i8ecZg",
+        "title": "Nie Inwestuj w Obligacje Skarbowe Zanim Nie Zobaczysz Tego",
+        "description": "Czy inwestowanie w obligacje skarbowe ma sens? Przez ponad 20 lat obligacje indeksowane inflacją pozwalały chronić ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/ugWxj3Jdb44/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Kamil Polak",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-27T18:00:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "86wXGTRPE9yrVVmObokbnOXJbs0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jRuOzv6YL1A"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-15T19:32:30Z",
+        "channelId": "UC816J_EZEICUYOhjTnk3o7Q",
+        "title": "Czy i które obligacje skarbowe warto kupić? Wrzesień 2026 r.",
+        "description": "Rentowności polskich dziesięcioletnich obligacji skarbowych przekroczyły 6,5 proc. i znalazły się na poziomach niewidzianych od ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "StockWatch.pl",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-15T19:32:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "uRYm8z3ObUzhRwpuCJrwGm54rOA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "M9TY1tzt7Ic"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-09T18:50:43Z",
+        "channelId": "UCaPqi6D2n0mxsDxyKgd2DnA",
+        "title": "Obligacje skarbowe prosto wyjaśnione - poradnik dla zielonych (i nie tylko)",
+        "description": "Obligacje skarbowe wytłumaczone od zera. Ten film jest dla ciebie, jeśli czujesz się zielony w inwestowaniu, a chcesz w końcu ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/M9TY1tzt7Ic/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/M9TY1tzt7Ic/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/M9TY1tzt7Ic/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/M9TY1tzt7Ic/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/M9TY1tzt7Ic/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Proste Finanse",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-09T18:50:43Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Vvm-fnduCDlDx71xC0H9a9MX1f4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QiSq_iPcfaU"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-08T05:30:02Z",
+        "channelId": "UC_7EBLV1_TS0NFv5D6VipRg",
+        "title": "Wybierasz OBLIGACJE SKARBOWE pod koniec 2026? Nie wszystkie mają sens",
+        "description": "Które obligacje skarbowe warto kupić pod koniec 2026 roku? Porównuję aktualne oprocentowanie OTS, ROR, DOR, TOS, COI, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QiSq_iPcfaU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QiSq_iPcfaU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QiSq_iPcfaU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QiSq_iPcfaU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QiSq_iPcfaU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Investologia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-08T05:30:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IhSb6DG-KFZHpybuabD_tXAdi1s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pLRBbf_TaDk"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T17:00:34Z",
+        "channelId": "UCqvkwZLk3L3BE8KR1-n9Ffg",
+        "title": "OBLIGACJE SKARBOWE LISTOPAD 2026! CZY TO OSTATNI MIESIĄC PRZED PODWYŻKĄ? (słaby złoty, ropa, złoto)",
+        "description": "xtb #investingpro #współpraca ✓ Poznaj InvestingPro ➡️https://www.investing-referral.com/zbrojastudio/ ✓ Załóż konto w XTB: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pLRBbf_TaDk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pLRBbf_TaDk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pLRBbf_TaDk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pLRBbf_TaDk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pLRBbf_TaDk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/pLRBbf_TaDk/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Wszystko o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T17:00:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XqcPiRf_FQp2xyKTn-KSem2Iaus",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ryZCguUDZeI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:00:15Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "W co inwestować na IKE oraz IKZE: akcje, obligacje, ETF-y?",
+        "description": "Chcesz mieć więcej pieniędzy? Przeczytaj moją książkę: https://inwestokracja.pl/yt Chcesz otrzymywać DARMOWE lekcje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:00:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "VYL-3rzStpHV7vSPQcPBrTs1Oz0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "veedof3XKpY"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-30T14:00:06Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Ranking - NAJLEPSZE obligacje skarbowe 2026! Które są dla kogo?",
+        "description": "Ranking - obligacje skarbowe 2026 MOIM ZDANIEM. Sprawdzam najnowszą ofertę Ministerstwa Finansów na sierpień 2026 i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-30T14:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mV2jU0yMAH6QoOT1f6vQJudgFhg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "skC6SV_b1oA"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-17T14:00:33Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Czy obligacje skarbowe NADAL mają sens w 2026? (wcale NIE takie oczywiste)",
+        "description": "Czy obligacje skarbowe w 2026 roku nadal mają sens? Moim zdaniem — nie do końca. W tym materiale biorę pod lupę obligacje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/skC6SV_b1oA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/skC6SV_b1oA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/skC6SV_b1oA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/skC6SV_b1oA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/skC6SV_b1oA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-17T14:00:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6rLs0HAVKhtin5zcZrrhwgSpIo4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8XJvT9P1ahM"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-01T17:00:03Z",
+        "channelId": "UCkUYsJcZOJQlU7O-8i8ecZg",
+        "title": "Nie Inwestuj w Obligacje Zanim Nie Obejrzysz Tego!",
+        "description": "Obligacje - jak działają, ile można zarobić i ile można stracić? W tym filmie wyjaśniam, jak działają obligacje skarbowe i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8XJvT9P1ahM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8XJvT9P1ahM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8XJvT9P1ahM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8XJvT9P1ahM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8XJvT9P1ahM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/8XJvT9P1ahM/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Kamil Polak",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-01T17:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GAlVLtJLNiQAakFpSBnS6C_SYB4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LNZ71zMTEXk"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-23T07:32:39Z",
+        "channelId": "UCzp2jP1x_wVQfp1-rdpzWeg",
+        "title": "Dlaczego rynek obligacji przestał udawać #obligacje #rentowność #dlugpubliczny #złoto  #idfmetale",
+        "description": "Rentowność 10-letnich obligacji USA dotknęła 5,34%. Rynek wysłał rządom jasny sygnał. Kod YT67XJ to 0,5% rabatu w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LNZ71zMTEXk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LNZ71zMTEXk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LNZ71zMTEXk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LNZ71zMTEXk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LNZ71zMTEXk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kasia Szewczyk",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-23T07:32:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IyO4XAaRAWjJbM-wt_zE1ihB02g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SRSQ-REDhbU"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-22T05:00:30Z",
+        "channelId": "UCrdOfDuBviZgwr5MZfsHVEw",
+        "title": "Obligacje skarbowe wrzesień 2026 - które najlepsze?",
+        "description": "Obligacje skarbowe wrzesień 2026. Które wybrać? TOS, COI, EDO, ROR czy DOR? W tym materiale analizuję aktualną ofertę ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SRSQ-REDhbU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SRSQ-REDhbU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SRSQ-REDhbU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SRSQ-REDhbU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SRSQ-REDhbU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Trader Na Wykresie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-22T05:00:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "P327TPogPpOBkuBsysycNzhfeCA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "6qR4zBrLKKQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-06T05:00:33Z",
+        "channelId": "UCqRcpPTUqX75WwCV0TFxi1A",
+        "title": "Które obligacje skarbowe są najlepsze?  Ranking Lipiec 2026 #inwestowanie #obligacje #gpw #dywidendy",
+        "description": "W tym filmie pokazuję, jak wypada aktualna, lipcowa oferta detalicznych obligacji skarbowych w zależności od horyzontu ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6qR4zBrLKKQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6qR4zBrLKKQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6qR4zBrLKKQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6qR4zBrLKKQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6qR4zBrLKKQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestor po godzinach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-06T05:00:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7J3d_v5D1wrjgzLXSiP2RFUrtmo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mQRikeRhuWA"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-20T16:52:22Z",
+        "channelId": "UCVNWaYhysLZ5FzizSQw0z6A",
+        "title": "Obligacje skarbowe na 1, 4 czy 10 lat? Policzyłem, które dają najwięcej z 10 000 zł",
+        "description": "Banki reklamują 6% na koncie oszczędnościowym, ale taka stawka trwa zwykle kilka miesięcy, a nowe lokaty dają średnio ok.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mQRikeRhuWA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mQRikeRhuWA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mQRikeRhuWA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mQRikeRhuWA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mQRikeRhuWA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestoria",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-20T16:52:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bBSJvih8jSPkI5u85QjWDL202JU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Lj-2TcNU-F4"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-09T22:32:29Z",
+        "channelId": "UCHv11ztykFWf_0dhTEMLO6A",
+        "title": "Obligacje roczne, dwuletnie, trzylatki, indeksowane inflacją, a może listy zastawne? Co wybrać?",
+        "description": "obligacje #inwestowanie #oszczędzanie Majowa sprzedaż obligacji skarbowych okazała się najniższa w tym roku. Czy to znak ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Lj-2TcNU-F4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Lj-2TcNU-F4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Lj-2TcNU-F4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Lj-2TcNU-F4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Lj-2TcNU-F4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Parkiet",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-09T22:32:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nWEx9_KOLJjGCcZiLifHe3KojBE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5TZ7eY_Qa2o"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-26T13:43:56Z",
+        "channelId": "UCXpmXAGyL3nFii74cE-aNaQ",
+        "title": "Obligacje czy Lokata? Dlaczego 6% w banku nie jest tym, co myślisz? (50 000 zł)",
+        "description": "Obligacje czy lokata — to pytanie zadaje sobie każdy, kto ma 50 000 zł i nie chce, żeby inflacja zjadła mu oszczędności.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5TZ7eY_Qa2o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5TZ7eY_Qa2o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5TZ7eY_Qa2o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5TZ7eY_Qa2o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5TZ7eY_Qa2o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/5TZ7eY_Qa2o/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "ProfitLab",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-26T13:43:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rg97dsEOsNOyiNglvPTUda46aHk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tOJrwItt0zM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-11T18:00:27Z",
+        "channelId": "UCNr2qELUCZbpb3PzNjqTRMw",
+        "title": "Obligacje skarbowe krok po kroku: jak kupić, wpłacić i wypłacić (oferta listopad 2026)",
+        "description": "Praktyczny poradnik: czym są obligacje oszczędnościowe, aktualna oferta na listopad 2026 (OTS, ROR, DOR, TOS, COI, EDO, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tOJrwItt0zM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tOJrwItt0zM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tOJrwItt0zM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tOJrwItt0zM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tOJrwItt0zM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "KoalaInwestycje",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-11T18:00:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "J-ZF5yzIMehj4Zo6w3ur0JBMfFc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3k4jSufkBEE"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-13T13:54:30Z",
+        "channelId": "UCcJq-5bSAMp2ZCOR8kacfmA",
+        "title": "Co czeka OBLIGACJE w 2026? Nowa projekcja inflacji",
+        "description": "Tu inwestuję 1000zł miesięcznie: https://geolink.xtb.com/wMYiO ▶️ Teraz, rejestrując się w XTB z kodem \"FINANSOWATV” ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3k4jSufkBEE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3k4jSufkBEE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3k4jSufkBEE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3k4jSufkBEE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3k4jSufkBEE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowa TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-13T13:54:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rlbG98qwXiMpHuJEfj7JM-Nyw6U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "EjM_IlCXSog"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-15T14:45:28Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "Które obligacje wybrać❓",
+        "description": "Które obligcje wybrać❓ Sprawdź w 4 prostych krokach ⬇️ KROK 1 Wejdź na nasz zupełnie darmowy KALKULATOR, KROK ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/EjM_IlCXSog/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/EjM_IlCXSog/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/EjM_IlCXSog/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/EjM_IlCXSog/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/EjM_IlCXSog/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/EjM_IlCXSog/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-15T14:45:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "62dxhhpwpjApL6vbN-nG7zp9MIc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kSG1_JVFO7g"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-08T14:00:32Z",
+        "channelId": "UCHkXGAt9KLUHGbUdmtQahOw",
+        "title": "Obligacje Skarbowe 2026 - wszystko co musisz wiedzieć!",
+        "description": "Jeśli masz dodatkowe pytania napisz do mnie na instagramie: https://www.instagram.com/inteligentny.portfel/ W dzisiejszym filmie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kSG1_JVFO7g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kSG1_JVFO7g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kSG1_JVFO7g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kSG1_JVFO7g/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kSG1_JVFO7g/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inteligentny Portfel",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-08T14:00:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-YQlZgjKZhciWUpfG30wYmFiI6g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pgwNMG4l0d0"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-11T05:30:02Z",
+        "channelId": "UC_7EBLV1_TS0NFv5D6VipRg",
+        "title": "Kupujesz OBLIGACJE SKARBOWE w II połowie 2026? To musisz wiedzieć",
+        "description": "W 2026 roku obligacje skarbowe nadal pozostają jedną z najciekawszych form bezpiecznego oszczędzania i inwestowania.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pgwNMG4l0d0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pgwNMG4l0d0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pgwNMG4l0d0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pgwNMG4l0d0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pgwNMG4l0d0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Investologia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-11T05:30:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "p0zFj9kizk0vpwmhFc3U8kVmw_8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ELB56PZm-mQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-17T12:30:28Z",
+        "channelId": "UCaW25etEU4Dkir2RbIzSzUw",
+        "title": "Zmiany w portfelu. Obligacje skarbowe 2026: kończę kupować EDO.",
+        "description": "Moja strona – Finanse i inwestowanie: https://finansowa-wyprawa.pl/ Aktualna oferta obligacji skarbowych – oficjalna strona: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ELB56PZm-mQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ELB56PZm-mQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ELB56PZm-mQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ELB56PZm-mQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ELB56PZm-mQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestycyjna wyprawa",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-17T12:30:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "EtnBGRr-w-S7jhIdcLQZJvf9oLk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2k_QQbS-_Lg"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-29T17:00:33Z",
+        "channelId": "UC8Ymbs8znOAFmcCvWeHxZHQ",
+        "title": "Obligacje skarbowe - jak działają i ile zarobisz na 10 000 zł?",
+        "description": "Obligacje skarbowe od podstaw: czym są, jak działa 8 rodzajów z oferty na październik 2026 (OTS, ROR, DOR, TOS, COI, EDO ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2k_QQbS-_Lg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2k_QQbS-_Lg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2k_QQbS-_Lg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2k_QQbS-_Lg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2k_QQbS-_Lg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tomasz Pawlik",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-29T17:00:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "52qpxFc_oedaMqTH3TNBoKHUeoE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "77M0XIt2IIc"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-13T08:00:03Z",
+        "channelId": "UCN2ggLBb6Zv7HiOpXdVZUpg",
+        "title": "Co się stanie z 10 000 zł po 10 latach? (Obligacje Skarbowe i Poduszka Finansowa)",
+        "description": "Szukasz bezpiecznej przystani dla swoich oszczędności? W dzisiejszym odcinku \"Finanse na Spokojnie\" bierzemy pod lupę ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/77M0XIt2IIc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/77M0XIt2IIc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/77M0XIt2IIc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/77M0XIt2IIc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/77M0XIt2IIc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finanse na Spokojnie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-13T08:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "F8YfKYVFMp_-E2v2hKD1RDPxXqU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "T4lpy7Z34tM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-08T09:00:27Z",
+        "channelId": "UCZr8tnvQdFq1MdHJj68fDZg",
+        "title": "Obligacje skarbowe po decyzji S&amp;P. Są zagrożone? #shorts",
+        "description": "Oprocentowanie obligacji detalicznych ustala Ministerstwo Finansów, decyzja S&P z 6.11.2026 go nie zmienia. Lokaty chroni ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/T4lpy7Z34tM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/T4lpy7Z34tM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/T4lpy7Z34tM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/T4lpy7Z34tM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/T4lpy7Z34tM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/T4lpy7Z34tM/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Chodzi o Pieniądze",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-08T09:00:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XK1NMwt-GBb9Hsq4aOFMsVjvNSE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2oGyvQWUXHY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-07T22:05:52Z",
+        "channelId": "UCLx02k7FZINgaN-QR8bdYDw",
+        "title": "Obligacje skarbowe to dopiero początek. Gdzie zaczyna się zarabianie?",
+        "description": "Obligacje skarbowe to dopiero początek. Gdzie zaczyna się zarabianie? Obligacje detaliczne Skarbu Państwa są dla wielu osób ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2oGyvQWUXHY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2oGyvQWUXHY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2oGyvQWUXHY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2oGyvQWUXHY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2oGyvQWUXHY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Klub Inwestorek Indywidualnych",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-07T22:05:52Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Em7RJgEIMh90BmqzRrRNJApN7WQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_x0nmG1UuHM"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-17T06:15:06Z",
+        "channelId": "UCfvR4QTLT5GAtrWtCR5WgSA",
+        "title": "Lokata czy obligacje skarbowe – które rozwiązanie jest lepsze dla Twoich oszczędności?",
+        "description": "Gdzie bezpiecznie ulokować oszczędności w 2026 roku? W tym filmie szczegółowo porównujemy lokaty bankowe oraz detaliczne ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Bankowe ABC",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-17T06:15:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "EFILpHRFZhmYyHL84y6j1m2Ea5Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "6gvNYnOBIIM"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-25T18:35:57Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "Twoje oszczędności zarabiają za mało? 👉 Sprawdź, gdzie je trzymać [NOWY KALKULATOR]",
+        "description": "Chcesz ogarnąć finanse i zacząć inwestować? Sprawdź: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6gvNYnOBIIM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6gvNYnOBIIM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6gvNYnOBIIM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6gvNYnOBIIM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6gvNYnOBIIM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-25T18:35:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ihVTLx42raei-dF5bp2eJmXFUhY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "beGFTJyj2Tw"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-30T08:00:03Z",
+        "channelId": "UCTg5vw5_mXApHkPTDFz1WQA",
+        "title": "Większość wybiera źle… które obligacje skarbowe są NAJLEPSZE?",
+        "description": "Które obligacje skarbowe są lepsze – 4-letnie czy 10-letnie? W tym filmie porównuję oba rozwiązania nie tylko pod względem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/beGFTJyj2Tw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/beGFTJyj2Tw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/beGFTJyj2Tw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/beGFTJyj2Tw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/beGFTJyj2Tw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Matematyka Pieniądza",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-30T08:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nYvQyxQu6bizfDyDkqY5dQs3icE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FCat20Vj5R0"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-07T08:59:12Z",
+        "channelId": "UCqRcpPTUqX75WwCV0TFxi1A",
+        "title": "Które obligacje skarbowe są najlepsze?  Ranking Czerwiec 2026",
+        "description": "W tym filmie pokazuję, jak wypada aktualna, czerwcowa oferta detalicznych obligacji skarbowych w zależności od horyzontu ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FCat20Vj5R0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FCat20Vj5R0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FCat20Vj5R0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/FCat20Vj5R0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/FCat20Vj5R0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestor po godzinach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-07T08:59:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "AxmqF1t9SBjbE_pVeQtW6SVuNAc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "z2Lx6o7IoeQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-11T13:13:31Z",
+        "channelId": "UCzHUL45GdSbPVt11WP5jKyQ",
+        "title": "Obligacje skarbowe w październiku. Tylko jedne pokonują inflację",
+        "description": "Październikowa oferta obligacji skarbowych pozostaje bez zmian, a szybki szacunek GUS wskazuje inflację na poziomie 4,0%.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/z2Lx6o7IoeQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/z2Lx6o7IoeQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/z2Lx6o7IoeQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/z2Lx6o7IoeQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/z2Lx6o7IoeQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Złoty Doradca",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-11T13:13:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "OhqRjqTrEOBKUPHTBuZR-cmAwYY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_M3sd3mMh5k"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-03T12:34:28Z",
+        "channelId": "UCFL_9nozLfxfaZ0InX19qWw",
+        "title": "Obligacje skarbowe: 3 rzeczy, które musisz wiedzieć",
+        "description": "CZY NA OBLIGACJACH SKARBOWYCH MOŻNA STRACIĆ? Detaliczne obligacje skarbowe to jeden z najlepszych sposobów na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_M3sd3mMh5k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_M3sd3mMh5k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_M3sd3mMh5k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_M3sd3mMh5k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_M3sd3mMh5k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Piotr Zalewski",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-03T12:34:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "VD3as7Vw9GA5nj6EAs3dv7KiW7M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "b36TxFRIs5w"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-29T16:00:02Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Gdzie trzymać pieniądze w 2026? Ranking 5 opcji (jedna cię ZDRADZI)!",
+        "description": "Gdzie trzymać pieniądze w 2026 roku? To pytanie zadaje sobie każdy, kto widzi jak inflacja zjada jego oszczędności. W tym ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-29T16:00:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zZJV8bJdsJGf0MkWYVT8Djv4gCI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OuV3V7yZnhg"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-08T14:31:18Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "Które obligacje wybrać❓",
+        "description": "Które obligacje wybrać❓ KROK 1: Wejdź na nasz zupełnie darmowy KALKULATOR. KROK 2: Podaj KWOTĘ. KROK 3: Podaj ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OuV3V7yZnhg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OuV3V7yZnhg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OuV3V7yZnhg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OuV3V7yZnhg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OuV3V7yZnhg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-08T14:31:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1mF4niMOmmC7PrJZ8JLputqDh0A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DTzsaJqWN_Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-05T06:15:36Z",
+        "channelId": "UCqRcpPTUqX75WwCV0TFxi1A",
+        "title": "KTÓRE OBLIGACJE SKARBOWE SĄ NAJLEPSZE?  Ranking Lipiec 2026! Portfel długoterminowy odcinek 61",
+        "description": "W 61. odcinku mojego kanału pokazuję aktualne wyniki mojego portfela długoterminowego, omawiam najważniejsze zmiany z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DTzsaJqWN_Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DTzsaJqWN_Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DTzsaJqWN_Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DTzsaJqWN_Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DTzsaJqWN_Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestor po godzinach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-05T06:15:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TWDzGVBRb4ATYRM6J-TLUJuPGck",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wft9UXUUey4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T18:07:30Z",
+        "channelId": "UC-zpwGRzI24rxGBMIAsmoDA",
+        "title": "Obligacje skarbowe dla początkujących: pułapki zysku",
+        "description": "Obligacje skarbowe dla początkujących: jak działają i ile naprawdę zarabiasz? Procent z plakatu to nie to, co trafi na twoje konto.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wft9UXUUey4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wft9UXUUey4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wft9UXUUey4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wft9UXUUey4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wft9UXUUey4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finanse po ludzku",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T18:07:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2RPJK_hHCdnKi41ai6z3NWxV0Eo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "o6GknVWaKmY"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T19:36:11Z",
+        "channelId": "UCTyt5JYXghR3TNJjspt8diw",
+        "title": "Obligacje Skarbowe w 11.2026",
+        "description": "Twój pierwszy krok w inwestowaniu długoterminowym to nie akcje czy ETF-y. To stabilna baza w postaci obligacji skarbowych.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/o6GknVWaKmY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/o6GknVWaKmY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/o6GknVWaKmY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/o6GknVWaKmY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/o6GknVWaKmY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jędrzej Maciejewski - Inwestowanie Długoterminowe",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T19:36:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "fsasgTpmXX0EdqqWKL-zCDcvPbY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "C6TD1V1ix9c"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-25T17:25:36Z",
+        "channelId": "UCqvkwZLk3L3BE8KR1-n9Ffg",
+        "title": "OBLIGACJE SKARBOWE WRZESIEŃ 2026 - OMÓWIENIE OFERTY",
+        "description": "xtb #investingpro #współpraca ✓ Poznaj InvestingPro ➡️https://www.investing-referral.com/zbrojastudio/ ✓ Załóż konto w XTB: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/C6TD1V1ix9c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/C6TD1V1ix9c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/C6TD1V1ix9c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/C6TD1V1ix9c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/C6TD1V1ix9c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/C6TD1V1ix9c/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Wszystko o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-25T17:25:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-4tcARFKBBHFQQti18on1YfWeQo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OUqJWg7zVE4"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-22T16:37:46Z",
+        "channelId": "UCjXT9dpdwM96XDsjI-jo70A",
+        "title": "Trzymanie kasy na zwykłym rachunku bankowym jest błędem. Zdecydowanie lepsze są obligacje skarbowe.",
+        "description": "Trzymanie Oszczędności na nieoprocentowanym rachunku bankowym jest skrajnie dla nas niekorzystne. Warto zapoznać się z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OUqJWg7zVE4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OUqJWg7zVE4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OUqJWg7zVE4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OUqJWg7zVE4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OUqJWg7zVE4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "PaniFinansowa",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-22T16:37:46Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cgLHOfXLROT9peAcJvVgyZS0Icg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pSr9i0pRqBA"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-18T16:30:06Z",
+        "channelId": "UCCTeEs444y9QetTPIRSS9IQ",
+        "title": "Jak kupić pierwsze obligacje skarbowe ? Instrukcja krok po kroku",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pSr9i0pRqBA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pSr9i0pRqBA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pSr9i0pRqBA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pSr9i0pRqBA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pSr9i0pRqBA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "finansowe_zdrowie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-18T16:30:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "j10ExFiH3rKpbnNHwsgs5pPSxTg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MiKSvx9KbU4"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-30T15:52:25Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "100 tys. zł bez podatku Belki? Wszystko, co musisz wiedzieć o OKI",
+        "description": "Sprawdź nasz BEZPŁATNY kalkulator IKE/IKZE: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MiKSvx9KbU4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MiKSvx9KbU4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MiKSvx9KbU4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MiKSvx9KbU4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MiKSvx9KbU4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-30T15:52:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NsBVpTNOuFlQ0WNfjZVPL0A4xjY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MC5CvkKu6Og"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-02T08:00:00Z",
+        "channelId": "UCvZVo6vWYdx005Q1CMaFzDA",
+        "title": "Oszczędnościowe obligacje skarbowe – wybór i inwestowanie w praktyce",
+        "description": "W drugim odcinku skupiamy się na praktycznej stronie inwestowania w oszczędnościowe obligacje skarbowe. Wyjaśniamy, jak ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MC5CvkKu6Og/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MC5CvkKu6Og/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MC5CvkKu6Og/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MC5CvkKu6Og/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MC5CvkKu6Og/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/MC5CvkKu6Og/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "RMF PODCAST",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-02T08:00:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "g4YqraSveK8A5kPr1WS_EcPD3ls",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_2ziDa57zbY"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-05T17:17:19Z",
+        "channelId": "UCC7Swgb0B6ldGXhSqWATL7w",
+        "title": "Obligacje skarbowe - o tym warto wiedzieć",
+        "description": "Masz lub planujesz kupić obligacje skarbowe? W tym filmie omawiam kilka kwestii, o których warto wiedzieć przed zakupem, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_2ziDa57zbY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_2ziDa57zbY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_2ziDa57zbY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_2ziDa57zbY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_2ziDa57zbY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/_2ziDa57zbY/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Bernard",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-05T17:17:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "JH5ye6w9-G18_RejsTikCkmjHO8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "XEa1ptozEYQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-26T19:29:10Z",
+        "channelId": "UCFsnIQ3q3GCEh0vE8rHhGzw",
+        "title": "Ile NAPRAWDĘ zarobisz na obligacjach? Stawki listopad 2026 #shorts",
+        "description": "Ile zostaje z 10 000 zł w obligacjach skarbowych po podatku Belki i przy inflacji 4,1%? Przegląd oferty Ministerstwa Finansów na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XEa1ptozEYQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XEa1ptozEYQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XEa1ptozEYQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/XEa1ptozEYQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/XEa1ptozEYQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/XEa1ptozEYQ/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Centruminwestowania",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-26T19:29:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1R3F0KbafGXRA5cGd1yT_kOH-v4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "26vfFWeHXYU"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-11T13:00:06Z",
+        "channelId": "UCteUEV5xcY2ZbQUJy5ibgoQ",
+        "title": "Wrzuciłem 20 000 zł w obligacje skarbowe. Tyle mam po roku",
+        "description": "Rok temu wrzuciłem 20 000 zł w obligacje skarbowe. W tym odcinku pokazuję dokładnie, ile z tego mam po roku — co do złotówki ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/26vfFWeHXYU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/26vfFWeHXYU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/26vfFWeHXYU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/26vfFWeHXYU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/26vfFWeHXYU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Milion po Godzinach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-11T13:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "h5EmWlziLrSHnZhjGsMirPQyun0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "6AC_7O1Yt0Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-29T15:00:37Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "Rekordowe rentowności obligacji! Czeka nas powtórka z 2007?",
+        "description": "współpraca XTB [współpraca] Tutaj Kupisz Akcje i ETFy (XTB): https://link-pso.xtb.com/pso/DwCbZ [współpraca] Zgarnij 15% ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6AC_7O1Yt0Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6AC_7O1Yt0Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6AC_7O1Yt0Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6AC_7O1Yt0Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6AC_7O1Yt0Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/6AC_7O1Yt0Y/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-29T15:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "M-5Dui-Fa9qw9Q6IqylWYxOu6iE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NnHNSMg7kzA"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-28T15:00:01Z",
+        "channelId": "UCj_IcKBn8t-9U836OHe9iQw",
+        "title": "Obligacje Skarbowe 2026: Jak Kupić, Które Wybrać i Ile Można Zarobić?",
+        "description": "Obligacje skarbowe to jedna z najprostszych i najczęściej pomijanych form bezpiecznego inwestowania pieniędzy. Ale które ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NnHNSMg7kzA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NnHNSMg7kzA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NnHNSMg7kzA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/NnHNSMg7kzA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/NnHNSMg7kzA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowy MBA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-28T15:00:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "d-zP_YXOKmKTyuTAiaOONYRw77o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "01exA_htW2Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-24T12:40:45Z",
+        "channelId": "UCzHUL45GdSbPVt11WP5jKyQ",
+        "title": "Obligacje skarbowe: 1, 4 czy 10 lat?",
+        "description": "Porównanie obligacji skarbowych ROR1027, COI1030 i EDO1036 na przykładzie 10 000 zł: różnią się okresem oszczędzania, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/01exA_htW2Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/01exA_htW2Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/01exA_htW2Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/01exA_htW2Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/01exA_htW2Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Złoty Doradca",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-24T12:40:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Pgbbjm2IlxLUo8W56Wuag44rqU4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "679201SGDgc"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-26T06:15:06Z",
+        "channelId": "UCfvR4QTLT5GAtrWtCR5WgSA",
+        "title": "Jak kupić obligacje skarbowe krok po kroku przez internet i smartfon?",
+        "description": "Chcesz bezpiecznie oszczędzać i chronić swoje pieniądze przed inflacją? W tym filmie dowiesz się, jak krok po kroku kupić ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Bankowe ABC",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-26T06:15:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bNEDFylbobkfMTGwclHBXj6LW9k",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "s-9fVfBxUN8"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-24T16:15:23Z",
+        "channelId": "UCeBQ24VfikOriqSdKtomh0w",
+        "title": "Czy warto kupić obligacje skarbowe już teraz?",
+        "description": "Smalls: Otrzymaj 60% zniżki na pierwsze zamówienie + BEZPŁATNĄ dostawę i BEZPŁATNE smakołyki na całe życie na https://smalls.com/ICED Link do odcinka ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/s-9fVfBxUN8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/s-9fVfBxUN8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/s-9fVfBxUN8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/s-9fVfBxUN8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/s-9fVfBxUN8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "The Iced Coffee Hour Clips",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-24T16:15:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "88Weulj3kNyiuPJmm_SRjDtdapg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mlEZM6dXwqo"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T22:51:28Z",
+        "channelId": "UCMliQxXK5ef8mIlfW1XK3Iw",
+        "title": "Skarb Państwa podnosi oprocentowanie obligacji I do 5,51%! Kupić czy poczekać?",
+        "description": "OBLIGACJE SKARBOWE USA TYPU I SKOKUJĄ DO 5,51%! KUPIĆ CZY CZEKAĆ?** Departament Skarbu USA ogłosił znaczącą...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mlEZM6dXwqo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mlEZM6dXwqo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mlEZM6dXwqo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mlEZM6dXwqo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mlEZM6dXwqo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "SiliconValleyWealth",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T22:51:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gcKAeBxT25IUGbTQXE5SJhnRobw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "S3YzEl0IgM0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-10T18:30:06Z",
+        "channelId": "UCc3o_kY9mqDA8J25REHunPA",
+        "title": "Dlaczego amerykańskie obligacje skarbowe tracą na wartości",
+        "description": "Rząd USA nie spóźnił się z płatnością, więc dlaczego posiadacze obligacji tracą pieniądze? W tym filmie wyjaśniamy dziwne...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/S3YzEl0IgM0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/S3YzEl0IgM0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/S3YzEl0IgM0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/S3YzEl0IgM0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/S3YzEl0IgM0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/S3YzEl0IgM0/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Alex Adam",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-10T18:30:06Z"
+      }
+    }
+  ]
+}

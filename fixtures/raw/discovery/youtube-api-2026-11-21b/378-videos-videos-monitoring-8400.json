@@ -1,0 +1,1381 @@
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "OOW745NqSpaWfPE32V5X4eJbzMo",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "IoXqSsRhrBkS_IJmukZk5s8-3mU",
+      "id": "msESNC51n1w",
+      "snippet": {
+        "publishedAt": "2026-11-09T15:46:56Z",
+        "channelId": "UC3VmJNIm-BObGz_SPuZLVSA",
+        "title": "Bullpost, narzędzie do wyceny portfela wskaźnikiem C/Z #akcje #gpw #inwestowanie",
+        "description": "Dołącz do nas na bullpost.pl",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/msESNC51n1w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/msESNC51n1w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/msESNC51n1w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/msESNC51n1w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/msESNC51n1w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/msESNC51n1w/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Bullpost",
+        "tags": [
+          "gpw",
+          "inwestowanie",
+          "akcje",
+          "rynek",
+          "bullpost",
+          "giełda",
+          "polska giełda",
+          "rynek akcji",
+          "wig20",
+          "sesja giełdowa",
+          "notowania gpw",
+          "orlen",
+          "pkn",
+          "wyniki finansowe",
+          "inwestowanie dla początkujących",
+          "jak kupić akcje",
+          "dywidendy"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Bullpost, narzędzie do wyceny portfela wskaźnikiem C/Z #akcje #gpw #inwestowanie",
+          "description": "Dołącz do nas na bullpost.pl"
+        }
+      },
+      "contentDetails": {
+        "duration": "PT26S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "B6GY1TI7qLEpR_YsHO-RniOShHQ",
+      "id": "-Nx9b45toBo",
+      "snippet": {
+        "publishedAt": "2026-11-09T08:00:24Z",
+        "channelId": "UC3VmJNIm-BObGz_SPuZLVSA",
+        "title": "Bullpost, komentarze na wykresie D1. #akcje #gpw #inwestowanie",
+        "description": "Dołącz do nas na bullpost.pl",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-Nx9b45toBo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-Nx9b45toBo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-Nx9b45toBo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-Nx9b45toBo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-Nx9b45toBo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Bullpost",
+        "tags": [
+          "gpw",
+          "inwestowanie",
+          "akcje",
+          "rynek",
+          "bullpost",
+          "giełda",
+          "polska giełda",
+          "rynek akcji",
+          "wig20",
+          "sesja giełdowa",
+          "notowania gpw",
+          "orlen",
+          "pkn",
+          "wyniki finansowe",
+          "inwestowanie dla początkujących",
+          "jak kupić akcje",
+          "dywidendy"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Bullpost, komentarze na wykresie D1. #akcje #gpw #inwestowanie",
+          "description": "Dołącz do nas na bullpost.pl"
+        }
+      },
+      "contentDetails": {
+        "duration": "PT27S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "59",
+        "likeCount": "2",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "BTPTKTE77R0x3Rah8oIYfbHCMYk",
+      "id": "EYWD-xR4AXU",
+      "snippet": {
+        "publishedAt": "2026-11-08T22:29:29Z",
+        "channelId": "UC3VmJNIm-BObGz_SPuZLVSA",
+        "title": "Bullpost, kalkulator portfela",
+        "description": "Dołącz do bullpost.pl\n#gpw  #inwestowanie  #akcje",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/EYWD-xR4AXU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/EYWD-xR4AXU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/EYWD-xR4AXU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/EYWD-xR4AXU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/EYWD-xR4AXU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Bullpost",
+        "tags": [
+          "#GPW",
+          "#AKCJE",
+          "#Inwestowanie"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Bullpost, kalkulator portfela",
+          "description": "Dołącz do bullpost.pl\n#gpw  #inwestowanie  #akcje"
+        }
+      },
+      "contentDetails": {
+        "duration": "PT29S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "736",
+        "likeCount": "2",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "2bRrKQvSyRNqf1Rc5o9JCoDI1kY",
+      "id": "YKuM2EFuOeY",
+      "snippet": {
+        "publishedAt": "2026-11-18T15:44:18Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "JAK KUPIĆ SWOJĄ PIERWSZĄ AKCJĘ (Poradnik eToro dla Początkujących)",
+        "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym praktycznym poradniku krok po kroku dowiesz się, jak kupić swoją pierwszą akcję na giełdzie za pośrednictwem platformy eToro. Bez zbędnego gadania, wszystko pokazane na żywo na ekranie: od założenia darmowego konta po sprzedaż akcji i wypłatę zarobionych środków.\n\nCzego dowiesz się z tego praktycznego poradnika:\n● Jak założyć darmowe konto i trenować z wirtualnym kapitałem 100 000 $ bez ryzyka.\n● Poznaj interfejs eToro, swój profil inwestora oraz statystyki innych traderów.\n● Jak zarządzać portfelem, wpłacać środki i wyszukiwać spółki giełdowe.\n● Wyszukiwanie akcji na platformie (kompletny przykład na akcjach Tesla).\n● Analiza wykresu giełdowego, wskaźników technicznych i danych finansowych firmy.\n● Składanie zlecenia kupna: ustawianie kwoty, Stop Loss oraz Take Profit.\n● Dlaczego początkujący powinni wybierać dźwignię x1, aby nie ponosić zbędnego ryzyka.\n● Monitorowanie otwartej pozycji, sprzedaż akcji oraz bezpieczna wypłata środków.\n\nInwestowanie na giełdzie jest dziś na wyciągnięcie ręki dla każdego, kto stosuje sprawdzone zasady i dba o zarządzanie ryzykiem. Rozpocznij swoją przygodę już teraz!\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n00:21 Wybór platformy i konto wirtualne (eToro)\n01:14 Omówienie interfejsu i profilu\n02:27 Portfel i wpłata środków\n03:06 Wyszukiwanie akcji (Przykład: Tesla)\n03:52 Analiza wykresu i statystyk finansowych\n04:29 Złożenie zlecenia kupna (Stop Loss, Take Profit, Dźwignia)\n05:51 Zarządzanie pozycją i sprzedaż akcji\n06:40 Wypłata środków i podsumowanie\n\n#Giełda #eToro #Inwestowanie #tradingpsychology",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YKuM2EFuOeY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YKuM2EFuOeY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YKuM2EFuOeY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YKuM2EFuOeY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YKuM2EFuOeY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/YKuM2EFuOeY/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "jak kupic akcje",
+          "pierwsza akcja na gieldzie",
+          "etoro poradnik",
+          "etoro dla poczatkujacych",
+          "inwestowanie na gieldzie",
+          "gielda dla poczatkujacych",
+          "etoro kupowanie akcji",
+          "nauka tradingu",
+          "jak inwestowac w akcje",
+          "akcje tesla etoro",
+          "konto demo etoro",
+          "copy trading etoro",
+          "etoro opinie",
+          "jak zaczac inwestowac",
+          "trading dla poczatkujacych"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "JAK KUPIĆ SWOJĄ PIERWSZĄ AKCJĘ (Poradnik eToro dla Początkujących)",
+          "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym praktycznym poradniku krok po kroku dowiesz się, jak kupić swoją pierwszą akcję na giełdzie za pośrednictwem platformy eToro. Bez zbędnego gadania, wszystko pokazane na żywo na ekranie: od założenia darmowego konta po sprzedaż akcji i wypłatę zarobionych środków.\n\nCzego dowiesz się z tego praktycznego poradnika:\n● Jak założyć darmowe konto i trenować z wirtualnym kapitałem 100 000 $ bez ryzyka.\n● Poznaj interfejs eToro, swój profil inwestora oraz statystyki innych traderów.\n● Jak zarządzać portfelem, wpłacać środki i wyszukiwać spółki giełdowe.\n● Wyszukiwanie akcji na platformie (kompletny przykład na akcjach Tesla).\n● Analiza wykresu giełdowego, wskaźników technicznych i danych finansowych firmy.\n● Składanie zlecenia kupna: ustawianie kwoty, Stop Loss oraz Take Profit.\n● Dlaczego początkujący powinni wybierać dźwignię x1, aby nie ponosić zbędnego ryzyka.\n● Monitorowanie otwartej pozycji, sprzedaż akcji oraz bezpieczna wypłata środków.\n\nInwestowanie na giełdzie jest dziś na wyciągnięcie ręki dla każdego, kto stosuje sprawdzone zasady i dba o zarządzanie ryzykiem. Rozpocznij swoją przygodę już teraz!\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n00:21 Wybór platformy i konto wirtualne (eToro)\n01:14 Omówienie interfejsu i profilu\n02:27 Portfel i wpłata środków\n03:06 Wyszukiwanie akcji (Przykład: Tesla)\n03:52 Analiza wykresu i statystyk finansowych\n04:29 Złożenie zlecenia kupna (Stop Loss, Take Profit, Dźwignia)\n05:51 Zarządzanie pozycją i sprzedaż akcji\n06:40 Wypłata środków i podsumowanie\n\n#Giełda #eToro #Inwestowanie #tradingpsychology"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT6M55S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "26",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "Dg1HtX1X7iGYtc8nAud12PHS75k",
+      "id": "PCRtDBrdXyM",
+      "snippet": {
+        "publishedAt": "2026-11-10T09:12:01Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak inwestować na giełdzie, nie mając o tym pojęcia ?",
+        "description": "► Link do eToro ze 100 000 $ w wirtualnych funduszach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna z wieloma aktywami. Wartość Twoich inwestycji może rosnąć lub spadać. Twój kapitał jest narażony na ryzyko.\n\nChcesz zacząć inwestować na giełdzie, ale startujesz od zera i nie masz żadnego doświadczenia? W tym kompletnym poradniku dla początkujących zobaczysz krok po kroku, jak kupować pierwsze akcje i fundusze ETF, nie mając o tym wcześniej zielonego pojęcia. Wszystko pokazuję na żywo na ekranie komputera, abyś mógł bez trudu powtórzyć każdy krok i uniknąć podstawowych błędów.\n\n● Aktywować bezpłatne konto wirtualne ze 100 000 $ na trening bez ryzyka utraty kapitału\n● Zrozumieć działanie interfejsu platformy i skonfigurować swój profil publiczny\n● Przeglądać statystyki zysków i korzystać z funkcji Copy Trading, aby kopiować najlepszych inwestorów\n● Dodać spółki do ulubionych, tworząc własną listę obserwowanych (Tesla, Apple, Meta...)\n● Wyszukiwać i filtrować akcje, fundusze ETF oraz kryptowaluty według sektorów\n● Wpłacać i wypłacać środki finansowe w bezpieczny i prosty sposób\n● Analizować wykresy cenowe, świece japońskie oraz wskaźniki rynkowe\n● Kupować ułamkowe części akcji już od kwoty 10 $ przy niewielkim kapitale\n● Stosować zlecenia obronne Stop Loss i Take Profit oraz rozumieć ryzyko dźwigni finansowej\n● Zarządzać otwartymi pozycjami w portfelu i zamykać transakcje z zyskiem\n\nTen poradnik powstał po to, aby odczarować giełdę i uczynić inwestowanie dostępnym dla każdego. Przejmij kontrolę nad swoimi finansami i zacznij budować swój portfel inwestycyjny już dzisiaj!\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n01:15 Aktywacja wirtualnego portfela (100 000 $)\n01:33 Przegląd interfejsu i profil publiczny\n02:17 Statystyki i Copy Trading\n03:12 Zakładka Ulubione i lista obserwowanych\n03:56 Wyszukiwanie aktywów (Akcje, ETF-y, Krypto)\n04:38 Wpłata i wypłata środków\n04:59 Analiza akcji i wykres (Meta)\n06:13 Zakup akcji krok po kroku (Stop Loss, Take Profit, Dźwignia)\n07:58 Zarządzanie portfelem i sprzedaż akcji\n08:42 Podsumowanie i pierwsze kroki\n\n#Gielda #Inwestowanie #Akcje #eToroPolska",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PCRtDBrdXyM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PCRtDBrdXyM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PCRtDBrdXyM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PCRtDBrdXyM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PCRtDBrdXyM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/PCRtDBrdXyM/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "jak inwestowac na gieldzie",
+          "gielda dla poczatkujacych",
+          "jak kupic akcje",
+          "etoro po polsku",
+          "etoro poradnik",
+          "pierwsze akcje",
+          "fundusze etf",
+          "copy trading etoro",
+          "konto demo etoro",
+          "akcje meta",
+          "akcje ulamkowe",
+          "male kwoty na gieldzie",
+          "niezaleznosc finansowa",
+          "inwestowanie 2026"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak inwestować na giełdzie, nie mając o tym pojęcia ?",
+          "description": "► Link do eToro ze 100 000 $ w wirtualnych funduszach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna z wieloma aktywami. Wartość Twoich inwestycji może rosnąć lub spadać. Twój kapitał jest narażony na ryzyko.\n\nChcesz zacząć inwestować na giełdzie, ale startujesz od zera i nie masz żadnego doświadczenia? W tym kompletnym poradniku dla początkujących zobaczysz krok po kroku, jak kupować pierwsze akcje i fundusze ETF, nie mając o tym wcześniej zielonego pojęcia. Wszystko pokazuję na żywo na ekranie komputera, abyś mógł bez trudu powtórzyć każdy krok i uniknąć podstawowych błędów.\n\n● Aktywować bezpłatne konto wirtualne ze 100 000 $ na trening bez ryzyka utraty kapitału\n● Zrozumieć działanie interfejsu platformy i skonfigurować swój profil publiczny\n● Przeglądać statystyki zysków i korzystać z funkcji Copy Trading, aby kopiować najlepszych inwestorów\n● Dodać spółki do ulubionych, tworząc własną listę obserwowanych (Tesla, Apple, Meta...)\n● Wyszukiwać i filtrować akcje, fundusze ETF oraz kryptowaluty według sektorów\n● Wpłacać i wypłacać środki finansowe w bezpieczny i prosty sposób\n● Analizować wykresy cenowe, świece japońskie oraz wskaźniki rynkowe\n● Kupować ułamkowe części akcji już od kwoty 10 $ przy niewielkim kapitale\n● Stosować zlecenia obronne Stop Loss i Take Profit oraz rozumieć ryzyko dźwigni finansowej\n● Zarządzać otwartymi pozycjami w portfelu i zamykać transakcje z zyskiem\n\nTen poradnik powstał po to, aby odczarować giełdę i uczynić inwestowanie dostępnym dla każdego. Przejmij kontrolę nad swoimi finansami i zacznij budować swój portfel inwestycyjny już dzisiaj!\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n01:15 Aktywacja wirtualnego portfela (100 000 $)\n01:33 Przegląd interfejsu i profil publiczny\n02:17 Statystyki i Copy Trading\n03:12 Zakładka Ulubione i lista obserwowanych\n03:56 Wyszukiwanie aktywów (Akcje, ETF-y, Krypto)\n04:38 Wpłata i wypłata środków\n04:59 Analiza akcji i wykres (Meta)\n06:13 Zakup akcji krok po kroku (Stop Loss, Take Profit, Dźwignia)\n07:58 Zarządzanie portfelem i sprzedaż akcji\n08:42 Podsumowanie i pierwsze kroki\n\n#Gielda #Inwestowanie #Akcje #eToroPolska"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT9M12S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "35",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "w5wubraEUdQo2UQINzQQbZrbTj0",
+      "id": "5MG8tK9kg7o",
+      "snippet": {
+        "publishedAt": "2026-11-04T09:37:48Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak Kupić Swoją Pierwszą Akcję za 10€ (Poradnik Giełdowy dla Początkujących)",
+        "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym kompleksowym poradniku krok po kroku dowiesz się, jak kupić swoją pierwszą akcję na giełdzie za jedyne 10 euro lub 10 dolarów. Jeśli dopiero zaczynasz swoją przygodę z inwestowaniem i tradingiem, przejrzysty interfejs ułatwi Ci bezstresowy start. Poznasz wszystkie kluczowe funkcje :\n\n● Przegląd interfejsu platformy i konfiguracja profilu publicznego\n● Korzystanie z darmowego konta demo ze 100 000 $ wirtualnych funduszy na trening\n● Analiza statystyk innych inwestorów i zasady działania Copy Tradingu\n● Wyszukiwanie spółek (na przykładzie akcji Tesla), czytanie wykresów i wiadomości\n● Składanie zlecenia kupna już od kwoty 10 € lub 10 $\n● Ustawianie zleceń obronnych : Stop Loss i Take Profit\n● Zrozumienie dźwigni finansowej (x1, x2, x5) i dlaczego warto pozostać przy x1\n● Monitorowanie otwartych pozycji w portfelu oraz zamykanie transakcji i sprzedaż akcji\n\nNiezależnie od tego, czy chcesz budować portfel długoterminowy, czy poznać mechanizmy giełdowe, ten film przeprowadzi Cię przez cały proces. Zostaw w komentarzu słowo « akcje », jeśli obejrzałeś ten film do końca !\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n00:45 Konto demo i 100 000 $ wirtualnych środków\n01:34 Przegląd interfejsu i profil publiczny\n02:00 Statystyki inwestorów i Copy Trading\n03:55 Wyszukiwanie akcji Tesla i analiza wykresu\n04:36 Jak kupić akcję za 10 €\n05:00 Zlecenia Stop Loss i Take Profit\n05:36 Dźwignia finansowa i ryzyko (x1, x2, x5)\n06:17 Portfel i zamykanie pozycji / sprzedaż\n07:04 Podsumowanie\n\n#Gielda #Inwestowanie #AkcjeDlaPoczatkujacych #Trading",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5MG8tK9kg7o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5MG8tK9kg7o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5MG8tK9kg7o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5MG8tK9kg7o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5MG8tK9kg7o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/5MG8tK9kg7o/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "etoro",
+          "etoro po polsku",
+          "etoro poczatkujacy",
+          "jak kupic akcje",
+          "pierwsza akcja",
+          "inwestowanie dla poczatkujacych",
+          "gielda dla poczatkujacych",
+          "jak inwestowac w akcje",
+          "akcje tesla",
+          "poradnik etoro",
+          "konto demo etoro",
+          "copy trading etoro",
+          "stop loss take profit",
+          "dzwignia finansowa etoro",
+          "akcje za 10 euro"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak Kupić Swoją Pierwszą Akcję za 10€ (Poradnik Giełdowy dla Początkujących)",
+          "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym kompleksowym poradniku krok po kroku dowiesz się, jak kupić swoją pierwszą akcję na giełdzie za jedyne 10 euro lub 10 dolarów. Jeśli dopiero zaczynasz swoją przygodę z inwestowaniem i tradingiem, przejrzysty interfejs ułatwi Ci bezstresowy start. Poznasz wszystkie kluczowe funkcje :\n\n● Przegląd interfejsu platformy i konfiguracja profilu publicznego\n● Korzystanie z darmowego konta demo ze 100 000 $ wirtualnych funduszy na trening\n● Analiza statystyk innych inwestorów i zasady działania Copy Tradingu\n● Wyszukiwanie spółek (na przykładzie akcji Tesla), czytanie wykresów i wiadomości\n● Składanie zlecenia kupna już od kwoty 10 € lub 10 $\n● Ustawianie zleceń obronnych : Stop Loss i Take Profit\n● Zrozumienie dźwigni finansowej (x1, x2, x5) i dlaczego warto pozostać przy x1\n● Monitorowanie otwartych pozycji w portfelu oraz zamykanie transakcji i sprzedaż akcji\n\nNiezależnie od tego, czy chcesz budować portfel długoterminowy, czy poznać mechanizmy giełdowe, ten film przeprowadzi Cię przez cały proces. Zostaw w komentarzu słowo « akcje », jeśli obejrzałeś ten film do końca !\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n00:45 Konto demo i 100 000 $ wirtualnych środków\n01:34 Przegląd interfejsu i profil publiczny\n02:00 Statystyki inwestorów i Copy Trading\n03:55 Wyszukiwanie akcji Tesla i analiza wykresu\n04:36 Jak kupić akcję za 10 €\n05:00 Zlecenia Stop Loss i Take Profit\n05:36 Dźwignia finansowa i ryzyko (x1, x2, x5)\n06:17 Portfel i zamykanie pozycji / sprzedaż\n07:04 Podsumowanie\n\n#Gielda #Inwestowanie #AkcjeDlaPoczatkujacych #Trading"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT7M34S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "csb1He4FP4bBzv7NSKvQAyHsMIs",
+      "id": "pBG4WLimYzA",
+      "snippet": {
+        "publishedAt": "2026-10-29T13:08:20Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak Kupić ETF S&P 500 (Poradnik Giełdowy dla Początkujących)",
+        "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może rosnąć lub spadać. Twój kapitał jest narażony na ryzyko.\n\nW tym kompleksowym poradniku dla początkujących dowiesz się krok po kroku, jak kupić ETF S&P 500 na platformie eToro, aby bezpiecznie rozpocząć inwestowanie na giełdzie. Indeks S&P 500 skupia 500 największych amerykańskich przedsiębiorstw (m.in. Apple, Microsoft, Amazon, Nvidia, Alphabet) i stanowi jedną z najbardziej sprawdzonych strategii pasywnego budowania kapitału na przestrzeni lat.\n\nNiezależnie od tego, czy dopiero zaczynasz, czy szukasz prostego przewodnika, eToro zapewnia bezpłatne konto demonstracyjne z kwotą 100 000 $ wirtualnych środków, dzięki czemu możesz bez żadnego ryzyka przećwiczyć inwestowanie przed wpłatą prawdziwych pieniędzy.\n\nW tym materiale omawiamy:\n● Zapoznanie z interfejsem eToro i konfigurację profilu inwestora\n● Przeglądanie statystyk wyników i wykorzystanie narzędzia Copy Trading do podglądania najlepszych inwestorów\n● Zarządzanie listą ulubionych instrumentów i kontrolę portfela\n● Wpłatę oraz wypłatę środków w prosty i bezpieczny sposób\n● Wyszukiwanie funduszy ETF i wybór indeksu S&P 500 (ticker SPY)\n● Analizę wykresu cenowego i odczytywanie wskaźników\n● Jak złożyć zlecenie kupna już od kwoty zaledwie 10 $\n● Konfigurację zleceń zabezpieczających Stop Loss i Take Profit\n● Czym jest dźwignia finansowa i dlaczego początkujący powinni pozostać przy x1\n● Śledzenie inwestycji w portfelu na żywo i zamknięcie pozycji jednym kliknięciem\n\nJeśli ten poradnik Ci pomógł, wpisz « S&P 500 » w komentarzu, zostaw łapkę w górę i zasubskrybuj kanał, aby nie przegapić kolejnych filmów o giełdzie i finansach!\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n00:55 Omówienie Interfejsu i Profilu\n01:41 Statystyki i Copy Trading\n02:07 Zakładka Ulubione\n02:35 Portfel, Wpłaty i Wypłaty\n03:15 Wyszukiwarka i Filtry ETF\n03:50 Wyszukanie ETF S&P 500 (SPY)\n04:27 Analiza Wykresu\n04:42 Złożenie Zlecenia Kupna (od 10$)\n05:04 Ustawienie Stop Loss i Take Profit\n05:35 Dźwignia Finansowa\n06:00 Śledzenie Pozycji w Portfelu\n06:29 Zamknięcie Pozycji i Sprzedaż\n06:51 Podsumowanie\n\n#eToro #SP500 #Giełda #inwestowanienieruchomości",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pBG4WLimYzA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pBG4WLimYzA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pBG4WLimYzA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pBG4WLimYzA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pBG4WLimYzA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/pBG4WLimYzA/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "etoro",
+          "etoro po polsku",
+          "etoro poradnik",
+          "jak kupic etf sp500",
+          "etf sp500",
+          "inwestowanie na gieldzie",
+          "gielda dla poczatkujacych",
+          "etoro poczatkujacy",
+          "spy etf",
+          "jak inwestowac na etoro",
+          "etoro etf",
+          "trading dla poczatkujacych",
+          "sp500 gielda",
+          "etoro opinie",
+          "kupno akcji etoro"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak Kupić ETF S&P 500 (Poradnik Giełdowy dla Początkujących)",
+          "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może rosnąć lub spadać. Twój kapitał jest narażony na ryzyko.\n\nW tym kompleksowym poradniku dla początkujących dowiesz się krok po kroku, jak kupić ETF S&P 500 na platformie eToro, aby bezpiecznie rozpocząć inwestowanie na giełdzie. Indeks S&P 500 skupia 500 największych amerykańskich przedsiębiorstw (m.in. Apple, Microsoft, Amazon, Nvidia, Alphabet) i stanowi jedną z najbardziej sprawdzonych strategii pasywnego budowania kapitału na przestrzeni lat.\n\nNiezależnie od tego, czy dopiero zaczynasz, czy szukasz prostego przewodnika, eToro zapewnia bezpłatne konto demonstracyjne z kwotą 100 000 $ wirtualnych środków, dzięki czemu możesz bez żadnego ryzyka przećwiczyć inwestowanie przed wpłatą prawdziwych pieniędzy.\n\nW tym materiale omawiamy:\n● Zapoznanie z interfejsem eToro i konfigurację profilu inwestora\n● Przeglądanie statystyk wyników i wykorzystanie narzędzia Copy Trading do podglądania najlepszych inwestorów\n● Zarządzanie listą ulubionych instrumentów i kontrolę portfela\n● Wpłatę oraz wypłatę środków w prosty i bezpieczny sposób\n● Wyszukiwanie funduszy ETF i wybór indeksu S&P 500 (ticker SPY)\n● Analizę wykresu cenowego i odczytywanie wskaźników\n● Jak złożyć zlecenie kupna już od kwoty zaledwie 10 $\n● Konfigurację zleceń zabezpieczających Stop Loss i Take Profit\n● Czym jest dźwignia finansowa i dlaczego początkujący powinni pozostać przy x1\n● Śledzenie inwestycji w portfelu na żywo i zamknięcie pozycji jednym kliknięciem\n\nJeśli ten poradnik Ci pomógł, wpisz « S&P 500 » w komentarzu, zostaw łapkę w górę i zasubskrybuj kanał, aby nie przegapić kolejnych filmów o giełdzie i finansach!\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n00:55 Omówienie Interfejsu i Profilu\n01:41 Statystyki i Copy Trading\n02:07 Zakładka Ulubione\n02:35 Portfel, Wpłaty i Wypłaty\n03:15 Wyszukiwarka i Filtry ETF\n03:50 Wyszukanie ETF S&P 500 (SPY)\n04:27 Analiza Wykresu\n04:42 Złożenie Zlecenia Kupna (od 10$)\n05:04 Ustawienie Stop Loss i Take Profit\n05:35 Dźwignia Finansowa\n06:00 Śledzenie Pozycji w Portfelu\n06:29 Zamknięcie Pozycji i Sprzedaż\n06:51 Podsumowanie\n\n#eToro #SP500 #Giełda #inwestowanienieruchomości"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT7M10S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "12",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "2AtQbKEDxvb5NXLLcczuzIg2Ac0",
+      "id": "C2JHrWCwb7M",
+      "snippet": {
+        "publishedAt": "2026-10-23T14:40:56Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak Kupić Akcje Tesli na Giełdzie (Poradnik dla Początkujących)",
+        "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nZobacz w tym kompleksowym poradniku wideo krok po kroku, jak kupić akcje Tesli (TSLA) na giełdzie, nawet jeśli jesteś zupełnie początkujący. Inwestowanie w akcje staje się proste i przejrzyste dzięki platformie eToro. W tym materiale pokazujemy wszystko od A do Z: obsługę interfejsu, analizę wykresów i danych finansowych Tesli, składanie zleceń kupna z zabezpieczeniami Stop Loss i Take Profit oraz proces zamykania pozycji i realizacji zysków. Dowiesz się także, jak bezpłatnie i bez ryzyka testować strategie na koncie demonstracyjnym z saldem 100 000 $ wirtualnych funduszy.\n\nCzego dowiesz się z tego poradnika :\n● Jak sprawnie poruszać się po platformie eToro\n● Jak korzystać z darmowego konta demo ze 100 000 $\n● Jak wyszukać akcje Tesli i analizować wykresy cenowe\n● Jak kupić akcje Tesli już od kwoty 10 $\n● Zasady działania zleceń Stop Loss, Take Profit i dźwigni finansowej\n● Jak kontrolować swoje inwestycje i sprzedawać akcje w portfelu\n\n⏳ Rozdziały filmu :\n00:00 Wstęp\n00:45 Konto wirtualne ze 100 000 $\n01:12 Przegląd interfejsu\n02:25 Zakładka Ulubione i Portfel\n03:08 Wpłata i wypłata środków\n03:32 Wyszukiwanie akcji Tesli\n04:18 Wykres i dane finansowe Tesli\n05:14 Składanie zlecenia kupna (Stop Loss i Take Profit)\n06:06 Wyjaśnienie dźwigni finansowej (x1, x2, x5)\n06:40 Zakup akcji Tesli na żywo\n07:18 Jak sprzedać akcje Tesli\n07:38 Podsumowanie\n\n#AkcjeTesla #InwestowanieDlaPoczątkujących #TradingPoczątkujący #eToro",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/C2JHrWCwb7M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/C2JHrWCwb7M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/C2JHrWCwb7M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/C2JHrWCwb7M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/C2JHrWCwb7M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/C2JHrWCwb7M/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "akcje tesla",
+          "jak kupić akcje tesli",
+          "kupno akcji tesla",
+          "inwestowanie w tesle",
+          "tesla giełda",
+          "etoro poradnik pl",
+          "etoro dla początkujących",
+          "inwestowanie na giełdzie",
+          "trading dla początkujących",
+          "jak kupować akcje",
+          "akcje tsla",
+          "etoro kupno akcji"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak Kupić Akcje Tesli na Giełdzie (Poradnik dla Początkujących)",
+          "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nZobacz w tym kompleksowym poradniku wideo krok po kroku, jak kupić akcje Tesli (TSLA) na giełdzie, nawet jeśli jesteś zupełnie początkujący. Inwestowanie w akcje staje się proste i przejrzyste dzięki platformie eToro. W tym materiale pokazujemy wszystko od A do Z: obsługę interfejsu, analizę wykresów i danych finansowych Tesli, składanie zleceń kupna z zabezpieczeniami Stop Loss i Take Profit oraz proces zamykania pozycji i realizacji zysków. Dowiesz się także, jak bezpłatnie i bez ryzyka testować strategie na koncie demonstracyjnym z saldem 100 000 $ wirtualnych funduszy.\n\nCzego dowiesz się z tego poradnika :\n● Jak sprawnie poruszać się po platformie eToro\n● Jak korzystać z darmowego konta demo ze 100 000 $\n● Jak wyszukać akcje Tesli i analizować wykresy cenowe\n● Jak kupić akcje Tesli już od kwoty 10 $\n● Zasady działania zleceń Stop Loss, Take Profit i dźwigni finansowej\n● Jak kontrolować swoje inwestycje i sprzedawać akcje w portfelu\n\n⏳ Rozdziały filmu :\n00:00 Wstęp\n00:45 Konto wirtualne ze 100 000 $\n01:12 Przegląd interfejsu\n02:25 Zakładka Ulubione i Portfel\n03:08 Wpłata i wypłata środków\n03:32 Wyszukiwanie akcji Tesli\n04:18 Wykres i dane finansowe Tesli\n05:14 Składanie zlecenia kupna (Stop Loss i Take Profit)\n06:06 Wyjaśnienie dźwigni finansowej (x1, x2, x5)\n06:40 Zakup akcji Tesli na żywo\n07:18 Jak sprzedać akcje Tesli\n07:38 Podsumowanie\n\n#AkcjeTesla #InwestowanieDlaPoczątkujących #TradingPoczątkujący #eToro"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT7M55S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "y55Au57IsLl4RVMwYgqpfMuF6N4",
+      "id": "bH-O7fhCE98",
+      "snippet": {
+        "publishedAt": "2026-10-17T09:03:42Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak zainwestować na giełdzie po raz pierwszy? (Poradnik dla początkujących)",
+        "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach: https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna dla wielu aktywów. Wartość Twoich inwestycji może rosnąć lub spadać. Twój kapitał jest narażony na ryzyko.\n\nChcesz dowiedzieć się, jak zainwestować na giełdzie po raz pierwszy bez podejmowania zbędnego ryzyka? W tym kompletnym poradniku dla początkujących dowiesz się krok po kroku, jak stawiać pierwsze kroki na rynkach finansowych dzięki platformie handlowej eToro. Bez względu na to, czy chcesz kupić swoją pierwszą akcję (np. Tesla), czy zainwestować w fundusze ETF, ten praktyczny tutorial poprowadzi Cię od A do Z.\n\nW tym filmie dowiesz się między innymi:\n● Jak założyć konto i korzystać z darmowego konta demonstracyjnego ze 100 000 $ wirtualnych środków do ćwiczeń bez ryzyka\n● Pełne omówienie interfejsu eToro (menu, profil, ulubione, portfel, wpłata środków)\n● Jak wyszukiwać i analizować akcje oraz aktywa finansowe\n● Jak złożyć zlecenie kupna już od zaledwie 10 dolarów\n● Podstawy zarządzania ryzykiem: Stop Loss i Take Profit\n● Jak działa dźwignia finansowa i dlaczego początkujący powinni na nią uważać\n● Jak śledzić swoje inwestycje w portfelu na żywo i łatwo sprzedawać lub zamykać pozycje\n\nInwestowanie na giełdzie jest teraz proste i dostępne dla każdego. Zacznij ćwiczyć już dziś bez stresu dzięki wirtualnemu portfelowi!\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n00:50 Prezentacja platformy eToro\n01:18 Aktywacja konta demo (100 000 $ wirtualnych)\n01:34 Przegląd menu i profilu\n02:26 Zakładka Ulubione\n02:52 Zakładka Portfel\n03:18 Wpłata środków\n03:37 Wyszukiwanie i dostępne aktywa\n04:13 Wyszukanie akcji (Przykład: Tesla)\n04:32 Karta akcji i wykresy\n05:25 Jak kupić akcję (Zainwestuj)\n05:49 Stop Loss i Take Profit (Zarządzanie ryzykiem)\n06:24 Dźwignia finansowa\n06:57 Potwierdzenie zakupu (Przycisk Kup)\n07:15 Śledzenie pozycji w portfelu\n07:49 Jak sprzedać i zamknąć pozycję\n08:16 Podsumowanie\n\n#GieldaDlaPoczatkujacych #JakInwestowac #eToro #Inwestowanie",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bH-O7fhCE98/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bH-O7fhCE98/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bH-O7fhCE98/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/bH-O7fhCE98/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/bH-O7fhCE98/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/bH-O7fhCE98/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "jak inwestowac na gieldzie",
+          "gielda dla poczatkujacych",
+          "jak kupic akcje",
+          "etoro poradnik po polsku",
+          "etoro konto demo",
+          "pierwsza akcja na gieldzie",
+          "akcje tesla jak kupic",
+          "nauka inwestowania",
+          "etoro opinie",
+          "stop loss take profit",
+          "copy trading etoro",
+          "bezpieczne inwestowanie"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak zainwestować na giełdzie po raz pierwszy? (Poradnik dla początkujących)",
+          "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach: https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna dla wielu aktywów. Wartość Twoich inwestycji może rosnąć lub spadać. Twój kapitał jest narażony na ryzyko.\n\nChcesz dowiedzieć się, jak zainwestować na giełdzie po raz pierwszy bez podejmowania zbędnego ryzyka? W tym kompletnym poradniku dla początkujących dowiesz się krok po kroku, jak stawiać pierwsze kroki na rynkach finansowych dzięki platformie handlowej eToro. Bez względu na to, czy chcesz kupić swoją pierwszą akcję (np. Tesla), czy zainwestować w fundusze ETF, ten praktyczny tutorial poprowadzi Cię od A do Z.\n\nW tym filmie dowiesz się między innymi:\n● Jak założyć konto i korzystać z darmowego konta demonstracyjnego ze 100 000 $ wirtualnych środków do ćwiczeń bez ryzyka\n● Pełne omówienie interfejsu eToro (menu, profil, ulubione, portfel, wpłata środków)\n● Jak wyszukiwać i analizować akcje oraz aktywa finansowe\n● Jak złożyć zlecenie kupna już od zaledwie 10 dolarów\n● Podstawy zarządzania ryzykiem: Stop Loss i Take Profit\n● Jak działa dźwignia finansowa i dlaczego początkujący powinni na nią uważać\n● Jak śledzić swoje inwestycje w portfelu na żywo i łatwo sprzedawać lub zamykać pozycje\n\nInwestowanie na giełdzie jest teraz proste i dostępne dla każdego. Zacznij ćwiczyć już dziś bez stresu dzięki wirtualnemu portfelowi!\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n00:50 Prezentacja platformy eToro\n01:18 Aktywacja konta demo (100 000 $ wirtualnych)\n01:34 Przegląd menu i profilu\n02:26 Zakładka Ulubione\n02:52 Zakładka Portfel\n03:18 Wpłata środków\n03:37 Wyszukiwanie i dostępne aktywa\n04:13 Wyszukanie akcji (Przykład: Tesla)\n04:32 Karta akcji i wykresy\n05:25 Jak kupić akcję (Zainwestuj)\n05:49 Stop Loss i Take Profit (Zarządzanie ryzykiem)\n06:24 Dźwignia finansowa\n06:57 Potwierdzenie zakupu (Przycisk Kup)\n07:15 Śledzenie pozycji w portfelu\n07:49 Jak sprzedać i zamknąć pozycję\n08:16 Podsumowanie\n\n#GieldaDlaPoczatkujacych #JakInwestowac #eToro #Inwestowanie"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT8M38S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "12",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "OtPp9Fn2T5uRFDdnpL9Qqu0BQxg",
+      "id": "_AkIYZTPcuo",
+      "snippet": {
+        "publishedAt": "2026-10-15T07:30:16Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak Kupić Swój Pierwszy ETF na Giełdzie (Kompletny Poradnik dla Początkujących)",
+        "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest zagrożony.\n\nW tym kompleksowym poradniku dla początkujących dowiesz się krok po kroku, jak łatwo i bez stresu kupić swój pierwszy fundusz ETF na giełdzie. Bez względu na to, czy chcesz zainwestować w S&P 500, zdywersyfikować swój portfel, czy nauczyć się obsługi nowoczesnej platformy inwestycyjnej, ten przewodnik od A do Z wyjaśnia wszystko:\n\n● Zapoznanie się z interfejsem platformy i konfiguracja profilu\n● Korzystanie z darmowego konta wirtualnego ze 100 000 $ do ćwiczeń bez ryzyka utraty kapitału\n● Wyszukiwanie i wybór najlepszych funduszy ETF (akcje, indeksy światowe, surowce)\n● Analiza wykresów cenowych, dodawanie wskaźników i przeglądanie wiadomości rynkowych\n● Konfiguracja zlecenia zakupu: ustalenie kwoty, ustawienie Stop Loss w celu ograniczenia strat oraz Take Profit do realizacji zysków\n● Zrozumienie mechanizmu dźwigni finansowej i dlaczego początkujący powinni jej unikać\n● Śledzenie otwartych pozycji na żywo w zakładce portfel\n● Zamykanie pozycji, aby sprzedać ETF i odebrać swoje zyski\n\nInwestowanie w fundusze ETF to jeden z najprostszych i najskuteczniejszych sposobów na budowanie kapitału w długim terminie. Wykonaj te proste kroki i zrealizuj swoją pierwszą transakcję bez obaw!\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie i konto wirtualne\n00:42 Przegląd interfejsu\n02:01 Wyszukiwanie funduszu ETF (Przykład: S&P 500)\n02:59 Analiza wykresu i narzędzia\n03:21 Składanie zlecenia kupna (Stop Loss i Take Profit)\n04:37 Zarządzanie portfelem i sprzedaż ETF\n05:25 Podsumowanie\n\n#ETF #Gielda #Inwestowanie #TradingDlaPoczatkujacych",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_AkIYZTPcuo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_AkIYZTPcuo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_AkIYZTPcuo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_AkIYZTPcuo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_AkIYZTPcuo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/_AkIYZTPcuo/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "jak kupic etf",
+          "pierwszy etf",
+          "inwestowanie w etf",
+          "etf dla poczatkujacych",
+          "etf poradnik",
+          "jak inwestowac na gieldzie",
+          "gielda dla poczatkujacych",
+          "etf sp500",
+          "fundusze indeksowe",
+          "pierwsza inwestycja na gieldzie",
+          "kupno etf",
+          "przewodnik etf",
+          "trading dla poczatkujacych",
+          "wirtualne konto gieldowe",
+          "stop loss take profit",
+          "etf spy",
+          "nauka inwestowania"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak Kupić Swój Pierwszy ETF na Giełdzie (Kompletny Poradnik dla Początkujących)",
+          "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest zagrożony.\n\nW tym kompleksowym poradniku dla początkujących dowiesz się krok po kroku, jak łatwo i bez stresu kupić swój pierwszy fundusz ETF na giełdzie. Bez względu na to, czy chcesz zainwestować w S&P 500, zdywersyfikować swój portfel, czy nauczyć się obsługi nowoczesnej platformy inwestycyjnej, ten przewodnik od A do Z wyjaśnia wszystko:\n\n● Zapoznanie się z interfejsem platformy i konfiguracja profilu\n● Korzystanie z darmowego konta wirtualnego ze 100 000 $ do ćwiczeń bez ryzyka utraty kapitału\n● Wyszukiwanie i wybór najlepszych funduszy ETF (akcje, indeksy światowe, surowce)\n● Analiza wykresów cenowych, dodawanie wskaźników i przeglądanie wiadomości rynkowych\n● Konfiguracja zlecenia zakupu: ustalenie kwoty, ustawienie Stop Loss w celu ograniczenia strat oraz Take Profit do realizacji zysków\n● Zrozumienie mechanizmu dźwigni finansowej i dlaczego początkujący powinni jej unikać\n● Śledzenie otwartych pozycji na żywo w zakładce portfel\n● Zamykanie pozycji, aby sprzedać ETF i odebrać swoje zyski\n\nInwestowanie w fundusze ETF to jeden z najprostszych i najskuteczniejszych sposobów na budowanie kapitału w długim terminie. Wykonaj te proste kroki i zrealizuj swoją pierwszą transakcję bez obaw!\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie i konto wirtualne\n00:42 Przegląd interfejsu\n02:01 Wyszukiwanie funduszu ETF (Przykład: S&P 500)\n02:59 Analiza wykresu i narzędzia\n03:21 Składanie zlecenia kupna (Stop Loss i Take Profit)\n04:37 Zarządzanie portfelem i sprzedaż ETF\n05:25 Podsumowanie\n\n#ETF #Gielda #Inwestowanie #TradingDlaPoczatkujacych"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT5M52S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "12",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "0CqcCeG-7ZQ39Hd2Khbz9W8aO9I",
+      "id": "r453-x897dA",
+      "snippet": {
+        "publishedAt": "2026-10-09T07:53:48Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak Kupić Swoją Pierwszą Akcję na Giełdzie (Poradnik Krok po Kroku)",
+        "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro jest platformą inwestycyjną oferującą wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym kompleksowym poradniku dowiesz się, jak inwestować na giełdzie i kupić swoją pierwszą akcję krok po kroku, nawet jeśli dopiero zaczynasz od zera. Prowadzimy Cię przez cały interfejs platformy, abyś mógł rozpocząć inwestowanie spokojnie i bezpiecznie. Dowiesz się, jak korzystać z darmowego wirtualnego konta demonstracyjnego z kwotą 100 000 $ wirtualnych środków, aby ćwiczyć bez ryzyka przed wpłatą prawdziwych pieniędzy.\n\nW tym praktycznym poradniku giełdowym dla początkujących nauczysz się:\n● Jak aktywować darmowe wirtualne konto demo do testowania strategii bez ryzyka\n● Jak bezpiecznie wpłacać środki na swoje konto inwestycyjne\n● Jak poruszać się po interfejsie, dostosować swój profil i zarządzać ulubionymi spółkami\n● Jak wyszukiwać i analizować akcje takie jak Tesla (wykresy, świece, aktualności)\n● Jak złożyć zlecenie kupna akcji krok po kroku\n● Jak ustawić zlecenia Stop Loss i Take Profit, aby ograniczać straty i zabezpieczać zyski\n● Czym jest dźwignia finansowa i dlaczego początkujący powinni na nią uważać\n● Jak śledzić swoje pozycje i wyniki w portfelu w czasie rzeczywistym\n● Jak zamknąć pozycję i sprzedać akcje za pomocą kilku kliknięć\n\nNiezależnie od tego, czy planujesz inwestować długoterminowo, czy poznać podstawy tradingu, ten materiał da Ci solidną wiedzę na start.\n\n⏳ Rozdziały filmu:\n00:00 Wprowadzenie\n00:34 Aktywacja wirtualnego portfela demo\n00:48 Wpłata środków\n01:01 Interfejs platformy i profil\n01:38 Ulubione i Portfel\n02:20 Wyszukiwanie akcji (Przykład Tesla)\n02:40 Wykresy i analiza spółki\n03:03 Jak kupić akcję krok po kroku\n03:27 Stop Loss i Take Profit wyjaśnione\n03:52 Dźwignia finansowa (wskazówki dla początkujących)\n04:20 Śledzenie inwestycji w portfelu\n04:45 Zamknięcie pozycji i sprzedaż akcji\n05:00 Podsumowanie i porady\n\n#InwestowanieNaGiełdzie #JakKupićAkcje #GiełdaDlaPoczątkujących #TradingPolska",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/r453-x897dA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/r453-x897dA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/r453-x897dA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/r453-x897dA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/r453-x897dA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "inwestowanie na giełdzie",
+          "jak kupić akcje",
+          "giełda dla początkujących",
+          "jak kupować akcje",
+          "nauka tradingu",
+          "poradnik giełdowy",
+          "konto demo giełda",
+          "jak kupić akcje tesla",
+          "stop loss take profit",
+          "etoro tutorial po polsku",
+          "etoro dla początkujących",
+          "wolność finansowa",
+          "inwestowanie pieniędzy",
+          "rynki finansowe",
+          "trading dla początkujących"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak Kupić Swoją Pierwszą Akcję na Giełdzie (Poradnik Krok po Kroku)",
+          "description": "► Link do eToro ze 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro jest platformą inwestycyjną oferującą wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym kompleksowym poradniku dowiesz się, jak inwestować na giełdzie i kupić swoją pierwszą akcję krok po kroku, nawet jeśli dopiero zaczynasz od zera. Prowadzimy Cię przez cały interfejs platformy, abyś mógł rozpocząć inwestowanie spokojnie i bezpiecznie. Dowiesz się, jak korzystać z darmowego wirtualnego konta demonstracyjnego z kwotą 100 000 $ wirtualnych środków, aby ćwiczyć bez ryzyka przed wpłatą prawdziwych pieniędzy.\n\nW tym praktycznym poradniku giełdowym dla początkujących nauczysz się:\n● Jak aktywować darmowe wirtualne konto demo do testowania strategii bez ryzyka\n● Jak bezpiecznie wpłacać środki na swoje konto inwestycyjne\n● Jak poruszać się po interfejsie, dostosować swój profil i zarządzać ulubionymi spółkami\n● Jak wyszukiwać i analizować akcje takie jak Tesla (wykresy, świece, aktualności)\n● Jak złożyć zlecenie kupna akcji krok po kroku\n● Jak ustawić zlecenia Stop Loss i Take Profit, aby ograniczać straty i zabezpieczać zyski\n● Czym jest dźwignia finansowa i dlaczego początkujący powinni na nią uważać\n● Jak śledzić swoje pozycje i wyniki w portfelu w czasie rzeczywistym\n● Jak zamknąć pozycję i sprzedać akcje za pomocą kilku kliknięć\n\nNiezależnie od tego, czy planujesz inwestować długoterminowo, czy poznać podstawy tradingu, ten materiał da Ci solidną wiedzę na start.\n\n⏳ Rozdziały filmu:\n00:00 Wprowadzenie\n00:34 Aktywacja wirtualnego portfela demo\n00:48 Wpłata środków\n01:01 Interfejs platformy i profil\n01:38 Ulubione i Portfel\n02:20 Wyszukiwanie akcji (Przykład Tesla)\n02:40 Wykresy i analiza spółki\n03:03 Jak kupić akcję krok po kroku\n03:27 Stop Loss i Take Profit wyjaśnione\n03:52 Dźwignia finansowa (wskazówki dla początkujących)\n04:20 Śledzenie inwestycji w portfelu\n04:45 Zamknięcie pozycji i sprzedaż akcji\n05:00 Podsumowanie i porady\n\n#InwestowanieNaGiełdzie #JakKupićAkcje #GiełdaDlaPoczątkujących #TradingPolska"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT5M18S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "6",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "9wJR3DhX5KLp4-F6upshB5-ivC4",
+      "id": "p4xI70YI0B0",
+      "snippet": {
+        "publishedAt": "2026-09-29T08:13:25Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak Kupić Bitcoin na eToro (Kompletny Poradnik dla Początkujących od A do Z)",
+        "description": "► Link do eToro ze 100 000 $ w wirtualnych funduszach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym kompletnym poradniku dla początkujących dowiesz się krok po kroku, jak inwestować i kupować Bitcoin (BTC) na platformie eToro. Od rejestracji po wypłatę zysków omawiamy wszystkie kluczowe etapy:\n\n● Jak założyć konto i dokonać pierwszej bezpiecznej wpłaty środków (karta bankowa, przelew).\n● Aktywacja i korzystanie z bezpłatnego wirtualnego konta demo z kwotą 100 000 $ do ćwiczeń bez ryzyka.\n● Wyszukiwanie Bitcoina i analiza wykresów cenowych na żywo.\n● Otwarcie zlecenia zakupu, ustawienie Stop Loss w celu ograniczenia strat oraz Take Profit dla zabezpieczenia zysków.\n● Śledzenie i zarządzanie swoimi inwestycjami w zakładce portfel.\n● Zamknięcie pozycji i sprzedaż swoich Bitcoinów w wybranym momencie.\n● Wypłata środków bezpośrednio na Twoje konto bankowe.\n\nNiezależnie od tego, czy jesteś początkującym inwestorem, czy chcesz wejść w świat kryptowalut, eToro oferuje intuicyjny interfejs już od 10 $.\n\n⏳ Rozdziały filmu:\n00:00 Wstęp\n00:28 Wpłata środków na eToro\n00:52 Aktywacja wirtualnego konta demo (100 000 $)\n01:11 Wyszukiwanie Bitcoina na platformie\n01:53 Wykres i analiza kursu Bitcoina\n02:18 Zakup Bitcoina (Zlecenie, Stop Loss i Take Profit)\n03:06 Zarządzanie pozycją w portfelu\n03:35 Zamknięcie pozycji i sprzedaż\n04:11 Wypłata pieniędzy na konto bankowe\n\n#Bitcoin #eToro #Trading #Krypto",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/p4xI70YI0B0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/p4xI70YI0B0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/p4xI70YI0B0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/p4xI70YI0B0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/p4xI70YI0B0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "eToro",
+          "bitcoin",
+          "jak kupic bitcoin",
+          "kupno bitcoina",
+          "etoro poradnik",
+          "etoro poczatkujacy",
+          "inwestowanie w bitcoin",
+          "krypto poczatkujacy",
+          "etoro po polsku",
+          "trading bitcoin",
+          "stop loss etoro",
+          "take profit etoro",
+          "konto demo etoro",
+          "portfel etoro",
+          "wyplata etoro"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak Kupić Bitcoin na eToro (Kompletny Poradnik dla Początkujących od A do Z)",
+          "description": "► Link do eToro ze 100 000 $ w wirtualnych funduszach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym kompletnym poradniku dla początkujących dowiesz się krok po kroku, jak inwestować i kupować Bitcoin (BTC) na platformie eToro. Od rejestracji po wypłatę zysków omawiamy wszystkie kluczowe etapy:\n\n● Jak założyć konto i dokonać pierwszej bezpiecznej wpłaty środków (karta bankowa, przelew).\n● Aktywacja i korzystanie z bezpłatnego wirtualnego konta demo z kwotą 100 000 $ do ćwiczeń bez ryzyka.\n● Wyszukiwanie Bitcoina i analiza wykresów cenowych na żywo.\n● Otwarcie zlecenia zakupu, ustawienie Stop Loss w celu ograniczenia strat oraz Take Profit dla zabezpieczenia zysków.\n● Śledzenie i zarządzanie swoimi inwestycjami w zakładce portfel.\n● Zamknięcie pozycji i sprzedaż swoich Bitcoinów w wybranym momencie.\n● Wypłata środków bezpośrednio na Twoje konto bankowe.\n\nNiezależnie od tego, czy jesteś początkującym inwestorem, czy chcesz wejść w świat kryptowalut, eToro oferuje intuicyjny interfejs już od 10 $.\n\n⏳ Rozdziały filmu:\n00:00 Wstęp\n00:28 Wpłata środków na eToro\n00:52 Aktywacja wirtualnego konta demo (100 000 $)\n01:11 Wyszukiwanie Bitcoina na platformie\n01:53 Wykres i analiza kursu Bitcoina\n02:18 Zakup Bitcoina (Zlecenie, Stop Loss i Take Profit)\n03:06 Zarządzanie pozycją w portfelu\n03:35 Zamknięcie pozycji i sprzedaż\n04:11 Wypłata pieniędzy na konto bankowe\n\n#Bitcoin #eToro #Trading #Krypto"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT4M29S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "13",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "aO4_DUZzUcHiN1ZbaPFOCojXJoo",
+      "id": "reaI2uNoGSk",
+      "snippet": {
+        "publishedAt": "2026-08-18T14:04:51Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak KUPIĆ ETF na eToro (Kompletny Poradnik dla Początkujących od A do Z)",
+        "description": "► Link do eToro z 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym kompletnym poradniku krok po kroku dla początkujących dowiesz się, jak kupować i sprzedawać ETF-y na platformie inwestycyjnej eToro. Bez względu na to, czy chcesz zainwestować w S&amp;P 500, Nasdaq czy inne fundusze indeksowe, ten praktyczny przewodnik pokazuje wszystko od A do Z, aby bezpiecznie zacząć inwestować na giełdzie.\n\nW tym filmie zobaczysz:\n● Jak założyć konto i korzystać z darmowego wirtualnego konta demo z kwotą 100 000 $ do ćwiczeń bez ryzyka\n● Jak odnaleźć się w interfejsie eToro i wpłacić środki\n● Jak wyszukiwać i analizować spośród ponad 1000 dostępnych ETF-ów (wykresy, wskaźniki, aktualności)\n● Jak złożyć zlecenie kupna i zrozumieć ryzyko dźwigni finansowej\n● Jak zabezpieczyć kapitał za pomocą zleceń Stop Loss i Take Profit\n● Jak zarządzać pozycjami w portfelu i zamykać transakcje z zyskiem\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n00:15 Założenie konta i tryb wirtualny (100 000 $)\n00:37 Przegląd interfejsu eToro\n00:55 Jak wpłacić środki\n01:14 Aktywacja wirtualnego portfela demo\n01:31 Profil i statystyki tradingu\n02:15 Zarządzanie portfelem inwestycyjnym\n02:32 Jak znaleźć i wybrać ETF (np. S&amp;P 500)\n03:28 Analiza wykresu i wskaźniki\n03:47 Konfiguracja zlecenia (Stop Loss i Take Profit)\n04:19 Dźwignia finansowa: porady dla początkujących\n04:36 Zakup ETF\n04:52 Zarządzanie pozycją i sprzedaż ETF\n05:21 Podsumowanie i dodatkowe funkcje\n\n#eToro #ETF #Gielda #InwestowanieDlaPoczatkujacych",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/reaI2uNoGSk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/reaI2uNoGSk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/reaI2uNoGSk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/reaI2uNoGSk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/reaI2uNoGSk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "jak kupic etf na etoro",
+          "etoro etf poradnik",
+          "etoro dla poczatkujacych",
+          "jak inwestowac na etoro",
+          "etoro sp500",
+          "konto demo etoro",
+          "stop loss take profit etoro",
+          "jak sprzedac etf etoro",
+          "inwestowanie w etf",
+          "gielda dla poczatkujacych",
+          "etoro polska 2026"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak KUPIĆ ETF na eToro (Kompletny Poradnik dla Początkujących od A do Z)",
+          "description": "► Link do eToro z 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym kompletnym poradniku krok po kroku dla początkujących dowiesz się, jak kupować i sprzedawać ETF-y na platformie inwestycyjnej eToro. Bez względu na to, czy chcesz zainwestować w S&amp;P 500, Nasdaq czy inne fundusze indeksowe, ten praktyczny przewodnik pokazuje wszystko od A do Z, aby bezpiecznie zacząć inwestować na giełdzie.\n\nW tym filmie zobaczysz:\n● Jak założyć konto i korzystać z darmowego wirtualnego konta demo z kwotą 100 000 $ do ćwiczeń bez ryzyka\n● Jak odnaleźć się w interfejsie eToro i wpłacić środki\n● Jak wyszukiwać i analizować spośród ponad 1000 dostępnych ETF-ów (wykresy, wskaźniki, aktualności)\n● Jak złożyć zlecenie kupna i zrozumieć ryzyko dźwigni finansowej\n● Jak zabezpieczyć kapitał za pomocą zleceń Stop Loss i Take Profit\n● Jak zarządzać pozycjami w portfelu i zamykać transakcje z zyskiem\n\n⏳ Rozdziały filmu :\n00:00 Wprowadzenie\n00:15 Założenie konta i tryb wirtualny (100 000 $)\n00:37 Przegląd interfejsu eToro\n00:55 Jak wpłacić środki\n01:14 Aktywacja wirtualnego portfela demo\n01:31 Profil i statystyki tradingu\n02:15 Zarządzanie portfelem inwestycyjnym\n02:32 Jak znaleźć i wybrać ETF (np. S&amp;P 500)\n03:28 Analiza wykresu i wskaźniki\n03:47 Konfiguracja zlecenia (Stop Loss i Take Profit)\n04:19 Dźwignia finansowa: porady dla początkujących\n04:36 Zakup ETF\n04:52 Zarządzanie pozycją i sprzedaż ETF\n05:21 Podsumowanie i dodatkowe funkcje\n\n#eToro #ETF #Gielda #InwestowanieDlaPoczatkujacych"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT5M39S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "19",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "s2WvsJBILPeSfGkY9jCCyypO6tc",
+      "id": "DLXsOp3GkAM",
+      "snippet": {
+        "publishedAt": "2026-07-10T11:24:23Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "JAK INWESTOWAĆ NA GIEŁDZIE? KOMPLETNY PORADNIK DLA POCZĄTKUJĄCYCH",
+        "description": "► Link eToro z 100 000 USD w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nDowiedz się z tego poradnika eToro dla początkujących, jak łatwo inwestować i kupować akcje na giełdzie.\n● Ćwicz bez ryzyka na darmowym koncie demonstracyjnym z 100 000 USD wirtualnych środków.\n● Zobacz, jak bezpiecznie wpłacić depozyt, aby zacząć inwestować prawdziwe pieniądze.\n● Poznaj zasady działania społecznościowej platformy eToro i nawiguj po jej interfejsie.\n● Przeledź nasz praktyczny przykład wyszukiwania i zakupu pierwszej akcji, na przykładzie Tesli.\n● Monitoruj swoje inwestycje w portfelu i sprzedawaj akcje poprzez zamykanie pozycji.\n● Wykorzystaj Copy Trading, aby automatycznie kopiować ruchy najlepszych inwestorów.\n\n⏳ Rozdziały wideo:\n00:00 Wprowadzenie\n00:45 Wirtualny portfel z 100 000 USD\n01:05 Depozyt środków\n01:20 Jak działa platforma\n02:19 Mój portfel\n02:41 Wyszukiwanie akcji\n03:04 Jak kupić akcje (np. Tesla)\n04:29 Monitorowanie i sprzedaż (Zamknięcie pozycji)\n05:02 Kopiowanie innych inwestorów (Copy Trading)\n05:41 Podsumowanie i subskrypcja\n\n#eToro #GiełdaDlaPoczątkujących #Inwestowanie #CopyTrading",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DLXsOp3GkAM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DLXsOp3GkAM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DLXsOp3GkAM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DLXsOp3GkAM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DLXsOp3GkAM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/DLXsOp3GkAM/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "eToro",
+          "eToro poradnik",
+          "jak kupić akcje",
+          "giełda dla początkujących",
+          "copy trading",
+          "opinie eToro",
+          "inwestowanie w akcje",
+          "akcje Tesla",
+          "eToro początkujący",
+          "nauka tradingu"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "JAK INWESTOWAĆ NA GIEŁDZIE? KOMPLETNY PORADNIK DLA POCZĄTKUJĄCYCH",
+          "description": "► Link eToro z 100 000 USD w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nDowiedz się z tego poradnika eToro dla początkujących, jak łatwo inwestować i kupować akcje na giełdzie.\n● Ćwicz bez ryzyka na darmowym koncie demonstracyjnym z 100 000 USD wirtualnych środków.\n● Zobacz, jak bezpiecznie wpłacić depozyt, aby zacząć inwestować prawdziwe pieniądze.\n● Poznaj zasady działania społecznościowej platformy eToro i nawiguj po jej interfejsie.\n● Przeledź nasz praktyczny przykład wyszukiwania i zakupu pierwszej akcji, na przykładzie Tesli.\n● Monitoruj swoje inwestycje w portfelu i sprzedawaj akcje poprzez zamykanie pozycji.\n● Wykorzystaj Copy Trading, aby automatycznie kopiować ruchy najlepszych inwestorów.\n\n⏳ Rozdziały wideo:\n00:00 Wprowadzenie\n00:45 Wirtualny portfel z 100 000 USD\n01:05 Depozyt środków\n01:20 Jak działa platforma\n02:19 Mój portfel\n02:41 Wyszukiwanie akcji\n03:04 Jak kupić akcje (np. Tesla)\n04:29 Monitorowanie i sprzedaż (Zamknięcie pozycji)\n05:02 Kopiowanie innych inwestorów (Copy Trading)\n05:41 Podsumowanie i subskrypcja\n\n#eToro #GiełdaDlaPoczątkujących #Inwestowanie #CopyTrading"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT5M48S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "3",
+        "likeCount": "0",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "E3865U6llrvR6_eE8PdG20EPtrk",
+      "id": "ysRd-DFgqwo",
+      "snippet": {
+        "publishedAt": "2026-07-06T12:04:45Z",
+        "channelId": "UCETeJFNlN5uBTIjVLf25T2g",
+        "title": "Jak Kupić Akcje na eToro (2026) - Poradnik dla Początkujących od A do Z",
+        "description": "► Link do eToro z 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym filmie dowiesz się dokładnie, jak kupić akcje na eToro, krok po kroku. Przejdziemy przez cały proces inwestowania, zaczynając od założenia konta i wpłaty środków, aż po wybór odpowiednich akcji i ich sprzedaż. Ten poradnik eToro dla początkujących został przygotowany tak, aby każdy mógł zacząć swoją przygodę z giełdą bez obaw.\n\nNauczysz się:\n● Jak korzystać z darmowego konta wirtualnego (demo) z kapitałem 100 000 $.\n● Jak bezpiecznie wpłacić pieniądze na platformę.\n● Jak wyszukiwać spółki giełdowe i analizować wykresy.\n● Jak ustawić zlecenia Stop Loss i Take Profit, aby chronić swój kapitał.\n● Czym jest dźwignia finansowa i jak z niej korzystać (lub jej unikać).\n● Jak zarządzać swoim portfelem inwestycyjnym i zamykać pozycje z zyskiem.\n\nInwestowanie na giełdzie nigdy nie było tak proste. Dzięki temu tutorialowi eToro zyskasz pewność siebie potrzebną do dokonania pierwszej transakcji.\n\n⏳ Chapitres de la vidéo :\n00:00 Wstęp i co zobaczymy w filmie\n00:21 Rejestracja i konto wirtualne (100k$)\n00:46 Jak wpłacić środki na eToro\n01:16 Wyszukiwanie akcji i analiza\n02:29 Otwieranie pozycji (Zainwestuj)\n02:42 Ustawianie Stop Loss i Take Profit\n02:59 Co to jest dźwignia finansowa?\n03:23 Zarządzanie portfelem i sprzedaż akcji\n03:52 Podsumowanie i zakończenie\n\n#eToro #Inwestowanie #Giełda #Trading #Akcje",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ysRd-DFgqwo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ysRd-DFgqwo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ysRd-DFgqwo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ysRd-DFgqwo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ysRd-DFgqwo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Trading dla Początkujących TUTO",
+        "tags": [
+          "eToro",
+          "jak kupić akcje",
+          "eToro tutorial pl",
+          "inwestowanie dla początkujących",
+          "giełda dla początkujących",
+          "eToro opinie",
+          "jak grać na giełdzie",
+          "trading dla początkujących",
+          "akcje eToro",
+          "stop loss eToro",
+          "take profit eToro",
+          "dźwignia finansowa",
+          "konto demo eToro",
+          "poradnik inwestowania",
+          "finanse osobiste",
+          "jak zarabiać na giełdzie"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak Kupić Akcje na eToro (2026) - Poradnik dla Początkujących od A do Z",
+          "description": "► Link do eToro z 100 000 $ w wirtualnych środkach : https://tiny.cc/m-etoro-pl\neToro to platforma inwestycyjna oferująca wiele aktywów. Wartość Twoich inwestycji może wzrosnąć lub spaść. Twój kapitał jest narażony na ryzyko.\n\nW tym filmie dowiesz się dokładnie, jak kupić akcje na eToro, krok po kroku. Przejdziemy przez cały proces inwestowania, zaczynając od założenia konta i wpłaty środków, aż po wybór odpowiednich akcji i ich sprzedaż. Ten poradnik eToro dla początkujących został przygotowany tak, aby każdy mógł zacząć swoją przygodę z giełdą bez obaw.\n\nNauczysz się:\n● Jak korzystać z darmowego konta wirtualnego (demo) z kapitałem 100 000 $.\n● Jak bezpiecznie wpłacić pieniądze na platformę.\n● Jak wyszukiwać spółki giełdowe i analizować wykresy.\n● Jak ustawić zlecenia Stop Loss i Take Profit, aby chronić swój kapitał.\n● Czym jest dźwignia finansowa i jak z niej korzystać (lub jej unikać).\n● Jak zarządzać swoim portfelem inwestycyjnym i zamykać pozycje z zyskiem.\n\nInwestowanie na giełdzie nigdy nie było tak proste. Dzięki temu tutorialowi eToro zyskasz pewność siebie potrzebną do dokonania pierwszej transakcji.\n\n⏳ Chapitres de la vidéo :\n00:00 Wstęp i co zobaczymy w filmie\n00:21 Rejestracja i konto wirtualne (100k$)\n00:46 Jak wpłacić środki na eToro\n01:16 Wyszukiwanie akcji i analiza\n02:29 Otwieranie pozycji (Zainwestuj)\n02:42 Ustawianie Stop Loss i Take Profit\n02:59 Co to jest dźwignia finansowa?\n03:23 Zarządzanie portfelem i sprzedaż akcji\n03:52 Podsumowanie i zakończenie\n\n#eToro #Inwestowanie #Giełda #Trading #Akcje"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT4M3S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "11",
+        "likeCount": "1",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 15,
+    "resultsPerPage": 15
+  }
+}

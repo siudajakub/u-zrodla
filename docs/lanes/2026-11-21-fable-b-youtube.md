@@ -4,7 +4,7 @@
 - Branch: hack/fable/b-youtube (jeszcze nieutworzona); sonda wykonana w checkoucie głównym na hack/integration (HEAD 491094d)
 - Worktree: jeszcze nieutworzony
 - State: ACTIVE. Fala 2: adapter `collectors/youtube.py` z testami i świeży skan live z kluczem (2088 j.). Czeka na podpięcie przez H (S4) i porównanie z listą Y przez G.
-- Updated: 2026-11-21 19:20 UTC
+- Updated: 2026-11-21 20:50 UTC
 - PR / issue: none yet
 
 ## Acceptance
@@ -238,6 +238,60 @@ Dzienne zużycie: B 2088 + H ok. 2900 ≈ 4990 z 10 000. Bez kolejnego skanu liv
 ### Przypadek błędu (fala 2)
 
 Pierwsza próba ponownego odczytu przez cache spaliła 118 jednostek. `publishedAfter` zawierało sekundy bieżącego czasu, więc klucz cache search.list był inny w każdym przebiegu. Dodatkowo kontrola budżetu przed search.list nie uwzględniała trafień w cache. Przebieg wydał 100 j. na nowe zapytanie „XTB”, zatrzymał się na budżecie 200 z kursorem `XTB, page 2` i wzbogacił 50 wyników. Poprawka: okno z dokładnością do dnia, opcja `--published-after`, kontrola budżetu tylko dla żądań spoza cache. Po poprawce drugi odczyt kosztował 27 j.
+
+## Fala 3: baza kanałów, budżet w dwóch fazach, wiele kluczy (2026-11-21, 20:30–20:50 UTC)
+
+Wdrożone zasady 2–6, 8 i 9 z [MONITORING.md](../MONITORING.md) w `collectors/youtube.py`; zakres zapisu: `collectors/`, `fixtures/raw/discovery/youtube-api-2026-11-21b/`, `.runtime/kanaly-live/`.
+
+### Zmiana Contextu (tylko pola addytywne z wartościami domyślnymi; v1 bez zmian)
+
+`keys`, `key_daily_units` (10000), `state_dir`, `known_channels`, `monitor_share` (0,4), `monitor_channels` (200), `monitor_min_hours` (6), `sparse_after` (2), `sparse_every` (4), `min_yield` (0 = wyłączone), `yield_streak` (3). Wynik dostał klucze `cursor` (baza kanałów), `report` i `quota.keys`. Interfejs wywołania przez H (`_youtube` w `collectors/discovery.py`) działa bez zmian: baza kanałów wraca w `cursor`, który `store.record_adapter` zapisuje w `source_state` i oddaje w `ctx.state["cursor"]`.
+
+### Domyślny zestaw zapytań (kolejność = malejąca wydajność, firmy na końcu)
+
+Tematyczne: „inwestowanie” (2 strony), „giełda”, „ETF”, „akcje dywidendowe”, „obligacje skarbowe”, „IKE IKZE”, „jak zacząć inwestować” (dotychczasowe, pomiar 21 XI: 152 polskie kanały na 800 j.). Nowe, każda z uzasadnieniem:
+- „pasywny dochód inwestowanie”: język finfluencerów i Shorts („dochód pasywny”, „z dywidend”), mało obecny w ogólnych frazach;
+- „portfel inwestycyjny”: typowy tytuł filmów z pokazywaniem własnego portfela, często z linkiem do domu maklerskiego;
+- „konto maklerskie”: fraza wprost z ścieżki rejestracji, trafia w filmy porównujące i polecające brokerów;
+- „jak kupić akcje”: poradnik dla początkujących, zwykle z poleceniem konkretnego konta;
+- „ETF na IKE”: łączy produkt i opakowanie podatkowe, wąska polska nisza z promocją kont IKE;
+- „dywidendy”: krótka fraza używana w tytułach Shorts, szerszy zasięg niż „akcje dywidendowe”;
+- „trading”: potoczne polskie słowo wprost, trafia w kanały daytradingowe i Shorts o zyskach;
+- „kontrakty CFD”: produkt typowy dla promowanych brokerów z ostrzeżeniem o ryzyku w opisie.
+Promocyjne bez zmian (4), krypto i analiza techniczna (5) po nich. Firmy tylko w polskim brzmieniu z kontekstem: „XTB opinie”, „konto maklerskie XTB”, „Freedom24 opinie”, „Saxo Bank opinie”, „mBank eMakler”. Usunięte: „eToro”, „Trading 212”, „Interactive Brokers”, „XTB” w gołej postaci.
+
+### Zachowanie
+
+- **Baza kanałów** (`state_dir/channels.json` albo `cursor`): etykieta języka po pierwszym odczycie (decyduje treść filmów; jedna obca próbka nie wystarcza do pominięcia, chyba że kanał deklaruje inny język), lista pominięć kanałów niepolskich (ich filmy z wyszukiwania są odrzucane przed `videos.list`), znacznik sygnału promocji firmy (link lub kod przy nazwie firmy w opisie), `lastRead`, `newest`.
+- **Przebieg:** (1) monitoring znanych polskich kanałów: `playlistItems` 1 j./50 filmów, w kolejności z sygnałem promocji, potem reszta, w obrębie grupy najdawniej czytane najpierw, do `monitor_share` budżetu; kanał czytany krócej niż 6 h temu pomijany; nowe filmy to te nowsze niż zapisane `newest` i z okna 180 dni; (2) odkrywanie: strony wyszukiwania, po każdym zapytaniu tani odczyt jego filmów i nowych kanałów (stąd dokładna liczba nowych polskich kanałów na zapytanie); (3) listy przesłanych najlepszych nowych kanałów i Atom bez kwoty.
+- **Rzadszy cykl:** zapytanie bez nowego polskiego kanału w dwóch kolejnych przebiegach z wydatkiem schodzi na co 4. przebieg (`queries[...].nextRun` w bazie). Powtórka z cache nie liczy się jako przebieg.
+- **Przerwanie przy niskiej wydajności:** `min_yield` i `yield_streak`; kursor wznawia od następnego zapytania.
+- **Cache:** okno dat do dnia, `search` ważny 24 h, `videos` 10 min, `channels` 1 h, `playlistItems` 30 min.
+- **Wiele kluczy:** `INVESTWATCH_YT_KEY_FILES` (ścieżki po dwukropku, poza repo), domyślnie `~/.config/investwatch/youtube.key`. Kolejny klucz dopiero po `quotaExceeded` bieżącego, przerwane żądanie jest powtarzane. Wiersz księgi na klucz: skrót SHA-256 tekstu klucza obcięty do 8 znaków, `used` za dobę pacyficzną, `exhaustedAt`; zapis w `cursor.keyLedger`, `quota.keys` i `requests.jsonl` (pole `keyId`). Wartość klucza nigdzie się nie zapisuje.
+- Sygnał promocji i etykieta to heurystyki opisu, nie kwalifikacja (decyduje D).
+
+### Przebieg live (jedyny w tej fali; jedynie adapter, własna baza, bez mediów i bez skanu aplikacji)
+
+Komenda: `python3 -m collectors.youtube --budget 2500 --raw-dir fixtures/raw/discovery/youtube-api-2026-11-21b --cache-dir .runtime/kanaly-live/cache --state-dir .runtime/kanaly-live --known-channels fixtures/raw/discovery/youtube-api-2026-11-21/channels-by-subscribers.json --seed-used 6120 --min-yield 2 --atom-channels 25 --monitor-channels 209`. Wejście: 380 kanałów (209 polskich, 171 niepolskich na liście pominięć od razu).
+
+| Wynik | Wartość |
+|---|---|
+| zużyte jednostki | 1205 z limitu 2500 (monitoring 378, odkrywanie 811, listy przesłanych nowych kanałów i reszta 16); klucz `e97cae75`: 6120 (zgłoszone przez właściciela) + 1205 = 7325 z 10000, bez `quotaExceeded` |
+| monitoring | 209 kanałów, w tym 51 z sygnałem promocji; 8415 nowych filmów z okna 180 dni; 0 błędów |
+| odkrywanie | 7 zapytań tematycznych, 800 j. wyszukiwania; przerwane po „jak zacząć inwestować”: 3 kolejne zapytania poniżej 2 nowych polskich kanałów na 100 j.; kursor `queryIndex=7` („pasywny dochód inwestowanie”) |
+| nowe polskie kanały na 100 j. | rodzina tematyczna 1,5 (12 na 800 j.): „inwestowanie” 4,0; „akcje dywidendowe” 3,0; „IKE IKZE” 1,0; „giełda”, „ETF”, „obligacje skarbowe”, „jak zacząć inwestować” 0. Rodziny promocyjna i firmowa nie doszły do głosu w tym przebiegu |
+| baza kanałów | 221 polskich (209 wejściowych + 12 nowych), 177 pominiętych niepolskich (171 + 6), 59 z sygnałem promocji firmy |
+| filmy | 8915 (3469 Shorts); czeka na transkrypcję 1340: 792 z dowodem relacji w opisie (link lub kod przy nazwie firmy), 548 z samą nazwą firmy (132 Shorts) |
+| kandydaci | 66 filmów (11 Shorts): link lub kod firmy w opisie, bez oznaczenia w opisie, `paidPromotionFlag=false`, uporządkowane wg subskrybentów i wyświetleń: `candidates.json` |
+
+Pliki: `fixtures/raw/discovery/youtube-api-2026-11-21b/` (surowe odpowiedzi z `key=REDACTED`, duże `videos` w `.gz`, `requests.jsonl`, `report.json`, `candidates.json`, `channels-db.json`), stan `.runtime/kanaly-live/` (`channels.json`, cache, `result.json`). Grep po całych katalogach i po rozpakowanych `.gz` nie znalazł wartości klucza.
+
+### Zmiany po stronie integracji (H), nieujęte tu
+
+1. Księga H (`quota_ledger`) ma jeden wiersz na źródło i dobę, a `record_adapter` po `quotaExceeded` ustawia `used=limit`. Przy dwóch kluczach to zablokuje drugi klucz: trzeba wiersza na `(source_id, keyId)` z `result["quota"]["keys"]`, a limit dobowy źródła liczyć jako suma limitów kluczy (dziś `INVESTWATCH_YT_DAILY_UNITS`=8000).
+2. `store.source_state` musi nadal oddawać `cursor` w `ctx.state` (baza kanałów kilkaset wpisów, ok. 150 kB JSON na 400 kanałów); alternatywa: przekazać `options["youtube"]["state_dir"]` z rejestru.
+3. Monitoring domyślnie bierze 40% budżetu przebiegu (H: 1200 j. z `run_units_default`) i czyta każdy znany polski kanał co najmniej co 6 h; przy 209 kanałach pierwszy przebieg kosztuje ok. 380 j., kolejne mniej. Jeśli H ma osobny budżet na monitoring, wystarczy `options["youtube"]["monitor_share"]`.
+4. Skan z H przekazuje `known_creators` wszystkich platform; adapter bierze tylko `platform=youtube` z identyfikatorem `youtube:UC…`.
 
 ## Rekomendowana architektura `collectors/youtube.py` (z fali 1, wdrożona w fali 2)
 

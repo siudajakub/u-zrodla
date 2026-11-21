@@ -1,0 +1,2302 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "bb9LOE34by8L2bqnxTSJmeH8OvQ",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 18261,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XqcPiRf_FQp2xyKTn-KSem2Iaus",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ryZCguUDZeI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:00:15Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "W co inwestować na IKE oraz IKZE: akcje, obligacje, ETF-y?",
+        "description": "Chcesz mieć więcej pieniędzy? Przeczytaj moją książkę: https://inwestokracja.pl/yt Chcesz otrzymywać DARMOWE lekcje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:00:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0ZCrTny2fHsPzu5gpdDxPLlDd7w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "q-pwIe85SmA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T16:00:38Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "Jedyny film o IKE i IKZE, jakiego potrzebujesz",
+        "description": "współpraca XTB [współpraca] Tutaj Kupisz Akcje i ETFy (XTB): https://link-pso.xtb.com/pso/DwCbZ Zapisz się za darmo na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/q-pwIe85SmA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T16:00:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WM0YJ0l16wqsJxU_YqS_WifdLPM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Fu8P_wcaiM0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T17:01:39Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "Gdzie założyć IKE lub IKZE w 2026? ❌ TYCH kont unikaj jak ognia [Ranking IKE IKZE 2026]",
+        "description": "Sprawdź nasz BEZPŁATNY kalkulator IKE/IKZE: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Fu8P_wcaiM0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Fu8P_wcaiM0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Fu8P_wcaiM0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Fu8P_wcaiM0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Fu8P_wcaiM0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T17:01:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "V_wyc9Rs1eKjSrkP1Vfmxt3WPHg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BR6sDaSOLEk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T14:00:34Z",
+        "channelId": "UCUWnrWoO9VhMCfRjug42Riw",
+        "title": "OKI, IKE czy IKZE Gdzie trzymać 100 tys  zł od 2027 roku",
+        "description": "Załóż konto w XTB: https://geolink.xtb.com/xhzLu ▷ Kod przy rejestracji: SUKCESS Odcinek powstał we współpracy z XTB",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BR6sDaSOLEk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BR6sDaSOLEk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BR6sDaSOLEk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BR6sDaSOLEk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BR6sDaSOLEk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kompas Sukcesu | Finanse Osobiste",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T14:00:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "SnXK1wQZobtEpQqgtXI-Cx01D34",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tTqCiWJPO9I"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T12:07:39Z",
+        "channelId": "UCCuQBWkyDFLq1VOpfUS1NlA",
+        "title": "Nie wypełnisz IKE i IKZE? To nie porażka",
+        "description": "Mój Instagram – kulisy i to, co nie wchodzi do filmów: https://www.instagram.com/inwestorkaodzera Pod koniec roku wszędzie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tTqCiWJPO9I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tTqCiWJPO9I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tTqCiWJPO9I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tTqCiWJPO9I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tTqCiWJPO9I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/tTqCiWJPO9I/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Inwestorka od zera",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T12:07:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8bNHTuLTTcWmpqZ8CfN9XBVkhxc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kgQ-lgpoiwU"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-25T10:00:12Z",
+        "channelId": "UCeCGxJV5ECqBQEydmeLmY4w",
+        "title": "Największa zaleta IKE i IKZE? 🤑",
+        "description": "W ramach \"Wakacji na Giełdzie\", Bartosz Stolarczuk, ekspert Domu Maklerskiego BOŚ, rozwiewa wątpliwości dotyczące obu tych ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kgQ-lgpoiwU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kgQ-lgpoiwU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kgQ-lgpoiwU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kgQ-lgpoiwU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kgQ-lgpoiwU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/kgQ-lgpoiwU/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Bankier.pl",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-25T10:00:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lVypWy2f5g3qZyLmA9E5kWcfDwY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ccydVgRN3yU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T16:56:47Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "OKI zmienia zasady gry – czy Twoje IKE i IKZE nadal mają sens?",
+        "description": "Sprawdź nasz BEZPŁATNY kalkulator IKE/IKZE: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ccydVgRN3yU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ccydVgRN3yU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ccydVgRN3yU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ccydVgRN3yU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ccydVgRN3yU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/ccydVgRN3yU/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T16:56:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YpNYK00930zxr-JWjWpXLSYJQ6k",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3x9VNTJSksg"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T12:58:24Z",
+        "channelId": "UCtZrrtNmk2RlJVI51vutd-g",
+        "title": "Rząd chce skasować IKE i IKZE. Czy Twoje pieniądze skończą jak te które zabrał Ci Tusk z OFE?💰💸",
+        "description": "Rząd chce skasować IKE i IKZE. Czy Twoje pieniądze skończą jak te które zabrał Ci Tusk z OFE?     Co się stanie z Twoim IKE i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3x9VNTJSksg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3x9VNTJSksg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3x9VNTJSksg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3x9VNTJSksg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3x9VNTJSksg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Sołtys Polski",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T12:58:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ITZTieys0DG9r5MgU2RNVbqpBZw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wFQ-eS_QXuc"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-13T18:39:26Z",
+        "channelId": "UC2cqc_rOjR14biUlvFqHc9A",
+        "title": "IKE, IKZE czy OKI? Które konto pozwoli Ci zaoszczędzić najwięcej? Najprostsze wyjaśnienie",
+        "description": "IKE, IKZE czy może nowość, czyli OKI? Które konto najbardziej opłaca się inwestorowi i jak wybrać rozwiązanie, dzięki któremu ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wFQ-eS_QXuc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wFQ-eS_QXuc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wFQ-eS_QXuc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wFQ-eS_QXuc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wFQ-eS_QXuc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "InwestoSfera",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-13T18:39:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "k2-IRPokZbvUfclt3n5QCnDqUwA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "133DSh6e4xg"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-09T16:56:31Z",
+        "channelId": "UCYjxwFqTUwO5cja6xi5mvUg",
+        "title": "Ranking Brokerów IKE/IKZE 2026",
+        "description": "9 - tyle polskich biur i domów maklerskich udostępnia konta IKE i IKZE, które zapewniają korzyści podatkowe. W ciągu ostatniego ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/133DSh6e4xg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/133DSh6e4xg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/133DSh6e4xg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/133DSh6e4xg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/133DSh6e4xg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/133DSh6e4xg/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Stockbroker pl",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-09T16:56:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dkaFAyMbJ6SopBt3AiWK4oPoSlk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sj9e7OP_DOA"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T16:30:09Z",
+        "channelId": "UCcJq-5bSAMp2ZCOR8kacfmA",
+        "title": "IKE i IKZE do likwidacji? Dlaczego IKE+ to bardzo zły pomysł",
+        "description": "Zacznij być dumny z inwestowania w XTB: https://geolink.xtb.com/wMYiO ▶️ Teraz, rejestrując się w XTB z kodem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sj9e7OP_DOA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sj9e7OP_DOA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sj9e7OP_DOA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sj9e7OP_DOA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sj9e7OP_DOA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowa TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T16:30:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XYFeI0eacHPJL3wPcX-sssnHD5M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sBXOOYs_Plo"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-09T15:00:03Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "PPK, IKZE, IKE czy OKI? Kolejność czterech kont z ulgą od 2027 #PPK #IKE #OKI",
+        "description": "Napisz START w komentarzu, a wyślę Ci przewodnik 5 kroków do pierwszej inwestycji. PPK, IKZE, IKE i OKI od 2027: od którego ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sBXOOYs_Plo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sBXOOYs_Plo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sBXOOYs_Plo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sBXOOYs_Plo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sBXOOYs_Plo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-09T15:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yaA65H_SORgq2LMUi-NRDSb1Tng",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9HZtkA2Ld-Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-03T16:50:12Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "Nie zakładaj IKE, zanim nie poznasz tych 3 pułapek!",
+        "description": "Sprawdź nasz BEZPŁATNY kalkulator IKE/IKZE: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9HZtkA2Ld-Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9HZtkA2Ld-Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9HZtkA2Ld-Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9HZtkA2Ld-Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9HZtkA2Ld-Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/9HZtkA2Ld-Q/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-03T16:50:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NitBIUicXASjo5a2KmYkw7BWFt8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PJ_TxPmZUHE"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-04T08:00:33Z",
+        "channelId": "UCH5UB8PulkZ75fOHgcSGt2g",
+        "title": "IKE i IKZE bez ściemy: emerytura, podatki i ryzyka w 2026",
+        "description": "W tym odcinku „Po ludzku o ekonomii” wyjaśniamy, czym naprawdę są IKE i IKZE, jak działają limity wpłat, ulgi podatkowe, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PJ_TxPmZUHE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PJ_TxPmZUHE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PJ_TxPmZUHE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PJ_TxPmZUHE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PJ_TxPmZUHE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/PJ_TxPmZUHE/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "naTemat",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-04T08:00:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Tb2qm2IC8bJ4SE6qpMLrsRJ5XaI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ewEI86r5wKU"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-06T17:00:01Z",
+        "channelId": "UC8Ymbs8znOAFmcCvWeHxZHQ",
+        "title": "IKE, IKZE czy OKI? Które konto wybrać w 2026 - porównanie na liczbach 📊",
+        "description": "Od 1 stycznia 2027 będziemy mieli w Polsce trzy konta z ulgą podatkową zamiast dwóch. Policzyłem IKE, IKZE i nowe OKI na tych ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ewEI86r5wKU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ewEI86r5wKU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ewEI86r5wKU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ewEI86r5wKU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ewEI86r5wKU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tomasz Pawlik",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-06T17:00:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "xbSdM48LcwH9HOLrzqea_CnZvAE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VoHucgtF1T0"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-13T14:00:07Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Konto OKI vs IKE vs IKZE — co realnie da Ci najwięcej?",
+        "description": "IKE, IKZE czy nowe OKI? W tym filmie porównuję trzy konta, które w 2026 i od 2027 roku decydują, czy zapłacisz podatek Belki, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VoHucgtF1T0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VoHucgtF1T0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VoHucgtF1T0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VoHucgtF1T0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VoHucgtF1T0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/VoHucgtF1T0/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-13T14:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YGCwDlMtabzVXiZHNXUyoWQdnz4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oSS50IHBxQg"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-09T11:30:14Z",
+        "channelId": "UCBOfbGnvyr2LjD9SDyhTUJQ",
+        "title": "IKE i IKZE 2027: limit wpłat w górę o 6,5%. Ile więcej odłożycie?",
+        "description": "W 2027 r. na IKE wpłacicie do 30 099 zł, czyli o 1 839 zł (6,5%) więcej niż w 2026 r. Limit IKZE wzrośnie do 12 039,60 zł, a dla ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oSS50IHBxQg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oSS50IHBxQg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oSS50IHBxQg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oSS50IHBxQg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oSS50IHBxQg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/oSS50IHBxQg/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Ignacy ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-09T11:30:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Ci_fL6xYUxzAXiLvPtHISjIGJcM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1RKOC102CiM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T20:32:24Z",
+        "channelId": "UCCuQBWkyDFLq1VOpfUS1NlA",
+        "title": "IKE i IKZE – moje 4 błędy. Założyłam, bo wszyscy mówili, że warto",
+        "description": "Instagram: https://www.instagram.com/inwestorkaodzera W 2025 roku wpłaciłam na IKE i IKZE około 11 000 zł. Wygląda jak fajny ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1RKOC102CiM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1RKOC102CiM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1RKOC102CiM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1RKOC102CiM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1RKOC102CiM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/1RKOC102CiM/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Inwestorka od zera",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T20:32:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5L2dEVGG2qV4XH_TXRT5vODdinc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "rfmtaPNHwSA"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-10T07:45:29Z",
+        "channelId": "UC2vD3xkNLWKKMDEtO0QnLpQ",
+        "title": "IKE vs IKZE - Dlaczego jedno jest LEPSZE od drugiego?",
+        "description": "Ike oraz Ikze to obowiązkowe pozycje dla każdego kto poważnie myśli o swoich finansach w naszym kraju. Rozwiązania te ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rfmtaPNHwSA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rfmtaPNHwSA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rfmtaPNHwSA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rfmtaPNHwSA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rfmtaPNHwSA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/rfmtaPNHwSA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Człowiek Niezależny",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-10T07:45:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "K56F1_I6uVEWNEfDdsv6WqWxkds",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "82eLPTaKEe8"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-21T14:00:32Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Ile trzeba mieć, żeby ŻYĆ z IKE i IKZE? Policzyłem każdy scenariusz!",
+        "description": "Masz IKE. Wpłacasz regularnie. Ale czy wiesz, ile konkretnie potrzebujesz zgromadzić, żeby móc z tego żyć na emeryturze?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/82eLPTaKEe8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/82eLPTaKEe8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/82eLPTaKEe8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/82eLPTaKEe8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/82eLPTaKEe8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-21T14:00:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "byFt560ljA86r-wCqkMf9l8NU0c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BpGQfk3zPcs"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-11T19:59:21Z",
+        "channelId": "UCqvkwZLk3L3BE8KR1-n9Ffg",
+        "title": "WSZYSTKO CO MUSZISZ WIEDZIEĆ O IKE I IKZE W 2026 ROKU!",
+        "description": "xtb #investingpro #współpraca ✓ Poznaj InvestingPro ➡️https://www.investing-referral.com/zbrojastudio/ ✓ Załóż konto w XTB: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BpGQfk3zPcs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BpGQfk3zPcs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BpGQfk3zPcs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BpGQfk3zPcs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BpGQfk3zPcs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Wszystko o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-11T19:59:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "h9SyUsvi1-Gjs6Ct_aarscpTyvU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5cSMYdSYbeg"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-16T15:22:14Z",
+        "channelId": "UC7iTSjq8MDYgaVvrYHt-qug",
+        "title": "IKE i IKZE od podstaw: ile zostaje bez podatku Belki?",
+        "description": "500 zł miesięcznie przez 20 lat w całej warszawskiej giełdzie (WIG): na zwykłym rachunku podatek Belki przy sprzedaży to ponad ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5cSMYdSYbeg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5cSMYdSYbeg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5cSMYdSYbeg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5cSMYdSYbeg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5cSMYdSYbeg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zrozumieć Finanse",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-16T15:22:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8csFsuioyhnqbrqy_ZeA8iqJ4_c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5OswQHiYX-M"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-20T08:00:28Z",
+        "channelId": "UCN2ggLBb6Zv7HiOpXdVZUpg",
+        "title": "IKE, IKZE czy OKI? Które konto najlepiej chroni Twoje oszczędności.",
+        "description": "Podatek Belki od ponad 20 lat uszczupla nasze zyski kapitałowe o równe 19%. W połączeniu z inflacją to potężny cios w budowę ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5OswQHiYX-M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5OswQHiYX-M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5OswQHiYX-M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5OswQHiYX-M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5OswQHiYX-M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/5OswQHiYX-M/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Finanse na Spokojnie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-20T08:00:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "d5Bbv6ZubjDhF0Za5Po70md8UEU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AXsm4rxSFyc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-03T06:30:18Z",
+        "channelId": "UCztEfYC19HW3rHS8G6Xa3qA",
+        "title": "IKE czy IKZE? Różnica w jednym filmie",
+        "description": "IKZE: ulga w PIT od razu, przy wypłacie po 65. roku życia 10% ryczałtu. IKE: bez ulgi przy wpłacie, za to przy wypłacie na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AXsm4rxSFyc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AXsm4rxSFyc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AXsm4rxSFyc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AXsm4rxSFyc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AXsm4rxSFyc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "AlphaInvestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-03T06:30:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cDYr7B31AkUE2W0lNhX4BUM9EHM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AU-UfYDBhkI"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-08T16:25:12Z",
+        "channelId": "UCzHUL45GdSbPVt11WP5jKyQ",
+        "title": "IKE czy IKZE? Gdzie lepiej odkładać na emeryturę",
+        "description": "IKE i IKZE różnią się przede wszystkim momentem korzyści podatkowej, zasadami wypłaty i dostępem do pieniędzy przed ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AU-UfYDBhkI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AU-UfYDBhkI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AU-UfYDBhkI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AU-UfYDBhkI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AU-UfYDBhkI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Złoty Doradca",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-08T16:25:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MeUf9Wj9M69p2Efdr9Gu0vg4nzE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BiXuNWHSbyI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T07:15:07Z",
+        "channelId": "UCfvR4QTLT5GAtrWtCR5WgSA",
+        "title": "IKE czy IKZE – co wybrać w 2026? Głęboka analiza opłacalności i strategia łączenia kont IKE+IKZE",
+        "description": "W tym wideo analizujemy opłacalność kont IKE oraz IKZE w 2026 roku. Dowiedz się, które konto wybrać, aby skutecznie obniżyć ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BiXuNWHSbyI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BiXuNWHSbyI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BiXuNWHSbyI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BiXuNWHSbyI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BiXuNWHSbyI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/BiXuNWHSbyI/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Bankowe ABC",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T07:15:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hsA3xCp0CyH2qs6hZEgorkrYECU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PgKeY1sT98Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T09:34:28Z",
+        "channelId": "UCtUy3kJHoj6vmOdSoqluS6g",
+        "title": "IDIOTYCZNE POMYSŁY ZMIAN IKE I IKZE #ike #ikze #finanse #podatki #zarobki",
+        "description": "Jeden nagłówek i dwa absurdy! Oczywiście pierwszym absurdem jest to, że klasycznie media informacyjne są mediami ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PgKeY1sT98Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PgKeY1sT98Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PgKeY1sT98Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PgKeY1sT98Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PgKeY1sT98Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "MICHALTRE_FINANSE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T09:34:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "AY1DwrXNkakI5294rkTF36zhdzw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OU2q33IkV2w"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-28T05:00:17Z",
+        "channelId": "UC9SqKQ22YCmbR3kw6eIeU8w",
+        "title": "💰 IKE czy IKZE — czym się różnią? #ike #ikze #inwestowanie #finanseosobiste",
+        "description": "IKE czy IKZE — czym się różnią? Jeśli interesujesz się oszczędzaniem, inwestowaniem i budowaniem kapitału, prędzej czy ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OU2q33IkV2w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OU2q33IkV2w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OU2q33IkV2w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OU2q33IkV2w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OU2q33IkV2w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Prowizja i Kapitał",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-28T05:00:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "J1kDyHawmDmHiZd5YWYrgHJx_04",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oQyTvYzxtJQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-27T10:13:20Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "Co dalej z IKE i IKZE? Powstaje IKE+ ? O co chodzi? #giełda #inwestycje",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oQyTvYzxtJQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oQyTvYzxtJQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oQyTvYzxtJQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oQyTvYzxtJQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oQyTvYzxtJQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-27T10:13:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UWC4GgplP2oS-rnToKNnnUefEEU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nEJdzJaWCSQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T16:06:34Z",
+        "channelId": "UCYEV_X4SoChOoSgdk_1EzFw",
+        "title": "IKE czy IKZE? 4 różnice i ile odzyskasz z PIT (2026)",
+        "description": "Limity 2026: IKE 28 260 zł, IKZE 11 304 zł (JDG 16 956 zł). Zwrot z PIT przy progu 12% i 32%. Materiał edukacyjny, nie porada ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nEJdzJaWCSQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nEJdzJaWCSQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nEJdzJaWCSQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nEJdzJaWCSQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nEJdzJaWCSQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Nudny Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T16:06:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-4FfpYXLpsaTb7wUIuq8v1Cbbfc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "v-yHR7kOeVs"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-09T10:50:12Z",
+        "channelId": "UCG4T6bLDq2TdAdRAp2GDOCw",
+        "title": "Zbuduję milionowy kapitał na IKE/IKZE na waszych oczach. Konkretne zasady wyboru najlepszych spółek.",
+        "description": "Konta IKE, IKZE, PPK i OKI to genialne narzędzia dla każdego człowieka, któremu zależy na długoterminowej, racjonalnej ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/v-yHR7kOeVs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/v-yHR7kOeVs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/v-yHR7kOeVs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/v-yHR7kOeVs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/v-yHR7kOeVs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Zawód Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-09T10:50:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "qoznzf8h0t5_Dri-Px5PrfQQvJI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "y7WZsdG1TfQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-20T18:00:06Z",
+        "channelId": "UC0jssgYBZNjM0AulF4afXXw",
+        "title": "IKE 2026 – jak działa Indywidualne Konto Emerytalne i czy warto je mieć? | Lekcje bankowości",
+        "description": "IKE 2026 – jak działa Indywidualne Konto Emerytalne? Ile można wpłacić, kiedy można wypłacić pieniądze i na czym polega ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/y7WZsdG1TfQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/y7WZsdG1TfQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/y7WZsdG1TfQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/y7WZsdG1TfQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/y7WZsdG1TfQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Lekcje Bankowości",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-20T18:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vPgOpMhV8PRxJ1tA9WvbOKapzZQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fOJBq2QRnqI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-04T20:12:31Z",
+        "channelId": "UCYEV_X4SoChOoSgdk_1EzFw",
+        "title": "IKE vs IKZE w 4 rundach. Do 3 617 zł zwrotu z PIT",
+        "description": "IKE i IKZE porównane w 4 rundach: ulga w PIT, podatek przy wypłacie, wiek wypłaty i limit 2026. Do tego wyliczenie, ile zwrotu z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fOJBq2QRnqI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fOJBq2QRnqI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fOJBq2QRnqI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fOJBq2QRnqI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fOJBq2QRnqI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Nudny Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-04T20:12:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "xzFtUVkV5FIlIkufF8fbpQFPn-Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "12vswqZ64zs"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T06:15:07Z",
+        "channelId": "UCfvR4QTLT5GAtrWtCR5WgSA",
+        "title": "IKE i IKZE: Jak wybrać odpowiednie rozwiązanie dla Twojej emerytury?",
+        "description": "Chcesz skutecznie oszczędzać na emeryturę i płacić niższe podatki? Zobacz jak działają IKE i IKZE oraz jak pomnażać swój ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/12vswqZ64zs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/12vswqZ64zs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/12vswqZ64zs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/12vswqZ64zs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/12vswqZ64zs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Bankowe ABC",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T06:15:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MtlWA8e9uv5GlWdkK6Cc3tz3o8A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4rGFSQVs2Pc"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-14T18:09:22Z",
+        "channelId": "UCidKgp12nL2NhtFVy9R46rg",
+        "title": "IKE czy IKZE w 2026? Ta różnica to tysiące złotych podatku #ciekawostki #finanse #pieniądze",
+        "description": "IKE i IKZE — dwa konta, które pozwalają legalnie nie oddać fiskusowi podatku od oszczędzania na emeryturę. Działają odwrotnie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4rGFSQVs2Pc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4rGFSQVs2Pc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4rGFSQVs2Pc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4rGFSQVs2Pc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4rGFSQVs2Pc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tomasz_Kudla",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-14T18:09:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-abEL8wP_FH_0IpBWgPGzQE0-5Q",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sG0RzNbl0wE"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-26T16:51:00Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "IKZE daje tysiące złotych ulgi. Ale TEN błąd może Cię drogo kosztować",
+        "description": "Sprawdź nasz BEZPŁATNY kalkulator IKE/IKZE: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sG0RzNbl0wE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sG0RzNbl0wE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sG0RzNbl0wE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sG0RzNbl0wE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sG0RzNbl0wE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/sG0RzNbl0wE/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-26T16:51:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vF6sR8q7ZClH0BMpw3JqUaZZJ6M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "6Z53GRPP_W0"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-28T18:35:40Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "Zabezpieczenie IKE oraz IKZE w przypadku śmierci.#ike #ikze #finanse #pieniądze #spadek",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6Z53GRPP_W0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6Z53GRPP_W0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6Z53GRPP_W0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6Z53GRPP_W0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6Z53GRPP_W0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-28T18:35:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HQjtOeIpwA16-eEXJbU1nGFkttA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OqLk6O9PRks"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-16T16:00:22Z",
+        "channelId": "UC8Ymbs8znOAFmcCvWeHxZHQ",
+        "title": "IKE, IKZE i OKI - wszystkie różnice w 100 sekund",
+        "description": "Daty startu, limity wpłat na 2026, ulga w PIT, podatek przy wypłacie, blokada wieku i zagraniczne ETF-y. Wszystkie różnice między ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OqLk6O9PRks/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OqLk6O9PRks/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OqLk6O9PRks/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OqLk6O9PRks/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OqLk6O9PRks/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tomasz Pawlik",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-16T16:00:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dokSTmydPG2H2zXJ1NIm1FkvqOM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZoXJDCNIifo"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-13T18:14:11Z",
+        "channelId": "UCFsnIQ3q3GCEh0vE8rHhGzw",
+        "title": "IKE czy IKZE? Które konto wybrać w 2026",
+        "description": "IKE czy IKZE? Jedno daje 0% podatku od zysku na końcu, drugie zwrot z PIT co roku. Limity na 2026: • IKE - 28 260 zł • IKZE - 11 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZoXJDCNIifo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZoXJDCNIifo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZoXJDCNIifo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZoXJDCNIifo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZoXJDCNIifo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/ZoXJDCNIifo/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "Centruminwestowania",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-13T18:14:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KGztDcgjjZyAh1PtEKqqudzNByU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "95ixXDb6iPI"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-18T18:45:38Z",
+        "channelId": "UC816J_EZEICUYOhjTnk3o7Q",
+        "title": "Osobiste Konto Inwestycyjne OKI a IKE i IKZE. Jak skutecznie wykorzystać wszystkie ulgi podatkowe?",
+        "description": "Wkrótce do rachunków IKE i IKZE dołączy Osobiste Konto Inwestycyjne (OKI), oferując nowe możliwości budowania kapitału bez ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/95ixXDb6iPI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/95ixXDb6iPI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/95ixXDb6iPI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/95ixXDb6iPI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/95ixXDb6iPI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/95ixXDb6iPI/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "StockWatch.pl",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-18T18:45:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6SuUBqP-9HjRlIOLgRfD5UAz0mU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5HvqGhi-70M"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-27T18:31:35Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "Chcą zlikwidować IKE oraz IKZE #ike #ikze #pieniądze #giełda #ike+",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5HvqGhi-70M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5HvqGhi-70M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5HvqGhi-70M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5HvqGhi-70M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5HvqGhi-70M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-27T18:31:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PFCeUeAgfs6dgCSJ1WEAEaOVZi4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pItTg7tOOIQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T18:00:19Z",
+        "channelId": "UCCuQBWkyDFLq1VOpfUS1NlA",
+        "title": "40 tys. na IKE i IKZE to 60% pensji",
+        "description": "Instagram: https://www.instagram.com/inwestorkaodzera/ Policzyłam, ile to jest przy medianie wynagrodzeń w Polsce. Dla połowy ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pItTg7tOOIQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pItTg7tOOIQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pItTg7tOOIQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pItTg7tOOIQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pItTg7tOOIQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestorka od zera",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T18:00:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "83GSkvKbEKEp_r8aCU450d3TMHk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SEygcKvt1Qc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T15:30:22Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "Antypodatkowe pokrowce mogą być DZIURAWE!",
+        "description": "Drogie IKE lub IKZE jest gorsze niż tani produkt bez tej ulgi podatkowej. Nie musisz jednak godzinami przekopywać się przez ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SEygcKvt1Qc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SEygcKvt1Qc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SEygcKvt1Qc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SEygcKvt1Qc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SEygcKvt1Qc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/SEygcKvt1Qc/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T15:30:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YREmug15YYfZF8oMaDuo_AS1B84",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CP_oN55yrtE"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-29T17:02:53Z",
+        "channelId": "UCR0L0THa8DMTMpsRQKANxKA",
+        "title": "IKE czy IKZE? Oba rozwiązania są doskonałe ale są zależne od Twoich podatków. 🤔 #finanse #IKE #IKZE",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CP_oN55yrtE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CP_oN55yrtE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CP_oN55yrtE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CP_oN55yrtE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CP_oN55yrtE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jacek Oleksy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-29T17:02:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "haz0zzDpDhYh6yb82T2VrFoWgZo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iqV7m6tKb5A"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-18T17:41:50Z",
+        "channelId": "UCGe6sYpjzKyCC_K22ae1anw",
+        "title": "IKE czy IKZE w 2026? Jedna Liczba Rozstrzyga Caly Wybor",
+        "description": "Prawie kazdy material o IKE i IKZE konczy sie zdaniem \"to zalezy od twojej sytuacji\" — prawdziwym i bezuzytecznym. Ten film ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iqV7m6tKb5A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iqV7m6tKb5A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iqV7m6tKb5A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/iqV7m6tKb5A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iqV7m6tKb5A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kolejny Poziom",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-18T17:41:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "AFPViBdjUIxxyBI7H_NtrFJzbKY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4ZZ_7roFtVc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T07:57:58Z",
+        "channelId": "UCJqcmTSaILgcaYXqgnuzbbg",
+        "title": "Spot reklamowy promujący IKE/IKZE - listopad 2026 (30”)",
+        "description": "W przyszłość wchodzę po swojemu. Otwórz IKE lub IKZE w Alior Banku i zyskaj do 500 zł premii. Sprawdź: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4ZZ_7roFtVc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4ZZ_7roFtVc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4ZZ_7roFtVc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4ZZ_7roFtVc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4ZZ_7roFtVc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Alior Bank",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T07:57:58Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5Yjn-QrpkD8Es91gsOemSm50nm8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oigaycr9Ur4"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-11T19:13:09Z",
+        "channelId": "UC-xQCWMkC3MM-D7a-Tr8_AQ",
+        "title": "IKE czy IKZE — Które konto lepsze do inwestowania?",
+        "description": "Państwo zabiera 19% Twoich zysków z inwestycji. Ale istnieją dwa konta, dzięki którym możesz ten podatek legalnie ominąć. IKE ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oigaycr9Ur4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oigaycr9Ur4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oigaycr9Ur4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oigaycr9Ur4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oigaycr9Ur4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Dawid Inwestuje",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-11T19:13:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vUbkLM_moJp7uuIzH39wRx48m6w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "uDxCWE1TW8Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-03T10:09:42Z",
+        "channelId": "UCr0WU7ukAuZrDxLmTrBhR1w",
+        "title": "PZU Inwestycje. Oszczędzaj na najlepszych IKE i IKZE na rynku.",
+        "description": "Oszczędzanie na przyszłość na kontach IKE i IKZE daje bezpieczeństwo finansowe po zakończeniu kariery zawodowej, a w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uDxCWE1TW8Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uDxCWE1TW8Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uDxCWE1TW8Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uDxCWE1TW8Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uDxCWE1TW8Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "GrupaPZU",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-03T10:09:42Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "X4by-OUV4NdHqSQfU5swrfbm8io",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IBtE9EOxYqA"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-20T05:30:06Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "Najszybszy ruch od początku serii! IKE + IKZE na ATH! Nowy zakup za 35.000 PLN!",
+        "description": "Myślisz o przyszłości? Sprawdź możliwości IKE i IKZE w XTB, klikając w link i wpisując w trakcie rejestracji kod “OIZ”: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IBtE9EOxYqA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IBtE9EOxYqA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IBtE9EOxYqA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IBtE9EOxYqA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IBtE9EOxYqA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-20T05:30:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "AIYt_2VCyZiUxKXYb5e0dS6-dMk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "190bmOY1-VA"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-26T16:18:00Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "IKE i IKZE znikną na rzecz IKE+ ? O co chodzi z propozycjami zmian?",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/190bmOY1-VA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/190bmOY1-VA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/190bmOY1-VA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/190bmOY1-VA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/190bmOY1-VA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-26T16:18:00Z"
+      }
+    }
+  ]
+}

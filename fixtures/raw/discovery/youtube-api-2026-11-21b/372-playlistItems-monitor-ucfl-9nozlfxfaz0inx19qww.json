@@ -1,0 +1,37 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "2w3PttqSqXJe4i1jqpqjAFdjhYk",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Q4J7eFOMLIxt_xtRMr9vi5EdSL8",
+      "id": "VVVGTF85bm96TGZ4ZmFaMEluWDE5cVd3Ll9NM3NkM21NaDVr",
+      "contentDetails": {
+        "videoId": "_M3sd3mMh5k",
+        "videoPublishedAt": "2026-06-03T12:34:28Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "D22CkUNEQPv-qPt4B5Z5wjLznjM",
+      "id": "VVVGTF85bm96TGZ4ZmFaMEluWDE5cVd3LkdueGdkLV9SbUhJ",
+      "contentDetails": {
+        "videoId": "Gnxgd-_RmHI",
+        "videoPublishedAt": "2026-05-29T06:58:32Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "NeoYSw8JfMx8dV9DbaXF-Gy3vb0",
+      "id": "VVVGTF85bm96TGZ4ZmFaMEluWDE5cVd3LlZTbUgydWxjSDIw",
+      "contentDetails": {
+        "videoId": "VSmH2ulcH20",
+        "videoPublishedAt": "2026-05-21T13:59:47Z"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 3,
+    "resultsPerPage": 50
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "46FiWqKq7h39GZn-6IHsrbK9vZM",
+  "nextPageToken": "EAAaHlBUOkNESWlFRVF5TWtJMU56RTNPRVU1T1VFMFEwVQ",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "MH5mVh40QpB2CsaLk7S0k1ux4fo",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLmpVZmtvTi1oenhR",
+      "contentDetails": {
+        "videoId": "jUfkoN-hzxQ",
+        "videoPublishedAt": "2026-11-16T15:42:08Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "xxaAbLZkLeDt3Yjdv9GA4ShtPAI",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnkyQUNHYWNDbGVz",
+      "contentDetails": {
+        "videoId": "y2ACGacCles",
+        "videoPublishedAt": "2026-11-15T16:00:19Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "iJAaJ9MwGEfiBFggOX-rkqBs65E",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnVhLWt1Y1QwRTBF",
+      "contentDetails": {
+        "videoId": "ua-kucT0E0E",
+        "videoPublishedAt": "2026-11-13T15:48:50Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "qxJV_8vLiJnoY9ipykctD-xAr2c",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnh1RXA1cDJxSkxV",
+      "contentDetails": {
+        "videoId": "xuEp5p2qJLU",
+        "videoPublishedAt": "2026-11-12T18:43:59Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "uIqEgQi2z9o7vIElslQUisQZWxk",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnByWEpmRXR0V0RR",
+      "contentDetails": {
+        "videoId": "prXJfEttWDQ",
+        "videoPublishedAt": "2026-11-10T18:18:01Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "rdjOF5eMouKf62OG_-Z-Ypena0U",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLjBOVTJ3UE9ZTTBN",
+      "contentDetails": {
+        "videoId": "0NU2wPOYM0M",
+        "videoPublishedAt": "2026-11-09T13:08:32Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "5fovmQQ9-8CSI5BcdjcTJdvf98E",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLm5oa3dwNFZLNG5Z",
+      "contentDetails": {
+        "videoId": "nhkwp4VK4nY",
+        "videoPublishedAt": "2026-11-05T14:12:23Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "NzQRVTw85gS_UsKT06sSbT-fyzw",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLm1LSHBPSnMxVHRV",
+      "contentDetails": {
+        "videoId": "mKHpOJs1TtU",
+        "videoPublishedAt": "2026-11-01T16:00:23Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "9gZU2zrEjycpLe4VQm9a9_YRMnQ",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnV3RVhQZWhQVHBz",
+      "contentDetails": {
+        "videoId": "uwEXPehPTps",
+        "videoPublishedAt": "2026-10-29T16:30:23Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "lovcyFGO0sKrmuFPpWiVvChtEFY",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnB3VkVqNnN3M3p3",
+      "contentDetails": {
+        "videoId": "pwVEj6sw3zw",
+        "videoPublishedAt": "2026-10-28T17:08:29Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "UbvkJCMzPYGWClvHyoABb_QWvfo",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLmFQYWpiaV9XaFZJ",
+      "contentDetails": {
+        "videoId": "aPajbi_WhVI",
+        "videoPublishedAt": "2026-10-26T15:24:43Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "jCuk87R_dLKFuLXRyiSpg25OaxM",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLjF2ejl5YVVEZGM0",
+      "contentDetails": {
+        "videoId": "1vz9yaUDdc4",
+        "videoPublishedAt": "2026-10-25T16:00:35Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "6lBACpx84Zh_s1yxot7BISxQnGA",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLjRIbjRxOFNqdThJ",
+      "contentDetails": {
+        "videoId": "4Hn4q8Sju8I",
+        "videoPublishedAt": "2026-10-22T16:43:16Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "jgwXkA93_eHzQwafuQwWywbUw_4",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLjljZFVVc284ejNV",
+      "contentDetails": {
+        "videoId": "9cdUUso8z3U",
+        "videoPublishedAt": "2026-10-21T15:56:05Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "x7MYhj9hmQkVh0CvoVJUiDC1FW0",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLmtnOWRtZ25FV3Jz",
+      "contentDetails": {
+        "videoId": "kg9dmgnEWrs",
+        "videoPublishedAt": "2026-10-20T15:15:32Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "DvYT6RgTGsU_AQEjp7T5kOh3Cxk",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLlVYczh2NUZ1UG04",
+      "contentDetails": {
+        "videoId": "UXs8v5FuPm8",
+        "videoPublishedAt": "2026-10-19T11:42:47Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "__u1fZrbQEH_pc9R7bELU82KylI",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnFhRlJtbDl2dzAw",
+      "contentDetails": {
+        "videoId": "qaFRml9vw00",
+        "videoPublishedAt": "2026-10-18T15:00:00Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "4z_0zq-ylUscPhni4TOaMAwzgtw",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnNFRUNsMUsxT2Vz",
+      "contentDetails": {
+        "videoId": "sEECl1K1Oes",
+        "videoPublishedAt": "2026-10-16T09:24:31Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Nw7IscZgAZa0yBlqyLy2LT8M1VE",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnBqd1U3NGs1NE9B",
+      "contentDetails": {
+        "videoId": "pjwU74k54OA",
+        "videoPublishedAt": "2026-10-14T15:44:53Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "82y-qX_2JnHZSpVaksadTp3n8fk",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLlJYa2NtajhrZzVj",
+      "contentDetails": {
+        "videoId": "RXkcmj8kg5c",
+        "videoPublishedAt": "2026-10-13T06:57:39Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "ncX8tIkpN_ftXOlwcKeVg12W7pc",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnkzczMzT0lTVW5F",
+      "contentDetails": {
+        "videoId": "y3s33OISUnE",
+        "videoPublishedAt": "2026-10-12T18:20:30Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "vfo1Dln_Z4ubuxJ3UE9yXhvfcnk",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLlZ1ZzVsSDl2NVBN",
+      "contentDetails": {
+        "videoId": "Vug5lH9v5PM",
+        "videoPublishedAt": "2026-10-11T15:00:33Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Yqh452Ikj_tequTfqjxH-sjfguc",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLlM3YlJ1VUE1cWRz",
+      "contentDetails": {
+        "videoId": "S7bRuUA5qds",
+        "videoPublishedAt": "2026-10-09T13:18:41Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "NDPp0-R1LBze8OmXtm9Kx09kJ-s",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLjV2MWZLYVJDcTM0",
+      "contentDetails": {
+        "videoId": "5v1fKaRCq34",
+        "videoPublishedAt": "2026-10-08T07:16:33Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "uBFvdBq5TK04t9O3GPKj8GumvU4",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLmJrRnJQdU5Lb2pz",
+      "contentDetails": {
+        "videoId": "bkFrPuNKojs",
+        "videoPublishedAt": "2026-10-04T15:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "aYpaxbNyQ-GdgvLmsRxfyhiG-GA",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLlIxNGZLc0ZTSjV3",
+      "contentDetails": {
+        "videoId": "R14fKsFSJ5w",
+        "videoPublishedAt": "2026-09-29T07:53:28Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "EuAlWnA2IWWjpGA02uWeYO_Jh0A",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnlrdy14SjhzSHVv",
+      "contentDetails": {
+        "videoId": "ykw-xJ8sHuo",
+        "videoPublishedAt": "2026-09-25T08:35:27Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "GsA3lW0MVYVQYD-M2JSA_KI1WhI",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLjFyclItbjctU1ZJ",
+      "contentDetails": {
+        "videoId": "1rrR-n7-SVI",
+        "videoPublishedAt": "2026-09-18T12:05:23Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Q4MLfqWGBB5GDSpuzyNhLoRJd0s",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnh4RFhkbURMSkdj",
+      "contentDetails": {
+        "videoId": "xxDXdmDLJGc",
+        "videoPublishedAt": "2026-09-15T17:37:38Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "fZc7W6aX_orGJiH2X2tk4cHC4HY",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLlUxU1dZaV9mSTEw",
+      "contentDetails": {
+        "videoId": "U1SWYi_fI10",
+        "videoPublishedAt": "2026-09-06T15:00:23Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "sVhdiAHjXlmuu2x0joa81b8YaIw",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLmg2eS1EbkZrUklr",
+      "contentDetails": {
+        "videoId": "h6y-DnFkRIk",
+        "videoPublishedAt": "2026-09-01T05:50:34Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "jhwTxa30XxFVroklc7HjViiI_GM",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLjVreFE5SzFlTU13",
+      "contentDetails": {
+        "videoId": "5kxQ9K1eMMw",
+        "videoPublishedAt": "2026-08-31T09:02:22Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "JYP1xU7IubAVHdXS1N9WdRh8er0",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnZNQ0lQQVpwTmk4",
+      "contentDetails": {
+        "videoId": "vMCIPAZpNi8",
+        "videoPublishedAt": "2026-08-30T12:46:02Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "mBR6R7M6yV3UJR1hzr-Jhu1fuCU",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLlR2MTJRRm1RemFz",
+      "contentDetails": {
+        "videoId": "Tv12QFmQzas",
+        "videoPublishedAt": "2026-08-26T15:12:17Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "qsIt_q_fvQZl4CAr4s1UakUJU7Y",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLk15d0NRZVNkTlhj",
+      "contentDetails": {
+        "videoId": "MywCQeSdNXc",
+        "videoPublishedAt": "2026-08-23T15:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "8Ir5GSk3FSMDjsSoXGQ5E-nMqdE",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLmM3ck9DVHpSVW5F",
+      "contentDetails": {
+        "videoId": "c7rOCTzRUnE",
+        "videoPublishedAt": "2026-08-17T06:57:54Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "fjI4au0xF5vI5HSrRgyqAEjmY-4",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLk0yQ21xenBGSFpF",
+      "contentDetails": {
+        "videoId": "M2CmqzpFHZE",
+        "videoPublishedAt": "2026-08-16T15:00:22Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "2iuleRednQDXnZXufJQxdJ_rRqU",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLlpMSjJSMnRSekNZ",
+      "contentDetails": {
+        "videoId": "ZLJ2R2tRzCY",
+        "videoPublishedAt": "2026-08-11T19:17:36Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "dZc02SfxljiE1Cbw1YRm7A23ffg",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLm9qaWtXNXg2WVdB",
+      "contentDetails": {
+        "videoId": "ojikW5x6YWA",
+        "videoPublishedAt": "2026-08-09T15:00:19Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "jN_HRKy4343w3iOICNPsfaB4Tj0",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLjVSb3FZTHVLLUQ4",
+      "contentDetails": {
+        "videoId": "5RoqYLuK-D8",
+        "videoPublishedAt": "2026-08-06T10:49:19Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "tqLwEY0C1SYvWfHxyEBoem0RFw8",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLmJTa0YtQm9OZ2tR",
+      "contentDetails": {
+        "videoId": "bSkF-BoNgkQ",
+        "videoPublishedAt": "2026-08-02T15:00:36Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "qEVwR0wghPe0eYP4ZIHYB3bwISo",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLjRKb0ZfNDVBZWpv",
+      "contentDetails": {
+        "videoId": "4JoF_45Aejo",
+        "videoPublishedAt": "2026-07-23T10:03:37Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "QAAIzrujlJi6Oi6iVDgvvAneSPU",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLkE3bmVSaV9rLW9v",
+      "contentDetails": {
+        "videoId": "A7neRi_k-oo",
+        "videoPublishedAt": "2026-07-22T10:55:35Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "iGl50Q1tqLC-yatzDT5sZb1kmxY",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLm83TEFFOFhuU3Nr",
+      "contentDetails": {
+        "videoId": "o7LAE8XnSsk",
+        "videoPublishedAt": "2026-07-16T15:38:17Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "iL_OVovBqUKD5I6H7AHZ9UCcpj4",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLm5RR2Rkd2gxYUE4",
+      "contentDetails": {
+        "videoId": "nQGddwh1aA8",
+        "videoPublishedAt": "2026-07-03T14:14:11Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "uy9w1JNy3Cpw01nZVIM4GoxhwXo",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLkh1dFV4bDRNWmhv",
+      "contentDetails": {
+        "videoId": "HutUxl4MZho",
+        "videoPublishedAt": "2026-06-28T17:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "YoA6DXhN2SLw-L6dan5ZyCDjELc",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnltLTY5bi13LVVn",
+      "contentDetails": {
+        "videoId": "ym-69n-w-Ug",
+        "videoPublishedAt": "2026-05-29T10:28:55Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "6rzdjxoj61JtkVM4Siu-En1oD7M",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLnM2Y0ozNThDZ1pr",
+      "contentDetails": {
+        "videoId": "s6cJ358CgZk",
+        "videoPublishedAt": "2026-05-27T14:15:24Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "vvXxCU8m-I1wJKJ3WLLz12iVn2w",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLmRzTEtaUEZRUWQw",
+      "contentDetails": {
+        "videoId": "dsLKZPFQQd0",
+        "videoPublishedAt": "2026-05-25T08:28:30Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "jFmLxpEUphXFb69vynbfw65r5tU",
+      "id": "VVVMaUVVRE1BOTMwc0NiMkQzaW5hbFBnLm5qYjJRX2xzLU9F",
+      "contentDetails": {
+        "videoId": "njb2Q_ls-OE",
+        "videoPublishedAt": "2026-05-22T10:49:08Z"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 874,
+    "resultsPerPage": 50
+  }
+}

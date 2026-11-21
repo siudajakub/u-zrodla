@@ -1,0 +1,82 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "-ZLnGFQGqhK7JolgV3BUvYU8elY",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "RPBZT7OeBTcFkZRnEy1EZ8POGc4",
+      "id": "VVV6SGVDRmtWTjJJT1dqYzU3dU91dlN3LmtvUTRidGxES2NJ",
+      "contentDetails": {
+        "videoId": "koQ4btlDKcI",
+        "videoPublishedAt": "2026-06-03T01:30:20Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "TwP3q-AiE9OkRFd-4TpTn2BEtSY",
+      "id": "VVV6SGVDRmtWTjJJT1dqYzU3dU91dlN3Lko1N281REpQVWlj",
+      "contentDetails": {
+        "videoId": "J57o5DJPUic",
+        "videoPublishedAt": "2026-06-03T01:30:17Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "r4YtbLNnmyy1QQkj3ZL_lLlDFxs",
+      "id": "VVV6SGVDRmtWTjJJT1dqYzU3dU91dlN3LnhCYnBtVHRfT2tV",
+      "contentDetails": {
+        "videoId": "xBbpmTt_OkU",
+        "videoPublishedAt": "2026-06-03T01:30:15Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "WCGfs2hgSg_rvWdP2X2auuAcYGI",
+      "id": "VVV6SGVDRmtWTjJJT1dqYzU3dU91dlN3LkxZdDdCRFNVbjZn",
+      "contentDetails": {
+        "videoId": "LYt7BDSUn6g",
+        "videoPublishedAt": "2026-06-03T01:30:12Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "-3vg8Vk2JdeaPUHto1RPFLihIMU",
+      "id": "VVV6SGVDRmtWTjJJT1dqYzU3dU91dlN3LkNBcHpEUjZ3clM0",
+      "contentDetails": {
+        "videoId": "CApzDR6wrS4",
+        "videoPublishedAt": "2026-06-03T01:30:07Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "545b04EPACvd5n4Ff7rDVu2dofg",
+      "id": "VVV6SGVDRmtWTjJJT1dqYzU3dU91dlN3Llh6TTRkeTZlblk0",
+      "contentDetails": {
+        "videoId": "XzM4dy6enY4",
+        "videoPublishedAt": "2026-06-02T17:00:05Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "LVN6VC4kv6h58qb1OHt_wJPdj40",
+      "id": "VVV6SGVDRmtWTjJJT1dqYzU3dU91dlN3LnRLeFhnS1FnYXZF",
+      "contentDetails": {
+        "videoId": "tKxXgKQgavE",
+        "videoPublishedAt": "2026-06-01T17:00:32Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "_jCXR_kcj9igAcNOrZwT1Ag7AsM",
+      "id": "VVV6SGVDRmtWTjJJT1dqYzU3dU91dlN3LjNSdVpoUTVLNVo0",
+      "contentDetails": {
+        "videoId": "3RuZhQ5K5Z4",
+        "videoPublishedAt": "2026-05-31T17:00:28Z"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 8,
+    "resultsPerPage": 50
+  }
+}

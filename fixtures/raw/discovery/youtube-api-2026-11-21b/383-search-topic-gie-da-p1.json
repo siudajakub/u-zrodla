@@ -1,0 +1,2262 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "iD7Wn0KQrYiD5nRcxK-PFsTUcWI",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hQbFo65sFimDV-amP_zTfBpqCbQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tVrt5iN1vX8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T15:26:19Z",
+        "channelId": "UCtTpDSRTegHewCxP9GTUaXQ",
+        "title": "GIEŁDA W PANICE. Anthropic BIJE REKORDY! Xi Jinping UPOKORZYŁ Putina",
+        "description": "Sprawdź wyzwania tradignowe od Fintokei - https://www.fintokei.com/?affiliate=2299 Skorzystaj z darmowej próby, klikając w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tVrt5iN1vX8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tVrt5iN1vX8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tVrt5iN1vX8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tVrt5iN1vX8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tVrt5iN1vX8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "FXMAG - tłumaczymy świat finansów",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T15:26:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bL7hIrRDWtXZBeoGSggsf5GnECU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "aXdf3DzOdqE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T09:00:07Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "Krach na Wall Street! NVIDIA -13%! GPW też słabnie! Co dalej?",
+        "description": "Myślisz o przyszłości? Sprawdź możliwości IKE i IKZE w XTB, klikając w link i wpisując w trakcie rejestracji kod “OIZ”: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aXdf3DzOdqE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aXdf3DzOdqE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aXdf3DzOdqE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/aXdf3DzOdqE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/aXdf3DzOdqE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T09:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5JvJkeQnuvi0FYZc39uP-ozK97M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "RVOwoPXLAYM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T13:14:58Z",
+        "channelId": "UCypyS1WrEyNu8Z7w0sER8ZA",
+        "title": "GIEŁDA NUMIZMATYCZNA Łódź 2026",
+        "description": "Giełda w Łodzi: 21-22 listopada 2026, Łódź - Hala Expo, al. Politechniki 4. Zapraszają kolekcjonerów, hobbystów, zbieraczy oraz ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RVOwoPXLAYM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RVOwoPXLAYM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RVOwoPXLAYM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RVOwoPXLAYM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RVOwoPXLAYM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Złoty Bazyliszek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T13:14:58Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "e9T0He2UUXnbe2f9AsI6q-ph558",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oZPrbO5by48"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T17:30:11Z",
+        "channelId": "UC3JgUN78v4RX3saWqmCEV1g",
+        "title": "Giełdy przed dużym zwrotem? Co zwiastują spadki surowców i ucieczka z technologii? | Extra Analiza",
+        "description": "Czy debiut Anthropic odmieni sytuację na giełdach, czy czeka nas większa korekta? Marcin Tuszkiewicz analizuje wyniki spółek, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/oZPrbO5by48/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Marcin Tuszkiewicz | Inwestowanie & Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T17:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2mYUXPrgscLLaB8r5MdL-g-KSok",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dr5k8f7WmtQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T08:13:27Z",
+        "channelId": "UCPRzGGNYlsx865o_6pE8nlw",
+        "title": "Giełda Zwierząt Lublin 21.11.2026 gołębie, króliki, kury, egzotyka, kaczki ",
+        "description": "dziękuję za obejrzenie mojej relacji i standardowo zapraszam za tydzień #pigeon #giełda #targ #zwierzeta.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dr5k8f7WmtQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dr5k8f7WmtQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dr5k8f7WmtQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dr5k8f7WmtQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dr5k8f7WmtQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Mała Hodowla Gołębi",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T08:13:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "o_mVKSSfYenFYODs8DYPlmVu-Pw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nhfgy1ITJ0Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T11:04:16Z",
+        "channelId": "UCdiAORc5zDcFqhojS9LNT0w",
+        "title": "Mocne spadki na GPW: Allegro, KGHM i Asbis pod presją",
+        "description": "TELEWIZJA NA ŻYWO ➡ http://youtube.com/@TelewizjaBIZNES24/streams OFICJALNA STRONA ➡ http://biznes24.pl ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nhfgy1ITJ0Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nhfgy1ITJ0Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nhfgy1ITJ0Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nhfgy1ITJ0Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nhfgy1ITJ0Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Telewizja BIZNES24",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T11:04:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-enAhW9a2L17e_7-cDFR1lWNNIA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gB3cMg56mRU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T09:22:41Z",
+        "channelId": "UCL8l0qKn8uO0Pea-yBbZDQA",
+        "title": "Hossobessa trwa. Anthropic, Nvidia, surowce i koniec eldorado na GPW? | Analizy LIVE",
+        "description": "Świetne wyniki, a na giełdach nerwowo. Ropa tanieje, AI pochłania miliardy, a Warszawa traci komfort. Kupować przeceny czy ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gB3cMg56mRU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gB3cMg56mRU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gB3cMg56mRU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gB3cMg56mRU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gB3cMg56mRU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Inwestowanie, gospodarka, świat. Analizy Live",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T09:22:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6SiY_CO5hINeY2jI5Vhs9m-Jfi8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qPol47sdDPE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-06T08:26:38Z",
+        "channelId": "UCAl0XDWVK5_dNrrwl4da3jA",
+        "title": "Spadki kupuje. Wzrosty sprzedaje. + UUUU, NVDA, INTEL, ARM, AMAZON, MP, MRVL",
+        "description": "KURS ANALIZY I MOJE STRATEGIE https://longplan.pl/produkt/kat-pro-2gt-kurs-analiza-zarzadzania-i-strategii/ Wykresy rysuje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qPol47sdDPE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qPol47sdDPE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qPol47sdDPE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qPol47sdDPE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qPol47sdDPE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda jest Prosta",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-06T08:26:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lqBjd58Kw3J77iDsg2yYpx_lkoI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZaAWx8GKlms"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T07:09:31Z",
+        "channelId": "UCAl0XDWVK5_dNrrwl4da3jA",
+        "title": "Dolar reaguje. OKAZJE zaczynają się na giełdzie. GOOGL, INTEL, ARM, BUMECH",
+        "description": "KURS ANALIZY I MOJE STRATEGIE https://longplan.pl/produkt/kat-pro-2gt-kurs-analiza-zarzadzania-i-strategii/ Wykresy rysuje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZaAWx8GKlms/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZaAWx8GKlms/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZaAWx8GKlms/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZaAWx8GKlms/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZaAWx8GKlms/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda jest Prosta",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T07:09:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "t54-tyymIO-YVqXIj3iG9aEMKLM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "b_VBKKu7g9w"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T11:22:06Z",
+        "channelId": "UCvEV7e_zb6UsUq7BXy9cntw",
+        "title": "Krew na giełdzie! Sprawdzam, czy to okazja #inwestowanie #giełda",
+        "description": "Nasdaq stracił 10% w tydzień, a VIX, czyli indeks strachu, skoczył do 35,89. Sprawdziłem 22 przypadki, gdy VIX po dłuższym ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b_VBKKu7g9w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b_VBKKu7g9w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b_VBKKu7g9w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/b_VBKKu7g9w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/b_VBKKu7g9w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/b_VBKKu7g9w/sardefault.jpg",
+            "width": 941,
+            "height": 1672
+          }
+        },
+        "channelTitle": "kyudo | krypto & finanse",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T11:22:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PQtD--JKPCi3MuK-S4BnL7l9umA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ePfzHQVf-lc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T17:59:32Z",
+        "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+        "title": "Kupiłem te spółki za 40 tysięcy zł. To Wy zbudowaliście ten portfel! | PORTFEL WIDZÓW 02",
+        "description": "Znajdź swój cel, dla którego warto inwestować. Zacznij razem z aplikacją XTB — https://link-pso.xtb.com/pso/kdg44 Rejestrując ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ePfzHQVf-lc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ePfzHQVf-lc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ePfzHQVf-lc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ePfzHQVf-lc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ePfzHQVf-lc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Piotr Cymcyk - Merytorycznie o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T17:59:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "W7qMcWr6HUnTmU1ImtjQV-SGX3I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OfSaAGBF2mk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T08:20:06Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Nowe rozdanie na GPW! Nowy tydzień przyniesie kolejne ATH? | Otwarcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OfSaAGBF2mk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OfSaAGBF2mk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OfSaAGBF2mk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OfSaAGBF2mk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OfSaAGBF2mk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T08:20:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "xmV2fHw2Zeq9w6XzCtYZ8Orfp3A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "eFqQOcHo7Bs"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T14:00:23Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Kończymy właśnie cykl inwestycyjny AI? Gdzie kapitał po tym zacznie napływać?",
+        "description": "Jedno ze starszych kont na których inwestuję - LYNX. Przy rejestracji z tego linku otrzymasz 500 € zwrotu z prowizji: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eFqQOcHo7Bs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eFqQOcHo7Bs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eFqQOcHo7Bs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/eFqQOcHo7Bs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/eFqQOcHo7Bs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/eFqQOcHo7Bs/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T14:00:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "a5rkAuIYfEYkEjy-VdMBd_ojXWM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vUy5BNX-VWs"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T18:12:11Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Zamknięcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vUy5BNX-VWs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vUy5BNX-VWs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vUy5BNX-VWs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vUy5BNX-VWs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vUy5BNX-VWs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T18:12:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x3zMDe7glJSjvfQwemiVsgL4FjA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dlLPpjCAS8I"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T15:40:31Z",
+        "channelId": "UCBEGi9VJj43G_ISUDRFEsAA",
+        "title": "🔥OTWARCIE na WALL STREET: Szybki Komentarz🔥",
+        "description": "Partnerem odcinka jest DM XTB - XTB Investing Masterclass 2026 ➡➡ zobacz ➡➡ https://link-pso.xtb.com/pso/Muvvm ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dlLPpjCAS8I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dlLPpjCAS8I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dlLPpjCAS8I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dlLPpjCAS8I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "AceMarketU-TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T15:40:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3DIpDGjSYTjWJ_Tyu55V8kIexPo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KhUYRUnut1Y"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T19:20:42Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "Rynki się posypały! Co dalej? Potężne spadki najmocniejszych spółek! #giełda #inwestycje",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KhUYRUnut1Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KhUYRUnut1Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KhUYRUnut1Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KhUYRUnut1Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KhUYRUnut1Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T19:20:42Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RjcBgeFMfnIG28LHSgSGNXxWvO4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QQi2sXy4RMQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T18:31:44Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Zamknięcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QQi2sXy4RMQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QQi2sXy4RMQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QQi2sXy4RMQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QQi2sXy4RMQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QQi2sXy4RMQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T18:31:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WwOGkSEdRiLg3bBgqZZR7ge1jnw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nYHaxY9BJh4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-15T14:00:32Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Nvidia bez Huanga?! Początek końca giganta AI? #GITnews",
+        "description": "Teraz możecie tutaj inwestować również w polskie akcje i w planach inwestycyjnych bez płacenia prowizji za transakcje: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/nYHaxY9BJh4/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-15T14:00:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "I7nxRDSSQ_DzJLpDTH7l0F8Lp8o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "46Rqd4HTrGE"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-14T16:00:10Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "Mocne spółki po korekcie blisko sygnałów kupna! GPW na ATH! Dziwne wydarzenia w USA...",
+        "description": "Myślisz o przyszłości? Sprawdź możliwości IKE i IKZE w XTB, klikając w link i wpisując w trakcie rejestracji kod “OIZ”: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/46Rqd4HTrGE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/46Rqd4HTrGE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/46Rqd4HTrGE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/46Rqd4HTrGE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/46Rqd4HTrGE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-14T16:00:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-SXbKxG3CaBeodLYd9LcuceTm3Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VE-rU8AUakk"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-14T20:45:32Z",
+        "channelId": "UCBEGi9VJj43G_ISUDRFEsAA",
+        "title": "⚡️DZIEŃ ODWROTU z Poważnym OSTRZEŻENIEM Dla GIEŁDY⚡️",
+        "description": "Partnerem odcinka jest DM XTB - Jak inwestować w sztuczną inteligencję? ➡➡ zobacz ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VE-rU8AUakk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VE-rU8AUakk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VE-rU8AUakk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VE-rU8AUakk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VE-rU8AUakk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "AceMarketU-TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-14T20:45:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hhYg63R188B4IJEtttNn938NBFI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AQgB7uaKHQA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T16:00:03Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "Niemcy w recesji, a giełda zaczyna kupować. Pociąg odjeżdża?",
+        "description": "współpraca XTB [współpraca] Tutaj Kupisz Akcje i ETFy (XTB): https://link-pso.xtb.com/pso/DwCbZ Zapisz się za darmo na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AQgB7uaKHQA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AQgB7uaKHQA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AQgB7uaKHQA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AQgB7uaKHQA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AQgB7uaKHQA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/AQgB7uaKHQA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T16:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-hLfhtawAqQpClOUFGI49uiIni8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "R11G-1M5pI4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T18:22:41Z",
+        "channelId": "UCDht0q0BlfgAm93wbp69Xqw",
+        "title": "#elonmusk #giełda #podcast",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/R11G-1M5pI4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/R11G-1M5pI4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/R11G-1M5pI4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/R11G-1M5pI4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/R11G-1M5pI4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Pasjonaty",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T18:22:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "uXvbhGLv5jihdJQ08wsxnXJicVA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Rqk8rAUzia4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T18:49:41Z",
+        "channelId": "UCuZtZUUAp_Qw1akwHFPGc5A",
+        "title": "Ile zarobiłbyś na GTA V ? #inwestycje #giełda",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Rqk8rAUzia4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Rqk8rAUzia4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Rqk8rAUzia4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Rqk8rAUzia4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Rqk8rAUzia4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "osobisty_makler",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T18:49:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "o5giorZms4HpYw-H5R-yiZCFxRE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oKrDhQD-qgc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T08:28:41Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Otwarcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oKrDhQD-qgc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oKrDhQD-qgc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oKrDhQD-qgc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oKrDhQD-qgc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oKrDhQD-qgc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T08:28:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cIe_40kgg_I0zWyG8OfaMAHuUoo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HbieU1aGvAM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-13T07:21:21Z",
+        "channelId": "UCAl0XDWVK5_dNrrwl4da3jA",
+        "title": "BITCOIN = szansa na zakupy? + spółki krypto. Dolar daje mocny sygnał. Omówienie zagrania",
+        "description": "KURS ANALIZY I MOJE STRATEGIE https://longplan.pl/produkt/kat-pro-2gt-kurs-analiza-zarzadzania-i-strategii/ Wykresy rysuje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HbieU1aGvAM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HbieU1aGvAM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HbieU1aGvAM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HbieU1aGvAM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HbieU1aGvAM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda jest Prosta",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-13T07:21:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "unc0J5U_fAEPtd6DFfGJIefeZ_E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "0-9vFwRib-A"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T06:00:26Z",
+        "channelId": "UCdiAORc5zDcFqhojS9LNT0w",
+        "title": "Podsumowanie sesji GPW: KGHM, NVIDIA, Tauron, Asbis i Modivo – analiza",
+        "description": "TELEWIZJA NA ŻYWO ➡ http://youtube.com/@TelewizjaBIZNES24/streams OFICJALNA STRONA ➡ http://biznes24.pl ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0-9vFwRib-A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0-9vFwRib-A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0-9vFwRib-A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/0-9vFwRib-A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/0-9vFwRib-A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/0-9vFwRib-A/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Telewizja BIZNES24",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T06:00:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "m0PJHlcL1aZykktQMyBZVnCWatQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jxuUkkeQf8U"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T15:43:53Z",
+        "channelId": "UCBEGi9VJj43G_ISUDRFEsAA",
+        "title": "👇NVIDIA Po Wynikach: Giełda w Górę Czy w Dół?👇",
+        "description": "Partnerem odcinka jest DM XTB - XTB Investing Masterclass 2026 ➡➡ zobacz ➡➡ https://link-pso.xtb.com/pso/Muvvm NVIDIA ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jxuUkkeQf8U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jxuUkkeQf8U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jxuUkkeQf8U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jxuUkkeQf8U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "AceMarketU-TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T15:43:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mOKF5kgTBR6W1izF2yHt69KErdQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "h_tniU4z67g"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T11:02:30Z",
+        "channelId": "UC9J9JyhNzrcehLdsU0qJvPg",
+        "title": "Strach kosztuje więcej niż brawura. Tracisz odbicia",
+        "description": "Myślisz, że największym wrogiem inwestora jest brawura? Tomasz Trela: badania pokazują, że więcej kosztuje strach.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/h_tniU4z67g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/h_tniU4z67g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/h_tniU4z67g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/h_tniU4z67g/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/h_tniU4z67g/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "ZYSKOWNA STRONA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T11:02:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DvDn3A80aj7xH_Q2EsiOtsB-0OI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "uFewBa-Rd9U"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-16T08:33:44Z",
+        "channelId": "UCLWBV_k8S-x3kjzWC2mScig",
+        "title": "Słomczyn lata 90. GIEŁDA SAMOCHODOWA, na której MAFIA zarabiała fortuny i ściągała haracze",
+        "description": "Odkryj mroczną prawdę o największym czarnym rynku samochodowym w powojennej Polsce! Przejdziemy przez brutalną historię ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uFewBa-Rd9U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uFewBa-Rd9U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uFewBa-Rd9U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uFewBa-Rd9U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uFewBa-Rd9U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/uFewBa-Rd9U/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Ślady historii",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-16T08:33:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RB0kClzaf8yoxyAhD3urqRLgT78",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "b5jUIQPN_D8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T19:41:40Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "Koniec Świata? Który raz to grają? #koniecświata #giełda #krach #recesja #panika",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b5jUIQPN_D8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b5jUIQPN_D8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b5jUIQPN_D8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/b5jUIQPN_D8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/b5jUIQPN_D8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T19:41:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9sQDOyGVuSiUok9MMYT3QwjDXPM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-4-gR2feaYs"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T17:11:15Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Zamknięcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-4-gR2feaYs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-4-gR2feaYs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-4-gR2feaYs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-4-gR2feaYs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-4-gR2feaYs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T17:11:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "JxkFVb6cAyDnaG1TfDEf0kylprM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "H3-3D4bWQos"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-22T07:39:04Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Blisko 20% akcji, blisko 19% dyskonto na akcjach popularnej spółki! | Otwarcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/H3-3D4bWQos/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/H3-3D4bWQos/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/H3-3D4bWQos/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/H3-3D4bWQos/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/H3-3D4bWQos/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-22T07:39:04Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "SlNVhk0K4aGGofCGt_ma36oT5p4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TOR2xVM_cQo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-03T10:25:11Z",
+        "channelId": "UCMh0w6OpVi085p81jK5TnzQ",
+        "title": "Jak przygotować się na krach na giełdzie? #akcje #giełda #inwestowanie",
+        "description": "Od 1950 roku S&P 500 spada o co najmniej 20% średnio raz na sześć lat. I nikogo to nie obchodzi. A przynajmniej nie powinno.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/TOR2xVM_cQo/sardefault.jpg",
+            "width": 1366,
+            "height": 2428
+          }
+        },
+        "channelTitle": "Tomasz Trela – Twój człowiek na Wall Street",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-03T10:25:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gbe5qmTKgU_Lnx26pF6zx_t1CuA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DiXrL4EvTj4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-18T15:58:25Z",
+        "channelId": "UCAl0XDWVK5_dNrrwl4da3jA",
+        "title": "ZŁOTO do piekła - tam je kupuje. SP500 i NASDAQ zbliżają się duże okazje.",
+        "description": "KURS ANALIZY I MOJE STRATEGIE https://longplan.pl/produkt/kat-pro-2gt-kurs-analiza-zarzadzania-i-strategii/ Wykresy rysuje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DiXrL4EvTj4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DiXrL4EvTj4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DiXrL4EvTj4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DiXrL4EvTj4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DiXrL4EvTj4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Giełda jest Prosta",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-18T15:58:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rQbF7OELCrC-E3CFO1AQHIFBn3E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9AOzE91J2nQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-08T07:38:05Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Czy geopolityczne zagrożenia zaszkodzą GPW? | Otwarcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9AOzE91J2nQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9AOzE91J2nQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9AOzE91J2nQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9AOzE91J2nQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9AOzE91J2nQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-08T07:38:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bGmpi2gyxT5LD97DrfxxO6t9MPA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "74S9gSnDiT0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T14:00:03Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Masz więcej niż przeciętny Polak?",
+        "description": "Tutaj do 100 tys. € miesięcznego obrotu nie płacicie prowizji za transakcje - XTB. Sam tu inwestuję: https://geolink.xtb.com/UjJpQ ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/74S9gSnDiT0/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T14:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "EIuRz33r5cN8x7FGGqhSJuZCI0A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "r1vgQtAwu1U"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-10T13:20:31Z",
+        "channelId": "UCtTpDSRTegHewCxP9GTUaXQ",
+        "title": "GIEŁDA SPADA, ZŁOTO LECI, BITCOIN TĄPNĄŁ. Co jeszcze trzyma tę hossę?",
+        "description": "Sponsorem odcinka jest CMC Markets. Inwestuj w CFD jak profesjonalista. W CMC Markets: https://www.fxmag.pl/cmc Chcesz ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/r1vgQtAwu1U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/r1vgQtAwu1U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/r1vgQtAwu1U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/r1vgQtAwu1U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/r1vgQtAwu1U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/r1vgQtAwu1U/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "FXMAG - tłumaczymy świat finansów",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-10T13:20:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jqoDW8uz_2qiaZL3EFYtEVpP5YM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "02E5f_a1FOU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T16:13:57Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Zamknięcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/02E5f_a1FOU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/02E5f_a1FOU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/02E5f_a1FOU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/02E5f_a1FOU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/02E5f_a1FOU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T16:13:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LHlfxpr9W8PNwOhof4U2Mp2QqX4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vuDgP0535Ss"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T07:22:54Z",
+        "channelId": "UC3JgUN78v4RX3saWqmCEV1g",
+        "title": "Totalna wyprzedaż giełd, miedzi, metali. Dlaczego i co dalej?",
+        "description": "Dlaczego Nvidia może być czarnym łabędziem tej hossy? To jest prawdziwy, niespodziewany event, który może mieć swoje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vuDgP0535Ss/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vuDgP0535Ss/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vuDgP0535Ss/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vuDgP0535Ss/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vuDgP0535Ss/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Tuszkiewicz | Inwestowanie & Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T07:22:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "aLkN_SbN_H0l7rNGVEMcUKRuiEQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mf62wMCkQWM"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T09:38:11Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "Wall Street straszy GPW! #giełda #inwestycje",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mf62wMCkQWM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mf62wMCkQWM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mf62wMCkQWM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mf62wMCkQWM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mf62wMCkQWM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T09:38:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YSBD9XNxi7av9monBHrpUe4TtVA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2Fou-Kwa2uo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T15:00:26Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Czy to początek większych problemów? Azja, Polska i światowe rynki.",
+        "description": "Tutaj do 100 tys. € miesięcznego obrotu nie płacicie prowizji za transakcje - XTB. Sam tu inwestuję: https://geolink.xtb.com/UjJpQ ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2Fou-Kwa2uo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2Fou-Kwa2uo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2Fou-Kwa2uo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2Fou-Kwa2uo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2Fou-Kwa2uo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/2Fou-Kwa2uo/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T15:00:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Ju3KjwJLlN5dRo1NvkI4j14n0h4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8UY2xvF7V58"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-18T20:33:31Z",
+        "channelId": "UCBEGi9VJj43G_ISUDRFEsAA",
+        "title": "👉Tego wykresu boi się giełda👈",
+        "description": "Partnerem odcinka jest DM XTB - Giełdowy Pakiet Edukacyjny ➡➡ zobacz ➡➡ https://link-pso.xtb.com/pso/oV9At Tego ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8UY2xvF7V58/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8UY2xvF7V58/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8UY2xvF7V58/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8UY2xvF7V58/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8UY2xvF7V58/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "AceMarketU-TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-18T20:33:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "leKTpUH-KmT5OHEEWgPAaRfLuPk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3aLIodsWJZc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T08:41:30Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Otwarcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3aLIodsWJZc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3aLIodsWJZc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3aLIodsWJZc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3aLIodsWJZc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3aLIodsWJZc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T08:41:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_UZGcUqroCgV9g5xqISrZjXO82c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nfu7lNhnQH8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T08:34:44Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Nvidia znów rozczarowuje! Allegro z mocnym raportem! | Otwarcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nfu7lNhnQH8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nfu7lNhnQH8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nfu7lNhnQH8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nfu7lNhnQH8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nfu7lNhnQH8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T08:34:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MKXhStBf5_JitSAr4ub2KyiO6m4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pGf4QqBbzOw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-07T19:24:40Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "Przegląd spółek z GPW LIVE! Deeskalacja tuż tuż?",
+        "description": "Myślisz o przyszłości? Sprawdź możliwości IKE i IKZE w XTB, klikając w link i wpisując w trakcie rejestracji kod “OIZ”: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pGf4QqBbzOw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pGf4QqBbzOw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pGf4QqBbzOw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pGf4QqBbzOw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pGf4QqBbzOw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-07T19:24:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "BVr7yiSupLnsz2QDX6YPNswCXBc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QuE-v8Zpgjo"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-27T08:31:41Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Sezon wynikowy Q3 2026, na GPW, rozkwita! | Otwarcie sesji na #GPW",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QuE-v8Zpgjo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QuE-v8Zpgjo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QuE-v8Zpgjo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QuE-v8Zpgjo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QuE-v8Zpgjo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-27T08:31:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HEk3Z9ut6MTG43XnJRARtHFfADE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7B4StpCosEQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-29T08:36:24Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "Dobry raport i skup akcji - czy pomogą dużej spółce z GPW? | Otwarcie sesji na #gpw",
+        "description": "Partnerem programu jest Dom Maklerski BOŚ. BossaStaticaTrader - transakcyjna wersja analitycznej klasyki. Statica5 z ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7B4StpCosEQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7B4StpCosEQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7B4StpCosEQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7B4StpCosEQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/7B4StpCosEQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-29T08:36:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XPZH4fUvvFDpUm0TO97VEIpGpw0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4Ui8pfWxYxo"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T12:23:57Z",
+        "channelId": "UChLwJNFJURZxzAAPEsrnxfQ",
+        "title": "Grzanki z GPW oddają wzrost! Co dalej? | Asbis, Digital Network i inne",
+        "description": "Myślisz o przyszłości? Sprawdź możliwości IKE i IKZE w XTB, klikając w link i wpisując w trakcie rejestracji kod “OIZ”: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4Ui8pfWxYxo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4Ui8pfWxYxo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4Ui8pfWxYxo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4Ui8pfWxYxo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4Ui8pfWxYxo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Podlacki - Obserwuj, Inwestuj, Zarabiaj!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T12:23:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7nom_lmODt-M9uG_iWcumPyYbb0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "g9wzIAosT-0"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-04T19:55:52Z",
+        "channelId": "UCarSdldjMo1Cq_Xgy4kOoOQ",
+        "title": "Giełda spada, a ja kupuję! 💰 7 000 zł na 3 spółki",
+        "description": "Giełda na czerwono, a ja robię zakupy! W listopadzie wpłaciłem 7 000 zł na rachunki maklerskie i dokupiłem akcje 3 spółek: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/g9wzIAosT-0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/g9wzIAosT-0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/g9wzIAosT-0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/g9wzIAosT-0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/g9wzIAosT-0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/g9wzIAosT-0/sardefault.jpg",
+            "width": 581,
+            "height": 1032
+          }
+        },
+        "channelTitle": "Inwestor z Ulicy akcje ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-04T19:55:52Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_IBmATHHyWbIVJnTtVGZc_zSX7I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2Hrga7ATLUk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T14:40:03Z",
+        "channelId": "UC65BgRPz27OfaozBf_NtAdg",
+        "title": "3 zagrania na giełdzie które będe obserwował w tym tygodniu #nvidia #etf #finanse #giełda",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2Hrga7ATLUk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2Hrga7ATLUk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2Hrga7ATLUk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2Hrga7ATLUk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2Hrga7ATLUk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Portevo-Finanse-Portfel ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T14:40:03Z"
+      }
+    }
+  ]
+}

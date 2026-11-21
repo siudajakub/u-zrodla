@@ -1,0 +1,2302 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "yaKBDeNNmoNc9a2sn88iEalTQvg",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "PL",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XqcPiRf_FQp2xyKTn-KSem2Iaus",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ryZCguUDZeI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-20T16:00:15Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "W co inwestować na IKE oraz IKZE: akcje, obligacje, ETF-y?",
+        "description": "Chcesz mieć więcej pieniędzy? Przeczytaj moją książkę: https://inwestokracja.pl/yt Chcesz otrzymywać DARMOWE lekcje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/ryZCguUDZeI/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-20T16:00:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "19r5dMGNLjm5Ba2-KRirg8ZX3hs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "crk--SYj6xI"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T17:00:08Z",
+        "channelId": "UCYlMSvlMqkIP3R5-MOubBoA",
+        "title": "ETF dla początkujących: W co inwestować? | Oskar Tryba",
+        "description": "ETF dla początkujących: co to jest ETF, jak kupić ETF w Polsce, ile to kosztuje i co lepsze: ETF czy akcje. Makler Oskar Tryba o ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/crk--SYj6xI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/crk--SYj6xI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/crk--SYj6xI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/crk--SYj6xI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/crk--SYj6xI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/crk--SYj6xI/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "ALLinTraders PL",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T17:00:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "h0qDxqnhp5s-Iw2Gb9v10tG3Nn0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ydYkx0_M2bY"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-16T14:00:29Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Czego NIE MÓWIĄ Ci o ETF-ach? Cała prawda, której finfluencerzy unikają!",
+        "description": "ETF-y są wszędzie. Marcin Iwuć, Kacper Snela, Pankracy, Zawód inwestor, Piotr Cymcyk — każdy polski finfluencer mówi: \"kup ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ydYkx0_M2bY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ydYkx0_M2bY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ydYkx0_M2bY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ydYkx0_M2bY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-16T14:00:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "G13V_mhKIQAMP9_jDksRFyj1VK0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NB9g-uJmK8g"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-30T16:00:15Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "Jaki ETF wybrać na start: S&amp;P 500 vs NASDAQ-100 vs cały świat?",
+        "description": "Chcesz mieć więcej pieniędzy? Przeczytaj moją książkę: https://inwestokracja.pl/yt Chcesz otrzymywać DARMOWE lekcje ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NB9g-uJmK8g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NB9g-uJmK8g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NB9g-uJmK8g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/NB9g-uJmK8g/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/NB9g-uJmK8g/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/NB9g-uJmK8g/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-30T16:00:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "njfYGiaVbUGC_MM3tLWFoX3vBLE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sutNVKMTwUE"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-25T15:51:02Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "Inwestowanie pasywne: Zanim kupisz pierwszy ETF, zrozum TE zasady [konferencja WPIC 2026]",
+        "description": "Chcesz ogarnąć finanse i zacząć inwestować? Sprawdź: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sutNVKMTwUE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sutNVKMTwUE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sutNVKMTwUE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sutNVKMTwUE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sutNVKMTwUE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/sutNVKMTwUE/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-25T15:51:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KW42WUL5eR-SdwG9UXFZxdcPF0o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dYXu91zJ45s"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-09T07:31:09Z",
+        "channelId": "UCxhAfhXu0ECIbt_2AN-NdHw",
+        "title": "Czym są ETFy? STRATEGIA inwestowania na kolejne lata.",
+        "description": "Masz 1000 zł i zastanawiasz się, w co inwestować w 2027 roku? ▶️ Gość Kazimierz Szpak CEO Beta TFI: KONTAKT: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dYXu91zJ45s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dYXu91zJ45s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dYXu91zJ45s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dYXu91zJ45s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dYXu91zJ45s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biznes Misja",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-09T07:31:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "P6qTopZYUWFDxAu_GQAkUPsZ_6o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3YOJufPgQTY"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T16:07:58Z",
+        "channelId": "UCMiJUXvEpHHW5JTnW-ez9EA",
+        "title": "Don&#39;t Buy The Wrong Dividend ETF! (SCHD vs. VYM vs. DGRO vs. JEPI)",
+        "description": "MY PATREON – My Portfolio, My Trades, Deep Dives, Q&A, Community: https://www.patreon.com/jerryromine MY WEALTH ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3YOJufPgQTY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3YOJufPgQTY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3YOJufPgQTY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3YOJufPgQTY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3YOJufPgQTY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/3YOJufPgQTY/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Jerry Romine Stocks",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T16:07:58Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LF_MeWJwisvHMOvUppsWTg7wRUI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oqbm0jxqhuo"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-27T13:54:01Z",
+        "channelId": "UCVK5sOPiHl9dPd4QvFBkm9Q",
+        "title": "ETF-y nie dadzą Ci bogactwa. Brutalna prawda o inwestowaniu, której nikt nie chce usłyszeć",
+        "description": "Pasywne ETF-y to tylko narzędzie, a prawdziwy kapitał budują wysokie zarobki – rynek weryfikuje złudzenia o szybkim bogactwie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oqbm0jxqhuo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oqbm0jxqhuo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oqbm0jxqhuo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oqbm0jxqhuo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oqbm0jxqhuo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Comparic Global Markets ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-27T13:54:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "keSObZlkAQZO616UcY7A0aHQT4o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1SPQpy7r5iU"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-29T07:03:24Z",
+        "channelId": "UC6SinQiw2eDU6k9tEXpZv9g",
+        "title": "ETF-y są lepsze od mieszkań? 🤔",
+        "description": "To nie jest pojedynek, w którym jedno rozwiązanie musi wygrać. Warto myśleć o dywersyfikacji. Im więcej niezależnych źródeł ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1SPQpy7r5iU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1SPQpy7r5iU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1SPQpy7r5iU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1SPQpy7r5iU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1SPQpy7r5iU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kuba Midel",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-29T07:03:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "54AdkOkD2T7rgBoJBSc0OlXgJPQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Q0uzgGG6JNU"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-05T07:37:20Z",
+        "channelId": "UCxhAfhXu0ECIbt_2AN-NdHw",
+        "title": "W co inwestować małe kwoty? Inwestowanie na 2027! Mateusz Mucha - Beta ETF",
+        "description": "W co inwestować małe kwoty? To musisz wiedzieć o ETF-ach! Mateusz Mucha - Beta ETF ▶️ Gość Mateusz Mucha: KONTAKT: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Q0uzgGG6JNU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Biznes Misja",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-05T07:37:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FJajH_8lWi4qIj7mOPnpvb66NQg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "538G4XdbLBU"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-11T14:23:40Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "10 000 zł w 5 ETF po 5 latach: kto wygrał? mWIG40 vs Nasdaq #etf #inwestowanie #giełda",
+        "description": "Zainwestowałem 10 000 zł w 5 ETF-ów: Nasdaq, S&P 500, mWIG40, rynki wschodzące, cały świat. Numer 1 zaskakuje.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/538G4XdbLBU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/538G4XdbLBU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/538G4XdbLBU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/538G4XdbLBU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/538G4XdbLBU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-11T14:23:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3Q9O3pw-Hw_XYfLadhvl2DlDeXE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ChxeXriAEgg"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-09T13:00:36Z",
+        "channelId": "UCh9IhKUDYhf0-IyJII0VClg",
+        "title": "Większość ETFów nie jest dla Ciebie! Co musisz wiedzieć?",
+        "description": "Tutaj do 100 tys. € miesięcznego obrotu nie płacicie prowizji za transakcje - XTB. Sam tu inwestuję: https://geolink.xtb.com/UjJpQ ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ChxeXriAEgg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ChxeXriAEgg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ChxeXriAEgg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ChxeXriAEgg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ChxeXriAEgg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/ChxeXriAEgg/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Giełda Inwestycje Trading",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-09T13:00:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DqR209wadJUMPWBEt14XLxJwZuY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3TdtwBe7WxU"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-04T14:00:20Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "Czy kiedykolwiek powinieneś sprzedać swoje ETF-y?",
+        "description": "Dołącz do Przystani Inwestorów - serwer na Discrod! https://discord.gg/byP4c9WQkp Tutaj Kupisz Akcje i ETFy (XTB): ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3TdtwBe7WxU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3TdtwBe7WxU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3TdtwBe7WxU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3TdtwBe7WxU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3TdtwBe7WxU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/3TdtwBe7WxU/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-04T14:00:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "EoRqaKt6B60jpyrNTwx4e1aygvY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UqX1BwW04Ao"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-14T11:54:04Z",
+        "channelId": "UCVK5sOPiHl9dPd4QvFBkm9Q",
+        "title": "PODATEK OD STRATY. Mieszkanie na wynajem kontra ETF",
+        "description": "Ta sama kwota, 10 lat i wszystkie koszty po obu stronach: mieszkanie na wynajem kontra ETF na S&P 500, a na kredycie najemca ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UqX1BwW04Ao/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UqX1BwW04Ao/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UqX1BwW04Ao/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/UqX1BwW04Ao/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/UqX1BwW04Ao/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/UqX1BwW04Ao/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Comparic Global Markets ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-14T11:54:04Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zOoYuAQIjtDp_ppurzI4eFqjSkk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QudodCw0giY"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-21T15:00:18Z",
+        "channelId": "UC7MTGFfIn1Hht3ZMQxnZBhA",
+        "title": "Co TRZEBA zrobić po zakupie pierwszego ETF-a (najlepiej od razu!)",
+        "description": "Chcesz mieć więcej pieniędzy? Zapisz się i otrzymuj darmowe lekcje: https://pankracy.gr8.com/ ✓ Jeśli masz jakieś pytanie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/QudodCw0giY/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Pankracy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-21T15:00:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1BZe2A1Exg881jIZPqwGxSNgkXs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8Vy6mL4r1F0"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-29T11:03:44Z",
+        "channelId": "UCTZzZ14jQSFN5darS2NOsqQ",
+        "title": "Masz kilka ETF-ów? Możliwe, że inwestujesz ciągle w to samo",
+        "description": "ETF na cały świat, S&P 500 i Nasdaq mogą wyglądać jak trzy różne inwestycje. W praktyce często zawierają jednak wiele tych ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8Vy6mL4r1F0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8Vy6mL4r1F0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8Vy6mL4r1F0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8Vy6mL4r1F0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8Vy6mL4r1F0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "BETA ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-29T11:03:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6JyP_dYdqSyAljBQ8WbxIlGXX_s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xNxVz8ciHqQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-15T08:12:06Z",
+        "channelId": "UCTZzZ14jQSFN5darS2NOsqQ",
+        "title": "Przewodnik po najpopularniejszych ETF-ach | Wakacje z Inwestowaniem | Mateusz Mucha",
+        "description": "Zapraszamy do obejrzenia wystąpienia Mateusza Muchy, z konferencji \"Wakacje z Inwestowaniem\". Bądźmy w kontakcie i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xNxVz8ciHqQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xNxVz8ciHqQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xNxVz8ciHqQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xNxVz8ciHqQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xNxVz8ciHqQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "BETA ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-15T08:12:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yL4fXCYgoSrjDR65FsAfnmQgLbA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IgA8B1NCtpo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-11T13:37:05Z",
+        "channelId": "UCEPr3huxC4mEPN8NtIKVmxA",
+        "title": "ETF-y dla początkujących. Jak inwestować na całym świecie? | Gosia Ohme Podcast",
+        "description": "Chciałabyś zacząć inwestować, ale słowa takie jak ETF, indeks giełdowy czy fundusz inwestycyjny brzmią dla Ciebie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IgA8B1NCtpo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IgA8B1NCtpo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IgA8B1NCtpo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IgA8B1NCtpo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IgA8B1NCtpo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gosia Ohme",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-11T13:37:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "pqFvpIa-QvQLS8yLbgv5xdkcWao",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Qb3PFCBUwrE"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-24T15:56:29Z",
+        "channelId": "UCF0Cxpd-HD_an4LRSgu0fNA",
+        "title": "4 ETF-y, które zrobią z Ciebie MILIONERA. Tylko 4 instrumenty!",
+        "description": "Zapisz się na bezpłatne warsztaty online: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Qb3PFCBUwrE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Qb3PFCBUwrE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Qb3PFCBUwrE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Qb3PFCBUwrE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Qb3PFCBUwrE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Paweł Szpakowicz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-24T15:56:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gncJ5uE2cspsQgIb-YQU88ZeE_k",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "c4lP8BcTrqI"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-14T16:13:51Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "10 lat 10 ETF-ów. #ETF #pieniądze #giełda #inwestowanie #inwestycje",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/c4lP8BcTrqI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/c4lP8BcTrqI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/c4lP8BcTrqI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/c4lP8BcTrqI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/c4lP8BcTrqI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-14T16:13:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vSC31BcLkKRkFv96nHUhZNBwwRY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jxxSq1ad1vw"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-16T14:30:42Z",
+        "channelId": "UCFiObcDqkjNjNsvA6M0xLzQ",
+        "title": "Portfel 2 ETF-ów, który BIJE 90% inwestorów!",
+        "description": "W tym odcinku przedstawiam banalnie prosty, dwuelementowy portfel oparty na zaledwie dwóch ETF-ach który historycznie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jxxSq1ad1vw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jxxSq1ad1vw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jxxSq1ad1vw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jxxSq1ad1vw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jxxSq1ad1vw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/jxxSq1ad1vw/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Młody Inwestor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-16T14:30:42Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "M1nyD8Yp3vTRcdxn0tvpKazI5bE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jLrl3xwHlAI"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-15T16:53:32Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "Te ETF-y wygrały z S&amp;P500 przez ostatnie 10 lat. #sp500 #etf #giełda #pieniądze #finanse",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jLrl3xwHlAI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jLrl3xwHlAI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jLrl3xwHlAI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jLrl3xwHlAI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jLrl3xwHlAI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-15T16:53:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1EqmVxWvdZtSl9zaisr7fx2dl1I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Ny_1eIcJNjc"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-11T15:30:03Z",
+        "channelId": "UCpt8kFJISMCH6rJBI2hnRbQ",
+        "title": "5 ETF que je garderai à vie",
+        "description": "Accède à ta formation offerte pour construire un portefeuille solide et performant au sein du Seqooia Campus ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ny_1eIcJNjc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ny_1eIcJNjc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ny_1eIcJNjc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Ny_1eIcJNjc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Ny_1eIcJNjc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/Ny_1eIcJNjc/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Sonny - Seqooia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-11T15:30:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4Mo5O4Pjt_8IxBDNPM7AxVBz4cs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CfCZvSOBL3U"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-21T07:38:54Z",
+        "channelId": "UCxReMzw4vJ9ZlTkkgIue00w",
+        "title": "🧺 3 ETF-y, które MUSISZ mieć w portfelu! 📊 Bardzo prosty i skuteczny plan!",
+        "description": "współpraca @xtb Chcesz zbudować prosty, efektywny i tani portfel inwestycyjny oparty na funduszach ETF? Oto kompletny ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CfCZvSOBL3U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CfCZvSOBL3U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CfCZvSOBL3U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CfCZvSOBL3U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CfCZvSOBL3U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Mądre Inwestycje | Marcin Tuszkiewicz",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-21T07:38:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bTRWBkcnz9S5V4qRYzUyKV2mMzY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AQaGrQ7Dp90"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-20T14:30:17Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "Ten ETF robi robotę za Ciebie❗️",
+        "description": "ETF, który robi robotę za Ciebie. Dlaczego warto postawić na globalny indeks❓ Inwestowanie na giełdzie wcale nie musi ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AQaGrQ7Dp90/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AQaGrQ7Dp90/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AQaGrQ7Dp90/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AQaGrQ7Dp90/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AQaGrQ7Dp90/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/AQaGrQ7Dp90/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-20T14:30:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0RgkliQfcFqOwukETyRFhLY2VMs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jdSZMvPCDlc"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-01T14:00:29Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "Ile ETF-ów naprawdę powinieneś mieć w portfelu?",
+        "description": "Dołącz do Przystani Inwestorów - serwer na Discrod! https://discord.gg/byP4c9WQkp Odbierz kalkulator inwestycyjny i budżet ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jdSZMvPCDlc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jdSZMvPCDlc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jdSZMvPCDlc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jdSZMvPCDlc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jdSZMvPCDlc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/jdSZMvPCDlc/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-01T14:00:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3qEC3CXSa2U5tFK4xwo2am9YkLs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "lPJ07S3BG_A"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-21T10:42:16Z",
+        "channelId": "UC6uAnzt1BKhf6lyRWqEBgTQ",
+        "title": "Top 5 ETF’ów dla początkujących",
+        "description": "Chcesz zacząć inwestować w ETF-y, ale wybór paraliżuje? To jeden z najczęstszych powodów dla których ludzie nie zaczynają ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lPJ07S3BG_A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lPJ07S3BG_A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lPJ07S3BG_A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/lPJ07S3BG_A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/lPJ07S3BG_A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Bartosz Kucia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-21T10:42:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jBqxHDFkwEKKvPWG4ptvmev_zwI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xrZkP6QxUG4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T12:00:25Z",
+        "channelId": "UCK2lZPLAD1f16EbZ9xzfc1Q",
+        "title": "SPYI vs TSPY vs GPIX vs XYLD — Which S&amp;P 500 Income ETF Wins for Retirement?",
+        "description": "https://www.amazon.com/dp/B0HJLRKQJT Patreon Support Link : http://patreon.com/Retirementguy Support Channel Doug the ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xrZkP6QxUG4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xrZkP6QxUG4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xrZkP6QxUG4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xrZkP6QxUG4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xrZkP6QxUG4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Doug The Retirement Guy Monthly ETFS ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T12:00:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TYVTpwbbEN8_TE90D2jaR4H3m7E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "102Ifq5zhUM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-12T18:00:27Z",
+        "channelId": "UC9TwYQOO9mAxoF4v8ZioySg",
+        "title": "Most Europeans Choose ETFs Wrong (Here’s How to Do It Right)",
+        "description": "Get my step-by-step training for European investors: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/102Ifq5zhUM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/102Ifq5zhUM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/102Ifq5zhUM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/102Ifq5zhUM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/102Ifq5zhUM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tom Crosshill",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-12T18:00:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Ae2QB1ZW99UUbx9occ83ebHup_Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Rf2UDOIvqb8"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-08T14:00:03Z",
+        "channelId": "UCTZzZ14jQSFN5darS2NOsqQ",
+        "title": "IKE czy OKI? Gdzie bardziej opłaca się inwestować w ETF-y?",
+        "description": "IKE czy OKI? Gdzie bardziej opłaca się inwestować w ETF-y i jak ograniczyć podatki od inwestycji? Mateusz Mucha z BETA ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Rf2UDOIvqb8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Rf2UDOIvqb8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Rf2UDOIvqb8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Rf2UDOIvqb8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Rf2UDOIvqb8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "BETA ETF",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-08T14:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "o_V6ZRa2RyKB4-P-D1_HoZ-PyFE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LMnV2DN9yl4"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-27T10:29:09Z",
+        "channelId": "UC6uAnzt1BKhf6lyRWqEBgTQ",
+        "title": "3 ETF-y z ogromnym potencjałem na 2026 rok!",
+        "description": "Półprzewodniki zrobiły swoje w tym roku - ale rynek technologiczny i energetyczny mają jeszcze dużo do powiedzenia. W tej rolce ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LMnV2DN9yl4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LMnV2DN9yl4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LMnV2DN9yl4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LMnV2DN9yl4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LMnV2DN9yl4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Bartosz Kucia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-27T10:29:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ylJ7JVWd2qZAaliFz5itoZQXmEU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mln3TWXCw5I"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-28T17:29:12Z",
+        "channelId": "UCOPE-XjHCHeCdHz-asfqcxw",
+        "title": "Moje 3 ETF-y, które kupuję do Końca życia. #etf #akcje #giełda #inwestowanie #pieniądze",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mln3TWXCw5I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mln3TWXCw5I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mln3TWXCw5I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mln3TWXCw5I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mln3TWXCw5I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Brutalnie o Pieniądzach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-28T17:29:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2Pa3ekvaphi4YbXEBJ7KeLtMfo4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wnhJpVADnwI"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-12T14:31:14Z",
+        "channelId": "UCe8VykA_qDCBmg_08eIA8iQ",
+        "title": "ETF-Y GLOBALNE - dlaczego warto na nie postawić? 🤔👇",
+        "description": "Czym właściwie jest ETF? ETF to instrument, który kupujesz na giełdzie tak samo łatwo jak zwykłą akcję. Różnica polega na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wnhJpVADnwI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wnhJpVADnwI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wnhJpVADnwI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wnhJpVADnwI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wnhJpVADnwI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Marcin Iwuć",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-12T14:31:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IwDz81nL8wFn-x_LlJ00xLxjPow",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "W1WMMKLnmOA"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-11T14:00:22Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "ETF globalny vs ETF na USA. Co się bardziej opłaca?",
+        "description": "Dołącz do Przystani Inwestorów - serwer na Discrod! https://discord.gg/byP4c9WQkp Tutaj Kupisz Akcje i ETFy (XTB): ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/W1WMMKLnmOA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/W1WMMKLnmOA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/W1WMMKLnmOA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/W1WMMKLnmOA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/W1WMMKLnmOA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-11T14:00:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "j-ozGWp6ZW-6LFcIqCN1cjIiVC0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "EBccv3PINc4"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-29T13:35:17Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "ETF to NIE cały rynek! Zrozum w co inwestujesz!",
+        "description": "ETF w ostatnich latach stał się prawdopodobnie najpopularniejszym produktem inwestycyjnym jednak nie każdy z nich jest taki ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/EBccv3PINc4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/EBccv3PINc4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/EBccv3PINc4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/EBccv3PINc4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/EBccv3PINc4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-29T13:35:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gJeK8HG_ZTrM_6K5jGDIzmAcEJ8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BLOO9iwDtak"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-18T10:30:36Z",
+        "channelId": "UC6uAnzt1BKhf6lyRWqEBgTQ",
+        "title": "Jak działają ETF-y?",
+        "description": "Chcesz zacząć inwestować, ale nie wiesz, którą spółkę wybrać? Dobra wiadomość: nie musisz wybierać żadnej ETF w ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BLOO9iwDtak/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BLOO9iwDtak/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BLOO9iwDtak/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BLOO9iwDtak/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BLOO9iwDtak/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Bartosz Kucia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-18T10:30:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2z85iccAc6mhpeIzjctRRlFztyA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "M2py02n83_U"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-26T14:00:06Z",
+        "channelId": "UCCJJbk-s8G0HM-3IK9CnzEg",
+        "title": "„Czy ETF-y nadal mają sens?” Odpowiadam na Wasze pytania!",
+        "description": "współpraca XTB [autopromocja] Dołącz do Projektu Portfel!   https://projektportfel.przystaninwestorow.pl/ [współpraca] Tutaj ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/M2py02n83_U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/M2py02n83_U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/M2py02n83_U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/M2py02n83_U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/M2py02n83_U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/M2py02n83_U/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Kacper Snela",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-26T14:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "O9ctKGl68RbHKvqJUuNSrQwZ30M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cafPlDFyjjc"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-06T15:00:22Z",
+        "channelId": "UCKdTKO1gT8uWWNpYuu7a_GA",
+        "title": "3 ETF-y lepsze od S&amp;P 500? Sprawdzam ranking #etf #inwestowanie #giełda",
+        "description": "Ktoś pokazał 3 ETF-y, które pobiły S&P 500. Ma rację, ale w 2024 zarobiły prawie tyle samo co S&P 500. Wyższy zwrot to więcej ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cafPlDFyjjc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cafPlDFyjjc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cafPlDFyjjc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cafPlDFyjjc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cafPlDFyjjc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Jakub Malicki",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-06T15:00:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jrf5TzsX6JVWbqlj4mc8_P4PMYQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1l9Srb5noRc"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-23T10:29:09Z",
+        "channelId": "UC6uAnzt1BKhf6lyRWqEBgTQ",
+        "title": "3 ETF-y do trzymania na emeryturę",
+        "description": "Trzy ETF-y, które mógłbym trzymać przez całe życie, nie zaglądając do portfela. Trzon portfela: S&P 500 - ekspozycja na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1l9Srb5noRc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1l9Srb5noRc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1l9Srb5noRc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1l9Srb5noRc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1l9Srb5noRc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Bartosz Kucia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-23T10:29:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MMA-JVfp-mjdFVccws8xFU6xrMg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Vv5VtAixHas"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-16T14:00:17Z",
+        "channelId": "UCr4XXQznhlgfzo4mwOgkF8w",
+        "title": "The Only 5 ETFs you NEED 2027 📈 #etfinvesting",
+        "description": "5 best ETF for 2027 *not financial advice, do your own research! #bestetf #growthetf.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Vv5VtAixHas/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Vv5VtAixHas/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Vv5VtAixHas/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Vv5VtAixHas/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Vv5VtAixHas/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Investing Simplified - Professor G",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-16T14:00:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "26DjqSs6m10fyIubGcJYG9eAkog",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xqhjnHTNzhA"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T08:00:12Z",
+        "channelId": "UCSf7iRQKEm-ir1l2f2GnpLw",
+        "title": "Achtung, komplex: DARUM macht ein rollierender Anleihe ETF mehr Sinn im Ruhestand!",
+        "description": "Kostenloser Anleihen-Leitfaden (PDF): https://go.nuvest.de/leitfaden39h Deinen Ruhestand mit der Nuvest-App durchrechnen: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xqhjnHTNzhA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xqhjnHTNzhA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xqhjnHTNzhA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xqhjnHTNzhA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xqhjnHTNzhA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/xqhjnHTNzhA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Matthias | Nuvest Vermögensplanung",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T08:00:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UJZy8vk91YzNzXGk_PBogV79VNU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jL1abva48Rs"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T07:23:17Z",
+        "channelId": "UCP7SbLrtO4TwE0hLRquXGqA",
+        "title": "27년을 준비하는 주요 ETF 살펴봤습니다.",
+        "description": "드디어 제도권주식분석 첫 ETF책이 출간되었습니다. [100세까지 월 500만 원 받는 ETF 연금 수업] 교보문고: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jL1abva48Rs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jL1abva48Rs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jL1abva48Rs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jL1abva48Rs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jL1abva48Rs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/jL1abva48Rs/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "제도권주식분석 by ETF STUDIO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T07:23:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "X_f6SKLvgM58KqEOUNufTLVs0W0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "u_VvAWYf6ts"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-10T11:55:32Z",
+        "channelId": "UChBVf9YnourrEDTsbbwJPRA",
+        "title": "The Only 3 ETFs I&#39;d Buy If I Had To Start Over in 2027",
+        "description": "Let's say I lost everything tomorrow and I had to rebuild my financial future from zero, with the competitive advantage of knowing ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/u_VvAWYf6ts/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/u_VvAWYf6ts/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/u_VvAWYf6ts/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/u_VvAWYf6ts/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/u_VvAWYf6ts/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Everything Money",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-10T11:55:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7J4LHYBawYlCK5lwkWM5TN8CLg8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DiLMZZpkFQk"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-29T10:51:20Z",
+        "channelId": "UC6uAnzt1BKhf6lyRWqEBgTQ",
+        "title": "3 ETF-y - podstawa mojego portfela",
+        "description": "19 lat i ponad 300 000 zł majątku - zbudowane na 3 ETF-ach z jasno określonymi proporcjami. 50% S&P500 jako stabilny rdzeń ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DiLMZZpkFQk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DiLMZZpkFQk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DiLMZZpkFQk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DiLMZZpkFQk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DiLMZZpkFQk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Bartosz Kucia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-29T10:51:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yNERoie8p-0n1Em3OrpI9TZJlTs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yG7m-j81zJM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-02T16:52:24Z",
+        "channelId": "UCjKvFMbYVKOnBDarCtXfEww",
+        "title": "Voici les meilleurs ETF sur PEA pour 2027",
+        "description": "Téléchargez la liste des meilleurs ETF PEA (gratuit) : https://sinvestir.fr/selection-etf-pea/?source=ytb-etf-pea2 Le comparateur ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yG7m-j81zJM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yG7m-j81zJM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yG7m-j81zJM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yG7m-j81zJM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yG7m-j81zJM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/yG7m-j81zJM/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Matthieu Louvet - S'investir",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-02T16:52:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kG8IWKmD5jMaeT-5M1GvqasFL94",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Yeam8ug1_5Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-07T10:45:11Z",
+        "channelId": "UC6uAnzt1BKhf6lyRWqEBgTQ",
+        "title": "Nie kupuj akcji, kup ETF…",
+        "description": "Zamiast zgadywać, który gigant wygra - kup cały sektor albo cały rynek. - Nie kupuj Shell, TotalEnergies i BP → iShares STOXX ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Yeam8ug1_5Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Yeam8ug1_5Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Yeam8ug1_5Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Yeam8ug1_5Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Yeam8ug1_5Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Bartosz Kucia",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-07T10:45:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XHMsrb_HLAnwILQrW3UUr2TeHRg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2R2-Edg5Alo"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-21T10:30:03Z",
+        "channelId": "UC_l97x5tK1_pb3ujNRyq6aw",
+        "title": "The Real Difference Between QQQI and QYLG: You NEED To See This",
+        "description": "QQQI vs QYLG — two Nasdaq-focused income ETFs, $50000 invested into each on the exact same day. QYLG produced more ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2R2-Edg5Alo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2R2-Edg5Alo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2R2-Edg5Alo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2R2-Edg5Alo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2R2-Edg5Alo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Simply Money",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-21T10:30:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bts7gkZOMx2TH93iIbARaXqzY7I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "C7q4t5xJyAY"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-04T20:38:09Z",
+        "channelId": "UCTbIyTMwRWRvGk50PzseLQA",
+        "title": "#3 Portfel pod lupą | ETF-y w euro, a liczy się dolar",
+        "description": "Sprawdź swój portfel samodzielnie: https://fintide.pl Prawie 100% portfela w USA. My wydajemy w złotówkach, a dolar kosztował i ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/C7q4t5xJyAY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/C7q4t5xJyAY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/C7q4t5xJyAY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/C7q4t5xJyAY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/C7q4t5xJyAY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Fintide",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-04T20:38:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PIryUjEcr1L-d9wHbzM9ZXbjHM8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "q6gH6l_MxTE"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-23T14:34:03Z",
+        "channelId": "UCv6mTV4iQMOeixAWz47bP4Q",
+        "title": "ETFy w Praktyce | Konferencja Online | Od wiedzy do świadomych decyzji inwestycyjnych.",
+        "description": "Rejestracja na stronie: https://www.etfywpraktyce.pl/ Zdobądź praktyczną wiedzę o funduszach ETF, poznaj sprawdzone strategie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/q6gH6l_MxTE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/q6gH6l_MxTE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/q6gH6l_MxTE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/q6gH6l_MxTE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/q6gH6l_MxTE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/q6gH6l_MxTE/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        },
+        "channelTitle": "Comparic Giełda",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-23T14:34:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lt7tc64zhrgZliDMUabJKEGZflE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BaDo7u2Hve0"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-01T12:45:35Z",
+        "channelId": "UCgw_3Epv7swquSZyMDjYHTg",
+        "title": "UKRYTY KOSZT ETF-ÓW, O KTÓRYM NIKT NIE MÓWI",
+        "description": "ETF na S&P 500 może być tani, ale nie wszystkie jego koszty zobaczysz w tabeli opłat. #etf #sp500 #inwestowanie #giełda ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BaDo7u2Hve0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BaDo7u2Hve0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BaDo7u2Hve0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BaDo7u2Hve0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BaDo7u2Hve0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/BaDo7u2Hve0/sardefault.jpg",
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        "channelTitle": "Piotr Cymcyk - Merytorycznie o Finansach",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-01T12:45:35Z"
+      }
+    }
+  ]
+}

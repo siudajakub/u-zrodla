@@ -1,0 +1,948 @@
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "oxEcuXDs9WMcew-bqZ4Zr9YMCko",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "4qWHMaK44ItLQ1x_OXJCtKCAU24",
+      "id": "jRuOzv6YL1A",
+      "snippet": {
+        "publishedAt": "2026-09-15T19:32:30Z",
+        "channelId": "UC816J_EZEICUYOhjTnk3o7Q",
+        "title": "Czy i które obligacje skarbowe warto kupić? Wrzesień 2026 r.",
+        "description": "Rentowności polskich dziesięcioletnich obligacji skarbowych przekroczyły 6,5 proc. i znalazły się na poziomach niewidzianych od lat. Inwestorzy trzymający fundusze obligacyjne liczą straty, a ci, którzy czekali na okazję, mają dylemat: kupować teraz, czy poczekać na więcej? Bartłomiej Cendecki z Quercus TFI ocenia sytuację na rynku obligacji we wrześniu i odpowiada, na które papiery dłużne warto teraz postawić.\n\n\nLink do artykułu:\n➡https://www.stockwatch.pl/wiadomosci/polskie-obligacje-skarbowe-wrzesien-2026-okazja-czy-pulapka-edo-coi-stalokuponowe,obligacje,380686\n------------------------------------------------------------------------\nPartnerami kanału są:\n🔸 Dom Maklerki Banku Ochrony Środowiska\nhttps://bossa.pl/oferta\n🔸 Dom Maklerki Navigator\nhttps://dmnavigator.pl\n🔸 Dom Maklerski Noble Securities\nhttps://noblesecurities.pl/\n-------------------------------------------------------------------------\nO StockWatch.pl\nStockWatch.pl to serwis informacyjno-analityczny poświęcony inwestycjom na polskiej giełdzie i rynkach globalnych. Wspiera inwestorów indywidualnych dostarczając m.in. wiadomości rynkowe, notowania, komunikaty ESPI, dane finansowe, narzędzia analizy fundamentalnej i technicznej, portfel wzorcowy, analizy i omówienia zawodowych niezależnych finansistów oraz moderowane forum dyskusyjne.\n\nDarmowe konto w portalu pozwala m.in. na:\n🔸zapisywanie indywidualnych ustawień, które ułatwiają korzystanie z portalu,\n🔸stworzenie listy obserwowanych spółek, która będzie dostępna w zestawieniach i narzędziach portalu np. na stronie komunikatów ESPI, dywidend, czy w skanerach,\n🔸dyskusję z innymi inwestorami na moderowanym forum.\n\nRejestracja 👉 https://www.stockwatch.pl/profil/rejestracja.aspx\n\nW Strefie Premium oferujemy m.in.:\n🔸 analizy fundamentalne (200 analiz sprawozdań finansowych spółek w 2025 r., lista 60 spółek z gwarancją analizy w 2026 r.),\n🔸 analizy techniczne (ponad 400 analiz wykresów cenowych, o które wnioskowali abonenci w 2025 r.),\n🔸 skanery rynków akcji i obligacji,\n🔸 dostęp do setek wskaźników i danych finansowych,\n🔸 kilka rodzajów powiadomień mailowych, które dostosujesz do swoich potrzeb.\n\nSzczegóły 👉 https://www.stockwatch.pl/wiadomosci/uslugi-stockwatch-pl-strefa-premium-i-portfele-edukacyjne\n\nW Portfelach Edukacyjnych oferujemy m.in.:\n🔸 trzy portfele – Cztery Fazy Rynku (polski rynek, portfel oparty na strategii Czterech Faz Rynku), Dywidendowy (polski rynek, portfel oparty na spółkach dywidendowych), ETF (rynki zagraniczne, portfel oparty na strategii Czterech Faz Rynku wykorzystujący ETFy)\n🔸 2 razy w tygodniu biuletyn opisujący prowadzenie otwartych pozycji, aktualne wyniki oraz obserwowane walory z potencjałem do wygenerowania sygnału do zajęcia pozycji,\n🔸 powiadomienia mailowe o nowym biuletynie lub o zmianach w portfelach,\n🔸 analizy na życzenie i merytoryczne wsparcie w indywidualnym wykorzystaniu sygnałów,\n🔸 zamknięte forum dyskusyjne, gdzie prowadzący odpowiada na pytania i prośby subskrybentów.\n\nSzczegóły 👉 https://www.stockwatch.pl/wiadomosci/portfel-stockwatch-pl-cztery-fazy-rynku\n\nOBLIGACJE, EDO, gpw, inwestycje, rynek finansowy",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/jRuOzv6YL1A/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "StockWatch.pl",
+        "tags": [
+          "OBLIGACJE",
+          "EDO",
+          "gpw",
+          "inwestycje",
+          "rynek finansowy"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Czy i które obligacje skarbowe warto kupić? Wrzesień 2026 r.",
+          "description": "Rentowności polskich dziesięcioletnich obligacji skarbowych przekroczyły 6,5 proc. i znalazły się na poziomach niewidzianych od lat. Inwestorzy trzymający fundusze obligacyjne liczą straty, a ci, którzy czekali na okazję, mają dylemat: kupować teraz, czy poczekać na więcej? Bartłomiej Cendecki z Quercus TFI ocenia sytuację na rynku obligacji we wrześniu i odpowiada, na które papiery dłużne warto teraz postawić.\n\n\nLink do artykułu:\n➡https://www.stockwatch.pl/wiadomosci/polskie-obligacje-skarbowe-wrzesien-2026-okazja-czy-pulapka-edo-coi-stalokuponowe,obligacje,380686\n------------------------------------------------------------------------\nPartnerami kanału są:\n🔸 Dom Maklerki Banku Ochrony Środowiska\nhttps://bossa.pl/oferta\n🔸 Dom Maklerki Navigator\nhttps://dmnavigator.pl\n🔸 Dom Maklerski Noble Securities\nhttps://noblesecurities.pl/\n-------------------------------------------------------------------------\nO StockWatch.pl\nStockWatch.pl to serwis informacyjno-analityczny poświęcony inwestycjom na polskiej giełdzie i rynkach globalnych. Wspiera inwestorów indywidualnych dostarczając m.in. wiadomości rynkowe, notowania, komunikaty ESPI, dane finansowe, narzędzia analizy fundamentalnej i technicznej, portfel wzorcowy, analizy i omówienia zawodowych niezależnych finansistów oraz moderowane forum dyskusyjne.\n\nDarmowe konto w portalu pozwala m.in. na:\n🔸zapisywanie indywidualnych ustawień, które ułatwiają korzystanie z portalu,\n🔸stworzenie listy obserwowanych spółek, która będzie dostępna w zestawieniach i narzędziach portalu np. na stronie komunikatów ESPI, dywidend, czy w skanerach,\n🔸dyskusję z innymi inwestorami na moderowanym forum.\n\nRejestracja 👉 https://www.stockwatch.pl/profil/rejestracja.aspx\n\nW Strefie Premium oferujemy m.in.:\n🔸 analizy fundamentalne (200 analiz sprawozdań finansowych spółek w 2025 r., lista 60 spółek z gwarancją analizy w 2026 r.),\n🔸 analizy techniczne (ponad 400 analiz wykresów cenowych, o które wnioskowali abonenci w 2025 r.),\n🔸 skanery rynków akcji i obligacji,\n🔸 dostęp do setek wskaźników i danych finansowych,\n🔸 kilka rodzajów powiadomień mailowych, które dostosujesz do swoich potrzeb.\n\nSzczegóły 👉 https://www.stockwatch.pl/wiadomosci/uslugi-stockwatch-pl-strefa-premium-i-portfele-edukacyjne\n\nW Portfelach Edukacyjnych oferujemy m.in.:\n🔸 trzy portfele – Cztery Fazy Rynku (polski rynek, portfel oparty na strategii Czterech Faz Rynku), Dywidendowy (polski rynek, portfel oparty na spółkach dywidendowych), ETF (rynki zagraniczne, portfel oparty na strategii Czterech Faz Rynku wykorzystujący ETFy)\n🔸 2 razy w tygodniu biuletyn opisujący prowadzenie otwartych pozycji, aktualne wyniki oraz obserwowane walory z potencjałem do wygenerowania sygnału do zajęcia pozycji,\n🔸 powiadomienia mailowe o nowym biuletynie lub o zmianach w portfelach,\n🔸 analizy na życzenie i merytoryczne wsparcie w indywidualnym wykorzystaniu sygnałów,\n🔸 zamknięte forum dyskusyjne, gdzie prowadzący odpowiada na pytania i prośby subskrybentów.\n\nSzczegóły 👉 https://www.stockwatch.pl/wiadomosci/portfel-stockwatch-pl-cztery-fazy-rynku\n\nOBLIGACJE, EDO, gpw, inwestycje, rynek finansowy"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT6M56S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "21654",
+        "likeCount": "145",
+        "favoriteCount": "0",
+        "commentCount": "35"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": true
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "255pcrxVFSbNWKZ1eua1D5ZcS6c",
+      "id": "veedof3XKpY",
+      "snippet": {
+        "publishedAt": "2026-08-30T14:00:06Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Ranking - NAJLEPSZE obligacje skarbowe 2026! Które są dla kogo?",
+        "description": "Ranking - obligacje skarbowe 2026 MOIM ZDANIEM. Sprawdzam najnowszą ofertę Ministerstwa Finansów na sierpień 2026 i układam wszystkie obligacje oszczędnościowe w tier listę od D do S. Które obligacje realnie chronią przed inflacją, a które gwarantują stratę po podatku Belki 19%?\n\nKONIECZNIE ZOBACZ - https://youtu.be/kYe0Z_5tHPw?si=af2CrCjH1ltewOQO\n\nW tym filmie liczę wszystko na najnowszych liczbach. Stopa referencyjna NBP od 05.03.2026 to 3,75%. Ministerstwo Finansów zostawiło oprocentowanie bez zmian na sierpień.\n\n🔗 Przydatne linki:\n\nPatronite - https://patronite.pl/G_B_I\n\nSubstack - https://substack.com/@gospodarkabeziluzji\n\nWSPÓŁPRACA - gospodarkabeziluzji@gmail.com\n\nDiscord dla widzów - https://discord.com/invite/wWvxfj6eCY\n\nBLOG dla widzów - https://gospodarkabeziluzji.blogspot.com/\n\nX/Twitter - https://x.com/LOF_lm\n\nCo znajdziesz w filmie:\n\nTier D - najsłabsze: OTS 3-miesięczne 2,00% stałe i ROR 1-roczne 4,00% w pierwszym miesiącu, potem stopa referencyjna NBP + 0,00% marży (czyli dziś 3,75% brutto, 3,04% netto). Dlaczego to gwarantowana strata realna przy inflacji 3%.\n\nTier C - przeciętniak: DOR 2-letnie zmienne 4,15% w pierwszym miesiącu, potem NBP + 0,15% marży (dziś 3,90% brutto, 3,16% netto). Minimalnie lepiej niż ROR, wciąż zakładnik Rady Polityki Pieniężnej.\n\nTier B - solidny średniak: COI 4-letnie inflacyjne 4,75% w pierwszym roku, potem inflacja + 1,50% marży. Dobry start w inflację, ale najniższa marża w rodzinie inflacyjnej.\n\nTier A - mistrzowie bezpieczeństwa: TOS 3-letnie stałoprocentowe 4,40% rocznie przez CAŁE 3 lata z roczną kapitalizacją oraz COI 4-letnie jako najtańszy bilet do świata inflacji. Pewność 4,40% vs zakład że inflacja + 1,50% da więcej.\n\nTier S - absolutny top: EDO 10-letnie 5,35% w pierwszym roku, potem inflacja + 2,00% z kapitalizacją, ROS 6-letnie rodzinne 5,00% potem inflacja + 2,00% oraz ROD 12-letnie rodzinne 5,60% potem inflacja + 2,50% z kapitalizacją. Dlaczego tylko te trzy dają 2,00-2,50% realnego zysku ponad inflację rocznie.\n\nPokazuję też opłaty za wcześniejszy wykup (OTS/ROR/DOR 0,50 zł, TOS 1,00 zł, COI 2,00 zł, EDO/ROS/ROD 2,00-3,00 zł), różnicę między wykupem a zamianą (cena 99,90 zł przy zamianie) oraz jak w IKE-Obligacje i IKZE-Obligacje legalnie ominąć podatek Belki 19% - wtedy 5,60% na ROD to 5,60% na rękę.\n\nDane w filmie: oferta MF z 25.08.2026 i 27.07.2026, obligacjeskarbowe.pl, stopa referencyjna NBP 3,75%.\n\nNie posiadam uprawnień doradcy inwestycyjnego, a treść filmu zawiera wyłącznie moje subiektywne opinie. Inwestycja wiąże się z ryzykiem utraty kapitału. Dotychczasowe prognozy i wyniki nie stanowią wiarygodnych wskaźników przyszłych wyników. Przed podjęciem jakiejkolwiek decyzji inwestycyjnej należy koniecznie przeprowadzić własną analizę. W razie potrzeby należy zasięgnąć niezależnej porady inwestycyjnej u certyfikowanego specjalisty.\n\nTreści publikowane na tym kanale mają wyłącznie charakter edukacyjny i informacyjny. Materiały te nie stanowią \"rekomendacji\" ani \"porady inwestycyjnej\" w rozumieniu art. 76 ww. ustawy i nie mogą być traktowane jako podstawa do podejmowania decyzji inwestycyjnych\n\n\n#obligacjeSkarbowe #obligacje #inwestowanie #oszczędzanie #finanseOsobiste",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/veedof3XKpY/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "tags": [
+          "inwestowanie",
+          "akcje",
+          "obligacje",
+          "etf",
+          "krypto",
+          "kryptowaluty",
+          "giełda",
+          "gpw",
+          "dywidenda",
+          "złoto",
+          "zawód inwestor",
+          "pankracy",
+          "piotr cymcyk",
+          "obligacje skarbowe",
+          "obligacje skarbowe 2026",
+          "jak kupić obligacje",
+          "obligacje skarbowe jak kupić",
+          "obligacje skarbowe jak to działa",
+          "obligacje skarbowe oprocentowanie",
+          "obligacje inflacyjne",
+          "EDO obligacje",
+          "jak inwestować",
+          "oszczędzanie",
+          "jak oszczędzać pieniądze",
+          "lokaty",
+          "nbp",
+          "ike ikze",
+          "finanse osobiste",
+          "stopa procentowa"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Ranking - NAJLEPSZE obligacje skarbowe 2026! Które są dla kogo?",
+          "description": "Ranking - obligacje skarbowe 2026 MOIM ZDANIEM. Sprawdzam najnowszą ofertę Ministerstwa Finansów na sierpień 2026 i układam wszystkie obligacje oszczędnościowe w tier listę od D do S. Które obligacje realnie chronią przed inflacją, a które gwarantują stratę po podatku Belki 19%?\n\nKONIECZNIE ZOBACZ - https://youtu.be/kYe0Z_5tHPw?si=af2CrCjH1ltewOQO\n\nW tym filmie liczę wszystko na najnowszych liczbach. Stopa referencyjna NBP od 05.03.2026 to 3,75%. Ministerstwo Finansów zostawiło oprocentowanie bez zmian na sierpień.\n\n🔗 Przydatne linki:\n\nPatronite - https://patronite.pl/G_B_I\n\nSubstack - https://substack.com/@gospodarkabeziluzji\n\nWSPÓŁPRACA - gospodarkabeziluzji@gmail.com\n\nDiscord dla widzów - https://discord.com/invite/wWvxfj6eCY\n\nBLOG dla widzów - https://gospodarkabeziluzji.blogspot.com/\n\nX/Twitter - https://x.com/LOF_lm\n\nCo znajdziesz w filmie:\n\nTier D - najsłabsze: OTS 3-miesięczne 2,00% stałe i ROR 1-roczne 4,00% w pierwszym miesiącu, potem stopa referencyjna NBP + 0,00% marży (czyli dziś 3,75% brutto, 3,04% netto). Dlaczego to gwarantowana strata realna przy inflacji 3%.\n\nTier C - przeciętniak: DOR 2-letnie zmienne 4,15% w pierwszym miesiącu, potem NBP + 0,15% marży (dziś 3,90% brutto, 3,16% netto). Minimalnie lepiej niż ROR, wciąż zakładnik Rady Polityki Pieniężnej.\n\nTier B - solidny średniak: COI 4-letnie inflacyjne 4,75% w pierwszym roku, potem inflacja + 1,50% marży. Dobry start w inflację, ale najniższa marża w rodzinie inflacyjnej.\n\nTier A - mistrzowie bezpieczeństwa: TOS 3-letnie stałoprocentowe 4,40% rocznie przez CAŁE 3 lata z roczną kapitalizacją oraz COI 4-letnie jako najtańszy bilet do świata inflacji. Pewność 4,40% vs zakład że inflacja + 1,50% da więcej.\n\nTier S - absolutny top: EDO 10-letnie 5,35% w pierwszym roku, potem inflacja + 2,00% z kapitalizacją, ROS 6-letnie rodzinne 5,00% potem inflacja + 2,00% oraz ROD 12-letnie rodzinne 5,60% potem inflacja + 2,50% z kapitalizacją. Dlaczego tylko te trzy dają 2,00-2,50% realnego zysku ponad inflację rocznie.\n\nPokazuję też opłaty za wcześniejszy wykup (OTS/ROR/DOR 0,50 zł, TOS 1,00 zł, COI 2,00 zł, EDO/ROS/ROD 2,00-3,00 zł), różnicę między wykupem a zamianą (cena 99,90 zł przy zamianie) oraz jak w IKE-Obligacje i IKZE-Obligacje legalnie ominąć podatek Belki 19% - wtedy 5,60% na ROD to 5,60% na rękę.\n\nDane w filmie: oferta MF z 25.08.2026 i 27.07.2026, obligacjeskarbowe.pl, stopa referencyjna NBP 3,75%.\n\nNie posiadam uprawnień doradcy inwestycyjnego, a treść filmu zawiera wyłącznie moje subiektywne opinie. Inwestycja wiąże się z ryzykiem utraty kapitału. Dotychczasowe prognozy i wyniki nie stanowią wiarygodnych wskaźników przyszłych wyników. Przed podjęciem jakiejkolwiek decyzji inwestycyjnej należy koniecznie przeprowadzić własną analizę. W razie potrzeby należy zasięgnąć niezależnej porady inwestycyjnej u certyfikowanego specjalisty.\n\nTreści publikowane na tym kanale mają wyłącznie charakter edukacyjny i informacyjny. Materiały te nie stanowią \"rekomendacji\" ani \"porady inwestycyjnej\" w rozumieniu art. 76 ww. ustawy i nie mogą być traktowane jako podstawa do podejmowania decyzji inwestycyjnych\n\n\n#obligacjeSkarbowe #obligacje #inwestowanie #oszczędzanie #finanseOsobiste"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT11M51S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "10377",
+        "likeCount": "109",
+        "favoriteCount": "0",
+        "commentCount": "38"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "oTBf76gmM6S74GaDwafvjhuhSL4",
+      "id": "skC6SV_b1oA",
+      "snippet": {
+        "publishedAt": "2026-07-17T14:00:33Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Czy obligacje skarbowe NADAL mają sens w 2026? (wcale NIE takie oczywiste)",
+        "description": "Czy obligacje skarbowe w 2026 roku nadal mają sens? Moim zdaniem — nie do końca. W tym materiale biorę pod lupę obligacje skarbowe 2026 i pokazuję, ile naprawdę zarabiasz po odjęciu inflacji i podatku Belki. Liczby mogą zaskoczyć.\n\n🔗 Przydatne linki:\n\nPatronite - https://patronite.pl/G_B_I\n\nSubstack - https://substack.com/@gospodarkabeziluzji\n\nWSPÓŁPRACA - gospodarkabeziluzji@gmail.com\n\nDiscord dla widzów - https://discord.com/invite/wWvxfj6eCY\n\nBLOG dla widzów - https://gospodarkabeziluzji.blogspot.com/\n\nX/Twitter - https://x.com/LOF_lm\n\nPrzechodzę przez całą aktualną ofertę Ministerstwa Finansów: obligacje EDO, COI, TOS, DOR, ROS i ROD — omawiam oprocentowanie, warunki wypłaty i dla kogo które mają sens. Ale to nie jest kolejne kompendium. To jest werdykt.\n\nW filmie pokazuję:\nRealną stopę zwrotu z obligacji: bierzesz oprocentowanie, odejmujesz inflację, odejmujesz 19% podatku Belki. Co zostaje? Często mniej niż myślisz.\nKoszt alternatywny: co by było, gdybyś te same pieniądze włożył w ETF ACWI lub S&P 500? Symulacja na konkretnych liczbach.\nPułapkę IKE Obligacje: tak, zwalniają z podatku Belki. Ale zajmują Twój roczny limit IKE — limit, który mógłbyś wykorzystać na akcje, ETF-y i inne aktywa o wyższym potencjale zwrotu.\nPsychologiczną warstwę: obligacje to nie tyle inwestycja, co ochrona kapitału. Walka z inflacją, a nie budowanie majątku. Ale dają coś bezcennego — spokój i przewidywalność.\n\nMówię wprost: obligacje skarbowe nie są złe. Dla wielu osób to najlepsze dostępne narzędzie. Ale jeśli myślisz o nich jak o inwestycji, która pomnoży Twój kapitał — czas skonfrontować to z liczbami.W materiale powołuję się na konkretne dane: historyczne stopy zwrotu indeksów, aktualne odczyty inflacji, oprocentowanie obligacji z oferty MF. Wszystko po to, żebyś mógł podjąć własną, świadomą decyzję — czy obligacje to Twój wybór, czy tylko iluzja bezpieczeństwa.\n\nNie posiadam uprawnień doradcy inwestycyjnego, a treść filmu zawiera wyłącznie moje subiektywne opinie. Inwestycja wiąże się z ryzykiem utraty kapitału. Dotychczasowe prognozy i wyniki nie stanowią wiarygodnych wskaźników przyszłych wyników. Przed podjęciem jakiejkolwiek decyzji inwestycyjnej należy koniecznie przeprowadzić własną analizę. W razie potrzeby należy zasięgnąć niezależnej porady inwestycyjnej u certyfikowanego specjalisty.\n\nTreści publikowane na tym kanale mają wyłącznie charakter edukacyjny i informacyjny. Materiały te nie stanowią \"rekomendacji\" ani \"porady inwestycyjnej\" w rozumieniu art. 76 ww. ustawy i nie mogą być traktowane jako podstawa do podejmowania decyzji inwestycyjnych\n\n#finanse #inwestowanie #obligacje",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/skC6SV_b1oA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/skC6SV_b1oA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/skC6SV_b1oA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/skC6SV_b1oA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/skC6SV_b1oA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "tags": [
+          "inwestowanie",
+          "akcje",
+          "obligacje",
+          "etf",
+          "kryptowaluty",
+          "giełda",
+          "gpw",
+          "dywidenda",
+          "złoto",
+          "zawód inwestor",
+          "pankracy",
+          "piotr cymcyk",
+          "obligacje skarbowe 2026",
+          "obligacje skarbowe opinie",
+          "obligacje skarbowe czy warto",
+          "obligacje skarbowe oprocentowanie",
+          "obligacje skarbowe IKE",
+          "obligacje skarbowe ranking",
+          "obligacje ROS",
+          "jak kupić obligacje",
+          "obligacje a inflacja",
+          "obligacje vs ETF",
+          "obligacje vs lokaty",
+          "oszczędzanie",
+          "inwestowanie dla początkujących",
+          "gdzie trzymać pieniądze",
+          "inwestowanie pasywne",
+          "ETF"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Czy obligacje skarbowe NADAL mają sens w 2026? (wcale NIE takie oczywiste)",
+          "description": "Czy obligacje skarbowe w 2026 roku nadal mają sens? Moim zdaniem — nie do końca. W tym materiale biorę pod lupę obligacje skarbowe 2026 i pokazuję, ile naprawdę zarabiasz po odjęciu inflacji i podatku Belki. Liczby mogą zaskoczyć.\n\n🔗 Przydatne linki:\n\nPatronite - https://patronite.pl/G_B_I\n\nSubstack - https://substack.com/@gospodarkabeziluzji\n\nWSPÓŁPRACA - gospodarkabeziluzji@gmail.com\n\nDiscord dla widzów - https://discord.com/invite/wWvxfj6eCY\n\nBLOG dla widzów - https://gospodarkabeziluzji.blogspot.com/\n\nX/Twitter - https://x.com/LOF_lm\n\nPrzechodzę przez całą aktualną ofertę Ministerstwa Finansów: obligacje EDO, COI, TOS, DOR, ROS i ROD — omawiam oprocentowanie, warunki wypłaty i dla kogo które mają sens. Ale to nie jest kolejne kompendium. To jest werdykt.\n\nW filmie pokazuję:\nRealną stopę zwrotu z obligacji: bierzesz oprocentowanie, odejmujesz inflację, odejmujesz 19% podatku Belki. Co zostaje? Często mniej niż myślisz.\nKoszt alternatywny: co by było, gdybyś te same pieniądze włożył w ETF ACWI lub S&P 500? Symulacja na konkretnych liczbach.\nPułapkę IKE Obligacje: tak, zwalniają z podatku Belki. Ale zajmują Twój roczny limit IKE — limit, który mógłbyś wykorzystać na akcje, ETF-y i inne aktywa o wyższym potencjale zwrotu.\nPsychologiczną warstwę: obligacje to nie tyle inwestycja, co ochrona kapitału. Walka z inflacją, a nie budowanie majątku. Ale dają coś bezcennego — spokój i przewidywalność.\n\nMówię wprost: obligacje skarbowe nie są złe. Dla wielu osób to najlepsze dostępne narzędzie. Ale jeśli myślisz o nich jak o inwestycji, która pomnoży Twój kapitał — czas skonfrontować to z liczbami.W materiale powołuję się na konkretne dane: historyczne stopy zwrotu indeksów, aktualne odczyty inflacji, oprocentowanie obligacji z oferty MF. Wszystko po to, żebyś mógł podjąć własną, świadomą decyzję — czy obligacje to Twój wybór, czy tylko iluzja bezpieczeństwa.\n\nNie posiadam uprawnień doradcy inwestycyjnego, a treść filmu zawiera wyłącznie moje subiektywne opinie. Inwestycja wiąże się z ryzykiem utraty kapitału. Dotychczasowe prognozy i wyniki nie stanowią wiarygodnych wskaźników przyszłych wyników. Przed podjęciem jakiejkolwiek decyzji inwestycyjnej należy koniecznie przeprowadzić własną analizę. W razie potrzeby należy zasięgnąć niezależnej porady inwestycyjnej u certyfikowanego specjalisty.\n\nTreści publikowane na tym kanale mają wyłącznie charakter edukacyjny i informacyjny. Materiały te nie stanowią \"rekomendacji\" ani \"porady inwestycyjnej\" w rozumieniu art. 76 ww. ustawy i nie mogą być traktowane jako podstawa do podejmowania decyzji inwestycyjnych\n\n#finanse #inwestowanie #obligacje"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT12M46S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "17160",
+        "likeCount": "305",
+        "favoriteCount": "0",
+        "commentCount": "87"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "HPKY9Gl3c-jRLWXFHfBjzlzhCVE",
+      "id": "Lj-2TcNU-F4",
+      "snippet": {
+        "publishedAt": "2026-06-09T22:32:29Z",
+        "channelId": "UCHv11ztykFWf_0dhTEMLO6A",
+        "title": "Obligacje roczne, dwuletnie, trzylatki, indeksowane inflacją, a może listy zastawne? Co wybrać?",
+        "description": "#obligacje #inwestowanie #oszczędzanie \n\nMajowa sprzedaż obligacji skarbowych okazała się najniższa w tym roku. Czy to znak, że Polacy szukają innych możliwości inwestycyjnych? O tym w programie Prosto z Parkietu.  Gościem Przemysława Tychmanowicza jest Emil Szweda, redaktor naczelny, Obligacje.pl.\n\n0:00 Wstęp\n0:45 Szał na obligacje skarbowe mija?\n3:25 Obligacje roczne - jakie są ich zalety?\n5:21 Trzyletnie obligacje tracą blask. Czy słusznie?\n6:36 Obligacje inflacyjne to \"must have\"?\n8:20 Obligacje, a OKI\n10:16 Listy zastawne - produkt dla każdego? Zalety i wady\n17:44 Rynek obligacji korporacyjnych \n25:18 Jakie obligacje? Wybory Emila Szwedy\n\n\nWięcej na stronie: http://parkiet.com\nTwitterze: https://twitter.com/parkietcom\nFacebooku: https://pl-pl.facebook.com/gazetaparkiet/\nLinkedin: https://www.linkedin.com/company/parkiet/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Lj-2TcNU-F4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Lj-2TcNU-F4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Lj-2TcNU-F4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Lj-2TcNU-F4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Lj-2TcNU-F4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Parkiet",
+        "tags": [
+          "Parkiet TV",
+          "parkiet.com",
+          "parkiet",
+          "giełda",
+          "GPW",
+          "rynki",
+          "finanse",
+          "jak inwestować na giełdzie",
+          "oszczędzanie",
+          "jak oszczędzać",
+          "jak grać na giełdzie",
+          "obligacje",
+          "obligacje skarbowe",
+          "listy zastawne"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Obligacje roczne, dwuletnie, trzylatki, indeksowane inflacją, a może listy zastawne? Co wybrać?",
+          "description": "#obligacje #inwestowanie #oszczędzanie \n\nMajowa sprzedaż obligacji skarbowych okazała się najniższa w tym roku. Czy to znak, że Polacy szukają innych możliwości inwestycyjnych? O tym w programie Prosto z Parkietu.  Gościem Przemysława Tychmanowicza jest Emil Szweda, redaktor naczelny, Obligacje.pl.\n\n0:00 Wstęp\n0:45 Szał na obligacje skarbowe mija?\n3:25 Obligacje roczne - jakie są ich zalety?\n5:21 Trzyletnie obligacje tracą blask. Czy słusznie?\n6:36 Obligacje inflacyjne to \"must have\"?\n8:20 Obligacje, a OKI\n10:16 Listy zastawne - produkt dla każdego? Zalety i wady\n17:44 Rynek obligacji korporacyjnych \n25:18 Jakie obligacje? Wybory Emila Szwedy\n\n\nWięcej na stronie: http://parkiet.com\nTwitterze: https://twitter.com/parkietcom\nFacebooku: https://pl-pl.facebook.com/gazetaparkiet/\nLinkedin: https://www.linkedin.com/company/parkiet/"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT26M50S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "13897",
+        "likeCount": "187",
+        "favoriteCount": "0",
+        "commentCount": "33"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "5kNUCHTwVwdxo1vuvb_-iXdLLSw",
+      "id": "3k4jSufkBEE",
+      "snippet": {
+        "publishedAt": "2026-07-13T13:54:30Z",
+        "channelId": "UCcJq-5bSAMp2ZCOR8kacfmA",
+        "title": "Co czeka OBLIGACJE w 2026? Nowa projekcja inflacji",
+        "description": "✅  Tu inwestuję 1000zł miesięcznie: https://geolink.xtb.com/wMYiO\n▶️ Teraz, rejestrując się w XTB z kodem \"FINANSOWATV” otrzymacie pełny kurs edukacyjny dedykowany początkującym inwestorom.\n\n✅ Tu prowadzimy portfel w USA (koniecznie  kliknij): https://www.interactivebrokers.ie/mkt/?src=fintvy&url=%2Fen%2Fwhyib%2Foverview.php\n\n📊 InvestingPRO najtaniej!: https://pl.investing.com/pro/pricing/partners/finansowatv/?oid=3&affid=497&transaction_id=8e0e6354402f4ab58860ea37e6146c83&couponCode=finansowatv&utm_source=497&utm_medium=affiliates&sm_channel=\n🔥 -50%, a z moim kodem finansowatv kolejne 15% zniżki!\n\n✅Kupuj obligacje bez wychodzenia z domu:\n 📌PKO BP (tu kupisz ROD i ROS): https://www.comperialead.pl/a/pp.php?link=21516159c5ea7e97b5779784fd84d1b7&etykieta_=finansowaTV\n📌 Pekao SA (ładniejszy interfejs): https://www.comperialead.pl/a/pp.php?link=59560e3ccdb0b59f32d96e725dda7d81&etykieta_=finansowaTV\n_________\n🎞 Film o obligacjach Krok po Kroku: https://youtu.be/QKQO3IHPJbY\n💬 Artykuł: https://finansowa.tv/obligacje-skarbowe/\n📓 Arkusz obligacji: https://docs.google.com/spreadsheets/d/13UKZGhGzHNUOr1KyuIw9as58v_T0tzHw19m4rxmEX4U/edit?usp=sharing\n\n👉 Współpraca: kontakt@finansowa.tv\n\n⏱️ Rozdziały:\n0:00 - O czym dzisiaj\n0:47 - Inflacja\n2:31 - Stopy procentowe\n3:42 - Nowa projekcja inflacji\n5:04 - Arkusz obligacji - kopia i obsługa\n6:15 - Aktualna oferta obligacji\n7:27 - Czego można spodziewać się po obligacjach\n9:22 - Scenariusze 3/4/6/10/12 letnie\n10:28 - Obligacje na koncie IKE\n11:19 - Czy obligacje są dobre?\n\n✅ Zniżka -20% i DARMOWY miesiąc w myfund: https://myfund.pl/index.php?raport=rejestracja&p_id=17957\n\n📝 Nota XTB:\nDo miesięcznego obrotu 100 000 EUR. Transakcje powyżej tego limitu zostaną obciążone prowizją w wysokości 0,2% (min.10 EUR). 0,5% koszt przewalutowania może mieć zastosowanie. Produkt ten jest nabywanym od XTB prawem powierniczym do ułamkowych części akcji lub ETF. Zapoznaj się z KID. Inwestowanie jest ryzykowne. Inwestuj odpowiedzialnie.\n🤝 #współpraca - XTB jest sponsorem tego odcinka.\n\n⚠️ Zastrzeżenie:\nTreść wideo to osobiste poglądy autora i nie stanowi rekomendacji inwestycyjnych zgodnie z Rozporządzeniem Ministra Finansów z 19.10.2005 r. (Dz. U. z 2005 r. Nr 206, poz. 1715).\nAutor nie ponosi odpowiedzialności za decyzje podjęte na ich podstawie. Wideo jest  wyrazem osobistych poglądów Autora. Inwestujesz na własne ryzyko.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3k4jSufkBEE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3k4jSufkBEE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3k4jSufkBEE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3k4jSufkBEE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3k4jSufkBEE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Finansowa TV",
+        "tags": [
+          "obligacje",
+          "obligacje skarbu państwa",
+          "obligacje skarbowe",
+          "edo",
+          "tos",
+          "ror",
+          "obligacje 4letnie",
+          "obligacje 3letnie",
+          "obligacje 10letnie",
+          "jakie obligacje kupić",
+          "inwestowanie",
+          "oszczędzanie",
+          "czy opłaca się mieć obligacje",
+          "jak inwestować w obligacje",
+          "kalkulator obligacji",
+          "typ obligacji",
+          "zrywanie obligacji",
+          "obligacje indeksowane inflacją",
+          "jakie kupić obligacje",
+          "czy obligacje skarbowe są bezpieczne",
+          "bezpieczne obligacje",
+          "obligacje skarbowe czerwiec",
+          "obligacje 2025",
+          "obligacje 2026"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Co czeka OBLIGACJE w 2026? Nowa projekcja inflacji",
+          "description": "✅  Tu inwestuję 1000zł miesięcznie: https://geolink.xtb.com/wMYiO\n▶️ Teraz, rejestrując się w XTB z kodem \"FINANSOWATV” otrzymacie pełny kurs edukacyjny dedykowany początkującym inwestorom.\n\n✅ Tu prowadzimy portfel w USA (koniecznie  kliknij): https://www.interactivebrokers.ie/mkt/?src=fintvy&url=%2Fen%2Fwhyib%2Foverview.php\n\n📊 InvestingPRO najtaniej!: https://pl.investing.com/pro/pricing/partners/finansowatv/?oid=3&affid=497&transaction_id=8e0e6354402f4ab58860ea37e6146c83&couponCode=finansowatv&utm_source=497&utm_medium=affiliates&sm_channel=\n🔥 -50%, a z moim kodem finansowatv kolejne 15% zniżki!\n\n✅Kupuj obligacje bez wychodzenia z domu:\n 📌PKO BP (tu kupisz ROD i ROS): https://www.comperialead.pl/a/pp.php?link=21516159c5ea7e97b5779784fd84d1b7&etykieta_=finansowaTV\n📌 Pekao SA (ładniejszy interfejs): https://www.comperialead.pl/a/pp.php?link=59560e3ccdb0b59f32d96e725dda7d81&etykieta_=finansowaTV\n_________\n🎞 Film o obligacjach Krok po Kroku: https://youtu.be/QKQO3IHPJbY\n💬 Artykuł: https://finansowa.tv/obligacje-skarbowe/\n📓 Arkusz obligacji: https://docs.google.com/spreadsheets/d/13UKZGhGzHNUOr1KyuIw9as58v_T0tzHw19m4rxmEX4U/edit?usp=sharing\n\n👉 Współpraca: kontakt@finansowa.tv\n\n⏱️ Rozdziały:\n0:00 - O czym dzisiaj\n0:47 - Inflacja\n2:31 - Stopy procentowe\n3:42 - Nowa projekcja inflacji\n5:04 - Arkusz obligacji - kopia i obsługa\n6:15 - Aktualna oferta obligacji\n7:27 - Czego można spodziewać się po obligacjach\n9:22 - Scenariusze 3/4/6/10/12 letnie\n10:28 - Obligacje na koncie IKE\n11:19 - Czy obligacje są dobre?\n\n✅ Zniżka -20% i DARMOWY miesiąc w myfund: https://myfund.pl/index.php?raport=rejestracja&p_id=17957\n\n📝 Nota XTB:\nDo miesięcznego obrotu 100 000 EUR. Transakcje powyżej tego limitu zostaną obciążone prowizją w wysokości 0,2% (min.10 EUR). 0,5% koszt przewalutowania może mieć zastosowanie. Produkt ten jest nabywanym od XTB prawem powierniczym do ułamkowych części akcji lub ETF. Zapoznaj się z KID. Inwestowanie jest ryzykowne. Inwestuj odpowiedzialnie.\n🤝 #współpraca - XTB jest sponsorem tego odcinka.\n\n⚠️ Zastrzeżenie:\nTreść wideo to osobiste poglądy autora i nie stanowi rekomendacji inwestycyjnych zgodnie z Rozporządzeniem Ministra Finansów z 19.10.2005 r. (Dz. U. z 2005 r. Nr 206, poz. 1715).\nAutor nie ponosi odpowiedzialności za decyzje podjęte na ich podstawie. Wideo jest  wyrazem osobistych poglądów Autora. Inwestujesz na własne ryzyko."
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT14M15S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "20995",
+        "likeCount": "484",
+        "favoriteCount": "0",
+        "commentCount": "41"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": true
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "_T46DuuaLAxKyxMcYZBSsXogOes",
+      "id": "_x0nmG1UuHM",
+      "snippet": {
+        "publishedAt": "2026-08-17T06:15:06Z",
+        "channelId": "UCfvR4QTLT5GAtrWtCR5WgSA",
+        "title": "Lokata czy obligacje skarbowe – które rozwiązanie jest lepsze dla Twoich oszczędności?",
+        "description": "Gdzie bezpiecznie ulokować oszczędności w 2026 roku? W tym filmie szczegółowo porównujemy lokaty bankowe oraz detaliczne obligacje skarbowe, aby pomóc Ci podjąć najlepszą decyzję finansową dla Twojego portfela.\n\nZ tego wideo dowiesz się:\n\nJakie są najważniejsze różnice między lokatą a obligacjami skarbowymi w 2026 roku.\n\nDlaczego obligacje skarbowe mogą zaoferować wyższy zysk netto i realną ochronę przed inflacją.\n\nJak uniknąć ukrytych haczyków i skomplikowanych promocji w bankach.\n\nJak zachować elastyczność i płynność dzięki wcześniejszemu wycofaniu gotówki.\n\nJak działa pełna ochrona państwa i dlaczego obligacje nie mają limitów gwarancyjnych.\n\nZabezpiecz swoje pieniądze mądrze i zacznij świadomie decydować o swoich oszczędnościach.\n\nSzczegółową, pełną analizę znajdziesz w artykule na naszym blogu: \n\nhttps://bankoweabc.pl/lokata-czy-obligacje-skarbowe/\n\nSubskrybuj nasz kanał, aby nie przegapić kolejnych poradników finansowych!\n\n#oszczedzanie #obligacje #lokata #finanse #bankoweabc\n\n----\nZastrzeżenie:\nNiniejszy artykuł ma charakter informacyjny i edukacyjny i nie stanowi porady inwestycyjnej. Autor nie jest licencjonowanym doradcą inwestycyjnym. Informacje zawarte w artykule są oparte na osobistych opiniach i doświadczeniach autora i nie powinny być traktowane jako rekomendacje inwestycyjne.\nDecyzje inwestycyjne podejmowane na podstawie informacji zawartych w artykule są podejmowane na własne ryzyko czytelnika. Autor nie ponosi odpowiedzialności za jakiekolwiek straty finansowe wynikające z zastosowania się do tych porad. Przed podjęciem jakichkolwiek decyzji inwestycyjnych zaleca się skonsultowanie się z licencjonowanym doradcą inwestycyjnym lub innym odpowiednio wykwalifikowanym specjalistą.\n\nCzytelnicy powinni również pamiętać, że inwestowanie wiąże się z ryzykiem, w tym ryzykiem utraty kapitału. Każdy inwestor powinien dokładnie przeanalizować swoje cele inwestycyjne, poziom doświadczenia oraz tolerancję na ryzyko przed podjęciem jakichkolwiek działań inwestycyjnych.\nWysokość ryzyka jest uzależniona między innymi od strategii inwestycyjnej danego funduszu oraz od tego, jakie aktywa wchodzą w skład jego portfela inwestycyjnego.\nPełna lista czynników ryzyka związanych z inwestycją jest dostępna w dokumentach określających zasady emisji danego funduszu. Te dokumenty można znaleźć na stronach internetowych odpowiednich emitentów lub funduszy.\n\nInformacje zawarte w artykule nie stanowią rekomendacji inwestycyjnych w rozumieniu Rozporządzenia Ministra Finansów z dnia 19 października 2005 r. w sprawie informacji stanowiących rekomendacje dotyczące instrumentów finansowych, ich emitentów lub wystawców (Dz.U. 2005 nr 206 poz. 1715) ____________________________________________________________________\nInformacja o transparentności AI:\n\nŚcieżka lektorska / podcastowa została wygenerowana przy użyciu sztucznej inteligencji (Google Gemini Notebook) na podstawie autorskich analiz i materiałów źródłowych serwisu Bankowe ABC. Treść merytoryczna, dobór źródeł oraz weryfikacja danych zostały w całości przygotowane przez autora. ____________________________________________________________________\nInformacja o transparentności AI:\n\nŚcieżka lektorska / podcastowa została wygenerowana przy użyciu sztucznej inteligencji (Google Gemini Notebook) na podstawie autorskich analiz i materiałów źródłowych serwisu Bankowe ABC. Treść merytoryczna, dobór źródeł oraz weryfikacja danych zostały w całości przygotowane przez autora.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/_x0nmG1UuHM/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Bankowe ABC",
+        "tags": [
+          "Lokata czy obligacje skarbowe",
+          "Czym różnią się gwarancje BFG od gwarancji Skarbu Państwa",
+          "Jak obniżki stóp NBP wpływają na lokaty i obligacje",
+          "Czy łatwo przenieść środki z konta oszczędnościowego na obligacje",
+          "Zalety obligacji skarbowych",
+          "ukryte haczyki promocji bankowych w porównaniu do obligacji",
+          "Obligacje skarbowe przeważają nad lokatami",
+          "lokata czy obligacje",
+          "obligacje skarbowe czy lokata inflacja",
+          "co jest bezpieczniejsze lokata czy obligacje",
+          "co lepiej lokata czy obligacje"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Lokata czy obligacje skarbowe – które rozwiązanie jest lepsze dla Twoich oszczędności?",
+          "description": "Gdzie bezpiecznie ulokować oszczędności w 2026 roku? W tym filmie szczegółowo porównujemy lokaty bankowe oraz detaliczne obligacje skarbowe, aby pomóc Ci podjąć najlepszą decyzję finansową dla Twojego portfela.\n\nZ tego wideo dowiesz się:\n\nJakie są najważniejsze różnice między lokatą a obligacjami skarbowymi w 2026 roku.\n\nDlaczego obligacje skarbowe mogą zaoferować wyższy zysk netto i realną ochronę przed inflacją.\n\nJak uniknąć ukrytych haczyków i skomplikowanych promocji w bankach.\n\nJak zachować elastyczność i płynność dzięki wcześniejszemu wycofaniu gotówki.\n\nJak działa pełna ochrona państwa i dlaczego obligacje nie mają limitów gwarancyjnych.\n\nZabezpiecz swoje pieniądze mądrze i zacznij świadomie decydować o swoich oszczędnościach.\n\nSzczegółową, pełną analizę znajdziesz w artykule na naszym blogu: \n\nhttps://bankoweabc.pl/lokata-czy-obligacje-skarbowe/\n\nSubskrybuj nasz kanał, aby nie przegapić kolejnych poradników finansowych!\n\n#oszczedzanie #obligacje #lokata #finanse #bankoweabc\n\n----\nZastrzeżenie:\nNiniejszy artykuł ma charakter informacyjny i edukacyjny i nie stanowi porady inwestycyjnej. Autor nie jest licencjonowanym doradcą inwestycyjnym. Informacje zawarte w artykule są oparte na osobistych opiniach i doświadczeniach autora i nie powinny być traktowane jako rekomendacje inwestycyjne.\nDecyzje inwestycyjne podejmowane na podstawie informacji zawartych w artykule są podejmowane na własne ryzyko czytelnika. Autor nie ponosi odpowiedzialności za jakiekolwiek straty finansowe wynikające z zastosowania się do tych porad. Przed podjęciem jakichkolwiek decyzji inwestycyjnych zaleca się skonsultowanie się z licencjonowanym doradcą inwestycyjnym lub innym odpowiednio wykwalifikowanym specjalistą.\n\nCzytelnicy powinni również pamiętać, że inwestowanie wiąże się z ryzykiem, w tym ryzykiem utraty kapitału. Każdy inwestor powinien dokładnie przeanalizować swoje cele inwestycyjne, poziom doświadczenia oraz tolerancję na ryzyko przed podjęciem jakichkolwiek działań inwestycyjnych.\nWysokość ryzyka jest uzależniona między innymi od strategii inwestycyjnej danego funduszu oraz od tego, jakie aktywa wchodzą w skład jego portfela inwestycyjnego.\nPełna lista czynników ryzyka związanych z inwestycją jest dostępna w dokumentach określających zasady emisji danego funduszu. Te dokumenty można znaleźć na stronach internetowych odpowiednich emitentów lub funduszy.\n\nInformacje zawarte w artykule nie stanowią rekomendacji inwestycyjnych w rozumieniu Rozporządzenia Ministra Finansów z dnia 19 października 2005 r. w sprawie informacji stanowiących rekomendacje dotyczące instrumentów finansowych, ich emitentów lub wystawców (Dz.U. 2005 nr 206 poz. 1715) ____________________________________________________________________\nInformacja o transparentności AI:\n\nŚcieżka lektorska / podcastowa została wygenerowana przy użyciu sztucznej inteligencji (Google Gemini Notebook) na podstawie autorskich analiz i materiałów źródłowych serwisu Bankowe ABC. Treść merytoryczna, dobór źródeł oraz weryfikacja danych zostały w całości przygotowane przez autora. ____________________________________________________________________\nInformacja o transparentności AI:\n\nŚcieżka lektorska / podcastowa została wygenerowana przy użyciu sztucznej inteligencji (Google Gemini Notebook) na podstawie autorskich analiz i materiałów źródłowych serwisu Bankowe ABC. Treść merytoryczna, dobór źródeł oraz weryfikacja danych zostały w całości przygotowane przez autora."
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT8M33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "416",
+        "likeCount": "4",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "eD_ylR5UaMG5k9bCOlSED1gqcug",
+      "id": "z2Lx6o7IoeQ",
+      "snippet": {
+        "publishedAt": "2026-10-11T13:13:31Z",
+        "channelId": "UCzHUL45GdSbPVt11WP5jKyQ",
+        "title": "Obligacje skarbowe w październiku. Tylko jedne pokonują inflację",
+        "description": "Październikowa oferta obligacji skarbowych pozostaje bez zmian, a szybki szacunek GUS wskazuje inflację na poziomie 4,0%. Wyjaśniamy oprocentowanie poszczególnych serii, podatek Belki i to, dlaczego w uproszczonym porównaniu tylko EDO pokonuje inflację w pierwszym roku.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/z2Lx6o7IoeQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/z2Lx6o7IoeQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/z2Lx6o7IoeQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/z2Lx6o7IoeQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/z2Lx6o7IoeQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Złoty Doradca",
+        "tags": [
+          "IKE",
+          "IKZE",
+          "OKI",
+          "finanse osobiste",
+          "inflacja",
+          "obligacje październik 2026",
+          "obligacje skarbowe",
+          "oszczędzanie",
+          "podatek Belki"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Obligacje skarbowe w październiku. Tylko jedne pokonują inflację",
+          "description": "Październikowa oferta obligacji skarbowych pozostaje bez zmian, a szybki szacunek GUS wskazuje inflację na poziomie 4,0%. Wyjaśniamy oprocentowanie poszczególnych serii, podatek Belki i to, dlaczego w uproszczonym porównaniu tylko EDO pokonuje inflację w pierwszym roku."
+        }
+      },
+      "contentDetails": {
+        "duration": "PT8M56S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "5859",
+        "likeCount": "19",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "kiVrE4cosfNM_gEE6bOyG9VCVK0",
+      "id": "b36TxFRIs5w",
+      "snippet": {
+        "publishedAt": "2026-06-29T16:00:02Z",
+        "channelId": "UC8SBeyJCWWi0rgBuRJmG9iw",
+        "title": "Gdzie trzymać pieniądze w 2026? Ranking 5 opcji (jedna cię ZDRADZI)!",
+        "description": "Gdzie trzymać pieniądze w 2026 roku? To pytanie zadaje sobie każdy, kto widzi jak inflacja zjada jego oszczędności. W tym materiale zestawiam 5 realnych opcji: gotówka, lokaty bankowe, konto oszczędnościowe, obligacje skarbowe i ETF-y — i porównuję je twardymi liczbami. Jedna z tych opcji to pułapka, którą banki i instytucje finansowe uwielbiają.\n\nCo dokładnie analizuję w tym rankingu:\n- Gotówka — dlaczego trzymanie pieniędzy w gotówce to najgorsza decyzja i ile realnie tracisz rocznie przez inflację (konkretna kwota w PLN)\n- Lokaty bankowe — oprocentowanie na poziomie 5-6% wygląda dobrze, ale co po odliczeniu podatku Belki i inflacji? Ile NAPRAWDĘ zostaje w kieszeni\n- Konta oszczędnościowe — wygoda i elastyczność kontra realny zysk. Porównanie najlepszych ofert na rynku\n- Obligacje skarbowe — EDO, COI, TOS, ROS — które obligacje Skarbu Państwa faktycznie chronią przed inflacją, a które tylko udają\n- ETF-y (giełda) — ACWI, S&P 500 jako alternatywa. Czy inwestowanie na giełdzie ma sens dla oszczędności, których możesz potrzebować za rok? A może jednak lepiej tam trzymać długoterminowo?\n\nDla każdej opcji podaję konkretną kwotę: wkładasz 50 000 zł — ile masz po roku, po 3 latach, po 5 latach. Zero ogólników, tylko liczby.\n\nDodatkowo — pokazuję prawdziwy koszt alternatywny. Bo wybór między lokatą a ETF to nie jest decyzja na 500 zł różnicy — to może być 50 000 zł różnicy w perspektywie 5 lat.\n\nMateriał dla każdego, kto:\n- ma oszczędności i nie wie, gdzie je trzymać\n- zastanawia się między lokatą a obligacjami\n- słyszał o ETF-ach, ale boi się giełdy\n- chce zrozumieć, co NAPRAWDĘ opłaca się w 2026 roku\n\nŹródła danych: oprocentowanie lokat i kont — NBP, oferty banków (stan na czerwiec 2026). Obligacje — aktualne warunki emisji ze strony Ministerstwa Finansów. ETF — dane rynkowe na podstawie indeksu MSCI ACWI i S&P 500. Kalkulacje własne.\n\nSubstack - https://substack.com/@gospodarkabeziluzji\n\nWSPÓŁPRACA - gospodarkabeziluzji@gmail.com\n\nDiscord dla widzów - https://discord.com/invite/wWvxfj6eCY\n\nBLOG dla widzów - https://gospodarkabeziluzji.blogspot.com/\n\nX/Twitter - https://x.com/LOF_lm\n\nNie posiadam uprawnień doradcy inwestycyjnego, a treść filmu zawiera wyłącznie moje subiektywne opinie. Inwestycja wiąże się z ryzykiem utraty kapitału. Dotychczasowe prognozy i wyniki nie stanowią wiarygodnych wskaźników przyszłych wyników. Przed podjęciem jakiejkolwiek decyzji inwestycyjnej należy koniecznie przeprowadzić własną analizę. W razie potrzeby należy zasięgnąć niezależnej porady inwestycyjnej u certyfikowanego specjalisty.\n\nTreści publikowane na tym kanale mają wyłącznie charakter edukacyjny i informacyjny. Materiały te nie stanowią \"rekomendacji\" ani \"porady inwestycyjnej\" w rozumieniu art. 76 ww. ustawy i nie mogą być traktowane jako podstawa do podejmowania decyzji inwestycyjnych\n\n#GdzieTrzymaćPieniądze #Oszczędzanie #Ranking",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/b36TxFRIs5w/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "Gospodarka bez Iluzji",
+        "tags": [
+          "inwestowanie",
+          "akcje",
+          "obligacje",
+          "etf",
+          "kryptowaluty",
+          "giełda",
+          "złoto",
+          "zawód inwestor",
+          "pankracy",
+          "piotr cymcyk",
+          "gdzie trzymać pieniądze",
+          "oszczędzanie pieniędzy",
+          "jak oszczędzać pieniądze",
+          "oszczędzanie",
+          "lokaty",
+          "obligacje skarbowe",
+          "ETF",
+          "finanse osobiste",
+          "inwestowanie dla początkujących",
+          "ranking inwestycji",
+          "poduszka finansowa",
+          "bezpieczne oszczędzanie",
+          "inflacja",
+          "edukacja finansowa",
+          "pieniądze",
+          "gdzie inwestować",
+          "budżet domowy",
+          "gdzie ulokować pieniądze",
+          "ochrona przed inflacją",
+          "ranking",
+          "gotówka",
+          "nieruchomości"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Gdzie trzymać pieniądze w 2026? Ranking 5 opcji (jedna cię ZDRADZI)!",
+          "description": "Gdzie trzymać pieniądze w 2026 roku? To pytanie zadaje sobie każdy, kto widzi jak inflacja zjada jego oszczędności. W tym materiale zestawiam 5 realnych opcji: gotówka, lokaty bankowe, konto oszczędnościowe, obligacje skarbowe i ETF-y — i porównuję je twardymi liczbami. Jedna z tych opcji to pułapka, którą banki i instytucje finansowe uwielbiają.\n\nCo dokładnie analizuję w tym rankingu:\n- Gotówka — dlaczego trzymanie pieniędzy w gotówce to najgorsza decyzja i ile realnie tracisz rocznie przez inflację (konkretna kwota w PLN)\n- Lokaty bankowe — oprocentowanie na poziomie 5-6% wygląda dobrze, ale co po odliczeniu podatku Belki i inflacji? Ile NAPRAWDĘ zostaje w kieszeni\n- Konta oszczędnościowe — wygoda i elastyczność kontra realny zysk. Porównanie najlepszych ofert na rynku\n- Obligacje skarbowe — EDO, COI, TOS, ROS — które obligacje Skarbu Państwa faktycznie chronią przed inflacją, a które tylko udają\n- ETF-y (giełda) — ACWI, S&P 500 jako alternatywa. Czy inwestowanie na giełdzie ma sens dla oszczędności, których możesz potrzebować za rok? A może jednak lepiej tam trzymać długoterminowo?\n\nDla każdej opcji podaję konkretną kwotę: wkładasz 50 000 zł — ile masz po roku, po 3 latach, po 5 latach. Zero ogólników, tylko liczby.\n\nDodatkowo — pokazuję prawdziwy koszt alternatywny. Bo wybór między lokatą a ETF to nie jest decyzja na 500 zł różnicy — to może być 50 000 zł różnicy w perspektywie 5 lat.\n\nMateriał dla każdego, kto:\n- ma oszczędności i nie wie, gdzie je trzymać\n- zastanawia się między lokatą a obligacjami\n- słyszał o ETF-ach, ale boi się giełdy\n- chce zrozumieć, co NAPRAWDĘ opłaca się w 2026 roku\n\nŹródła danych: oprocentowanie lokat i kont — NBP, oferty banków (stan na czerwiec 2026). Obligacje — aktualne warunki emisji ze strony Ministerstwa Finansów. ETF — dane rynkowe na podstawie indeksu MSCI ACWI i S&P 500. Kalkulacje własne.\n\nSubstack - https://substack.com/@gospodarkabeziluzji\n\nWSPÓŁPRACA - gospodarkabeziluzji@gmail.com\n\nDiscord dla widzów - https://discord.com/invite/wWvxfj6eCY\n\nBLOG dla widzów - https://gospodarkabeziluzji.blogspot.com/\n\nX/Twitter - https://x.com/LOF_lm\n\nNie posiadam uprawnień doradcy inwestycyjnego, a treść filmu zawiera wyłącznie moje subiektywne opinie. Inwestycja wiąże się z ryzykiem utraty kapitału. Dotychczasowe prognozy i wyniki nie stanowią wiarygodnych wskaźników przyszłych wyników. Przed podjęciem jakiejkolwiek decyzji inwestycyjnej należy koniecznie przeprowadzić własną analizę. W razie potrzeby należy zasięgnąć niezależnej porady inwestycyjnej u certyfikowanego specjalisty.\n\nTreści publikowane na tym kanale mają wyłącznie charakter edukacyjny i informacyjny. Materiały te nie stanowią \"rekomendacji\" ani \"porady inwestycyjnej\" w rozumieniu art. 76 ww. ustawy i nie mogą być traktowane jako podstawa do podejmowania decyzji inwestycyjnych\n\n#GdzieTrzymaćPieniądze #Oszczędzanie #Ranking"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT19M10S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "25080",
+        "likeCount": "476",
+        "favoriteCount": "0",
+        "commentCount": "88"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "cxWvcFuAafGM2OXd6orXme4i6Tk",
+      "id": "26vfFWeHXYU",
+      "snippet": {
+        "publishedAt": "2026-06-11T13:00:06Z",
+        "channelId": "UCteUEV5xcY2ZbQUJy5ibgoQ",
+        "title": "Wrzuciłem 20 000 zł w obligacje skarbowe. Tyle mam po roku",
+        "description": "Rok temu wrzuciłem 20 000 zł w obligacje skarbowe. W tym odcinku pokazuję dokładnie, ile z tego mam po roku — co do złotówki — i mówię szczerze, czy było warto.To 3-letnie obligacje TOS ze stałym oprocentowaniem 5,75%. Pokazuję dwa scenariusze: ile mam, jeśli trzymam je do końca, i ile dostałbym do ręki, gdybym zerwał je już teraz.Rozkładam wszystko na liczby: ile narosło odsetek brutto, ile zostaje po podatku Belki, jaka jest opłata za wcześniejszy wykup i co to realnie znaczy dla moich pieniędzy. Mówię też, dla kogo moim zdaniem obligacje skarbowe mają sens, a dla kogo niekoniecznie — i czy dziś jeszcze warto je kupić.Ważne: to nie jest porada inwestycyjna. Dzielę się tym, co sam zrobiłem ze swoimi pieniędzmi, i pokazuję realne liczby — decyzje podejmujesz sam.To dzień 2 mojego wyzwania: 7 odcinków przez 7 dni. Pracuję na etacie 8–16 i po godzinach próbuję dojść do miliona, testując różne drogi i pokazując wszystko tak, jak jest — łącznie z tym, co się nie udaje.Jeśli chcesz zobaczyć, jak ta droga idzie dalej, zostaw suba i napisz w komentarzu: Ty wybrałbyś bezpieczne obligacje, czy większe ryzyko dla większego zysku?📸 Instagram: https://www.instagram.com/milionpogodzinach_yt/#obligacjeskarbowe #obligacje #inwestowanie #zarabianiepogodzinach #milionpogodzinach",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/26vfFWeHXYU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/26vfFWeHXYU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/26vfFWeHXYU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/26vfFWeHXYU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/26vfFWeHXYU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Milion po Godzinach",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Wrzuciłem 20 000 zł w obligacje skarbowe. Tyle mam po roku",
+          "description": "Rok temu wrzuciłem 20 000 zł w obligacje skarbowe. W tym odcinku pokazuję dokładnie, ile z tego mam po roku — co do złotówki — i mówię szczerze, czy było warto.To 3-letnie obligacje TOS ze stałym oprocentowaniem 5,75%. Pokazuję dwa scenariusze: ile mam, jeśli trzymam je do końca, i ile dostałbym do ręki, gdybym zerwał je już teraz.Rozkładam wszystko na liczby: ile narosło odsetek brutto, ile zostaje po podatku Belki, jaka jest opłata za wcześniejszy wykup i co to realnie znaczy dla moich pieniędzy. Mówię też, dla kogo moim zdaniem obligacje skarbowe mają sens, a dla kogo niekoniecznie — i czy dziś jeszcze warto je kupić.Ważne: to nie jest porada inwestycyjna. Dzielę się tym, co sam zrobiłem ze swoimi pieniędzmi, i pokazuję realne liczby — decyzje podejmujesz sam.To dzień 2 mojego wyzwania: 7 odcinków przez 7 dni. Pracuję na etacie 8–16 i po godzinach próbuję dojść do miliona, testując różne drogi i pokazując wszystko tak, jak jest — łącznie z tym, co się nie udaje.Jeśli chcesz zobaczyć, jak ta droga idzie dalej, zostaw suba i napisz w komentarzu: Ty wybrałbyś bezpieczne obligacje, czy większe ryzyko dla większego zysku?📸 Instagram: https://www.instagram.com/milionpogodzinach_yt/#obligacjeskarbowe #obligacje #inwestowanie #zarabianiepogodzinach #milionpogodzinach"
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT4M11S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "19982",
+        "likeCount": "239",
+        "favoriteCount": "0",
+        "commentCount": "39"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "cMyv70rghmc8UZ9TY1EdwgAp--E",
+      "id": "679201SGDgc",
+      "snippet": {
+        "publishedAt": "2026-08-26T06:15:06Z",
+        "channelId": "UCfvR4QTLT5GAtrWtCR5WgSA",
+        "title": "Jak kupić obligacje skarbowe krok po kroku przez internet i smartfon?",
+        "description": "Chcesz bezpiecznie oszczędzać i chronić swoje pieniądze przed inflacją? W tym filmie dowiesz się, jak krok po kroku kupić detaliczne obligacje skarbowe przez internet i smartfon. \n\nPokazujemy cały proces rejestracji i zakupu całkowicie online bez wychodzenia z domu!\nZ filmu dowiesz się:\n\nJak założyć darmowe Konto Rejestrowe w PKO Banku Polskim lub Banku Pekao SA.\n\nJak potwierdzić tożsamość za pomocą aplikacji mObywatel lub Profilu Zaufanego.\n\nJak kupić obligacje już od 100 zł bez dodatkowych opłat i prowizji.\n\nJak zyskać więcej i legalnie uniknąć podatku Belki dzięki kontu IKE.\n\nTo prosty i bezpieczny sposób na ulokowanie oszczędności w obligacjach rocznych, czteroletnich czy dziesięcioletnich.\n\nSubskrybuj kanał Bankowe ABC, aby nie przegapić kolejnych poradników finansowych! Po szczegółową instrukcję i dodatkowe wskazówki zapraszamy do pełnego artykułu na naszym blogu. Link znajdziesz poniżej.\n\nLink do artykułu:\n\nhttps://bankoweabc.pl/jak-kupic-obligacje-skarbowe-krok-po-kroku/\n\nDowiedz się, jak kupić obligacje przez internet krok po kroku. Ten poradnik wyjaśnia cały proces zakupu obligacji skarbowych dla początkujących.\n\nJeśli zastanawiasz się, jak bezpiecznie rozpocząć inwestowanie w obligacje, ten materiał przeprowadzi Cię przez wszystkie etapy. Zobaczysz, jak wygląda proces weryfikacji tożsamości oraz konfiguracja profilu użytkownika na komputerze i urządzeniu mobilnym. Wyjaśniam także, czym dokładnie jest Konto Rejestrowe i dlaczego jest kluczowe przy zarządzaniu oszczędnościami.\n\nPo obejrzeniu filmu będziesz dokładnie wiedzieć, jakie metody płatności wybrać oraz jak sprawnie przejść przez wybór odpowiednich papierów wartościowych. To kompletny przewodnik dla osób, które chcą samodzielnie realizować zakup obligacji online bez wychodzenia z domu.\n\nSubskrybuj kanał po cotygodniowe analizy finansowe i napisz w komentarzu, jaki temat związany z inwestowaniem mam omówić w następnym odcinku.\n\n#obligacje #oszczędzanie #finanse #IKE #BankoweABC ____________________________________________________________________\nInformacja o transparentności AI:\n\nŚcieżka lektorska / podcastowa została wygenerowana przy użyciu sztucznej inteligencji (Google Gemini Notebook) na podstawie autorskich analiz i materiałów źródłowych serwisu Bankowe ABC. Treść merytoryczna, dobór źródeł oraz weryfikacja danych zostały w całości przygotowane przez autora. ____________________________________________________________________\nInformacja o transparentności AI:\n\nŚcieżka lektorska / podcastowa została wygenerowana przy użyciu sztucznej inteligencji (Google Gemini Notebook) na podstawie autorskich analiz i materiałów źródłowych serwisu Bankowe ABC. Treść merytoryczna, dobór źródeł oraz weryfikacja danych zostały w całości przygotowane przez autora.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/679201SGDgc/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "Bankowe ABC",
+        "tags": [
+          "obligacje skarbowe przez internet",
+          "jak kupić obligacje",
+          "zakup obligacji online",
+          "Konto Rejestrowe",
+          "inwestowanie w obligacje",
+          "Jak kupić obligacje skarbowe krok po kroku",
+          "Jak kupić obligacje skarbowe",
+          "Gdzie i jak kupić obligacje skarbowe",
+          "Zakup detalicznych obligacji skarbowych",
+          "Gdzie można kupić detaliczne obligacje skarbowe",
+          "Co to jest Konto Rejestrowe",
+          "Zakup obligacji skarbowych",
+          "Jak kupić obligacje rodzinne 800+",
+          "instrukcja kupna obligacji skarbowych"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "pl",
+        "localized": {
+          "title": "Jak kupić obligacje skarbowe krok po kroku przez internet i smartfon?",
+          "description": "Chcesz bezpiecznie oszczędzać i chronić swoje pieniądze przed inflacją? W tym filmie dowiesz się, jak krok po kroku kupić detaliczne obligacje skarbowe przez internet i smartfon. \n\nPokazujemy cały proces rejestracji i zakupu całkowicie online bez wychodzenia z domu!\nZ filmu dowiesz się:\n\nJak założyć darmowe Konto Rejestrowe w PKO Banku Polskim lub Banku Pekao SA.\n\nJak potwierdzić tożsamość za pomocą aplikacji mObywatel lub Profilu Zaufanego.\n\nJak kupić obligacje już od 100 zł bez dodatkowych opłat i prowizji.\n\nJak zyskać więcej i legalnie uniknąć podatku Belki dzięki kontu IKE.\n\nTo prosty i bezpieczny sposób na ulokowanie oszczędności w obligacjach rocznych, czteroletnich czy dziesięcioletnich.\n\nSubskrybuj kanał Bankowe ABC, aby nie przegapić kolejnych poradników finansowych! Po szczegółową instrukcję i dodatkowe wskazówki zapraszamy do pełnego artykułu na naszym blogu. Link znajdziesz poniżej.\n\nLink do artykułu:\n\nhttps://bankoweabc.pl/jak-kupic-obligacje-skarbowe-krok-po-kroku/\n\nDowiedz się, jak kupić obligacje przez internet krok po kroku. Ten poradnik wyjaśnia cały proces zakupu obligacji skarbowych dla początkujących.\n\nJeśli zastanawiasz się, jak bezpiecznie rozpocząć inwestowanie w obligacje, ten materiał przeprowadzi Cię przez wszystkie etapy. Zobaczysz, jak wygląda proces weryfikacji tożsamości oraz konfiguracja profilu użytkownika na komputerze i urządzeniu mobilnym. Wyjaśniam także, czym dokładnie jest Konto Rejestrowe i dlaczego jest kluczowe przy zarządzaniu oszczędnościami.\n\nPo obejrzeniu filmu będziesz dokładnie wiedzieć, jakie metody płatności wybrać oraz jak sprawnie przejść przez wybór odpowiednich papierów wartościowych. To kompletny przewodnik dla osób, które chcą samodzielnie realizować zakup obligacji online bez wychodzenia z domu.\n\nSubskrybuj kanał po cotygodniowe analizy finansowe i napisz w komentarzu, jaki temat związany z inwestowaniem mam omówić w następnym odcinku.\n\n#obligacje #oszczędzanie #finanse #IKE #BankoweABC ____________________________________________________________________\nInformacja o transparentności AI:\n\nŚcieżka lektorska / podcastowa została wygenerowana przy użyciu sztucznej inteligencji (Google Gemini Notebook) na podstawie autorskich analiz i materiałów źródłowych serwisu Bankowe ABC. Treść merytoryczna, dobór źródeł oraz weryfikacja danych zostały w całości przygotowane przez autora. ____________________________________________________________________\nInformacja o transparentności AI:\n\nŚcieżka lektorska / podcastowa została wygenerowana przy użyciu sztucznej inteligencji (Google Gemini Notebook) na podstawie autorskich analiz i materiałów źródłowych serwisu Bankowe ABC. Treść merytoryczna, dobór źródeł oraz weryfikacja danych zostały w całości przygotowane przez autora."
+        },
+        "defaultAudioLanguage": "pl"
+      },
+      "contentDetails": {
+        "duration": "PT8M55S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "2441",
+        "likeCount": "12",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "paidProductPlacementDetails": {
+        "hasPaidProductPlacement": false
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 10,
+    "resultsPerPage": 10
+  }
+}

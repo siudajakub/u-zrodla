@@ -1,0 +1,54 @@
+{
+  "kind": "youtube#channelListResponse",
+  "etag": "Z4dpPi33RPj9ET_t7nxr464FqKI",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "nfFunVkLXluzPZLhksIMUjXOUOQ",
+      "id": "UC-xQCWMkC3MM-D7a-Tr8_AQ",
+      "snippet": {
+        "title": "Dawid Inwestuje",
+        "description": "Cześć, tu Dawid.\nDawid Inwestuje to kanał dla tych, którzy chcą ogarnąć swoje pieniądze — ale nikt nigdy nie wytłumaczył im jak. Nie ma tu skomplikowanych wykresów ani finansowego żargonu. Jest za to konkret, po ludzku, bez owijania w bawełnę.\n\nCo znajdziesz na tym kanale:\n— Jak działają akcje i ETF-y — od absolutnych podstaw\n— Jak zbudować prosty portfel inwestycyjny bez wiedzy finansowej\n— Finanse osobiste: budżet, poduszka finansowa, pierwsze inwestycje\n— Moje własne inwestycje — co kupuję, co sprzedaję i dlaczego\n— Odpowiedzi na pytania, których boisz się zadać bankierowi\n\n\nInwestowanie jest ryzykowne i możesz stracić część lub całość zainwestowanego kapitału. Podane informacje służą wyłącznie celom informacyjnym i edukacyjnym i nie stanowią żadnego rodzaju porady finansowej ani rekomendacji inwestycyjnej.\n",
+        "customUrl": "@dawidinwestuje",
+        "publishedAt": "2026-07-06T17:12:05.827805Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/Ah0CpeTZwCcRVog-iAbaZgd1YF3ZJYxYB10jV1TiOEcmnX58Zc3DsXodahKTcjCaLf2TPG_iSpQ=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/Ah0CpeTZwCcRVog-iAbaZgd1YF3ZJYxYB10jV1TiOEcmnX58Zc3DsXodahKTcjCaLf2TPG_iSpQ=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/Ah0CpeTZwCcRVog-iAbaZgd1YF3ZJYxYB10jV1TiOEcmnX58Zc3DsXodahKTcjCaLf2TPG_iSpQ=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "localized": {
+          "title": "Dawid Inwestuje",
+          "description": "Cześć, tu Dawid.\nDawid Inwestuje to kanał dla tych, którzy chcą ogarnąć swoje pieniądze — ale nikt nigdy nie wytłumaczył im jak. Nie ma tu skomplikowanych wykresów ani finansowego żargonu. Jest za to konkret, po ludzku, bez owijania w bawełnę.\n\nCo znajdziesz na tym kanale:\n— Jak działają akcje i ETF-y — od absolutnych podstaw\n— Jak zbudować prosty portfel inwestycyjny bez wiedzy finansowej\n— Finanse osobiste: budżet, poduszka finansowa, pierwsze inwestycje\n— Moje własne inwestycje — co kupuję, co sprzedaję i dlaczego\n— Odpowiedzi na pytania, których boisz się zadać bankierowi\n\n\nInwestowanie jest ryzykowne i możesz stracić część lub całość zainwestowanego kapitału. Podane informacje służą wyłącznie celom informacyjnym i edukacyjnym i nie stanowią żadnego rodzaju porady finansowej ani rekomendacji inwestycyjnej.\n"
+        }
+      },
+      "contentDetails": {
+        "relatedPlaylists": {
+          "likes": "",
+          "uploads": "UU-xQCWMkC3MM-D7a-Tr8_AQ"
+        }
+      },
+      "statistics": {
+        "viewCount": "27083",
+        "subscriberCount": "214",
+        "hiddenSubscriberCount": false,
+        "videoCount": "16"
+      }
+    }
+  ]
+}

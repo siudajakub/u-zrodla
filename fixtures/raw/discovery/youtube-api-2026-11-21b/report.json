@@ -1,0 +1,198 @@
+{
+ "runNo": 1,
+ "at": "2026-11-21T20:34:28+00:00",
+ "monitoring": {
+  "channelsDue": 209,
+  "channelsRead": 209,
+  "withSignalRead": 51,
+  "newVideos": 8415,
+  "stopped": null,
+  "errors": 0,
+  "units": 378
+ },
+ "discovery": {
+  "families": {
+   "topic": {
+    "searchUnits": 800,
+    "newPolishChannels": 12,
+    "queries": 7,
+    "per100": 1.5
+   }
+  },
+  "queries": [
+   {
+    "kind": "topic",
+    "query": "inwestowanie",
+    "searchUnits": 200,
+    "videos": 103,
+    "skippedHits": 3,
+    "newChannels": 8,
+    "newPolishChannels": 8,
+    "per100": 4.0,
+    "completed": true
+   },
+   {
+    "kind": "topic",
+    "query": "giełda",
+    "searchUnits": 100,
+    "videos": 50,
+    "skippedHits": 0,
+    "newChannels": 0,
+    "newPolishChannels": 0,
+    "per100": 0.0,
+    "completed": true
+   },
+   {
+    "kind": "topic",
+    "query": "ETF",
+    "searchUnits": 100,
+    "videos": 50,
+    "skippedHits": 7,
+    "newChannels": 3,
+    "newPolishChannels": 0,
+    "per100": 0.0,
+    "completed": true
+   },
+   {
+    "kind": "topic",
+    "query": "akcje dywidendowe",
+    "searchUnits": 100,
+    "videos": 53,
+    "skippedHits": 0,
+    "newChannels": 6,
+    "newPolishChannels": 3,
+    "per100": 3.0,
+    "completed": true
+   },
+   {
+    "kind": "topic",
+    "query": "obligacje skarbowe",
+    "searchUnits": 100,
+    "videos": 53,
+    "skippedHits": 3,
+    "newChannels": 0,
+    "newPolishChannels": 0,
+    "per100": 0.0,
+    "completed": true
+   },
+   {
+    "kind": "topic",
+    "query": "IKE IKZE",
+    "searchUnits": 100,
+    "videos": 50,
+    "skippedHits": 0,
+    "newChannels": 1,
+    "newPolishChannels": 1,
+    "per100": 1.0,
+    "completed": true
+   },
+   {
+    "kind": "topic",
+    "query": "jak zacząć inwestować",
+    "searchUnits": 100,
+    "videos": 53,
+    "skippedHits": 3,
+    "newChannels": 0,
+    "newPolishChannels": 0,
+    "per100": 0.0,
+    "completed": true
+   }
+  ],
+  "sparseSkipped": [],
+  "stoppedEarly": {
+   "reason": "nowe polskie kanały na 100 j. poniżej 2.0 w 3 kolejnych zapytaniach",
+   "afterQuery": "jak zacząć inwestować"
+  },
+  "units": 811
+ },
+ "units": 1205,
+ "unitsLimit": 2500,
+ "keys": [
+  {
+   "keyId": "e97cae75",
+   "day": "2026-11-21",
+   "used": 7325,
+   "usedThisRun": 1205,
+   "limit": 10000,
+   "exhaustedAt": null
+  }
+ ],
+ "newPolishChannelList": [
+  {
+   "channelId": "UCj9LWLb0pLpQifxEtI_tYYQ",
+   "kind": "topic",
+   "query": "inwestowanie"
+  },
+  {
+   "channelId": "UC5rv-WmaXke9sEaA39HuBgQ",
+   "kind": "topic",
+   "query": "inwestowanie"
+  },
+  {
+   "channelId": "UC7BoRS41VuDOyqvBTVxar4g",
+   "kind": "topic",
+   "query": "inwestowanie"
+  },
+  {
+   "channelId": "UC310_RxbFI4cB7udCj0YSGQ",
+   "kind": "topic",
+   "query": "inwestowanie"
+  },
+  {
+   "channelId": "UCbTCMPrEGARddFKS5P9onoA",
+   "kind": "topic",
+   "query": "inwestowanie"
+  },
+  {
+   "channelId": "UCjfZWeas6HEnQmELUL0hQFQ",
+   "kind": "topic",
+   "query": "inwestowanie"
+  },
+  {
+   "channelId": "UCHaDuxSqo_RC4ApM5w4InVA",
+   "kind": "topic",
+   "query": "inwestowanie"
+  },
+  {
+   "channelId": "UCwKvys5yPdbGrotJHA_B3DQ",
+   "kind": "topic",
+   "query": "inwestowanie"
+  },
+  {
+   "channelId": "UCRBfibYf1inJqo6EJBAg0XA",
+   "kind": "topic",
+   "query": "akcje dywidendowe"
+  },
+  {
+   "channelId": "UCdZ7DSk48Meff2cURImIxwg",
+   "kind": "topic",
+   "query": "akcje dywidendowe"
+  },
+  {
+   "channelId": "UC6ZuH6K2eblzhSNhLgzAAwA",
+   "kind": "topic",
+   "query": "akcje dywidendowe"
+  },
+  {
+   "channelId": "UC-xQCWMkC3MM-D7a-Tr8_AQ",
+   "kind": "topic",
+   "query": "IKE IKZE"
+  }
+ ],
+ "channelBase": {
+  "total": 221,
+  "polish": 221,
+  "unknown": 0,
+  "skippedNonPolish": 177,
+  "withFirmPromotion": 59,
+  "newPolishThisRun": 12
+ },
+ "waitingForTranscript": {
+  "relationEvidence": 792,
+  "firmName": 548,
+  "shorts": 132,
+  "total": 1340
+ },
+ "videos": 8915,
+ "shorts": 3469
+}
