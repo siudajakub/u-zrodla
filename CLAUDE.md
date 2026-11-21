@@ -8,7 +8,7 @@ Zbuduj jeden obieg sprawy dla analityka UKNF, od odkrycia materiału do decyzji 
 
 1. Uruchom `sh tools/hack_context.sh`. Zobaczysz status linii i ostatni wpis każdej z najnowszych sesji. Claude Code wykonuje ten odczyt przy starcie, wznowieniu i po kompaktowaniu.
 2. Przeczytaj [TEAM_BOARD.md](TEAM_BOARD.md) i [kontrakty](docs/hackathon/contracts.md) dla swojego zakresu. Gdy wracasz do konkretnej sesji, użyj `python3 tools/session_log.py latest --session ID`. Jeśli pracujesz w linii, przeczytaj jej [rekord](docs/lanes/README.md).
-3. W fazie bootstrapu sprawdź `git status --short --branch`. Repo startuje na `master` bez commitów. Dopóki kapitan za zgodą J nie utworzy bazy `hack/integration`, jeden piszący pracuje w głównym katalogu. Pozostali mogą czytać i recenzować. Polecenie `python3 tools/hack_join.py --list` pokazuje dostępne linie również przed pierwszym commitem.
+3. Zgoda na bazę została udzielona. Gałęzie main i hack/integration oraz cztery izolowane worktree istnieją. Sprawdź aktualny HEAD i stan linii poleceniami git status i python3 tools/hack_status.py. Kapitan scala do hack/integration i promuje sprawdzony commit do main.
 
 ## Log sesji
 
@@ -27,7 +27,7 @@ Rekord linii przechowuje zakres plików, stan, weryfikację i krok integracji. H
 
 ## Co działa i jak sprawdzać
 
-Są brief UKNF, plan, zarchiwizowane sondy, [czuwanie na czterech profilach](docs/MONITORING.md) i narzędzia do koordynacji. Sondy potwierdzają odczyty wybranych publicznych źródeł i zachowane przechwycenia. Aplikacja, instalacja zależności, Compose i bramka end-to-end są etapem implementacji. Aktualizuj komendy po dodaniu działającego punktu wejścia.
+Działające demo, komendę startową i dwa przypadki do odsłuchania opisują [README](README.md) i [odbiór](docs/DEMO-ODBIOR.md). [Monitoring](docs/MONITORING.md) łączy znane profile z odkrywaniem twórców. Modele i prywatne dane robocze są poza Gitem.
 
 ```sh
 python3 tools/check_agent_docs.py

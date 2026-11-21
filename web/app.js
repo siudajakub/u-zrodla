@@ -54,10 +54,13 @@
       upload: "plik operatora",
       import: "import",
     })[value] || text(value);
-  const clock = (seconds) =>
-    `${Math.floor(Number(seconds) / 60)}:${String(
-      Math.floor(Number(seconds) % 60),
-    ).padStart(2, "0")}`;
+  const clock = (seconds) => {
+    const hundredths = Math.round(Number(seconds) * 100);
+    const minutes = Math.floor(hundredths / 6000);
+    const secondsPart = String(Math.floor((hundredths % 6000) / 100)).padStart(2, "0");
+    const fraction = String(hundredths % 100).padStart(2, "0");
+    return `${minutes}:${secondsPart},${fraction}`;
+  };
   const linkUrl = (value) => {
     if (!value) return "";
     try {
@@ -403,7 +406,7 @@
                         }
                       },
                     },
-                    `▶ ${clock(e.start)}`,
+                    `▶ ${clock(e.start)}${e.end != null ? "–" + clock(e.end) : ""}`,
                   ),
               ),
               El("p", null, "„", text(e.text, "Brak tekstu"), "”"),
@@ -1371,7 +1374,9 @@
                 { className: "panel source-card", key: c.id },
                 El("div", { className: "eyebrow" }, text(c.platform)),
                 El("h3", null, text(c.name)),
+                c.status === "candidate" && El(Badge, null, "Kandydat · ID kanału do potwierdzenia"),
                 El("p", null, El(Link, { url: c.url })),
+                c.crosslinkDiscovery?.videoUrl && El("p", null, "Powiązany film: ", El(Link, {url:c.crosslinkDiscovery.videoUrl})),
                 El("p", null, "Odkryto przez: ", text(c.discoveredVia)),
                 El("p", null, "Pierwsza obserwacja: ", date(c.firstSeen)),
               ),

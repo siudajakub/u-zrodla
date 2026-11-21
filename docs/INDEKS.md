@@ -2,6 +2,8 @@
 
 Punkt startowy dla członka zespołu lub agenta. Brief i załączniki UKNF określają wymagania. Relacja mentora uzupełnia przebieg sprawy. Ocenę planu, wyniki sond oraz działanie aplikacji należy traktować jako osobne rodzaje dowodów.
 
+[Działające demo](../README.md) · [Wyniki odbioru i ograniczenia](DEMO-ODBIOR.md) · [Prezentacja](../presentation/InvestWatch.pdf)
+
 ## Najważniejsze informacje
 
 - M1 wiąże autora, firmę, publikację i URL, także dla polskojęzycznej reklamy firmy transgranicznej. M2 dotyczy własnego marketingu firmy. M3 wymaga treści konkretnej oferty oraz sprawdzenia zakresu uprawnień.
@@ -21,11 +23,11 @@ Wykaz plików wejściowych projektu, pięciu załączników i artefaktów planow
 | [Załącznik do Tematu 2 Wyzwanie KNF HackNation.docx](/home/codexdev/.codex/attachments/23c9b7f4-6a2a-4983-9d7f-d107361f0cb1/Za%C5%82a%CC%A8cznik%20do%20Tematu%202%20Wyzwanie%20KNF%20HackNation.docx) | Definicje firm i pięć odsyłaczy do rejestrów. T1 i T2 mają tę samą część merytoryczną. | 4b071d6a865ac3 |
 | [Załącznik do tematu 3 Wyzwanie KNF HackNation 2026.docx](/home/codexdev/.codex/attachments/23c9b7f4-6a2a-4983-9d7f-d107361f0cb1/Za%C5%82a%CC%A8cznik%20do%20tematu%203%20Wyzwanie%20KNF%20HackNation%202026.docx) | Definicja rekomendacji osobistej i instrumentów. | 1787295e85632b |
 | [settings.json](../.claude/settings.json) | Hooki SessionStart i PreCompact. | 62de13ac1d573c |
-| [AGENTS.md](../AGENTS.md) | Reguły pracy projektu. | c552463b8125c5 |
-| [CLAUDE.md](../CLAUDE.md) | Wejście dla agentów, worktree i przeglądy. | 224926a133ecb7 |
-| [HACKATHON.md](../HACKATHON.md) | Misja, harmonogram i bramki. | 61957fe2c97093 |
+| [AGENTS.md](../AGENTS.md) | Reguły pracy projektu. | be4d06cdccc0d6 |
+| [CLAUDE.md](../CLAUDE.md) | Wejście dla agentów, worktree i przeglądy. | 2ea51cf793d53f |
+| [HACKATHON.md](../HACKATHON.md) | Misja, harmonogram i bramki. | 9e88b761d171a9 |
 | [START_PROMPT.md](../START_PROMPT.md) | Historyczny prompt uruchomieniowy, decyzje kosztowe i stan sprzed kompletu załączników. | a86e26f7fc36e4 |
-| [TEAM_BOARD.md](../TEAM_BOARD.md) | Cztery linie z rozłącznym zakresem i kryteriami. | 7548f7a9d512f1 |
+| [TEAM_BOARD.md](../TEAM_BOARD.md) | Cztery linie z rozłącznym zakresem i kryteriami. | 6d79727849217a |
 | [2026-11-21-additional-sites.json](../data/probe-snapshots/2026-11-21-additional-sites.json) | Trzy odkryte strony usług BDM i błąd dostępu innego źródła. | 1f91ddb8aeb6b3 |
 | [2026-11-21-browser-check.json](../data/probe-snapshots/2026-11-21-browser-check.json) | Sonda materiału ETF na trzech rozmiarach ekranu i oferty doradczej, wybrane elementy DOM i skróty zrzutów. | 90bf7000691495 |
 | [2026-11-21-browser-files.json](../data/probe-snapshots/2026-11-21-browser-files.json) | Zrzuty PNG i ekstrakty DOM z dopasowanymi skrótami bajtów. | 87f411d36c44c1 |
@@ -70,7 +72,7 @@ Wykaz plików wejściowych projektu, pięciu załączników i artefaktów planow
 | [UKNF - Regulamin Zadania Konkursowego.pdf](brief/UKNF%20-%20Regulamin%20Zadania%20Konkursowego.pdf) | Dokument źródłowy. Warunki zgłoszenia, terminy, wagi oceny i załączniki formalne. | 739237ba9fa6b0 |
 | [Urząd_Komisji_Nadzoru_Finansowego__UKNF_-_Pełna_treść_zadania_konkursowego.txt](brief/Urz%C4%85d_Komisji_Nadzoru_Finansowego__UKNF_-_Pe%C5%82na_tre%C5%9B%C4%87_zadania_konkursowego.txt) | Kopia robocza tekstu. Trzy moduły, wymagania techniczne i walidacja. | 250944779676d4 |
 | [Urząd_Komisji_Nadzoru_Finansowego__UKNF_-_Regulamin_Zadania_Konkursowego.txt](brief/Urz%C4%85d_Komisji_Nadzoru_Finansowego__UKNF_-_Regulamin_Zadania_Konkursowego.txt) | Kopia robocza tekstu. Warunki zgłoszenia, terminy, wagi oceny i załączniki formalne. | d3c1f530ffb47e |
-| [contracts.md](hackathon/contracts.md) | Pięć kontraktów do integracji z wariantami awarii. | f6a5622f28519c |
+| [contracts.md](hackathon/contracts.md) | Pięć kontraktów do integracji z wariantami awarii. | 0ede9392eb7b1b |
 | [demo.md](hackathon/demo.md) | Scenariusz pokazu trzech modułów i odtworzenia offline. | 50a4e004a552b3 |
 | [integration.md](hackathon/integration.md) | Zasady integracji, READY i awans wersji. | 03fc70e9bf7530 |
 | [playbook.md](hackathon/playbook.md) | Procedura pracy i integracji. | 8bd6a6517f5c3e |
@@ -85,7 +87,7 @@ Wykaz plików wejściowych projektu, pięciu załączników i artefaktów planow
 | [hack_start.sh](../tools/hack_start.sh) | Tworzenie worktree i rekordu linii. | ecb32e0ab35871 |
 | [hack_status.py](../tools/hack_status.py) | Odczyt zajętych linii i rekordów. | 1f3817a0db1234 |
 | [test_plan_evidence.py](../tools/test_plan_evidence.py) | Odtwarza błędne przypadki wykryte w niezależnej recenzji bramki. | 06d86b2a578033 |
-| [MONITORING.md](MONITORING.md) | Stan i granice obserwacji, plan rozszerzenia próby i braki do pełnej punktacji. | 26c550178a11cc |
+| [MONITORING.md](MONITORING.md) | Stan i granice obserwacji, plan rozszerzenia próby i braki do pełnej punktacji. | d93671bca25d44 |
 | [ODBIOR-UKNF.md](ODBIOR-UKNF.md) | Macierz wymagań, stan, właściciele i próby odbioru. | 6d0b457e8ae6f8 |
 | [watch_sources.py](../tools/watch_sources.py) | Pobieranie, wersjonowanie i raport dzienny. | 6f2cb8040a88eb |
 | [watch_sources.json](../tools/watch_sources.json) | Lista czterech profili pod obserwacją. | d2a0a6fa60b9ca |

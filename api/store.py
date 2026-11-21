@@ -80,12 +80,17 @@ def scan_dict(row):
             "createdAt":row["created"],"updatedAt":row["updated"],"attempts":row["attempts"],
             **json.loads(row["result"])}
 
-def create_scan(mode, request_id, payload=None):
+def create_scan(mode, request_id, payload=None, retry_failed=False):
     with connection(True) as db:
         row=db.execute("SELECT * FROM scans WHERE request_id=?", (request_id,)).fetchone()
         if row:
             if row["mode"] != mode:
                 raise ValueError("Ten identyfikator żądania ma inny tryb.")
+            if retry_failed and row["status"]=="failed":
+                db.execute("UPDATE scans SET status='queued',owner=NULL,lease_until=0,updated=?,result='{}' WHERE id=?",
+                           (utc(),row["id"]))
+                event(db,"scan",row["id"],"Ponowiono nieudane zadanie")
+                return scan_dict(db.execute("SELECT * FROM scans WHERE id=?",(row["id"],)).fetchone()), True
             return scan_dict(row), False
         key=uuid4().hex
         now=utc()
@@ -129,7 +134,7 @@ def apply_scan(db, findings, creators, sources, mode):
         # Acquisition times change on each scan. Version only the captured content and analysis.
         content_keys=("title","url","description","segments","mediaUrl","publishedAt","module","brand","platform","creatorId","sha256","contractDemo")
         signature=sha256(dump([[capture.get(k) for k in content_keys],finding.get("summary"),finding.get("score"),
-                                finding.get("checks"),finding.get("evidence")]).encode()).hexdigest()
+                                finding.get("checks"),finding.get("evidence"),finding.get("semantic"),finding.get("modalityComparison")]).encode()).hexdigest()
         before=db.execute("SELECT fingerprint,revision,body FROM cases WHERE id=?",(key,)).fetchone()
         if before and mode=="replay" and json.loads(before["body"]).get("mode")=="live":
             continue

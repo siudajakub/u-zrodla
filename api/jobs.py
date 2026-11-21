@@ -6,6 +6,7 @@ import time
 from uuid import uuid4
 
 from huey import SqliteHuey
+from huey.exceptions import HueyException
 from . import store
 
 store.STATE.mkdir(parents=True,exist_ok=True,mode=0o700)
@@ -13,7 +14,7 @@ queue=SqliteHuey("investwatch", filename=str(store.STATE/"queue.sqlite3"), resul
 logger=logging.getLogger("investwatch.worker")
 
 def submit(mode, request_id, payload=None):
-    scan,created=store.create_scan(mode,request_id,payload)
+    scan,created=store.create_scan(mode,request_id,payload,retry_failed=mode=="upload")
     if created:
         enqueue(scan["id"])
     return scan
@@ -36,6 +37,11 @@ def claim(key, owner):
 def build(row):
     import json
     from analysis.engine import analyze, demo_captures
+    from analysis.semantic import suggest
+    def evaluate(cap):
+        finding=analyze(cap)
+        finding["semantic"]=suggest(cap)
+        return cap,finding
     mode=row["mode"]
     if mode=="upload":
         from analysis.transcribe import transcribe_file
@@ -46,7 +52,7 @@ def build(row):
              "title":details["title"],"description":details["description"],"url":"/uploads/"+path.name,
              "mediaUrl":"/uploads/"+path.name,"segments":segments,"provenance":"Nagranie operatora · lokalne ASR",
              "sha256":details["sha256"]}
-        return [(cap,analyze(cap))],[],[{"name":"Nagrania operatora","status":"ok","count":1}]
+        return [evaluate(cap)],[],[{"name":"Nagrania operatora","status":"ok","count":1}]
     from collectors.discovery import discover
     with store.connection() as db:
         known=store.all_objects(db,"creators")
@@ -55,7 +61,7 @@ def build(row):
         from .listen import sample_audio
         discovery["sources"].append(sample_audio(discovery["captures"]))
     captures=discovery["captures"]+(demo_captures() if mode=="replay" else [])
-    return [(cap,analyze(cap)) for cap in captures],discovery["creators"],discovery["sources"]
+    return [evaluate(cap) for cap in captures],discovery["creators"],discovery["sources"]
 
 @queue.task()
 def process(key):
@@ -95,7 +101,7 @@ def recover():
 def work():
     logging.basicConfig(level=logging.INFO)
     store.init()
-    submit("replay","bootstrap-v1")
+    submit("replay","bootstrap-single-mention-v2")
     next_check=0
     interval=int(os.environ.get("INVESTWATCH_DISCOVERY_INTERVAL","14400"))
     while True:
@@ -105,11 +111,18 @@ def work():
                 submit("live",f"scheduled-{interval}-{int(now//interval)}")
             recover()
             next_check=now+30
-        task=queue.dequeue()
+        try:
+            task=queue.dequeue()
+        except HueyException:
+            # A retired queue message can be recreated from the durable scan journal.
+            logger.exception("Discarded incompatible queue message; recovering the scan journal")
+            recover()
+            continue
         if task is None:
             time.sleep(.35)
         else:
             queue.execute(task)
 
 if __name__=="__main__":
-    work()
+    from api.jobs import work as registered_worker
+    registered_worker()

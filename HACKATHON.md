@@ -21,3 +21,7 @@ Kapitan integracji koordynuje kontrakty, kolejność zmian, testy i dziennik. J 
 ### Artefakty dla jury
 
 J przygotowuje tytuł, opis, prezentację PDF, minimalny README z Quick Start i repozytorium. Opcjonalny film do 3 minut. Na dwóch minutach pokazu otwiera co najmniej jeden dowód i demonstruje jedną zmianę decyzji. Analityk zachowuje możliwość zweryfikowania każdego cytatu.
+
+## Stan po budowie
+
+Aktualna wersja implementacyjna, instrukcja startu i testy mają własny [README](README.md) i [raport odbioru](docs/DEMO-ODBIOR.md). Plan oceniany przez panel wyprzedza chronologicznie implementację. Przed porównaniem z prezentacją sprawdź wyniki uruchomionych prób.

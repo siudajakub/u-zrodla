@@ -32,3 +32,14 @@ class CaseStoreTest(unittest.TestCase):
         self.assertEqual(a["id"],b["id"])
         with self.assertRaises(ValueError):
             store.create_scan("live","1")
+
+    def test_retry_failed_upload_has_single_stable_scan(self):
+        initial,_=store.create_scan("upload","media-same")
+        with store.connection(True) as db:
+            db.execute("UPDATE scans SET status='failed' WHERE id=?",(initial["id"],))
+        retry,queued=store.create_scan("upload","media-same",retry_failed=True)
+        duplicate,queued_twice=store.create_scan("upload","media-same",retry_failed=True)
+        self.assertTrue(queued)
+        self.assertFalse(queued_twice)
+        self.assertEqual(retry["id"],initial["id"])
+        self.assertEqual(duplicate["id"],initial["id"])

@@ -10,6 +10,7 @@ from .catalogs import (
     PODCAST_ID, PODCAST_QUERIES, PEERTUBE_QUERIES, feed_allowed, read_apple, read_peertube, read_podcast,
 )
 from .common import safe_get, utc_now
+from .crosslinks import extend_from_posts
 from .sites import SITES, read_site
 from .social import CONFIG, read_social, read_watch, social_creator
 
@@ -110,6 +111,15 @@ def _live(previous_creators, fetch, clock):
             creator, items, status = task.result()
             creators[creator["id"]] = creator
             collect(items, status)
+    linked, linked_posts, link_status = extend_from_posts(
+        list(captures.values()), list(previous_creators.values()), fetch=fetch, clock=clock
+    )
+    for creator in linked:
+        creators.setdefault(creator["id"],creator)
+    for post in linked_posts:
+        captures.setdefault(post["id"],post)
+    for source in link_status:
+        statuses[source["id"]]=source
     return {
         "creators": list(creators.values()),
         "captures": list(captures.values()),

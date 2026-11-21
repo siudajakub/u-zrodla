@@ -49,4 +49,4 @@ services:
       retries: 5
   worker:
     <<: *common
-    command: [python, -m, api.jobs]
+    command: [python, -m, api.worker]

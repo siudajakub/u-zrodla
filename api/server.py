@@ -9,7 +9,7 @@ from pathlib import Path
 import tempfile
 from typing import Literal
 from urllib.parse import urlsplit
-from uuid import uuid4
+from functools import lru_cache
 
 from fastapi import FastAPI, HTTPException, Query, Request, WebSocket, WebSocketDisconnect
 from pydantic import BaseModel, Field
@@ -58,6 +58,13 @@ class Contract(BaseModel):
     endDate:date
     label:str=Field(min_length=1,max_length=200)
     expectedRevision:int|None=None
+    channel:str=Field("",max_length=100)
+    requiredLabel:str=Field("",max_length=120)
+
+class Inquiry(BaseModel):
+    action:Literal["draft","waiting","denied","confirmed","documents"]
+    expectedRevision:int=Field(ge=1)
+    note:str=Field("",max_length=2000)
 
 @app.get("/v1/health")
 def health():
@@ -67,6 +74,10 @@ def health():
 
 @app.get("/v1/calibration")
 def calibration(threshold:int=Query(60,ge=0,le=100)):
+    return calculate_cached(threshold)
+
+@lru_cache(maxsize=101)
+def calculate_cached(threshold):
     from analysis.engine import calibration as calculate
     return calculate(threshold)
 
@@ -117,6 +128,31 @@ def decision(key:str,body:Decision):
         store.event(db,"case",key,"Zapisano decyzję analityka")
         return store.case_dict(db,get_case(db,key))
 
+@app.post("/v1/cases/{key}/inquiry")
+def inquiry(key:str,body:Inquiry):
+    with store.connection(True) as db:
+        row=get_case(db,key)
+        require_revision(row,body.expectedRevision)
+        data=json.loads(row["body"])
+        if not data.get("contractDemo"):
+            raise HTTPException(422,"Korespondencja demonstracyjna jest dostępna w fikcyjnej sprawie.")
+        steps=store.history(db,key)
+        previous=next((s for s in reversed(steps) if s["action"]=="inquiry"),{})
+        allowed={None:{"draft"},"draft":{"draft","waiting"},"waiting":{"denied","confirmed","documents"},
+                 "confirmed":{"documents"},"denied":{"draft"},"documents":{"documents","draft"}}
+        if body.action not in allowed.get(previous.get("stage"),set()):
+            raise HTTPException(409,"Wybierz kolejny etap po przygotowaniu pytania.")
+        draft=(f'Czy firma rozpoznaje twórcę materiału „{data["title"]}” ({data["url"]}) i czy '
+               'publikacja była przedmiotem umowy? Prosimy wskazać okres, kanał, wymagane oznaczenie i ewentualne aneksy.')
+        messages={"draft":"Przygotowano szkic pytania","waiting":"Oczekujemy na odpowiedź (symulacja)",
+                  "denied":"Firma zaprzecza współpracy (symulacja)","confirmed":"Potwierdzenie współpracy bez warunków (symulacja)",
+                  "documents":"Dołączono warunki współpracy (symulacja)"}
+        result={"stage":body.action,"text":draft,"reply":body.note}
+        store.record(db,key,"inquiry",messages[body.action],result)
+        db.execute("UPDATE cases SET revision=revision+1,updated=? WHERE id=?",(store.utc(),key))
+        store.event(db,"case",key,messages[body.action])
+        return {**result,"revision":row["revision"]+1}
+
 @app.post("/v1/cases/{key}/contract")
 def contract(key:str,body:Contract):
     with store.connection(True) as db:
@@ -129,6 +165,17 @@ def contract(key:str,body:Contract):
         aligned=published<=body.endDate
         details={"endDate":str(body.endDate),"label":body.label,"publishedAt":str(published),
                  "aligned":aligned,"result":"Data mieści się w okresie umowy" if aligned else "Publikacja po zakończeniu okresu umowy"}
+        comparisons=[{"field":"Okres publikacji","state":"zgodne" if aligned else "rozbieżność","note":details["result"]}]
+        if body.channel.strip():
+            channel=data.get("platform","").casefold()
+            equal=body.channel.strip().casefold()==channel
+            comparisons.append({"field":"Kanał","state":"zgodne" if equal else "do wyjaśnienia",
+                                "note":f'W dokumencie: {body.channel}. W materiale: {data.get("platform") or "brak danych"}.'})
+        if body.requiredLabel.strip():
+            present=body.requiredLabel.strip().casefold() in data.get("description","").casefold()
+            comparisons.append({"field":"Wymagane oznaczenie","state":"widoczne w opisie" if present else "do wyjaśnienia",
+                                "note":f'Sprawdzono opis pod kątem „{body.requiredLabel}”. Obraz i inne miejsca publikacji wymagają własnego dowodu.'})
+        details["comparisons"]=comparisons
         db.execute("UPDATE cases SET revision=revision+1,updated=? WHERE id=?",(store.utc(),key))
         store.record(db,key,"contract",details["result"],details)
         store.event(db,"case",key,"Porównano okres obowiązywania umowy")
@@ -161,11 +208,6 @@ async def upload(request:Request,title:str=Query(min_length=1,max_length=180),
         temp.replace(folder/name)
         payload={"title":title,"description":description,"file":name,"sha256":digest.hexdigest()}
         request_id="upload-"+sha256(store.dump(payload).encode()).hexdigest()
-        # A fresh request may retry a failed decode after fixing model availability.
-        with store.connection() as db:
-            latest=db.execute("SELECT status FROM scans WHERE request_id=?",(request_id,)).fetchone()
-        if latest and latest["status"]=="failed":
-            request_id+="-"+uuid4().hex
         return jobs.submit("upload",request_id,payload)
     finally:
         temp.unlink(missing_ok=True)

@@ -53,3 +53,7 @@ WHERE platform = ? AND post_id = ? ORDER BY version;
 | Atrakcyjność | 9/10 | W dwie minuty analityk wskazuje konkretny cytat, pokazuje geometrię ostrzeżenia na telefonie i wpływ aneksu na ustalenie. Juror potrafi otworzyć inny przypadek |
 
 Stan źródeł jest nierówny. Plik esma_mif_passport_to_PL.json zawiera 26 wpisów z ae_entityTypeCode=CSP, siedzibą Head office i bez kraju przyjmującego. Do ustaleń o usługach inwestycyjnych trzeba dobrać właściwy rejestr, podmiot, kraj i usługę oraz zapisać datę weryfikacji. Lokalny wykaz 712 notyfikacji KNF daje kandydatów do sprawdzenia. Brak wpisu lub zgodność nazwy nie wystarczają do zarzutu. [Zestaw źródłowy](../data/probe-snapshots/knf/esma_mif_passport_to_PL.json) · [Notyfikacje KNF](../data/probe-snapshots/knf/knf_notyfikacje_zagr_FI.json)
+
+## Stan aplikacji po integracji
+
+Od wieczornej implementacji worker Compose sam uruchamia wyszukiwanie po polskich tematach w Apple Podcasts i PeerTube. Zachowuje odkrytych twórców oraz sprawdza kolejne odcinki RSS również po wypadnięciu z wyników wyszukiwania. Dodatkowa fraza zmienia się w czterogodzinnych oknach. Powrót do znanego twórcy i pierwsze odkrycie mają osobne liczniki. Proces na żywo może odsłuchać początek jednej wybranej audycji na skan. Aktywacja ścieżki zależy od dozwolonego źródła, dostępu do publicznego audio i zainstalowania modeli. Zakres pomiaru jest widoczny w karcie. Pozyskanie materiałów z prywatnego konta i systematyczne pokrycie wszystkich polskich twórców pozostają poza zakresem. [Odbiór demonstracji](DEMO-ODBIOR.md)

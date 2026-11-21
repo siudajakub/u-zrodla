@@ -6,14 +6,21 @@ Kapitan przypisuje jednego właściciela do jednej linii. Tablica opisuje nastę
 
 | Slug | Outcome / acceptance | Claim | Contract / dependency | Priority | State |
 | --- | --- | --- | --- | --- | --- |
-| core-cases | Skan ma trwałe ID, decyzja i alert przeżywają restart, równoległa edycja zwraca 409 | api/, compose.yaml, migrations/ | Scan, Finding, Case | P0 | AVAILABLE |
-| source-adapters | Jeden kontrakt łączy monitor z kolejką, importem materiałów firm i odkrywaniem stron ofert PL. Powtórzenie nie dubluje sprawy | collectors/, fixtures/raw/ | Scan, Capture | P0 | AVAILABLE |
-| analysis-evidence | M1, 19 wierszy M2 i M3 zwracają cytaty lub jawne braki danych. Lokalny model porównany z regułami | analysis/, fixtures/labeled/ | Capture, Finding | P0 | AVAILABLE |
-| analyst-desk | Operator przechodzi od kolejki do dowodu, umowy i zmiany progu. Odświeżenie zachowuje decyzję | web/, tests/ui/ | Finding, Case, Calibration | P0 | AVAILABLE |
+| core-cases | Skan ma trwałe ID, decyzja i alert przeżywają restart, równoległa edycja zwraca 409 | api/, compose.yaml, migrations/ | Scan, Finding, Case | P0 | PAUSED |
+| source-adapters | Jeden kontrakt łączy monitor z kolejką, importem materiałów firm i odkrywaniem stron ofert PL. Powtórzenie nie dubluje sprawy | collectors/, fixtures/raw/ | Scan, Capture | P0 | PAUSED |
+| analysis-evidence | M1, 19 wierszy M2 i M3 zwracają cytaty lub jawne braki danych. Lokalny model porównany z regułami | analysis/, fixtures/labeled/ | Capture, Finding | P0 | PAUSED |
+| analyst-desk | Operator przechodzi od kolejki do dowodu, umowy i zmiany progu. Odświeżenie zachowuje decyzję | web/, tests/ui/ | Finding, Case, Calibration | P0 | PAUSED |
 
 ## Active Lanes
 
-Przy przygotowaniu zestawu projekt nie miał początkowego commitu. Operator zakłada pierwsze worktree po ustaleniu bazy Git z J. Polecenie `python3 tools/hack_status.py` pokazuje istniejące linie. Bieżące prace dokumentacyjne i monitoring są opisane w historii sesji.
+Cztery linie dostarczyły zakres demo, a lokalne commity zostały scalone. Rekordy i wyniki są w docs/lanes oraz w [odbiorze](docs/DEMO-ODBIOR.md). Stan PAUSED blokuje ponowne przydzielenie zamkniętej pracy. Dalszy zakres kapitan tworzy osobno.
+
+| Linia | Właściciel | Gałąź | Stan |
+|---|---|---|---|
+| core-cases | kapitan | hack/captain/core-cases | INTEGRATED |
+| source-adapters | SOL | hack/sol/source-adapters | INTEGRATED |
+| analysis-evidence | ASTRA | hack/astra/analysis-evidence | INTEGRATED |
+| analyst-desk | TERA | hack/terra/analyst-desk | INTEGRATED |
 
 ## Merge Train
 
