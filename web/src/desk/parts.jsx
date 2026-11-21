@@ -123,6 +123,14 @@ export function reachText(reach) {
   return `${n} ${unit}`;
 }
 
+/** Zasięg w skrócie do linii metadanych: „22 wyśw.”. */
+export function reachShort(reach) {
+  if (!reach || reach.hidden) return null;
+  const n = fmtNumber(reach.value);
+  if (n == null) return null;
+  return `${n} ${reach.metric === "subscribers" ? "obs." : reach.metric === "plays" ? "odtw." : reach.metric === "eu_reach" ? "os. w UE" : "wyśw."}`;
+}
+
 export function discoveryLines(list) {
   return list.map(describeDiscovery);
 }

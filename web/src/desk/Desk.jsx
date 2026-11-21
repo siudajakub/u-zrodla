@@ -56,7 +56,7 @@ function DataLine({ data, go, scan, filters }) {
   return (
     <HStack gap={4} vAlign="center" wrap="wrap" aria-label="Stan danych">
       <HStack gap={1} vAlign="center" wrap="wrap">
-        {step(f?.materials ?? counts.all, plural(f?.materials ?? counts.all, "materiał", "materiały", "materiałów"), () => go("review", { filters: { ...EMPTY_FILTERS, state: "all" } }), hashFor("review", { filters: { ...EMPTY_FILTERS, state: "all" } }))}
+        {step(counts.all ?? f?.materials, plural(counts.all ?? f?.materials, "materiał", "materiały", "materiałów"), () => go("review", { filters: { ...EMPTY_FILTERS, state: "all" } }), hashFor("review", { filters: { ...EMPTY_FILTERS, state: "all" } }))}
         <Text type="supporting" color="secondary" aria-hidden="true">→</Text>
         {step(f?.adRegister ?? counts.adRegister, "w rejestrze reklam", () => go("register"), hashFor("register"))}
         <Text type="supporting" color="secondary" aria-hidden="true">→</Text>
@@ -183,11 +183,15 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
   }
 
   const recalc = ready ? items.filter((c) => c.needsRecalc && c.module === "M1").length : 0;
+  const filtersBar = (
+    <Filters filters={filters} update={update} reset={reset} tab={tab} narrow={narrow} report={reportFor(tab, filters, queueName)} moduleCounts={moduleCounts} stateCounts={counts} platforms={isRegister ? PLATFORMS.filter((p) => p.value !== "web") : PLATFORMS} />
+  );
   const head = narrow ? null : (
     <LayoutHeader padding={0} hasDivider>
-      <VStack padding={2} gap={0}>
+      <VStack paddingInline={3} paddingBlock={1.5} gap={1.5}>
         <VisuallyHidden><Heading level={1}>{TAB_BY_ID[tab].label}</Heading></VisuallyHidden>
         <DataLine data={data} go={go} scan={scan} filters={filters} />
+        {filtersBar}
       </VStack>
     </LayoutHeader>
   );
@@ -199,7 +203,7 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
         <Banner status="warning" title={`${recalc} ${plural(recalc, "wiersz ma", "wiersze mają", "wierszy ma")} wynik ze starszych reguł`}
           endContent={<Button label="Przelicz materiały" size="sm" isDisabled={actions.busy || actions.scanning} onClick={() => actions.scan("recompute")} />} />
       )}
-      <Filters filters={filters} update={update} reset={reset} tab={tab} narrow={narrow} report={reportFor(tab, filters, queueName)} moduleCounts={moduleCounts} stateCounts={counts} platforms={isRegister ? PLATFORMS.filter((p) => p.value !== "web") : PLATFORMS} />
+      {narrow && filtersBar}
       {isRegister && <RegisterCounters funnel={data.funnel} filters={filters} update={update} go={go} />}
       {list}
       {ready && <MoreFooter shown={items.length} total={total} hasMore={!!queue.nextCursor && !discOn} loading={queue.loadingMore} onMore={queue.more} />}
