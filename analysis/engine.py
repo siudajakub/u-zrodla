@@ -266,8 +266,6 @@ def m2(cap):
     if cap.get("m2Market"):  # a rendered market page (lane E): 19 criteria, card, reasons and screenshots
         from .m2_card import card
         score, summary, evidence, extra = card(cap)
-        # Code that predates the card counts "obserwacja"; a premise is the same kind of observation.
-        extra["checkCounts"] = {**extra["checkCounts"], OBS: extra["checkCounts"].get("przesłanka", 0)}
         return score, summary, evidence, extra
     checks = marketing(cap)
     counts = Counter(r["state"] for r in checks)
@@ -295,7 +293,7 @@ def m2(cap):
                              "render": {"state": "not_collected"}, "media": {"state": "not_collected"}},
                              "gaps": [{"modality": "render", "code": "not_collected", "reason": "obrazu, wideo i układu reklamy nie analizowano"}],
                              "blocksConclusion": False, "label": "Zbadano: tylko tekst reklamy, bez renderu"}
-    if cap.get("platform") not in (None, "web"):
+    if str(cap.get("platform") or "").split(":")[0].lower() in ("facebook", "instagram", "tiktok", "x", "linkedin"):
         scope = m2_scope(cap)
         extra["m2Scope"] = scope
         if not scope["belongs"]:
@@ -890,6 +888,38 @@ def _stamp(finding, module):
                                   "module": module}
 
 
+def _second_opinion(finding, capture):
+    """Second opinion of a local model (analysis.second_opinion), off by default (INVESTWATCH_SECOND_OPINION=1 and Ollama).
+    In a dated replay the RECORDED result of the 21 XI measurement is attached instead, with its origin. Either way it only
+    describes: route, score and queues stay as the rules set them. A failure is a status, never a scan error."""
+    module = finding.get("module")
+    decision = finding.get("reviewDecision") if isinstance(finding.get("reviewDecision"), dict) else {}
+    try:
+        from . import second_opinion as so
+        if so.enabled():
+            if module == "M1":
+                rel = finding.get("adRelationship") or {}
+                if rel.get("status") in ("declared", "documented", "probable"):
+                    quotes = [e["text"] for e in finding.get("evidence") or []
+                              if e.get("modality") == "description" and e.get("role") != "disclosure"][:3]
+                    rules = "brak_ujawnienia" if decision.get("route") == "refer" else "ujawnione"
+                    return so.attach(finding, so.review_m1(capture, (rel.get("firm") or {}).get("mention"), quotes, rules))
+            elif module == "M3" and decision.get("route") in ("complete", "refer"):
+                axes = finding.get("axes") or {}
+                evidence = [e for axis in ("action", "personalisation") for e in ((axes.get(axis) or {}).get("evidence") or [])]
+                return so.attach(finding, so.review_m3(m3_entity(capture)["pages"], evidence, "oferta_rekomendacji"))
+        elif finding.get("mode") == "replay" and module in ("M1", "M3"):
+            from api.second_opinion_recorded import recorded
+            positive = decision.get("route") == "refer" if module == "M1" else decision.get("route") in ("refer", "complete")
+            second = recorded(finding.get("id") or "", module, positive)
+            if second:
+                return {**finding, "secondOpinion": second}
+    except Exception as exc:
+        return {**finding, "secondOpinion": {"status": "unavailable", "verdict": None, "needsReview": False, "affectsRoute": False,
+                                             "reason": type(exc).__name__}}
+    return finding
+
+
 def analyze(capture, *, semantic=None, variant=None, offers=True):
     module = capture.get("module", "M1")
     score, summary, evidence, extra = {"M1": m1, "M2": m2, "M3": m3}[module](capture)
@@ -910,6 +940,7 @@ def analyze(capture, *, semantic=None, variant=None, offers=True):
             finding["reviewScore"] = _qualification_failed(exc)["reviewScore"]
     if module in ("M2", "M3"):
         _stamp(finding, module)
+    finding = _second_opinion(finding, capture)
     if _annotate_on() and _annotation_wanted(finding):
         finding = _annotate(finding, capture)
     return finding

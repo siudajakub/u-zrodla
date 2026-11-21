@@ -13,7 +13,7 @@ class ModuleCalibration(HttpCase):
 
     def test_m2_matches_the_lane_numbers_and_the_curve_moves(self):
         _, at30 = self.request("GET", "/v1/calibration?module=M2&threshold=30")
-        self.assertEqual([at30[k] for k in ("tp", "fp", "tn", "fn")], [9, 1, 12, 3])
+        self.assertEqual([at30[k] for k in ("tp", "fp", "tn", "fn")], [9, 0, 13, 3])  # criterion 2 is an observation: the one false positive at 30 is gone
         self.assertEqual(at30["n"], 25)
         self.assertEqual(at30["labelers"], "1 agent, etykiety przed regułami")
         self.assertEqual(at30["independentUnits"], {"firms": 11})

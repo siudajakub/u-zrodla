@@ -5,7 +5,7 @@ import unittest
 from analysis.m2_card import build, card
 from analysis.m2_fixture import FOOTER_NAME, block, material
 from analysis.m2_readability import measure as readability
-from analysis.m2_rules import NA, OK, ORDER, PREMISE, UNKNOWN, evaluate
+from analysis.m2_rules import NA, OBSERVATION, OK, ORDER, PREMISE, UNKNOWN, evaluate
 
 H1 = block("Inwestuj w ETF", h=1, px=40, y=50)
 LABEL = block("Materiał marketingowy.", y=20, px=14)
@@ -61,7 +61,14 @@ class Identity(unittest.TestCase):
 
     def test_2(self):
         self.assertEqual(state(CLEAN, "2")[0], OK)
-        self.assertEqual(state(without(CLEAN, LABEL), "2")[0], PREMISE)
+        self.assertEqual(state(without(CLEAN, LABEL), "2")[0], OBSERVATION)  # observation: 0 points, no effect on the route
+        from analysis.m2_card import build as build_card
+        rows = evaluate(material(without(CLEAN, LABEL)))
+        score, _, _, extra = build_card({"id": "x", "url": "https://x.pl/"}, rows)
+        self.assertEqual((score, extra["m2Card"]["route"]), (0, "no_signal"))
+        self.assertEqual(extra["m2Card"]["counts"].get(OBSERVATION), 1)
+        self.assertEqual(sum(extra["m2Card"]["counts"].values()), 19)
+        self.assertEqual([c["id"] for c in extra["reviewScore"]["components"]], [])
         education = [block("Czym jest obligacja?", h=1, px=36), block("Obligacja to papier dłużny emitowany przez Skarb Państwa lub firmy."), FOOTER_NAME]
         self.assertEqual(state(education, "2", kind="education")[0], NA)
 

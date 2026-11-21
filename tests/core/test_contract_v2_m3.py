@@ -159,7 +159,7 @@ class MarketCards(unittest.TestCase):
 
     def test_the_old_counters_still_see_the_premises(self):
         f = self.found["web:www.xtb.com/pl/akcje"]
-        self.assertEqual(f["checkCounts"]["obserwacja"], f["checkCounts"]["przesłanka"])
+        self.assertEqual(sum(f["checkCounts"].values()), 19)  # the sum is the 19 criteria; "obserwacja" is its own state (criterion 2)
 
 
 class Worker(ScanCase):
@@ -196,7 +196,7 @@ class Worker(ScanCase):
         self.assertEqual(set(noble["queues"]), {"all", "review", "offersM2"})
         self.assertEqual(set(cases["web:www.xtb.com/pl/edukacja"]["queues"]), {"all", "offersM2"})
         refers = [k for k, c in cases.items() if "review" in c["queues"] and c["module"] in ("M2", "M3")]
-        self.assertEqual(len([k for k in refers if k.startswith("web:") and not k.endswith(":m3")]), 9)
+        self.assertEqual(len([k for k in refers if k.startswith("web:") and not k.endswith(":m3")]), 8)  # criterion 2 is an observation: a page that only lacked the ad label is no longer a referral
 
     def test_no_case_waits_for_a_recompute_after_a_scan(self):
         stale = [k for k, c in self.cases().items() if c["module"] in ("M2", "M3") and c["needsRecalc"]]

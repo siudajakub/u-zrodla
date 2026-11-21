@@ -17,6 +17,7 @@ import re
 from . import m2_readability
 
 OK, PREMISE, NA, UNKNOWN = "spełnione", "przesłanka", "nie dotyczy", "brak danych"
+OBSERVATION = "obserwacja"  # visible in the card, 0 points, never changes the route (criterion 2, decision of 21 XI)
 RULES_VERSION = "investwatch-m2-market-1"
 ORDER = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12a", "12b", "13", "14", "15", "16", "17", "18")
 LABELS = {
@@ -515,7 +516,7 @@ class Evaluation:
             return self.add("2", OK, f"Oznaczenie: „{hit.quote[:200]}”.{note}", quote=hit.quote,
                             measurements=[self.measure(self.main, hit.block)], mode="wspomagany" if note else "automatyczny")
         cta = self.cta[0].quote if self.cta else (self.claims[self.main.name][0].quote if self.claims.get(self.main.name) else "")
-        self.add("2", PREMISE, f"Strona promuje usługę („{cta[:120]}”), a nigdzie nie oznaczono jej jako reklamy lub materiału marketingowego.",
+        self.add("2", OBSERVATION, f"Obserwacja bez wpływu na wynik: strona promuje usługę („{cta[:120]}”), a nigdzie nie oznaczono jej jako reklamy lub materiału marketingowego.",
                  quote=cta, mode="wspomagany")
 
     def check_3(self):

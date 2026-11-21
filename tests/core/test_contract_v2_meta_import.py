@@ -156,8 +156,8 @@ class ReplayOfTheSample(ScanCase):
             facebook = store.queue_list(db, "offersM2", limit=500, platform="facebook")
             instagram = store.queue_list(db, "offersM2", limit=500, platform="instagram")
             report = store.report_list(db, "M2", platform="facebook")
-        self.assertEqual((facebook["total"], instagram["total"]), (22, 6))
-        self.assertEqual(report["total"], 22)
+        self.assertEqual((facebook["total"], instagram["total"]), (21, 5))  # one ad and one post fall outside the Polish investment scope (see m2_scope)
+        self.assertEqual(report["total"], 21)
         self.assertTrue(all(i["importLabel"] == "import ręczny" and i["origin"] == "replay" for i in facebook["items"] + instagram["items"]))
 
     def test_the_sample_is_idempotent(self):
@@ -278,11 +278,11 @@ class Endpoint(HttpCase):
         self.assertTrue(body["storedAs"].startswith(body["sha256"][:16] + "-"))
         self.assertTrue(any("platformy" in w.lower() for w in body["warnings"]))
         offers = self.queue()
-        self.assertEqual(offers["total"], 22)
+        self.assertEqual(offers["total"], 21)
         self.assertTrue(all(i["importLabel"] == "import ręczny" and i["origin"] == "live" and i["module"] == "M2" for i in offers["items"]))
         with store.connection() as db:
             report = store.report_list(db, "M2", platform="facebook")
-        self.assertEqual(report["total"], 22)
+        self.assertEqual(report["total"], 21)
         self.assertTrue((store.STATE / "meta-import" / body["storedAs"]).is_file())
         self.assertEqual((store.STATE / "meta-import" / body["storedAs"]).read_bytes(), ADS_FILE.read_bytes())
 
@@ -299,7 +299,7 @@ class Endpoint(HttpCase):
         with store.connection() as db:
             self.assertEqual(db.execute("SELECT count(*) FROM versions").fetchone()[0], versions)
             self.assertEqual(db.execute("SELECT count(*) FROM cases").fetchone()[0], cases)
-        self.assertEqual(self.queue()["total"], 22)
+        self.assertEqual(self.queue()["total"], 21)
         self.assertEqual(len(list((store.STATE / "meta-import").iterdir())), 1)
 
     def test_the_same_content_under_another_name_adds_no_ads_either(self):
@@ -307,13 +307,13 @@ class Endpoint(HttpCase):
         status, body = self.post(ADS_FILE.read_bytes() + b"\n", filename="b.txt")
         self.assertEqual(status, 200, body)
         self.assertEqual(body["new"], 0)
-        self.assertEqual(self.queue()["total"], 22)
+        self.assertEqual(self.queue()["total"], 21)
 
     def test_instagram_profile_embed_gives_six_posts_and_the_source_row_names_the_import(self):
         status, body = self.post(IG_FILE.read_bytes(), filename="ig.html", content_type="text/html")
         self.assertEqual(status, 200, body)
         self.assertEqual((body["kind"], body["posts"], body["ads"]), ("instagram_profile", 6, 0))
-        self.assertEqual(self.queue(platform="instagram")["total"], 6)
+        self.assertEqual(self.queue(platform="instagram")["total"], 5)
         instagram = next(s for s in store.state(findings=False)["sources"] if s["id"] == "instagram")
         self.assertEqual((instagram["status"], instagram["bestPath"]), ("ok", "manual_import"))
         self.assertIn("próbka z importu ręcznego (6 postów", instagram["pathsSummary"])
