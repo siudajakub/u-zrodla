@@ -1,7 +1,7 @@
 // Jeden kształt sprawy dla widoków. Czyta pola kontraktu v2 (reviewDecision, reviewScore, adRelationship,
 // adRegistry, coverage, evidence z rolą) i nazwy przejściowe z cienia kwalifikacji (evidenceV2, coverageV2).
 // Rekord w kształcie v1 (bez reviewDecision) trafia do stanu „do ponownego przeliczenia”.
-import { timeLink } from "./labels.js";
+import { bandOfValue, timeLink } from "./labels.js";
 
 const arr = (v) => (Array.isArray(v) ? v : []);
 const num = (v) => (v === null || v === undefined || v === "" || !Number.isFinite(Number(v)) ? null : Number(v));
@@ -110,7 +110,7 @@ export function normalizeCase(raw, creators = new Map()) {
     version: raw.version ?? 1,
     creatorId: raw.creatorId || null,
     creator,
-    creatorName: raw.creatorName || creator?.name || raw.brand || raw.publisher || "",
+    creatorName: raw.creatorName || creator?.name || raw.author || raw.brand || raw.publisher || "",
     publishedAt: raw.publishedAt || null,
     observedAt: raw.observedAt || null,
     isV2,
@@ -133,10 +133,18 @@ export function normalizeCase(raw, creators = new Map()) {
       basis: rel.basis || null,
       firmName: firm?.mention || candidates[0]?.name || null,
       firm: firm && { ...firm, candidates },
-      disclosure: disclosure && { state: disclosure.state || "not_checked", where: disclosure.where || null, text: disclosure.text || null, evidenceId: disclosure.evidenceId || null, checked: arr(disclosure.checked), notChecked: arr(disclosure.notChecked) },
+      disclosure: disclosure && { state: disclosure.state || "not_checked", where: disclosure.where || null, text: disclosure.text || null, summary: disclosure.summary || null, kind: disclosure.kind || null, evidenceId: disclosure.evidenceId || null, checked: arr(disclosure.checked), notChecked: arr(disclosure.notChecked) },
     },
     registry: registry?.state || null,
     registryCampaign: registry?.campaignKey || null,
+    registrySummary: registry?.summary || null,
+    registryKind: registry?.disclosureKind || null,
+    speechBasis: decision?.speechBasis || null,
+    gatedFrom: decision?.gatedFrom || null,
+    activeVariant: raw.activeVariant || null,
+    provenance: obj(raw.provenance),
+    durationSec: num(raw.youtube?.durationSec),
+    paidPromotionFlag: raw.youtube?.paidPromotionFlag ?? null,
     premises: arr(raw.premises),
     evidence,
     counter: arr(raw.counterEvidence).map((e) => normalizeEvidence(e, raw.url)),
@@ -147,7 +155,7 @@ export function normalizeCase(raw, creators = new Map()) {
     pendingReReview: !!raw.pendingReReview,
     reviewStale: !!raw.reviewStale,
     lastDecision: obj(raw.lastDecision) || deriveLastDecision(raw),
-    history: arr(raw.history),
+    history: arr(raw.history).map((h) => ({ ...h, details: parseDetails(h.details) })),
     versions: arr(raw.versions),
     discovery: normalizeDiscovery(raw.discovery),
     reach: normalizeReach(raw.reach),
@@ -165,6 +173,15 @@ export function normalizeCase(raw, creators = new Map()) {
   return out;
 }
 
+function parseDetails(d) {
+  if (d && typeof d === "object") return d;
+  try {
+    return typeof d === "string" && d ? JSON.parse(d) : {};
+  } catch {
+    return {};
+  }
+}
+
 function deriveLastDecision(raw) {
   const last = arr(raw.history).filter((h) => h.action === "decision").pop();
   return last ? { status: last.details?.status || raw.status, at: last.at, note: last.note, version: last.details?.version ?? null, revision: raw.revision } : null;
@@ -180,15 +197,49 @@ export function normalizeCreator(raw) {
   };
 }
 
+/** Stan z GET /v1/state?compact=1 bez spraw: twórcy, źródła, skany, liczniki, próg, wariant i trend. Sprawy czytają kolejki. */
 export function normalizeState(state) {
   const creators = new Map(arr(state?.creators).map((c) => [c.id, normalizeCreator(c)]));
-  const cases = arr(state?.findings).map((f) => normalizeCase(f, creators));
-  return { ...state, creatorMap: creators, cases };
+  const { findings, ...rest } = state || {};
+  return { ...rest, creatorMap: creators, counts: obj(state?.queues) || {}, creators: undefined };
+}
+
+/** Wiersz kolejki z podsumowania API (bez dowodów). Szczegół sprawy to osobny odczyt /v1/cases/{id}. */
+export function normalizeRow(item, creators = new Map()) {
+  const value = num(item.reviewScore);
+  const creator = creators.get?.(item.creatorId) || null;
+  return {
+    isRow: true,
+    id: item.id,
+    title: item.title || item.id,
+    module: item.module || "M1",
+    platform: item.platform || "",
+    creatorId: item.creatorId || null,
+    creatorName: item.creatorName || creator?.name || "",
+    publishedAt: item.publishedAt || null,
+    observedAt: item.observedAt || null,
+    origin: item.origin || "live",
+    status: item.status || "new",
+    revision: item.revision ?? 1,
+    version: item.version ?? 1,
+    route: item.route || null,
+    score: value == null ? null : { value, band: bandOfValue(value), state: "computed" },
+    queueEligible: item.queueEligible ?? null,
+    registry: item.adRegistry || null,
+    reason: item.reason || null,
+    firstMoment: obj(item.firstMoment),
+    lastDecision: obj(item.lastDecision),
+    needsRecalc: !!item.needsRecalc,
+    pendingReReview: !!item.pendingReReview,
+    reviewStale: !!item.reviewStale,
+    url: item.url || null,
+    queues: arr(item.queues),
+  };
 }
 
 /** Tekst „powód” w wierszu: pierwszy punkt uzasadnienia, a gdy go brak, skrót `reason`. */
 export function rowReason(c) {
-  if (c.reasons.length) return c.reasons[0];
+  if (c.reasons?.length) return c.reasons[0];
   if (c.reason) return c.reason;
   if (c.needsRecalc) return c.needsRecalcReason;
   return "Powód nieopisany";
@@ -200,4 +251,9 @@ export function scanOf(state, id) {
 
 export function lastScanOf(state) {
   return arr(state?.scans)[0] || null;
+}
+
+/** Skan, z którego pochodzą materiały: ostatni skan odkrywania (na żywo lub odtworzony), nie przeliczenie. */
+export function dataScanOf(state) {
+  return arr(state?.scans).find((s) => (s.mode === "live" || s.mode === "replay") && s.status !== "queued") || null;
 }

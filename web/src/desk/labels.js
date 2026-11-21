@@ -9,9 +9,30 @@ export const ROUTES = {
   insufficient: "Za mało danych",
 };
 export const BANDS = { strong: "mocna", moderate: "średnia", weak: "słaba" };
+export const bandOfValue = (v) => (v == null ? null : v >= 75 ? "strong" : v >= 60 ? "moderate" : "weak");
+export const VARIANTS = {
+  rules_1_2: "reguły 1.2 (poprzednie)",
+  qual_d: "kwalifikacja D (opis, mowa i kadry)",
+  qual_d_model: "kwalifikacja D z modelem lokalnym",
+};
+export const SCAN_MODE = { live: "skan na żywo", replay: "odtworzenie skanu", recompute: "przeliczenie", enrich: "uzupełnienie transkrypcji", upload: "plik operatora" };
+export const SCAN_STATUS = { queued: "w kolejce", running: "w toku", done: "zakończony", partial: "częściowy", failed: "nieudany" };
+export const RESOLUTIONS = [
+  { value: "refer_to_control", label: "Przekaż do kontroli", hint: "Materiał wymaga dalszej kontroli; sprawa zostaje w toku." },
+  { value: "complete_data", label: "Uzupełnij dane", hint: "Brakuje danych do oceny (np. transkrypcji); sprawa zostaje w toku." },
+  { value: "no_signal", label: "Bez sygnału", hint: "Po sprawdzeniu nie ma przesłanki; sprawa zostaje zamknięta." },
+  { value: "close", label: "Zamknij", hint: "Zamknij bez dalszych działań, z uzasadnieniem." },
+];
+export const RESOLUTION_LABEL = Object.fromEntries(RESOLUTIONS.map((r) => [r.value, r.label]));
+export const DISCLOSURE_KIND = {
+  in_description: "w opisie",
+  in_speech: "w mowie",
+  in_frame: "w kadrze",
+  platform_flag: "flaga płatnej promocji YouTube",
+};
 export const ORIGINS = {
   live: "na żywo",
-  replay: "odtworzenie próbki",
+  replay: "odtworzenie skanu",
   synthetic: "syntetyczny (studio zespołu)",
   upload: "plik operatora",
   import: "import",
@@ -113,6 +134,13 @@ export const fmtDay = (iso) => {
   if (!iso) return "—";
   const d = new Date(iso);
   return Number.isNaN(d.getTime()) ? String(iso) : d.toLocaleDateString("pl-PL", { day: "numeric", month: "short", ...tz });
+};
+const ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
+/** „21 XI” (dzień i miesiąc rzymski), jak w nazwie odtworzonego skanu. */
+export const fmtDayRoman = (iso) => {
+  if (!iso) return "—";
+  const d = new Date(iso);
+  return Number.isNaN(d.getTime()) ? String(iso) : `${d.getDate()} ${ROMAN[d.getMonth() + 1]}`;
 };
 export const fmtTime = (iso) => {
   if (!iso) return "—";

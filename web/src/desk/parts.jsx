@@ -7,14 +7,16 @@ import { Link } from "@astryxdesign/core/Link";
 import { Skeleton } from "@astryxdesign/core/Skeleton";
 import { Text } from "@astryxdesign/core/Text";
 import { Token } from "@astryxdesign/core/Token";
-import { BANDS, DISCLOSURE, ORIGINS, clock, describeDiscovery, fmtDateTime, fmtNumber, safeUrl } from "./labels.js";
+import { BANDS, DISCLOSURE, ORIGINS, clock, describeDiscovery, fmtDateTime, fmtDayRoman, fmtNumber, safeUrl } from "./labels.js";
 
 export const SCALE_NOTE = "Siła przesłanki to punkty 0–100 z jawnych składników reguł. To nie jest prawdopodobieństwo naruszenia ani ocena prawna.";
 
-export function OriginToken({ origin }) {
+export const originLabel = (origin, at) => (origin === "replay" ? (at ? `odtworzenie skanu z ${fmtDayRoman(at)}` : "odtworzenie skanu") : ORIGINS[origin] || origin);
+
+export function OriginToken({ origin, at }) {
   if (!origin || origin === "live") return null;
   const synthetic = origin === "synthetic" || origin === "upload";
-  return <Token size="sm" color={synthetic ? "orange" : "gray"} label={ORIGINS[origin] || origin} />;
+  return <Token size="sm" color={synthetic ? "orange" : "gray"} label={originLabel(origin, at)} />;
 }
 
 export function RecalcToken({ c }) {
@@ -48,10 +50,17 @@ export function Strength({ c }) {
   );
 }
 
-/** Pierwszy dowód do pokazania: wskazane twierdzenie, potem pierwszy moment, potem pierwszy dostępny dowód. */
+/** Pierwszy dowód do pokazania. Wiersz kolejki ma tylko `firstMoment`; pełna sprawa wskazuje moment w mowie (z czasem), potem twierdzenie. */
 export function proofOf(c) {
+  if (c.isRow) {
+    const m = c.firstMoment;
+    if (!m) return null;
+    return { url: safeUrl(m.deepLink) || safeUrl(c.url), start: m.start ?? null, quote: null, field: m.locator || null };
+  }
   const byId = (id) => c.evidence.find((e) => e.id === id);
-  const moment = c.moments[0];
+  const isFrame = (m) => String(m.evidenceId || "").startsWith("frame-");
+  const timed = c.moments.find((m) => m.start != null && !isFrame(m));
+  const moment = timed || c.moments[0];
   const claim = (c.claim && byId(c.claim.evidenceId)) || (moment && byId(moment.evidenceId)) || c.evidence.find((e) => e.role === "claim" && e.available) || c.evidence.find((e) => e.available);
   const start = moment?.start ?? claim?.start ?? null;
   const url = safeUrl(moment?.deepLink) || safeUrl(claim?.link) || safeUrl(c.url);
@@ -62,16 +71,18 @@ export function proofOf(c) {
 export function ProofLink({ c }) {
   const proof = proofOf(c);
   if (!proof?.url) return <Text type="supporting" color="secondary">brak wskazanego fragmentu</Text>;
-  const label = proof.start != null ? `Dowód od ${clock(proof.start)}` : proof.field?.field === "description" ? "Dowód w opisie" : "Dowód";
+  const label = proof.start != null ? `od ${clock(proof.start)} ↗` : "opis ↗";
   return <Link href={proof.url} target="_blank" hasUnderline>{label}</Link>;
 }
 
 export function locatorText(locator) {
   if (!locator) return null;
-  const where = locator.field === "description" ? "w opisie" : locator.field === "title" ? "w tytule" : `w polu ${locator.field}`;
-  return locator.charStart != null ? `${where}, znaki ${locator.charStart}–${locator.charEnd}` : where;
+  return locator.field === "description" ? "w opisie" : locator.field === "title" ? "w tytule" : `w polu ${locator.field}`;
 }
 
+const CHECKED = { description: "opis", transcript: "mowa", frames: "kadry", platformFlags: "flaga płatnej promocji" };
+
+/** Typ ujawnienia współpracy: opis / mowa m:ss / flaga płatnej promocji YouTube / kadr, albo brak oznaczenia w zbadanym zakresie. */
 export function disclosureText(c) {
   const d = c.relationship?.disclosure;
   if (!d) return "Oznaczenie nieustalone";
@@ -80,7 +91,7 @@ export function disclosureText(c) {
     return `${DISCLOSURE[d.state]}${ev?.start != null ? `, ${clock(ev.start)}` : ""}`;
   }
   if (d.state === "not_found_in_scope") {
-    const checked = d.checked.length ? ` (zbadano: ${d.checked.map((m) => ({ description: "opis", transcript: "mowa", frames: "kadry", platformFlags: "flaga" }[m] || m)).join(", ")})` : "";
+    const checked = d.checked.length ? ` (zbadano: ${d.checked.map((m) => CHECKED[m] || m).join(", ")})` : "";
     return `nie znaleziono w zbadanym zakresie${checked}`;
   }
   return DISCLOSURE[d.state] || d.state;
@@ -90,10 +101,11 @@ export function DisclosureProof({ c }) {
   const d = c.relationship?.disclosure;
   if (!d) return null;
   const ev = c.evidence.find((e) => e.id === d.evidenceId);
+  const sentence = c.registrySummary || d.summary;
   return (
     <VStack gap={0.5}>
       <Text weight="medium">{disclosureText(c)}</Text>
-      {(d.text || ev?.text) && <Text type="supporting" color="secondary" maxLines={2}>„{d.text || ev.text}”</Text>}
+      {sentence ? <Text type="supporting" color="secondary" maxLines={3}>{sentence}</Text> : (d.text || ev?.text) && <Text type="supporting" color="secondary" maxLines={2}>„{d.text || ev.text}”</Text>}
       {ev?.start != null && ev.link && <ExternalLink url={ev.link}>Otwórz od {clock(ev.start)}</ExternalLink>}
     </VStack>
   );

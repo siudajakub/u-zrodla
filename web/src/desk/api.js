@@ -1,7 +1,6 @@
-// Jedyny moduł klienta API pulpitu. Wszystkie widoki czytają i zapisują przez niego.
-// Kolejki: GET /v1/queues/{name}; gdy trasa nie istnieje (404), tymczasowy adapter (adapter.js) buduje je ze stanu.
-import { normalizeCase, normalizeState } from "./model.js";
-import { QUEUE_NAMES, countsFromState, queueFromState } from "./adapter.js";
+// Jedyny moduł klienta API pulpitu (schemat 2). Wszystkie widoki czytają i zapisują przez niego.
+// Lista kolejki to GET /v1/queues/{name} z kursorem; brak trasy (404) pokazuje stan „starsze API”, bez udawania danych.
+import { normalizeCase, normalizeRow, normalizeState } from "./model.js";
 
 export class ApiError extends Error {
   constructor(status, message, body) {
@@ -13,11 +12,12 @@ export class ApiError extends Error {
 
 const base = () => (globalThis.INVESTWATCH_API_BASE || "");
 const enc = (id) => String(id).split("/").map(encodeURIComponent).join("/");
+const SCHEMA = { "X-InvestWatch-Schema": "2" };
 
 async function request(path, options = {}) {
   let response;
   try {
-    response = await fetch(base() + path, { headers: { Accept: "application/json", ...(options.headers || {}) }, ...options });
+    response = await fetch(base() + path, { ...options, headers: { Accept: "application/json", ...SCHEMA, ...(options.headers || {}) } });
   } catch {
     throw new ApiError(0, "Brak połączenia z serwerem.");
   }
@@ -37,71 +37,84 @@ async function request(path, options = {}) {
 
 const json = (method, payload) => ({ method, headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
 
-let queueRoute = null; // "api" | "adapter" | null (jeszcze nie sprawdzono)
+/** Parametry zapytania kolejki z filtrów widoku (adres #). Siła: „co najmniej średnia” = 60 pkt, „mocna” = 75 pkt. */
+export function queueQuery(filters = {}, { limit = 50, cursor = null } = {}) {
+  const p = new URLSearchParams({ limit: String(limit) });
+  if (cursor) p.set("cursor", cursor);
+  if (filters.q?.trim()) p.set("q", filters.q.trim());
+  if (filters.module && filters.module !== "all") p.set("module", filters.module);
+  if (filters.source && filters.source !== "all") p.set("platform", filters.source);
+  if (filters.risk === "strong") p.set("minScore", "75");
+  if (filters.risk === "moderate") p.set("minScore", "60");
+  if (filters.from) p.set("since", `${filters.from}T00:00:00+00:00`);
+  if (filters.to) p.set("until", `${filters.to}T23:59:59+00:00`);
+  if (filters.section && filters.section !== "all") p.set("section", filters.section);
+  return p.toString();
+}
+
+const caseCache = new Map();
 
 export const api = {
-  /** Tryb źródła kolejek, do pokazania w stopce i w testach. */
-  get queueRoute() {
-    return queueRoute;
-  },
-
+  /** Jednorazowy odczyt: GET /v1/state?compact=1. Sprawy z tego stanu są odrzucane; listy i karty idą przez kolejki i /v1/cases. */
   async state() {
-    const raw = await request("/v1/state");
-    return normalizeState(raw);
+    return normalizeState(await request("/v1/state?compact=1"));
   },
 
-  /** Liczniki zakładek: z /v1/state (`queues`), a gdy ich brak, liczy adapter. */
-  counts(state) {
-    if (state?.queues && typeof state.queues === "object") return { ...Object.fromEntries(QUEUE_NAMES.map((n) => [n, 0])), ...state.queues };
-    return countsFromState(state?.cases || [], state?.threshold?.value);
+  /** Lekki odczyt do odświeżania w tle: liczniki, próg i ostatni skan z nagłówka najkrótszej kolejki. */
+  async light() {
+    const body = await request("/v1/queues/review?limit=1");
+    return { counts: body.counts, threshold: body.threshold, lastScan: body.lastScan, asOf: body.asOf };
   },
 
-  /** Kolejka jako lista znormalizowanych spraw. Zwraca także źródło danych. */
-  async queue(name, state) {
-    if (queueRoute !== "adapter") {
-      try {
-        const body = await request(`/v1/queues/${encodeURIComponent(name)}?limit=500`);
-        queueRoute = "api";
-        const ids = new Map((state?.cases || []).map((c) => [c.id, c]));
-        const items = (body.items || []).map((i) => ids.get(i.id) || null).filter(Boolean);
-        // Podsumowanie z API bez pełnego rekordu w stanie: dociągnij sprawę.
-        const missing = (body.items || []).filter((i) => !ids.has(i.id));
-        const fetched = await Promise.all(missing.map((i) => api.case(i.id, state).catch(() => null)));
-        return { items: [...items, ...fetched.filter(Boolean)], total: body.total ?? (body.items || []).length, route: "api", asOf: body.asOf || null, lastScan: body.lastScan || null };
-      } catch (e) {
-        if (e.status !== 404) throw e;
-        queueRoute = "adapter";
-      }
+  /** Jedna strona kolejki. Zwraca wiersze (podsumowania), łączną liczbę i kursor następnej strony. */
+  async queue(name, filters, { cursor = null, limit = 50, creators } = {}) {
+    try {
+      const body = await request(`/v1/queues/${encodeURIComponent(name)}?${queueQuery(filters, { limit, cursor })}`);
+      return { items: (body.items || []).map((i) => normalizeRow(i, creators)), total: body.total ?? 0, nextCursor: body.nextCursor || null, counts: body.counts || null, threshold: body.threshold || null, lastScan: body.lastScan || null, asOf: body.asOf || null };
+    } catch (e) {
+      if (e.status === 404) throw new ApiError(404, "Ten serwer nie ma jeszcze kolejek (GET /v1/queues). Pulpit wymaga nowszego API.", e.body);
+      throw e;
     }
-    return { items: queueFromState(name, state?.cases || [], state?.threshold?.value), total: null, route: "adapter", asOf: state?.asOf || null, lastScan: null };
   },
 
-  async case(id, state) {
-    const raw = await request(`/v1/cases/${enc(id)}`);
-    return normalizeCase(raw, state?.creatorMap);
+  async case(id, creators, { fresh = false } = {}) {
+    if (!fresh && caseCache.has(id)) return caseCache.get(id);
+    const promise = request(`/v1/cases/${enc(id)}`).then((raw) => normalizeCase(raw, creators));
+    caseCache.set(id, promise);
+    promise.catch(() => caseCache.delete(id));
+    return promise;
+  },
+  clearCases() {
+    caseCache.clear();
   },
 
   versions: (id) => request(`/v1/cases/${enc(id)}/versions`),
-  version: (id, n) => request(`/v1/cases/${enc(id)}/versions/${n}`),
 
-  /** Zapis decyzji z kontrolą rewizji. 409 → ApiError z `current` w body. */
-  decide(c, { status, note }) {
-    return request(`/v1/cases/${enc(c.id)}`, json("PATCH", { status, note, expectedRevision: c.revision, reviewedVersion: c.version }));
+  /** Zapis decyzji: rodzaj (resolution), uzasadnienie, kontrola rewizji i wersji. 409 → ApiError z `current` w body. */
+  decide(c, { resolution, note }) {
+    return request(`/v1/cases/${enc(c.id)}`, json("PATCH", { resolution, note, expectedRevision: c.revision, reviewedVersion: c.version }));
   },
 
   startScan(mode) {
     return request("/v1/scans", json("POST", { mode, requestId: globalThis.crypto?.randomUUID?.() || String(Date.now()) }));
   },
   scan: (id) => request(`/v1/scans/${encodeURIComponent(id)}`),
+  trend: (days = 30) => request(`/v1/trend?days=${days}`),
+
+  threshold: () => request("/v1/threshold"),
   async thresholdHistory() {
-    try {
-      return (await request("/v1/threshold/history")).items || [];
-    } catch (e) {
-      if (e.status === 404) return null; // trasa jeszcze nie istnieje (S7)
-      throw e;
-    }
+    return (await request("/v1/threshold/history")).items || [];
   },
-  calibration: (threshold) => request(`/v1/calibration?threshold=${encodeURIComponent(threshold)}`),
+  setThreshold: ({ value, expectedId, note, variant }) => request("/v1/threshold", json("PUT", { value, expectedId, note: note || "", variant })),
+  restoreThreshold: ({ id, expectedId, note }) => request("/v1/threshold/restore", json("POST", { id, expectedId, note: note || "" })),
+
+  qualification: () => request("/v1/qualification"),
+  async qualificationHistory() {
+    return (await request("/v1/qualification/history")).items || [];
+  },
+  restoreQualification: ({ id, expectedId, note }) => request("/v1/qualification/restore", json("POST", { id, expectedId, note: note || "" })),
+
+  calibration: (threshold, variant) => request(`/v1/calibration?threshold=${encodeURIComponent(threshold)}${variant ? `&variant=${encodeURIComponent(variant)}` : ""}`),
 
   uploadEvidence(file, title, description) {
     const params = new URLSearchParams({ title: title || file.name, description: description || "", filename: file.name });
