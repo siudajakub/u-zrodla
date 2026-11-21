@@ -1,6 +1,7 @@
 """Return creators, publication captures and health for a live or archived scan."""
 
 from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime
 import json
 import os
 from pathlib import Path
@@ -15,6 +16,13 @@ from .social import CONFIG, read_social, read_watch, social_creator
 ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT = ROOT / "fixtures/raw/discovery/2026-11-21.json"
 FEEDS_PER_SCAN = 8
+DISCOVERY_TOPICS = ("giełda", "fundusze indeksowe", "rachunek maklerski",
+                    "IKE inwestowanie", "akcje dywidendowe", "rynek kapitałowy")
+
+def rotating_topic(observed_at):
+    slot=int(datetime.fromisoformat(observed_at).timestamp())//14400
+    return DISCOVERY_TOPICS[slot % len(DISCOVERY_TOPICS)]
+
 
 
 def _read_replay():
@@ -53,7 +61,7 @@ def _live(previous_creators, fetch, clock):
     configured_db = os.environ.get("INVESTWATCH_WATCH_DB")
     watch_db = Path(configured_db) if configured_db else ROOT / ".runtime/watch/watch.sqlite3"
     with ThreadPoolExecutor(max_workers=4) as pool:
-        apple = [pool.submit(read_apple, query, fetch, clock) for query in PODCAST_QUERIES]
+        apple = [pool.submit(read_apple, query, fetch, clock) for query in (*PODCAST_QUERIES, rotating_topic(clock()))]
         peer = [pool.submit(read_peertube, query, fetch, clock) for query in PEERTUBE_QUERIES]
         sites = [pool.submit(read_site, site, fetch, clock) for site in SITES]
         social_db = None

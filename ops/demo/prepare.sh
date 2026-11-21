@@ -2,7 +2,8 @@
 # Prepare private, disk-backed runtime. No network downloads and no Docker builds.
 set -eu
 ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd -P)
-case "$ROOT" in /home/codexdev/projects/*) ;; *) echo 'Repozytorium musi znajdować się na wolumenie projektów.' >&2; exit 1;; esac
+if [ -d /home/codexdev/projects/.vps-runtime ]; then
+case "$ROOT" in /home/codexdev/projects/*) ;; *) echo 'Na hoście projektu wymagany wolumen projektów.' >&2; exit 1;; esac
 mountpoint -q /home/codexdev/projects || { echo 'Brak wolumenu /home/codexdev/projects.' >&2; exit 1; }
 findmnt -T /home/codexdev/projects
 project_source=$(findmnt -n -o SOURCE -T /home/codexdev/projects)
@@ -12,6 +13,7 @@ root_source=$(findmnt -n -o SOURCE -T /)
 root_kb=$(df -Pk / | awk 'NR==2 {print $4}')
 project_kb=$(df -Pk /home/codexdev/projects | awk 'NR==2 {print $4}')
 [ "$root_kb" -ge 5242880 ] && [ "$project_kb" -ge 10485760 ] || { echo 'Za mało wolnego miejsca na wolumenach.' >&2; exit 1; }
+fi
 [ "$(uname -m)" = x86_64 ] || { echo 'Wymagany Linux x86_64.' >&2; exit 1; }
 [ "$(uname -s)" = Linux ] || { echo 'Wymagany Linux.' >&2; exit 1; }
 RUNTIME="$ROOT/.runtime/demo"

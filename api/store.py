@@ -100,6 +100,7 @@ def all_objects(db, table):
 
 def apply_scan(db, findings, creators, sources, mode):
     new_creators=0
+    first_live=0
     updated_cases=0
     for creator in creators:
         key=creator["id"]
@@ -108,6 +109,7 @@ def apply_scan(db, findings, creators, sources, mode):
         if mode=="replay" and old.get("lastMode")=="live":
             continue
         is_new=not bool(before) and not creator.get("isSeed",False)
+        first_live+=mode=="live" and old.get("lastMode")!="live" and not creator.get("isSeed",False)
         source_mode=old.get("firstMode",mode)
         body={**old,**creator,"isNew":is_new,"firstSeen":old.get("firstSeen") or utc(),
               "firstMode":source_mode,"lastMode":mode, "lastSeen":utc()}
@@ -132,6 +134,11 @@ def apply_scan(db, findings, creators, sources, mode):
         if before and mode=="replay" and json.loads(before["body"]).get("mode")=="live":
             continue
         if before and before["fingerprint"]==signature:
+            previous_body=json.loads(before["body"])
+            if mode=="live":
+                previous_body.update({field:capture[field] for field in ("observedAt","provenance") if field in capture})
+                previous_body["mode"]="live"
+                db.execute("UPDATE cases SET body=? WHERE id=?",(dump(previous_body),key))
             continue
         version=db.execute("SELECT coalesce(max(version),0)+1 FROM versions WHERE id=?",(key,)).fetchone()[0]
         body={**capture,**finding,"version":version,"mode":mode}
@@ -143,7 +150,7 @@ def apply_scan(db, findings, creators, sources, mode):
         record(db,key,"capture","Zachowano wersję materiału",{"version":version})
         event(db,"high_risk" if finding.get("score",0)>=70 else "finding",key,finding["title"])
         updated_cases+=1
-    return {"newCreators":new_creators,"changedFindings":updated_cases,"captures":len(findings),"creatorsSeen":len(creators)}
+    return {"newCreators":new_creators,"firstLiveCreators":first_live,"changedFindings":updated_cases,"captures":len(findings),"creatorsSeen":len(creators)}
 
 def case_dict(db,row):
     return {**json.loads(row["body"]),"id":row["id"],"status":row["status"],"revision":row["revision"],

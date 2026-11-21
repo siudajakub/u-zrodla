@@ -1,32 +1,52 @@
-name: investwatch
-x-app: &app
-  build: .
-  image: investwatch-demo:local
+name: investwatch-demo
+x-code: &code
+  - ./api:/app/api:ro
+  - ./collectors:/app/collectors:ro
+  - ./analysis:/app/analysis:ro
+  - ./fixtures:/app/fixtures:ro
+  - ./data/probe-snapshots:/app/data/probe-snapshots:ro
+  - ./web:/app/web:ro
+  - ./tools:/app/tools:ro
+  - ./.runtime/demo/deps:/opt/investwatch/deps:ro
+  - ./.runtime/demo/ffmpeg:/opt/investwatch/ffmpeg:ro
+  - ./.runtime/demo/state:/data
+  - ./.runtime/asr:/app/.runtime/asr:ro
+  - ./.runtime/semantic:/app/.runtime/semantic:ro
+  - ./.runtime/watch:/app/.runtime/watch:ro
+x-common: &common
+  image: python:3.12-bookworm
+  pull_policy: never
+  user: '${INVESTWATCH_UID:?Uruchom ops/demo/start.sh}:${INVESTWATCH_GID:?Uruchom ops/demo/start.sh}'
+  working_dir: /app
+  read_only: true
   init: true
-  restart: unless-stopped
-  volumes:
-    - state:/state
-  security_opt: [no-new-privileges:true]
+  cpus: 1.5
+  mem_limit: 1200m
   cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  tmpfs: ['/tmp:size=16m,mode=1777']
+  environment:
+    PYTHONPATH: /app:/opt/investwatch/deps:/app/.runtime/semantic/deps
+    PYTHONDONTWRITEBYTECODE: '1'
+    PYTHONUNBUFFERED: '1'
+    PATH: /opt/investwatch/ffmpeg/bin:/usr/local/bin:/usr/bin:/bin
+    INVESTWATCH_STATE: /data
+    INVESTWATCH_DISCOVERY_INTERVAL: '${INVESTWATCH_DISCOVERY_INTERVAL:-14400}'
+    OPENBLAS_NUM_THREADS: '1'
+    OMP_NUM_THREADS: '1'
+  volumes: *code
+  restart: unless-stopped
 services:
   api:
-    <<: *app
+    <<: *common
+    command: [python, -m, uvicorn, 'api.server:app', --host, 0.0.0.0, --port, '8769']
     ports:
-      - "127.0.0.1:${INVESTWATCH_PORT:-8769}:8769"
+      - '127.0.0.1:${INVESTWATCH_PORT:-8769}:8769'
     healthcheck:
-      test: ["CMD","python","-c","import urllib.request; urllib.request.urlopen('http://127.0.0.1:8769/v1/health',timeout=3)"]
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8769/v1/health',timeout=3)"]
       interval: 10s
       timeout: 4s
       retries: 5
   worker:
-    <<: *app
-    command: ["python","-m","api.jobs"]
-    environment:
-      INVESTWATCH_DISCOVERY_INTERVAL: "${INVESTWATCH_DISCOVERY_INTERVAL:-14400}"
-      INVESTWATCH_WATCH_DB: /watch/watch.sqlite3
-    volumes:
-      - state:/state
-      - ${INVESTWATCH_WATCH_DIR:-./.runtime/watch}:/watch:ro
-      - ${INVESTWATCH_ASR_DIR:-./.runtime/asr}:/app/.runtime/asr:ro
-volumes:
-  state:
+    <<: *common
+    command: [python, -m, api.jobs]
