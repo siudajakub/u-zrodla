@@ -1,0 +1,26 @@
+--- a/analysis/engine.py	2026-11-21 21:01:53.611489365 +0000
++++ b/analysis/engine.py	2026-11-21 21:02:00.563551358 +0000
+@@ -3,6 +3,7 @@
+ from functools import lru_cache
+ import hashlib
+ import json
++import os
+ import re
+ from urllib.parse import urlsplit
+ 
+@@ -530,6 +531,15 @@
+                     "rulesVersion": RULESET, **extra})
+     if module == "M1":
+         _shadow(capture, finding, semantic, variant)
++    if os.getenv("INVESTWATCH_MODEL_ANNOTATE", "").strip() in {"1", "on", "true"}:
++        # Described feature only: adds finding["model"]; route, score and queue stay as the rules set them.
++        from .inference import annotate
++        finding = annotate(finding, capture)
++        if isinstance(finding.get("analysisVersion"), dict):
++            finding["analysisVersion"]["model"] = {
++                "materialType": finding["model"].get("version"),
++                "secondOpinion": finding["model"]["secondOpinion"].get("modelId")
++                if finding["model"]["secondOpinion"].get("status") not in ("disabled", None) else None}
+     return finding
+ 
+ 
