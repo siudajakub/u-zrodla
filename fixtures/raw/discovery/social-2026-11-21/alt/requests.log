@@ -1,0 +1,21 @@
+1 ig-oembed-tokenless-profile | 400 295 application/json; charset=UTF-8  | https://graph.facebook.com/v25.0/instagram_oembed?url=https%3A%2F%2Fwww.instagram.com%2Fxtb_polska%2F
+2 ig-oembed-tokenless-nasa-post | 200 7108 application/json; charset=UTF-8  | https://graph.facebook.com/v25.0/instagram_oembed?url=https%3A%2F%2Fwww.instagram.com%2Fp%2FCuE2WNQs6vH%2F
+3 threads-oembed-tokenless | 400 370 application/json; charset=UTF-8  | https://graph.facebook.com/v25.0/threads_oembed?url=https%3A%2F%2Fwww.threads.com%2F%40zuck%2Fpost%2FC6jVAqZPxnl
+4 fb-terms-automated | 301 0 text/html; charset="utf-8" https://www.facebook.com/legal/automated_data_collection_terms | https://www.facebook.com/apps/site_scraping_tos_terms.php
+5 fb-automated-terms 21:00:45
+6 ig-embed-captioned
+7 wayback-cdx ig
+8 wayback-cdx fb
+9 ig-profile-embed
+10 fb-page-plugin
+ig-profile-embed etoro
+ig-profile-embed trading212_pl
+gatc shell
+tiktok library shell
+tiktok library api
+firm xtb
+firm bossa
+firm etoro
+wayback available ig
+wayback available fb
+wayback available instagram.com/xtb_polska/ -> 200 archived_snapshots {} ; facebook.com/xtbpolska/ -> 200 {} ; cdx ig timeout, cdx fb [] ; firm sites xtb.com/pl, bossa.pl, etoro.com/pl -> 200 (bossa, etoro bodies deleted after grep)
