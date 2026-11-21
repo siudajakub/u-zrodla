@@ -1,0 +1,72 @@
+{
+ "n": 31,
+ "missingLabels": [],
+ "refer": {
+  "TP": 1,
+  "FP": 0,
+  "TN": 30,
+  "FN": 0,
+  "cost_2FN_plus_FP": 0,
+  "errors": []
+ },
+ "refer_or_complete": {
+  "TP": 6,
+  "FP": 10,
+  "TN": 15,
+  "FN": 0,
+  "cost_2FN_plus_FP": 10,
+  "errors": [
+   {
+    "entityId": "m3:grantthornton.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:biznesradar.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:strefainwestorow.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:pwm.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:kursnagielde.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:akademiaplanowaniafinansowego.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:familyoffice.com.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:zpi-fo.pl",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:mklegal.eu",
+    "route": "complete",
+    "label": "no_signal"
+   },
+   {
+    "entityId": "m3:zwyrtek.pl",
+    "route": "complete",
+    "label": "no_signal"
+   }
+  ]
+ },
+ "agreementExactRoute": 21
+}

@@ -136,12 +136,12 @@ class Identity(unittest.TestCase):
         self.assertEqual(result["state"], "authorized_advice")
 
     def test_other_scope(self):
-        result = self.identity("AIXON INVESTMENT MANAGEMENT SP. Z O.O. ul. Nieszawska 1")
+        result = self.identity("© AIXON INVESTMENT MANAGEMENT SP. Z O.O.")
         self.assertEqual(result["state"], "authorized_other_scope")
         self.assertTrue(result["scopeKnown"])
 
     def test_agent(self):
-        result = self.identity("iMERCADO AFI SP. Z O.O.", "imercado.pl")
+        result = self.identity("© 2023 iMERCADO AFI SP. Z O.O.", "imercado.pl")
         self.assertEqual(result["state"], "investment_firm_agent")
         self.assertIn("iX Asset Management", result["label"])
 
@@ -156,6 +156,12 @@ class Identity(unittest.TestCase):
         self.assertEqual(result["state"], "not_found")
         self.assertIn("uprawnienia do ustalenia", result["label"])
         self.assertTrue(result["reviewedRegisters"])
+
+    def test_partner_mention_is_not_the_operator(self):
+        # A data supplier or partner named on the page must not clear the operator.
+        result = self.identity("Notowania dostarcza Dom Maklerski BDM S.A.\n© 2026 Doradcza Przykładowa sp. z o.o.")
+        self.assertEqual(result["state"], "not_found")
+        self.assertIn("Dom Maklerski BDM S.A.", result["operator"]["mentioned"])
 
     def test_registry_failure(self):
         index = empty_index(failures=[{"file": "x", "name": "domy maklerskie", "error": "OSError"}])
@@ -225,22 +231,46 @@ class Routes(unittest.TestCase):
 
 @unittest.skipUnless((RUN / "entities.json").exists(), "brak zapisanego przebiegu odkrywania M3")
 class SavedOffers(unittest.TestCase):
+    """Real pages saved on 2026-11-21 (fixtures/raw/discovery/m3-2026-11-21)."""
+
     @classmethod
     def setUpClass(cls):
-        cls.results = {r["domain"]: r for r in offers.analyze_run(RUN, INDEX)}
+        cls.results = {r["entityId"]: r for r in offers.analyze_run(RUN, INDEX)}
 
     def test_every_result_has_locators_and_route(self):
-        for domain, result in self.results.items():
-            with self.subTest(domain=domain):
+        for key, result in self.results.items():
+            with self.subTest(entity=key):
                 self.assertIn(result["route"], ("refer", "complete", "no_signal"))
                 for axis in result["axes"].values():
                     for evidence in axis["evidence"]:
                         self.assertTrue(evidence["locator"]["url"].startswith("https://"))
 
-    def test_saved_agents_are_negative_controls(self):
-        for domain in ("imercado.pl", "phinance.pl"):
-            if domain in self.results and self.results[domain]["identity"]["state"] == "investment_firm_agent":
-                self.assertEqual(self.results[domain]["route"], "no_signal")
+    def test_portfolio_offer_without_operator_data_is_referred(self):
+        result = self.results["m3:rdmwm.pl"]
+        self.assertEqual(result["route"], "refer")
+        self.assertEqual(result["identity"]["state"], "no_identity")
+        self.assertIn("uprawnienia do ustalenia", result["summary"])
+
+    def test_authorized_and_agent_controls(self):
+        expected = {"control:web:bossa.pl/oferta/doradztwo": "authorized_advice", "m3:mbank.pl": "authorized_advice",
+                    "m3:erste.pl": "authorized_advice", "m3:imercado.pl": "investment_firm_agent", "m3:phinance.pl": "investment_firm_agent"}
+        for key, state in expected.items():
+            with self.subTest(entity=key):
+                self.assertEqual(self.results[key]["identity"]["state"], state)
+                self.assertEqual(self.results[key]["route"], "no_signal")
+
+    def test_education_control(self):
+        self.assertEqual(self.results["control:web:bossa.pl/edukacja/rynek-i-inwestycje/instrumenty-finansowe"]["route"], "no_signal")
+
+    def test_signal_service_without_personalisation_needs_completion(self):
+        for key in ("m3:ppcg.com.pl", "m3:inwestowaniegpw.pl"):
+            with self.subTest(entity=key):
+                self.assertEqual(self.results[key]["route"], "complete")
+
+    def test_notified_firm_without_advice_code(self):
+        result = self.results["m3:deriv.com"]
+        self.assertEqual(result["identity"]["state"], "authorized_other_scope")
+        self.assertNotEqual(result["route"], "refer")
 
 
 if __name__ == "__main__":
