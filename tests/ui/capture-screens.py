@@ -14,7 +14,7 @@ from playwright.sync_api import sync_playwright
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--base", required=True)
-parser.add_argument("--out", default=str(Path(__file__).parent / "screens" / "2026-11-21-r3"))
+parser.add_argument("--out", default=str(Path(__file__).parent / "screens" / "2026-11-21-r4"))
 parser.add_argument("--only", default="")
 parser.add_argument("--widths", default="1440,390")
 parser.add_argument("--chromium", default="")
@@ -34,8 +34,11 @@ def check(name, ok, detail=""):
 
 
 SCREENS = [
-    ("1-kolejka", "#review", None),
-    ("2-karta-flagi", "#review?case=youtube%3AAqXHkxDzSDI", "momenty"),
+    ("1-kolejka-trzech-modulow", "#review", "kolejka"),
+    ("2-karta-m1", "#review?case=youtube%3AAqXHkxDzSDI", "momenty"),
+    ("2b-karta-m2-kryteria", "#review?case=web%3Anoblesecurities.pl%2Fklient-indywidualny%2Frachunek-ike", "rozwin"),
+    ("2c-karta-m3", "#review?case=web%3Ardmwm.pl%3Am3", "m3"),
+    ("2d-karta-m3-uprawniony", "#m3?case=web%3Aerste.pl%3Am3", "m3"),
     ("3-karta-tiktok", "#register?case=tiktok%3A7707284619103718689", None),
     ("4-rejestr-reklam", "#register", None),
     ("5-rejestr-tiktok", "#register?source=tiktok", None),
@@ -47,6 +50,7 @@ SCREENS = [
     ("10-oferty-m3", "#m3", None),
     ("11-zamkniete", "#closed", None),
     ("12-demo", "#demo", None),
+    ("14-rejestr-instagram", "#register?source=instagram", None),
     ("13-dodaj-dowod", "#evidence", None),
 ]
 with sync_playwright() as p:
@@ -73,8 +77,19 @@ with sync_playwright() as p:
                 for _ in range(4):
                     page.keyboard.press("ArrowRight")
                 page.wait_for_timeout(2500)
+            if extra == "kolejka":
+                page.wait_for_selector("text=Pokazano 15 z 15", timeout=30000)
+                body = page.inner_text("body")
+                check(f"{label} {name}: wiersze trzech modułów", all(m in body for m in ("Finfluencer", "Reklama firmy", "Doradztwo")))
+            if extra == "rozwin":
+                page.wait_for_selector("text=Wszystkie 19 kryteriów wg stanu", timeout=30000)
+                page.get_by_text("Wszystkie 19 kryteriów wg stanu").click()
+                page.wait_for_timeout(600)
+                page.evaluate("document.getElementById('sekcja-momenty')?.scrollIntoView({block:'start'})")
+            if extra == "m3":
+                page.wait_for_selector("text=Cztery cechy rekomendacji", timeout=30000)
             if extra == "wykresy":
-                page.wait_for_function("document.querySelectorAll('canvas[data-chart]').length >= 2", timeout=30000)
+                page.wait_for_function("document.querySelectorAll('canvas[data-chart]').length >= 3", timeout=30000)
                 page.wait_for_timeout(800)
             page.screenshot(path=str(out / f"{label}-{name}.png"), full_page=False)
             if label == "390" or name.startswith("7") or name.startswith("6"):

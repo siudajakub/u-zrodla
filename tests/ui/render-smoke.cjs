@@ -116,8 +116,9 @@ const desk = require(out).run(JSON.parse(fs.readFileSync(sample, "utf8")));
 fs.rmSync(out, { force: true });
 const html = (markup) => markup.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
 
-assert.equal(desk.counts.review, 4, "cztery filmy w Co wymaga sprawdzenia");
-assert.deepEqual(desk.review.map((id) => id.slice(8)).sort(), ["7M0rC6-Rueo", "AqXHkxDzSDI", "OIyPE0z2mng", "ZJrT-X08Xwc"]);
+assert.equal(desk.counts.review, 15, "piętnaście pozycji w Co wymaga sprawdzenia (cztery filmy, dziesięć stron firm, jedna oferta doradcza)");
+assert.deepEqual(desk.review.filter((id) => id.startsWith("youtube:")).map((id) => id.slice(8)).sort(), ["7M0rC6-Rueo", "AqXHkxDzSDI", "OIyPE0z2mng", "ZJrT-X08Xwc"]);
+assert.ok(desk.review.includes("web:rdmwm.pl:m3"));
 assert.ok(desk.counts.adRegister > 200 && desk.counts.incomplete > 100, "liczniki z API (rejestr i niepełne)");
 const detail = html(desk.detail);
 for (const part of ["Dlaczego tutaj", "Momenty do sprawdzenia", "Co zbadano", "Firma", "Twórca i zasięg", "Decyzja", "Więcej: historia, punktacja, źródło, surowe dane", "Przekaż do kontroli", "Uzupełnij dane", "Bez sygnału", "Zamknij", "Tekst z obrazu nie jest odczytywany automatycznie"])
@@ -130,13 +131,24 @@ assert.ok(!/znaki \d+–\d+|\(znaki/.test(detail), "bez techniki „(znaki …)�
 assert.match(detail, /Wróć do listy/);
 assert.ok(!/Momenty\s+Decyzja\s*$/.test(html(desk.detail)), "pasek telefonu tylko w widoku wąskim");
 assert.match(html(desk.detailNarrow), /Momenty/);
-assert.match(html(desk.detailRueo), /Pokaż wszystkie \(4\)/);
+assert.match(html(desk.detailRueo), /Pokaż wszystkie \(\d+\)/);
 assert.match(html(desk.reviewList), /100 z 100 pkt/);
 assert.match(html(desk.reviewListNarrow), /Siła: mocna/);
 assert.match(html(desk.emptyList), /PUSTO/);
-assert.match(html(desk.registerTable), /Jak ujawniono/);
+assert.match(html(desk.registerTable), /Firma\s+Platforma\s+Typ ujawnienia/);
 assert.match(html(desk.registerTable), /oznaczona reklama|flaga płatnej promocji|w mowie/);
-assert.match(html(desk.offers), /Strona\s+Firma\s+Siła\s+Stan/);
+assert.match(html(desk.offers), /Strona\s+Firma\s+Przesłanka\s+Siła\s+Stan/);
+assert.match(html(desk.reviewList), /Finfluencer/);
+assert.match(html(desk.reviewList), /Reklama firmy/);
+assert.match(html(desk.reviewList), /Doradztwo/);
+const m2 = html(desk.detailM2);
+for (const part of ["Otwórz stronę", "NOBLE Securities S.A. · dom maklerski", "Dlaczego tutaj", "Kryteria ryzyka", "8 z 19 wymaga uwagi", "Wszystkie 19 kryteriów wg stanu", "Co zbadano", "Baner cookies", "Firma", "Decyzja", "Rozmiar czcionki ryzyka"]) assert.ok(m2.includes(part), `karta M2: ${part}`);
+assert.match(desk.detailM2, /\/evidence\/m2\/market\/[0-9a-f]{64}\.jpg/, "miniatury zrzutów M2");
+assert.match(html(desk.detailM2Narrow), /Kryteria/);
+const m3 = html(desk.detailM3);
+for (const part of ["Otwórz ofertę", "rdmwm.pl", "Cztery cechy rekomendacji", "Czynność", "Personalizacja", "Instrument", "Rynek", "Kontrargument", "Uprawnienia", "Brak wpisu nie dowodzi braku uprawnień", "Przejrzane wykazy (12"]) assert.ok(m3.includes(part), `karta M3: ${part}`);
+assert.match(html(desk.detailM3Licensed), /kontrola: podmiot uprawniony/);
+assert.match(html(desk.offersM3), /kontrola: podmiot uprawniony/);
 const tiktok = html(desk.tiktokDetail);
 assert.match(tiktok, /Otwórz źródło/);
 assert.ok(!/Otwórz w filmie/.test(tiktok), "TikTok: bez „Otwórz w filmie”");
@@ -144,7 +156,7 @@ assert.match(tiktok, /Zbadano tylko podpis/);
 assert.match(tiktok, /data szacowana/);
 assert.match(tiktok, /odtworzeń/);
 const sources = html(desk.sources);
-for (const part of ["Materiały i skierowania w czasie", "Źródła: materiały per platforma", "YouTube", "TikTok", "Instagram", "Facebook", "WWW firm (M2)", "WWW doradców (M3)", "Biblioteka Reklam Meta", "dostęp zablokowany", "Meta Content Library", "import ręczny", "Wgraj zapisaną stronę Biblioteki Reklam Meta lub profilu Instagram", "Zapisz stronę"])
+for (const part of ["Materiały i skierowania w czasie", "Skierowania do sprawdzenia", "Źródła: materiały per platforma", "YouTube", "TikTok", "Instagram", "Facebook", "WWW firm (M2)", "WWW doradców (M3)", "Biblioteka Reklam Meta", "dostęp zablokowany", "Meta Content Library", "import ręczny", "próbka z usługi zewnętrznej", "Wgraj zapisaną stronę Biblioteki Reklam Meta lub profilu Instagram", "Zapisz stronę"])
   assert.ok(sources.includes(part), `źródła: ${part}`);
 assert.match(desk.sources, /data-chart="bar"|role="img"/);
 if (desk.legacyDetail) assert.match(html(desk.legacyDetail), /starszej wersji analizy/);

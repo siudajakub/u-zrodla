@@ -170,6 +170,10 @@ const server = createServer(async (req, res) => {
       if (fakeScan && id === fakeScan.id) return send(res, 200, { ...fakeScan, progress: state.scans[0].progress });
       return exported.scans[id] ? send(res, 200, exported.scans[id]) : send(res, 404, { detail: "Nie znaleziono skanu." });
     }
+    if (path.startsWith("/evidence/m2/market/") && /^[0-9a-f]{64}\.jpg$/.test(path.slice(20))) {
+      const data = await readFile(join(root, "sample", path.slice(1))).catch(() => null);
+      return data ? send(res, 200, data, "image/jpeg") : send(res, 404, { detail: "Nie ma takiego dowodu." });
+    }
     if (path.startsWith("/v1/frames/")) {
       const data = await readFile(join(root, "sample/frames", path.slice(11))).catch(() => null);
       return data ? send(res, 200, data, "image/jpeg") : send(res, 404, { detail: "Nie ma takiego kadru." });
