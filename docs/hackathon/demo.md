@@ -1,6 +1,6 @@
 # Pokaz dla jury UKNF
 
-**[Obejrzyj film U Źródła · 1:56](../../presentation/film/U-Zrodla-116s-zespol-AI.mp4).** Comparic nazywa brokera partnerem odcinka. ForexMind odsyła do ofert z kodem. Analityk porównuje dowody, a na końcu przekazuje pytanie o oznaczenie w obrazie do kontroli. Nagranie ma polskiego lektora i wtopione napisy.
+**[Obejrzyj film U Źródła · 2:00](../../presentation/film/U-Zrodla-platformy-final.mp4).** Comparic nazywa brokera partnerem odcinka. ForexMind odsyła do ofert z kodem. Analityk porównuje dowody, a na końcu przekazuje pytanie o oznaczenie w obrazie do kontroli. Nagranie ma polskiego lektora i wtopione napisy.
 
 Film pokazuje materiały twórców, reklamę funduszu i ofertę indywidualnego doboru portfela. Źródła mają różny zakres: wyszukiwanie YouTube korzysta z oficjalnego API, TikTok z podpisów wybranych publicznych osadzeń, a Instagram, Facebook i reklamy Meta z datowanej próbki zewnętrznej. Analityk rozstrzyga sprawę na podstawie dostępnego dowodu; brak odczytu nie oznacza braku treści.
 
@@ -63,7 +63,7 @@ Po nagraniu wykonaj w tej samej powłoce `sh ops/demo/start-local.sh --stop`. Ka
 - Otwórz kartę sprawy i kalibrację, zanim wystartuje zegar. Sprawdź desktop i telefon. Przećwicz zapis decyzji z dwiema otwartymi kartami na kopii roboczej.
 - Kliknięcie publicznego odsyłacza **Otwórz od 0:15** wymaga dostępu do YouTube. W trybie offline pokaż znacznik i cytat w karcie.
 - Wariant po tunelu wymaga połączenia z devboxem. Wariant lokalny wymaga paczek, a procedura dla Apple Silicon jest w [ops/mac/README.md](../../ops/mac/README.md).
-- Gdy pulpit jest niedostępny, odtwórz [lokalny film](../../presentation/film/U-Zrodla-116s-zespol-AI.mp4).
+- Gdy pulpit jest niedostępny, odtwórz [lokalny film](../../presentation/film/U-Zrodla-platformy-final.mp4).
 
 ## Pytania jury
 

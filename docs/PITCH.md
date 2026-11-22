@@ -1,10 +1,12 @@
 # U Źródła · scenariusz filmu dla jury UKNF
 
-## Gotowy film · 1:56
+## Gotowy film · 2:00
 
-[Obejrzyj film](../presentation/film/U-Zrodla-116s-zespol-AI.mp4) · [Tekst lektora](../presentation/film/lektor-zespol-AI-116s.txt)
+[Obejrzyj film](../presentation/film/U-Zrodla-platformy-final.mp4)
 
-## Ujęcia wersji dla jury · 1:56
+## Ujęcia wcześniejszej wersji · 1:56
+
+[Tekst lektora wcześniejszej wersji](../presentation/film/lektor-zespol-AI-116s.txt)
 
 | Czas | Co pokazuje ekran |
 | --- | --- |

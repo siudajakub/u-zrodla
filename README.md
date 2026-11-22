@@ -2,7 +2,7 @@
 
 **Monitoring reklam i ofert inwestycyjnych dla analityka UKNF.** U Źródła wyszukuje materiały z polskiego rynku i prowadzi od sygnału do konkretnej sekundy filmu, zapisanego widoku reklamy albo cytatu z oferty. Analityk może przy tym samym dowodzie zapisać decyzję i przekazać sprawę dalej.
 
-[Film dla jury · 2:00](presentation/film/U-Zrodla-platformy-final.mp4) · [Uruchom pokaz](#uruchom-pokaz) · [Dokumentacja](docs/README.md)
+[Film dla jury · 2:00](presentation/film/U-Zrodla-platformy-final.mp4) · [Uruchom pokaz](#uruchom-pokaz) · [Dokumentacja](docs/README.md) · [Jak pracowaliśmy z AI](docs/PROCES-AI.md)
 
 <img src="docs/media/readme/pulpit.png" width="960" alt="Pulpit analityka z otwartą sprawą ForexMind i odsyłaczem do 0:15 filmu.">
 
