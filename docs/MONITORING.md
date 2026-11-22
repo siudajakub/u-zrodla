@@ -1,6 +1,17 @@
 # Co obserwuje InvestWatch i jak rozszerzyć próbę
 
-## Przebieg jednego odczytu
+## Pokrycie w pokazie
+
+Pulpit pokazuje tryb, datę i wynik odczytu źródła. Analityk widzi, skąd pochodzą dane i co trzeba jeszcze sprawdzić. Stan z 21 XI 2026 obejmuje 1 922 materiały. [Scenariusz i liczniki](hackathon/demo.md)
+
+| Źródło | Jak trafia do InvestWatch | Co można ocenić w datowanym pokazie |
+| --- | --- | --- |
+| YouTube | Oficjalne API odkrywa kanały i zbiera metadane. Osobna ścieżka pozyskuje dostępne napisy i kadry. | 1 307 filmów, w tym 23 z pełną transkrypcją. Karta pokazuje dowód z opisu lub mowy. Dostępne kadry ocenia analityk. |
+| TikTok | Odczyt publicznych osadzeń wybranych profili. | 64 podpisy postów. Zakres odczytu obejmuje tekst podpisu. |
+| Facebook i Instagram | Datowana próbka zewnętrzna i import. Oficjalny adapter Biblioteki Reklam Meta wymaga tokenu. | 494 unikalne materiały z opisami i dostępnymi metrykami. |
+| Strony firm i ofert | Odczyt treści i zrzutów stron. Próba odkrywania M3 korzysta z przygotowanych wyników wyszukiwania. | M2 pokazuje treść reklamy i położenie ostrzeżenia. M3 zestawia przesłanki z treści oferty z datowanymi wykazami, gdy można wskazać operatora. |
+
+## Odczyt czterech profili na hoście
 
 | Platforma | Skąd bierzemy publikacje | Z czego pochodzi tekst | Czego brakuje do wniosku o reklamie |
 |---|---|---|---|
@@ -9,7 +20,7 @@
 
 Przykład źródłowy można otworzyć i porównać z jego zachowanym cytatem. Samo słowo „partner” uruchamia wyszukiwanie kandydata. Dopiero właściwy kontekst wskazuje, kto z kim deklaruje współpracę. Oznaczenie sponsora, link afiliacyjny, zwykła wzmianka, potwierdzenie płatnej emisji oraz odpowiedź firmy są osobnymi obserwacjami. [Przykład deklaracji](https://www.youtube.com/watch?v=xtMqKkFO-0M) · [Publiczny mechanizm kanału YouTube](https://developers.google.com/youtube/data/guides/push_notifications) · [Osadzenie profilu TikTok](https://developers.tiktok.com/docs/en/embed-creator-profiles)
 
-Na wersję językową, wizerunek lub obietnicę wypowiedzianą w 12. sekundzie filmu potrzebujemy drugiego wejścia. W pilocie analityk może załączyć dozwolony materiał, transkrypt lub klatkę z oznaczeniem czasu i pochodzenia. Ścieżka rozbudowy przewiduje lokalne rozpoznawanie mowy i OCR, odsyłacz do sekundy oraz kontrolę jakości na ręcznej transkrypcji. API YouTube wymaga uprawnienia do edycji filmu do pobrania napisów. [Dokumentacja captions.download](https://developers.google.com/youtube/v3/docs/captions/download)
+Do oceny tego, co twórca mówi lub pokazuje, potrzebny jest znacznik czasu i dostępna transkrypcja albo obraz. Karta YouTube pokazuje cytat z czasem i odsyłacz do sekundy filmu. Pilotaż może rozszerzyć pokrycie o transkrypcje z materiałów udostępnionych do analizy oraz sprawdzanie tekstu w kadrach. Oficjalne API YouTube wymaga uprawnienia do edycji filmu, żeby pobrać napisy przez `captions.download`. [Dokumentacja captions.download](https://developers.google.com/youtube/v3/docs/captions/download)
 
 ## Monitoring na hoście
 

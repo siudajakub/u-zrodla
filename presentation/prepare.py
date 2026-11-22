@@ -139,9 +139,9 @@ def problem():
 def what_it_does():
     foil("InvestWatch  /  co robi system", "Liczby: /v1/overview bazy pokazu, replay z 21 XI 2026")
     put(50, 128, "Od odkrycia do decyzji analityka", 42, face="FreeSerif")
-    steps = [("Odkryj", "Data API, Atom,", "odsyłacze, wyszukiwanie"),
-             ("Odczytaj", "opis, mowa, kadry,", "zrzut strony 1440 i 390 px"),
-             ("Zakwalifikuj", "rejestr, przegląd albo", "niepełne dane z powodem"),
+    steps = [("Odkryj", "kanały i publikacje,", "strony firm i ofert"),
+             ("Odczytaj", "dostępny opis i mowę,", "zrzut strony 1440 i 390 px"),
+             ("Zakwalifikuj", "rejestr, sprawdzenie", "lub braki w materiale"),
              ("Zdecyduj", "działanie i szkic,", "zatwierdzenie i historia")]
     for i, (title, a, b) in enumerate(steps):
         x = 52 + i * 218
@@ -156,19 +156,19 @@ def what_it_does():
         put(x, 350, tag, 38, TEAL, face="FreeSerif")
         put(x, 382, title, 17, bold=True)
         put(x, 404, subtitle, 16, GREY)
-    para(52, 459, "Jawna współpraca trafia do rejestru. Analityk może sprawdzić cytat, źródło i zakres odczytu, "
-         "zapisać decyzję oraz wyeksportować raport.", 100, 17, GREY)
+    para(52, 459, "Analityk otwiera cytat lub zrzut, sprawdza zakres odczytu i zapisuje decyzję. "
+         "Raport CSV podaje źródło, uzasadnienie i sprawdzoną wersję.", 100, 17, GREY)
 
 
 def first_slice():
     foil("InvestWatch  /  M1", "Sprawa youtube:AqXHkxDzSDI · datowany odczyt YouTube · docs/hackathon/demo.md")
     put(50, 112, "Sprawdź film od 0:15", 36, face="FreeSerif")
     put(52, 148, "ForexMind · „Freedom24 Alternatywy” · XTB", 16, GREY, bold=True)
-    y = para(52, 186, "W opisie: skrócony link przy XTB i kod twórcy „TRADEXTB”.", 40, 16)
-    y = para(52, y + 8, "Opis i transkrypcja nie wskazują oznaczenia współpracy. Kadry można obejrzeć w karcie.", 40, 16)
+    y = para(52, 186, "Opis zawiera skrócony link przy XTB i kod twórcy „TRADEXTB”.", 40, 16)
+    y = para(52, y + 8, "W opisie i odczytanej mowie system nie znalazł oznaczenia współpracy.", 40, 16)
     put(52, y + 22, "MOWA, 0:15", 13, TEAL, bold=True)
     y = para(52, y + 46, "„znajdziesz linki do specjalnych ofert w opisie poniżej”", 34, 19, bold=True)
-    para(52, y + 12, "Karta podaje zakres odczytu i możliwe inne wyjaśnienie. Decyzję podejmuje analityk.", 44, 14, GREY)
+    para(52, y + 12, "Film trafia do sprawdzenia. Analityk może obejrzeć dostępne kadry i ocenić kontekst.", 44, 14, GREY)
     shot("1440-forexmind.png", 470, 86, 440, 418, sx=660, sy=150, sw=780)
 
 
@@ -177,7 +177,7 @@ def workflow():
     put(50, 112, "Od dowodu do dalszego działania", 36, face="FreeSerif")
     y = para(52, 152, "Urzędnik wybiera działanie. System wstawia szkic z danych sprawy. Urzędnik sprawdza tekst, edytuje go i zatwierdza decyzję.", 47, 16)
     for label, detail in [
-        ("Kontrola", "Zespół zapisuje wynik albo kieruje sprawę ponownie do sprawdzenia."),
+        ("Kontrola", "W wewnętrznej kolejce zespół zapisuje wynik lub wraca do sprawdzenia."),
         ("Do uzupełnienia", "Urzędnik opisuje nowe dane i źródło. Sprawa wraca do sprawdzenia."),
         ("Zakończone", "Historia zachowuje powód. Urzędnik może ponownie otworzyć sprawę."),
     ]:
@@ -194,12 +194,12 @@ def modules():
     foil("InvestWatch  /  trzy moduły", "docs/lanes/2026-11-21-fable-c-media.md, -e-m2.md, -f-m3.md; M3-WERYFIKACJA-2026-11-21.md")
     put(50, 120, "Przesłanki i kontrole z trzech modułów", 36, face="FreeSerif")
     rows = [
-        ("M1", "Konopskyy: „[reklama] Zarejestruj się w XTB z kodem KONOP” → rejestr.",
-         "Comparic: link i kod bez słowa „reklama”, ale w 614 s „znajdziecie u partnera tego odcinka XTB” → podejrzenie obalone."),
-        ("M2", "ETF XTB: obietnica dywidend, ostrzeżenie dla ETF poza kadrem telefonu → przegląd.",
-         "Noble IKE: „Zyskaj więcej… bez podatku od zysków kapitałowych” bez ryzyka produktu. 19 kryteriów, 25 stron, 11 firm."),
-        ("M3", "rdmwm.pl: „Na podstawie tych danych dobieramy proporcje między akcjami, obligacjami…” → ustalić operatora.",
-         "DM BOŚ: cechy doradztwa, ale wykaz KNF podaje zezwolenie z pozycją 5 → kontrola przed fałszywym alarmem."),
+        ("M1", "ForexMind trafia do sprawdzenia. Podaje link i kod XTB, a w 0:15 odsyła do ofert.",
+         "Comparic też podaje link i kod. W 10:14 nazywa XTB partnerem odcinka i trafia do rejestru reklam."),
+        ("M2", "ETF XTB trafia do sprawdzenia. Właściwe ostrzeżenie jest poza pierwszym ekranem telefonu.",
+         "Ostrzeżenie o CFD dotyczy innego produktu. Próba 19 kryteriów objęła 25 stron z 11 firm."),
+        ("M3", "rdmwm.pl opisuje dobór portfela na podstawie danych klienta. Trzeba ustalić operatora.",
+         "DM BOŚ ma cechy oferty doradczej. Datowany wykaz KNF potwierdza zakres uprawnienia."),
     ]
     y = 168
     for tag, first, second in rows:
@@ -261,7 +261,8 @@ def accuracy():
         put(52, y + 24, main, 18, bold=True)
         put(52, y + 46, note, 14, GREY)
         y += 84
-    put(52, 462, "FP = fałszywy alarm. FN = przeoczenie.", 14, GREY)
+    put(52, 452, "Próba diagnostyczna M1: 8 kontroli ujemnych, 0 skierowań.", 14, GREY)
+    put(52, 476, "FP = fałszywy alarm. FN = przeoczenie.", 14, GREY)
     shot("390-kalibracja-m2.png", 622, 112, 288, 386, sy=140, directory=SUPPORT_SHOTS)
 
 

@@ -1,6 +1,6 @@
 # InvestWatch · pitch i film dla jury UKNF
 
-InvestWatch kieruje do analityka sprawy z dowodem. W filmie może to być konkretna sekunda, na stronie reklamy pozycja ostrzeżenia, a w ofercie doradczej cytat i wpis w wykazie. Analityk wybiera działanie, sprawdza propozycję uzasadnienia i zatwierdza decyzję. Potem może otworzyć tę samą sprawę w kolejce docelowej.
+InvestWatch skraca drogę od publikacji do sprawdzenia. Analityk dostaje sekundę filmu, pomiar ostrzeżenia na stronie lub cytat z oferty wraz z wynikiem sprawdzenia operatora. Wybiera dalsze działanie, edytuje szkic uzasadnienia i zatwierdza zapis. Sprawę i historię otwiera z kolejki, do której ją skierował.
 
 ## Film do 120 sekund
 
@@ -9,12 +9,12 @@ Przygotuj pulpit na datowanej bazie i nagraj ujęcia w 1440 px. Widok mobilny na
 | Czas | Ujęcie | Tekst lektora |
 | --- | --- | --- |
 | 0:00–0:14 | 1. Pulpit z licznikami zakładek **Do sprawdzenia 17** i **Rejestr reklam 274**. Wyszukaj „ForexMind” i otwórz kartę. | „W datowanym pokazie InvestWatch jest tysiąc dziewięćset dwadzieścia dwa materiały. Analityk ma siedemnaście spraw do sprawdzenia. Każda prowadzi do dowodu i adresu źródła.” |
-| 0:14–0:39 | 2. ForexMind, skrócony link, kod i znacznik 0:15. | „Ten film znaleźliśmy przez oficjalne API YouTube. Przy XTB są link i kod twórcy. System sprawdza opis, flagę platformy i transkrypcję. Kadry są do obejrzenia. W piętnastej sekundzie twórca odsyła do specjalnych ofert. Klik otwiera ten fragment.” |
-| 0:39–0:54 | 3. Rejestr reklam i karta Comparic z momentem 10:14. | „W filmie Comparic też jest kod. Jednak w dziesiątej minucie twórca mówi, że XTB jest partnerem odcinka. Ten fragment wyjaśnia podejrzenie i przenosi materiał do rejestru reklam.” |
-| 0:54–1:10 | 4. ETF XTB. Pokaż dowód w widoku telefonu. | „Na stronie ETF widać informację o dochodzie z dywidend. System mierzy, gdzie jest ostrzeżenie o ryzyku ETF. Ostrzeżenie o kontraktach CFD opisuje inny produkt.” |
-| 1:10–1:24 | 5. Oferta rdmwm.pl z cytatem i statusem operatora. | „W ofercie doradczej strona opisuje dobór proporcji między akcjami i obligacjami na podstawie danych klienta. Operator pozostaje do ustalenia.” |
+| 0:14–0:39 | 2. ForexMind, skrócony link, kod i znacznik 0:15. | „ForexMind podaje link i kod XTB, a po piętnastu sekundach odsyła do specjalnych ofert. W opisie i transkrypcji system nie znalazł oznaczenia współpracy. Kieruje film do sprawdzenia. Analityk widzi cytat, czas i kadry do obejrzenia.” |
+| 0:39–0:54 | 3. Rejestr reklam i karta Comparic z momentem 10:14. | „Comparic też podaje link i kod. W dziesiątej minucie i czternastej sekundzie twórca nazywa XTB partnerem odcinka. Ta wypowiedź wyjaśnia podejrzenie. Film trafia do rejestru reklam.” |
+| 0:54–1:10 | 4. ETF XTB. Pokaż dowód w widoku telefonu. | „Na stronie ETF pojawia się informacja o dochodzie z dywidend. InvestWatch wskazuje właściwe ostrzeżenie. Na ekranie telefonu trzeba przewinąć stronę, żeby je zobaczyć.” |
+| 1:10–1:24 | 5. Oferta rdmwm.pl z cytatem i statusem operatora. | „Strona opisuje dobór portfela na podstawie danych klienta. System wskazuje ten cytat, a karta pokazuje następne zadanie dla analityka. Trzeba ustalić operatora.” |
 | 1:24–1:39 | 6. Kalibracja M2, zmiana progu 30 → 50. | „Na próbie dwudziestu pięciu stron zmiana progu zwiększa liczbę przeoczeń z trzech do pięciu. Etykiety nadał agent. Kolejny krok to walidacja ekspercka.” |
-| 1:39–2:00 | 7. Wróć do ForexMind. Kliknij **Przekaż do kontroli**, pokaż szkic i dopisz, co należy zweryfikować. Kliknij **Zatwierdź i zapisz decyzję**, po czym **Otwórz w kontroli**. | „Analityk wybiera dalszy krok. InvestWatch przygotowuje edytowalny szkic z dowodów. Po zatwierdzeniu sprawa trafia do kontroli, a uzasadnienie zostaje w historii. Z tej kolejki zespół zapisze wynik albo wróci do sprawdzenia.” |
+| 1:39–2:00 | 7. Wróć do ForexMind. Kliknij **Przekaż do kontroli**, pokaż szkic i dopisz, co należy zweryfikować. Kliknij **Zatwierdź i zapisz decyzję**, po czym **Otwórz w kontroli**. | „Wybieram kontrolę i dopisuję, co zespół ma sprawdzić w filmie. Zatwierdzam decyzję. Sprawa jest teraz w wewnętrznej kolejce kontroli. Uzasadnienie zostaje w historii, a zespół może później zapisać wynik.” |
 
 ## Pitch na 3 minuty
 
@@ -26,7 +26,7 @@ Pierwsze 2 minuty poprowadź według [scenariusza](hackathon/demo.md). Pozostał
 
 ## Pitch w 60 sekund
 
-„Pokażę sprawę od filmu do decyzji. W opisie są link i kod XTB. W piętnastej sekundzie twórca odsyła do ofert. W innym filmie podobne podejrzenie wyjaśnia mowa, bo twórca nazywa XTB partnerem odcinka. Drugi moduł mierzy położenie ostrzeżenia przy informacji o zysku. Trzeci wskazuje cytat o spersonalizowanej ofercie i dane operatora. Analityk wybiera dalsze działanie, poprawia szkic i zatwierdza decyzję. Sprawa trafia do odpowiedniej kolejki z uzasadnieniem i historią.”
+„ForexMind i Comparic podają link i kod XTB. ForexMind odsyła do ofert, a w odczytanym opisie i mowie brakuje oznaczenia współpracy. Ten film trafia do sprawdzenia. Comparic nazywa XTB partnerem odcinka, więc film trafia do rejestru reklam. Na stronach firm InvestWatch mierzy położenie właściwego ostrzeżenia przy informacji o potencjalnym zysku. W ofertach doradztwa wskazuje cytat o personalizacji, a analityk może sprawdzić, czy ustalono operatora i zakres uprawnień. Z jednej karty urzędnik przechodzi od dowodu do decyzji. Wybiera działanie, poprawia szkic i zatwierdza zapis. Zespół przejmuje sprawę w odpowiedniej kolejce i ma dostęp do uzasadnienia oraz sprawdzonej wersji.”
 
 ## Punkty do rozmowy z jury
 
@@ -36,8 +36,8 @@ Pierwsze 2 minuty poprowadź według [scenariusza](hackathon/demo.md). Pozostał
 | Proces z asystentami AI | Kontrakt przed implementacją, bramki, ślepe etykiety tam, gdzie się udały, i jawny zapis odstępstw. |
 | Architektura | Wspólny adapter zbierania, kolejka Huey z dzierżawą, API i pulpit rozdzielone. SQLite i magazyn na dysku obsługują pojedyncze stanowisko. |
 | Zgodność | Brief wymaga zmiany statusu i powiadomień. Pokaz obejmuje obie funkcje, a także trzy moduły, znacznik dowodu i kalibrację M2. |
-| Atrakcyjność | Przykład Comparic. Film o podobnym opisie zmienia trasę dzięki wypowiedzi w 10:14. |
+| Atrakcyjność | ForexMind i Comparic. Podobne opisy prowadzą do dwóch kolejek, bo w 10:14 Comparic wskazuje partnera odcinka. |
 
 Przekazanie do kontroli zmienia kolejkę wewnątrz InvestWatch. Pokaz tego obiegu dostarcza dowód gotowości pulpitu i działania zmiany statusu według briefu. Trafność wykrywania dalej oceniamy na zbiorach z opisanymi etykietami i liczebnością. [Kolejki i pytania jury](hackathon/demo.md#gdzie-trafia-sprawa) · [Brief UKNF](zrodla-uknf/BRIEF.md#strona-2)
 
-Przy pytaniach o trafność podaj mianowniki. M1 to próba strojenia 26 materiałów, 20 kampanii i trzy pozytywne kampanie jednego reklamodawcy. M2 to 25 stron z 11 firm. M3 to 31 materiałów i jeden rzeczywisty przypadek skierowany. Przy pytaniach o AI powiedz, że E5 rozpoznaje rodzaj materiału, drugi głos jest pomocniczy, a reguły kierują sprawy do człowieka. [Wynik M1](../fixtures/validation/q-v2/WYNIK-M1-2026-11-21.md) · [Próba M2](lanes/2026-11-21-fable-e-m2.md) · [Próba M3](lanes/2026-11-21-fable-f-m3.md) · [Pomiar AI](lanes/2026-11-21-fable-ai-inferencja.md) · [PDF](../presentation/InvestWatch.pdf)
+Przy pytaniach o trafność podaj mianowniki. M1 to 26 materiałów z 20 kampanii w próbie strojenia, w tym trzy pozytywne kampanie jednego reklamodawcy. W osobnej próbie diagnostycznej było osiem kontroli ujemnych i zero skierowań, więc precyzja i pełność są nieobliczalne. M2 to 25 stron z 11 firm. M3 to 31 materiałów i jeden rzeczywisty przypadek skierowany. Przy pytaniach o AI powiedz, że E5 wspomaga rozpoznanie rodzaju materiału, drugi głos jest pomocniczy, a reguły kierują sprawy do człowieka. [Wynik M1](../fixtures/validation/q-v2/WYNIK-M1-2026-11-21.md) · [Próba diagnostyczna M1](lanes/2026-11-22-proba-kampanii.md) · [Próba M2](lanes/2026-11-21-fable-e-m2.md) · [Próba M3](lanes/2026-11-21-fable-f-m3.md) · [Pomiar AI](lanes/2026-11-21-fable-ai-inferencja.md) · [PDF](../presentation/InvestWatch.pdf)

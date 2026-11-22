@@ -2,17 +2,21 @@
 
 ## Opis do zgłoszenia
 
-InvestWatch pomaga analitykowi UKNF znaleźć w sieci materiały wymagające kontroli. Kolektor wyszukuje polskie kanały YouTube przez oficjalne API, czyta publiczne osadzenia wybranych profili TikTok i zbiera strony z ofertami. System sprawdza opis, oznaczenie platformy i dostępną transkrypcję. Wybrane kadry udostępnia do obejrzenia. Jawna współpraca trafia do rejestru reklam z nazwą firmy, twórcą i adresem publikacji. W karcie podejrzenia analityk widzi cytat, znacznik czasu i zakres sprawdzonych danych. Moduł M2 sprawdza 19 kryteriów UKNF na stronach firm, m.in. czy ostrzeżenie właściwego produktu towarzyszy informacji o zysku. Moduł M3 wskazuje przesłanki spersonalizowanego doradztwa i sprawdza operatora oraz zakres zezwolenia w datowanych wykazach. Po wyborze działania system wstawia edytowalny szkic uzasadnienia. Urzędnik zatwierdza decyzję i kieruje sprawę do kontroli, uzupełnienia albo zakończenia. Zapis trafia do historii, a analityk może pobrać raport CSV. Stanowisko odtwarza datowany pokaz bez płatnych wywołań API. Facebook i Instagram są w nim reprezentowane przez próbkę zewnętrzną. Oficjalny odczyt Meta wymaga tokenu.
+InvestWatch pomaga analitykowi UKNF wybrać z wielu publikacji sprawy warte sprawdzenia. Każde skierowanie prowadzi do źródła, konkretnego dowodu i informacji o tym, co system zdołał odczytać.
 
-## Wyróżnik
+- **M1 · Materiały twórców.** System szuka polskojęzycznych kanałów YouTube przez oficjalne API i odczytuje podpisy z publicznych osadzeń wybranych profili TikTok. W materiale sprawdza dostępny opis, oznaczenie platformy i transkrypcję. Wybrane kadry pokazuje analitykowi. Jawna współpraca trafia do rejestru reklam z twórcą, firmą i adresem publikacji. Przy podejrzeniu analityk może przejść wprost do cytatu lub sekundy filmu.
+- **M2 · Reklamy firm.** Na stronach firm system sprawdza 19 kryteriów UKNF. Przy informacji o potencjalnym zysku wskazuje ostrzeżenie właściwego produktu i zapisuje jego położenie na komputerze i telefonie. Analityk może porównać pomiar z obrazem strony.
+- **M3 · Oferty doradcze.** System wskazuje cytat sugerujący personalizację usługi. Analityk widzi osobno, czy ustalono operatora i czy datowany wykaz wskazuje uprawnienie do tej usługi.
 
-- **Cytat może zmienić decyzję.** W filmie Comparic link i kod w opisie wyglądają na nieujawnioną współpracę. Mowa wskazuje partnera odcinka w 10:14, więc publikacja trafia do rejestru.
-- **Dowód odpowiada konkretnej sprawie.** Film można otworzyć od właściwej sekundy. Dla strony firmy karta zachowuje zrzut ekranu i pomiar. Dla oferty doradczej rozdziela cytaty o usłudze od ustalenia operatora i jego uprawnień.
-- **Analityk widzi pokrycie i pochodzenie.** Raport podaje źródło i ograniczenia odczytu. Panel kalibracji pokazuje liczebność oraz pochodzenie etykiet.
+Urzędnik wybiera dalsze działanie, przegląda i edytuje szkic uzasadnienia, po czym zatwierdza zapis. Sprawa trafia do wewnętrznej kolejki kontroli, uzupełnienia lub zakończenia. Zespół może wpisać wynik kontroli, odnotować źródło nowych danych albo ponownie otworzyć sprawę. Historia i eksport CSV zachowują decyzję wraz ze sprawdzoną wersją materiału.
+
+## Po co sprawdzamy mowę filmu
+
+ForexMind i Comparic umieścili w opisach link i kod związane z XTB. W filmie ForexMind w 0:15 pada odesłanie do specjalnych ofert. W sprawdzonym opisie i transkrypcji system nie znalazł oznaczenia współpracy, więc sprawa trafia do sprawdzenia, z kadrami do oceny przez analityka. W filmie Comparic w 10:14 twórca nazywa XTB partnerem odcinka. Ta wypowiedź wyjaśnia przesłankę z opisu, a publikacja trafia do rejestru reklam. [Scenariusz pokazu](docs/hackathon/demo.md)
 
 ## Stan względem briefu
 
-Datowane odtworzenie obejmuje 1 922 materiały, 274 wpisy w rejestrze reklam i 17 spraw do sprawdzenia, w tym 7 M1, 9 M2 i 1 M3. W siedmiu sprawach M1 występuje pięć par twórca–reklamodawca i dwie marki, XTB oraz eToro. [Liczniki stanowiska](docs/hackathon/demo.md)
+Datowane odtworzenie działa offline i obejmuje 1 922 materiały, 274 wpisy w rejestrze reklam oraz 17 spraw do sprawdzenia, w tym 7 M1, 9 M2 i 1 M3. W siedmiu sprawach M1 występuje pięć par twórca–reklamodawca i dwie marki, XTB oraz eToro. [Liczniki stanowiska](docs/hackathon/demo.md)
 
 | Zakres | Dowód działania | Ograniczenie |
 | --- | --- | --- |
@@ -20,6 +24,6 @@ Datowane odtworzenie obejmuje 1 922 materiały, 274 wpisy w rejestrze reklam i
 | Facebook i Instagram | W odtworzeniu jest 494 unikalnych materiałów na tych platformach. Jest import zapisanej strony i adapter Meta Ad Library. | Dane odtworzeniowe korzystają z datowanej próbki zewnętrznej. Bieżący odczyt z oficjalnego API czeka na token. |
 | M2 | Próba rynkowa objęła 25 stron 11 firm, w tym trzy oddziały zagraniczne. Jest pomiar ostrzeżeń na komputerze i telefonie. | Etykiety są ocenami agenta. Wiersz 2 jest obserwacją bez wpływu na wynik, a tablet ma dowód w starszej, mniejszej próbie. |
 | M3 | 29 domen, 12 datowanych wykazów, w tym jedna rynkowa przesłanka do sprawdzenia na rdmwm.pl. BOŚ stanowi kontrolę firmy z uprawnieniem. | Operator rdmwm.pl pozostaje nieustalony. Odkrywanie rynkowe korzystało z przygotowanych wyników wyszukiwania. |
-| Analiza i decyzje | Reguły z cytatem i lokalizatorem, pomocniczy klasyfikator E5, kalibracja wszystkich modułów. Decyzja urzędnika ma edytowalne uzasadnienie, sprawdzenie rewizji, historię i kolejkę dalszej pracy. | Wyniki trafności mają ograniczone próby i etykiety agentów. Model opisuje materiał lub daje drugi głos. Urzędnik zatwierdza zapis. |
+| Analiza i decyzje | Reguły wiążą skierowanie z dowodem. E5 wspomaga rozpoznanie rodzaju materiału, a panel kalibracji pokazuje skutki zmiany progu w każdym module. | Wyniki pochodzą z ograniczonych prób z etykietami agentów. Ślepa próba M1 objęła osiem kontroli ujemnych. Walidacja wykrywania wymaga nowych kampanii i etykiet eksperckich. |
 
 [Brief i załączniki](docs/zrodla-uknf/README.md) · [Odbiór](docs/lanes/2026-11-22-odbior-finalny.md) · [Prezentacja PDF](presentation/InvestWatch.pdf) · [Quick Start](README.md) · [Scenariusz](docs/hackathon/demo.md)
