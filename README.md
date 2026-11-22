@@ -2,15 +2,23 @@
 
 **Monitoring reklam i ofert inwestycyjnych dla analityka UKNF.** U Źródła wyszukuje materiały z polskiego rynku i prowadzi od sygnału do konkretnej sekundy filmu, zapisanego widoku reklamy albo cytatu z oferty. Analityk może przy tym samym dowodzie zapisać decyzję i przekazać sprawę dalej.
 
-[Film dla jury · 1:56](presentation/film/U-Zrodla-116s-zespol-AI.mp4) · [Uruchom pokaz](#uruchom-pokaz) · [Dokumentacja](docs/README.md)
+[Film dla jury · 2:00](presentation/film/U-Zrodla-platformy-final.mp4) · [Uruchom pokaz](#uruchom-pokaz) · [Dokumentacja](docs/README.md)
 
 <img src="docs/media/readme/pulpit.png" width="960" alt="Pulpit analityka z otwartą sprawą ForexMind i odsyłaczem do 0:15 filmu.">
 
-## 13 690 materiałów
+## Bieżący monitoring źródeł
 
-Stan pulpitu z **22 listopada 2026 r.** obejmował **13 690 materiałów**, **2 959 pozycji w rejestrze reklam** i **16 spraw do sprawdzenia**. Rejestr zawiera 2 411 pozycji rozpoznanych przez system i 548 kandydatów. To migawka po rozszerzeniu zbioru m.in. o starsze publikacje kanałów z wykrytymi współpracami. [Stan zbioru i sposób doboru](docs/hackathon/demo.md)
+U Źródła jest gotowe do pracy od pobrania publikacji po zapis decyzji analityka. Jeden pulpit obsługuje **YouTube, TikToka, Instagram, Facebook, Bibliotekę reklam Meta oraz strony firm inwestycyjnych**. Skan można uruchomić na żądanie lub cyklicznie.
 
-Paczka do odtworzenia z **21 listopada** ma **1 922 materiały**, **274 pozycje w rejestrze** i **17 spraw do sprawdzenia**. Obejmuje 1 307 filmów YouTube, w tym 23 z pełną transkrypcją, oraz **494 materiały Meta** z datowanej próbki zewnętrznej: 350 postów z Instagrama, 30 wpisów z Facebooka i 114 reklam wyszukanych z filtrem kraju emisji „Polska”. [Pochodzenie i pokrycie źródeł](docs/MONITORING.md)
+| Źródło | Jak pobieramy bieżące materiały |
+| --- | --- |
+| **YouTube** | Oficjalne API wyszukuje kanały i nowe filmy oraz pobiera ich opisy. Osobna ścieżka zbiera dostępne transkrypcje i kadry. |
+| **TikTok** | Kolektor czyta podpisy publikacji z publicznych osadzeń monitorowanych profili. |
+| **Instagram i Facebook** | Osobno uruchamiany kolektor pobiera bieżące posty z wybranych kont i stron przez usługę zewnętrzną. Pulpit przyjmuje też zapisane materiały z obu platform. |
+| **Biblioteka reklam Meta** | Adapter pobiera reklamy z Facebooka i Instagrama po skonfigurowaniu uprawnionego tokenu. |
+| **Strony WWW** | Kolektory czytają reklamy i oferty. Karta zachowuje źródłowy cytat, zrzut strony albo pomiar położenia ostrzeżenia. |
+
+Pulpit pokazuje datę ostatniego odczytu, zakres zebranych materiałów i stan dostępu do źródła. [Konfiguracja monitoringu i dostęp do platform](docs/MONITORING.md)
 
 ## Trzy rodzaje spraw
 
@@ -52,19 +60,19 @@ Gdy próg rośnie z 30 do 50, kolejka w pokazie kurczy się z 9 do 7 spraw, a na
 
 ## Modele działają lokalnie
 
-Vosk odczytuje mowę, E5 wspiera klasyfikację materiału, a Qwen3.5 4B w lokalnej Ollamie daje drugą opinię. Gdy Ollama jest niedostępna, reguły i pozostałe modele nadal działają. OpenRouter służył do eksperymentów porównawczych. Oficjalne API YouTube dostarcza publikacje w trybie live.
+Vosk odczytuje mowę, E5 wspiera klasyfikację materiału, a Qwen3.5 4B w lokalnej Ollamie daje drugą opinię. Gdy Ollama jest niedostępna, reguły i pozostałe modele nadal działają.
 
 Na Linuksie z Compose przygotuj wagi przez `sh ops/inference/pull-model.sh`. Na Apple Silicon możesz uruchomić Ollamę natywnie. [Przygotowanie Ollamy](ops/demo/README.md#lokalny-model-ollama) · [Przepływ danych](docs/ARCHITEKTURA.md)
 
 ## Uruchom pokaz
 
-Na Linux x86_64 lub macOS Apple Silicon przygotuj Docker Compose, Node.js 22.13+ i około 10 GiB miejsca. Na Linux potrzebujesz również Pythona 3.12 z venv i pip oraz FFmpeg. W katalogu projektu umieść paczkę zespołu `replay-media-2026-11-21.tar.gz` z plikiem `.sha256`. [Paczki i warianty uruchomienia](ops/demo/README.md)
+Uruchom bieżący monitoring na przygotowanym stanowisku z Docker Compose:
 
 ```sh
-sh ops/demo/start.sh
+sh ops/demo/start.sh --live
 ```
 
-Po komunikacie **GOTOWE** otwórz [pulpit na porcie 8769](http://127.0.0.1:8769/), wyszukaj ForexMind i kliknij wiersz. Pierwsze przygotowanie pobiera zależności i modele. Gotowy pokaz można odtworzyć offline.
+Otwórz [lokalny pulpit](http://127.0.0.1:8769/) i wybierz **Źródła**, żeby zobaczyć wynik skanu. Instrukcja opisuje konfigurację dostępu oraz pokaz offline. [Przygotowanie stanowiska](ops/demo/README.md)
 
 ## Dokumentacja
 
