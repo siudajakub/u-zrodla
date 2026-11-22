@@ -6,11 +6,11 @@
   <title>InvestWatch — pulpit analityka</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="/theme-preview/preview.css">
-  <script type="module" src="/theme-preview/preview.js" onerror="location.replace('/legacy.html')"></script>
+  <script type="module" src="/theme-preview/preview.js" onerror="window.addEventListener('DOMContentLoaded',()=>{document.getElementById('app').innerHTML='<section class=desk-boot role=alert><h1>Nie udało się uruchomić pulpitu</h1><p>Sprawdź połączenie z serwerem i spróbuj ponownie.</p><button type=button onclick=location.reload()>Spróbuj ponownie</button></section>'})"></script>
   <style>body{margin:0;background:var(--color-background-body);color:var(--color-text-primary)}#app{height:100dvh}.desk-boot{padding:1rem;color:var(--color-text-secondary)}</style>
 </head>
 <body>
   <section id="app"><p role="status" class="desk-boot">Ładowanie pulpitu analityka…</p></section>
-  <noscript>Pulpit wymaga JavaScriptu. Starsza wersja: <a href="/legacy.html">legacy.html</a>.</noscript>
+  <noscript>Pulpit wymaga włączonego JavaScriptu.</noscript>
 </body>
 </html>

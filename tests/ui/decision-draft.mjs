@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import { decisionDraft, needsOwnReason, hasOwnExplanation } from '../../web/src/desk/decision.js';
+
+const basic = { url: 'https://example.org/material', evidence: [{ id: 'x', role: 'claim', text: 'link partnerski' }], claim: { evidenceId: 'x' }, reasons: ['Link XTB w opisie.'], alternative: 'Nie ustalono wynagrodzenia.', counter: [], missing: [], checks: [] };
+assert.match(decisionDraft(basic, 'refer_to_control'), /Link XTB w opisie/);
+assert.match(decisionDraft(basic, 'complete_data'), /Nie ustalono wynagrodzenia/);
+assert.match(decisionDraft(basic, 'refer_to_control'), /Źródło: https:\/\/example.org\/material/);
+assert.equal(needsOwnReason(basic, 'no_signal'), true);
+assert.match(decisionDraft(basic, 'no_signal'), /Podaj powód/);
+const counter = { ...basic, counter: [{ text: 'współpraca reklamowa', effect: 'Oznaczenie w opisie.', counterKind: 'disclosure' }] };
+assert.equal(needsOwnReason(counter, 'no_signal'), true);
+assert.match(decisionDraft(counter, 'no_signal'), /Fragment do weryfikacji: „współpraca reklamowa”/);
+for (const action of ['close', 'control_result', 'data_received', 'reopen']) assert.equal(needsOwnReason(basic, action), true);
+const long = { ...basic, reasons: ['🐻'.repeat(4000)], alternative: 'Istotna niepewność zachowana.' };
+assert.ok(decisionDraft(long, 'refer_to_control').length <= 2000);
+assert.match(decisionDraft(long, 'refer_to_control'), /Istotna niepewność zachowana/);
+assert.ok(!/[\uD800-\uDBFF]$/.test(decisionDraft(long, 'refer_to_control')));
+assert.equal(hasOwnExplanation('Podaj powód.', 'Podaj powód.  '), false);
+assert.equal(hasOwnExplanation('Podaj powód.', 'Podaj powód. x'), false);
+assert.equal(hasOwnExplanation('Podaj powód.', 'W materiale brak tej współpracy.'), true);
+console.log('decision draft: dowód, niepewność, kontrdowód, wymagany opis i limit 2000 OK');

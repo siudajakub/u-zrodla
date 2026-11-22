@@ -15,6 +15,7 @@ export function useDeskData() {
   const inFlight = useRef(false);
   const again = useRef(null);
   const timer = useRef(null);
+  const pending = useRef(null);
   const sig = useRef("");
   const dataRef = useRef(null);
 
@@ -63,9 +64,24 @@ export function useDeskData() {
     }
   }, []);
 
-  const schedule = useCallback((options) => {
+  const invalidate = useCallback(() => {
+    api.clearCases();
+    setRev((n) => n + 1);
+  }, []);
+
+  const schedule = useCallback((options = {}) => {
+    if (options.dirty && !pending.current?.dirty) api.clearCases();
+    pending.current = { heavy: !!(options.heavy || pending.current?.heavy), dirty: !!(options.dirty || pending.current?.dirty) };
     clearTimeout(timer.current);
-    timer.current = setTimeout(() => refresh(options), 400);
+    timer.current = setTimeout(() => {
+      const next = pending.current;
+      pending.current = null;
+      if (next?.dirty) {
+        api.clearCases();
+        setRev((n) => n + 1);
+      }
+      refresh({ heavy: !!next?.heavy });
+    }, 400);
   }, [refresh]);
 
   useEffect(() => {
@@ -73,23 +89,23 @@ export function useDeskData() {
     const stop = api.events({
       onStatus: (up, resumed) => {
         setLive(up);
-        if (up && resumed) schedule();
+        if (up && resumed) schedule({ dirty: true, heavy: true });
       },
       onEvent: (event) => {
         if (event.kind === "high_risk") {
           setAlerts((list) => [{ id: event.id, ref: event.ref, message: event.message, at: event.at }, ...list.filter((a) => a.id !== event.id)].slice(0, 3));
         }
-        schedule({ heavy: event.kind === "scan" || event.kind === "qualification" || event.kind === "threshold" });
+        schedule({ dirty: true, heavy: event.kind === "scan" || event.kind === "qualification" || event.kind === "threshold" || event.kind === "reset" });
       },
     });
     return () => {
       stop();
       clearTimeout(timer.current);
     };
-  }, [refresh, schedule]);
+  }, [refresh, schedule, invalidate]);
 
   const dismissAlert = useCallback((id) => setAlerts((list) => list.filter((a) => a.id !== id)), []);
-  return { data, error, refreshError, refreshing, loadedAt, live, alerts, dismissAlert, refresh, schedule, rev };
+  return { data, error, refreshError, refreshing, loadedAt, live, alerts, dismissAlert, refresh, schedule, invalidate, rev };
 }
 
 /** Kolejka ze stronicowaniem: pierwsza strona po zmianie kolejki, filtrów lub wersji danych, kolejne przez `more()`. */
@@ -109,7 +125,7 @@ export function useQueue(name, filters, data, rev, limit = 50) {
         (e) => mine === gen.current && setState((s) => ({ ...s, status: "error", error: e.message, legacy: e.status === 404, loadingMore: false })),
       );
     }, wait);
-    return () => clearTimeout(t);
+    return () => { clearTimeout(t); gen.current++; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key, rev, !!data]);
   const more = useCallback(() => {

@@ -108,6 +108,7 @@ export function normalizeCase(raw, creators = new Map()) {
     module,
     origin: originOf(raw),
     status,
+    workflowStage: raw.workflowStage || (status === "closed" ? "closed" : "review"),
     revision: raw.revision ?? 1,
     version: raw.version ?? 1,
     creatorId: raw.creatorId || null,

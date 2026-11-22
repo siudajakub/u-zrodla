@@ -1,7 +1,6 @@
 // Karta M2 (strona firmy z renderu): „Dowód” = trzy najważniejsze przesłanki ze zrzutami, reszta pod „+N przesłanek”,
 // 19 kryteriów pod rozwinięciem; „Szczegóły” = firma, odczyt, widoki.
 import React from "react";
-import { Collapsible } from "@astryxdesign/core/Collapsible";
 import { HStack, VStack } from "@astryxdesign/core/Layout";
 import { Table, proportional } from "@astryxdesign/core/Table";
 import { Text } from "@astryxdesign/core/Text";
@@ -57,50 +56,38 @@ function PremiseRow({ r, title }) {
     <HStack gap={2} vAlign="start" hAlign="between" data-premise={r.id}>
       <VStack gap={0.5}>
         <Text weight="semibold">{r.label}</Text>
-        {r.quote && !quoted && <Text type="supporting" maxLines={2}>„{r.quote}”</Text>}
-        <Text type="supporting" color={quoted ? "primary" : "secondary"} maxLines={3}>{sentence}</Text>
+        {r.quote && !quoted && <Text type="supporting">„{r.quote}”</Text>}
+        <Text type="supporting" color={quoted ? "primary" : "secondary"}>{sentence}</Text>
       </VStack>
       {shots.length > 0 && <Shots shots={shots} title={title} />}
     </HStack>
   );
 }
 
-/** Dowód M2: 3 przesłanki, pod „+N przesłanek” pozostałe, pod „Wszystkie 19 kryteriów” pełna lista wg stanu. */
+/** Najważniejsze przesłanki pozostają przy decyzji; pełny zapis trafia do dokumentacji. */
 export function ProofM2({ c }) {
+  const lead = rankPremises(c).slice(0, 3);
+  return <Tile title="Dlaczego tutaj i dowód" id="sekcja-momenty">
+    {lead.length ? <VStack gap={2}>{lead.map((r) => <PremiseRow key={r.id} r={r} title={c.title} />)}</VStack> : <Text color="secondary">Żadne z kryteriów nie jest przesłanką.</Text>}
+    {rankPremises(c).length > 3 && <Text type="supporting">Pozostałe przesłanki są w dokumentacji dowodowej, w zakładce „Kryteria reklamy”.</Text>}
+  </Tile>;
+}
+
+export function M2Documentation({ c }) {
   const checks = c.checks;
-  const ranked = rankPremises(c);
-  const lead = ranked.slice(0, 3);
-  const rest = ranked.slice(3);
   const groups = [...STATE_ORDER, ...new Set(checks.map((x) => x.state).filter((s) => !STATE_ORDER.includes(s)))]
     .map((state) => ({ state, rows: checks.filter((x) => x.state === state) }))
     .filter((g) => g.rows.length);
-  return (
-    <Tile title="Dlaczego tutaj i dowód" id="sekcja-momenty">
-      {lead.length === 0 ? <Text color="secondary">Żadne z kryteriów nie jest przesłanką.</Text> : (
-        <VStack gap={2}>{lead.map((r) => <PremiseRow key={r.id} r={r} title={c.title} />)}</VStack>
-      )}
-      {rest.length > 0 && (
-        <Collapsible defaultIsOpen={false} trigger={<Text type="supporting" weight="medium">+ {rest.length} {rest.length === 1 ? "przesłanka" : rest.length < 5 ? "przesłanki" : "przesłanek"}</Text>}>
-          <VStack gap={2} padding={1}>{rest.map((r) => <PremiseRow key={r.id} r={r} title={c.title} />)}</VStack>
-        </Collapsible>
-      )}
-      {checks.length > 0 && (
-        <Collapsible defaultIsOpen={false} trigger={<Text type="supporting" weight="medium">Wszystkie {checks.length} kryteriów wg stanu</Text>}>
-          <VStack gap={2} padding={1}>
-            {groups.map((g) => (
-              <VStack key={g.state} gap={1} role="group" aria-label={`Kryteria: ${g.state}`}>
-                <HStack gap={1} vAlign="center"><StateToken state={g.state} /><Text type="supporting" color="secondary">{g.rows.length}</Text></HStack>
-                <Table idKey="id" density="compact" verticalAlign="top" data={g.rows} columns={[
-                  { key: "n", header: "Kryterium", width: proportional(2, { minWidth: 110 }), renderCell: (r) => <Text weight="medium">{r.label}</Text> },
-                  { key: "e", header: "Wynik", width: proportional(4, { minWidth: 150 }), renderCell: (r) => <Text type="supporting" color="secondary" maxLines={3}>{plainEvidence(r) || "—"}</Text> },
-                ]} />
-              </VStack>
-            ))}
-          </VStack>
-        </Collapsible>
-      )}
-    </Tile>
-  );
+  return <VStack gap={2}>
+    {rankPremises(c).slice(3).map((r) => <PremiseRow key={r.id} r={r} title={c.title} />)}
+    {groups.map((g) => <VStack key={g.state} gap={1} role="group" aria-label={`Kryteria: ${g.state}`}>
+      <HStack gap={1} vAlign="center"><StateToken state={g.state} /><Text type="supporting" color="secondary">{g.rows.length}</Text></HStack>
+      <Table idKey="id" density="compact" verticalAlign="top" data={g.rows} columns={[
+        { key: "n", header: "Kryterium", width: proportional(2, { minWidth: 110 }), renderCell: (r) => <Text weight="medium">{r.label}</Text> },
+        { key: "e", header: "Wynik", width: proportional(4, { minWidth: 150 }), renderCell: (r) => <Text type="supporting" color="secondary">{plainEvidence(r) || "—"}</Text> },
+      ]} />
+    </VStack>)}
+  </VStack>;
 }
 
 const CONSENT_ACTION = { reject: "odrzucono", accept: "przyjęto", close: "zamknięto", none: "nie klikano" };

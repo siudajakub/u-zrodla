@@ -22,7 +22,7 @@ const oneLine = (text) => String(text || "").replace(/([a-ząćęłńóśźż])(
 
 /** Dowód M3: cztery cechy, każda w jednej linii: cecha, stan, cytat, odnośnik do podstrony. */
 export function ProofM3({ c }) {
-  const rows = c.checks;
+  const rows = c.checks.filter((r) => ["przesłanka", "spełnione", "częściowo", "brak danych"].includes(r.state));
   return (
     <Tile title="Dowód" id="sekcja-momenty">
       {rows.length === 0 ? <Text color="secondary">Brak oceny cech dla tej sprawy.</Text> : (
@@ -30,7 +30,7 @@ export function ProofM3({ c }) {
           {rows.map((r) => (
             <VStack key={r.id} gap={0.25} data-axis={r.id}>
               <HStack gap={1} vAlign="center" wrap="wrap"><Text weight="semibold">{r.label}</Text><StateToken state={r.state} />{safeUrl(r.url) && <ExternalLink url={r.url}>{pageName(r.url)} ↗</ExternalLink>}</HStack>
-              {r.evidence ? <Text type="supporting" maxLines={1}>„{oneLine(r.evidence)}”</Text> : <Text type="supporting" color="secondary">brak cytatu</Text>}
+              {r.evidence ? <Text type="supporting">„{oneLine(r.evidence)}”</Text> : <Text type="supporting" color="secondary">brak cytatu</Text>}
             </VStack>
           ))}
         </VStack>

@@ -4,12 +4,13 @@
 import { MODULE_NAME, STATES } from "./labels.js";
 
 export const EMPTY_FILTERS = { state: "review", q: "", module: "all", source: "all", band: "all", from: "", to: "", dateField: "observedAt", section: "all", disc: "all" };
-export const FILTER_KEYS = Object.keys(EMPTY_FILTERS);
+export const FILTER_KEYS = Object.keys(EMPTY_FILTERS).filter((key) => key !== "band");
 
 export const activeCount = (f) => FILTER_KEYS.filter((k) => k !== "dateField" && k !== "state" && f[k] !== EMPTY_FILTERS[k]).length;
 
 /** Kolejka API dla stanu i modułu: Do sprawdzenia → review, Niepełne → incomplete, Zamknięte → closed, Demo → demo, Wszystkie → offersM2/offersM3 przy module M2/M3, inaczej all. */
 export function queueFor(state, module) {
+  if (state === "demo") return "demo";
   if (state === "all") return module === "M2" ? "offersM2" : module === "M3" ? "offersM3" : "all";
   return STATES.find((s) => s.value === state)?.queue || "review";
 }

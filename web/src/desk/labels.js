@@ -1,7 +1,7 @@
 // Polskie nazwy i formaty pulpitu. Bez żargonu: „przesłanka do sprawdzenia”, nigdy „naruszenie”.
 
 /** Słownik etykiet: jedna nazwa każdego pojęcia w całym interfejsie (audyt redukcyjny, §3.4). */
-export const MODULE_NAME = { M1: "M1 Twórcy", M2: "M2 Reklamy firm", M3: "M3 Doradztwo" };
+export const MODULE_NAME = { M1: "Materiały twórców", M2: "Reklamy firm", M3: "Oferty doradztwa" };
 export const MODULES = MODULE_NAME;
 export const moduleName = (m) => MODULE_NAME[m] || m || "";
 export const STATUS = { new: "Nowa", reviewing: "W kontroli", closed: "Zamknięta" };
@@ -14,10 +14,11 @@ export const ROUTES = {
 /** Filtr „Stan” listy: wartość w adresie → etykieta i kolejka API. */
 export const STATES = [
   { value: "review", label: "Do sprawdzenia", queue: "review" },
-  { value: "incomplete", label: "Niepełne", queue: "incomplete" },
+  { value: "control", label: "Przekazane do kontroli", queue: "control" },
+  { value: "supplement", label: "Do uzupełnienia", queue: "supplement" },
+  { value: "incomplete", label: "Niepełne dane z analizy", queue: "incomplete" },
   { value: "all", label: "Wszystkie", queue: "all" },
   { value: "closed", label: "Zamknięte", queue: "closed" },
-  { value: "demo", label: "Demo", queue: "demo" },
 ];
 export const BANDS = { strong: "mocna", moderate: "średnia", weak: "słaba" };
 export const bandOfValue = (v) => (v == null ? null : v >= 75 ? "strong" : v >= 60 ? "moderate" : "weak");
@@ -31,12 +32,17 @@ export const SCAN_MODE = { live: "skan na żywo", replay: "odtworzenie skanu", r
 export const strengthLabel = (band, value) => `${BANDS[band] || ""} ${value}`.trim();
 export const SCAN_STATUS = { queued: "w kolejce", running: "w toku", done: "zakończony", partial: "częściowy", failed: "nieudany" };
 export const RESOLUTIONS = [
-  { value: "refer_to_control", label: "Przekaż do kontroli", hint: "Materiał wymaga dalszej kontroli; sprawa zostaje w toku." },
-  { value: "complete_data", label: "Uzupełnij dane", hint: "Brakuje danych do oceny (np. transkrypcji); sprawa zostaje w toku." },
-  { value: "no_signal", label: "Bez przesłanki", hint: "Po sprawdzeniu nie ma przesłanki; sprawa zostaje zamknięta." },
-  { value: "close", label: "Zamknij", hint: "Zamknij bez dalszych działań, z uzasadnieniem." },
+  { value: "refer_to_control", label: "Przekaż do kontroli", hint: "Sprawa przejdzie do kolejki kontroli zespołu.", stages: ["review"] },
+  { value: "complete_data", label: "Skieruj do uzupełnienia", hint: "Sprawa przejdzie do kolejki uzupełniania danych.", stages: ["review"] },
+  { value: "no_signal", label: "Zakończ bez przesłanki", hint: "Sprawa trafi do zakończonych bez dalszej kontroli.", stages: ["review"] },
+  { value: "close", label: "Zakończ z innym uzasadnieniem", hint: "Sprawa trafi do zakończonych; podaj powód.", stages: ["review"] },
+  { value: "control_result", label: "Zakończ kontrolę", hint: "Zapisz wynik kontroli; sprawa trafi do zakończonych.", stages: ["control"] },
+  { value: "data_received", label: "Dane uzupełnione", hint: "Zapisz, co uzupełniono; sprawa wróci do sprawdzenia.", stages: ["supplement"] },
+  { value: "reopen", label: "Wróć do sprawdzenia", hint: "Podaj powód ponownego otwarcia; sprawa wróci do sprawdzenia.", stages: ["control", "supplement", "closed"] },
 ];
 export const RESOLUTION_LABEL = Object.fromEntries(RESOLUTIONS.map((r) => [r.value, r.label]));
+export const WORKFLOW_STAGE = { review: "Do sprawdzenia", control: "Przekazana do kontroli", supplement: "Do uzupełnienia", closed: "Zakończona" };
+export const DESTINATION = { refer_to_control: "control", complete_data: "supplement", no_signal: "closed", close: "closed", control_result: "closed", data_received: "review", reopen: "review" };
 export const DISCLOSURE_KIND = {
   in_description: "w opisie",
   in_speech: "w mowie",

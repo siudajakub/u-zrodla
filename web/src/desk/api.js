@@ -48,7 +48,6 @@ export function queueQuery(filters = {}, { limit = 50, cursor = null, queue = nu
     // API ma jedną platformę kanoniczną „web” (WWW i Studio to aliasy przy odczycie).
     p.set("platform", filters.source);
   }
-  if (filters.band && filters.band !== "all") p.set("band", filters.band);
   if (filters.from || filters.to) p.set("dateField", filters.dateField === "publishedAt" ? "publishedAt" : "observedAt");
   if (filters.from) p.set("since", `${filters.from}T00:00:00+00:00`);
   if (filters.to) p.set("until", `${filters.to}T23:59:59+00:00`);
@@ -71,6 +70,8 @@ export function reportUrl({ module, format = "csv", filters = {}, queue = null }
 export const assetUrl = (path) => (typeof path === "string" && path.startsWith("/") ? base() + path : path || null);
 
 const caseCache = new Map();
+const queueCache = new Map();
+let cacheEpoch = 0;
 
 export const api = {
   /** Odczyt stanu: GET /v1/overview (lekki, bez spraw; starsze API bez tej trasy: /v1/state?compact=1). Listy i karty idą przez kolejki i /v1/cases. */
@@ -91,9 +92,17 @@ export const api = {
 
   /** Jedna strona kolejki. Zwraca wiersze (podsumowania), łączną liczbę i kursor następnej strony. */
   async queue(name, filters, { cursor = null, limit = 50, creators } = {}) {
+    const key = `${name}?${queueQuery(filters, { limit, cursor, queue: name })}`;
+    if (queueCache.has(key)) return queueCache.get(key);
+    const epoch = cacheEpoch;
     try {
       const body = await request(`/v1/queues/${encodeURIComponent(name)}?${queueQuery(filters, { limit, cursor, queue: name })}`);
-      return { items: (body.items || []).map((i) => normalizeRow(i, creators)), total: body.total ?? 0, nextCursor: body.nextCursor || null, counts: body.counts || null, threshold: body.threshold || null, lastScan: body.lastScan || null, asOf: body.asOf || null };
+      const result = { items: (body.items || []).map((i) => normalizeRow(i, creators)), total: body.total ?? 0, nextCursor: body.nextCursor || null, counts: body.counts || null, threshold: body.threshold || null, lastScan: body.lastScan || null, asOf: body.asOf || null };
+      if (epoch === cacheEpoch) {
+        if (queueCache.size >= 40) queueCache.delete(queueCache.keys().next().value);
+        queueCache.set(key, result);
+      }
+      return result;
     } catch (e) {
       if (e.status === 404) throw new ApiError(404, "Ten serwer nie ma jeszcze kolejek (GET /v1/queues). Pulpit wymaga nowszego API.", e.body);
       throw e;
@@ -104,27 +113,24 @@ export const api = {
     if (!fresh && caseCache.has(id)) return caseCache.get(id);
     const promise = request(`/v1/cases/${enc(id)}`).then((raw) => normalizeCase(raw, creators));
     caseCache.set(id, promise);
-    promise.catch(() => caseCache.delete(id));
+    promise.catch(() => { if (caseCache.get(id) === promise) caseCache.delete(id); });
     return promise;
   },
   clearCases() {
+    cacheEpoch += 1;
     caseCache.clear();
+    queueCache.clear();
   },
 
   versions: (id) => request(`/v1/cases/${enc(id)}/versions`),
 
   /** Zapis decyzji: rodzaj (resolution), uzasadnienie, kontrola rewizji i wersji. 409 → ApiError z `current` w body. */
-  decide(c, { resolution, note }) {
-    return request(`/v1/cases/${enc(c.id)}`, json("PATCH", { resolution, note, expectedRevision: c.revision, reviewedVersion: c.version }));
+  decide(c, { resolution, note, requestId, expectedRevision = c.revision, reviewedVersion = c.version }) {
+    return request(`/v1/cases/${enc(c.id)}`, json("PATCH", { resolution, note, requestId, expectedRevision, reviewedVersion }));
   },
 
   startScan(mode) {
     return request("/v1/scans", json("POST", { mode, requestId: globalThis.crypto?.randomUUID?.() || String(Date.now()) }));
-  },
-  /** Alert pokazowy (tryb odtworzenia): uzbrój i wczytaj jedną zapisaną stronę M2, co daje jedno zdarzenie high_risk. */
-  async demoAlert() {
-    await request("/v1/demo/alert/reset", json("POST", {}));
-    return request("/v1/scans", json("POST", { mode: "replay", adapters: ["demo-alert"], requestId: globalThis.crypto?.randomUUID?.() || String(Date.now()) }));
   },
   scan: (id) => request(`/v1/scans/${encodeURIComponent(id)}`),
   trend: (days = 30) => request(`/v1/trend?days=${days}`),

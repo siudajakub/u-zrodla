@@ -12,6 +12,7 @@ import { HStack, VStack } from "@astryxdesign/core/Layout";
 import { MetadataList, MetadataListItem } from "@astryxdesign/core/MetadataList";
 import { SegmentedControl, SegmentedControlItem } from "@astryxdesign/core/SegmentedControl";
 import { Slider } from "@astryxdesign/core/Slider";
+import { Selector } from "@astryxdesign/core/Selector";
 import { Table, pixel, proportional } from "@astryxdesign/core/Table";
 import { StatusDot } from "@astryxdesign/core/StatusDot";
 import { Token } from "@astryxdesign/core/Token";
@@ -168,11 +169,7 @@ export function Calibration({ data, rev, onChanged }) {
   if (state.status === "error") {
     return <VStack padding={4}><Banner status="error" title="Nie można pobrać wyników kalibracji" description={state.error} endContent={<Button label="Spróbuj ponownie" onClick={() => setNonce((n) => n + 1)} />} /></VStack>;
   }
-  const moduleSwitch = (
-    <SegmentedControl label="Moduł kalibracji" size="sm" value={module} onChange={(v) => { setState({ status: "loading" }); setModule(v); }}>
-      {Object.keys(MODULE_NAME).map((m) => <SegmentedControlItem key={m} value={m} label={MODULE_NAME[m]} />)}
-    </SegmentedControl>
-  );
+  const moduleSwitch = <Selector label="Temat kalibracji" value={module} onChange={(v) => { setState({ status: "loading" }); setModule(v); }} options={Object.keys(MODULE_NAME).map((m) => ({ value: m, label: MODULE_NAME[m] }))} />;
   const head = <HStack gap={2} vAlign="center" wrap="wrap"><Heading level={1}>Kalibracja</Heading>{moduleSwitch}</HStack>;
   if (state.status === "unsupported") {
     return (
@@ -204,23 +201,9 @@ export function Calibration({ data, rev, onChanged }) {
             marks={[{ value: 0, label: "0" }, { value: applied, label: `obowiązuje ${applied}` }, { value: 100, label: "100" }]}
             description="Przesuń suwak: liczby poniżej liczą się od razu na tym samym zbiorze." />
           <Grid columns={{ minWidth: 200, max: 4 }} gap={2}>
-            <Big label="Fałszywe alarmy (FP)" value={cal.fp} delta={cal.fp - base.fp} />
-            <Big label="Przeoczenia (FN)" value={cal.fn} delta={cal.fn - base.fn} />
-            <Card padding={2} data-kpi="Wynik">
-              <VStack gap={0.5}>
-                <Text type="supporting" color="secondary">Wynik na zbiorze</Text>
-                <Text weight="semibold">{cal.tp} {plural(cal.tp, "trafienie", "trafienia", "trafień")}, {cal.fp} {cal.fp === 1 ? "fałszywy alarm" : "fałszywych alarmów"} na {cal.n} {plural(cal.n, "materiale", "materiałach", "materiałach")}</Text>
-                <Text type="supporting" color="secondary">{ci ? `Skierowano ${cal.tp + cal.fp}, przedział trafności ${pct(ci.low)}–${pct(ci.high)}. ` : ""}Koszt (2×FN + FP): {cal.cost}.{lowN ? " Za mało skierowań do oceny precyzji: wynik orientacyjny." : ""}</Text>
-              </VStack>
-            </Card>
-            <Table idKey="row" density="compact" aria-label="Macierz pomyłek" data={[
-              { row: "Skierowane", yes: `${cal.tp} trafnych`, no: `${cal.fp} fałszywych` },
-              { row: "Nie skierowane", yes: `${cal.fn} przeoczonych`, no: `${cal.tn} poprawnie` },
-            ]} columns={[
-              { key: "row", header: "", width: proportional(2, { minWidth: 90 }), renderCell: (r) => <Text weight="medium">{r.row}</Text> },
-              { key: "yes", header: "Agent: przesłanka", width: proportional(2, { minWidth: 90 }), renderCell: (r) => r.yes },
-              { key: "no", header: "Agent: brak", width: proportional(2, { minWidth: 90 }), renderCell: (r) => r.no },
-            ]} />
+            <Big label="Fałszywe alarmy" value={cal.fp} delta={cal.fp - base.fp} />
+            <Big label="Przeoczenia" value={cal.fn} delta={cal.fn - base.fn} />
+
           </Grid>
           <VStack gap={0.5}>
             <HStack gap={1} vAlign="center" wrap="wrap">
@@ -245,6 +228,24 @@ export function Calibration({ data, rev, onChanged }) {
           {!isM1 && shown !== applied && <HStack><Button label="Wróć do obowiązującego" variant="ghost" size="sm" onClick={() => setThreshold(null)} /></HStack>}
         </VStack>
       </Card>
+      <Collapsible defaultIsOpen={false} trigger={<Text weight="semibold">Szczegóły pomiaru, wykres i przykłady</Text>}>
+        <Grid columns={{ minWidth: 200, max: 2 }} gap={2}>
+            <Card padding={2} data-kpi="Wynik">
+              <VStack gap={0.5}>
+                <Text type="supporting" color="secondary">Wynik na zbiorze</Text>
+                <Text weight="semibold">{cal.tp} {plural(cal.tp, "trafienie", "trafienia", "trafień")}, {cal.fp} {cal.fp === 1 ? "fałszywy alarm" : "fałszywych alarmów"} na {cal.n} {plural(cal.n, "materiale", "materiałach", "materiałach")}</Text>
+                <Text type="supporting" color="secondary">{ci ? `Skierowano ${cal.tp + cal.fp}, przedział trafności ${pct(ci.low)}–${pct(ci.high)}. ` : ""}Koszt (2×FN + FP): {cal.cost}.{lowN ? " Za mało skierowań do oceny precyzji: wynik orientacyjny." : ""}</Text>
+              </VStack>
+            </Card>
+            <Table idKey="row" density="compact" aria-label="Macierz pomyłek" data={[
+              { row: "Skierowane", yes: `${cal.tp} trafnych`, no: `${cal.fp} fałszywych` },
+              { row: "Nie skierowane", yes: `${cal.fn} przeoczonych`, no: `${cal.tn} poprawnie` },
+            ]} columns={[
+              { key: "row", header: "", width: proportional(2, { minWidth: 90 }), renderCell: (r) => <Text weight="medium">{r.row}</Text> },
+              { key: "yes", header: "Agent: przesłanka", width: proportional(2, { minWidth: 90 }), renderCell: (r) => r.yes },
+              { key: "no", header: "Agent: brak", width: proportional(2, { minWidth: 90 }), renderCell: (r) => r.no },
+            ]} />
+        </Grid>
       <Tile title="Fałszywe alarmy i przeoczenia a próg">
         {chart.labels.length < 2 ? <Text color="secondary" role="status">Liczenie punktów wykresu…</Text> : (
           <Chart spec={chart} height={220} label={`Wykres: fałszywe alarmy i przeoczenia w funkcji progu. ${chart.labels.map((l, i) => `próg ${l}: FP ${chart.datasets[0].data[i]}, FN ${chart.datasets[1].data[i]}`).join("; ")}`} />
@@ -260,6 +261,7 @@ export function Calibration({ data, rev, onChanged }) {
           ]} />
         </Tile>
       )}
+      </Collapsible>
       <Collapsible defaultIsOpen={false} trigger={<Text weight="semibold">Więcej: historia ustawień, porównanie reguł, zbiór etykiet</Text>}>
         <Grid columns={{ minWidth: 340, max: 2 }} gap={3} padding={2}>
           {compare.length > 0 && (

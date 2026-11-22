@@ -184,7 +184,7 @@ function platformTiles(data, sources, counts, totals) {
     social(ig, "Instagram", "instagram"),
     social(fb, "Facebook", "facebook"),
     {
-      id: "m2", title: "WWW firm (M2)", status: m2.length ? worst(m2) : "empty", state: m2.length ? null : "brak stron",
+      id: "m2", title: "Strony firm", status: m2.length ? worst(m2) : "empty", state: m2.length ? null : "brak stron",
       rows: [
         ["Firmy", String(m2Firms)],
         ["Strony", String(m2.length)],
@@ -194,13 +194,13 @@ function platformTiles(data, sources, counts, totals) {
       next: "Nic do zrobienia.", url: m2[0]?.url || m2[0]?.target,
     },
     {
-      id: "m3", title: "WWW doradców (M3)", status: m3.length ? worst(m3) : "empty", state: m3.length ? null : "próbka",
+      id: "m3", title: "Strony doradców", status: m3.length ? worst(m3) : "empty", state: m3.length ? null : "próbka",
       rows: [
         ["Podmioty", String(m3.reduce((n, s) => n + (s.count || 0), 0) || counts.offersM3 || 0)],
         ["Strony odczytane", m3.some((s) => s.pages != null) ? String(m3.reduce((n, s) => n + (s.pages || 0), 0)) : "—"],
         ["Odczytano", latest(m3, "observedAt") ? fmtDateTime(latest(m3, "observedAt")) : "brak"],
         ["Ograniczenie", m3.map((s) => s.message).filter(Boolean)[0] || "odczyt z listy ziaren; bez własnej wyszukiwarki"],
-        ["Model typu materiału", data.semantic?.status === "unavailable" ? "wyłączony: M3 działa tylko regułami" : "dostępny"],
+        ["Model typu materiału", data.semantic?.status === "unavailable" ? "wyłączony: ocena działa tylko regułami" : "dostępny"],
       ],
       next: m3.length ? "Dopisz domeny do listy startowej albo podłącz wyszukiwarkę z kluczem." : "Uruchom skan.", 
     },
@@ -231,7 +231,7 @@ function platformTiles(data, sources, counts, totals) {
   return tiles;
 }
 
-const HEALTH = { ok: ["success", "Wszystkie źródła działają"], degraded: ["warning", "Część źródeł ma problem"], failed: ["error", "Żadne źródło nie działa"] };
+const HEALTH = { ok: ["neutral", "Źródła w zestawieniu"], degraded: ["warning", "Część źródeł ma problem"], failed: ["error", "Żadne źródło nie działa"] };
 const MODE_SHORT = { live: "na żywo", replay: "odtworzenie", recompute: "przeliczenie", enrich: "transkrypcje", upload: "plik" };
 
 /** Materiały i skierowania w czasie: dwa osobne wykresy, każdy z własną skalą i liczbami nad słupkami (bez drugiej osi). */
@@ -436,18 +436,11 @@ export function Sources({ data, busy, scanning, onScan, rev, onRefresh, openAdd,
         <Text data-testid="scan-line">{lastScanLine}</Text>
         <HStack gap={2} wrap="wrap" vAlign="center">
           <Button label="Skanuj na żywo" variant="primary" isDisabled={disabled} tooltip={why} onClick={() => onScan("live")} />
-          <Button label="Odtwórz skan" isDisabled={disabled} tooltip={why} onClick={() => onScan("replay")} />
           <Button label="Przelicz materiały" isDisabled={disabled} tooltip={why} onClick={() => onScan("recompute")} />
-          {(data.scanMode || dataScan?.mode) === "replay" && <Button label="Pokaż alert (pokaz)" variant="ghost" isDisabled={disabled} tooltip="Wczytuje jedną zapisaną stronę i wysyła alert o nowej sprawie" onClick={() => onScan("demo-alert")} />}
         </HStack>
         {progress && <ProgressBar label="Postęp skanu" value={progress.done} max={progress.total || 1} />}
       </VStack>
-      <Card padding={2}>
-        <VStack gap={1.5}>
-          <Heading level={2}>Materiały i skierowania w czasie</Heading>
-          <TrendTile trend={data.trend} />
-        </VStack>
-      </Card>
+      <Collapsible defaultIsOpen={false} trigger={<Text weight="semibold">Materiały i skierowania w czasie</Text>}><TrendTile trend={data.trend} /></Collapsible>
       <VStack gap={1.5}>
         <Heading level={2}>Platformy</Heading>
         <PlatformsTable tiles={tiles} narrow={narrow} />

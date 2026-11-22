@@ -20,7 +20,7 @@ import { CaseDetail } from "./CaseDetail.jsx";
 import { Calibration } from "./Calibration.jsx";
 import { activeCount, describeFilters, EMPTY_FILTERS, PLATFORMS, queueFor } from "./filters.js";
 import { CaseList, Filters, MoreFooter, RegisterCounters, RegisterList, RegisterTable, applyRegisterFilter } from "./Lists.jsx";
-import { fmtDay, fmtDayRoman, fmtInt, fmtTime } from "./labels.js";
+import { DESTINATION, fmtDay, fmtDayRoman, fmtInt, fmtTime } from "./labels.js";
 import { hashFor } from "./route.js";
 import { ErrorBlock, Loading, NoResults } from "./parts.jsx";
 import { TABS, TAB_BY_ID, useRoute } from "./route.js";
@@ -32,7 +32,11 @@ import { Sparkline } from "./charts.jsx";
 const plural = (n, one, few, many) => (n === 1 ? one : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? few : many);
 
 /** Raport CSV (GET /v1/report): moduł i kolejka wybranej listy. */
-const reportFor = (tab, filters, queue) => (tab === "register" ? { module: "M1", queue: "adRegister" } : { module: filters.module !== "all" ? filters.module : "M1", queue });
+const reportFor = (tab, filters, queue) => {
+  if (tab === "register") return { module: "M1", queue: "adRegister" };
+  const mixedWorkflow = ["control", "supplement", "closed"].includes(queue);
+  return { module: filters.module !== "all" ? filters.module : mixedWorkflow ? "all" : "M1", queue };
+};
 
 /** Etykieta trybu danych: „odtworzenie skanu z 21 XI” (tło szare) albo „skan na żywo z 21 lis” (zielone tylko dla skanu na żywo). */
 export function modeLabel(data, scan) {
@@ -48,8 +52,6 @@ function DataLine({ data, go, scan, filters }) {
   const counts = data.counts || {};
   const e = f?.explainedAutomatically;
   const explained = e ? (e.bySpeech || 0) + (e.byPlatformFlag || 0) + (e.byFrame || 0) : null;
-  const mode = modeLabel(data, scan);
-  const scans = (data.trend?.byScan || []).filter((x) => x.mode !== "recompute");
   const step = (n, label, onClick, href) => (
     <Link type="supporting" href={href} onClick={(ev) => { ev.preventDefault(); onClick(); }}><Text weight="semibold">{fmtInt(n)}</Text> {label}</Link>
   );
@@ -67,13 +69,7 @@ function DataLine({ data, go, scan, filters }) {
           <Text type="supporting" data-testid="explained"><Text weight="semibold">{fmtInt(explained)}</Text> wyjaśnione automatycznie</Text>
         </Tooltip>
       )}
-      <Token size="sm" color={mode.color} label={mode.text} description="Tryb danych w tej bazie" />
-      {scans.length > 1 && (
-        <HStack gap={1} vAlign="center">
-          <Sparkline values={scans.map((x) => x.captures || 0)} label={`Przejrzane materiały w kolejnych skanach: ${scans.map((x) => x.captures).join(", ")}`} />
-          <Link type="supporting" href={hashFor("sources")} onClick={(ev) => { ev.preventDefault(); go("sources"); }}>trend</Link>
-        </HStack>
-      )}
+
     </HStack>
   );
 }
@@ -84,10 +80,14 @@ function emptyFor(state, tab, counts, scan) {
   switch (state) {
     case "review":
       return ["Brak materiałów z mocną przesłanką do kontroli", `${reviewed}${counts.adRegister ?? 0} jawnych współprac jest w Rejestrze reklam, ${counts.incomplete ?? 0} ma niepełne dane. To nie jest błąd.`];
+    case "control":
+      return ["Brak spraw przekazanych do kontroli", "Po skierowaniu sprawy pojawią się tutaj."];
+    case "supplement":
+      return ["Brak spraw do uzupełnienia", "Skierowane sprawy pojawią się tutaj."];
     case "incomplete":
       return ["Wszystkie materiały mają wystarczający zakres do oceny", "To nie jest błąd."];
     case "closed":
-      return ["Nie ma jeszcze zamkniętych spraw", "Sprawa trafia tutaj po zapisaniu decyzji."];
+      return ["Nie ma jeszcze zakończonych spraw", "Sprawa trafia tutaj po zatwierdzeniu decyzji."];
     case "demo":
       return ["Brak materiałów demonstracyjnych i własnych plików", "Własny plik dodasz w zakładce Źródła, w sekcji „Dodaj materiał”."];
     default:
@@ -95,7 +95,7 @@ function emptyFor(state, tab, counts, scan) {
   }
 }
 
-function QueueScreen({ tab, route, go, desk, narrow, actions }) {
+function QueueScreen({ tab, route, go, desk, narrow, actions, onDecision }) {
   const { data, rev, refresh } = desk;
   const counts = data.counts || {};
   const filters = route.filters;
@@ -112,10 +112,10 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
   const pane = useResizable({ defaultSize: "54%", minSize: "40%", maxSize: "72%", isReversed: true });
   const ready = queue.status === "ready" || queue.status === "refreshing";
   const sortedBy = !isRegister && filters.state === "review";
-  const rawItems = ready ? (sortedBy ? [...queue.items].sort(byStrengthThenDate) : queue.items) : [];
+  const rawItems = ready ? queue.items : [];
   const items = discOn ? applyRegisterFilter(rawItems, filters.disc) : rawItems;
   const queueOf = useCallback((m) => (isRegister ? "adRegister" : queueFor(filters.state, m)), [isRegister, filters.state]);
-  const moduleCounts = useModuleCounts(queueOf, filters, rev, !isRegister);
+  const moduleCounts = null;
   const autoId = split && !narrow && !route.caseId && !panelClosed && items[0] ? items[0].id : null;
   const shownId = route.caseId || autoId;
   const current = useCase(shownId, data, rev, reload);
@@ -150,10 +150,23 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [route.caseId, close]);
-  const onSaved = useCallback(async () => {
+  const pin = useCallback((id) => {
+    if (!route.caseId) go(tab, { filters, caseId: id }, { replace: true });
+  }, [route.caseId, go, tab, filters]);
+  const onConflict = useCallback(async () => {
+    desk.invalidate();
     setReload((n) => n + 1);
     await refresh();
-  }, [refresh]);
+  }, [refresh, desk.invalidate]);
+  const onSaved = useCallback(async (decision) => {
+    const index = items.findIndex((item) => item.id === decision.caseId);
+    const next = items.slice(index + 1).concat(items.slice(0, Math.max(index, 0))).find((item) => item.id !== decision.caseId);
+    setPanelClosed(!next);
+    go(tab, { filters, caseId: next?.id || null }, { replace: true });
+    onDecision(decision);
+    desk.invalidate();
+    await refresh();
+  }, [items, tab, filters, go, onDecision, desk.invalidate, refresh]);
 
   const [emptyTitle, emptyText] = emptyFor(filters.state, tab, counts, scan);
   const filterText = describeFilters(filters);
@@ -169,7 +182,7 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
   const detailBox = !shownId ? null : current.status === "error"
     ? <VStack padding={4}><ErrorBlock message={current.error} title={current.notFound ? "Nie znaleziono sprawy" : "Nie można pobrać sprawy"} /></VStack>
     : !current.c ? <Loading rows={4} label="Pobieranie sprawy…" />
-      : <CaseDetail key={current.c.id} c={current.c} headingRef={headingRef} narrow={narrow} onSaved={onSaved} onBack={narrow || !split ? close : null} />;
+      : <CaseDetail key={current.c.id} c={current.c} headingRef={headingRef} narrow={narrow} onSaved={onSaved} onConflict={onConflict} onPin={pin} onBack={narrow || !split ? close : null} />;
 
   let list;
   if (queue.status === "error") list = queue.legacy
@@ -186,11 +199,16 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
   const filtersBar = (
     <Filters filters={filters} update={update} reset={reset} tab={tab} narrow={narrow} report={reportFor(tab, filters, queueName)} moduleCounts={moduleCounts} stateCounts={counts} platforms={isRegister ? PLATFORMS.filter((p) => p.value !== "web") : PLATFORMS} />
   );
+  const workflowNav = !isRegister && <HStack gap={1} wrap="wrap" aria-label="Etapy pracy">
+    {[["review", "Do sprawdzenia"], ["control", "Kontrola"], ["supplement", "Do uzupełnienia"], ["closed", "Zakończone"]].map(([state, label]) => (
+      <Button key={state} label={counts[state] != null ? `${label} (${fmtInt(counts[state])})` : label} variant={filters.state === state ? "primary" : "secondary"} aria-pressed={filters.state === state} onClick={() => go("review", { filters: { ...EMPTY_FILTERS, state } })} />
+    ))}
+  </HStack>;
   const head = narrow ? null : (
     <LayoutHeader padding={0} hasDivider>
       <VStack paddingInline={3} paddingBlock={1.5} gap={1.5}>
         <VisuallyHidden><Heading level={1}>{TAB_BY_ID[tab].label}</Heading></VisuallyHidden>
-        <DataLine data={data} go={go} scan={scan} filters={filters} />
+        {workflowNav}
         {filtersBar}
       </VStack>
     </LayoutHeader>
@@ -203,6 +221,7 @@ function QueueScreen({ tab, route, go, desk, narrow, actions }) {
         <Banner status="warning" title={`${recalc} ${plural(recalc, "wiersz ma", "wiersze mają", "wierszy ma")} wynik ze starszych reguł`}
           endContent={<Button label="Przelicz materiały" size="sm" isDisabled={actions.busy || actions.scanning} onClick={() => actions.scan("recompute")} />} />
       )}
+      {narrow && workflowNav}
       {narrow && filtersBar}
       {isRegister && <RegisterCounters funnel={data.funnel} filters={filters} update={update} go={go} />}
       {list}
@@ -246,8 +265,7 @@ export function Desk() {
   async function startScan(mode) {
     setBusy(true);
     try {
-      if (mode === "demo-alert") await api.demoAlert();
-      else await api.startScan(mode);
+      await api.startScan(mode);
       setNotice({ status: "info", title: mode === "recompute" ? "Przeliczanie uruchomione." : "Skan uruchomiony. Wyniki pojawią się w kolejkach." });
       [400, 1500, 4000, 9000].forEach((ms) => setTimeout(schedule, ms));
     } catch (e) {
@@ -257,6 +275,12 @@ export function Desk() {
     }
   }
   const actions = { busy, scanning, scan: startScan };
+  const onDecision = useCallback(({ result, resolution, caseId, title }) => {
+    const destination = result?.workflowStage || DESTINATION[resolution];
+    const label = { control: "Przekazane do kontroli", supplement: "Do uzupełnienia", closed: "Zakończone", review: "Do sprawdzenia" }[destination];
+    const buttonLabel = { control: "Otwórz w kontroli", supplement: "Otwórz do uzupełnienia", closed: "Otwórz w zakończonych", review: "Otwórz do sprawdzenia" }[destination];
+    setNotice({ status: "success", title: `Decyzja zatwierdzona: ${title}`, description: `Sprawa trafiła do kolejki „${label}”.`, destination, caseId, label, buttonLabel });
+  }, []);
 
   useEffect(() => {
     document.title = `${TAB_BY_ID[tab]?.label || "InvestWatch"} · InvestWatch`;
@@ -268,11 +292,11 @@ export function Desk() {
   else if (!data) content = <Loading label="Pobieranie danych…" />;
   else if (tab === "sources") content = <Layout height="fill" content={<LayoutContent padding={0} isScrollable><Sources data={data} busy={busy} scanning={scanning} onScan={startScan} rev={desk.rev} onRefresh={() => desk.schedule({ heavy: true })} openAdd={route.add} go={go} narrow={narrow} /></LayoutContent>} />;
   else if (tab === "calibration") content = <Layout height="fill" content={<LayoutContent padding={0} isScrollable><Calibration data={data} rev={desk.rev} onChanged={() => desk.refresh({ heavy: true })} /></LayoutContent>} />;
-  else content = <QueueScreen key={tab} tab={tab} route={route} go={go} desk={desk} narrow={narrow} actions={actions} />;
+  else content = <QueueScreen key={tab} tab={tab} route={route} go={go} desk={desk} narrow={narrow} actions={actions} onDecision={onDecision} />;
 
   return (
     <AppShell variant="section" mobileNav={false} topNav={
-      <TopNav label="Pulpit InvestWatch" heading={<TopNavHeading heading="InvestWatch" />}
+      <TopNav label="Pulpit InvestWatch" heading={<TopNavHeading heading="InvestWatch" logo={<Token color="blue" label="IW" />} />}
         endContent={
           <HStack gap={2} vAlign="center">
             <StatusDot variant={live ? "success" : "warning"} label={live ? "Połączono: alerty na żywo" : "Ponowne łączenie"} tooltip={live ? "Połączenie z serwerem: nowe sprawy i decyzje pojawiają się od razu" : "Ponowne łączenie z serwerem"} />
@@ -289,7 +313,8 @@ export function Desk() {
                   title={`Nowa sprawa: ${a.message}`}
                   endContent={<Button label="Otwórz" onClick={() => { dismissAlert(a.id); go("review", { caseId: a.ref }); }} />} />
               ))}
-              {notice && <Banner container="section" status={notice.status} title={notice.title} isDismissable onDismiss={() => setNotice(null)} />}
+              {notice && <Banner container="section" status={notice.status} title={notice.title} description={notice.description} isDismissable onDismiss={() => setNotice(null)}
+                endContent={notice.destination && <Button label={notice.buttonLabel} onClick={() => { go("review", { filters: { ...EMPTY_FILTERS, state: notice.destination }, caseId: notice.caseId }); setNotice(null); }} />} />}
               {refreshError && data && <Banner container="section" status="warning" title={`Pokazujemy dane z ${fmtTime(loadedAt)}. Odświeżenie nie powiodło się: ${refreshError}`}
                 endContent={<Button label="Spróbuj ponownie" onClick={desk.refresh} />} />}
               {scanning && <ScanBanner scan={scan} detail={detail} />}

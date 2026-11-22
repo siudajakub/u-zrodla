@@ -121,41 +121,39 @@ assert.deepEqual(desk.review.filter((id) => id.startsWith("youtube:")).map((id) 
 assert.ok(desk.review.includes("web:rdmwm.pl:m3"));
 assert.ok(desk.counts.adRegister > 200 && desk.counts.incomplete > 100, "liczniki z API (rejestr i niepełne)");
 const detail = html(desk.detail);
-for (const part of ["Dlaczego tutaj", "Dowód", "Decyzja", "Więcej: historia, punktacja, szczegóły", "Przekaż do kontroli", "Uzupełnij dane", "Bez przesłanki", "Zamknij", "Możliwe wyjaśnienie", "mocna 95", "M1 Twórcy"])
+for (const part of ["Dlaczego tutaj", "Dowód", "Podejmij decyzję", "Dokumentacja i historia", "Możliwe wyjaśnienie", "Materiały twórców"])
   assert.ok(detail.includes(part), `karta: ${part}`);
 for (const gone of ["Co zbadano", "Twórca i zasięg", "Momenty do sprawdzenia", "Bez sygnału", "Surowe dane", "Tekst z obrazu nie jest odczytywany", "Pokaż wszystkie"])
   assert.ok(!detail.includes(gone), `karta bez: ${gone}`);
 assert.match(detail, /TRADEXTB/);
 assert.match(desk.detail, /youtube\.com\/watch\?v=AqXHkxDzSDI&(amp;)?t=15s/);
-assert.match(desk.detail, /\/v1\/frames\/AqXHkxDzSDI\//, "miniatury kadrów z API");
-assert.match(desk.detail, /data-testid="proof-path"/, "Droga dowodu na karcie");
-for (const step of ["discovery", "description", "speech", "frames", "firm", "decision"]) assert.match(desk.detail, new RegExp(`data-step="${step}"`), `krok drogi dowodu: ${step}`);
+assert.match(desk.detail, /Dokumentacja i historia/, "dokumentacja w osobnym widoku");
 assert.ok(!/znaki \d+–\d+|\(znaki/.test(detail), "bez techniki „(znaki …)”");
 assert.match(detail, /Wróć do listy/);
 assert.match(html(desk.detailNarrow), /Dowód\s+Decyzja/, "stopka telefonu: Dowód i Decyzja");
 assert.ok(!/Dowód\s+Decyzja\s*$/.test(detail), "pasek telefonu tylko w widoku wąskim");
-assert.match(html(desk.reviewList), /mocna 100/);
-assert.match(html(desk.reviewListNarrow), /mocna 100/);
+assert.doesNotMatch(html(desk.reviewList), /mocna 100/);
+assert.doesNotMatch(html(desk.reviewListNarrow), /mocna 100/);
 assert.match(html(desk.emptyList), /PUSTO/);
 assert.match(html(desk.registerTable), /Materiał\s+Firma\s+Jak ujawniono/);
 assert.match(html(desk.registerTable), /w opisie|flaga YouTube|w mowie/);
 assert.ok(!/Platforma\s+Typ ujawnienia/.test(html(desk.registerTable)), "rejestr bez kolumny Platforma");
-assert.match(html(desk.offers), /Materiał\s+Firma\s+Powód\s+Siła/);
-assert.match(html(desk.reviewList), /M1 Twórcy/);
-assert.match(html(desk.reviewList), /M2 Reklamy firm/);
-assert.match(html(desk.reviewList), /M3 Doradztwo/);
+assert.match(html(desk.offers), /Materiał\s+Firma\s+Powód/);
+assert.match(html(desk.reviewList), /Materiały twórców/);
+assert.match(html(desk.reviewList), /Reklamy firm/);
+assert.match(html(desk.reviewList), /Oferty doradztwa/);
 assert.ok(!/Finfluencer|Reklama firmy/.test(html(desk.reviewList)), "jedna nazwa modułu ze słownika");
 assert.deepEqual(desk.queueFor, ["review", "incomplete", "offersM2", "offersM3", "all", "closed", "demo"], "filtr Stan mapuje się na kolejki API");
 assert.deepEqual(desk.legacyHashes.map((x) => x.join("|")), ["#m2|review|all|M2|false", "#m3|review|all|M3|false", "#niepelne|review|incomplete|all|false", "#incomplete|review|incomplete|all|false", "#zamkniete|review|closed|all|false", "#closed|review|closed|all|false", "#demo|review|demo|all|false", "#evidence|sources|review|all|true", "#review|review|review|all|false", "#sources|sources|review|all|false"], "stare adresy przekierowują na filtr");
 if (desk.funnel?.explainedAutomatically) assert.match(html(desk.counters), /w mowie \d+/, "liczniki rejestru z funnel");
 const m2 = html(desk.detailM2);
-for (const part of ["Otwórz stronę", "NOBLE Securities S.A. · dom maklerski", "Dlaczego tutaj i dowód", "Informacja o ryzyku przy zysku", "Wszystkie 19 kryteriów wg stanu", "Decyzja", "Rozmiar czcionki ryzyka"]) assert.ok(m2.includes(part), `karta M2: ${part}`);
+for (const part of ["Otwórz stronę", "NOBLE Securities S.A. · dom maklerski", "Dlaczego tutaj i dowód", "Informacja o ryzyku przy zysku", "Dokumentacja i historia", "Podejmij decyzję"]) assert.ok(m2.includes(part), `karta M2: ${part}`);
 for (const gone of ["Kryteria ryzyka", "Baner cookies", "Co zbadano", "Wynik reguł", "próg skierowania"]) assert.ok(!m2.includes(gone), `karta M2 bez: ${gone}`);
 assert.match(desk.detailM2, /\/evidence\/m2\/market\/[0-9a-f]{64}\.jpg/, "miniatury zrzutów M2");
 assert.ok(!/ px dalej \(próg|y=\d/.test(m2), "M2 bez surowych pomiarów w zdaniu: " + (m2.match(/.{40}(?: px dalej \(próg|y=\d).{30}/) || [""])[0]);
 assert.match(html(desk.detailM2Narrow), /Dowód\s+Decyzja/);
 const m3 = html(desk.detailM3);
-for (const part of ["Otwórz ofertę", "rdmwm.pl", "Dowód", "Czynność", "Personalizacja", "Instrument", "Rynek", "Uprawnienia", "Wynik"]) assert.ok(m3.includes(part), `karta M3: ${part}`);
+for (const part of ["Otwórz ofertę", "rdmwm.pl", "Dowód", "Czynność", "Personalizacja", "Instrument", "Rynek", ]) assert.ok(m3.includes(part), `karta M3: ${part}`);
 for (const gone of ["Cztery cechy rekomendacji", "Co zbadano", "Przejrzane wykazy (12"]) assert.ok(!m3.includes(gone), `karta M3 bez: ${gone}`);
 assert.match(html(desk.detailM3Licensed), /Phinance|Erste|uprawniony/);
 assert.match(html(desk.offersM3), /kontrola: podmiot uprawniony/);
@@ -165,13 +163,13 @@ assert.ok(!/Otwórz w filmie/.test(tiktok), "TikTok: bez „Otwórz w filmie”"
 assert.match(tiktok, /Mowa/);
 assert.match(tiktok, /Niepełne|niedostępn|nie zbadano/i);
 const sources = html(desk.sources);
-for (const part of ["Materiały i skierowania w czasie", "Skierowania do sprawdzenia", "Platformy", "YouTube", "TikTok", "Instagram", "Facebook", "WWW firm (M2)", "WWW doradców (M3)", "Biblioteka Reklam Meta", "Droga odczytu", "Następny krok", "Dodaj materiał", "Skanuj na żywo"])
+for (const part of ["Materiały i skierowania w czasie", "Skierowania do sprawdzenia", "Platformy", "YouTube", "TikTok", "Instagram", "Facebook", "Strony firm", "Strony doradców", "Biblioteka Reklam Meta", "Droga odczytu", "Następny krok", "Dodaj materiał", "Skanuj na żywo"])
   assert.ok(sources.includes(part), `źródła: ${part}`);
 for (const gone of ["Źródła: materiały per platforma", "meta.token", "docs/lanes", "/v1/import/meta"]) assert.ok(!sources.includes(gone), `źródła bez: ${gone}`);
 if (desk.state.models) assert.ok(sources.includes("Modele") && /Qwen|multilingual-e5/.test(sources), "kafel Modele");
 assert.match(desk.sources, /data-chart="bar"|role="img"/);
 if (desk.legacyDetail) assert.match(html(desk.legacyDetail), /starszej wersji analizy/);
-assert.equal(desk.query, "limit=50&cursor=50&q=xtb&module=M1&platform=youtube&band=strong&dateField=publishedAt&since=2026-11-01T00%3A00%3A00%2B00%3A00");
+assert.equal(desk.query, "limit=50&cursor=50&q=xtb&module=M1&platform=youtube&dateField=publishedAt&since=2026-11-01T00%3A00%3A00%2B00%3A00");
 assert.deepEqual(desk.unsafe, [null, null, "https://example.com/a"]);
 assert.deepEqual(desk.link, ["https://www.youtube.com/watch?v=abc&t=125s", "https://example.com/x", "https://www.youtube.com/watch?v=abc"]);
 assert.ok(!/<script/i.test(desk.detail));

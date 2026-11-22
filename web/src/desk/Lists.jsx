@@ -44,71 +44,53 @@ export function Filters({ filters, update, reset, tab, narrow, report, moduleCou
   ];
   const stateOptions = STATES.map((s) => ({ value: s.value, label: stateCounts[s.queue] != null && s.value !== "all" ? `${s.label} ${stateCounts[s.queue]}` : s.label }));
   const stateSelect = isReview && (
-    <Selector label="Stan" isLabelHidden variant="secondary" size="sm" width={narrow ? 168 : undefined} value={filters.state} onChange={(v) => update("state")(v || "review")} options={stateOptions} renderValue={(o) => narrow ? noCount(o.label) : `Stan: ${noCount(o.label)}`} />
+    <Selector label="Stan" isLabelHidden variant="secondary" width={narrow ? 168 : undefined} value={filters.state} onChange={(v) => update("state")(v || "review")} options={stateOptions} renderValue={(o) => narrow ? noCount(o.label) : `Stan: ${noCount(o.label)}`} />
   );
   const moduleControl = narrow ? (
-    <Selector label="Moduł" isLabelHidden variant="secondary" size="sm" width={narrow ? 128 : undefined} value={filters.module} onChange={(v) => update("module")(v || "all")} options={moduleOptions} renderValue={(o) => narrow ? noCount(o.label) : `Moduł: ${noCount(o.label)}`} />
+    <Selector label="Moduł" isLabelHidden variant="secondary" width={narrow ? 128 : undefined} value={filters.module} onChange={(v) => update("module")(v || "all")} options={moduleOptions} renderValue={(o) => narrow ? noCount(o.label) : `Moduł: ${noCount(o.label)}`} />
   ) : (
-    <SegmentedControl label="Moduł" size="sm" value={filters.module} onChange={update("module")}>
+    <SegmentedControl label="Moduł" value={filters.module} onChange={update("module")}>
       {moduleOptions.map((o) => <SegmentedControlItem key={o.value} value={o.value} label={o.label} />)}
     </SegmentedControl>
   );
   const source = (
-    <Selector label="Źródło" isLabelHidden variant="secondary" size="sm" value={filters.source} onChange={(v) => update("source")(v || "all")}
+    <Selector label="Źródło" isLabelHidden variant="secondary" value={filters.source} onChange={(v) => update("source")(v || "all")}
       options={[{ value: "all", label: "Wszystkie" }, ...platforms]} renderValue={(o) => `Źródło: ${o.label}`} />
-  );
-  const band = (
-    <Selector label="Siła" isLabelHidden variant="secondary" size="sm" value={filters.band} onChange={(v) => update("band")(v || "all")}
-      options={[{ label: "Dowolna", value: "all" }, { label: "mocna", value: "strong" }, { label: "średnia", value: "moderate" }, { label: "słaba", value: "weak" }]} renderValue={(o) => `Siła: ${o.label}`} />
   );
   const field = filters.dateField === "publishedAt" ? "Opublikowano" : "Odczytano";
   const dateLabel = filters.from || filters.to ? `Data: ${filters.from || "…"} – ${filters.to || "…"}` : "Data";
   const date = (
     <Popover label="Zakres dat" content={
       <VStack gap={2}>
-        <Selector label="Pole daty" size="sm" value={filters.dateField} onChange={update("dateField")} options={[{ label: "Odczytano", value: "observedAt" }, { label: "Opublikowano", value: "publishedAt" }]} />
-        <DateInput label={`${field} od`} size="sm" hasClear value={filters.from || undefined} onChange={update("from")} />
-        <DateInput label={`${field} do`} size="sm" hasClear value={filters.to || undefined} onChange={update("to")} />
+        <Selector label="Pole daty" value={filters.dateField} onChange={update("dateField")} options={[{ label: "Odczytano", value: "observedAt" }, { label: "Opublikowano", value: "publishedAt" }]} />
+        <DateInput label={`${field} od`} hasClear value={filters.from || undefined} onChange={update("from")} />
+        <DateInput label={`${field} do`} hasClear value={filters.to || undefined} onChange={update("to")} />
       </VStack>
     }>
-      <Button label={dateLabel} size="sm" variant="secondary" />
+      <Button label={dateLabel} variant="secondary" />
     </Popover>
   );
   const section = tab === "register" && (
-    <Selector label="Rejestr" isLabelHidden variant="secondary" size="sm" value={filters.section} onChange={(v) => update("section")(v || "all")}
+    <Selector label="Rejestr" isLabelHidden variant="secondary" value={filters.section} onChange={(v) => update("section")(v || "all")}
       options={[{ label: "Wszystkie", value: "all" }, { label: "Potwierdzone", value: "confirmed" }, { label: "Do potwierdzenia", value: "candidate" }]} renderValue={(o) => `Rejestr: ${o.label}`} />
   );
   const search = (
-    <TextInput label="Szukaj po autorze lub tytule" isLabelHidden type="search" startIcon="search" size="sm" placeholder="Szukaj po autorze lub tytule" width={narrow ? "100%" : "14rem"} value={filters.q} onChange={update("q")} />
+    <TextInput label="Szukaj po autorze lub tytule" isLabelHidden type="search" startIcon="search" placeholder="Szukaj po autorze lub tytule" width={narrow ? "100%" : "14rem"} value={filters.q} onChange={update("q")} />
   );
-  const reportButton = report && <Button label="Raport" size="sm" href={reportUrl({ ...report, format: "csv", filters })} tooltip="Raport CSV z aktualnymi filtrami (UTF-8, Excel)" />;
-  const clear = count > 0 && <Button variant="ghost" size="sm" label={`Wyczyść (${count})`} onClick={reset} />;
-  if (narrow) {
-    const extra = count - (filters.module !== "all" ? 1 : 0);
-    return (
-      <VStack gap={1}>
-        <HStack gap={1} vAlign="center" wrap="wrap">
-          {stateSelect}
-          {tab !== "register" && moduleControl}
-          <Popover label="Filtry" placement="below" content={<VStack gap={2}>{search}{source}{band}{date}{section}{reportButton}{clear}</VStack>}>
-            <Button label={`Filtry${extra > 0 ? ` (${extra})` : ""}`} size="sm" variant="secondary" />
-          </Popover>
-        </HStack>
-      </VStack>
-    );
-  }
+  const reportButton = report && <Button label="Raport" href={reportUrl({ ...report, format: "csv", filters })} tooltip="Raport CSV z aktualnymi filtrami (UTF-8, Excel)" />;
+  const clear = count > 0 && <Button variant="ghost" label={`Wyczyść (${count})`} onClick={reset} />;
+  const active = [filters.state !== "review" ? `Stan: ${STATES.find((x) => x.value === filters.state)?.label || filters.state}` : null, filters.module !== "all" ? MODULE_NAME[filters.module] : null, filters.source !== "all" ? `Źródło: ${filters.source}` : null, filters.from || filters.to ? dateLabel : null, filters.section !== "all" ? `Rejestr: ${filters.section}` : null].filter(Boolean);
   return (
-    <HStack gap={1.5} vAlign="center" wrap="wrap">
-      {stateSelect}
-      {tab !== "register" && moduleControl}
-      {source}
-      {band}
-      {date}
-      {section}
-      {search}
-      {reportButton}
-      {clear}
-    </HStack>
+    <VStack gap={1}>
+      <HStack gap={1.5} vAlign="center" wrap="wrap">
+        {search}
+        <Popover label="Filtry" placement="below" content={<VStack gap={2}>{stateSelect}{tab !== "register" && moduleControl}{source}{date}{section}{clear}</VStack>}>
+          <Button label={`Filtry${active.length ? ` (${active.length})` : ""}`} variant="secondary" />
+        </Popover>
+        {reportButton}
+      </HStack>
+      {active.length > 0 && <Text type="supporting">{active.join(" · ")}</Text>}
+    </VStack>
   );
 }
 
@@ -131,7 +113,7 @@ function TitleLink({ c, route, filters, active, onOpen }) {
       event.preventDefault();
       onOpen(c.id);
     }}>
-      <Text weight="semibold" maxLines={2}>{c.title}</Text>
+      <Text weight="semibold">{c.title}</Text>
     </Link>
   );
 }
@@ -190,10 +172,10 @@ export function CaseList({ items, tab, kind, narrow, selectedId, filters, onOpen
         {items.length === 0 ? emptyState : items.map((c) => {
           const strength = c.score?.value != null ? strengthLabel(c.score.band, c.score.value) : null;
           return (
-            <Item key={c.id} density="spacious" isSelected={c.id === selectedId} labelLines={2} descriptionLines={4}
+            <Item key={c.id} density="spacious" isSelected={c.id === selectedId} labelLines={4} descriptionLines={6}
               href={hashFor(tab, { caseId: c.id, filters })}
               label={c.title}
-              description={<Lines lines={[[strength, c.module, firmOf(c), platformLabel(c.platform), whenOf(c)].filter(Boolean).join(" · "), shortReason(reasonFor(kind, c))]} />} />
+              description={<Lines lines={[[MODULE_NAME[c.module] || c.module, firmOf(c), platformLabel(c.platform), whenOf(c)].filter(Boolean).join(" · "), reasonFor(kind, c)]} />} />
           );
         })}
       </List>
@@ -202,8 +184,7 @@ export function CaseList({ items, tab, kind, narrow, selectedId, filters, onOpen
   const columns = [
     { key: "title", header: "Materiał", width: proportional(4, { minWidth: 200 }), renderCell: (c) => <Material c={c} props={props} selectedId={selectedId} /> },
     { key: "firm", header: "Firma", width: proportional(2, { minWidth: 90 }), renderCell: (c) => <Text type="supporting" maxLines={2}>{firmOf(c) || "—"}</Text> },
-    { key: "reason", header: REASON_HEADER[kind] || "Powód", width: proportional(4, { minWidth: 150 }), renderCell: (c) => <Text maxLines={2} type="supporting">{shortReason(reasonFor(kind, c)) || "—"}</Text> },
-    { key: "strength", header: "Siła", width: pixel(112), renderCell: (c) => <Strength c={c} /> },
+    { key: "reason", header: REASON_HEADER[kind] || "Powód", width: proportional(4, { minWidth: 150 }), renderCell: (c) => <Text type="supporting">{reasonFor(kind, c) || "—"}</Text> },
   ];
   return <Table idKey="id" columns={columns} data={items} density="compact" hasHover verticalAlign="top" emptyState={emptyState} />;
 }

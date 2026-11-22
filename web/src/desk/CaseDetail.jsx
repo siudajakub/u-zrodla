@@ -1,14 +1,14 @@
-// Jeden szablon karty dla M1, M2 i M3: nagłówek z jedną linią metadanych, „Droga dowodu”, „Dlaczego tutaj” i „Dowód” obok siebie,
-// „Decyzja” pod nimi (na 1440 bez przewijania), „Więcej” z trzema zakładkami (Historia, Punktacja, Szczegóły).
+// Karta sprawy: najważniejsze dowody i decyzja; dokumentacja i historia w osobnym widoku.
 import React, { useState } from "react";
 import { Banner } from "@astryxdesign/core/Banner";
 import { Blockquote } from "@astryxdesign/core/Blockquote";
 import { Button } from "@astryxdesign/core/Button";
-import { Collapsible } from "@astryxdesign/core/Collapsible";
+import { Dialog, DialogHeader } from "@astryxdesign/core/Dialog";
 import { Grid } from "@astryxdesign/core/Grid";
 import { HStack, Layout, LayoutContent, LayoutFooter, LayoutHeader, VStack } from "@astryxdesign/core/Layout";
 import { Item } from "@astryxdesign/core/Item";
 import { List } from "@astryxdesign/core/List";
+import { Lightbox } from "@astryxdesign/core/Lightbox";
 import { MetadataList, MetadataListItem } from "@astryxdesign/core/MetadataList";
 import { Tab, TabList } from "@astryxdesign/core/TabList";
 import { Table, pixel, proportional } from "@astryxdesign/core/Table";
@@ -16,10 +16,10 @@ import { Thumbnail } from "@astryxdesign/core/Thumbnail";
 import { Heading, Text } from "@astryxdesign/core/Text";
 import { Token } from "@astryxdesign/core/Token";
 import { BAND_COLOR } from "./parts.jsx";
-import { HISTORY_KIND, RESOLUTION_LABEL, ROUTES, STATUS, clock, fmtDate, fmtDateTime, fmtDay, isYoutube, platformLabel, safeUrl, strengthLabel } from "./labels.js";
+import { HISTORY_KIND, RESOLUTION_LABEL, ROUTES, STATUS, WORKFLOW_STAGE, clock, fmtDate, fmtDateTime, fmtDay, isYoutube, platformLabel, safeUrl, strengthLabel } from "./labels.js";
 import { DecisionTile, SecondOpinionLine, Tile, WhyTile } from "./cardparts.jsx";
 import { EvidencePath } from "./ProofPath.jsx";
-import { ProofM2, m2Details, m2Subtitle } from "./CardM2.jsx";
+import { M2Documentation, ProofM2, m2Details, m2Subtitle } from "./CardM2.jsx";
 import { M3Banners, ProofM3, m3Details, m3Subtitle } from "./CardM3.jsx";
 import { ExternalLink, ModuleToken, OriginToken, RecalcToken, ReReviewToken, SCALE_NOTE, discoveryLines, originLabel, proofOf, reachShort, reachText } from "./parts.jsx";
 
@@ -33,10 +33,10 @@ function momentRows(c) {
   const seen = new Set();
   const rows = [];
   for (const m of c.moments) {
-    if (isFrame(m) || seen.has(m.evidenceId)) continue;
+    if (isFrame(m) || seen.has(m.evidenceId) || !["claim", "context", "counter", "disclosure"].includes(byId.get(m.evidenceId)?.role)) continue;
     seen.add(m.evidenceId);
     const e = byId.get(m.evidenceId);
-    rows.push({ key: m.evidenceId || `m${rows.length}`, start: m.start, text: e?.text || null, link: safeUrl(m.deepLink) || e?.link, inDescription: m.start == null });
+    rows.push({ context: e?.role === "context", key: m.evidenceId || `m${rows.length}`, start: m.start, text: e?.text || null, link: safeUrl(m.deepLink) || e?.link, inDescription: m.start == null });
   }
   if (!rows.length) {
     const claim = c.evidence.find((e) => e.role === "claim" && e.available);
@@ -55,10 +55,13 @@ export function disclosureRow(c) {
 }
 
 function ProofM1({ c }) {
+  const [frameIndex, setFrameIndex] = useState(null);
   const own = disclosureRow(c);
   const rest = momentRows(c).filter((r) => !own || oneLine(r.text) !== oneLine(own.text));
   const rows = (own ? [own, ...rest] : rest).slice(0, 3);
-  const frames = c.evidence.filter((e) => e.kind === "frame" && e.thumbnailUrl).slice(0, 3);
+  const frames = c.evidence.filter((e) => e.kind === "frame" && e.thumbnailUrl);
+  const relevantFrames = frames.filter((e) => ["claim", "counter", "disclosure"].includes(e.role));
+  const showFrames = (list) => <HStack gap={1.5} wrap="wrap">{list.map((f) => <VStack key={f.id} gap={0.25}><Thumbnail src={f.thumbnailUrl} alt={`Kadr z ${clock(f.start)}`} label={`Powiększ kadr z ${clock(f.start)}`} onClick={() => setFrameIndex(frames.indexOf(f))} /><ExternalLink url={f.link}>{`Otwórz film od ${clock(f.start)}`}</ExternalLink></VStack>)}</HStack>;
   return (
     <Tile title="Dowód" id="sekcja-momenty">
       {rows.length === 0 ? <Text color="secondary">Brak wskazanego fragmentu dla tej sprawy.</Text> : (
@@ -66,25 +69,28 @@ function ProofM1({ c }) {
           {rows.map((r) => (
             <HStack key={r.key} gap={1.5} vAlign="start" role="listitem" data-moment={r.inDescription ? "opis" : clock(r.start)}>
               <VStack width={56}><Text weight="semibold" hasTabularNumbers type={r.inDescription ? "supporting" : "body"}>{r.inDescription ? "opis" : clock(r.start)}</Text></VStack>
-              <Text maxLines={2}>{r.text ? `„${cut(oneLine(r.text), 140)}”` : "—"}</Text>
-              {r.link ? <ExternalLink url={r.link}>↗</ExternalLink> : null}
+              <Text>{r.context ? "Kontekst: " : ""}{r.text ? `„${oneLine(r.text)}”` : "—"}</Text>
+              {r.link ? <ExternalLink url={r.link}>{r.inDescription ? "Otwórz opis" : `Odtwórz od ${clock(r.start)}`}</ExternalLink> : null}
             </HStack>
           ))}
         </VStack>
       )}
-      {frames.length > 0 && (
-        <HStack gap={1.5} wrap="wrap" vAlign="start">
-          {frames.map((f) => (
-            <VStack key={f.id} gap={0.25} hAlign="center">
-              <Thumbnail src={f.thumbnailUrl} alt={`Kadr z ${clock(f.start)}`} label={`Kadr z ${clock(f.start)}`} onClick={() => f.link && window.open(safeUrl(f.link), "_blank", "noopener")} />
-              <ExternalLink url={f.link}>{clock(f.start)} ↗</ExternalLink>
-            </VStack>
-          ))}
-        </HStack>
-      )}
+      {relevantFrames.length > 0 && showFrames(relevantFrames)}
+      {frames.length > 0 && <Lightbox isOpen={frameIndex != null} onOpenChange={(v) => !v && setFrameIndex(null)} index={frameIndex ?? 0} onIndexChange={setFrameIndex} hasZoom media={frames.map((f) => ({ src: f.thumbnailUrl, alt: `Kadr z ${clock(f.start)}` }))} />}
       <SecondOpinionLine c={c} />
     </Tile>
   );
+}
+
+function FrameDocumentation({ c }) {
+  const [index, setIndex] = useState(null);
+  const frames = c.evidence.filter((e) => e.kind === "frame" && e.thumbnailUrl);
+  if (!frames.length) return <Text color="secondary">Nie zebrano kadrów.</Text>;
+  return <VStack gap={1.5}>
+    <Text type="supporting">Kadry udostępniono do oceny wzrokowej; sam kadr nie potwierdza oznaczenia.</Text>
+    <HStack gap={1.5} wrap="wrap">{frames.map((f, i) => <VStack key={f.id} gap={0.25}><Thumbnail src={f.thumbnailUrl} alt={`Kadr z ${clock(f.start)}`} label={`Powiększ kadr z ${clock(f.start)}`} onClick={() => setIndex(i)} /><ExternalLink url={f.link}>{`Otwórz film od ${clock(f.start)}`}</ExternalLink></VStack>)}</HStack>
+    <Lightbox isOpen={index != null} onOpenChange={(v) => !v && setIndex(null)} index={index ?? 0} onIndexChange={setIndex} hasZoom media={frames.map((f) => ({ src: f.thumbnailUrl, alt: `Kadr z ${clock(f.start)}` }))} />
+  </VStack>;
 }
 
 const AD_STATUS = { active: "aktywna", inactive: "zakończona" };
@@ -144,14 +150,18 @@ function firmEntries(c) {
   );
 }
 
-/* „Więcej”: historia, punktacja, szczegóły; domyślnie zamknięte. */
-function MoreTabs({ c, kind }) {
-  const [tab, setTab] = useState("history");
+/* Osobny widok dokumentacji: pochodzenie, pomiary i historia sprawy. */
+function Documentation({ c, kind, narrow }) {
+  const [tab, setTab] = useState("method");
+  const [open, setOpen] = useState(false);
   const entries = [...c.history].reverse();
   const counter = c.counter.filter((e) => e.counterKind !== "neutral_context" && e.effect).slice(0, 4);
   const extra = kind === "m2" ? m2Details(c) : kind === "m3" ? m3Details(c) : kind === "ad" ? AD_DETAILS(c) : [];
   const knf = kind === "m1" || kind === "ad" ? firmEntries(c) : null;
   const panels = {
+    method: <EvidencePath c={c} narrow={narrow} />,
+    frames: <FrameDocumentation c={c} />,
+    criteria: <M2Documentation c={c} />,
     history: entries.length === 0 ? <Text color="secondary">Brak wpisów w historii.</Text> : (
       <List density="compact" hasDividers>
         {entries.map((h, i) => {
@@ -162,7 +172,7 @@ function MoreTabs({ c, kind }) {
     ),
     score: (
       <VStack gap={2}>
-        {c.score?.value != null ? <Text>Siła: {strengthLabel(c.score.band, c.score.value)} z 100 pkt.</Text> : <Text color="secondary">Brak wyliczonej siły{c.score?.notComputableReason ? `: ${c.score.notComputableReason}` : ""}.</Text>}
+        {c.score?.value != null ? <Text>Wynik reguł: {strengthLabel(c.score.band, c.score.value)} z 100 pkt. Może pochodzić ze starszej analizy.</Text> : <Text color="secondary">Brak wyliczonej siły{c.score?.notComputableReason ? `: ${c.score.notComputableReason}` : ""}.</Text>}
         {c.score?.components?.length > 0 && (
           <Table idKey="label" density="compact" data={c.score.components.map((x) => (Array.isArray(x) ? { label: x[0], points: x[1] } : { label: x.label || x.id, points: x.points }))} columns={[
             { key: "label", header: "Składnik", width: proportional(4, { minWidth: 140 }) },
@@ -184,26 +194,29 @@ function MoreTabs({ c, kind }) {
           <MetadataListItem label="Identyfikator">{c.id}</MetadataListItem>
           {c.url && <MetadataListItem label="Adres">{c.url}</MetadataListItem>}
         </MetadataList>
-        {knf && <Collapsible defaultIsOpen={false} trigger={<Text type="supporting">Wpisy w wykazie KNF ({c.relationship.firm.candidates.length})</Text>}>{knf}</Collapsible>}
-        {c.raw.description && (
-          <Collapsible defaultIsOpen={false} trigger={<Text type="supporting">{c.platform === "youtube" ? "Pełny opis filmu" : "Pełny podpis lub tekst"}</Text>}>
-            <Blockquote>{c.raw.description}</Blockquote>
-          </Collapsible>
-        )}
+        {knf && <VStack gap={1}><Text weight="semibold">Wpisy w wykazie KNF</Text>{knf}</VStack>}
+        {c.raw.description && <VStack gap={1}><Text weight="semibold">{c.platform === "youtube" ? "Pełny opis filmu" : "Pełny podpis lub tekst"}</Text><Blockquote>{c.raw.description}</Blockquote></VStack>}
       </VStack>
     ),
   };
   return (
-    <Collapsible defaultIsOpen={false} trigger={<Text weight="semibold">Więcej: historia, punktacja, szczegóły</Text>}>
-      <VStack gap={2} padding={2}>
-        <TabList role="tablist" size="sm" value={tab} onChange={setTab}>
-          <Tab value="history" label="Historia" panelId="more-panel" />
-          <Tab value="score" label="Punktacja" panelId="more-panel" />
-          <Tab value="details" label="Szczegóły" panelId="more-panel" />
-        </TabList>
-        <VStack id="more-panel" role="tabpanel">{panels[tab]}</VStack>
-      </VStack>
-    </Collapsible>
+    <>
+      <HStack><Button label="Dokumentacja i historia" onClick={() => setOpen(true)} /></HStack>
+      <Dialog isOpen={open} onOpenChange={setOpen} variant="fullscreen">
+        <Layout height="fill" header={<DialogHeader title="Dokumentacja dowodów i historia" onOpenChange={setOpen} />}
+          content={<LayoutContent isScrollable><VStack gap={2} padding={2}>
+            <TabList role="tablist" overflow="scroll" value={tab} onChange={setTab}>
+              <Tab value="method" label="Jak sprawdzono" panelId="documentation-panel" />
+              <Tab value="history" label="Historia decyzji" panelId="documentation-panel" />
+              <Tab value="details" label="Źródła i szczegóły" panelId="documentation-panel" />
+              {c.evidence.some((e) => e.kind === "frame" && e.thumbnailUrl) && <Tab value="frames" label="Zebrane kadry" panelId="documentation-panel" />}
+              {kind === "m2" && <Tab value="criteria" label="Kryteria reklamy" panelId="documentation-panel" />}
+              <Tab value="score" label="Punktacja" panelId="documentation-panel" />
+            </TabList>
+            <VStack id="documentation-panel" role="tabpanel">{panels[tab]}</VStack>
+          </VStack></LayoutContent>} />
+      </Dialog>
+    </>
   );
 }
 
@@ -232,11 +245,11 @@ function metaLine(c, kind) {
   return [c.creatorName || c.raw.author, platformLabel(c.platform), published, reachShort(c.reach), firmText].filter(Boolean).join(" · ");
 }
 
-export function CaseDetail({ c, headingRef, onBack, onSaved, narrow }) {
+export function CaseDetail({ c, headingRef, onBack, onSaved, onConflict, onPin, narrow }) {
   const kind = kindOf(c);
   const proof = proofOf(c);
   const refute = c.relationship?.disclosure?.state === "in_speech" ? disclosureRow(c) : null;
-  const openUrl = kind === "m2" || kind === "m3" ? safeUrl(c.url) : refute?.link || proof?.url;
+  const openUrl = kind === "m2" || kind === "m3" ? safeUrl(c.url) : refute?.link || proof?.url || safeUrl(c.url);
   const openAt = refute?.start ?? proof?.start;
   const strength = c.score?.value != null ? strengthLabel(c.score.band, c.score.value) : null;
   const header = (
@@ -244,19 +257,18 @@ export function CaseDetail({ c, headingRef, onBack, onSaved, narrow }) {
       <VStack gap={0.5} padding={narrow ? 2 : 2}>
         <HStack gap={2} hAlign="between" vAlign="center" wrap="wrap">
           <HStack gap={1} wrap="wrap" vAlign="center">
-            {strength && c.score.value > 0 && <Token size="sm" color={BAND_COLOR[c.score.band] || "gray"} label={strength} />}
             <ModuleToken module={c.module} />
-            {c.route && <Text type="supporting" color="secondary">{ROUTES[c.route] || c.route}</Text>}
-            {c.status !== "new" && <Token size="sm" color="gray" label={STATUS[c.status] || c.status} />}
+            <Text type="supporting" color="secondary">{WORKFLOW_STAGE[c.workflowStage] || WORKFLOW_STAGE.review}</Text>
             {(c.origin === "synthetic" || c.origin === "upload") && <OriginToken origin={c.origin} at={c.observedAt} />}
             <RecalcToken c={c} />
             <ReReviewToken c={c} />
           </HStack>
-          {onBack && <Button label="Wróć do listy" variant="ghost" size="sm" onClick={onBack} />}
+          {onBack && <Button label="Wróć do listy" variant="ghost" onClick={onBack} />}
         </HStack>
         <Heading level={2} ref={headingRef} tabIndex={-1}>{c.title}</Heading>
         <Text type="supporting" color="secondary" maxLines={2}>{metaLine(c, kind)}</Text>
-        {openUrl && <HStack gap={2} wrap="wrap"><Button label={kind === "m2" ? "Otwórz stronę" : kind === "m3" ? "Otwórz ofertę" : !isYoutube(openUrl) ? "Otwórz źródło" : openAt != null ? `Otwórz w filmie od ${clock(openAt)}` : "Otwórz w filmie"} size="sm" variant="primary" href={openUrl} target="_blank" /></HStack>}
+        <Text weight="semibold">{kind === "m2" ? "Sprawdź wskazany fragment reklamy" : kind === "m3" ? "Sprawdź ofertę i uprawnienia" : "Sprawdź oznaczenie współpracy"}</Text>
+        {openUrl && <HStack gap={2} wrap="wrap"><Button label={kind === "m2" ? "Otwórz stronę" : kind === "m3" ? "Otwórz ofertę" : !isYoutube(openUrl) ? "Otwórz źródło" : openAt != null ? `Otwórz w filmie od ${clock(openAt)}` : "Otwórz w filmie"} variant="primary" size="lg" href={openUrl} target="_blank" /></HStack>}
       </VStack>
     </LayoutHeader>
   );
@@ -268,15 +280,14 @@ export function CaseDetail({ c, headingRef, onBack, onSaved, narrow }) {
       ) : null}
       {c.needsRecalc && c.module === "M1" && <Banner status="warning" title="Wynik ze starszej wersji analizy" description={c.needsRecalcReason || "Wymaga przeliczenia."} />}
       {kind === "m3" && <M3Banners c={c} />}
-      <EvidencePath c={c} narrow={narrow} />
       {kind === "m2" ? proofTile : (
         <Grid columns={{ minWidth: 300, max: 2 }} gap={2}>
           <WhyTile c={c} />
           {proofTile}
         </Grid>
       )}
-      <DecisionTile c={c} onSaved={onSaved} key={c.id} />
-      <MoreTabs c={c} kind={kind} />
+      <DecisionTile c={c} onSaved={onSaved} onConflict={onConflict} onPin={onPin} key={c.id} />
+      <Documentation c={c} kind={kind} narrow={narrow} />
     </VStack>
   );
   const footer = narrow && (

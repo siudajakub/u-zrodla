@@ -62,9 +62,10 @@ export function proofOf(c) {
   }
   const byId = (id) => c.evidence.find((e) => e.id === id);
   const isFrame = (m) => String(m.evidenceId || "").startsWith("frame-");
-  const timed = c.moments.find((m) => m.start != null && !isFrame(m));
-  const moment = timed || c.moments[0];
-  const claim = (c.claim && byId(c.claim.evidenceId)) || (moment && byId(moment.evidenceId)) || c.evidence.find((e) => e.role === "claim" && e.available) || c.evidence.find((e) => e.available);
+  const relevant = c.moments.filter((m) => ["claim", "disclosure", "counter"].includes(byId(m.evidenceId)?.role));
+  const timed = relevant.find((m) => m.start != null && !isFrame(m));
+  const moment = timed || relevant[0];
+  const claim = (c.claim && byId(c.claim.evidenceId)) || (moment && byId(moment.evidenceId)) || c.evidence.find((e) => e.role === "claim" && e.available);
   const start = moment?.start ?? claim?.start ?? null;
   const url = safeUrl(moment?.deepLink) || safeUrl(claim?.link) || safeUrl(c.url);
   if (!claim && !moment) return null;

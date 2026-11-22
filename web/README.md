@@ -15,7 +15,7 @@ Pulpit analityka. Bieżący: React 19 + Astryx w `src/desk`, budowany esbuildem 
 | `CaseDetail.jsx` | szablon karty M1/M2/M3: Droga dowodu, Dlaczego tutaj, Dowód, Decyzja, Więcej |
 | `CardM2.jsx`, `CardM3.jsx` | dowód i szczegóły karty M2 i M3 |
 | `ProofPath.jsx` | „Droga dowodu” z `proofPath[]` |
-| `cardparts.jsx`, `parts.jsx` | wspólne elementy kart i tokeny |
+| `cardparts.jsx`, `parts.jsx`, `decision.js` | wybór działania, edytowalny szkic, wspólne elementy kart i tokeny |
 | `Calibration.jsx`, `charts.jsx` | suwak progu, FP/FN, macierz 2×2; wykresy Chart.js |
 | `Sources.jsx` | platformy, drogi odczytu, ostatni skan, modele, twórcy, „Dodaj materiał” |
 | `EvidenceForm.jsx`, `MetaImport.jsx` | upload nagrania; import zapisanej strony Meta |
@@ -36,4 +36,4 @@ Budowa i testy:
 
 - `npm run build` w `web/` (`node build-preview.mjs`); start lokalny robi to przez [ops/demo/prepare-preview.sh](../ops/demo/prepare-preview.sh) (Node ≥ 22.13, `npm --offline`).
 - `node tests/ui/render-smoke.cjs` z katalogu głównego: render starego pulpitu i SSR `src/desk` na `sample/export.json`, bez przeglądarki.
-- [tests/ui/](../tests/ui/) Playwright/Chromium: `desk-flow.py --base URL` (ścieżki na kopii bazy), `capture-screens.py --base URL` (zrzuty 1440 i 390 do `tests/ui/screens/`).
+- [tests/ui/](../tests/ui/) Playwright/Chromium: `desk-flow.py --base URL` (desktop, telefon, błędy i zapisy na osobnej kopii bazy), `film-walk.py --base URL` (scenariusz prezentacji), `workflow-flow.py --base URL` (decyzje i etapy; zapisuje w kopii). Starsze scenariusze zachowano jako `*-legacy.py`; sprawdzają poprzedni układ. `node tests/ui/queue-cache.mjs` sprawdza unieważnienie pamięci kolejki.
