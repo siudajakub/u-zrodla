@@ -1,37 +1,27 @@
-# Mapa dokumentacji
+# Dokumentacja U Źródła
 
-## Jury: kolejność czytania (ok. 15 min)
+U Źródła zbiera materiały inwestycyjne, zachowuje dowody i pozwala analitykowi zapisać decyzję. Poniżej znajdziesz przebieg pokazu, pochodzenie danych i instrukcje uruchomienia.
 
-1. [Brief UKNF](zrodla-uknf/BRIEF.md): wymagania i kryteria oceny; [pięć plików konkursu](zrodla-uknf/README.md), oryginały w [brief/](brief/).
-2. [HACKATHON.md](../HACKATHON.md): opis zgłoszenia, wyróżnik, stan względem briefu.
-3. [ARCHITEKTURA.md](ARCHITEKTURA.md): serwisy, przepływ danych, bezpieczeństwo, punkty rozszerzeń.
-4. [PROCES-AI.md](PROCES-AI.md): role agentów, bramki, przypadki, w których agent złapał błąd.
-5. [ODBIOR-UKNF.md](ODBIOR-UKNF.md): każde wymaganie briefu ze statusem i dowodem.
+| Szukasz | Otwórz |
+| --- | --- |
+| Pokaz i przykładowe sprawy | [Scenariusz dla jury](hackathon/demo.md) · [Zgłoszenie](../HACKATHON.md) |
+| Liczby, źródła i zakres odczytu | [Monitoring](MONITORING.md) · [Spis danych](../fixtures/README.md) |
+| Uruchomienie, modele i tryb offline | [Start lokalny i Compose](../ops/demo/README.md) · [Modele i reguły](../analysis/README.md) · [Apple Silicon](../ops/mac/README.md) |
+| Budowa systemu i integracja | [Architektura](ARCHITEKTURA.md) · [Kontrakty API](hackathon/contracts.md) |
+| Wymagania konkursowe i weryfikacja | [Brief UKNF](zrodla-uknf/BRIEF.md) · [Macierz odbioru](ODBIOR-UKNF.md) · [Testy](../tests/README.md) |
+| Licencje | [Zależności, modele i usługi](LICENCJE.md) |
 
-Uruchomienie: [README](../README.md). Pokaz: [scenariusz](hackathon/demo.md), [PITCH.md](PITCH.md), [prezentacja PDF](../presentation/InvestWatch.pdf).
+## Kod
 
-## Kod: gdzie co jest
+| Katalog | Rola |
+| --- | --- |
+| [collectors](../collectors/README.md) | Odkrywa źródła, pobiera materiały i zapisuje pochodzenie. |
+| [analysis](../analysis/README.md) | Wskazuje fragmenty źródeł, ocenia reguły i przygotowuje cytaty. |
+| [api](../api/README.md) | Obsługuje skany, sprawy, decyzje, kalibrację i raporty. |
+| [web](../web/README.md) | Pulpit analityka z kolejką, kartami spraw i historią decyzji. |
+| [ops](../ops/README.md) | Uruchomienie, paczki danych i harmonogram. |
+| [tools](../tools/README.md) | Pomiary, walidatory i wsparcie pracy zespołu. |
 
-| Katalog | Zawartość | Mapa |
-|---|---|---|
-| `collectors/` | Odkrywanie i zapis materiałów (YouTube, social, strony M2/M3, Meta) | [README](../collectors/README.md) |
-| `analysis/` | Reguły M1/M2/M3, E5, klasyfikator, drugi głos | [README](../analysis/README.md) |
-| `api/` | FastAPI, SQLite, kolejka i worker skanów | [README](../api/README.md) |
-| `web/` | Pulpit analityka (React, Astryx) | [README](../web/README.md) |
-| `ops/` | Start, Compose, paczki stanu i mediów, Mac | [README](../ops/README.md) |
-| `tests/` | Testy kontraktowe, UI, e2e, próba offline | [README](../tests/README.md) |
-| `tools/` | Walidatory, narzędzia linii, pomiary | [README](../tools/README.md) |
-| `fixtures/`, `data/probe-snapshots/` | Dane surowe, etykiety, zamrożony zbiór walidacyjny, datowane sondy | [README](../fixtures/README.md) |
+## Dokumentacja prac
 
-## Rozwój: dla kolejnego agenta
-
-| Potrzeba | Dokument |
-|---|---|
-| Reguły pracy (Codex i Claude Code) | [AGENTS.md](../AGENTS.md); `CLAUDE.md` jest generowany z niego |
-| Kontrakt API i schemat v2 | [rekord H](lanes/2026-11-21-fable-h-kontrakt.md), [kontrakty integracji](hackathon/contracts.md) |
-| Kto robił co i z jakim wynikiem | [rekordy linii](lanes/README.md), [tablica](../TEAM_BOARD.md) |
-| Plan i próby rundy 2 | [prompt startowy](fable/START_PROMPT.md), [plan](fable/REALIZACJA.md), [próby odbiorowe](fable/ODBIOR.md), [OpenRouter i Mac M3](fable/OPENROUTER-M3.md) |
-| Protokół integracji i gałęzi | [integration.md](hackathon/integration.md), [playbook.md](hackathon/playbook.md) |
-| Źródła danych, limity, dostęp | [MONITORING.md](MONITORING.md) |
-| Licencje zależności i modeli | [LICENCJE.md](LICENCJE.md) |
-| Stan poprzednich rund | [archiwum](archiwum/README.md) |
+[Proces AI](PROCES-AI.md) · [Rekordy linii](lanes/README.md) · [Tablica zespołu](../TEAM_BOARD.md) · [Integracja](hackathon/integration.md) · [Archiwum](archiwum/README.md)

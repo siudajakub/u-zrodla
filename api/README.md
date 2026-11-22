@@ -1,6 +1,6 @@
-# api/
+# API i worker
 
-FastAPI (REST + WebSocket) i worker skanów. Stan w SQLite pod `INVESTWATCH_STATE` (domyślnie `.runtime/demo`). Architektura: [docs/ARCHITEKTURA.md](../docs/ARCHITEKTURA.md), kontrakty: [docs/hackathon/contracts.md](../docs/hackathon/contracts.md).
+FastAPI udostępnia sprawy, kolejki, decyzje i raporty. Worker wykonuje skany i zapisuje wyniki w SQLite. WebSocket informuje pulpit o zmianach. `INVESTWATCH_STATE` wskazuje katalog stanu. [Architektura](../docs/ARCHITEKTURA.md) · [Kontrakty](../docs/hackathon/contracts.md)
 
 | Plik | Odpowiedzialność | Główne wejścia | Testy (tests/core/...) |
 |---|---|---|---|

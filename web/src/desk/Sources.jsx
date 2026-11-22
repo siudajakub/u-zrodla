@@ -371,9 +371,15 @@ function ModelsTile({ models }) {
       measured: e5m && e5m.n ? `${e5m.correct} z ${e5m.n} trafnie na zbiorze odłożonym (słownik reguł: ${Math.round((e5m.keywordRulesAccuracy || 0) * e5m.n)} z ${e5m.n})` : "—",
     },
     so && {
-      id: "so", name: "Drugi głos modelu", model: so.name, license: so.weightsLicense || "—", needs: so.localMemoryGb ? `ok. ${so.localMemoryGb} GB pamięci, lokalnie (Ollama)` : "lokalnie (Ollama)",
-      mode: `${so.modeLabel || so.mode}; tylko zgłasza rozbieżność, nie zmienia decyzji`,
-      measured: [so.measured?.M1 && `M1: ${fmtMeasured(so.measured.M1)}`, so.measured?.M3 && `M3: ${fmtMeasured(so.measured.M3)}`, so.labels].filter(Boolean).join("; ") || "—",
+      id: "so", name: "Drugi głos modelu", model: so.name || "—", license: so.weightsLicense || "—",
+      needs: so.localMemoryGb ? `ok. ${so.localMemoryGb} GB pamięci` : "—",
+      mode: so.modeLabel || so.mode,
+      measured: [
+        so.measuredModel && `Eksperyment API · ${so.measuredModel}`,
+        so.measured?.M1 && `M1: ${fmtMeasured(so.measured.M1)}`,
+        so.measured?.M3 && `M3: ${fmtMeasured(so.measured.M3)}`,
+        so.labels,
+      ].filter(Boolean).join(" · ") || "—",
     },
   ].filter(Boolean);
   return (

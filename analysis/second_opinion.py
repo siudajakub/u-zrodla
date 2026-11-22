@@ -15,32 +15,21 @@ Result: ``{verdict, quote, locator, confidence, explanation}``. A quote that is 
 input line rejects the answer. A verdict that differs from the rules sets ``needsReview`` with the label
 "rozbieżność — do przeglądu"; it never changes the route, score or queue (``affectsRoute: false``).
 
-Off by default (INVESTWATCH_SECOND_OPINION). The product backend is Ollama through ``analysis.inference``.
-The OpenRouter backend works only when the measurement tool (tools/measure_second_opinion.py) has registered
-a transport with ``inference.use_remote``; this file never reads a key and never opens a remote connection.
-
-DEMO MODE (``INVESTWATCH_LLM_DEMO_API=1``, off by default): for the demo stand one allow-listed open-weights
-model may answer through an OpenAI-compatible API (UKNF can host the same weights locally). The transport is
-registered by a separate launcher with ``register_demo_transport(chat, meta)``; this file still holds no key.
-Here: the allow-list, a daily cost ledger that switches the mode off at once when INVESTWATCH_LLM_DEMO_DAILY_USD
-(default 1.0) is reached, the result cache, and the dashboard fields (``runtime: "api-demo" | "local"``, weights
-licence, local size and Ollama tag). Without the flag, or without a registered transport, the demo path refuses.
+Ollama is the default. The OpenRouter backend works only when the measurement tool
+(tools/measure_second_opinion.py) registers a transport with inference.use_remote.
 Standard library only.
 """
-from datetime import datetime, timezone
 from hashlib import sha256
 import json
 import os
-from pathlib import Path
 import re
-import threading
 import time
 import unicodedata
 
 from analysis import inference
 
 PROMPT_VERSION = "so-2"
-DEFAULT_MODEL = "qwen3.8:27b-q4_K_M"   # best measured open-weights model, see docs/lanes/2026-11-21-fable-ai-drugi-glos.md
+DEFAULT_MODEL = inference.DEFAULT_MODEL
 ABSTAIN = "nieustalone"
 REVIEW_LABEL = "rozbieżność — do przeglądu"
 CONFIDENCE = ("niska", "średnia", "wysoka")
@@ -134,21 +123,26 @@ POSITIVE = {"m1_disclosure": "brak_ujawnienia", "m2_k03": "brak_ostrzezenia", "m
 
 
 def enabled():
-    """Off unless switched on; the scan never depends on the model."""
-    return os.getenv("INVESTWATCH_SECOND_OPINION", "").strip().lower() in {"1", "on", "true"}
+    """Local inference is enabled by default. An unavailable model leaves the rules in charge."""
+    return inference.enabled() and os.getenv("INVESTWATCH_SECOND_OPINION", "1").strip().lower() in {"1", "on", "true"}
+
+
+def recorded_enabled():
+    """Allow replay of an experiment when the local second opinion has been disabled."""
+    return not enabled() and os.getenv("INVESTWATCH_RECORDED_EXPERIMENT", "").strip().lower() in {"1", "on", "true"}
 
 
 def configured_model():
-    if demo_requested():
-        return demo_model()
-    return os.getenv("INVESTWATCH_SECOND_OPINION_MODEL", "").strip() or DEFAULT_MODEL
+    return os.getenv("INVESTWATCH_SECOND_OPINION_MODEL", "").strip() or inference.configured_model()
 
 
-# --- Model cards (what the dashboard shows) and the demo mode -----------------------------------------
+def runtime():
+    return "experiment" if inference._backend_name() == "openrouter" else "local"
 
-# OpenRouter id -> open weights, licence (HF card, read 2026-11-21), local equivalent and Q4 download size
-# (Ollama library, read 2026-11-21). memoryGb: Q4 weights + KV cache for num_ctx 8192, an estimate.
+
+# Model metadata for live suggestions and explicit measurement runs.
 MODEL_CARDS = {
+    inference.DEFAULT_MODEL: {"name": "Qwen3.5 4B", "license": "Apache-2.0", "ollama": inference.DEFAULT_MODEL},
     "qwen/qwen3.5-397b-a17b": {"name": "Qwen3.5 397B-A17B", "license": "Apache-2.0", "ollama": None, "q4Gb": 230, "memoryGb": 250,
                                "localNote": "brak tagu w bibliotece Ollama; wagi HF przez vLLM lub llama.cpp na serwerze GPU"},
     "deepseek/deepseek-v4-pro": {"name": "DeepSeek V4 Pro", "license": "MIT", "ollama": None, "q4Gb": 900, "memoryGb": 950,
@@ -164,34 +158,6 @@ MODEL_CARDS = {
     "mistralai/ministral-8b-2512": {"name": "Ministral 3 8B", "license": "Apache-2.0", "ollama": "ministral-3:8b-instruct-2512-q4_K_M", "q4Gb": 6.0, "memoryGb": 7.5},
     "mistralai/ministral-3b-2512": {"name": "Ministral 3 3B", "license": "Apache-2.0", "ollama": "ministral-3:3b-instruct-2512-q4_K_M", "q4Gb": 3.0, "memoryGb": 4},
 }
-DEMO_DEFAULT_MODEL = "qwen/qwen3.8-27b"   # same weights as DEFAULT_MODEL, run through the API for the demo stand
-LEDGER = Path(__file__).resolve().parents[1] / ".runtime" / "second-opinion" / "demo-ledger.json"
-_demo_lock = threading.Lock()
-_demo = {"chat": None, "meta": None, "stopped": None}
-
-
-def demo_requested():
-    return os.getenv("INVESTWATCH_LLM_DEMO_API", "").strip().lower() in {"1", "on", "true"}
-
-
-def demo_model():
-    return os.getenv("INVESTWATCH_LLM_DEMO_MODEL", "").strip() or DEMO_DEFAULT_MODEL
-
-
-def daily_limit():
-    try:
-        return max(0.0, float(os.getenv("INVESTWATCH_LLM_DEMO_DAILY_USD", "1.0")))
-    except ValueError:
-        return 0.0
-
-
-def register_demo_transport(chat, meta=None):
-    """Launcher-only: `chat(body)` returns an OpenAI-compatible response with usage.cost. None unregisters."""
-    _demo.update(chat=chat, meta=meta)
-
-
-def runtime():
-    return "api-demo" if demo_requested() else "local"
 
 
 def model_card(model, runtime_name):
@@ -199,68 +165,10 @@ def model_card(model, runtime_name):
     card = MODEL_CARDS.get(model) or next((c for c in MODEL_CARDS.values() if c.get("ollama") == model), None) or {}
     name, licence = card.get("name") or model, card.get("license") or "licencja nieustalona"
     local = f"ollama pull {card['ollama']}" if card.get("ollama") else card.get("localNote") or "odpowiednik lokalny nieustalony"
-    how = "uruchomiony przez API (pokaz)" if runtime_name == "api-demo" else "uruchomiony lokalnie (Ollama)"
+    how = "pomiar przez API" if runtime_name == "experiment" else "uruchomiony lokalnie (Ollama)"
     return {"modelId": model, "weightsLicense": licence, "localQ4Gb": card.get("q4Gb"), "localMemoryGb": card.get("memoryGb"),
             "localModel": card.get("ollama"), "runtime": runtime_name,
             "displayLabel": f"model {name} · {licence} · {how}; lokalnie: {local}"}
-
-
-def _today():
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
-
-def _ledger_read():
-    try:
-        return json.loads(LEDGER.read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        return {}
-
-
-def demo_spent(day=None):
-    return float((_ledger_read().get(day or _today()) or {}).get("costUsd", 0.0))
-
-
-def _ledger_add(cost):
-    data = _ledger_read()
-    day = data.setdefault(_today(), {"costUsd": 0.0, "requests": 0})
-    day["costUsd"] = round(day["costUsd"] + float(cost or 0.0), 6)
-    day["requests"] += 1
-    LEDGER.parent.mkdir(parents=True, exist_ok=True)
-    LEDGER.write_text(json.dumps(data, indent=1), encoding="utf-8")
-    return day["costUsd"]
-
-
-def _demo_check(model):
-    if model not in MODEL_CARDS:
-        raise inference.InferenceError("demo_model_not_allowed", f"Tryb pokazowy: model {model} spoza listy modeli z otwartymi wagami.")
-    if _demo["chat"] is None:
-        raise inference.InferenceError("demo_no_transport", "Tryb pokazowy: brak zarejestrowanego zaplecza API.")
-    with _demo_lock:
-        if _demo["stopped"] == _today() or demo_spent() >= daily_limit():
-            _demo["stopped"] = _today()
-            raise inference.InferenceError("demo_budget_exceeded",
-                                           f"Tryb pokazowy wyłączony do końca doby: limit {daily_limit():.2f} USD osiągnięty.")
-
-
-def _demo_request(task, msgs, model):
-    """One request of the demo mode; the daily ledger is checked before and updated after it."""
-    _demo_check(model)
-    body = {"model": model, "messages": msgs, "stream": False, "temperature": 0, "seed": inference.SEED, "max_tokens": MAX_TOKENS,
-            "response_format": {"type": "json_schema", "json_schema": {"name": task, "strict": True, "schema": schema(task)}},
-            "usage": {"include": True}}
-    response = _demo["chat"](body)
-    cost = ((response.get("usage") or {}) if isinstance(response, dict) else {}).get("cost")
-    with _demo_lock:
-        if _ledger_add(cost if isinstance(cost, (int, float)) else 0.0) >= daily_limit():
-            _demo["stopped"] = _today()
-    return inference.parse_openai(response)
-
-
-def _meta(model):
-    if demo_requested():
-        _demo_check(model)
-        return (_demo["meta"] or (lambda: {"digest": f"api:{model}", "quantization": None}))()
-    return inference.model_digest(model)
 
 
 def schema(task):
@@ -453,8 +361,6 @@ def validate(task, content, lines):
 
 
 def _request(task, msgs, model):
-    if demo_requested():
-        return _demo_request(task, msgs, model)
     if inference.backend() == "openrouter":
         if inference._remote is None:
             raise inference.InferenceError("backend_forbidden", "Backend openrouter działa tylko z narzędzia pomiarowego.")
@@ -484,11 +390,11 @@ def ask(task, context, lines, model=None):
         return {"status": "empty", "verdict": None}
     started = time.monotonic()
     try:
-        meta = _meta(model)
+        meta = inference.model_digest(model)
     except inference.InferenceError as error:
         return {"status": "unavailable", "verdict": None, "errorCode": error.code, "reason": error.message}
     msgs = messages(task, context, lines)
-    key = sha256(json.dumps([msgs, PROMPT_VERSION, model, meta.get("digest")], ensure_ascii=False).encode()).hexdigest()
+    key = sha256(json.dumps([msgs, PROMPT_VERSION, runtime(), model, meta.get("digest")], ensure_ascii=False).encode()).hexdigest()
     if key in _cache:
         return {**_cache[key], "cached": True}
     if not inference._slot.acquire(timeout=inference.QUEUE_SECONDS):
@@ -517,7 +423,7 @@ def _envelope(task, rules_verdict, model, answer, locator, extra=None):
     agreement = None
     if verdict is not None and rules_verdict is not None:
         agreement = (verdict == POSITIVE[task]) == (rules_verdict == POSITIVE[task])
-    return {"task": task, "engine": "api-demo" if demo_requested() else inference._backend_name(),
+    return {"task": task, "engine": inference._backend_name(),
             **model_card(model, runtime()), "promptVersion": PROMPT_VERSION,
             "digest": answer.get("digest"), "quantization": answer.get("quantization"),
             "status": answer.get("status"), "verdict": verdict, "quote": answer.get("quote") if verdict else None,

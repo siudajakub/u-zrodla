@@ -53,8 +53,8 @@ class InferenceError(Exception):
 
 
 def enabled():
-    """Off unless switched on: the demo must not depend on a service that may be absent."""
-    return os.getenv("INVESTWATCH_LLM", "").strip().lower() in {"1", "on", "true", "ollama"}
+    """Use Ollama by default; local inference can be switched off explicitly."""
+    return os.getenv("INVESTWATCH_LLM", "1").strip().lower() in {"1", "on", "true", "ollama"}
 
 
 def backend():

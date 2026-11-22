@@ -1,8 +1,8 @@
-# Odbiór stanowiska na MacBooku M3
+# U Źródła na Apple Silicon
 
-Procedura dla J lub agenta uruchomionego na Macu. Przygotowano ją statycznie na devboxie Linux x86_64, bez dostępu do Maca. Skryptu `check.sh` nie wykonano tam w całości (brak `sysctl`, `sw_vers`, `/usr/bin/time -l`, Ollama). Sprawdzono składnię (`sh -n`, `dash -n`) oraz ścieżkę diagnostyczną z atrapą serwera Ollama. Pomiar, sprawdzenie bibliotek `file` i test kontenera dotyczą Maca i nie były uruchamiane. Wynik na Macu rozstrzyga.
+Uruchom pulpit w Compose i Ollamę na hoście, aby użyć Metal. [Polecenia dla domyślnego modelu](#krok-5a-domyślny-model-na-apple-silicon) są w kroku 5a. Pomiary z modelem Qwen 9B stanowią osobny test zasobów. Na Linuksie sprawdzono składnię skryptu `check.sh` i diagnostykę z atrapą Ollamy. Pomiar na Macu wymaga osobnego uruchomienia.
 
-## Co działa dziś, a co wymaga poprawki
+## Środowisko i pomiar
 
 - **Ocena reklamy przez Ollama (`analysis.ollama_review`) działa na hoście Maca bez Dockera.** Skrypt używa tylko biblioteki standardowej Pythona i łączy się z `127.0.0.1:11434`. Wymaga Pythona 3.12 i modelu `qwen3.5:9b`. Od tej ścieżki zaczyna się odbiór.
 - **Quick Start `sh ops/demo/start.sh` ma na Macu gałąź przygotowania w kontenerze linux/arm64** (poprawki B1, B2, B4 wdrożone w `ops/demo/`, obejście B3 po stronie ops). `bootstrap.sh` na Darwin wywołuje `ops/mac/prepare-darwin.sh`, który uruchamia `docker run --platform linux/arm64 python:3.12-bookworm` z `ops/mac/container-prepare.sh` (apt-get ffmpeg, `pip wheel`, `analysis.setup_asr`, E5, `prepare.sh`). Gałąź sprawdzono tylko atrapami na Linuksie, **nie na prawdziwym Macu**.
@@ -66,17 +66,17 @@ Interpretacja:
 6. Błąd `natywne biblioteki maja architekture niezgodna` oznacza zawartość z innej architektury w `.runtime/demo/deps`, `.runtime/semantic/deps` lub `.runtime/asr/vosk`: usuń wskazany katalog i uruchom `sh ops/demo/bootstrap.sh`.
 7. Znane ograniczenie: `analysis/ollama_review.py` nadal ma host i model wpisane na stałe (zgłoszone właścicielom). Pomiar oceny z kroku 3 działa na hoście.
 
-**Krok 5a. Serwisy, Ollama na hoście i szybki start**
+### Krok 5a. Domyślny model na Apple Silicon
 
-- `start.sh` uruchamia `web` (nginx, jedyny port `127.0.0.1:8769`), `api` i `worker`. Dwa ostatnie działają w sieci wewnętrznej bez Internetu. `--live` dokłada `scheduler` i wyjście do sieci dla workera. Opis: [docs/ARCHITEKTURA.md](../../docs/ARCHITEKTURA.md). Obraz `nginx:1.27-alpine` (arm64) pobiera `prepare-darwin.sh` razem z `python:3.12-bookworm`. Ręcznie: `docker pull --platform linux/arm64 nginx:1.27-alpine`.
-- Drugi głos LLM na Macu: Ollama natywnie na hoście, bo Docker Desktop nie daje kontenerom Metal. Serwisu `inference` (profil `llm`) na Macu nie włączaj.
-  ```sh
-  OLLAMA_CONTEXT_LENGTH=4096 ollama serve &          # albo aplikacja + launchctl setenv OLLAMA_CONTEXT_LENGTH 4096
-  ollama pull ministral-3:8b-instruct-2512-q4_K_M    # model z pomiaru (docs/lanes/2026-11-21-fable-ai-inferencja.md)
-  OLLAMA_HOST=host.docker.internal:11434 INVESTWATCH_LLM=1 INVESTWATCH_MODEL_ANNOTATE=1 \
-    INVESTWATCH_LLM_MODEL=ministral-3:8b-instruct-2512-q4_K_M sh ops/demo/start.sh
-  ```
-  Gdy `OLLAMA_HOST` wskazuje `host.docker.internal`, `start.sh` dokłada nakładkę `ops/compose/egress.yaml`, czyli wyjście sieciowe i `host-gateway` tylko dla workera. Bez Ollamy karta pokazuje status `unavailable`, a reszta działa.
+Uruchom aplikację Ollama lub polecenie `OLLAMA_CONTEXT_LENGTH=4096 ollama serve`. Ollama działa na hoście i korzysta z Metal. Do pulpitu przygotuj domyślne wagi:
+
+```sh
+ollama pull qwen3.5:4b-q4_K_M
+OLLAMA_HOST=host.docker.internal:11434 sh ops/demo/start.sh
+```
+
+Compose łączy worker z Ollamą przez adres hosta. Przy `sh ops/demo/start-local.sh` oba procesy działają na hoście i Ollama jest dostępna domyślnie na `127.0.0.1:11434`. Model `qwen3.5:9b` z wcześniejszych kroków służy osobnemu pomiarowi zasobów.
+
 - Szybki start pokazu: na devboxie po `GOTOWE` uruchom `sh ops/demo/pack-state.sh`. Skopiuj `.runtime/dist/investwatch-state-2026-11-21.tar.gz` i `.sha256` do katalogu projektu na Macu i uruchom `sh ops/demo/start.sh --reset`. Przy zgodnym odcisku kodu (ta sama zawartość `api/ analysis/ collectors/ fixtures/ data/probe-snapshots/`) stan rozpakowuje się w ok. 30 s zamiast kilku–kilkunastu minut analizy. Przy niezgodnym skrypt ostrzega i liczy od zera. Archiwum działa też z `start-local.sh`.
 
 **Krok 5b. Wariant awaryjny bez Dockera**
@@ -101,11 +101,11 @@ Jeśli swap rośnie, `size_vram` jest mniejsze niż `size`, albo zimny przebieg 
 1. Zamknij przeglądarkę i inne aplikacje, powtórz pomiar. Obniż kontekst (`OLLAMA_CONTEXT_LENGTH=2048`).
 2. Wybierz mniejszą kwantyzację tego samego modelu albo mniejszy model z listy tagów na `ollama.com/library/qwen3.5/tags` (nazwy tagów sprawdź tam, nie zgaduj). Pobierz i zmierz: `sh ops/mac/check.sh --measure --model NAZWA:TAG`.
 3. Wynik zmiany jest tylko pomiarem zasobów. **Nie wolno podmienić modelu w demo bez osobnego pomiaru trafności** na zamrożonych kampaniach z etykietami (próba Q z `ODBIOR.md`, TP/FP/FN/TN, koszt 2×FN+FP; linia G). Kwantyzacja i rozmiar zmieniają oceny, więc jedna ocena reklamy niczego nie dowodzi. Zapisz digest i kwantyzację nowego wariantu.
-4. Zmiana modelu w kodzie wymaga edycji stałej `MODEL` w `analysis/ollama_review.py:20` (właściciel pliku). Do czasu poprawki z przełącznikiem środowiskowym pomiar zasobów obsługuje `--model`, ale demo użyje stałej.
+4. Tag do pomiaru ustawia `--model`. Tag modelu dla pulpitu ustawia osobno `INVESTWATCH_LLM_MODEL`.
 5. Jeśli żaden wariant się nie mieści: pozostaje odtwarzalny fallback na regułach i zapisanych ocenach (bez modelu na żywo). Zapisz to jawnie w rekordzie linii.
 
 ## Typowe problemy
 
-- `containerToOllama: unreachable`: w Docker Desktop `host.docker.internal` działa z loopbackiem hosta. Przy OrbStack lub innym silniku ustaw `OLLAMA_HOST=0.0.0.0:11434` dla serwera Ollama (tylko w zaufanej sieci). Dotyczy dopiero przyszłej integracji workera. Sama ocena działa na hoście.
-- `Ollama nie udostępnia modelu`: `ollama list` musi zawierać dokładnie `qwen3.5:9b`.
+- `containerToOllama: unreachable`: w Docker Desktop `host.docker.internal` działa z loopbackiem hosta. Przy OrbStack lub innym silniku ustaw `OLLAMA_HOST=0.0.0.0:11434` dla serwera Ollama (tylko w zaufanej sieci). Ten test dotyczy łączności workera. Osobny pomiar modelu działa bezpośrednio na hoście.
+- `Ollama nie udostępnia modelu`: sprawdź, czy `ollama list` zawiera tag wybrany do pomiaru albo do pulpitu.
 - Pierwsze wywołanie `python3` na Macu bez Command Line Tools otwiera okno instalatora. Zainstaluj Pythona 3.12 z Homebrew i uruchom skrypt ponownie.

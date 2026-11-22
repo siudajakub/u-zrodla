@@ -1,6 +1,8 @@
-# fixtures/
+# Dane, replay i zbiory walidacyjne
 
-Dane wejściowe do replay, testów i pomiarów. Wszystko zebrano 21 XI 2026 (historia Git: pierwszy commit `c7b0cfe` 16:01 UTC, ostatni `bbc5fe4` 22:28 UTC). Pełne media (transkrypcje, kadry) są poza Gitem, w paczce `.runtime/replay-media/2026-11-21` (`sh ops/demo/pack-media.sh`).
+Odtwarzanie korzysta z zapisanych odpowiedzi źródeł. Materiały z etykietami służą do pomiaru reguł i modeli. Pełne transkrypcje i kadry z 21 listopada są w osobnej paczce `.runtime/replay-media/2026-11-21` przygotowywanej przez `sh ops/demo/pack-media.sh`.
+
+Stan pokazowy z 21 listopada obejmuje **1 922 materiały**, a rozszerzenie z 22 listopada **13 690**. Te liczby pochodzą z dwóch osobnych stanów pulpitu. Tabela poniżej opisuje poszczególne pliki wejściowe, które mogą obejmować tylko część stanu. [Zakres i pochodzenie](../docs/MONITORING.md)
 
 ## raw/ · surowe odpowiedzi źródeł
 

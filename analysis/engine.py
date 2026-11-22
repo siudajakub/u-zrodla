@@ -890,9 +890,8 @@ def _stamp(finding, module):
 
 
 def _second_opinion(finding, capture):
-    """Second opinion of a local model (analysis.second_opinion), off by default (INVESTWATCH_SECOND_OPINION=1 and Ollama).
-    In a dated replay the RECORDED result of the 21 XI measurement is attached instead, with its origin. Either way it only
-    describes: route, score and queues stay as the rules set them. A failure is a status, never a scan error."""
+    """Read eligible cases with Ollama. A dated replay can explicitly load measured results with their origin.
+    Route, score and queues stay as the rules set them. A failure adds an availability status to the case."""
     module = finding.get("module")
     decision = finding.get("reviewDecision") if isinstance(finding.get("reviewDecision"), dict) else {}
     try:
@@ -909,7 +908,7 @@ def _second_opinion(finding, capture):
                 axes = finding.get("axes") or {}
                 evidence = [e for axis in ("action", "personalisation") for e in ((axes.get(axis) or {}).get("evidence") or [])]
                 return so.attach(finding, so.review_m3(m3_entity(capture)["pages"], evidence, "oferta_rekomendacji"))
-        elif finding.get("mode") == "replay" and module in ("M1", "M3"):
+        elif so.recorded_enabled() and finding.get("mode") == "replay" and module in ("M1", "M3"):
             from api.second_opinion_recorded import recorded
             positive = decision.get("route") == "refer" if module == "M1" else decision.get("route") in ("refer", "complete")
             second = recorded(finding.get("id") or "", module, positive)

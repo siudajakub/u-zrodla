@@ -60,11 +60,14 @@ x-common: &common
     INVESTWATCH_REPLAY_MEDIA: /replay-media
     INVESTWATCH_SEMANTIC_DIR: '${INVESTWATCH_SEMANTIC_DIR:-/app/.runtime/semantic}'
     YOUTUBE_API_KEY: '${YOUTUBE_API_KEY:-}'
-    # Drugi głos LLM (domyślnie wyłączony). Serwis inference (profil llm) albo Ollama na hoście Maca:
+    # Drugi głos uruchamia Ollama (profil llm) albo Ollama na hoście:
     # OLLAMA_HOST=host.docker.internal:11434 (start.sh dokłada wtedy ops/compose/egress.yaml).
     OLLAMA_HOST: '${OLLAMA_HOST:-inference:11434}'
-    INVESTWATCH_LLM: '${INVESTWATCH_LLM:-0}'
+    INVESTWATCH_LLM: '${INVESTWATCH_LLM-1}'
     INVESTWATCH_LLM_MODEL: '${INVESTWATCH_LLM_MODEL:-}'
+    INVESTWATCH_SECOND_OPINION: '${INVESTWATCH_SECOND_OPINION-1}'
+    INVESTWATCH_SECOND_OPINION_MODEL: '${INVESTWATCH_SECOND_OPINION_MODEL:-}'
+    INVESTWATCH_RECORDED_EXPERIMENT: '${INVESTWATCH_RECORDED_EXPERIMENT:-0}'
     INVESTWATCH_MODEL_ANNOTATE: '${INVESTWATCH_MODEL_ANNOTATE:-0}'
     OPENBLAS_NUM_THREADS: '1'
     OMP_NUM_THREADS: '1'

@@ -1,7 +1,0 @@
-# Nakładka tylko na czas jednorazowego pobrania wag (ops/inference/pull-model.sh): inference dostaje wyjście do sieci.
-# Normalnie serwis inference ma wyłącznie sieć wewnętrzną.
-services:
-  inference:
-    networks: [backend, egress]
-networks:
-  egress: {}

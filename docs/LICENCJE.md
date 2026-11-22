@@ -86,7 +86,7 @@ Wbudowany React (`web/vendor/*.production.min.js`, UMD z linii 18; wersja 18.3.1
 | FFmpeg (system, w `.runtime/demo/ffmpeg`, montowany w compose) | wg dystrybucji | GPL-2.0-or-later (docs/archiwum/DEMO-ODBIOR.md), uruchamiany jako osobny proces, nie dołączany do repo | ffmpeg.org/legal.html |
 | qwen3.5:4b-q4_K_M (Ollama, domyślny `INVESTWATCH_LLM_MODEL`) | brak digestu w repo | Apache-2.0 (analysis/README.md) | ollama.com/library/qwen3.5 |
 | qwen3.5:9b / qwen/qwen3.5-9b (pomiar) | brak digestu | Apache-2.0 (docs/fable/OPENROUTER-M3.md) | huggingface.co/Qwen/Qwen3.5-9B |
-| ministral-3:8b-instruct-2512-q4_K_M, ministral-3:3b-instruct-2512-q4_K_M (zalecenia Mac, ops/mac/README.md) | brak digestu | nie podana w repo, do potwierdzenia | ollama.com |
+| ministral-3:8b-instruct-2512-q4_K_M, ministral-3:3b-instruct-2512-q4_K_M (historyczne pomiary i eksperymenty) | brak digestu | nie podana w repo, do potwierdzenia | ollama.com |
 | gemma4:e2b (tylko test jednostkowy), Gemma 3 12B (pomiar) | brak digestu | Gemma 3: "nie permisywna" (analysis/README.md); Gemma 4 nie podana, do potwierdzenia | ollama.com |
 
 ## Obrazy kontenerów (`compose.yaml`)
@@ -101,7 +101,7 @@ Wbudowany React (`web/vendor/*.production.min.js`, UMD z linii 18; wersja 18.3.1
 
 | Usługa | Użycie | Zależność produktu | Warunki |
 |---|---|---|---|
-| OpenRouter | tylko pomiar wyboru modelu (`tools/measure_llm_openrouter.py`) | nie, produkt używa Ollamy | do potwierdzenia przez właściciela |
+| OpenRouter | porównania deweloperskie (`ops/review/`, `tools/measure_*.py`) | brak, inferencja działa przez lokalną Ollamę | do potwierdzenia przez właściciela |
 | YouTube Data API v3 | odkrywanie i monitoring kanałów, kwota 10 000 j./dobę | tak, w trybie live (offline działa na zapisach) | do potwierdzenia przez właściciela |
 | ScrapeCreators | jednorazowa próbka Instagram/Facebook/reklamy z darmowego pakietu (docs/MONITORING.md) | nie, skan czyta tylko zapisane odpowiedzi | do potwierdzenia przez właściciela; docs/MONITORING.md: Meta uznaje automatyczny odczyt za sprzeczny z warunkami, ryzyko po stronie dostawcy |
 | Meta Ad Library | adapter `meta_ads` gotowy, bez tokenu; import ręczny | nie | do potwierdzenia przez właściciela |

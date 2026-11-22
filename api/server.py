@@ -235,13 +235,9 @@ def models_block(semantic):
     """The AI layers of the desk: E5 material type (status, 30/57) and the second opinion (recorded measurement or local)."""
     import os
     from . import second_opinion_recorded as recorded
-    try:
-        from analysis import second_opinion as so
-        live=so.enabled()
-    except Exception:
-        live=False
+    from analysis import second_opinion as so
     annotate=os.getenv("INVESTWATCH_MODEL_ANNOTATE","").strip().lower() in {"1","on","true"}
-    return recorded.models_block(semantic,annotate,live)
+    return recorded.models_block(semantic,annotate,so.configured_model() if so.enabled() else None,so.recorded_enabled())
 
 @app.get("/v1/overview")
 def overview(schema:int|None=Query(None,ge=1,le=2),request:Request=None):

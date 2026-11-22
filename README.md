@@ -1,85 +1,73 @@
-# InvestWatch · od publikacji do decyzji analityka
+# U Źródła
 
-InvestWatch pomaga analitykom UKNF znaleźć materiały inwestycyjne wymagające sprawdzenia. Z kolejki analityk przechodzi do konkretnej sekundy nagrania, zapisanego widoku reklamy lub cytatu z oferty. Zatwierdzona decyzja zostaje przy wersji materiału, którą sprawdził.
+**Monitoring reklam i ofert inwestycyjnych dla analityka UKNF.** U Źródła wyszukuje materiały z polskiego rynku i prowadzi od sygnału do konkretnej sekundy filmu, zapisanego widoku reklamy albo cytatu z oferty. Analityk może przy tym samym dowodzie zapisać decyzję i przekazać sprawę dalej.
 
-![Pulpit InvestWatch. Analityk otwiera sprawę ForexMind, sprawdza dowód i zatwierdza przekazanie do kontroli.](docs/media/investwatch-flow.gif)
+[Film dla jury · 1:56](presentation/film/U-Zrodla-116s-zespol-AI.mp4) · [Uruchom pokaz](#uruchom-pokaz) · [Dokumentacja](docs/README.md)
 
-[Scenariusz w 2 minuty](docs/hackathon/demo.md#pokaz-w-2-minuty) · [Prezentacja PDF](presentation/InvestWatch.pdf) · [Uruchom pokaz](#uruchom-pokaz) · [Macierz wymagań UKNF](docs/ODBIOR-UKNF.md)
+<img src="docs/media/readme/pulpit.png" width="960" alt="Pulpit analityka z otwartą sprawą ForexMind i odsyłaczem do 0:15 filmu.">
 
-## Od źródła do karty
+## 13 690 materiałów
 
-Stan pokazu z 21 listopada 2026 obejmuje **1 922 materiały**, **274 wpisy w rejestrze reklam** i **17 spraw do sprawdzenia** (7 M1, 9 M2, 1 M3). Rejestr zawiera pozycje potwierdzone i do potwierdzenia. [Scenariusz i liczniki pokazu](docs/hackathon/demo.md)
+Stan pulpitu z **22 listopada 2026 r.** obejmował **13 690 materiałów**, **2 959 pozycji w rejestrze reklam** i **16 spraw do sprawdzenia**. Rejestr zawiera 2 411 pozycji rozpoznanych przez system i 548 kandydatów. To migawka po rozszerzeniu zbioru m.in. o starsze publikacje kanałów z wykrytymi współpracami. [Stan zbioru i sposób doboru](docs/hackathon/demo.md)
 
-| Źródło | Jak czytamy | Co widzi analityk |
-| --- | --- | --- |
-| **YouTube** | Oficjalne Data API v3 służy do odkrywania polskich kanałów i pobierania metadanych. Dla wybranych filmów dołączamy napisy lub zapis rozpoznanej mowy oraz kadry. | Opis, dostępne oznaczenie promocji, cytat z czasem, kadry do ręcznego przejrzenia i odsyłacz do filmu. Pełna transkrypcja jest dostępna w **23 z 1 307** filmów w pokazie. |
-| **TikTok** | Profile odkrywamy z linków w opisach YouTube, a ostatnie publikacje odczytujemy z publicznych osadzeń. | Podpisy i adresy **64 postów** z sześciu polskojęzycznych profili. Odczyt obejmuje podpisy i metadane. |
-| **Facebook** | Pokaz czyta datowaną próbkę zewnętrzną. Publiczny profil bez logowania udostępnia metadane profilu. | Tekst i dostępne wskaźniki reakcji. Próbka wpisów organicznych obejmuje **30 wpisów z 10 stron**. |
-| **Instagram** | Pokaz czyta datowaną próbkę zewnętrzną. Można też zaimportować zapisane osadzenie publicznego profilu. | Podpis i dostępna flaga płatnej współpracy. Próbka wpisów organicznych obejmuje **350 postów z 31 kont**. |
-| **Biblioteka Reklam Meta** | Pokaz czyta zapisaną próbkę reklam na Facebooku i Instagramie kierowanych do odbiorców w Polsce. Oficjalny adapter wymaga tokenu Meta. | **114 reklam**, z treścią, reklamodawcą i datami emisji. Ocena dotyczy dostępnego tekstu i metadanych. |
-| **Strony WWW i wykazy KNF** | Oferty M2 odkrywamy z odsyłaczy na stronach firm i renderujemy w Chromium. M3 czyta strony z przygotowanych wyników wyszukiwania i sprawdza dane w datowanych wykazach. | Zrzut i pomiar ostrzeżenia w reklamie albo cytat z oferty, dane operatora i zakres znalezionego zezwolenia. |
-| **Apple Podcasts i RSS** | Katalog Apple wskazuje audycje po polskich frazach. Kanały RSS pozwalają śledzić kolejne odcinki. | Opis, datę i adres odcinka. Dla wybranej audycji tryb live może dołączyć transkrypcję początku nagrania. |
-| **PeerTube** | Wyszukiwanie po polskich tematach odkrywa filmy i kanały. | Opis filmu, adres i drogę odkrycia. |
+Paczka do odtworzenia z **21 listopada** ma **1 922 materiały**, **274 pozycje w rejestrze** i **17 spraw do sprawdzenia**. Obejmuje 1 307 filmów YouTube, w tym 23 z pełną transkrypcją, oraz **494 materiały Meta** z datowanej próbki zewnętrznej: 350 postów z Instagrama, 30 wpisów z Facebooka i 114 reklam wyszukanych z filtrem kraju emisji „Polska”. [Pochodzenie i pokrycie źródeł](docs/MONITORING.md)
 
-Po uwzględnieniu reklam stan pokazu obejmuje **143 materiały z Facebooka i 351 z Instagrama**. [Monitoring i zakres dostępu](docs/MONITORING.md) · [Pochodzenie próbki Meta](docs/lanes/2026-11-21-fable-k-social.md#co-zawiera-próbka-replay-replay-vendorjsongz-494-materiały)
+## Trzy rodzaje spraw
 
-## Trzy pytania nadzorcze
-
-- **M1 · Czy twórca ujawnił współpracę?** ForexMind ma w opisie link i kod XTB, a w **0:15** odsyła do ofert. Karta łączy te przesłanki i prowadzi do materiału. W podobnym przypadku Comparic wskazuje partnera odcinka w **10:14**, więc film trafia do rejestru reklam. Zwykła opinia bez przesłanki relacji handlowej pozostaje poza kolejką. [Temat 1](docs/zrodla-uknf/TEMAT-1.md) · [Przykłady w pokazie](docs/hackathon/demo.md#pokaz-w-2-minuty)
-- **M2 · Czy klient widzi ryzyko obok informacji o zysku?** InvestWatch sprawdza **19 pozycji** z załącznika UKNF. W sprawie ETF XTB zapis pokazuje informację o dywidendach i położenie ostrzeżenia dotyczącego ETF na komputerze i telefonie. Ostrzeżenie CFD przypisujemy do kontraktów CFD. Pulpit pokazuje wynik, zrzut i pomiar dla sprawdzanego widoku. [Kryteria i dowód M2](docs/zrodla-uknf/KRYTERIA-M2.md#dowód-w-działającym-m2)
-- **M3 · Czy oferta opisuje spersonalizowane doradztwo i kto ją składa?** Na rdmwm.pl cytat wskazuje dobór proporcji akcji i obligacji na podstawie danych klienta. Karta pokazuje przesłankę doradztwa i nieustaloną tożsamość operatora. W kontroli DM BOŚ znaleziony wpis potwierdza zakres doradztwa. Sama zbieżność nazw zostawia tożsamość do wyjaśnienia. [Temat 3](docs/zrodla-uknf/TEMAT-3.md) · [Próba M3](docs/lanes/2026-11-21-fable-f-m3.md)
-
-## Decyzja i dalsza praca
-
-```mermaid
-flowchart LR
-    Source["Materiał i zapis źródła"] --> Analysis["Reguły M1, M2 i M3"]
-    Analysis --> Ad["Rejestr reklam M1"]
-    Analysis --> Review["Do sprawdzenia"]
-    Review --> Decision["Dowód i decyzja analityka"]
-    Decision --> Control["Kontrola"]
-    Decision --> Data["Do uzupełnienia"]
-    Decision --> Done["Zakończone"]
-    Data -->|"Dane uzupełnione"| Review
-```
-
-Po wyborze działania pulpit przygotowuje edytowalny szkic uzasadnienia z dowodów w karcie. Analityk zatwierdza zapis, dodaje wyniki kontroli lub otrzymane dane i może wrócić ze sprawą do oceny. Przekazanie zmienia kolejkę wewnątrz InvestWatch. Historia i eksport CSV zachowują decyzję, uzasadnienie, wersję materiału i adres źródła. Pulpit powiadamia o nowych sprawach wysokiego ryzyka i aktualizuje widok po zapisie decyzji. [Obieg sprawy](docs/hackathon/demo.md#gdzie-trafia-sprawa) · [Kontrakt decyzji i raportu](docs/hackathon/contracts.md#obieg-decyzji-operatora)
-
-![Karta ForexMind z edytowalnym uzasadnieniem przed zatwierdzeniem przekazania do kontroli.](tests/ui/screens/2026-11-22-final-workflow/1440-decyzja.png)
-
-*Sprawa ForexMind przed zatwierdzeniem.* [Karta na telefonie](tests/ui/screens/2026-11-22-final-workflow/390-forexmind.png) · [Sprawa w kolejce Kontrola po zapisie](tests/ui/screens/2026-11-22-final-workflow/1440-kontrola.png)
-
-## Co sprawdziliśmy
-
-| Próba | Wynik i zakres wniosku |
+| Co sprawdza analityk | Co pokazuje pulpit |
 | --- | --- |
-| **Odkrywanie na YouTube** | Algorytm znalazł **3 z 5** największych kanałów z odłożonej listy. Cel próby wynosił 4 z 5. [Wynik Y](fixtures/validation/y-reference/WYNIK-Y-2026-11-21.md) |
-| **M1 · kwalifikacja** | Przy progu 60 reguły poprawnie skierowały **4 z 4** materiałów z przesłanką w zbiorze strojenia (26 materiałów, 20 kampanii). Zero fałszywych alarmów, a wszystkie trzy dodatnie kampanie dotyczyły XTB. W późniejszej ślepej próbie do kolejki **Do sprawdzenia** trafiło **0 z 8** filmów, zgodnie z etykietami. Próba zawierała osiem kontroli ujemnych, więc precyzja i pełność są tam nieobliczalne. [Strojenie M1](fixtures/validation/q-v2/WYNIK-M1-2026-11-21.md) · [Próba diagnostyczna](docs/lanes/2026-11-22-proba-kampanii.md) |
-| **M2 · próg** | Na **25 stronach 11 firm** próg 30 dał 9 trafnych skierowań, 0 fałszywych alarmów, 13 poprawnych odrzuceń i 3 przeoczenia. Przy progu 50 liczba przeoczeń wzrosła do 5. W pulpicie można odtworzyć to porównanie. [Próba M2](docs/lanes/2026-11-21-fable-e-m2.md) |
-| **M3 · oferta i operator** | Odczytaliśmy **29 domen** i wykorzystaliśmy **12 datowanych wykazów**. Próba kwalifikacji obejmowała 31 materiałów, w tym kontrole. Po dostrojeniu reguł na tym zbiorze system skierował jedyny przykład oznaczony jako dodatni. [Próba M3](docs/lanes/2026-11-21-fable-f-m3.md) |
-| **AI · typ materiału** | Lokalny klasyfikator E5 rozpoznał typ **30 z 57** opisów z odłożonych kanałów wobec **13 z 57** dla słownika. Reguły kwalifikacji kierują sprawy do analityka. Opcjonalny drugi głos modelu podlega weryfikacji dosłownych cytatów. [Pomiar E5](docs/lanes/2026-11-21-fable-ai-inferencja.md) · [Drugi głos](docs/lanes/2026-11-21-fable-ai-drugi-glos.md) |
+| **Materiały twórców · M1** | Comparic nazywa XTB partnerem odcinka w **10:14**. ForexMind kieruje widzów do ofert w **0:15**, a w opisie podaje kod TRADEXTB. W drugiej sprawie analityk może zlecić sprawdzenie oznaczenia w obrazie. |
+| **Reklamy firm · M2** | Przy haśle „Otrzymuj dywidendy” karta pokazuje ostrzeżenie dla tego samego produktu i jego położenie na ekranie telefonu. Moduł ma **19 kontroli** opartych na załączniku UKNF. |
+| **Oferty doradcze · M3** | Karta wskazuje cytat o indywidualnym doborze proporcji portfela. Osobno pokazuje, co udało się ustalić o operatorze i zakresie uprawnień. |
 
-Etykiety w tych próbach przygotowali agenci. Trafność w pilotażu wymaga oceny ekspertów na nowych, kompletnych kampaniach. Odbiór techniczny pokazu objął zapis decyzji, powtórzenie zapisu po utracie odpowiedzi oraz pulpit na komputerze i telefonie. [Protokół walidacji](fixtures/validation/PROTOKOL.md) · [Testy i ich zakres](tests/README.md)
+### Od dowodu do decyzji
 
-| Źródła | Kalibracja M2 |
-| --- | --- |
-| ![Źródła na telefonie. Stan odczytu, pochodzenie i liczba materiałów.](tests/ui/screens/2026-11-22-final/390-zrodla.png) | ![Kalibracja M2 na telefonie. Przy progu 30 w próbie odnotowano zero fałszywych alarmów i trzy przeoczenia.](tests/ui/screens/2026-11-22-final/390-kalibracja-m2.png) |
-| Sprawdź, kiedy i jak odczytano daną platformę. [Pełny widok źródeł](tests/ui/screens/2026-11-22-final/1440-zrodla.png) | Porównaj alarmy i przeoczenia przy zmianie progu na tym samym zbiorze. [Pełny widok kalibracji](tests/ui/screens/2026-11-22-final/1440-kalibracja-m2.png) |
+Analityk otwiera fragment filmu, zapisuje uzasadnienie i przekazuje sprawę do kolejki kontroli. Historia zachowuje wersję materiału, na której oparł decyzję.
+
+<img src="docs/media/readme/decyzja.gif" width="820" alt="Analityk zapisuje uzasadnienie i otwiera sprawę ForexMind w kolejce kontroli.">
+
+<table>
+<tr>
+<td width="50%"><img src="docs/media/readme/ostrzezenie-etf.png" alt="Reklama ETF i pomiar położenia ostrzeżenia."><br><strong>Reklama ETF</strong> · korzyść i ostrzeżenie na zapisanym widoku.</td>
+<td width="50%"><img src="docs/media/readme/oferta-doradcza.png" alt="Cytat źródłowy na karcie oferty doradczej."><br><strong>Oferta doradcza</strong> · cytat o indywidualnym doborze portfela.</td>
+</tr>
+</table>
+
+<details>
+<summary>Zobacz kalibrację, źródła i pulpit na telefonie</summary>
+
+Gdy próg rośnie z 30 do 50, kolejka w pokazie kurczy się z 9 do 7 spraw, a na próbie 25 stron liczba przeoczeń rośnie z 3 do 5.
+
+<img src="docs/media/readme/kalibracja.gif" width="820" alt="Próg rośnie z 30 do 50, a liczba przeoczeń z 3 do 5.">
+
+<table>
+<tr>
+<td><img src="docs/media/readme/zrodla.png" width="620" alt="Widok źródeł z datą oraz zakresem odczytu."></td>
+<td><img src="docs/media/readme/sprawa-na-telefonie.png" width="220" alt="Sprawa ForexMind na telefonie."></td>
+</tr>
+</table>
+
+<img src="docs/media/readme/rejestry-operatora.png" width="820" alt="Wyniki sprawdzania operatora w datowanych rejestrach.">
+</details>
+
+## Modele działają lokalnie
+
+Vosk odczytuje mowę, E5 wspiera klasyfikację materiału, a Qwen3.5 4B w lokalnej Ollamie daje drugą opinię. Gdy Ollama jest niedostępna, reguły i pozostałe modele nadal działają. OpenRouter służył do eksperymentów porównawczych. Oficjalne API YouTube dostarcza publikacje w trybie live.
+
+Na Linuksie z Compose przygotuj wagi przez `sh ops/inference/pull-model.sh`. Na Apple Silicon możesz uruchomić Ollamę natywnie. [Przygotowanie Ollamy](ops/demo/README.md#lokalny-model-ollama) · [Przepływ danych](docs/ARCHITEKTURA.md)
 
 ## Uruchom pokaz
 
-1. Otwórz katalog repozytorium na Linux x86_64 lub macOS Apple Silicon. Przygotuj Docker Compose i Node.js **22.13+** oraz około **10 GiB** wolnego miejsca. Na Linux przygotuj też Python 3.12 z venv/pip i FFmpeg. [Instrukcja stanowiska](ops/demo/README.md) · [Procedura na Macu](ops/mac/README.md)
-2. Poproś zespół o prywatną paczkę `replay-media-2026-11-21.tar.gz` z plikiem `.sha256`. Skopiuj oba pliki do katalogu projektu. Do szybkiego startu skopiuj też `investwatch-state-2026-11-21.tar.gz` z jego `.sha256`. Start wczyta gotowy stan przy pustej bazie i zgodnym odcisku kodu. [Archiwa i odtworzenie](ops/demo/README.md)
-3. Uruchom z katalogu projektu.
+Na Linux x86_64 lub macOS Apple Silicon przygotuj Docker Compose, Node.js 22.13+ i około 10 GiB miejsca. Na Linux potrzebujesz również Pythona 3.12 z venv i pip oraz FFmpeg. W katalogu projektu umieść paczkę zespołu `replay-media-2026-11-21.tar.gz` z plikiem `.sha256`. [Paczki i warianty uruchomienia](ops/demo/README.md)
 
-   ```sh
-   sh ops/demo/start.sh
-   ```
+```sh
+sh ops/demo/start.sh
+```
 
-4. Po komunikacie **GOTOWE** otwórz [pulpit InvestWatch](http://127.0.0.1:8769/). Wybierz **Do sprawdzenia**, wyszukaj **ForexMind** i otwórz dowód przy **0:15**. Sprawdź szkic pod **Przekaż do kontroli**, zatwierdź decyzję i wybierz **Otwórz w kontroli**. [Scenariusz pokazu](docs/hackathon/demo.md#pokaz-w-2-minuty)
-
-Pierwsze przygotowanie środowiska pobiera zależności. Późniejszy pokaz korzysta z zapisanego stanu i działa offline bez płatnego API. Cytat i znacznik czasu są dostępne w karcie, a przejście do źródłowego filmu wymaga sieci. Wcześniejszy pomiar na Linux x86_64 wyniósł około 12 min od pustego stanu i 33 s z dopasowanym archiwum. Wariant bez Dockera uruchamia `sh ops/demo/start-local.sh`. [Pomiar i architektura](docs/ARCHITEKTURA.md) · [Uruchomienie lokalne i tryb live](ops/demo/README.md)
+Po komunikacie **GOTOWE** otwórz [pulpit na porcie 8769](http://127.0.0.1:8769/), wyszukaj ForexMind i kliknij wiersz. Pierwsze przygotowanie pobiera zależności i modele. Gotowy pokaz można odtworzyć offline.
 
 ## Dokumentacja
 
-[Wymagania źródłowe UKNF](docs/zrodla-uknf/README.md) · [Architektura i punkty rozszerzeń](docs/ARCHITEKTURA.md) · [Proces pracy z AI](docs/PROCES-AI.md) · [Mapa repozytorium](docs/README.md)
+- [Scenariusz pokazu i pytania jury](docs/hackathon/demo.md)
+- [Architektura](docs/ARCHITEKTURA.md) i [źródła danych](docs/MONITORING.md)
+- [Kryteria odbioru UKNF](docs/ODBIOR-UKNF.md) i [wyniki prób](fixtures/validation/INWENTARZ.md)

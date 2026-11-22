@@ -72,7 +72,7 @@ def _summary():
     return json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
 
 
-def models_block(semantic, annotate_on=False, live_enabled=False):
+def models_block(semantic, annotate_on=False, local_model=None, use_recorded=False):
     """/v1/overview.models: the E5 classifier and the second opinion, numbers read from the measurement summary."""
     summary = _summary().get("modules") or {}
     measured = {}
@@ -83,14 +83,27 @@ def models_block(semantic, annotate_on=False, live_enabled=False):
                            "rulesErrors": run.get("rulesErrors"), "fixed": run.get("fixed"), "broken": run.get("broken"),
                            "costRules": (policy.get("rules") or {}).get("cost"), "costVeto": (policy.get("veto") or {}).get("cost"),
                            "costUsd": run.get("costUsd")}
-    name, licence, tag, memory = CARDS[PRIMARY]
+    from analysis.second_opinion import model_card
+
+    if local_model:
+        details = model_card(local_model, "local")
+        name, licence, tag, memory = local_model, details["weightsLicense"], local_model, details["localMemoryGb"]
+        mode, label = "local", "lokalnie (Ollama)"
+    elif use_recorded:
+        name, licence, tag, memory = CARDS[PRIMARY]
+        mode, label = "recorded", "zapisany pomiar z 21 XI 2026"
+    else:
+        name = licence = tag = memory = None
+        mode, label = "disabled", "wyłączony"
+
     e5 = {"id": "material_type_e5", "name": "multilingual-e5-small (ONNX)", "task": "typ materiału", "status": (semantic or {}).get("status"),
           "affectsDecision": False, "runtime": "local", "annotation": "on" if annotate_on else "off",
           "measured": _e5_measure(), "source": "fixtures/labeled/ai-material-type-result-e5.json"}
     second = {"id": "second_opinion", "name": name, "task": "drugi głos: ujawnienie (M1), oferta rekomendacji (M3)",
               "weightsLicense": licence, "localModel": tag, "localMemoryGb": memory,
-              "mode": "local" if live_enabled else "recorded", "modeLabel": "lokalnie (Ollama)" if live_enabled else "nagrany pomiar z 21 XI 2026",
-              "affectsRoute": False, "measured": measured, "labels": _summary().get("labels"), "source": SUMMARY}
+              "mode": mode, "modeLabel": label,
+              "affectsRoute": False, "measured": measured, "measuredModel": PRIMARY, "labels": _summary().get("labels"),
+              "source": SUMMARY}
     return {"materialType": e5, "secondOpinion": second}
 
 

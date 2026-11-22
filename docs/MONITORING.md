@@ -1,10 +1,17 @@
-# Co obserwuje InvestWatch i jak rozszerzyć próbę
+# Źródła i pokrycie
 
-## Pokrycie w pokazie
+Pulpit U Źródła pokazuje pochodzenie materiału, datę odczytu i dostępne dowody. W trybie odtwarzania pracuje na zapisanych danych. Tryb live sprawdza publiczne źródła i aktualizuje sprawy.
 
-Pulpit pokazuje tryb, datę i wynik odczytu źródła. Analityk widzi, skąd pochodzą dane i co trzeba jeszcze sprawdzić. Stan z 21 XI 2026 obejmuje 1 922 materiały. [Scenariusz i liczniki](hackathon/demo.md)
+| Stan danych | Materiały | Wpisy w rejestrze reklam | Do sprawdzenia |
+| --- | ---: | ---: | ---: |
+| Pokaz z 21 listopada 2026 | 1 922 | 274 | 17 |
+| Rozszerzenie z 22 listopada 2026 | 13 690 | 2 959 | 16 |
 
-| Źródło | Jak trafia do InvestWatch | Co można ocenić w datowanym pokazie |
+Rozszerzenie obejmuje m.in. starsze publikacje kanałów z wcześniej wykrytymi współpracami. Taki dobór pomaga porównywać kampanie i wpływa na udział reklam. Liczniki dotyczą dwóch osobnych stanów i nie sumują się. [Scenariusz i liczniki](hackathon/demo.md)
+
+## Zakres materiałów z 21 listopada
+
+| Źródło | Jak trafia do pulpitu | Co można ocenić w datowanym pokazie |
 | --- | --- | --- |
 | YouTube | Oficjalne API odkrywa kanały i zbiera metadane. Osobna ścieżka pozyskuje dostępne napisy i kadry. | 1 307 filmów, w tym 23 z pełną transkrypcją. Karta pokazuje dowód z opisu lub mowy. Dostępne kadry ocenia analityk. |
 | TikTok | Odczyt publicznych osadzeń wybranych profili. | 64 podpisy postów. Zakres odczytu obejmuje tekst podpisu. |

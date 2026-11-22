@@ -1,8 +1,20 @@
-# analysis — reguły M1/M2/M3, modele, ASR
+# Analiza materiałów
 
-Zamienia Capture z `collectors/` w Finding: wynik, dowody, `reviewDecision`. Wejście: `engine.analyze(capture, semantic=...)`. Bez werdyktu prawnego.
+`engine.analyze(capture, semantic=...)` zwraca wynik, cytaty i proponowaną kolejkę. Analityk ocenia dowody i zapisuje decyzję.
 
-## Potok i co decyduje
+## Modele na stanowisku
+
+| Model | Zadanie | Uruchomienie |
+| --- | --- | --- |
+| Multilingual E5 Small | Wskazuje pasujące fragmenty i wspiera klasyfikację typu materiału. | ONNX na CPU. Bootstrap przygotowuje wagi i sprawdza ich skróty. |
+| Vosk PL | Zapisuje tekst i czas wypowiedzi w dostępnym nagraniu. | Lokalnie na CPU. Własne wagi można wskazać przez `INVESTWATCH_VOSK_MODEL` i `INVESTWATCH_VOSK_LIBRARY`. |
+| Qwen 3.5 4B Q4 | Daje drugi głos w sprawach M1, M2 i M3. | Lokalna Ollama. Domyślny tag to `qwen3.5:4b-q4_K_M`. |
+
+Gdy Ollama jest dostępna, drugi głos dołącza cytat sprawdzony z tekstem źródłowym. Rozbieżność oznacza dowód do weryfikacji. Kolejkę nadal wyznaczają reguły. Gdy lokalny model jest niedostępny, aplikacja pokazuje jego stan i nadal analizuje materiały regułami. [Konfiguracja lokalna](../ops/demo/README.md#lokalny-model-ollama)
+
+OpenRouter służy do jawnych pomiarów z `ops/review/` i `tools/`. Wyniki historyczne można odczytać offline. [Pomiary inferencji](../docs/lanes/2026-11-21-fable-ai-inferencja.md) · [Pomiar drugiego głosu](../docs/lanes/2026-11-21-fable-ai-drugi-glos.md)
+
+## Przepływ analizy
 
 1. Preprocessing: `material_classifier.clean_text`, `dedupe` (HTML, NFKC, URL, znaczniki czasu, powtórzone linie, duplikaty).
 2. Embedding: E5 `multilingual-e5-small`, ONNX int8, CPU, 384 wymiary, SHA-256 w `semantic-lock.json`. `semantic.suggest` (woła `api/jobs.py`) wskazuje fragment źródła.
@@ -31,7 +43,7 @@ Zamienia Capture z `collectors/` w Finding: wynik, dowody, `reviewDecision`. Wej
 
 Kto woła: `api/jobs.py` (`analyze`, `semantic`, `transcribe_file`; wołany przez `api/worker.py`), `api/store.py` (`qualification`, `semantic`, `setup_semantic`, `module_rules`), `api/server.py` (`calibration`, `second_opinion`), `api/enrich.py`, `api/listen.py`, `api/calibration_modules.py`, `collectors/media.py` (`transcribe_excerpt`), `tools/measure_*.py`, `ops/demo/bootstrap.sh`, `ops/mac/*.sh`.
 
-Flagi (domyślnie wyłączone): `INVESTWATCH_LLM=1` (Ollama, `OLLAMA_HOST`, `INVESTWATCH_LLM_MODEL`), `INVESTWATCH_SECOND_OPINION=1`, `INVESTWATCH_LLM_DEMO_API=1` (limit `INVESTWATCH_LLM_DEMO_DAILY_USD`). Własne wagi ASR: `INVESTWATCH_VOSK_MODEL`, `INVESTWATCH_VOSK_LIBRARY`. Bez usługi LLM status `unavailable`, reguły działają bez zmian.
+
 
 ```sh
 python3 -m analysis.setup_asr && python3 -m analysis.transcribe --replay analysis/media/studio.mp4
@@ -41,5 +53,3 @@ sh ops/mac/measure-llm.sh --pull                          # trafność LLM na Ma
 python3 tools/measure_second_opinion.py report            # drugi głos z zapisanych pomiarów
 python3 -B -m unittest discover -s analysis -t . -p 'test_*.py'
 ```
-
-Pomiary i decyzje: [inferencja i typ materiału](../docs/lanes/2026-11-21-fable-ai-inferencja.md), [drugi głos](../docs/lanes/2026-11-21-fable-ai-drugi-glos.md).

@@ -1,6 +1,6 @@
-# web/
+# Pulpit analityka
 
-Pulpit analityka. Bieżący: React 19 + Astryx w `src/desk`, budowany esbuildem do `theme-preview/` (poza Gitem). Starszy: `legacy.html` + `app.js`. Zasady komponentów Astryx: [AGENTS.md](AGENTS.md) (`GEMINI.md` tylko je importuje).
+Pulpit U Źródła łączy kolejkę spraw z dowodami, decyzjami i kalibracją progu. React 19 i Astryx działają ze statycznej kompilacji `theme-preview/`. Aktualny kod jest w `src/desk/`. [Przebieg pokazu](../docs/hackathon/demo.md) · [Zasady Astryx](AGENTS.md)
 
 | Plik `src/desk/` | Odpowiedzialność |
 |---|---|
@@ -22,8 +22,9 @@ Pulpit analityka. Bieżący: React 19 + Astryx w `src/desk`, budowany esbuildem 
 
 Pozostałe pliki:
 
-- `index.html`: serwowany pod `/`, ładuje `/theme-preview/preview.js`; przy błędzie przechodzi do `/legacy.html`.
+- `index.html`: serwowany pod `/`, ładuje `/theme-preview/preview.js`; przy błędzie pokazuje przycisk ponowienia.
 - `src/preview.js`, `src/preview.html`, `src/astryx-themes.js`, `build-preview.mjs`: wejście, szablon i motyw kompilacji do `theme-preview/`.
+- `src/brand/` zawiera znak U Źródła i lokalny font zmienny Inter z polskimi znakami oraz jego licencją SIL OFL.
 - Starszy pulpit: `legacy.html`, `boot.js`, `app.js`, `style.css`, `vendor/` (React UMD). Czyta schemat 1 API.
 - `dev-server.mjs`: serwer bez backendu, odpowiada kształtami z `sample/export.json`; `node web/dev-server.mjs [--port 18790] [--legacy]`.
 - `sample/`: `build_sample.py` pobiera eksport działającego API do `export.json`, miniatury kadrów i zrzutów M2.

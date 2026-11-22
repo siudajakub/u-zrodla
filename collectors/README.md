@@ -1,6 +1,6 @@
-# collectors — odkrywanie i zapis materiałów
+# Kolektory materiałów
 
-Pobiera publiczne materiały (YouTube, podcasty, strony firm, Meta, TikTok, strony ofert M2/M3) i zwraca rekordy Capture z dowodem pochodzenia. Nie ocenia materiału; to robi `analysis/`.
+Kolektory odkrywają publiczne źródła, pobierają materiały i zapisują je jako rekordy Capture. Każdy rekord łączy materiał z adresem i pochodzeniem. Odtwarzanie korzysta z wcześniej zapisanych odpowiedzi. [Pokrycie platform](../docs/MONITORING.md) · [Analiza](../analysis/README.md)
 
 | Plik | Odpowiedzialność | Główne wejścia | Testy |
 |---|---|---|---|

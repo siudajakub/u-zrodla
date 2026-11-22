@@ -17,6 +17,18 @@ iw_load_env() { # wczytuje .env (jeśli jest) bez nadpisywania zmiennych już us
 
 iw_sha() { if command -v sha256sum >/dev/null 2>&1; then sha256sum "$@"; else shasum -a 256 "$@"; fi; }
 
+iw_ollama_model_ready() {
+  model_ref=$2
+  case "${model_ref##*/}" in *:*) ;; *) model_ref="$model_ref:latest" ;; esac
+  case "$model_ref" in
+    *.*/*|*:*/*) manifest=$model_ref ;;
+    */*) manifest="registry.ollama.ai/$model_ref" ;;
+    *) manifest="registry.ollama.ai/library/$model_ref" ;;
+  esac
+  model_tag=${manifest##*:}
+  [ -f "$1/models/manifests/${manifest%:*}/$model_tag" ]
+}
+
 iw_python() { # Python 3.12 (venv/Homebrew/PATH); wynik w PY312, pierwszy dowolny python3 w PY3
   PY312=
   for c in python3.12 /opt/homebrew/bin/python3.12 /usr/local/bin/python3.12 python3; do
@@ -103,15 +115,15 @@ iw_need_pack() { # gwarantuje paczkę mediów albo kończy z instrukcją (kod 3)
     echo "Rozpakowuję paczkę mediów z $arc"
     iw_unpack "$arc" && iw_pack_verify && return 0
   fi
-  [ "${INVESTWATCH_ALLOW_NO_MEDIA:-0}" != 1 ] || { echo 'Uwaga: start bez paczki mediów, kolejka "Co wymaga sprawdzenia" będzie pusta.' >&2; return 0; }
+  [ "${INVESTWATCH_ALLOW_NO_MEDIA:-0}" != 1 ] || { echo 'Start bez paczki mediów. Transkrypcje i kadry z paczki będą niedostępne.' >&2; return 0; }
   cat >&2 <<MSG
-BRAK PACZKI MEDIÓW REPLAY (transkrypcje i kadry 17 filmów z 21 XI 2026). Bez niej kolejka "Co wymaga sprawdzenia" jest pusta.
+BRAK PACZKI MEDIÓW REPLAY. Paczka zawiera transkrypcje i kadry filmów z pokazu.
 Powód: $(tail -n 5 "$IW_LOG" | tr '\n' ' ' | cut -c1-300)
 Na maszynie, która ma paczkę (devbox):  sh ops/demo/pack-media.sh
 Skopiuj OBA pliki do katalogu projektu na tym komputerze (poza Git):
   $ARCHIVE_NAME   i   $ARCHIVE_NAME.sha256
 i uruchom to polecenie ponownie. Własna lokalizacja: INVESTWATCH_MEDIA_ARCHIVE=/sciezka/do/archiwum.tar.gz
-Świadomy start z pustą kolejką: INVESTWATCH_ALLOW_NO_MEDIA=1
+Start bez tych mediów: INVESTWATCH_ALLOW_NO_MEDIA=1
 MSG
   exit 3
 }

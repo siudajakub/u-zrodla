@@ -56,7 +56,19 @@ INVESTWATCH_RESET=0; export INVESTWATCH_RESET INVESTWATCH_MODE="$MODE"
 mkdir -p "$STATE_DIR"; chmod 700 "$STATE_DIR"
 iw_objects_layout "$STATE_DIR" "$OBJECTS_DIR"
 [ "$MODE" = live ] || [ "$COLD" = 1 ] || iw_restore_state "$STATE_DIR" "$OBJECTS_DIR" || true
-case ",${COMPOSE_PROFILES:-}," in *,llm,*) mkdir -p "${INVESTWATCH_OLLAMA_DIR:-$ROOT/.runtime/ollama}" ;; esac
+OLLAMA_DIR=${INVESTWATCH_OLLAMA_DIR:-$ROOT/.runtime/ollama}
+case "${INVESTWATCH_LLM-1}:${OLLAMA_HOST:-inference:11434}" in
+  1:inference:11434|on:inference:11434|true:inference:11434|ollama:inference:11434)
+    local_model=${INVESTWATCH_SECOND_OPINION_MODEL:-${INVESTWATCH_LLM_MODEL:-qwen3.5:4b-q4_K_M}}
+    if iw_ollama_model_ready "$OLLAMA_DIR" "$local_model"; then
+      case ",${COMPOSE_PROFILES:-}," in
+        *,llm,*) ;;
+        *) COMPOSE_PROFILES="${COMPOSE_PROFILES:+$COMPOSE_PROFILES,}llm"; export COMPOSE_PROFILES ;;
+      esac
+    fi
+    ;;
+esac
+case ",${COMPOSE_PROFILES:-}," in *,llm,*) mkdir -p "$OLLAMA_DIR" ;; esac
 WEB_IMAGE=${INVESTWATCH_WEB_IMAGE:-nginx:1.27-alpine}
 docker image inspect "$WEB_IMAGE" >/dev/null 2>&1 || docker pull "$WEB_IMAGE"
 if [ "${INVESTWATCH_PREVIEW:-auto}" != off ] && [ -f web/package-lock.json ]; then

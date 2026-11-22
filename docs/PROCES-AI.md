@@ -1,4 +1,4 @@
-# Proces wytwarzania z asystentami AI
+# Jak zespół weryfikował pracę asystentów AI
 
 Opis stanu z 21 XI 2026. Dotyczy drugiej rundy prac, prowadzonej w Claude Code. Pierwsza runda w Codex (ASTRA, SOL, TERRA) dostarczyła bazę `eaa9c10` ([tablica](../TEAM_BOARD.md)). Reguły wspólne dla obu narzędzi są w [AGENTS.md](../AGENTS.md), a plan drugiej rundy w [REALIZACJA](fable/REALIZACJA.md).
 
@@ -18,7 +18,7 @@ Opis stanu z 21 XI 2026. Dotyczy drugiej rundy prac, prowadzonej w Claude Code. 
 3. **Zamrożony protokół etykiet.** [PROTOKOL 1.0](../fixtures/validation/PROTOKOL.md) zamrożono przed strojeniem reguł i przed skanem YouTube. Skróty plików są w [FREEZE.json](../fixtures/validation/FREEZE.json). Każda zmiana tworzy nową wersję.
 4. **Ślepe etykiety przed pierwszym uruchomieniem reguł.** Tak powstały etykiety M2 (`9d5cb05` przed `6bebaa4`), M3 (`1bd9caf` przed `f4bfce9`) i typów materiału (`4125285` przed klasyfikatorem). Raport zawsze nazywa je „ocenami agentów”, a nie wzorcem eksperckim.
 5. **Lista referencyjna ukryta przed wyszukującym.** Listę kanałów Y zamrożono, zanim B uruchomił skan. Kontrola skażenia wykazała, że żaden z 82 ID nie występuje w kodzie ani w zapytaniach ([WYNIK-Y](../fixtures/validation/y-reference/WYNIK-Y-2026-11-21.md)).
-6. **Koszty za zgodą i z rejestrem.** Budżet OpenRouter wynosi 10 USD, wydano ok. 0,14 USD. Licznik Fable odczytuje zużycie przed każdą turą i po niej ([rejestr kosztów](../TEAM_BOARD.md)). Z usługi ScrapeCreators zużyto 74 ze 100 darmowych kredytów bez zakupów ([rekord K](lanes/2026-11-21-fable-k-social.md)). Produkt nie woła płatnych API.
+6. **Koszty za zgodą i z rejestrem.** Porównania modeli w OpenRouter kosztowały ok. 0,88 USD przy limicie 10 USD. Datowana próbka ScrapeCreators zużyła 74 ze 100 darmowych kredytów. Aplikacja analizuje materiały lokalnie. [Rejestr kosztów](../TEAM_BOARD.md) · [Próbka Meta](lanes/2026-11-21-fable-k-social.md)
 7. **Sekrety poza repo.** Klucze leżą w środowisku i w `~/.config/investwatch/`. W zapisanych żądaniach widnieje `key=REDACTED`, a wzór zmiennych jest w [.env.example](../.env.example).
 8. **Raport mówi, co zrobiono i czego nie sprawdzono.** Każdy rekord linii ma sekcje Verification i Handoff. Przykład z commita `7d25695`: „Not yet run on macOS”.
 
@@ -31,7 +31,7 @@ Opis stanu z 21 XI 2026. Dotyczy drugiej rundy prac, prowadzonej w Claude Code. 
 
 ## Dobór modelu i wysiłku
 
-Opus z wysokim namysłem dostał diagnozy, sporne dane, walidację i sędziowanie. Sonnet dostał integrację, UI i adaptery. Na polecenie J od fali 2 domyślny poziom to medium, a high zostaje dla diagnoz i sędziów ([tablica](../TEAM_BOARD.md)). Faktyczny model zapisuje każdy rekord linii, np. Sonnet 5.5 przy naprawie 429 ([rekord C](lanes/2026-11-21-fable-c-media.md)). Modele do produktu mierzyliśmy przez OpenRouter, bo na devboxie nie wolno ich uruchamiać. Produkt działa na lokalnych regułach i E5 ([rekord AI](lanes/2026-11-21-fable-ai-inferencja.md)).
+Opus z wysokim namysłem dostał diagnozy, sporne dane, walidację i sędziowanie. Sonnet dostał integrację, UI i adaptery. Na polecenie J od fali 2 domyślny poziom to medium, a high zostaje dla diagnoz i sędziów ([tablica](../TEAM_BOARD.md)). Faktyczny model zapisuje każdy rekord linii, np. Sonnet 5.5 przy naprawie 429 ([rekord C](lanes/2026-11-21-fable-c-media.md)). Model porównywaliśmy w osobnych eksperymentach. Stanowisko używa lokalnych reguł, E5 i drugiego głosu z Ollamy, gdy silnik ma dostęp do wag. [Pomiary](lanes/2026-11-21-fable-ai-inferencja.md) · [Konfiguracja](../analysis/README.md)
 
 ## Agent złapał błąd agenta albo człowieka
 

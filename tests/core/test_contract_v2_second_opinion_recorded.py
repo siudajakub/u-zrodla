@@ -1,4 +1,5 @@
 """The recorded second opinion in a dated replay: attached with its origin, never changes route, score or queues (lane H)."""
+import os
 import unittest
 from unittest.mock import patch
 
@@ -27,16 +28,29 @@ class Recorded(unittest.TestCase):
 
     def test_attaching_it_changes_nothing_but_the_field(self):
         cap = capture("youtube:CDk20n4u9Kk", mode="replay", description="Opis. Współpraca z XTB: https://link-pso.xtb.com/pso/abc")
-        with patch("api.second_opinion_recorded.recorded", return_value=None):
+        with patch.dict(os.environ, {"INVESTWATCH_SECOND_OPINION": "0", "INVESTWATCH_RECORDED_EXPERIMENT": "0"}):
             plain = analyze(cap)
-        with_second = analyze(cap)
+        with patch.dict(os.environ, {"INVESTWATCH_SECOND_OPINION": "0", "INVESTWATCH_RECORDED_EXPERIMENT": "1"}):
+            with_second = analyze(cap)
         self.assertIn("secondOpinion", with_second)
         self.assertNotIn("secondOpinion", plain)
         strip = lambda f: {k: v for k, v in f.items() if k != "secondOpinion"}
         self.assertEqual(strip(with_second), plain)
 
+    def test_replay_defaults_to_local_and_marks_unavailability(self):
+        cap = capture("youtube:CDk20n4u9Kk", mode="replay", description="Opis. Współpraca z XTB: https://link-pso.xtb.com/pso/abc")
+        with (patch.dict(os.environ, {}, clear=True),
+              patch("analysis.inference._http", return_value={"models": []})):
+            finding = analyze(cap)
+        second = finding["secondOpinion"]
+        self.assertEqual(second["runtime"], "local")
+        self.assertEqual(second["modelId"], "qwen3.5:4b-q4_K_M")
+        self.assertEqual(second["status"], "unavailable")
+        self.assertIsNone(second["verdict"])
+        self.assertFalse(second["affectsRoute"])
+
     def test_models_block_reads_the_numbers_from_the_summary(self):
-        block = rec.models_block({"status": "unavailable"})
+        block = rec.models_block({"status": "unavailable"}, use_recorded=True)
         second = block["secondOpinion"]
         self.assertEqual(second["mode"], "recorded")
         self.assertEqual((second["measured"]["M3"]["costRules"], second["measured"]["M3"]["costVeto"]), (10, 1))
