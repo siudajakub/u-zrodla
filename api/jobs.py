@@ -152,7 +152,7 @@ def recompute_pairs_raw(modules=("M1",)):
         rows=db.execute("SELECT id,body FROM cases").fetchall()
         for row in rows:
             body=json.loads(row["body"])
-            if body.get("module","M1") not in modules:
+            if body.get("module","M1") not in modules or store.derive_origin(body)=="synthetic":
                 continue
             last=db.execute("SELECT capture,finding FROM versions WHERE id=? AND version=?",(row["id"],body.get("version"))).fetchone()
             if last is None:
@@ -196,7 +196,7 @@ def youtube_options():
 
 def build(row, owner=None):
     import json
-    from analysis.engine import analyze, demo_captures
+    from analysis.engine import analyze
     from analysis.semantic import suggest, review_suggestion
     mode=row["mode"]
     runner=ScanRunner(row["id"],owner,mode) if row.get("id") and owner else MemoryRunner()
@@ -274,18 +274,13 @@ def build(row, owner=None):
     if mode == "live" and chromium:
         from collectors.m2_browser import refresh_from_worker
         refresh = lambda name, root: refresh_from_worker(name, root, chromium)
-    proven_urls = apply_rendered(discovery, staged_captures(mode, store.STATE / "m2", refresh))
-    alert_only = mode == "replay" and list(only or []) == ["demo-alert"]
-    if mode == "replay" and not alert_only:
+    if mode == "live" or not only:
+        apply_rendered(discovery, staged_captures(mode, store.STATE / "m2", refresh))
+    if mode == "replay" and not only:
         # The dated market archive of the M2 lane: rendered pages of registered firms, desktop and phone, no browser.
         from collectors.m2_market import market_captures
-        proven_urls |= apply_rendered(discovery, market_captures(mode="replay"))
-    from collectors.discovery import m3_domain
-    m3_known = {m3_domain(item) for item in discovery["captures"] if item.get("module") == "M3"}
-    demos = [cap for cap in demo_captures()
-             if (cap.get("module") != "M2" or cap["url"] not in proven_urls)
-             and (cap.get("module") != "M3" or cap.get("synthetic") or m3_domain(cap) not in m3_known)] if mode == "replay" and not alert_only else []
-    captures=discovery["captures"]+demos
+        apply_rendered(discovery, market_captures(mode="replay"))
+    captures=[cap for cap in discovery["captures"] if store.derive_origin(cap)!="synthetic"]
     from .enrich import enrich_media
     with store.connection() as db:
         known=store.media_states(db)
@@ -341,9 +336,10 @@ def recover():
     for key in keys:
         enqueue(key)
 
-def work():
-    logging.basicConfig(level=logging.INFO)
-    store.init()
+def bootstrap_replay():
+    """Queue the archived source scans once, using their durable request IDs."""
+    if (store.STATE / "state-pack.json").is_file():
+        return
     submit("replay","bootstrap-m2-rendered-v1")
     from collectors.discovery import ADAPTERS
     if "youtube-replay" in ADAPTERS and (ROOT/"fixtures/raw/discovery/youtube-api-2026-11-21/replay.json.gz").is_file():
@@ -356,6 +352,13 @@ def work():
         submit("replay","bootstrap-m3-offers-replay-v1",{"adapters":["m3-offers-replay"]})
     if "meta-import-replay" in ADAPTERS and (ROOT/"fixtures/raw/discovery/social-2026-11-21/replay-meta.json.gz").is_file():
         submit("replay","bootstrap-meta-import-replay-v1",{"adapters":["meta-import-replay"]})
+
+
+def work():
+    logging.basicConfig(level=logging.INFO)
+    store.init()
+    if os.environ.get("INVESTWATCH_MODE","demo")=="demo":
+        bootstrap_replay()
     next_check=0
     interval=int(os.environ.get("INVESTWATCH_DISCOVERY_INTERVAL","14400"))
     while True:

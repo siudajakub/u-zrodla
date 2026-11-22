@@ -168,8 +168,9 @@ class Worker(ScanCase):
     def setUp(self):
         super().setUp()
         self.enterContext(patch("analysis.semantic.suggest", return_value={"status": "unavailable"}))
-        from analysis import engine as eng
-        # the market archive and the M3 fixture are the only inputs; the media pack of this host is not used
+        # The default replay includes M2 renders. The explicit M3 scan reads only its own archive.
+        m2, _ = store.create_scan("replay", "m2-1")
+        self.jobs.process.call_local(m2["id"])
         scan, _ = store.create_scan("replay", "m3-1", {"adapters": ["m3-offers-replay"]})
         self.jobs.process.call_local(scan["id"])
 

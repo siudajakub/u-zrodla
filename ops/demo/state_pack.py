@@ -10,6 +10,7 @@ Kody wyjścia restore: 0 przywrócono, 10 odcisk kodu niezgodny (nic nie zmienio
 Tylko biblioteka standardowa (macOS i Linux, Python >= 3.8).
 """
 import argparse
+from contextlib import closing
 from datetime import datetime, timezone
 import hashlib
 import io
@@ -29,22 +30,25 @@ FORMAT = 1
 OBJECT_DIRS = ("uploads", "m2", "media-cache", "meta-import", "youtube-raw", "youtube-cache")
 TRANSIENT = ("queue.sqlite3", "queue.sqlite3-wal", "queue.sqlite3-shm", "cases.sqlite3-wal", "cases.sqlite3-shm")
 # Wejścia, od których zależy wynik analizy. Zmiana któregokolwiek pliku = inny odcisk = normalny bootstrap.
-INPUTS = ("api", "analysis", "collectors", "fixtures", "data/probe-snapshots")
+INPUTS = ("api", "analysis", "collectors", "fixtures", "data/probe-snapshots", "tools/eval_validation.py")
+MODULE_ROOTS = {"api", "analysis", "collectors"}
 
 
 def code_fingerprint(root=ROOT):
     try:
-        # Tylko pliki śledzone (z treścią z katalogu roboczego): nieśledzone wyniki pomiarów i pliki w toku nie są
-        # wersją kodu. Testy i dokumentacja nie wpływają na stan.
-        out = subprocess.run(["git", "ls-files", "-z", "--cached", "--", *INPUTS],
-                             cwd=root, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, check=True).stdout
-        names = sorted({os.fsdecode(n) for n in out.split(b"\0") if n})
+        def files(options, paths):
+            out = subprocess.run(["git", "ls-files", "-z", *options, "--", *paths],
+                                 cwd=root, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, check=True).stdout
+            return {os.fsdecode(n) for n in out.split(b"\0") if n}
+
+        names = files(("--cached",), INPUTS)
+        # A new Python module is executable before commit. Ignore untracked data, results and dependency caches.
+        names.update(name for name in files(("--others", "--exclude-standard"), sorted(MODULE_ROOTS))
+                     if Path(name).suffix == ".py")
     except (OSError, subprocess.CalledProcessError):
         return None  # bez git nie da się wiarygodnie porównać: zawsze normalny bootstrap
-    watch = root / ".runtime/watch"
-    extra = sorted(str(p.relative_to(root)) for p in watch.rglob("*") if p.is_file()) if watch.is_dir() else []
     digest = hashlib.sha256()
-    for name in names + extra:
+    for name in sorted(names):
         path = root / name
         if not path.is_file() or "__pycache__" in path.parts or path.name.startswith("test_") or path.suffix == ".md":
             continue
@@ -60,9 +64,37 @@ def code_fingerprint(root=ROOT):
 def scans_ready(db_path):
     with sqlite3.connect(f"{db_path.as_uri()}?mode=ro", uri=True, timeout=5) as db:
         rows = db.execute("select request_id,status from scans").fetchall()
-        cases = db.execute("select count(*) from cases").fetchone()[0]
+        if db.execute("select 1 from sqlite_schema where name='queue_members'").fetchone():
+            cases = db.execute("select count(*) from queue_members where name='all'").fetchone()[0]
+        else:
+            cases = db.execute("select count(*) from cases").fetchone()[0]
     pending = [r for r in rows if r[1] in ("queued", "running")]
     return rows, pending, cases
+
+
+def remove_synthetic_cases(db_path):
+    """Clean the transferable snapshot while keeping the operator's original database intact."""
+    related = {"cases": "id", "versions": "id", "version_meta": "id", "history": "case_id",
+               "events": "ref", "discoveries": "case_id", "reach_samples": "case_id", "media_state": "case_id",
+               "qualification_results": "case_id", "queue_rows": "id", "queue_members": "id"}
+    with closing(sqlite3.connect(db_path)) as db:
+        db.execute("CREATE TEMP TABLE synthetic_cases(id TEXT PRIMARY KEY)")
+        db.execute("""
+            INSERT INTO synthetic_cases
+            SELECT id FROM cases WHERE json_valid(body) AND (
+                json_extract(body,'$.synthetic') = 1 OR json_extract(body,'$.contractDemo') = 1
+                OR json_extract(body,'$.origin') = 'synthetic')
+        """)
+        if not db.execute("SELECT 1 FROM synthetic_cases LIMIT 1").fetchone():
+            return
+        tables = {row[0] for row in db.execute("SELECT name FROM sqlite_schema WHERE type='table'")}
+        for table, column in related.items():
+            if table in tables:
+                db.execute(f"DELETE FROM {table} WHERE {column} IN (SELECT id FROM synthetic_cases)")
+        if "queue_dirty" in tables:
+            db.execute("DELETE FROM queue_dirty WHERE kind='case' AND key IN (SELECT id FROM synthetic_cases)")
+        db.commit()
+        db.execute("VACUUM")
 
 
 def pack(args):
@@ -71,9 +103,6 @@ def pack(args):
     db_path = state / "cases.sqlite3"
     if not db_path.is_file():
         sys.exit(f"Brak {db_path}: najpierw zakończony bootstrap (sh ops/demo/start.sh).")
-    rows, pending, cases = scans_ready(db_path)
-    if pending or not rows:
-        sys.exit(f"Skany nie są zakończone ({len(pending)} w toku z {len(rows)}). Poczekaj na GOTOWE i powtórz.")
     fp = code_fingerprint()
     if not fp:
         sys.exit("Brak git: nie da się policzyć odcisku kodu.")
@@ -83,6 +112,10 @@ def pack(args):
         snap = Path(tmp) / "cases.sqlite3"
         with sqlite3.connect(f"{db_path.as_uri()}?mode=ro", uri=True, timeout=30) as src, sqlite3.connect(snap) as dst:
             src.backup(dst)  # spójna kopia także przy działającym api/workerze
+        remove_synthetic_cases(snap)
+        rows, pending, cases = scans_ready(snap)
+        if pending or not rows:
+            sys.exit(f"Skany nie są zakończone ({len(pending)} w toku z {len(rows)}). Poczekaj na GOTOWE i powtórz.")
         meta = {"format": FORMAT, "event": EVENT, "codeFingerprint": fp, "flavor": args.flavor,
                 "createdAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                 "cases": cases, "scans": sorted(r[0] for r in rows),
@@ -95,7 +128,7 @@ def pack(args):
             tar.addfile(info, io.BytesIO(blob))
             tar.add(snap, "state/cases.sqlite3")
             for item in sorted(state.iterdir()):
-                if item.name in TRANSIENT or item.name == "cases.sqlite3" or item.name in OBJECT_DIRS:
+                if item.name in TRANSIENT or item.name in ("cases.sqlite3", "state-pack.json") or item.name in OBJECT_DIRS:
                     continue
                 tar.add(item, f"state/{item.name}")
             for name in OBJECT_DIRS:
@@ -160,13 +193,16 @@ def restore(args):
                 tar.extractall(tmp, members=members, filter="data")
             else:
                 tar.extractall(tmp, members=members)
-            with sqlite3.connect(tmp / "state/cases.sqlite3") as db:
+            snapshot = tmp / "state/cases.sqlite3"
+            with closing(sqlite3.connect(f"{snapshot.as_uri()}?mode=ro", uri=True)) as db:
                 if db.execute("pragma integrity_check").fetchone()[0] != "ok":
                     print("Baza z archiwum nie przeszła integrity_check.", file=sys.stderr)
                     return 1
             state.mkdir(parents=True, exist_ok=True, mode=0o700)
             objects.mkdir(parents=True, exist_ok=True, mode=0o700)
             for item in (tmp / "state").iterdir():
+                if item.name in TRANSIENT or item.name in ("cases.sqlite3", "state-pack.json"):
+                    continue
                 dest = state / item.name
                 if dest.is_dir() and not any(dest.iterdir()):
                     dest.rmdir()
@@ -180,6 +216,8 @@ def restore(args):
                         print(f"Pomijam {item.name}: {dest} nie jest pusty.", file=sys.stderr)
                         continue
                     shutil.move(str(item), str(dest))
+            shutil.move(str(snapshot), str(state / snapshot.name))
+            (tmp / "state-pack.json").replace(state / "state-pack.json")
         finally:
             shutil.rmtree(tmp, ignore_errors=True)
     print(f"Przywrócono stan z {archive.name} ({meta.get('cases')} spraw, kod {meta.get('git')}, {meta.get('createdAt')}).")

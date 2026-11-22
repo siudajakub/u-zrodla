@@ -1,5 +1,4 @@
 """Durable case data. Each transaction gets its own SQLite connection."""
-from collections import Counter
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from functools import lru_cache
@@ -16,6 +15,7 @@ from urllib.parse import parse_qs, urlsplit
 from uuid import uuid4
 
 from collectors.adapter import LeaseLost, daily_limit, health_of, legacy_paths, merge_stored_paths, quota_day, redact
+from . import queue_view
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = Path(os.environ.get("INVESTWATCH_STATE", ROOT / ".runtime/demo")).resolve()
@@ -75,6 +75,8 @@ def connection(write=False):
         db.execute("PRAGMA foreign_keys=ON")
         db.execute("BEGIN IMMEDIATE" if write else "BEGIN")
         yield db
+        if write:
+            queue_view.refresh(db)
         db.commit()
     except BaseException:
         db.rollback()
@@ -166,7 +168,8 @@ MIGRATIONS = ((2, "schema_meta i numeracja wersji schematu", _migration_2),
               (5, "qualification_results (kwalifikacja D w cieniu)", _migration_5),
               (6, "thresholds, qualification_settings", _migration_6),
               (7, "media_state (zaległość mediów bramki mowy)", _migration_7),
-              (8, "quota_keys (księga kwoty per klucz)", _migration_8))
+              (8, "quota_keys (księga kwoty per klucz)", _migration_8),
+              (9, "Trwały widok kolejek i liczników", queue_view.migrate))
 SCHEMA_VERSION = MIGRATIONS[-1][0]
 
 def migrate(db):
@@ -181,6 +184,7 @@ def migrate(db):
             db.execute("INSERT OR REPLACE INTO schema_meta VALUES(?,?,?)", (version, utc(), note))
             db.execute(f"PRAGMA user_version={int(version)}")
             current = version
+        queue_view.refresh(db, startup=True)
         db.execute("COMMIT")
     except BaseException:
         if db.in_transaction:
@@ -190,6 +194,7 @@ def migrate(db):
 
 def _prepare():
     db = sqlite3.connect(STATE / "cases.sqlite3", timeout=20, isolation_level=None)
+    db.row_factory = sqlite3.Row
     try:
         # Switching the journal mode and the first CREATE TABLE ignore the busy timeout when
         # another process does the same, so the caller retries on "database is locked".
@@ -1084,7 +1089,17 @@ VARIANTS = ("rules_1_2", "qual_d", "qual_d_model")
 MODULE_VARIANT = {"M2": "m2_card", "M3": "m3_card"}
 MODULE_DEFAULT = {"m2_card": 30, "m3_card": 60}
 THRESHOLD_VARIANTS = VARIANTS + tuple(MODULE_VARIANT.values())
-QUEUES = ("review", "adRegister", "offersM2", "offersM3", "incomplete", "closed", "all", "demo")
+QUEUES = ("review", "control", "supplement", "closed", "adRegister", "offersM2", "offersM3", "incomplete", "all", "demo")
+
+WORKFLOW_TRANSITIONS = {
+    "refer_to_control": ("control", "reviewing", {"review", "supplement"}),
+    "complete_data": ("supplement", "reviewing", {"review", "control"}),
+    "no_signal": ("closed", "closed", {"review", "control", "supplement"}),
+    "close": ("closed", "closed", {"review", "control", "supplement"}),
+    "control_result": ("closed", "closed", {"control"}),
+    "data_received": ("review", "new", {"supplement"}),
+    "reopen": ("review", "new", {"control", "supplement", "closed"}),
+}
 ROUTE_OF_SUGGESTION = {"review": "refer", "uncertain": "complete", "no_signal": "no_signal", "unavailable": "insufficient"}
 
 def settings_row(row):
@@ -1119,7 +1134,20 @@ def last_decision(db, key):
     details = json.loads(row["details"])
     return {"status": details.get("status"), "at": row["at"], "note": row["note"], "version": details.get("version"),
             "revision": details.get("revision"), "route": details.get("route"), "analysisSig": details.get("analysisSig"),
-            "resolution": details.get("resolution")}
+            "resolution": details.get("resolution"), "fromStage": details.get("fromStage"),
+            "workflowStage": details.get("workflowStage")}
+
+def workflow_stage(status, decided):
+    """Older decisions recorded a resolution and a broad status before stages existed."""
+    if status == "closed":
+        return "closed"
+    transition = WORKFLOW_TRANSITIONS.get((decided or {}).get("resolution"))
+    return transition[0] if transition and transition[1] == status else "review"
+
+def requested_decision(db, key, request_id):
+    row = db.execute("SELECT note,details FROM history WHERE case_id=? AND action='decision' "
+                     "AND json_extract(details,'$.requestId')=? ORDER BY seq DESC LIMIT 1", (key, request_id)).fetchone()
+    return {**json.loads(row["details"]), "note": row["note"]} if row else None
 
 def variant_view(body, variant, threshold, module_threshold=None):
     """Route, score and queue eligibility of a case under one variant. `module_threshold` is the threshold of the
@@ -1152,21 +1180,23 @@ def variant_view(body, variant, threshold, module_threshold=None):
             if module == "M2":
                 premises = bool((body.get("reviewScore") or {}).get("components"))
                 eligible = bool(route in ("refer", "no_signal") and premises and value >= module_threshold)
+                if route in ("refer", "no_signal") and premises:
+                    route = "refer" if eligible else "no_signal"
             else:
                 eligible = bool(route == "refer" and decision.get("queueEligible") and value >= module_threshold)
         return {"route": route, "value": value, "queueEligible": eligible, "gated": None}
     return {"route": route, "value": value, "queueEligible": eligible and module == "M1",
             "gated": (chosen or {}).get("gated")}
 
-def rereview(db, key, status, body, decided):
-    """pendingReReview: closed, and a content or evidence version came after the version that was decided."""
-    if not decided or status != "closed" or decided.get("version") is None or body.get("version", 0) <= decided["version"]:
-        return False, False
-    kinds = set()
-    for version in range(decided["version"] + 1, body["version"] + 1):
-        row = db.execute("SELECT reason FROM version_meta WHERE id=? AND version=?", (key, version)).fetchone()
-        kinds.add(row[0] if row else "content")
-    return bool(kinds & {"content", "evidence"}), False
+def rereview(db, key, stage, body, decided):
+    """A new capture or new evidence after the operator's decision deserves attention."""
+    version = (decided or {}).get("version")
+    if stage == "review" or version is None or (body.get("version") or 0) <= version:
+        return False
+    return db.execute("SELECT 1 FROM versions v LEFT JOIN version_meta m USING(id,version) "
+                      "WHERE v.id=? AND v.version>? AND v.version<=? "
+                      "AND coalesce(m.reason,'content') IN ('content','evidence') LIMIT 1",
+                      (key, version, body["version"])).fetchone() is not None
 
 def has_signal(core):
     """A relation proof, a firm of the registry in the description or title, an unresolved identity or a computation gap."""
@@ -1187,20 +1217,23 @@ def queues_of(core, view, flags, threshold=None):
     out = set()
     live = origin in ("live", "replay")
     available = core.get("outOfScope") is None and (core.get("availability") or {}).get("state") != "removed"
+    if origin == "synthetic":
+        return ["demo"]
     out.add("all")
-    if origin in ("synthetic", "upload"):
+    if origin == "upload":
         out.add("demo")
+    stage = core["workflowStage"]
+    if stage != "review" or flags["forcedReview"]:
+        out.add(stage)
     if not live:
         return sorted(out)
     if available:
         module = core.get("module", "M1")
-        if core.get("status") == "closed":
-            out.add("closed")
         evidence = core.get("evidenceV2") if core.get("evidenceV2") is not None else core.get("_evidenceV2")
         has_evidence = not evidence or any(e.get("available", True) for e in evidence)
-        reopened = core.get("status") == "closed" and (flags["pendingReReview"] or flags["reviewStale"])
+        new_review = stage == "closed" and (flags["pendingReReview"] or flags["reviewStale"])
         if module in ("M1", "M2", "M3") and (view["route"] == "refer" or module == "M2") and view["queueEligible"] and has_evidence and not core.get("needsRecalc") \
-                and (core.get("status") != "closed" or reopened):
+                and (stage == "review" or new_review):
             out.add("review")
         if (core.get("adRegistry") or {}).get("state") in ("included", "candidate"):
             out.add("adRegister")
@@ -1209,21 +1242,20 @@ def queues_of(core, view, flags, threshold=None):
             if (core.get("m2Scope") or {}).get("belongs") is not False:
                 out.add("offersM2")
             # incomplete: only a concrete gap (too few measurable criteria), never the mere wait for a recompute.
-            if decision and view["route"] == "insufficient":
+            if stage == "review" and decision and view["route"] == "insufficient":
                 out.add("incomplete")
         elif module == "M3":
             identity = core.get("identity") if isinstance(core.get("identity"), dict) else {}
             if not decision or view["route"] in ("refer", "complete") or identity.get("licensed"):
                 out.add("offersM3")  # a licensed firm stays visible as a negative control
-            if decision and view["route"] == "complete" and decision.get("missing"):
+            if stage == "review" and decision and view["route"] == "complete" and decision.get("missing"):
                 out.add("incomplete")
         else:
             # incomplete: only material with a signal and a concrete gap that can still be closed.
             # A video without any signal is no_signal with the coverage "mowy nie zbadano" and stays in `all`.
-            if core.get("needsRecalc") or (view["route"] in ("complete", "insufficient") and (view.get("gated") or has_signal(core))):
+            if stage == "review" and (core.get("needsRecalc") or
+                                     (view["route"] in ("complete", "insufficient") and (view.get("gated") or has_signal(core)))):
                 out.add("incomplete")
-    else:
-        out.discard("closed")
     return sorted(out)
 
 def case_core(db, row, current, settings):
@@ -1234,17 +1266,19 @@ def case_core(db, row, current, settings):
     body = {**body, **shadow}
     view = compat_view(body, current)
     decided = last_decision(db, key)
+    stage = workflow_stage(row["status"], decided)
     variant = settings["variant"]
     chosen = variant_view(body, variant, settings["thresholds"].get(variant, 60),
                           settings["thresholds"].get(MODULE_VARIANT.get(body.get("module"))))
-    pending, _ = rereview(db, key, row["status"], body, decided)
+    pending = rereview(db, key, stage, body, decided)
     stale = bool(decided and decided.get("route") is not None and chosen["route"] is not None and decided["route"] != chosen["route"])
-    flags = {"pendingReReview": pending, "reviewStale": stale}
+    forced = stage == "review" and (decided or {}).get("resolution") in ("data_received", "reopen")
+    flags = {"pendingReReview": pending, "reviewStale": stale, "forcedReview": forced}
     if body.get("platform"):
         body = {**body, "platform": canonical_platform(body["platform"])}
     core = {**view, **body, **{k: body[k] for k in ("origin", "analysisVersion", "derived") if k in body},
             **{k: view[k] for k in ("needsRecalc", "needsRecalcReason", "requalification")},
-            "id": key, "status": row["status"], "revision": row["revision"], "updatedAt": row["updated"],
+            "id": key, "status": row["status"], "workflowStage": stage, "revision": row["revision"], "updatedAt": row["updated"],
             "_evidenceV2": renamed.get("evidenceV2"), "_coverage": renamed.get("coverageV2")}
     return core, renamed, decided, chosen, flags
 
@@ -1334,8 +1368,12 @@ def case_dict(db,row,current=None,schema=2,settings=None,full=True):
         layer["history"]=history(db,key)
     result=apply_schema({**out,**layer},renamed,legacy_coverage,schema)
     if schema>=2 and full:
+        from .card_view import active_qualification
         from .proof_path import proof_path
-        result["proofPath"]=proof_path(result)
+        active=active_qualification(result,chosen,settings)
+        if active:
+            result["activeQualification"]=active
+        result["proofPath"]=proof_path({**result,**active})
     return result
 
 def band_of(value, threshold):
@@ -1395,22 +1433,27 @@ def clean_title(title):
     return re.sub(r"[\s\-–—|·:,;]+$","",title).strip() if isinstance(title,str) else title
 
 def summary_of_case(case, threshold=60, thresholds=None):
+    from .card_view import active_qualification
+
     module_threshold=(thresholds or {}).get(MODULE_VARIANT.get(case.get("module")))
     band_threshold=module_threshold if module_threshold is not None else threshold
     short,legal=firm_names(case)
-    decision=case.get("reviewDecision") if isinstance(case.get("reviewDecision"),dict) else {}
     active=case.get("activeVariant") or ANALYSIS_VARIANT
-    chosen=variant_view(case,active,threshold)
+    chosen=variant_view(case,active,threshold,module_threshold)
+    shown=active_qualification(case,chosen,{"variant":active,"thresholds":{active:threshold,**(thresholds or {})}})
+    decision=shown.get("reviewDecision") or {}
     moment=next(iter(decision.get("moments") or []),None)
     reason=decision.get("reason")
-    if active==ANALYSIS_VARIANT:  # the shadow decision belongs to qual_d; the active rules explain themselves
+    if not reason:
         reason=(case.get("reviewSuggestion") or {}).get("reason") or reason
     registry=case.get("adRegistry") if isinstance(case.get("adRegistry"),dict) else {}
     reasons=decision.get("reasons") or []
     coverage=case.get("coverage") if isinstance(case.get("coverage"),dict) else {}
     return {"id":case["id"],"title":clean_title(case.get("title")),"module":case.get("module"),"platform":case.get("platform"),
             "creatorId":case.get("creatorId"),"creatorName":case.get("creatorName") or case.get("author"),"publishedAt":case.get("publishedAt"),
-            "observedAt":case.get("observedAt"),"status":case["status"],"revision":case["revision"],"version":case.get("version"),
+            "observedAt":case.get("observedAt"),"status":case["status"],
+            "workflowStage":case.get("workflowStage") or workflow_stage(case["status"],case.get("lastDecision")),
+            "revision":case["revision"],"version":case.get("version"),
             "origin":case.get("origin"),"importLabel":case.get("importLabel"),"route":case.get("route"),"reviewScore":chosen["value"],
             "band":band_of(chosen["value"],band_threshold),"completeReason":decision.get("completeReason"),
             "firstReason":reasons[0] if reasons else None,
@@ -1441,7 +1484,8 @@ def all_cases(db,schema=2,full=False):
     current=analysis_current()
     settings=load_settings(db)
     names=creator_names(db)
-    cases=[case_dict(db,r,current,schema,settings,full) for r in db.execute("SELECT * FROM cases ORDER BY updated DESC,id")]
+    rows=db.execute("SELECT c.* FROM cases c JOIN queue_members q USING(id) WHERE q.name='all' ORDER BY c.updated DESC,c.id")
+    cases=[case_dict(db,r,current,schema,settings,full) for r in rows]
     for case in cases:
         if not case.get("creatorName") and names.get(case.get("creatorId")):
             case["creatorName"]=names[case["creatorId"]]
@@ -1505,23 +1549,6 @@ def module_queue_effect(db, module, threshold):
             "reviewQueueAtThreshold": now + len(gained) - len(lost), "changed": len(gained) + len(lost),
             "gained": gained[:50], "lost": lost[:50]}
 
-DEMO_ALERT_CASE = "web:www.bdm.pl/rachunek-emerytalny"
-DEMO_ALERT_TABLES = (("cases", "id"), ("versions", "id"), ("version_meta", "id"), ("history", "case_id"), ("discoveries", "case_id"),
-                     ("reach_samples", "case_id"), ("media_state", "case_id"), ("qualification_results", "case_id"))
-
-def demo_alert_state(db):
-    return {"case": DEMO_ALERT_CASE, "armed": db.execute("SELECT 1 FROM cases WHERE id=?", (DEMO_ALERT_CASE,)).fetchone() is None,
-            "trigger": {"method": "POST", "path": "/v1/scans", "body": {"mode": "replay", "adapters": ["demo-alert"], "requestId": "<nowy identyfikator>"}},
-            "reset": {"method": "POST", "path": "/v1/demo/alert/reset"}}
-
-def reset_demo_alert(db):
-    """Remove the one demo case (a saved real M2 page) so that the next `demo-alert` replay creates it again and raises
-    `high_risk` exactly once. Idempotent: a second reset removes nothing. Nothing else is touched."""
-    removed = db.execute("SELECT 1 FROM cases WHERE id=?", (DEMO_ALERT_CASE,)).fetchone() is not None
-    for table, column in DEMO_ALERT_TABLES:
-        db.execute(f"DELETE FROM {table} WHERE {column}=?", (DEMO_ALERT_CASE,))
-    return {**demo_alert_state(db), "removed": removed}
-
 def published_of(case):
     """Publication time; TikTok gives none, so the time derived from the video id stands in (flagged by the report)."""
     if case.get("publishedAt"):
@@ -1532,7 +1559,7 @@ def published_of(case):
     return None, None
 
 def filter_cases(items, *, module=None, creator=None, since=None, until=None, min_score=None, q=None, platform=None,
-                 band=None, route=None, status=None, date_field="observedAt", variant="rules_1_2", threshold=60, thresholds=None):
+                 band=None, route=None, status=None, date_field="observedAt"):
     """The filters shared by the queues and the report: module, platform, date, risk (score, band), route, status."""
     if module:
         items=[c for c in items if c.get("module")==module]
@@ -1546,10 +1573,7 @@ def filter_cases(items, *, module=None, creator=None, since=None, until=None, mi
     if status:
         items=[c for c in items if c.get("status")==status]
     if band:
-        def band_threshold(c):
-            own=(thresholds or {}).get(MODULE_VARIANT.get(c.get("module")))
-            return threshold if own is None else own
-        items=[c for c in items if band_of(variant_view(c,variant,threshold)["value"],band_threshold(c))==band]
+        items=[c for c in items if c.get("band")==band]
     def when(c):
         return published_of(c)[0] if date_field=="publishedAt" else c.get("observedAt")
     if since:
@@ -1558,28 +1582,27 @@ def filter_cases(items, *, module=None, creator=None, since=None, until=None, mi
         items=[c for c in items if when(c) and _moment_of(when(c))<=_moment_of(until)]
     if min_score is not None:
         def value(c):
-            return variant_view(c,variant,threshold)["value"] if c.get("module","M1")=="M1" else c.get("score")
+            return c.get("reviewScore") if c.get("module","M1")=="M1" else c.get("score")
         items=[c for c in items if isinstance(value(c),(int,float)) and value(c)>=min_score]
     if q:
         needle=q.casefold()
-        items=[c for c in items if any(needle in str(c.get(k) or "").casefold() for k in ("title","creatorName","author","creatorId"))]
+        items=[c for c in items if any(needle in field for field in c["_search"])]
     return items
 
 def queue_list(db, name, *, limit=50, cursor=None, module=None, creator=None, since=None, until=None, min_score=None,
                q=None, section=None, platform=None, band=None, route=None, date_field="observedAt"):
     if name not in QUEUES:
         raise KeyError(name)
-    cases,settings=all_cases(db)
-    counts=queue_counts(cases)
-    items=[c for c in cases if name in c["queues"]]
+    settings=load_settings(db)
+    counts=queue_view.counts(db,history=name=="demo")
+    items=queue_view.summaries(db,(name,),module)
     if name=="adRegister" and section in ("confirmed","candidate"):
         want="included" if section=="confirmed" else "candidate"
-        items=[c for c in items if (c.get("adRegistry") or {}).get("state")==want]
+        items=[c for c in items if c.get("adRegistry")==want]
     items=filter_cases(items,module=module,creator=creator,since=since,until=until,min_score=min_score,q=q,platform=platform,
-                       band=band,route=route,date_field=date_field,variant=settings["variant"],
-                       threshold=settings["thresholds"].get(settings["variant"],60),thresholds=settings["thresholds"])
+                       band=band,route=route,date_field=date_field)
     def score(c):
-        view=variant_view(c,settings["variant"],60)["value"]
+        view=c.get("reviewScore")
         return view if isinstance(view,(int,float)) else -1
     if name=="review":
         items.sort(key=lambda c:(-score(c),(c.get("priority") or {}).get("review",{}).get("rank") is None,
@@ -1589,14 +1612,14 @@ def queue_list(db, name, *, limit=50, cursor=None, module=None, creator=None, si
         items.sort(key=lambda c:[-ord(ch) for ch in (c.get("publishedAt") or "")])
     elif name=="incomplete":
         items.sort(key=lambda c:(not c.get("needsRecalc"),[-ord(ch) for ch in (c.get("observedAt") or "")]))
-    elif name=="closed":
+    elif name in ("control", "supplement", "closed"):
         items.sort(key=lambda c:[-ord(ch) for ch in ((c.get("lastDecision") or {}).get("at") or "")])
     else:
         items.sort(key=lambda c:[-ord(ch) for ch in (c.get("observedAt") or "")])
     start=int(cursor or 0)
     page=items[start:start+limit]
     scan=db.execute("SELECT id,status,updated FROM scans ORDER BY created DESC LIMIT 1").fetchone()
-    return {"items":[summary_of_case(c,settings["thresholds"].get(settings["variant"],60),settings["thresholds"]) for c in page],"total":len(items),
+    return {"items":[{k:v for k,v in c.items() if k!="_search"} for c in page],"total":len(items),
             "nextCursor":str(start+limit) if start+limit<len(items) else None,"counts":counts,
             "threshold":{"variant":settings["variant"],**(threshold_current(db,settings["variant"]) or {})},
             "asOf":utc(),"lastScan":None if scan is None else {"id":scan["id"],"status":scan["status"],"updatedAt":scan["updated"]}}
@@ -1611,6 +1634,10 @@ REPORT_COLUMNS = {
     "M3": ["podmiot", "daneRejestrowe", "trescOferty", "url", "stanUprawnien", "przejrzaneWykazy", "dataWykazow", "platforma",
            "dataOdczytu", "trasa", "silaSygnalu", "statusDecyzji", "id"],
 }
+WORKFLOW_REPORT_QUEUES = ("control", "supplement", "closed")
+WORKFLOW_REPORT_COLUMNS = ["etap", "rodzajDecyzji", "dataDecyzji", "uzasadnienieDecyzji", "sprawdzonaWersja"]
+MIXED_REPORT_COLUMNS = ["modul", "id", "tytul", "podmiot", "url", "platforma", "dataOdczytu", "trasa", "silaSygnalu",
+                        "statusDecyzji", *WORKFLOW_REPORT_COLUMNS]
 ENTITY_NAMES = {"domestic_investment_firm": "krajowa firma inwestycyjna", "domestic_bank": "bank krajowy",
                 "foreign_investment_firm": "zagraniczna firma inwestycyjna", "foreign_credit_institution": "zagraniczna instytucja kredytowa",
                 "unresolved": "nieustalony", None: ""}
@@ -1632,16 +1659,19 @@ def _firm_cells(case):
         kind="brak w przejrzanych wykazach"
     return name,kind
 
-def report_row(case, module, variant):
+def report_row(case, module, variant, columns):
     firm,kind=_firm_cells(case)
     published,basis=published_of(case)
     view=variant_view(case,variant,60)
-    decision=(case.get("lastDecision") or {}).get("status") or case.get("status")
+    decision=case.get("lastDecision") or {}
+    who=case.get("creatorName") or case.get("author") or case.get("creatorId")
     row={"firma":firm,"typPodmiotu":kind,"tresc":" ".join(str(_first_text(case)).split())[:500],"url":case.get("url"),
          "platforma":str(case.get("platform") or "").split(":")[0],"dataPublikacji":published,"podstawaDatyPublikacji":basis or "",
          "dataOdczytu":case.get("observedAt"),"trasa":case.get("route") or (case.get("reviewSuggestion") or {}).get("state"),
-         "silaSygnalu":view["value"],"statusDecyzji":decision,"id":case["id"]}
-    who=case.get("creatorName") or case.get("author") or case.get("creatorId")
+         "silaSygnalu":view["value"],"statusDecyzji":decision.get("status") or case.get("status"),"id":case["id"],
+         "modul":module,"tytul":case.get("title"),"podmiot":firm or who,"etap":case["workflowStage"],
+         "rodzajDecyzji":decision.get("resolution"),"dataDecyzji":decision.get("at"),
+         "uzasadnienieDecyzji":decision.get("note"),"sprawdzonaWersja":decision.get("version")}
     if module=="M1":
         relation=case.get("adRelationship") if isinstance(case.get("adRelationship"),dict) else {}
         row.update(podmiotReklamujacy=who,relacjaReklamowa=relation.get("status"),rejestrReklam=(case.get("adRegistry") or {}).get("state"))
@@ -1649,7 +1679,7 @@ def report_row(case, module, variant):
         row["operator"]=who
     else:
         row.update(m3_report_cells(case))
-    return {k:row.get(k) for k in REPORT_COLUMNS[module]}
+    return {k:row.get(k) for k in columns}
 
 def m3_report_cells(case):
     """Columns of the M3 report: the firm as the page names it, registry data if any, the quotes of the axes,
@@ -1673,24 +1703,35 @@ def m3_report_cells(case):
 def report_list(db, module, *, queue=None, limit=500, cursor=None, platform=None, since=None, until=None, min_score=None,
                 band=None, route=None, q=None, date_field="observedAt"):
     """Rows of the module report. Default scope: M1 the review queue plus the ad register, M2/M3 their offer queues;
-    `queue` picks any queue instead (`all` includes material without a signal)."""
-    if module not in REPORT_COLUMNS:
+    `queue` picks any queue instead. The workflow report can include all modules."""
+    mixed=module=="all"
+    workflow=queue in WORKFLOW_REPORT_QUEUES
+    if module not in REPORT_COLUMNS and not (mixed and workflow):
         raise KeyError(module)
     if queue is not None and queue not in QUEUES:
         raise KeyError(queue)
-    cases,settings=all_cases(db)
+    current,settings=analysis_current(),load_settings(db)
     wanted=(queue,) if queue else REPORT_QUEUES[module]
-    items=[c for c in cases if c.get("module","M1")==module and any(n in c["queues"] for n in wanted)]
+    columns=MIXED_REPORT_COLUMNS if mixed else [*REPORT_COLUMNS[module], *(WORKFLOW_REPORT_COLUMNS if workflow else ())]
+    items=[c for c in queue_view.summaries(db,wanted,None if mixed else module) if c.get("origin")!="synthetic"]
     items=filter_cases(items,platform=platform,since=since,until=until,min_score=min_score,q=q,band=band,route=route,
-                       date_field=date_field,variant=settings["variant"],threshold=settings["thresholds"].get(settings["variant"],60))
+                       date_field=date_field)
     items.sort(key=lambda c:(published_of(c)[0] or c.get("observedAt") or "", c["id"]),reverse=True)
     start=max(0,int(cursor or 0))
-    page=items[start:start+limit]
-    return {"module":module,"queues":list(wanted),"columns":REPORT_COLUMNS[module],"total":len(items),
-            "items":[report_row(c,module,settings["variant"]) for c in page],
-            "nextCursor":str(start+limit) if start+limit<len(items) else None,"asOf":utc(),"variant":settings["variant"]}
+    end=start+limit if limit is not None else len(items)
+    page=items[start:end]
+    rows=[]
+    for summary in page:
+        row=db.execute("SELECT * FROM cases WHERE id=?",(summary["id"],)).fetchone()
+        case=case_dict(db,row,current,2,settings,full=False)
+        case["creatorName"]=summary["creatorName"]
+        case_module=(summary.get("module") or "M1") if mixed else module
+        rows.append(report_row(case,case_module,settings["variant"],columns))
+    return {"module":module,"queues":list(wanted),"columns":columns,"total":len(items),
+            "items":rows,
+            "nextCursor":str(end) if end<len(items) else None,"asOf":utc(),"variant":settings["variant"]}
 
-FORMULA_START = ("=", "+", "-", "@", "\t", "\r")
+FORMULA_START = ("=", "+", "-", "@", "\t", "\r", "\n")
 
 def csv_safe(value):
     """A cell that a spreadsheet would read as a formula gets a leading apostrophe; control characters become spaces."""
@@ -1700,8 +1741,9 @@ def csv_safe(value):
         return "tak" if value else "nie"
     if isinstance(value,(int,float)):
         return value
-    text="".join(" " if (ord(ch)<32 or ord(ch)==127) else ch for ch in str(value))
-    return "'"+text if text.lstrip().startswith(FORMULA_START) or text.startswith(FORMULA_START) else text
+    raw=str(value)
+    text="".join(" " if (ord(ch)<32 or ord(ch)==127) else ch for ch in raw)
+    return "'"+text if text.lstrip().startswith(FORMULA_START) or raw.startswith(FORMULA_START) else text
 
 def report_csv(report):
     import csv, io
@@ -1712,8 +1754,18 @@ def report_csv(report):
         writer.writerow([csv_safe(row.get(c)) for c in report["columns"]])
     return "\ufeff"+buffer.getvalue()
 
+def public_events(db, cursor=None, limit=100):
+    visibility = "NOT EXISTS (SELECT 1 FROM queue_rows q WHERE q.id=e.ref AND q.origin='synthetic')"
+    base = f"SELECT e.seq AS id,e.at,e.kind,e.ref,e.message FROM events e WHERE {visibility}"
+    if cursor is None:
+        rows = db.execute(base + " ORDER BY e.seq DESC LIMIT ?", (limit,))
+    else:
+        rows = db.execute(base + " AND e.seq>? ORDER BY e.seq LIMIT ?", (cursor, limit))
+    return [dict(row) for row in rows]
+
+
 def events_since(db, cursor, limit=100):
-    return [dict(r) for r in db.execute("SELECT seq AS id,at,kind,ref,message FROM events WHERE seq>? ORDER BY seq LIMIT ?",(cursor,limit))]
+    return public_events(db, cursor, limit)
 
 COMPACT_DROP = ("m3Pages", "history", "evidence", "premises", "counterEvidence", "segments", "description", "versions", "discovery",
                 "evidenceV2", "frames", "relationships")
@@ -1789,7 +1841,8 @@ def trend(db, days=30):
         else:
             entry["referred"] += result["referred"]
     firsts = {}
-    for key, at in db.execute("SELECT id, min(observed) FROM versions GROUP BY id"):
+    for key, at in db.execute("SELECT v.id,min(v.observed) FROM versions v JOIN queue_rows q USING(id) "
+                              "WHERE q.origin IN ('live','replay') GROUP BY v.id"):
         firsts[str(at)[:10]] = firsts.get(str(at)[:10], 0) + 1
     for day, count in firsts.items():
         by_day.setdefault(day, {"day": day, "scans": 0, "captures": 0, "referred": 0, "referredKnown": True})["newMaterials"] = count
@@ -1847,51 +1900,6 @@ def recompute_status(db, now=None):
         return {**out, "state": "failed", "message": "Przeliczenie nie powiodło się; ponów je."}
     return {**out, "state": "done", "message": "Przeliczenie zakończone."}
 
-_COUNTS = {}
-
-def counts_key(db):
-    current = analysis_current()
-    settings = load_settings(db)
-    parts = [db.execute(f"SELECT count(*),max({col}) FROM {table}").fetchone()[:] for table, col in
-             (("cases", "updated"), ("qualification_results", "updated"), ("media_state", "updated"))]
-    return json.dumps([[tuple(p) for p in parts], settings["variant"], settings["thresholds"], (settings["qualification"] or {}).get("id"), current,
-                       str(STATE)], sort_keys=True, default=str)
-
-def counts_of(db, cases=None):
-    """Queue counters, cached per database state: the light overview must not classify every case on each request."""
-    key = counts_key(db)
-    if key not in _COUNTS:
-        _COUNTS.clear()
-        _COUNTS[key] = queue_counts(cases if cases is not None else all_cases(db)[0])
-    return dict(_COUNTS[key])
-
-_FUNNEL = {}
-
-def funnel_of(cases, settings, counts):
-    """The path from material to alert for the pitch: how many materials, how many in the ad register, how many are
-    explained automatically (and by what), how many wait for speech, how many reach the review queue."""
-    live = [c for c in cases if c.get("origin") in ("live", "replay")]
-    disclosed = Counter()
-    for c in live:
-        if "adRegister" in c["queues"]:
-            where = (((c.get("adRelationship") or {}).get("disclosure")) or {}).get("where")
-            disclosed[{"transcript": "bySpeech", "platform": "byPlatformFlag", "frame": "byFrame", "description": "byDescription"}.get(where, "none")] += 1
-    variant = settings["variant"]
-    held = sum(1 for c in live if c.get("module", "M1") == "M1" and variant_view(c, variant, settings["thresholds"].get(variant, 60)).get("gated"))
-    return {"materials": len(live), "adRegister": counts.get("adRegister", 0), "review": counts.get("review", 0),
-            "explainedAutomatically": {k: disclosed.get(k, 0) for k in ("bySpeech", "byPlatformFlag", "byFrame", "byDescription")},
-            "adRegisterUnexplained": disclosed.get("none", 0), "heldBySpeechGate": held,
-            "byModule": {m: sum(1 for c in live if c.get("module", "M1") == m) for m in ("M1", "M2", "M3")},
-            "byPlatform": dict(Counter(canonical_platform(str(c.get("platform") or "").split(":")[0]) for c in live))}
-
-def funnel_cached(db, counts):
-    key = counts_key(db)
-    if key not in _FUNNEL:
-        _FUNNEL.clear()
-        cases, settings = all_cases(db)
-        _FUNNEL[key] = funnel_of(cases, settings, counts)
-    return dict(_FUNNEL[key])
-
 SCAN_LABEL_DATE = ("stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października",
                    "listopada", "grudnia")
 
@@ -1912,7 +1920,7 @@ CREATOR_LIGHT = ("id", "name", "platform", "url", "handle", "isSeed", "isNew", "
 
 def state(schema=2, compact=False, findings=True):
     """The whole state. `findings=False` is the light overview: no cases, creators in short form with counters, the
-    queue counters from a cache; sources, scans, health, trend, threshold and qualification as in the full state."""
+    persisted queue counters, sources, scans, health, trend, threshold and qualification."""
     schema = schema if isinstance(schema, int) else 1
     compact = compact if isinstance(compact, (bool, int)) else False
     with connection() as db:
@@ -1924,12 +1932,12 @@ def state(schema=2, compact=False, findings=True):
         if compact:
             cases=[{k:v for k,v in c.items() if k not in COMPACT_DROP} for c in cases]
         scans=[scan_view(db,r) for r in db.execute("SELECT * FROM scans ORDER BY created DESC LIMIT 50")]
-        events=[dict(r) for r in db.execute("SELECT seq AS id,at,kind,ref,message FROM events ORDER BY seq DESC LIMIT 50")]
+        events=public_events(db, limit=50)
         # Schema 1 keeps the v1 shape (T18): rows as stored, health a string per source id.
-        sources=[public_source(x) for x in all_objects(db,"sources")]
+        sources=[public_source(x) for x in all_objects(db,"sources") if x.get("id") != "demo-alert"]
         if schema>=2 and not any((x.get("id") or x.get("name"))=="meta_ads" for x in sources):
             sources.append(META_ADS_ROW)
-        states={s["sourceId"]:s for s in source_states(db)}
+        states={s["sourceId"]:s for s in source_states(db) if s["sourceId"] != "demo-alert"}
         health={(s.get("id") or s.get("name")):health_of(s.get("status")) for s in sources}
         creators=all_objects(db,"creators")
         extra={}
@@ -1963,8 +1971,8 @@ def state(schema=2, compact=False, findings=True):
                    "problems":sum(problem(v) for v in detail.values()),
                    "accessBlocked":len(blocked),"accessBlockedSources":blocked}}
         active=settings["variant"]
-        queue_numbers=queue_counts(cases) if findings else counts_of(db)
-        funnel=funnel_of(cases,settings,queue_numbers) if findings else funnel_cached(db,queue_numbers)
+        queue_numbers=queue_view.counts(db)
+        funnel=queue_view.funnel(db,queue_numbers)
         result={"creators":creators,"funnel":funnel,"sources":sources,"sourceHealth":health,"sourceState":[{k:v for k,v in x.items() if k!="cursor"} for x in states.values()],"findings":cases,"scans":scans,
                 "events":events,"schema":{**schema_info(db),"views":[1,2],"served":schema},"analysisCurrent":{**current,"variant":active},
                 "queues":queue_numbers,"threshold":{"variant":active,**(threshold_current(db,active) or {})},

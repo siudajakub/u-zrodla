@@ -30,8 +30,8 @@ def main():
     args = parser.parse_args()
     base = f"http://127.0.0.1:{args.port}"
     try:
-        state = get(base + "/v1/state")
-        queue = get(base + "/v1/queues/review")
+        state = get(base + "/v1/overview?schema=2")
+        queue = get(base + "/v1/queues/review?limit=500")
     except Exception as error:  # noqa: BLE001 - diagnostyka dla operatora
         print(f"api=niedostepne ({type(error).__name__})")
         return 2
@@ -44,7 +44,7 @@ def main():
               "counts": queue.get("counts"), "variant": (queue.get("threshold") or {}).get("variant"),
               "mediaPack": media and {"status": media.get("status"), "videos": media.get("count")},
               "semantic": semantic}
-    ready = len(scans) >= args.min_scans and not busy
+    ready = len(scans) >= args.min_scans and not busy and any(s.get("status") in ("done", "partial") for s in scans)
     ok = ready
     if args.expect_count is not None:
         want = sorted((args.expect_ids or KNOWN).split(","))

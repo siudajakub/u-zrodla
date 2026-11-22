@@ -1,5 +1,5 @@
 #!/bin/sh
-# Jedna komenda do pulpitu z kolejką "Co wymaga sprawdzenia" (4 znane filmy z datowanego replay 21 XI).
+# Jedna komenda do pulpitu z kolejką opartą o rzeczywiste odczyty źródeł.
 #   sh ops/demo/start.sh            tryb pokazu: replay, bez sieci, bez harmonogramu live
 #   sh ops/demo/start.sh --live     tryb live: harmonogram skanu co 4 h (INVESTWATCH_DISCOVERY_INTERVAL), klucz YouTube z .env
 #   sh ops/demo/start.sh --reset    czysty stan (kasuje .runtime/demo/state) i start od zera
@@ -36,8 +36,10 @@ case "$MODE" in
   *) echo "INVESTWATCH_MODE musi być demo albo live." >&2; exit 2 ;;
 esac
 export INVESTWATCH_DISCOVERY_INTERVAL
-iw_need_pack
+iw_python
+[ "$MODE" != demo ] || iw_need_pack
 INVESTWATCH_MEDIA_PACK=$(iw_pack_dir); export INVESTWATCH_MEDIA_PACK
+[ "$MODE" != live ] || mkdir -p "$INVESTWATCH_MEDIA_PACK"
 iw_state_dirs
 FILES="-f compose.yaml"
 case "$MODE:${OLLAMA_HOST:-}" in live:*|*host.docker.internal*) FILES="$FILES -f ops/compose/egress.yaml" ;; esac
@@ -53,7 +55,7 @@ INVESTWATCH_RESET=0; export INVESTWATCH_RESET INVESTWATCH_MODE="$MODE"
 [ -f .runtime/demo/compose.env ] || exec sh ops/demo/bootstrap.sh
 mkdir -p "$STATE_DIR"; chmod 700 "$STATE_DIR"
 iw_objects_layout "$STATE_DIR" "$OBJECTS_DIR"
-[ "$COLD" = 1 ] || iw_restore_state "$STATE_DIR" "$OBJECTS_DIR" || true
+[ "$MODE" = live ] || [ "$COLD" = 1 ] || iw_restore_state "$STATE_DIR" "$OBJECTS_DIR" || true
 case ",${COMPOSE_PROFILES:-}," in *,llm,*) mkdir -p "${INVESTWATCH_OLLAMA_DIR:-$ROOT/.runtime/ollama}" ;; esac
 WEB_IMAGE=${INVESTWATCH_WEB_IMAGE:-nginx:1.27-alpine}
 docker image inspect "$WEB_IMAGE" >/dev/null 2>&1 || docker pull "$WEB_IMAGE"

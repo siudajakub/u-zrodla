@@ -23,3 +23,38 @@ API same-origin. GET /v1/state → {creators, findings, sources, scans, events, 
 Pole score przechowuje priorytet reguł. Sugestia semantyczna podaje wersję modelu, zakres fragmentu i niejednoznaczność. W bieżącej linii reviewSuggestion pozwala pulpitowi wyświetlić skierowanie do przeglądu wraz z uzasadnieniem, fragmentem i pochodzeniem. To rozróżnia sprawę do zbadania od potwierdzonego naruszenia. Brak lokalnego modelu ma własny stan. Identyfikator sprawy WWW może zawierać ukośniki. Odbiór obejmuje odczyt karty, wersji i zapis z expectedRevision na takim identyfikatorze.
 
 M2 wiąże measurements w odpowiednim checks z rzeczywistym ekranem i wyciągiem DOM danego przechwycenia. Wnioski o urządzeniu dotyczą wykonanego stanu, a nie samej szerokości podanej w żądaniu. Koszt pokazywany przy suwaku to 2 × FN + FP. Układ próby, progi i pochodzenie etykiet muszą być widoczne przy interpretacji. [Wymagania źródłowe](../zrodla-uknf/README.md) · [Odbiór](../ODBIOR-UKNF.md)
+
+## Obieg decyzji operatora
+
+`PATCH /v1/cases/{id}` zapisuje rozstrzygnięcie lokalnie i zwraca aktualną sprawę. Przekazanie do kontroli oznacza zmianę kolejki w InvestWatch. Karta, jej wiersz na liście i odpowiedź po zapisie mają `workflowStage`. Pomiar źródła i decyzja operatora mają osobne pola (`route` i `lastDecision`).
+
+| `resolution` | Dozwolony `workflowStage` przed decyzją | Etap i kolejka po decyzji |
+|---|---|---|
+| `refer_to_control` | `review`, `supplement` | `control` — przekazane do kontroli |
+| `complete_data` | `review`, `control` | `supplement` — do uzupełnienia przez operatora |
+| `no_signal`, `close` | `review`, `control`, `supplement` | `closed` — zakończone |
+| `control_result` | `control` | `closed` — zakończone z wynikiem kontroli w `note` |
+| `data_received` | `supplement` | `review` — dane odnotowane w `note`, wraca do oceny |
+| `reopen` | `control`, `supplement`, `closed` | `review` — powód ponownego otwarcia w `note` |
+
+```json
+{
+  "resolution": "control_result",
+  "expectedRevision": 7,
+  "reviewedVersion": 2,
+  "note": "Potwierdzono datę i treść oznaczenia na opublikowanej wersji.",
+  "requestId": "75d45a6c-8af8-4cef-8dc2-3506999fc576"
+}
+```
+
+- `note` jest obowiązkowe, zawiera do 2000 znaków i musi mieć treść po obcięciu białych znaków. `expectedRevision` jest obowiązkowe. Podaj `reviewedVersion`, jeśli użytkownik ogląda konkretną wersję źródła. `requestId` jest opcjonalne, ma do 160 znaków z alfabetu ASCII `[A-Za-z0-9_.:-]`. Ponowienie tego samego żądania z tym samym identyfikatorem zwraca aktualną kartę bez nowej rewizji, wpisu w historii ani zdarzenia.
+- Konflikt rewizji, wersji lub dozwolonego etapu oraz użycie tego samego `requestId` dla innej decyzji dają `409` z `detail` i `current` (`revision`, `status`, `version`, `workflowStage`). Po konflikcie odśwież kartę i zachowaj treść szkicu. `422` oznacza nieprawidłowe żądanie, np. puste uzasadnienie, nieznaną akcję lub `status` sprzeczny z `resolution`.
+- Zapis dopisuje `history` z `action: "decision"`, wersją materiału, uwagą oraz `fromStage` i `workflowStage`. Publikuje zdarzenie `case`. Po nim odśwież kartę, listy i liczniki. Starsi klienci nadal mogą zapisać `status` bez `resolution`. Statusy `reviewing` i `new` pozostają dostępne. Etap `control` albo `supplement` dla wcześniejszej decyzji wynika z jej `resolution` i pasującego statusu `reviewing`.
+- `GET /v1/queues/control`, `.../supplement` i `.../closed` działają z tymi samymi filtrami co `.../review`. `incomplete` nadal wskazuje automatycznie wykryte braki przed decyzją. `adRegister` zależy od materiału reklamowego i może zawierać sprawę na dowolnym etapie. `offersM2`, `offersM3` i `all` zachowują dostęp do ewidencji.
+- Nowa treść lub dowód po decyzji ustawia `pendingReReview` i zachowuje decyzję oraz etap. Zmiana automatycznej trasy ustawia `reviewStale`. Sprawa zakończona może pojawić się jako sygnał do ponownego rozpatrzenia w `review`, jeśli znów spełnia kryteria kolejki. Przed kolejnym rozstrzygnięciem wymaga `reopen`. Ponowne otwarcie i udokumentowanie otrzymanych danych włączają sprawę do `review` również poniżej progu.
+
+### Raport decyzji
+
+`GET /v1/report?module=all&queue=control&format=csv` eksportuje pasujące sprawy M1, M2 i M3. Parametr `queue` przyjmuje `control`, `supplement` albo `closed`. Format `json` zwraca te same kolumny i wiersze z paginacją. Mieszany CSV domyślnie obejmuje wszystkie pasujące wiersze. Jawny `limit` ogranicza rozmiar strony, a `X-Next-Cursor` wskazuje początek kolejnej.
+
+Raport mieszany podaje `modul`, `id`, tytuł, podmiot, `url` źródła i dane kwalifikacji. W każdej z trzech kolejek eksport uwzględnia `etap`, `rodzajDecyzji`, `dataDecyzji`, `uzasadnienieDecyzji` i `sprawdzonaWersja`. Wersja pochodzi z ostatniej decyzji, również gdy obok niej dostępny jest nowszy materiał. Starsze wiersze bez historii mają puste pola decyzji. Raport jednego modułu w tych kolejkach dopisuje dane decyzji do istniejących kolumn. Dotychczasowe domyślne raporty M1, M2 i M3 zachowują wcześniejszy format. CSV jest kodowany w UTF-8 z BOM i zabezpiecza komórki rozpoczynające się jak formuła arkusza.

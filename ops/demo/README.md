@@ -4,6 +4,8 @@ Na macOS (Apple Silicon) wystarczy Docker Desktop i Node 22.13+ dla podglądu: `
 
 Compose uruchamia proces HTTP i oddzielny proces kolejki z tym samym UID/GID co operator. Kod i dane wejściowe są zamontowane do odczytu. Jedynym zapisywalnym katalogiem danych produktu jest .runtime/demo/state. Stan prywatnego monitora profili znajduje się w .runtime/watch. Na nowej maszynie bez tego monitora kolektor sam pobiera publiczne profile podczas skanu live. Pulpit wiąże port 8769 na interfejsie loopback. Zmienna INVESTWATCH_PORT ustawia inny port. Zatrzymanie dwóch procesów: `docker compose --env-file .runtime/demo/compose.env stop`. Powtórny start zachowuje dane.
 
+Gotową kolejkę można przenieść w parze archiwów stanu i mediów. Umieść oba pliki `.tar.gz` i odpowiadające im pliki `.sha256` w katalogu projektu lub w `.runtime/dist`. Start odtworzy stan, gdy archiwum pasuje do bieżącego kodu. Flaga `--cold` wymusza analizę archiwum źródeł na pustej bazie. Sprawdzenie gotowości czeka na ukończony skan i dopuszcza pustą kolejkę.
+
 FFmpeg działa jako odrębny program systemowy. Skrypt prepare.sh przygotowuje z lokalnej instalacji prywatną kopię binarium, bibliotek i loader do działania w obrazie Python. Katalog .runtime nie jest częścią repozytorium. Licencje FFmpeg i bibliotek zależą od dystrybucji systemowej. Poprawki bibliotek systemowych wymagają ponownego przygotowania. Do przeniesienia demo na inny host służą repozytorium i bootstrap.
 
 ## Pulpit Astryx

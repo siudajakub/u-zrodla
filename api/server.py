@@ -22,7 +22,22 @@ from . import import_meta, jobs, store
 async def lifespan(app):
     store.init()
     (store.STATE/"uploads").mkdir(mode=0o700,exist_ok=True)
-    yield
+    stop = asyncio.Event()
+    recovery = asyncio.create_task(recover_small_recomputes(stop))
+    try:
+        yield
+    finally:
+        stop.set()
+        await recovery
+
+
+async def recover_small_recomputes(stop):
+    while not stop.is_set():
+        await asyncio.to_thread(jobs.recover_recompute)
+        try:
+            await asyncio.wait_for(stop.wait(), timeout=5)
+        except asyncio.TimeoutError:
+            pass
 
 app=FastAPI(title="InvestWatch",lifespan=lifespan,docs_url=None,redoc_url=None)
 app.add_middleware(TrustedHostMiddleware,allowed_hosts=["localhost","127.0.0.1","[::1]","testserver"]+
@@ -50,15 +65,14 @@ class ScanRequest(BaseModel):
     sourceId:Literal["all"]="all"
     adapters:list[str]|None=None
 
-RESOLUTION_STATUS={"refer_to_control":"reviewing","complete_data":"reviewing","no_signal":"closed","close":"closed"}
-
 class Decision(BaseModel):
-    """`status` as before; `resolution` records the kind of the analyst's decision (and implies a status when none is given)."""
+    """The operator's action, or a status update from a legacy client."""
     status:Literal["new","reviewing","closed"]|None=None
-    resolution:Literal["refer_to_control","complete_data","no_signal","close"]|None=None
+    resolution:Literal["refer_to_control","complete_data","no_signal","close","control_result","data_received","reopen"]|None=None
     expectedRevision:int=Field(ge=1)
     note:str=Field(min_length=1,max_length=2000)
     reviewedVersion:int|None=Field(None,ge=1)
+    requestId:str|None=Field(None,min_length=1,max_length=160,pattern=r"^[A-Za-z0-9_.:-]+$")
 
 class ThresholdBody(BaseModel):
     value:int=Field(ge=0,le=100)
@@ -182,13 +196,14 @@ def module_calibration(module,threshold,view,with_series):
             **({"series":curve} if curve is not None else {})}
 
 def state_calibration():
-    """The calibration block of /v1/state: the q-v2 comparison at the threshold of the active variant (illustrative set if absent)."""
+    """The q-v2 comparison at the threshold of the active variant, when the dataset is available."""
     from . import calibration_q2
     with store.connection() as db:
         variant=store.active_variant(db)
         value=store.threshold_value(db,variant)
     if not calibration_q2.available():
-        return calculate_cached(60,"rules_1_2")
+        return {"dataset":"q-v2","evaluationStatus":"unavailable","threshold":value,"n":0,
+                "reason":"Brak zbioru ocen q-v2."}
     return calibration_q2.compare(value)
 
 def labeled_digest():
@@ -213,7 +228,6 @@ def state(schema:int|None=Query(None,ge=1,le=2),compact:int=Query(0),findings:in
     counters (`creatorCounts`), queue counters, sources, scans, `sourceHealth*`, trend, threshold, qualification and
     the recompute state. `compact=1` keeps the cases but drops their heavy fields."""
     chosen=wanted_schema(request,schema)
-    jobs.recover_recompute()
     out=store.state(chosen,bool(compact) if isinstance(compact,(bool,int)) else False,bool(findings))
     return {**out,"calibration":state_calibration(),"models":models_block(out.get("semantic"))}
 
@@ -251,15 +265,20 @@ def frame(video:str,name:str):
     return FileResponse(path,media_type="image/jpeg",headers={"Cache-Control":"private, max-age=86400"})
 
 @app.get("/v1/report")
-def report(module:Literal["M1","M2","M3"]=Query(...),format:Literal["json","csv"]="json",limit:int=Query(500,ge=1,le=5000),
+def report(module:Literal["M1","M2","M3","all"]=Query(...),format:Literal["json","csv"]="json",limit:int|None=Query(None,ge=1,le=5000),
            cursor:str|None=None,queue:str|None=None,platform:str|None=None,since:str|None=None,until:str|None=None,
            minScore:float|None=None,band:str|None=None,route:str|None=None,q:str|None=None,
            dateField:Literal["observedAt","publishedAt"]="observedAt"):
-    """Report of one module: firm and entity type, advertiser or author, content, URL, platform, dates, route, signal
-    strength, decision status. CSV is UTF-8 with a BOM and neutralises formulas; `cursor`/`limit` page it
-    (X-Next-Cursor, X-Total-Count)."""
+    """Report of one module or of a workflow queue across modules. CSV is UTF-8 with a BOM and neutralises formulas.
+    `cursor` and `limit` page the report (X-Next-Cursor, X-Total-Count)."""
     if queue is not None and queue not in store.QUEUES:
         raise HTTPException(404,"Nie ma takiej kolejki.")
+    if module=="all" and queue not in store.WORKFLOW_REPORT_QUEUES:
+        raise HTTPException(422,"Wybierz kolejkę kontroli, uzupełnień lub zakończonych spraw dla wszystkich modułów.")
+    if cursor is not None and (not cursor.isascii() or not cursor.isdigit() or len(cursor)>15):
+        raise HTTPException(422,"Nieprawidłowy kursor.")
+    if limit is None and (module!="all" or format!="csv"):
+        limit=500
     with store.connection() as db:
         out=store.report_list(db,module,queue=queue,limit=limit,cursor=cursor,platform=platform,since=since,until=until,
                               min_score=minScore,band=band,route=route,q=q,date_field=dateField)
@@ -278,6 +297,8 @@ def queue(name:str,limit:int=Query(50,ge=1,le=500),cursor:str|None=None,module:s
           dateField:Literal["observedAt","publishedAt"]="observedAt"):
     if name not in store.QUEUES:
         raise HTTPException(404,"Nie ma takiej kolejki.")
+    if cursor is not None and (not cursor.isascii() or not cursor.isdigit() or len(cursor)>15):
+        raise HTTPException(422,"Nieprawidłowy kursor.")
     with store.connection() as db:
         return store.queue_list(db,name,limit=limit,cursor=cursor,module=module,creator=creator,since=since,until=until,
                                 min_score=minScore,q=q,section=section,platform=platform,band=band,route=route,
@@ -285,6 +306,8 @@ def queue(name:str,limit:int=Query(50,ge=1,le=500),cursor:str|None=None,module:s
 
 @app.post("/v1/scans",status_code=202)
 def scan(body:ScanRequest):
+    if "demo-alert" in (body.adapters or ()):
+        raise HTTPException(422,"Ten adapter został wycofany. Użyj zwykłego skanu.")
     try:
         if body.mode in ("recompute","enrich"):
             return jobs.submit(body.mode,body.requestId)
@@ -292,17 +315,6 @@ def scan(body:ScanRequest):
     except ValueError as e:
         raise HTTPException(409,str(e)) from e
 
-@app.get("/v1/demo/alert")
-def demo_alert_state():
-    """The scripted alert of the demo: is it armed (the saved M2 page is absent) and how to fire and reset it."""
-    with store.connection() as db:
-        return store.demo_alert_state(db)
-
-@app.post("/v1/demo/alert/reset")
-def demo_alert_reset():
-    """Arm the demo alert again (idempotent). Fire it with POST /v1/scans {mode: replay, adapters: [demo-alert]}."""
-    with store.connection(True) as db:
-        return store.reset_demo_alert(db)
 
 def settings_error(error):
     if isinstance(error,store.Conflict):
@@ -429,9 +441,10 @@ async def stale_case(request,error):
     return JSONResponse({"detail":error.detail,"current":error.current},status_code=409)
 
 def current_of(db,row):
-    return {"revision":row["revision"],"status":row["status"],"version":json.loads(row["body"]).get("version")}
+    return {"revision":row["revision"],"status":row["status"],"version":json.loads(row["body"]).get("version"),
+            "workflowStage":store.workflow_stage(row["status"],store.last_decision(db,row["id"]))}
 
-def require_revision(row,expected,db=None):
+def require_revision(row,expected,db):
     if expected is not None and expected!=row["revision"]:
         raise StaleCase("Sprawa została zmieniona. Odśwież ją przed zapisem.",current_of(db,row))
 
@@ -469,25 +482,41 @@ def case(key:str,schema:int|None=Query(None,ge=1,le=2),request:Request=None):
 
 @app.patch("/v1/cases/{key:path}")
 def decision(key:str,body:Decision,request:Request=None):
-    status=body.status or RESOLUTION_STATUS.get(body.resolution)
+    transition=store.WORKFLOW_TRANSITIONS.get(body.resolution)
+    status=transition[1] if transition else body.status
     if status is None:
         raise HTTPException(422,"Podaj status lub rodzaj decyzji (resolution).")
+    if body.status is not None and body.status!=status:
+        raise HTTPException(422,"Status nie odpowiada wybranej decyzji.")
+    note=body.note.strip()
+    if not note:
+        raise HTTPException(422,"Wpisz uzasadnienie decyzji.")
+    schema=wanted_schema(request)
     with store.connection(True) as db:
         row=get_case(db,key)
+        if body.requestId and (saved:=store.requested_decision(db,key,body.requestId)):
+            if (saved["revision"]-1,saved.get("reviewedVersion"),saved.get("resolution"),saved["status"],saved["note"]) != \
+                    (body.expectedRevision,body.reviewedVersion,body.resolution,status,note):
+                raise StaleCase("Identyfikator zapisu został już użyty dla innej decyzji.",current_of(db,row))
+            return store.case_dict(db,row,schema=schema)
         require_revision(row,body.expectedRevision,db)
         version=json.loads(row["body"]).get("version")
         if body.reviewedVersion is not None and body.reviewedVersion!=version:
             raise StaleCase("Materiał ma nowszą wersję niż oglądana. Odśwież sprawę przed decyzją.",current_of(db,row))
-        if not body.note.strip():
-            raise HTTPException(422,"Wpisz uzasadnienie decyzji.")
-        route=store.case_dict(db,row,full=False).get("route")
+        before=store.case_dict(db,row,full=False)
+        stage=before["workflowStage"]
+        if transition and stage not in transition[2]:
+            raise StaleCase("Ta decyzja jest niedostępna na bieżącym etapie sprawy.",current_of(db,row))
         db.execute("UPDATE cases SET status=?,revision=revision+1,updated=? WHERE id=?",(status,store.utc(),key))
-        details={"status":status,"version":version,"revision":row["revision"]+1,"route":route,"analysisSig":row["fingerprint"]}
+        details={"status":status,"version":version,"revision":row["revision"]+1,"route":before["route"],
+                 "analysisSig":row["fingerprint"],"fromStage":stage,"workflowStage":transition[0] if transition else store.workflow_stage(status,None)}
         if body.resolution:
             details["resolution"]=body.resolution
-        store.record(db,key,"decision",body.note.strip(),details)
+        if body.requestId:
+            details.update(requestId=body.requestId,reviewedVersion=body.reviewedVersion)
+        store.record(db,key,"decision",note,details)
         store.event(db,"case",key,"Zapisano decyzję analityka")
-        return store.case_dict(db,get_case(db,key),schema=wanted_schema(request))
+        return store.case_dict(db,get_case(db,key),schema=schema)
 
 @app.post("/v1/cases/{key:path}/inquiry")
 def inquiry(key:str,body:Inquiry):

@@ -7,6 +7,7 @@ import re
 LEGACY = ("score", "reviewSuggestion", "summary", "signalType")
 CHANNEL = {"transcript": "speech", "description": "description", "platform": "platform_flag", "frame": "frame"}
 STRENGTH = ("speech", "frame", "description", "platform_flag")
+UNCHECKED_FRAMES = re.compile(r"(?:,? ani )?w \d+ sprawdzon(?:ym kadrze|ych kadrach)")
 
 
 def _where(viewport):
@@ -99,13 +100,69 @@ def consistent_decision(case):
                                "meaning": "Wynik reguł tekstu; obrazu i wideo nie badano", "rulesVersion": case.get("rulesVersion")}
 
 
+def active_qualification(case, chosen, settings):
+    """The active variant's route and scale for the case card and its proof path."""
+    from .store import band_of, MODULE_VARIANT
+
+    decision = case.get("reviewDecision")
+    if not isinstance(decision, dict):
+        return {}
+    module = case.get("module", "M1")
+    variant = settings["variant"]
+    variant_threshold = settings["thresholds"].get(variant, 60)
+    threshold = settings["thresholds"].get(MODULE_VARIANT.get(module), variant_threshold)
+    score = case.get("reviewScore") or {}
+    route = chosen["route"]
+    active = {**decision, "route": route, "queueEligible": chosen["queueEligible"]}
+    if module == "M1" and variant == "rules_1_2":
+        legacy = (case.get("variants") or {}).get(variant) or {}
+        reason = legacy.get("reason") or (case.get("reviewSuggestion") or {}).get("reason")
+        if route != decision.get("route"):
+            active = {"route": route, "reason": reason, "reasons": [reason] if reason else [], "moments": [],
+                      "completeReason": chosen.get("gated"), "queueEligible": chosen["queueEligible"],
+                      "decidedBy": "rules", "version": legacy.get("variantUsed") or variant}
+        elif reason:
+            active.update(reason=reason, reasons=[reason])
+        score = {**(legacy.get("reviewScore") or {}), "components": [],
+                 "meaning": "Wynik aktywnych reguł analizy materiału."}
+    elif module == "M2" and route != decision.get("route"):
+        comparison = "osiąga" if chosen["queueEligible"] else "nie osiąga"
+        reason = f"Wynik {chosen['value']} {comparison} ustawionego progu {threshold}."
+        active = {**active, "reason": reason, "reasons": [reason]}
+    return {"reviewDecision": active,
+            "reviewScore": {**score, "value": chosen["value"], "band": band_of(chosen["value"], threshold)}}
+
+
+def frame_scope(case, decision):
+    """Selected frames are available for inspection. An unlabelled JPEG is not a transcript or an OCR result."""
+    relation = case.get("adRelationship") or {}
+    disclosure = relation.get("disclosure") or {}
+    coverage = case.get("coverage") or {}
+    frames = (coverage.get("modalities") or {}).get("frames") or {}
+    if frames.get("state") != "selected_moments" or disclosure.get("where") == "frame":
+        return
+    reasons = []
+    for reason in decision.get("reasons") or []:
+        if isinstance(reason, str) and UNCHECKED_FRAMES.search(reason):
+            reason = UNCHECKED_FRAMES.sub("", reason).replace(": .", " w zbadanym zakresie.")
+            reason += " Wybrane kadry udostępniono do oceny wzrokowej."
+        reasons.append(reason)
+    decision["reasons"] = reasons
+    if "frames" in (disclosure.get("checked") or []):
+        disclosure = {**disclosure, "checked": [v for v in disclosure["checked"] if v != "frames"],
+                      "notChecked": list(dict.fromkeys([*(disclosure.get("notChecked") or []), "frames"]))}
+        case["adRelationship"] = {**relation, "disclosure": disclosure}
+
+
 def card_view(case):
     """View 2 of one card: coherent, v1 fields under `legacy` (the list rows and view 1 are unchanged)."""
-    case = dict(case)
+    case = {**case, **(case.get("activeQualification") or {})}
+    case.pop("activeQualification", None)
     consistent_decision(case)
     decision = case.get("reviewDecision") if isinstance(case.get("reviewDecision"), dict) else None
     if decision:
         decision = {**decision, "moments": [dict(m) for m in decision.get("moments") or []]}
+        frame_scope(case, decision)
         alternative = (decision.get("alternative") or "").strip()
         if alternative:
             decision["reasons"] = [r for r in decision.get("reasons") or [] if not (isinstance(r, str) and r.strip() == alternative)]

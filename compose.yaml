@@ -54,9 +54,11 @@ x-common: &common
     PYTHONUNBUFFERED: '1'
     PATH: /opt/investwatch/ffmpeg/bin:/usr/local/bin:/usr/bin:/bin
     INVESTWATCH_STATE: /data
+    INVESTWATCH_MODE: '${INVESTWATCH_MODE:-demo}'
     # Harmonogram należy do serwisu scheduler; worker go nie uruchamia.
     INVESTWATCH_DISCOVERY_INTERVAL: '0'
     INVESTWATCH_REPLAY_MEDIA: /replay-media
+    INVESTWATCH_SEMANTIC_DIR: '${INVESTWATCH_SEMANTIC_DIR:-/app/.runtime/semantic}'
     YOUTUBE_API_KEY: '${YOUTUBE_API_KEY:-}'
     # Drugi głos LLM (domyślnie wyłączony). Serwis inference (profil llm) albo Ollama na hoście Maca:
     # OLLAMA_HOST=host.docker.internal:11434 (start.sh dokłada wtedy ops/compose/egress.yaml).

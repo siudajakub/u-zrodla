@@ -1,7 +1,7 @@
 #!/bin/sh
 # Wariant awaryjny bez Dockera: ten sam stan i ta sama paczka mediów, API (uvicorn) i worker jako procesy hosta.
 # macOS arm64 i Linux x86_64, Python 3.12, POSIX sh. Dane: .runtime/local/state, logi i pidy: .runtime/local/.
-#   sh ops/demo/start-local.sh            start (tryb pokazu), czeka na kolejkę z 4 filmami
+#   sh ops/demo/start-local.sh            start z archiwum rzeczywistych odczytów, czeka na zakończenie skanów
 #   sh ops/demo/start-local.sh --live     tryb live (harmonogram co INVESTWATCH_DISCOVERY_INTERVAL s, domyślnie 14400)
 #   sh ops/demo/start-local.sh --reset    czysty stan
 #   sh ops/demo/start-local.sh --stop     zatrzymuje oba procesy
@@ -49,13 +49,13 @@ case "$MODE" in
   live) INTERVAL=${INVESTWATCH_DISCOVERY_INTERVAL:-14400}; [ "$INTERVAL" -gt 0 ] || INTERVAL=14400 ;;
   *) echo "INVESTWATCH_MODE musi być demo albo live." >&2; exit 2 ;;
 esac
-iw_need_pack
+[ "$MODE" != demo ] || iw_need_pack
 iw_python
 [ -n "$PY312" ] || { echo 'Wymagany Python 3.12 (macOS: brew install python@3.12, potem uruchom ponownie).' >&2; exit 1; }
 stop_all
 if [ "$RESET" = 1 ]; then rm -rf "$DIR/state"; echo "Stan wyczyszczony ($DIR/state)."; fi
 mkdir -p "$DIR/state" "$ROOT/.runtime/semantic"; chmod 700 "$DIR/state"
-[ "$COLD" = 1 ] || iw_restore_state "$DIR/state" "$DIR/state" || true
+[ "$MODE" = live ] || [ "$COLD" = 1 ] || iw_restore_state "$DIR/state" "$DIR/state" || true
 
 VENV=$ROOT/.runtime/venv-local
 if [ ! -x "$VENV/bin/python" ] || ! "$VENV/bin/python" -c 'import fastapi,huey,uvicorn' 2>/dev/null; then
@@ -85,7 +85,7 @@ if [ "${INVESTWATCH_PREVIEW:-auto}" != off ] && [ -f web/package-lock.json ]; th
     echo "Podgląd Astryx nie został zbudowany ($DIR/preview.log). Pulpit pod / działa." >&2
 fi
 
-export INVESTWATCH_STATE="$DIR/state" INVESTWATCH_REPLAY_MEDIA="$(iw_pack_dir)" INVESTWATCH_DISCOVERY_INTERVAL="$INTERVAL"
+export INVESTWATCH_MODE="$MODE" INVESTWATCH_STATE="$DIR/state" INVESTWATCH_REPLAY_MEDIA="$(iw_pack_dir)" INVESTWATCH_DISCOVERY_INTERVAL="$INTERVAL"
 export PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONPATH="$ROOT"
 nohup "$VENV/bin/python" -m uvicorn api.server:app --host 127.0.0.1 --port "$PORT" >"$DIR/api.log" 2>&1 &
 echo $! > "$DIR/api.pid"
